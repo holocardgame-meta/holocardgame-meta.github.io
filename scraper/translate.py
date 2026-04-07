@@ -2,6 +2,7 @@
 
 import json
 import os
+import re
 import sys
 import time
 from pathlib import Path
@@ -12,9 +13,9 @@ from google.genai import types
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 GEMINI_MODEL = "gemini-2.5-flash-lite"
-BATCH_SIZE = 20
-REQUEST_DELAY = 1.5
-MAX_RETRIES = 3
+BATCH_SIZE = 40
+REQUEST_DELAY = 4.0
+MAX_RETRIES = 6
 
 TARGET_LANGS_JA = ["zh-TW", "en", "fr"]
 TARGET_LANGS_ZH = ["ja", "en", "fr"]
@@ -160,7 +161,14 @@ def _translate_batch_gemini(texts: list[str], source: str, target: str) -> list[
         except json.JSONDecodeError:
             print(f"    [warn] JSON parse failed (attempt {attempt + 1})")
         except Exception as e:
-            print(f"    [warn] API error (attempt {attempt + 1}): {e}")
+            err_str = str(e)
+            print(f"    [warn] API error (attempt {attempt + 1}): {err_str[:200]}")
+            if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str:
+                m = re.search(r"retry in (\d+(?:\.\d+)?)s", err_str, re.IGNORECASE)
+                wait = float(m.group(1)) + 5 if m else 60.0
+                print(f"    [rate-limit] Waiting {wait:.0f}s before retry...")
+                time.sleep(wait)
+                continue
 
         wait = REQUEST_DELAY * (2 ** attempt)
         time.sleep(wait)
