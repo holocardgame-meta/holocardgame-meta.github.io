@@ -758,9 +758,9 @@
     },
     "cards": [
       {
-        "name": "虎金妃笑虎",
-        "card_id": "hBD24-060",
-        "image": "https://hololive-cardgame.github.io/cards/cardListImages/hBD24/hBD24-060_P.png",
+        "name": "大神ミオ",
+        "card_id": "hBP07-003",
+        "image": "https://hololive-cardgame.github.io/cards/cardListImages/hBP07/hBP07-003_OSR.png",
         "role": {
           "ja": "役割：エール加速＆大ダメージ\n推しスキル：デッキ上2枚を見て、片方を手札、片方をデッキ上に戻す\nSPスキル：デッキ上6枚を見て、3枚を手札、3枚を好きな順でデッキ上に戻す\n└ミオのアーツや占いでサポートを捲れるように！",
           "zh-TW": "作用：大吼加速&大傷害\n最喜歡的技能：查看牌組中的兩張牌，將一張返回手牌，另一張返回牌組。\nSP技能：查看牌組中的6張牌，將3張牌放回手牌，並依任意順序將3張牌回牌組。\n└現在您可以透過澪的藝術和算命來增加支持！",

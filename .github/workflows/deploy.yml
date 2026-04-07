@@ -40,6 +40,8 @@ jobs:
       - name: Run scraper
         id: scrape
         continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: uv run python -m scraper.run
 
       - name: Check scraper output

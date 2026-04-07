@@ -22,12 +22,18 @@ scraper (Python) → JSON data → static frontend (HTML/CSS/JS) → GitHub Page
 # Install dependencies
 uv sync
 
+# Set Gemini API key (free: https://aistudio.google.com/apikey)
+export GEMINI_API_KEY="your-key-here"   # Linux/Mac
+$env:GEMINI_API_KEY="your-key-here"     # PowerShell
+
 # Run scraper to fetch data
 uv run python -m scraper.run
 
 # Serve frontend locally
 uv run python -m http.server 8080 --directory web
 ```
+
+For CI/CD, add `GEMINI_API_KEY` as a repository secret in GitHub Settings → Secrets.
 
 ## Data Sources
 

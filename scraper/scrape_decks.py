@@ -15,6 +15,49 @@ REQUEST_DELAY = 1.5
 CARD_TABLE_KEYWORDS = ["採用カード", "収録カード", "入れ替え候補", "おすすめカード"]
 BLOOM_PREFIXES = ["推し", "Debut", "1st", "2nd", "Spot", "spot", "推しホロメン", "エールデッキ"]
 
+CARD_OVERRIDES: dict[str, list[dict]] = {
+    # Source site error: oshi image/label shows 笑虎 but skills match 大神ミオ (hBP07-003)
+    "https://www.holocardstrategy.jp/miotan_deck/": [
+        {
+            "match": {"name_contains": "笑虎"},
+            "replace": {
+                "name": "大神ミオ",
+                "card_id": "hBP07-003",
+                "image": "https://hololive-cardgame.github.io/cards/cardListImages/hBP07/hBP07-003_OSR.png",
+            },
+        },
+    ],
+}
+
+
+def _apply_card_overrides(url: str, cards: list[dict]):
+    """Apply manual overrides for known card data errors on source sites."""
+    rules = CARD_OVERRIDES.get(url.rstrip("/") + "/")
+    if not rules:
+        rules = CARD_OVERRIDES.get(url.rstrip("/"))
+    if not rules:
+        return
+
+    for rule in rules:
+        match = rule.get("match", {})
+        name_contains = match.get("name_contains", "")
+
+        indices = [
+            i for i, c in enumerate(cards)
+            if name_contains and name_contains in c.get("name", "")
+        ]
+        if not indices:
+            continue
+
+        if rule.get("action") == "remove":
+            for i in sorted(indices, reverse=True):
+                cards.pop(i)
+        elif "replace" in rule:
+            replacement = rule["replace"]
+            for i in indices:
+                cards[i].update(replacement)
+
+
 
 def _is_card_table(table) -> bool:
     thead = table.find("thead")
@@ -78,12 +121,12 @@ def _extract_card_entries(soup: BeautifulSoup) -> list[dict]:
             raw_name = " ".join(name_parts) if name_parts else card_cell.get_text(strip=True)[:60]
             card_name = _clean_card_name(raw_name)
 
-            dedup_key = card_id_match or card_name
+            role_text = role_cell.get_text("\n", strip=True)
+
+            dedup_key = f"{card_id_match or card_name}|{role_text[:60]}"
             if dedup_key in seen_keys:
                 continue
             seen_keys.add(dedup_key)
-
-            role_text = role_cell.get_text("\n", strip=True)
 
             entries.append({
                 "name": card_name,
@@ -131,6 +174,11 @@ def _resolve_missing_ids(deck_list: list[dict], cards_db: dict):
     }
     for deck in deck_list:
         deck_vtuber = _extract_vtuber_from_title(deck.get("title", ""))
+        used_ids: set[str] = set()
+        for card in deck.get("cards", []):
+            if card.get("card_id"):
+                used_ids.add(card["card_id"])
+
         for card in deck.get("cards", []):
             if card.get("card_id"):
                 continue
@@ -166,8 +214,10 @@ def _resolve_missing_ids(deck_list: list[dict], cards_db: dict):
                 if filtered:
                     candidates = filtered
 
-            best = candidates[0]
+            unused = [c for c in candidates if c["id"] not in used_ids]
+            best = unused[0] if unused else candidates[0]
             card["card_id"] = best["id"]
+            used_ids.add(best["id"])
             if best.get("imageUrl"):
                 card["image"] = best["imageUrl"]
             card["name"] = f"{best.get('bloom', '')} {best['name']}".strip()
@@ -262,12 +312,15 @@ def scrape_deck(url: str) -> dict:
     title_el = soup.find("h1")
     title = title_el.get_text(strip=True) if title_el else url.split("/")[-2]
 
+    cards = _extract_card_entries(soup)
+    _apply_card_overrides(url, cards)
+
     result = {
         "url": url,
         "title": title,
         "deck_image": _extract_deck_image(soup),
         "description": _extract_description(soup),
-        "cards": _extract_card_entries(soup),
+        "cards": cards,
         "strategy": _extract_strategy(soup),
     }
     date = _extract_date(soup)
@@ -350,6 +403,8 @@ def scrape_all_decks(tier_list_path: Path, output_dir: Path, cards_path: Path | 
             time.sleep(REQUEST_DELAY)
 
     _resolve_missing_ids(deck_results, cards_db)
+    for deck in deck_results:
+        _apply_card_overrides(deck.get("url", ""), deck.get("cards", []))
 
     out_path = output_dir / "decks.json"
     out_path.write_text(json.dumps(deck_results, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -388,6 +443,8 @@ def scrape_all_guides(output_dir: Path, existing_urls: set[str] | None = None, c
         time.sleep(REQUEST_DELAY)
 
     _resolve_missing_ids(guide_results, cards_db)
+    for deck in guide_results:
+        _apply_card_overrides(deck.get("url", ""), deck.get("cards", []))
 
     out_path = output_dir / "all_guides.json"
     out_path.write_text(json.dumps(guide_results, ensure_ascii=False, indent=2), encoding="utf-8")

@@ -1,19 +1,107 @@
+"""Translate scraped data using Gemini 2.5 Flash-Lite with hOCG terminology."""
+
 import json
+import os
 import sys
 import time
 from pathlib import Path
 
-from deep_translator import GoogleTranslator
+from google import genai
+from google.genai import types
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
+GEMINI_MODEL = "gemini-2.5-flash-lite"
+BATCH_SIZE = 20
+REQUEST_DELAY = 1.5
+MAX_RETRIES = 3
+
 TARGET_LANGS_JA = ["zh-TW", "en", "fr"]
 TARGET_LANGS_ZH = ["ja", "en", "fr"]
-REQUEST_DELAY = 0.3
+TARGET_LANGS_EN = ["ja", "zh-TW", "fr"]
+
+LANG_NAMES = {
+    "ja": "Japanese",
+    "zh-TW": "Traditional Chinese (Taiwan)",
+    "en": "English",
+    "fr": "French",
+}
+
+HOCG_GLOSSARY = """\
+hololive OFFICIAL CARD GAME (ホロカ / hOCG) official terminology:
+
+| Japanese | 繁體中文 | English | French |
+|---|---|---|---|
+| ホロカ | hOCG | hOCG | hOCG |
+| エール | 吶喊 | Cheer | Encouragement |
+| エールデッキ | 吶喊牌組 | Cheer Deck | Deck d'encouragement |
+| ブルーム | 綻放 | Bloom | Bloom |
+| アーツ | 藝能 | Arts | Arts |
+| ホロメン / メンバー | 成員 | Holomen / Member | Membre |
+| コラボ | 聯動 | Collab | Collab |
+| ダウン | 擊倒 | Down | K.O. |
+| 推し / 推しホロメン | 推 / 主推 | Oshi | Oshi |
+| 推しスキル | 推技能 | Oshi Skill | Compétence Oshi |
+| SPスキル | SP技能 | SP Skill | Compétence SP |
+| ホロパワー | Holo Power | Holo Power | Holo Power |
+| デッキ | 牌組 | Deck | Deck |
+| 手札 | 手牌 | Hand | Main |
+| アーカイブ | 存檔區 | Archive | Archive |
+| サポート | 支援卡 | Support | Support |
+| ステージ | 舞台 | Stage | Scène |
+| センター | 中心 | Center | Centre |
+| バック | 後方 | Back | Arrière |
+| ライフ | 生命值 | Life | Points de vie |
+| デッキレシピ | 牌組配置 | Deck Recipe | Recette de deck |
+| 回し方 | 打法 | How to play | Comment jouer |
+| 単 (デッキ) | 單色 | Mono | Mono |
+| ギフト | 天賦 | Gift | Don |
+| Debut / 1st / 2nd | Debut / 1st / 2nd | Debut / 1st / 2nd | Debut / 1st / 2nd |
+| Buzz | Buzz | Buzz | Buzz |
+| Spot | Spot | Spot | Spot |
+| LIMITED | LIMITED | LIMITED | LIMITED |
+| マスコット | 吉祥物 | Mascot | Mascotte |
+| ファン | 粉絲 | Fan | Fan |
+| 先攻 / 後攻 | 先攻 / 後攻 | Going first / Going second | Premier / Second |
+| ターン目 | 回合 | Turn | Tour |
+| 火力 | 火力 | Firepower | Puissance de feu |
+| 素点 / 素ダメ | 基礎傷害 | Base damage | Dégâts de base |
+| エール加速 | 吶喊加速 | Cheer acceleration | Accélération d'encouragement |
+"""
+
+SYSTEM_PROMPT_TEMPLATE = """\
+You are a professional translator for the hololive OFFICIAL CARD GAME (ホロカ / hOCG).
+
+RULES:
+1. Translate from {source_lang} to {target_lang}.
+2. You MUST use the official card game terminology from the glossary below. Never use literal translations for game terms.
+3. Keep VTuber names in their original form (e.g. 大神ミオ, 兎田ぺこら, Amelia Watson).
+4. Keep card IDs (e.g. hBP07-003) unchanged.
+5. Keep numbers, symbols, and formatting (like ・, └, ＋, ＋20) unchanged.
+6. Preserve line breaks (\\n) exactly as in the original.
+7. Return ONLY a JSON array of translated strings, no other text.
+
+{glossary}
+"""
 
 _cache: dict[str, str] = {}
 _cache_path: Path | None = None
 _cache_dirty = False
+_client: genai.Client | None = None
+
+
+def _get_client() -> genai.Client:
+    global _client
+    if _client is not None:
+        return _client
+    api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+    if not api_key:
+        raise RuntimeError(
+            "GEMINI_API_KEY or GOOGLE_API_KEY environment variable not set. "
+            "Get a free key at https://aistudio.google.com/apikey"
+        )
+    _client = genai.Client(api_key=api_key)
+    return _client
 
 
 def _load_cache(base_dir: Path):
@@ -34,29 +122,56 @@ def _save_cache():
 
 
 def _cache_key(source: str, target: str, text: str) -> str:
-    return f"{source}|{target}|{text}"
+    return f"gemini|{source}|{target}|{text}"
 
 
-def _build_translator(source: str, target: str) -> GoogleTranslator:
-    return GoogleTranslator(source=source, target=target)
+def _build_system_prompt(source: str, target: str) -> str:
+    return SYSTEM_PROMPT_TEMPLATE.format(
+        source_lang=LANG_NAMES.get(source, source),
+        target_lang=LANG_NAMES.get(target, target),
+        glossary=HOCG_GLOSSARY,
+    )
 
 
-def _translate_one(text: str, translator: GoogleTranslator) -> str:
-    if not text or not text.strip():
-        return text
-    try:
-        result = translator.translate(text)
-        time.sleep(REQUEST_DELAY)
-        return result
-    except Exception as e:
-        print(f"  [warn] translate failed: '{text[:40]}...' : {e}")
-        return text
+def _translate_batch_gemini(texts: list[str], source: str, target: str) -> list[str]:
+    """Translate a batch of texts using a single Gemini API call."""
+    client = _get_client()
+    system_prompt = _build_system_prompt(source, target)
+
+    numbered = "\n".join(f"[{i+1}] {t}" for i, t in enumerate(texts))
+    user_prompt = f"Translate these {len(texts)} items:\n\n{numbered}"
+
+    for attempt in range(MAX_RETRIES):
+        try:
+            response = client.models.generate_content(
+                model=GEMINI_MODEL,
+                contents=user_prompt,
+                config=types.GenerateContentConfig(
+                    system_instruction=system_prompt,
+                    temperature=0.1,
+                    response_mime_type="application/json",
+                ),
+            )
+            raw = response.text.strip()
+            results = json.loads(raw)
+            if isinstance(results, list) and len(results) == len(texts):
+                return [str(r) for r in results]
+            print(f"    [warn] Batch size mismatch: expected {len(texts)}, got {len(results) if isinstance(results, list) else 'non-list'}")
+        except json.JSONDecodeError:
+            print(f"    [warn] JSON parse failed (attempt {attempt + 1})")
+        except Exception as e:
+            print(f"    [warn] API error (attempt {attempt + 1}): {e}")
+
+        wait = REQUEST_DELAY * (2 ** attempt)
+        time.sleep(wait)
+
+    return texts
 
 
 def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> dict[str, str]:
     global _cache_dirty
-    mapping = {}
-    to_translate = []
+    mapping: dict[str, str] = {}
+    to_translate: list[str] = []
 
     for text in unique_texts:
         if not text or not text.strip():
@@ -74,14 +189,21 @@ def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> 
     if not to_translate:
         return mapping
 
-    translator = _build_translator(source, target)
-    for i, text in enumerate(to_translate):
-        if (i + 1) % 50 == 0:
-            print(f"    {source}->{target}: translating {i + 1}/{len(to_translate)}")
-        result = _translate_one(text, translator)
-        mapping[text] = result
-        _cache[_cache_key(source, target, text)] = result
-        _cache_dirty = True
+    for batch_start in range(0, len(to_translate), BATCH_SIZE):
+        batch = to_translate[batch_start:batch_start + BATCH_SIZE]
+        batch_num = batch_start // BATCH_SIZE + 1
+        total_batches = (len(to_translate) + BATCH_SIZE - 1) // BATCH_SIZE
+        print(f"    {source}->{target}: batch {batch_num}/{total_batches} ({len(batch)} strings)")
+
+        results = _translate_batch_gemini(batch, source, target)
+
+        for text, result in zip(batch, results):
+            mapping[text] = result
+            _cache[_cache_key(source, target, text)] = result
+            _cache_dirty = True
+
+        if batch_start + BATCH_SIZE < len(to_translate):
+            time.sleep(REQUEST_DELAY)
 
     return mapping
 
@@ -274,9 +396,6 @@ def translate_guides(data_dir: Path):
 
     guides_path.write_text(json.dumps(guides, ensure_ascii=False, indent=2), encoding="utf-8")
     print("[translate] all_guides.json done")
-
-
-TARGET_LANGS_EN = ["ja", "zh-TW", "fr"]
 
 
 def translate_official(data_dir: Path):
