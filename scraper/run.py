@@ -58,7 +58,7 @@ def _assign_tier_to_guides(data_dir: Path):
 
 
 def _optimize_lcp_image(web_dir: Path, lcp_url: str, suffix: int = 0) -> str | None:
-    """Download an LCP image, resize to 640px wide, and save as WebP."""
+    """Download an LCP image, resize to 400px wide, and save as WebP."""
     import io
     import httpx
     from PIL import Image
@@ -76,13 +76,13 @@ def _optimize_lcp_image(web_dir: Path, lcp_url: str, suffix: int = 0) -> str | N
 
     try:
         img = Image.open(io.BytesIO(resp.content))
-        max_w = 640
+        max_w = 400
         if img.width > max_w:
             ratio = max_w / img.width
             img = img.resize((max_w, int(img.height * ratio)), Image.LANCZOS)
         if img.mode in ("RGBA", "P"):
             img = img.convert("RGB")
-        img.save(out_path, "WEBP", quality=60)
+        img.save(out_path, "WEBP", quality=45)
         size_kb = out_path.stat().st_size / 1024
         print(f"  Optimized LCP image {suffix}: {img.width}x{img.height}, {size_kb:.1f} KiB")
         return f"images/lcp-hero-{suffix}.webp"
