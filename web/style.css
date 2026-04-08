@@ -43,6 +43,7 @@ body {
   text-align: center;
   position: relative;
   overflow: hidden;
+  min-height: 12rem;
 }
 .site-header::before {
   content: '';
