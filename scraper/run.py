@@ -82,7 +82,7 @@ def _optimize_lcp_image(web_dir: Path, lcp_url: str) -> str | None:
             img = img.resize((max_w, int(img.height * ratio)), Image.LANCZOS)
         if img.mode in ("RGBA", "P"):
             img = img.convert("RGB")
-        img.save(out_path, "WEBP", quality=80)
+        img.save(out_path, "WEBP", quality=60)
         size_kb = out_path.stat().st_size / 1024
         print(f"  Optimized LCP image: {img.width}x{img.height}, {size_kb:.1f} KiB")
         return "images/lcp-hero.webp"

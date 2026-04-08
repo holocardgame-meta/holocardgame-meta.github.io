@@ -1197,6 +1197,7 @@ body {
 .guide-card {
   display: flex;
   flex-direction: column;
+  min-height: 280px;
   cursor: pointer;
   transition: transform 0.15s, box-shadow 0.15s;
 }
