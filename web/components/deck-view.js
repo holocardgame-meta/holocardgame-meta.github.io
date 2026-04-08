@@ -37,13 +37,13 @@ export function renderDeckModal(container, deckId, tierData, decksData, allGuide
   const title = deckInfo?.name || localized(recipe?.title) || deckId;
   const image = recipe?.deck_image || deckInfo?.image;
   const imageHtml = image
-    ? `<img src="${image}" alt="${title}" loading="lazy">`
+    ? `<img src="${image}" alt="${title}" loading="lazy" decoding="async">`
     : '';
 
   const cardsHtml = recipe?.cards?.length
     ? recipe.cards.map(c => `
         <div class="card-entry clickable-card" data-card-id="${c.card_id || ''}">
-          ${c.image ? `<img class="card-entry-img" src="${c.image}" alt="${c.name}" loading="lazy">` : ''}
+          ${c.image ? `<img class="card-entry-img" src="${c.image}" alt="${c.name}" loading="lazy" decoding="async">` : ''}
           <div class="card-entry-info">
             <div class="card-entry-name">${c.name}</div>
             ${c.card_id ? `<div class="card-entry-id">${c.card_id}</div>` : ''}
@@ -111,7 +111,7 @@ export function renderDeckModal(container, deckId, tierData, decksData, allGuide
 function _renderOfficialDeckModal(container, deck) {
   const title = deck.title || '';
   const oshiHtml = deck.oshi_image
-    ? `<div class="official-oshi clickable-card" data-card-id="${deck.oshi_card_id || ''}"><img src="${deck.oshi_image}" alt="${deck.oshi}" loading="lazy"><span>${deck.oshi}</span></div>`
+    ? `<div class="official-oshi clickable-card" data-card-id="${deck.oshi_card_id || ''}"><img src="${deck.oshi_image}" alt="${deck.oshi}" loading="lazy" decoding="async"><span>${deck.oshi}</span></div>`
     : '';
 
   const _renderCardGrid = (cards, label) => {
@@ -123,7 +123,7 @@ function _renderOfficialDeckModal(container, deck) {
         <div class="official-card-grid">
           ${cards.map(c => `
             <div class="official-card-entry clickable-card" data-card-id="${c.card_id || ''}">
-              <img src="${c.imageUrl}" alt="${c.card_id}" loading="lazy">
+              <img src="${c.imageUrl}" alt="${c.card_id}" loading="lazy" decoding="async">
               <span class="official-card-count">×${c.count}</span>
               ${c.card_id ? `<span class="official-card-id">${c.card_id}</span>` : ''}
             </div>
@@ -145,7 +145,7 @@ function _renderOfficialDeckModal(container, deck) {
         <div class="modal-section-title">${t('official_key_cards')}</div>
         ${deck.key_cards.map(k => `
           <div class="official-key-card clickable-card" data-card-id="${k.card_id || ''}">
-            ${k.imageUrl ? `<img src="${k.imageUrl}" alt="${k.name}" loading="lazy">` : ''}
+            ${k.imageUrl ? `<img src="${k.imageUrl}" alt="${k.name}" loading="lazy" decoding="async">` : ''}
             <div class="official-key-card-info">
               <div class="official-key-card-name">${k.name}${k.card_id ? ` (${k.card_id})` : ''}</div>
               <div class="official-key-card-text">${localized(k.text)}</div>

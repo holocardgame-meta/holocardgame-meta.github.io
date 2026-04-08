@@ -78,7 +78,7 @@ function renderPage(container) {
     html += `
       <div class="gallery-card" data-card-id="${card.id}">
         <div class="gallery-card-img-wrap">
-          <img class="gallery-card-img" src="${card.imageUrl || ''}" alt="${card.name}" loading="lazy"
+          <img class="gallery-card-img" src="${card.imageUrl || ''}" alt="${card.name}" loading="lazy" decoding="async"
                onerror="this.style.display='none'">
           ${badgesHtml ? `<div class="card-rule-badges">${badgesHtml}</div>` : ''}
         </div>
@@ -235,7 +235,7 @@ export function renderCardDetail(container, card, allCards, rulesData) {
           ${variants.map((v, i) => {
             const suffix = _rarityLabel(v.imageUrl);
             return `<div class="card-variant-thumb${i === 0 ? ' active' : ''}" data-variant-idx="${i}">
-              <img src="${v.imageUrl}" alt="${suffix}" loading="lazy">
+              <img src="${v.imageUrl}" alt="${suffix}" loading="lazy" decoding="async">
               <span class="card-variant-rarity">${suffix}</span>
             </div>`;
           }).join('')}

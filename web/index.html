@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8WS4X0WWQQ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-8WS4X0WWQQ');
-  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HOLOCARD META - Fan-made ホロカ Tier List & Deck Guide Database</title>
@@ -27,6 +19,8 @@
   <link rel="preconnect" href="https://hololive-cardgame.github.io">
   <link rel="dns-prefetch" href="https://www.holocardstrategy.jp">
   <link rel="dns-prefetch" href="https://en.hololive-official-cardgame.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap"></noscript>
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="HOLOCARD META - Fan-made ホロカ Tier List & Deck Guides">
@@ -224,5 +218,20 @@
   </footer>
 
   <script type="module" src="app.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8WS4X0WWQQ');
+    (function(){
+      function load(){
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-8WS4X0WWQQ';
+        document.head.appendChild(s);
+      }
+      if ('requestIdleCallback' in window) requestIdleCallback(load);
+      else setTimeout(load, 3500);
+    })();
+  </script>
 </body>
 </html>

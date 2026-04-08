@@ -239,7 +239,7 @@ function renderTournamentDeckCard(deck, cardsMap) {
   return `
     <div class="tournament-deck-card" data-decklog-id="${deck.deck_id}">
       <div class="tournament-deck-top">
-        ${oshiImage ? `<img class="tournament-oshi-img" src="${oshiImage}" alt="${deck.oshi}" loading="lazy">` : '<div class="tournament-oshi-placeholder"></div>'}
+        ${oshiImage ? `<img class="tournament-oshi-img" src="${oshiImage}" alt="${deck.oshi}" loading="lazy" decoding="async">` : '<div class="tournament-oshi-placeholder"></div>'}
         <div class="tournament-deck-info">
           <div class="tournament-deck-name">${deck.title}</div>
           <div class="tournament-deck-oshi">${deck.oshi}</div>
@@ -307,7 +307,7 @@ function renderCardSection(title, cards, cardsMap) {
     const name = info.name || c.name || c.card_id;
     return `
       <div class="dl-card-entry clickable-card" data-card-id="${c.card_id || ''}">
-        ${imageUrl ? `<img class="dl-card-img" src="${imageUrl}" alt="${name}" loading="lazy">` : '<div class="dl-card-placeholder"></div>'}
+        ${imageUrl ? `<img class="dl-card-img" src="${imageUrl}" alt="${name}" loading="lazy" decoding="async">` : '<div class="dl-card-placeholder"></div>'}
         <div class="dl-card-info">
           <div class="dl-card-name">${name}</div>
           <div class="dl-card-id">${c.card_id}</div>

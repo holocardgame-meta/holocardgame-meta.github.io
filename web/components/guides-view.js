@@ -154,7 +154,7 @@ function renderGuideCard(deck, cardsMap) {
   const isCardArt = !deck.deck_image && !!deck.oshi_image;
   const imgCls = isCardArt ? 'guide-card-img card-art' : 'guide-card-img';
   const imgHtml = thumbSrc
-    ? `<img class="${imgCls}" src="${thumbSrc}" alt="${title}" loading="lazy">`
+    ? `<img class="${imgCls}" src="${thumbSrc}" alt="${title}" loading="lazy" decoding="async">`
     : `<div class="guide-card-noimg">🃏</div>`;
 
   const tierBadge = deck.tier
