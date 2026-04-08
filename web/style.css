@@ -1262,7 +1262,7 @@ body {
 }
 .guide-tier-badge[data-tier="1"] { background: #ffd700; color: #000; }
 .guide-tier-badge[data-tier="2"] { background: #c0c0c0; color: #000; }
-.guide-tier-badge[data-tier="3"] { background: #cd7f32; color: #fff; }
+.guide-tier-badge[data-tier="3"] { background: #cd7f32; color: #000; }
 .guide-card-title {
   font-size: 0.95rem;
   font-weight: 700;
