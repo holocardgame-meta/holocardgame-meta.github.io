@@ -1159,6 +1159,7 @@ body {
   color: var(--text-secondary);
   font-size: 0.9rem;
   margin-bottom: 1rem;
+  min-height: 2.88rem;
 }
 .guides-search-box {
   max-width: 400px;
@@ -1309,4 +1310,12 @@ body {
   .card-detail-img { width: 180px; }
   .filter-bar { padding: 0.6rem 0.8rem; }
   .search-input { width: 100%; }
+  .color-filters, .tier-filters, .type-filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .color-filters::-webkit-scrollbar,
+  .tier-filters::-webkit-scrollbar,
+  .type-filters::-webkit-scrollbar { display: none; }
 }

@@ -73,13 +73,13 @@
     .modal[hidden]{display:none}
     .guides-header{text-align:center;margin-bottom:1.5rem}
     .guides-header h2{font-size:1.6rem;color:var(--text-primary);margin-bottom:.4rem}
-    .guides-desc{color:var(--text-secondary);font-size:.9rem;margin-bottom:1rem}
+    .guides-desc{color:var(--text-secondary);font-size:.9rem;margin-bottom:1rem;min-height:2.88rem}
     .guides-search-box{max-width:400px;margin:.6rem auto 0}
     .guides-count{text-align:center;color:var(--text-secondary);font-size:.85rem;margin-bottom:1rem}
     .guides-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
     .skel-card{height:280px;background:var(--bg-card);border-radius:var(--radius-lg);animation:skel-pulse 1.5s ease-in-out infinite}
     @keyframes skel-pulse{0%,100%{opacity:.6}50%{opacity:.3}}
-    @media(max-width:600px){.filter-bar{padding:.6rem .8rem}.search-input{width:100%}.guides-grid{grid-template-columns:1fr}}
+    @media(max-width:600px){.filter-bar{padding:.6rem .8rem}.search-input{width:100%}.guides-grid{grid-template-columns:1fr}.color-filters,.tier-filters,.type-filters{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.color-filters::-webkit-scrollbar,.tier-filters::-webkit-scrollbar,.type-filters::-webkit-scrollbar{display:none}}
   </style>
 
   <link rel="modulepreload" href="app.js">
@@ -165,7 +165,12 @@
         <span class="title-meta">META</span>
       </h1>
       <p class="site-subtitle" data-i18n="subtitle">hololive OFFICIAL CARD GAME - 環境牌組資料庫</p>
-      <div class="lang-switcher" id="langSwitcher"></div>
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-btn active" data-lang="zh-TW">中文</button>
+        <button class="lang-btn" data-lang="ja">日本語</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
     </div>
   </header>
 

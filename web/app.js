@@ -77,17 +77,25 @@ async function render() {
 function renderLangSwitcher() {
   const container = document.getElementById('langSwitcher');
   const current = getLang();
-  container.innerHTML = getSupportedLangs().map(({ code, label }) =>
-    `<button class="lang-btn${code === current ? ' active' : ''}" data-lang="${code}">${label}</button>`
-  ).join('');
+  const existing = container.querySelectorAll('.lang-btn');
+
+  if (existing.length) {
+    existing.forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === current);
+    });
+  } else {
+    container.innerHTML = getSupportedLangs().map(({ code, label }) =>
+      `<button class="lang-btn${code === current ? ' active' : ''}" data-lang="${code}">${label}</button>`
+    ).join('');
+  }
 
   container.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.onclick = () => {
       setLang(btn.dataset.lang);
       applyStaticTranslations();
       renderLangSwitcher();
       render();
-    });
+    };
   });
 }
 
