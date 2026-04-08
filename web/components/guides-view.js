@@ -1,6 +1,7 @@
 import { t, localized } from '../i18n.js';
 
 const COLOR_ZH_MAP = { '白': '白', '綠': '緑', '紅': '赤', '藍': '青', '紫': '紫', '黃': '黄' };
+const PAGE_SIZE = 50;
 
 function _getDeckColors(deck, cardsMap) {
   const colors = {};
@@ -14,6 +15,9 @@ function _getDeckColors(deck, cardsMap) {
   }
   return Object.keys(colors).sort((a, b) => colors[b] - colors[a]);
 }
+
+let _state = null;
+let _bound = false;
 
 export function renderGuidesView(container, allGuides, decksData, cardsData, filters, officialDecks) {
   const cardsMap = {};
@@ -69,88 +73,100 @@ export function renderGuidesView(container, allGuides, decksData, cardsData, fil
     return (a.tier || 99) - (b.tier || 99);
   });
 
+  const titleEl = document.getElementById('guidesTitle');
+  const descEl = document.getElementById('guidesDesc');
+  const searchEl = document.getElementById('guideSearch');
+  const countEl = document.getElementById('guidesCount');
+  const grid = document.getElementById('guidesGrid');
+  const loadMoreWrap = document.getElementById('guidesLoadMoreWrap');
+  const loadMoreBtn = document.getElementById('guidesLoadMore');
+
   if (!combined.length) {
-    container.innerHTML = `<div class="loading">${t('guides_no_data')}</div>`;
+    titleEl.textContent = t('guides_title');
+    descEl.textContent = '';
+    grid.innerHTML = `<div class="loading" style="grid-column:1/-1">${t('guides_no_data')}</div>`;
+    countEl.textContent = '';
+    loadMoreWrap.style.display = 'none';
     return;
   }
 
-  const PAGE_SIZE = 50;
-  let shown = PAGE_SIZE;
+  const shown = PAGE_SIZE;
   const initial = filtered.slice(0, shown);
   const remaining = filtered.length - shown;
 
-  let html = `
-    <div class="guides-header">
-      <h2>${t('guides_title')}</h2>
-      <p class="guides-desc">${t('guides_desc')}</p>
-      <div class="guides-search-box">
-        <input type="text" id="guideSearch" class="search-input" placeholder="${t('guides_search_placeholder')}" />
-      </div>
-    </div>
-    <div class="guides-count" id="guidesCount">${t('guides_showing', { shown: Math.min(shown, filtered.length), total: filtered.length })}</div>
-    <div class="guides-grid" id="guidesGrid">
-      ${initial.map((d, i) => renderGuideCard(d, cardsMap, i)).join('')}
-    </div>
-    ${remaining > 0 ? `<div class="guides-load-more-wrap"><button class="guides-load-more-btn" id="guidesLoadMore">${t('guides_load_more', { remaining })}</button></div>` : ''}
-  `;
+  _state = { filtered, cardsMap, shown };
 
-  container.innerHTML = html;
+  titleEl.textContent = t('guides_title');
+  descEl.textContent = t('guides_desc');
+  searchEl.placeholder = t('guides_search_placeholder');
+  searchEl.value = '';
+  countEl.textContent = t('guides_showing', { shown: Math.min(shown, filtered.length), total: filtered.length });
+  grid.innerHTML = initial.map((d, i) => renderGuideCard(d, cardsMap, i)).join('');
 
-  const grid = container.querySelector('#guidesGrid');
-  const countEl = container.querySelector('#guidesCount');
-  const loadMoreBtn = container.querySelector('#guidesLoadMore');
-
-  function _loadMore() {
-    const next = filtered.slice(shown, shown + PAGE_SIZE);
-    grid.insertAdjacentHTML('beforeend', next.map(d => renderGuideCard(d, cardsMap)).join(''));
-    shown += next.length;
-    const left = filtered.length - shown;
-    countEl.textContent = t('guides_showing', { shown: Math.min(shown, filtered.length), total: filtered.length });
-    if (left <= 0) {
-      loadMoreBtn?.remove();
-    } else {
-      loadMoreBtn.textContent = t('guides_load_more', { remaining: left });
-    }
+  if (remaining > 0) {
+    loadMoreWrap.style.display = '';
+    loadMoreBtn.textContent = t('guides_load_more', { remaining });
+  } else {
+    loadMoreWrap.style.display = 'none';
   }
 
-  loadMoreBtn?.addEventListener('click', _loadMore);
+  if (!_bound) {
+    _bound = true;
 
-  const searchInput = container.querySelector('#guideSearch');
-  let debounce;
-  searchInput?.addEventListener('input', () => {
-    clearTimeout(debounce);
-    debounce = setTimeout(() => {
-      const q = searchInput.value.trim().toLowerCase();
-      if (!q) {
-        grid.innerHTML = filtered.slice(0, shown).map(d => renderGuideCard(d, cardsMap)).join('');
-        countEl.textContent = t('guides_showing', { shown: Math.min(shown, filtered.length), total: filtered.length });
-        const wrap = container.querySelector('.guides-load-more-wrap');
-        if (!wrap && shown < filtered.length) {
-          grid.insertAdjacentHTML('afterend', `<div class="guides-load-more-wrap"><button class="guides-load-more-btn" id="guidesLoadMore">${t('guides_load_more', { remaining: filtered.length - shown })}</button></div>`);
-          container.querySelector('#guidesLoadMore')?.addEventListener('click', _loadMore);
-        }
-        return;
+    loadMoreBtn.addEventListener('click', () => {
+      if (!_state) return;
+      const { filtered, cardsMap } = _state;
+      const next = filtered.slice(_state.shown, _state.shown + PAGE_SIZE);
+      grid.insertAdjacentHTML('beforeend', next.map(d => renderGuideCard(d, cardsMap)).join(''));
+      _state.shown += next.length;
+      const left = filtered.length - _state.shown;
+      countEl.textContent = t('guides_showing', { shown: Math.min(_state.shown, filtered.length), total: filtered.length });
+      if (left <= 0) {
+        loadMoreWrap.style.display = 'none';
+      } else {
+        loadMoreBtn.textContent = t('guides_load_more', { remaining: left });
       }
-      const matched = filtered.filter(d => {
-        const title = localized(d.title, '');
-        const jaTitle = typeof d.title === 'object' ? (d.title.ja || '') : (d.title || '');
-        const desc = localized(d.description, '');
-        const text = [jaTitle, title, typeof desc === 'string' ? desc : '', d.deck_id].join(' ').toLowerCase();
-        return text.includes(q);
-      });
-      grid.innerHTML = matched.map(d => renderGuideCard(d, cardsMap)).join('');
-      countEl.textContent = `${matched.length} ${t('guides_count_label')}`;
-      const wrap = container.querySelector('.guides-load-more-wrap');
-      if (wrap) wrap.style.display = 'none';
-    }, 200);
-  });
+    });
+
+    let debounce;
+    searchEl.addEventListener('input', () => {
+      clearTimeout(debounce);
+      debounce = setTimeout(() => {
+        if (!_state) return;
+        const { filtered, cardsMap } = _state;
+        const q = searchEl.value.trim().toLowerCase();
+        if (!q) {
+          grid.innerHTML = filtered.slice(0, _state.shown).map(d => renderGuideCard(d, cardsMap)).join('');
+          countEl.textContent = t('guides_showing', { shown: Math.min(_state.shown, filtered.length), total: filtered.length });
+          if (_state.shown < filtered.length) {
+            loadMoreWrap.style.display = '';
+            loadMoreBtn.textContent = t('guides_load_more', { remaining: filtered.length - _state.shown });
+          } else {
+            loadMoreWrap.style.display = 'none';
+          }
+          return;
+        }
+        const matched = filtered.filter(d => {
+          const title = localized(d.title, '');
+          const jaTitle = typeof d.title === 'object' ? (d.title.ja || '') : (d.title || '');
+          const desc = localized(d.description, '');
+          const text = [jaTitle, title, typeof desc === 'string' ? desc : '', d.deck_id].join(' ').toLowerCase();
+          return text.includes(q);
+        });
+        grid.innerHTML = matched.map(d => renderGuideCard(d, cardsMap)).join('');
+        countEl.textContent = `${matched.length} ${t('guides_count_label')}`;
+        loadMoreWrap.style.display = 'none';
+      }, 200);
+    });
+  }
 }
 
 const COLOR_CSS = { '白': '#e8e8e8', '緑': '#4caf50', '赤': '#f44336', '青': '#2196f3', '紫': '#9c27b0', '黄': '#ffeb3b' };
 
 function renderGuideCard(deck, cardsMap, index = Infinity) {
   const title = localized(deck.title, deck.deck_id || '');
-  const thumbSrc = deck.deck_image || deck.oshi_image;
+  let thumbSrc = deck.deck_image || deck.oshi_image;
+  if (index === 0 && window.__LCP_OPT) thumbSrc = window.__LCP_OPT;
   const isCardArt = !deck.deck_image && !!deck.oshi_image;
   const imgCls = isCardArt ? 'guide-card-img card-art' : 'guide-card-img';
   const isEager = index < 4;

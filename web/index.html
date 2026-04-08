@@ -72,9 +72,11 @@
     .site-footer a{color:var(--accent-cyan);text-decoration:none}
     .modal[hidden]{display:none}
     .guides-header{text-align:center;margin-bottom:1.5rem}
+    .guides-header h2{font-size:1.6rem;color:var(--text-primary);margin-bottom:.4rem}
+    .guides-desc{color:var(--text-secondary);font-size:.9rem;margin-bottom:1rem}
     .guides-search-box{max-width:400px;margin:.6rem auto 0}
+    .guides-count{text-align:center;color:var(--text-secondary);font-size:.85rem;margin-bottom:1rem}
     .guides-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
-    .skel-line{background:var(--bg-card);border-radius:4px}
     .skel-card{height:280px;background:var(--bg-card);border-radius:var(--radius-lg);animation:skel-pulse 1.5s ease-in-out infinite}
     @keyframes skel-pulse{0%,100%{opacity:.6}50%{opacity:.3}}
     @media(max-width:600px){.filter-bar{padding:.6rem .8rem}.search-input{width:100%}.guides-grid{grid-template-columns:1fr}}
@@ -238,17 +240,20 @@
 
   <main id="mainContent">
     <div id="guidesView" class="view active">
-      <div class="guides-skeleton">
-        <div class="guides-header">
-          <div class="skel-line" style="height:1.6rem;width:50%;margin:0 auto .4rem"></div>
-          <div class="skel-line" style="height:.9rem;width:35%;margin:0 auto 1rem"></div>
-          <div class="guides-search-box"><div class="skel-line" style="height:2.2rem;border-radius:var(--radius)"></div></div>
+      <div class="guides-header">
+        <h2 id="guidesTitle">&nbsp;</h2>
+        <p class="guides-desc" id="guidesDesc">&nbsp;</p>
+        <div class="guides-search-box">
+          <input type="text" id="guideSearch" class="search-input" placeholder="" />
         </div>
-        <div class="skel-line" style="height:.85rem;width:15%;margin:0 auto 1rem"></div>
-        <div class="guides-grid">
-          <div class="skel-card"></div><div class="skel-card"></div><div class="skel-card"></div><div class="skel-card"></div>
-          <div class="skel-card"></div><div class="skel-card"></div><div class="skel-card"></div><div class="skel-card"></div>
-        </div>
+      </div>
+      <div class="guides-count" id="guidesCount">&nbsp;</div>
+      <div class="guides-grid" id="guidesGrid">
+        <div class="skel-card"></div><div class="skel-card"></div><div class="skel-card"></div><div class="skel-card"></div>
+        <div class="skel-card"></div><div class="skel-card"></div><div class="skel-card"></div><div class="skel-card"></div>
+      </div>
+      <div class="guides-load-more-wrap" id="guidesLoadMoreWrap" style="display:none">
+        <button class="guides-load-more-btn" id="guidesLoadMore"></button>
       </div>
     </div>
     <div id="tournamentView" class="view">

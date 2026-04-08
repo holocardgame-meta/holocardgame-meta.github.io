@@ -57,6 +57,40 @@ def _assign_tier_to_guides(data_dir: Path):
     print(f"  Assigned tier to {assigned}/{len(guides)} guides")
 
 
+def _optimize_lcp_image(web_dir: Path, lcp_url: str) -> str | None:
+    """Download the LCP image, resize to 640px wide, and save as WebP."""
+    import io
+    import httpx
+    from PIL import Image
+
+    images_dir = web_dir / "images"
+    images_dir.mkdir(exist_ok=True)
+    out_path = images_dir / "lcp-hero.webp"
+
+    try:
+        resp = httpx.get(lcp_url, timeout=15, follow_redirects=True)
+        resp.raise_for_status()
+    except Exception as e:
+        print(f"  Failed to download LCP image: {e}")
+        return None
+
+    try:
+        img = Image.open(io.BytesIO(resp.content))
+        max_w = 640
+        if img.width > max_w:
+            ratio = max_w / img.width
+            img = img.resize((max_w, int(img.height * ratio)), Image.LANCZOS)
+        if img.mode in ("RGBA", "P"):
+            img = img.convert("RGB")
+        img.save(out_path, "WEBP", quality=80)
+        size_kb = out_path.stat().st_size / 1024
+        print(f"  Optimized LCP image: {img.width}x{img.height}, {size_kb:.1f} KiB")
+        return "images/lcp-hero.webp"
+    except Exception as e:
+        print(f"  Failed to optimize LCP image: {e}")
+        return None
+
+
 def _inject_lcp_preload(web_dir: Path):
     """Inject a <link rel=preload> for the LCP image into index.html.
 
@@ -103,20 +137,37 @@ def _inject_lcp_preload(web_dir: Path):
             lcp_url = img
             break
 
+    local_lcp = None
+    if lcp_url:
+        local_lcp = _optimize_lcp_image(web_dir, lcp_url)
+
+    preload_url = local_lcp or lcp_url
+
     html = index_path.read_text(encoding="utf-8")
     html = re.sub(
         r'\s*<link rel="preload" as="image" href="[^"]*" fetchpriority="high">',
         "",
         html,
     )
+    html = re.sub(
+        r'\s*<script>window\.__LCP_OPT="[^"]*";</script>',
+        "",
+        html,
+    )
 
-    if lcp_url:
-        tag = f'\n  <link rel="preload" as="image" href="{lcp_url}" fetchpriority="high">'
-        marker = '<link rel="icon" type="image/svg+xml" href="favicon.svg">'
+    marker = '<link rel="icon" type="image/svg+xml" href="favicon.svg">'
+    if preload_url:
+        type_attr = ' type="image/webp"' if preload_url.endswith(".webp") else ""
+        tag = f'\n  <link rel="preload" as="image" href="{preload_url}"{type_attr} fetchpriority="high">'
         html = html.replace(marker, marker + tag)
-        print(f"  Injected LCP preload: {lcp_url[:80]}...")
+        print(f"  Injected LCP preload: {preload_url[:80]}...")
     else:
         print("  No LCP image found, skipping.")
+
+    if local_lcp:
+        opt_tag = f'\n  <script>window.__LCP_OPT="{local_lcp}";</script>'
+        html = html.replace("</head>", opt_tag + "\n</head>")
+        print(f"  Injected __LCP_OPT for frontend")
 
     index_path.write_text(html, encoding="utf-8")
 
