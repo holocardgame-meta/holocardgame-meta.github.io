@@ -181,6 +181,7 @@ body {
 }
 .search-input:focus { outline: none; border-color: var(--accent-cyan); }
 
+#mainContent { min-height: 80vh; }
 .view { display: none; padding: 1.5rem; max-width: 1200px; margin: 0 auto; }
 .view.active { display: block; }
 .loading {

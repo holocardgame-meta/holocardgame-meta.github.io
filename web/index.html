@@ -16,9 +16,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://hololive-cardgame.github.io">
-  <link rel="dns-prefetch" href="https://www.holocardstrategy.jp">
-  <link rel="dns-prefetch" href="https://en.hololive-official-cardgame.com">
+  <link rel="preconnect" href="https://www.holocardstrategy.jp" crossorigin>
+  <link rel="preconnect" href="https://en.hololive-official-cardgame.com" crossorigin>
+  <link rel="dns-prefetch" href="https://hololive-cardgame.github.io">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="HOLOCARD META - Fan-made ホロカ Tier List & Deck Guides">
@@ -64,6 +64,7 @@
     .color-btn.active{background:var(--c,var(--accent-cyan));color:var(--ct,var(--bg-primary));border-color:transparent;font-weight:700}
     .type-btn.active,.tier-btn.active{background:var(--accent-cyan);color:var(--bg-primary);border-color:transparent;font-weight:700}
     .search-input{background:var(--bg-card);border:1px solid var(--border);color:var(--text-primary);padding:6px 12px;border-radius:var(--radius);font-size:.9rem;width:280px;font-family:inherit}
+    #mainContent{min-height:80vh}
     .view{display:none;padding:1.5rem;max-width:1200px;margin:0 auto}.view.active{display:block}
     .loading{text-align:center;color:var(--text-secondary);padding:4rem;font-size:1.1rem}
     .site-footer{text-align:center;padding:2rem 1rem;color:var(--text-secondary);font-size:.78rem;border-top:1px solid var(--border);background:var(--bg-secondary)}
@@ -71,6 +72,13 @@
     .modal[hidden]{display:none}
     @media(max-width:600px){.filter-bar{padding:.6rem .8rem}.search-input{width:100%}}
   </style>
+
+  <link rel="modulepreload" href="app.js">
+  <link rel="modulepreload" href="i18n.js">
+  <link rel="modulepreload" href="components/guides-view.js">
+  <link rel="modulepreload" href="components/deck-view.js">
+  <link rel="modulepreload" href="components/card-view.js">
+  <link rel="modulepreload" href="components/tournament-view.js">
 
   <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">

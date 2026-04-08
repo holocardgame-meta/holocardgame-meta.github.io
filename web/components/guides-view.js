@@ -89,7 +89,7 @@ export function renderGuidesView(container, allGuides, decksData, cardsData, fil
     </div>
     <div class="guides-count" id="guidesCount">${t('guides_showing', { shown: Math.min(shown, filtered.length), total: filtered.length })}</div>
     <div class="guides-grid" id="guidesGrid">
-      ${initial.map(d => renderGuideCard(d, cardsMap)).join('')}
+      ${initial.map((d, i) => renderGuideCard(d, cardsMap, i)).join('')}
     </div>
     ${remaining > 0 ? `<div class="guides-load-more-wrap"><button class="guides-load-more-btn" id="guidesLoadMore">${t('guides_load_more', { remaining })}</button></div>` : ''}
   `;
@@ -148,13 +148,16 @@ export function renderGuidesView(container, allGuides, decksData, cardsData, fil
 
 const COLOR_CSS = { '白': '#e8e8e8', '緑': '#4caf50', '赤': '#f44336', '青': '#2196f3', '紫': '#9c27b0', '黄': '#ffeb3b' };
 
-function renderGuideCard(deck, cardsMap) {
+function renderGuideCard(deck, cardsMap, index = Infinity) {
   const title = localized(deck.title, deck.deck_id || '');
   const thumbSrc = deck.deck_image || deck.oshi_image;
   const isCardArt = !deck.deck_image && !!deck.oshi_image;
   const imgCls = isCardArt ? 'guide-card-img card-art' : 'guide-card-img';
+  const isEager = index < 4;
+  const loadAttr = isEager ? '' : ' loading="lazy"';
+  const priorityAttr = index === 0 ? ' fetchpriority="high"' : '';
   const imgHtml = thumbSrc
-    ? `<img class="${imgCls}" src="${thumbSrc}" alt="${title}" loading="lazy" decoding="async">`
+    ? `<img class="${imgCls}" src="${thumbSrc}" alt="${title}"${loadAttr} decoding="async"${priorityAttr}>`
     : `<div class="guide-card-noimg">🃏</div>`;
 
   const tierBadge = deck.tier
