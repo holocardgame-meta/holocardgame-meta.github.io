@@ -134,6 +134,20 @@ def _build_system_prompt(source: str, target: str) -> str:
     )
 
 
+def _unwrap_result(item, target: str) -> str:
+    """Extract plain text from LLM results that may be dicts instead of strings."""
+    if isinstance(item, str):
+        return item
+    if isinstance(item, dict):
+        for key in ["text", target, "en", "translation", "translated"]:
+            if key in item and isinstance(item[key], str):
+                return item[key]
+        vals = [v for v in item.values() if isinstance(v, str)]
+        if vals:
+            return vals[-1]
+    return str(item)
+
+
 def _translate_batch_gemini(texts: list[str], source: str, target: str) -> list[str]:
     """Translate a batch of texts using a single Gemini API call."""
     client = _get_client()
@@ -157,13 +171,13 @@ def _translate_batch_gemini(texts: list[str], source: str, target: str) -> list[
             raw = (response.text or "").strip()
             results = json.loads(raw)
             if isinstance(results, list) and len(results) == len(texts):
-                return [str(r) for r in results]
+                return [_unwrap_result(r, target) for r in results]
             got = len(results) if isinstance(results, list) else 0
             print(f"    [warn] Batch size mismatch: expected {len(texts)}, got {got}")
             if isinstance(results, list) and got > 0:
                 mismatch_retries += 1
                 if mismatch_retries >= 3:
-                    padded = [str(r) for r in results]
+                    padded = [_unwrap_result(r, target) for r in results]
                     padded.extend(texts[len(padded):])
                     return padded[:len(texts)]
             time.sleep(2)
