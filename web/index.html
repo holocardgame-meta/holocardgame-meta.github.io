@@ -19,8 +19,6 @@
   <link rel="preconnect" href="https://hololive-cardgame.github.io">
   <link rel="dns-prefetch" href="https://www.holocardstrategy.jp">
   <link rel="dns-prefetch" href="https://en.hololive-official-cardgame.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap"></noscript>
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="HOLOCARD META - Fan-made ホロカ Tier List & Deck Guides">
@@ -40,7 +38,46 @@
   <meta name="twitter:image" content="https://holocardgame-meta.github.io/og-image.svg">
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    :root{--bg-primary:#0a0e1a;--bg-secondary:#111827;--bg-card:#1a2235;--bg-card-hover:#1f2a42;--border:#2a3550;--text-primary:#e8eaf0;--text-secondary:#8892a8;--accent-cyan:#26c7ff;--accent-gold:#ffd700;--accent-purple:#a855f7;--tier1:#ffd700;--tier2:#c0c0c0;--tier3:#cd7f32;--radius:8px;--radius-lg:14px;--shadow:0 4px 20px rgba(0,0,0,.4)}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:var(--bg-primary);color:var(--text-primary);font-family:'Noto Sans TC',sans-serif;line-height:1.6;min-height:100vh}
+    .site-header{background:linear-gradient(135deg,#0f1629 0%,#1a1040 50%,#0f1629 100%);border-bottom:2px solid var(--accent-cyan);padding:2rem 1rem;text-align:center;position:relative;overflow:hidden}
+    .site-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(38,199,255,.12) 0%,transparent 60%);pointer-events:none}
+    .header-inner{position:relative;z-index:1}
+    .site-title{font-size:clamp(1.6rem,5vw,2.8rem);letter-spacing:.08em}
+    .title-holo{color:var(--accent-cyan)}.title-card{color:var(--text-primary)}
+    .title-meta{display:inline-block;background:var(--accent-cyan);color:var(--bg-primary);padding:0 .4em;margin-left:.3em;border-radius:4px;font-size:.75em}
+    .site-subtitle{color:var(--text-secondary);margin-top:.4rem;font-size:.9rem}
+    .lang-switcher{display:flex;justify-content:center;gap:.4rem;margin-top:.7rem}
+    .lang-btn{background:rgba(255,255,255,.08);color:var(--text-secondary);border:1px solid transparent;padding:3px 12px;border-radius:4px;font-size:.78rem;cursor:pointer;font-family:inherit}
+    .lang-btn.active{background:var(--accent-cyan);color:var(--bg-primary);font-weight:700}
+    .main-nav{display:flex;justify-content:center;gap:.5rem;padding:1rem;background:var(--bg-secondary);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50}
+    .nav-btn{background:transparent;color:var(--text-secondary);border:1px solid var(--border);padding:.5rem 1.5rem;border-radius:var(--radius);font-size:.95rem;cursor:pointer;font-family:inherit}
+    .nav-btn.active{background:var(--accent-cyan);color:var(--bg-primary);border-color:var(--accent-cyan);font-weight:700}
+    .filter-bar{background:var(--bg-secondary);padding:.8rem 1.5rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;border-bottom:1px solid var(--border)}
+    .filter-group{display:flex;align-items:center;gap:.5rem}
+    .filter-group label{font-size:.8rem;color:var(--text-secondary);white-space:nowrap}
+    .color-filters,.type-filters,.tier-filters{display:flex;gap:4px;flex-wrap:wrap}
+    .color-btn,.type-btn,.tier-btn{background:var(--bg-card);color:var(--text-secondary);border:1px solid var(--border);padding:3px 10px;border-radius:4px;font-size:.8rem;cursor:pointer;font-family:inherit}
+    .color-btn.active{background:var(--c,var(--accent-cyan));color:var(--ct,var(--bg-primary));border-color:transparent;font-weight:700}
+    .type-btn.active,.tier-btn.active{background:var(--accent-cyan);color:var(--bg-primary);border-color:transparent;font-weight:700}
+    .search-input{background:var(--bg-card);border:1px solid var(--border);color:var(--text-primary);padding:6px 12px;border-radius:var(--radius);font-size:.9rem;width:280px;font-family:inherit}
+    .view{display:none;padding:1.5rem;max-width:1200px;margin:0 auto}.view.active{display:block}
+    .loading{text-align:center;color:var(--text-secondary);padding:4rem;font-size:1.1rem}
+    .site-footer{text-align:center;padding:2rem 1rem;color:var(--text-secondary);font-size:.78rem;border-top:1px solid var(--border);background:var(--bg-secondary)}
+    .site-footer a{color:var(--accent-cyan);text-decoration:none}
+    .modal[hidden]{display:none}
+    @media(max-width:600px){.filter-bar{padding:.6rem .8rem}.search-input{width:100%}}
+  </style>
+
+  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+  </noscript>
 
   <script type="application/ld+json">
   [
@@ -232,6 +269,9 @@
       if ('requestIdleCallback' in window) requestIdleCallback(load);
       else setTimeout(load, 3500);
     })();
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(function(){});
+    }
   </script>
 </body>
 </html>
