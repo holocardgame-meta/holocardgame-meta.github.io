@@ -38,6 +38,7 @@
   <meta name="twitter:image" content="https://holocardgame-meta.github.io/og-image.svg">
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preload" as="image" href="https://www.holocardstrategy.jp/wp-content/uploads/2024/09/216401a6a261e96f26e6886dc2a0fee8.png" fetchpriority="high">
 
   <style>
     :root{--bg-primary:#0a0e1a;--bg-secondary:#111827;--bg-card:#1a2235;--bg-card-hover:#1f2a42;--border:#2a3550;--text-primary:#e8eaf0;--text-secondary:#8892a8;--accent-cyan:#26c7ff;--accent-gold:#ffd700;--accent-purple:#a855f7;--tier1:#ffd700;--tier2:#c0c0c0;--tier3:#cd7f32;--radius:8px;--radius-lg:14px;--shadow:0 4px 20px rgba(0,0,0,.4)}
@@ -70,7 +71,13 @@
     .site-footer{text-align:center;padding:2rem 1rem;color:var(--text-secondary);font-size:.78rem;border-top:1px solid var(--border);background:var(--bg-secondary)}
     .site-footer a{color:var(--accent-cyan);text-decoration:none}
     .modal[hidden]{display:none}
-    @media(max-width:600px){.filter-bar{padding:.6rem .8rem}.search-input{width:100%}}
+    .guides-header{text-align:center;margin-bottom:1.5rem}
+    .guides-search-box{max-width:400px;margin:.6rem auto 0}
+    .guides-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+    .skel-line{background:var(--bg-card);border-radius:4px}
+    .skel-card{height:280px;background:var(--bg-card);border-radius:var(--radius-lg);animation:skel-pulse 1.5s ease-in-out infinite}
+    @keyframes skel-pulse{0%,100%{opacity:.6}50%{opacity:.3}}
+    @media(max-width:600px){.filter-bar{padding:.6rem .8rem}.search-input{width:100%}.guides-grid{grid-template-columns:1fr}}
   </style>
 
   <link rel="modulepreload" href="app.js">
@@ -231,7 +238,18 @@
 
   <main id="mainContent">
     <div id="guidesView" class="view active">
-      <div class="loading" data-i18n="loading">載入中...</div>
+      <div class="guides-skeleton">
+        <div class="guides-header">
+          <div class="skel-line" style="height:1.6rem;width:50%;margin:0 auto .4rem"></div>
+          <div class="skel-line" style="height:.9rem;width:35%;margin:0 auto 1rem"></div>
+          <div class="guides-search-box"><div class="skel-line" style="height:2.2rem;border-radius:var(--radius)"></div></div>
+        </div>
+        <div class="skel-line" style="height:.85rem;width:15%;margin:0 auto 1rem"></div>
+        <div class="guides-grid">
+          <div class="skel-card"></div><div class="skel-card"></div><div class="skel-card"></div><div class="skel-card"></div>
+          <div class="skel-card"></div><div class="skel-card"></div><div class="skel-card"></div><div class="skel-card"></div>
+        </div>
+      </div>
     </div>
     <div id="tournamentView" class="view">
       <div class="loading" data-i18n="loading">載入中...</div>

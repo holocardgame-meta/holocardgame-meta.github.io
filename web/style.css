@@ -1136,6 +1136,15 @@ body {
 .site-footer a { color: var(--accent-cyan); text-decoration: none; }
 .site-footer a:hover { text-decoration: underline; }
 
+.skel-line { background: var(--bg-card); border-radius: 4px; }
+.skel-card {
+  height: 280px;
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  animation: skel-pulse 1.5s ease-in-out infinite;
+}
+@keyframes skel-pulse { 0%, 100% { opacity: .6; } 50% { opacity: .3; } }
+
 /* ── Guides View ── */
 .guides-header {
   text-align: center;

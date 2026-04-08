@@ -1,6 +1,8 @@
 """Main entry point: run all scrapers and output JSON to data/."""
 
+import functools
 import json
+import re
 import shutil
 from pathlib import Path
 
@@ -55,6 +57,70 @@ def _assign_tier_to_guides(data_dir: Path):
     print(f"  Assigned tier to {assigned}/{len(guides)} guides")
 
 
+def _inject_lcp_preload(web_dir: Path):
+    """Inject a <link rel=preload> for the LCP image into index.html.
+
+    Replicates the guides-view.js combined-list + sort logic so the preload
+    tag always points to the first visible guide-card thumbnail.
+    """
+    index_path = web_dir / "index.html"
+    data_dir = web_dir / "data"
+    if not index_path.exists():
+        return
+
+    def _load(name):
+        p = data_dir / name
+        return json.loads(p.read_text(encoding="utf-8")) if p.exists() else []
+
+    guides = _load("all_guides.json")
+    decks = _load("decks.json")
+    officials = _load("official_decks.json")
+
+    combined = []
+    for d in officials:
+        combined.append({**d, "_src": "official"})
+    for d in decks:
+        combined.append({**d, "_src": "tier"})
+    tier_urls = {d.get("url") for d in decks if d.get("url")}
+    for g in guides:
+        if g.get("url") not in tier_urls:
+            combined.append({**g, "_src": "guide"})
+
+    def _cmp(a, b):
+        da, db = a.get("date", "") or "", b.get("date", "") or ""
+        if db > da:
+            return 1
+        if da > db:
+            return -1
+        return (a.get("tier") or 99) - (b.get("tier") or 99)
+
+    combined.sort(key=functools.cmp_to_key(_cmp))
+
+    lcp_url = None
+    for d in combined:
+        img = d.get("deck_image") or d.get("oshi_image")
+        if img:
+            lcp_url = img
+            break
+
+    html = index_path.read_text(encoding="utf-8")
+    html = re.sub(
+        r'\s*<link rel="preload" as="image" href="[^"]*" fetchpriority="high">',
+        "",
+        html,
+    )
+
+    if lcp_url:
+        tag = f'\n  <link rel="preload" as="image" href="{lcp_url}" fetchpriority="high">'
+        marker = '<link rel="icon" type="image/svg+xml" href="favicon.svg">'
+        html = html.replace(marker, marker + tag)
+        print(f"  Injected LCP preload: {lcp_url[:80]}...")
+    else:
+        print("  No LCP image found, skipping.")
+
+    index_path.write_text(html, encoding="utf-8")
+
+
 def main():
     base = Path(__file__).resolve().parent.parent
     data_dir = base / "data"
@@ -104,6 +170,9 @@ def main():
         if src.exists():
             shutil.copy2(src, web_data_dir / f)
             print(f"  Copied {f}")
+
+    print("\n[LCP] Injecting LCP image preload hint...")
+    _inject_lcp_preload(base / "web")
 
     print("\n" + "=" * 50)
     print("Done! Open web/index.html to view the app.")
