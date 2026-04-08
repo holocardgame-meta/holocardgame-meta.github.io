@@ -282,11 +282,24 @@ def _extract_deck_image(soup: BeautifulSoup) -> str | None:
     return None
 
 
+def _clean_meta_description(desc: str) -> str:
+    """Remove CMS noise (nav links, source attribution) and truncation artifacts."""
+    noise_markers = ["出典：", "出典:", " ↓↓", "関連デッキ"]
+    for marker in noise_markers:
+        idx = desc.find(marker)
+        if idx > 0:
+            desc = desc[:idx].rstrip()
+    sentence_endings = ("。", "！", "？", "」", "）")
+    if desc and not desc.endswith(sentence_endings):
+        for i in range(len(desc) - 1, -1, -1):
+            if desc[i] in sentence_endings:
+                desc = desc[: i + 1]
+                break
+    return desc
+
+
 def _extract_description(soup: BeautifulSoup) -> str:
     """Extract the intro paragraph."""
-    meta = soup.find("meta", attrs={"name": "description"})
-    if meta and meta.get("content"):
-        return meta["content"].strip()
     entry_content = soup.find("div", class_="post_content")
     if not entry_content:
         entry_content = soup
@@ -294,6 +307,9 @@ def _extract_description(soup: BeautifulSoup) -> str:
         text = p.get_text(strip=True)
         if len(text) > 40 and "出典" not in text and "目次" not in text:
             return text
+    meta = soup.find("meta", attrs={"name": "description"})
+    if meta and meta.get("content"):
+        return _clean_meta_description(meta["content"].strip())
     return ""
 
 
