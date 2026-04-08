@@ -57,21 +57,21 @@ def _assign_tier_to_guides(data_dir: Path):
     print(f"  Assigned tier to {assigned}/{len(guides)} guides")
 
 
-def _optimize_lcp_image(web_dir: Path, lcp_url: str) -> str | None:
-    """Download the LCP image, resize to 640px wide, and save as WebP."""
+def _optimize_lcp_image(web_dir: Path, lcp_url: str, suffix: int = 0) -> str | None:
+    """Download an LCP image, resize to 640px wide, and save as WebP."""
     import io
     import httpx
     from PIL import Image
 
     images_dir = web_dir / "images"
     images_dir.mkdir(exist_ok=True)
-    out_path = images_dir / "lcp-hero.webp"
+    out_path = images_dir / f"lcp-hero-{suffix}.webp"
 
     try:
         resp = httpx.get(lcp_url, timeout=15, follow_redirects=True)
         resp.raise_for_status()
     except Exception as e:
-        print(f"  Failed to download LCP image: {e}")
+        print(f"  Failed to download LCP image {suffix}: {e}")
         return None
 
     try:
@@ -84,10 +84,10 @@ def _optimize_lcp_image(web_dir: Path, lcp_url: str) -> str | None:
             img = img.convert("RGB")
         img.save(out_path, "WEBP", quality=60)
         size_kb = out_path.stat().st_size / 1024
-        print(f"  Optimized LCP image: {img.width}x{img.height}, {size_kb:.1f} KiB")
-        return "images/lcp-hero.webp"
+        print(f"  Optimized LCP image {suffix}: {img.width}x{img.height}, {size_kb:.1f} KiB")
+        return f"images/lcp-hero-{suffix}.webp"
     except Exception as e:
-        print(f"  Failed to optimize LCP image: {e}")
+        print(f"  Failed to optimize LCP image {suffix}: {e}")
         return None
 
 
@@ -130,22 +130,21 @@ def _inject_lcp_preload(web_dir: Path):
 
     combined.sort(key=functools.cmp_to_key(_cmp))
 
-    lcp_url = None
+    lcp_urls: list[str] = []
     for d in combined:
         img = d.get("deck_image") or d.get("oshi_image")
         if img:
-            lcp_url = img
+            lcp_urls.append(img)
+        if len(lcp_urls) >= 4:
             break
 
-    local_lcp = None
-    if lcp_url:
-        local_lcp = _optimize_lcp_image(web_dir, lcp_url)
-
-    preload_url = local_lcp or lcp_url
+    local_lcps: list[str | None] = []
+    for i, url in enumerate(lcp_urls):
+        local_lcps.append(_optimize_lcp_image(web_dir, url, suffix=i))
 
     html = index_path.read_text(encoding="utf-8")
     html = re.sub(
-        r'\s*<link rel="preload" as="image" href="[^"]*" fetchpriority="high">',
+        r'\s*<link rel="preload" as="image" href="[^"]*"[^>]*fetchpriority="high"[^>]*>',
         "",
         html,
     )
@@ -154,20 +153,31 @@ def _inject_lcp_preload(web_dir: Path):
         "",
         html,
     )
+    html = re.sub(
+        r'\s*<script>window\.__LCP_OPTS=\[.*?\];</script>',
+        "",
+        html,
+    )
 
     marker = '<link rel="icon" type="image/svg+xml" href="favicon.svg">'
-    if preload_url:
+    preload_tags = ""
+    for i, url in enumerate(lcp_urls):
+        preload_url = local_lcps[i] or url
         type_attr = ' type="image/webp"' if preload_url.endswith(".webp") else ""
-        tag = f'\n  <link rel="preload" as="image" href="{preload_url}"{type_attr} fetchpriority="high">'
-        html = html.replace(marker, marker + tag)
-        print(f"  Injected LCP preload: {preload_url[:80]}...")
-    else:
-        print("  No LCP image found, skipping.")
+        preload_tags += f'\n  <link rel="preload" as="image" href="{preload_url}"{type_attr} fetchpriority="high">'
+        print(f"  Injected LCP preload [{i}]: {preload_url[:80]}...")
 
-    if local_lcp:
-        opt_tag = f'\n  <script>window.__LCP_OPT="{local_lcp}";</script>'
+    if preload_tags:
+        html = html.replace(marker, marker + preload_tags)
+    else:
+        print("  No LCP images found, skipping.")
+
+    opts = [local_lcps[i] if i < len(local_lcps) and local_lcps[i] else None for i in range(len(lcp_urls))]
+    if any(opts):
+        opts_js = ",".join(f'"{v}"' if v else "null" for v in opts)
+        opt_tag = f'\n  <script>window.__LCP_OPTS=[{opts_js}];</script>'
         html = html.replace("</head>", opt_tag + "\n</head>")
-        print(f"  Injected __LCP_OPT for frontend")
+        print(f"  Injected __LCP_OPTS for frontend ({len([o for o in opts if o])} optimized)")
 
     index_path.write_text(html, encoding="utf-8")
 

@@ -166,12 +166,12 @@ const COLOR_CSS = { '白': '#e8e8e8', '緑': '#4caf50', '赤': '#f44336', '青':
 function renderGuideCard(deck, cardsMap, index = Infinity) {
   const title = localized(deck.title, deck.deck_id || '');
   let thumbSrc = deck.deck_image || deck.oshi_image;
-  if (index === 0 && window.__LCP_OPT) thumbSrc = window.__LCP_OPT;
+  if (index < 4 && window.__LCP_OPTS && window.__LCP_OPTS[index]) thumbSrc = window.__LCP_OPTS[index];
   const isCardArt = !deck.deck_image && !!deck.oshi_image;
   const imgCls = isCardArt ? 'guide-card-img card-art' : 'guide-card-img';
   const isEager = index < 4;
   const loadAttr = isEager ? '' : ' loading="lazy"';
-  const priorityAttr = index === 0 ? ' fetchpriority="high"' : '';
+  const priorityAttr = index < 4 ? ' fetchpriority="high"' : '';
   const imgHtml = thumbSrc
     ? `<img class="${imgCls}" src="${thumbSrc}" alt="${title}"${loadAttr} decoding="async"${priorityAttr}>`
     : `<div class="guide-card-noimg">🃏</div>`;
