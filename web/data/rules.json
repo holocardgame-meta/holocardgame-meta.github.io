@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-04-06",
+  "scraped_at": "2026-04-08",
   "restricted_cards": [
     "hBP01-030",
     "hBP02-094"
@@ -10,9 +10,9 @@
       "url": "https://hololive-official-cardgame.com/news/post/44/",
       "title": {
         "ja": "一部カード効果の裁定変更のお知らせ",
-        "zh-TW": "關於部分卡牌效果判定變更的通知",
-        "en": "Notice of changes in ruling for some card effects",
-        "fr": "Avis de changements dans les règles pour certains effets de cartes"
+        "zh-TW": "部分卡牌效果裁定變更通知",
+        "en": "Notice regarding ruling changes for some card effects",
+        "fr": "Annonce de modification de l'interprétation de certains effets de carte"
       }
     },
     "hBP01-030": {
@@ -20,9 +20,9 @@
       "url": "https://hololive-official-cardgame.com/news/post/44/",
       "title": {
         "ja": "一部カード効果の裁定変更のお知らせ",
-        "zh-TW": "關於部分卡牌效果判定變更的通知",
-        "en": "Notice of changes in ruling for some card effects",
-        "fr": "Avis de changements dans les règles pour certains effets de cartes"
+        "zh-TW": "部分卡牌效果裁定變更通知",
+        "en": "Notice regarding ruling changes for some card effects",
+        "fr": "Annonce de modification de l'interprétation de certains effets de carte"
       }
     },
     "hSD11-009": {
@@ -30,9 +30,9 @@
       "url": "https://hololive-official-cardgame.com/news/post/44/",
       "title": {
         "ja": "一部カード効果の裁定変更のお知らせ",
-        "zh-TW": "關於部分卡牌效果判定變更的通知",
-        "en": "Notice of changes in ruling for some card effects",
-        "fr": "Avis de changements dans les règles pour certains effets de cartes"
+        "zh-TW": "部分卡牌效果裁定變更通知",
+        "en": "Notice regarding ruling changes for some card effects",
+        "fr": "Annonce de modification de l'interprétation de certains effets de carte"
       }
     }
   },
@@ -43,9 +43,9 @@
       "slug": "44",
       "title": {
         "ja": "一部カード効果の裁定変更のお知らせ",
-        "zh-TW": "關於部分卡牌效果判定變更的通知",
-        "en": "Notice of changes in ruling for some card effects",
-        "fr": "Avis de changements dans les règles pour certains effets de cartes"
+        "zh-TW": "部分卡牌效果裁定變更通知",
+        "en": "Notice regarding ruling changes for some card effects",
+        "fr": "Annonce de modification de l'interprétation de certains effets de carte"
       },
       "type": "errata",
       "card_ids": [
@@ -60,9 +60,9 @@
       "slug": "39",
       "title": {
         "ja": "ゲーム開始時の「手札の引き直し」に関するルール更新のお知らせ",
-        "zh-TW": "關於遊戲開始時「重新抽牌」規則更新的通知",
-        "en": "Notice of updated rules regarding “redrawing of cards” at the start of the game",
-        "fr": "Avis de règles mises à jour concernant le « retirage des cartes » en début de partie"
+        "zh-TW": "關於遊戲開始時「手牌重抽」的規則更新通知",
+        "en": "Notice regarding rule update for \"Redrawing Hand\" at the start of the game",
+        "fr": "Annonce de mise à jour des règles concernant le \"Remaniement de main\" en début de partie"
       },
       "type": "rule_update",
       "card_ids": []
@@ -73,9 +73,9 @@
       "slug": "34",
       "title": {
         "ja": "制限カード解除のお知らせ[2025/12/8(月)施行]",
-        "zh-TW": "限制卡片註銷通知【2025年12月8日（週一）施行】",
-        "en": "Notice of cancellation of restricted cards [enforced on December 8, 2025 (Monday)]",
-        "fr": "Avis d'annulation de cartes restreintes [en vigueur le 8 décembre 2025 (lundi)]"
+        "zh-TW": "限制卡解除通知[2025/12/8(一)施行]",
+        "en": "Notice regarding the removal of Restricted Cards [Effective 2025/12/8 (Mon)]",
+        "fr": "Annonce de levée de restriction de carte [Applicable à partir du 2025/12/8 (lun)]"
       },
       "type": "unrestricted",
       "card_ids": [
@@ -89,9 +89,9 @@
       "slug": "rule01",
       "title": {
         "ja": "デッキ構築ルール",
-        "zh-TW": "甲板建造規則",
-        "en": "Deck construction rules",
-        "fr": "Règles de construction du pont"
+        "zh-TW": "牌組構築規則",
+        "en": "Deck Construction Rules",
+        "fr": "Règles de construction de deck"
       },
       "type": "deck_rules",
       "card_ids": [
@@ -107,9 +107,9 @@
       "slug": "20",
       "title": {
         "ja": "制限カード追加のお知らせ[2025/4/21(月)施行]",
-        "zh-TW": "關於新增限制卡的通知[2025年4月21日（星期一）實施]",
-        "en": "Notice of addition of restricted cards [enforced on April 21, 2025 (Monday)]",
-        "fr": "Avis d'ajout de cartes restreintes [en vigueur le 21 avril 2025 (lundi)]"
+        "zh-TW": "限制卡追加通知[2025/4/21(一)施行]",
+        "en": "Notice regarding the addition of Restricted Cards [Effective 2025/4/21 (Mon)]",
+        "fr": "Annonce d'ajout de restriction de carte [Applicable à partir du 2025/4/21 (lun)]"
       },
       "type": "restricted",
       "card_ids": [
@@ -129,9 +129,9 @@
       "slug": "09",
       "title": {
         "ja": "制限カード追加のお知らせ[2024/12/20(金)施行]",
-        "zh-TW": "關於新增限制卡的通知[2024年12月20日星期五實施]",
-        "en": "Notice of addition of restricted cards [enforced on Friday, December 20, 2024]",
-        "fr": "Avis d'ajout de cartes restreintes [en vigueur le vendredi 20 décembre 2024]"
+        "zh-TW": "限制卡追加通知[2024/12/20(五)施行]",
+        "en": "Notice regarding the addition of Restricted Cards [Effective 2024/12/20 (Fri)]",
+        "fr": "Annonce d'ajout de restriction de carte [Applicable à partir du 2024/12/20 (ven)]"
       },
       "type": "restricted",
       "card_ids": [

@@ -13,9 +13,9 @@ from google.genai import types
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 GEMINI_MODEL = "gemini-2.5-flash-lite"
-BATCH_SIZE = 40
-REQUEST_DELAY = 4.0
-MAX_RETRIES = 6
+BATCH_SIZE = 80
+REQUEST_DELAY = 5.0
+MAX_RETRIES = 8
 
 TARGET_LANGS_JA = ["zh-TW", "en", "fr"]
 TARGET_LANGS_ZH = ["ja", "en", "fr"]
@@ -142,6 +142,7 @@ def _translate_batch_gemini(texts: list[str], source: str, target: str) -> list[
     numbered = "\n".join(f"[{i+1}] {t}" for i, t in enumerate(texts))
     user_prompt = f"Translate these {len(texts)} items:\n\n{numbered}"
 
+    mismatch_retries = 0
     for attempt in range(MAX_RETRIES):
         try:
             response = client.models.generate_content(
@@ -153,11 +154,20 @@ def _translate_batch_gemini(texts: list[str], source: str, target: str) -> list[
                     response_mime_type="application/json",
                 ),
             )
-            raw = response.text.strip()
+            raw = (response.text or "").strip()
             results = json.loads(raw)
             if isinstance(results, list) and len(results) == len(texts):
                 return [str(r) for r in results]
-            print(f"    [warn] Batch size mismatch: expected {len(texts)}, got {len(results) if isinstance(results, list) else 'non-list'}")
+            got = len(results) if isinstance(results, list) else 0
+            print(f"    [warn] Batch size mismatch: expected {len(texts)}, got {got}")
+            if isinstance(results, list) and got > 0:
+                mismatch_retries += 1
+                if mismatch_retries >= 3:
+                    padded = [str(r) for r in results]
+                    padded.extend(texts[len(padded):])
+                    return padded[:len(texts)]
+            time.sleep(2)
+            continue
         except json.JSONDecodeError:
             print(f"    [warn] JSON parse failed (attempt {attempt + 1})")
         except Exception as e:
@@ -170,7 +180,7 @@ def _translate_batch_gemini(texts: list[str], source: str, target: str) -> list[
                 time.sleep(wait)
                 continue
 
-        wait = REQUEST_DELAY * (2 ** attempt)
+        wait = min(REQUEST_DELAY * (2 ** attempt), 30)
         time.sleep(wait)
 
     return texts
@@ -488,14 +498,19 @@ def translate_all(data_dir: Path):
 
     print("[translate] Translating tier_list.json...")
     translate_tier_list(data_dir)
+    _save_cache()
     print("[translate] Translating decks.json...")
     translate_decks(data_dir)
+    _save_cache()
     print("[translate] Translating all_guides.json...")
     translate_guides(data_dir)
+    _save_cache()
     print("[translate] Translating official_decks.json...")
     translate_official(data_dir)
+    _save_cache()
     print("[translate] Translating cards.json...")
     translate_cards(data_dir)
+    _save_cache()
     print("[translate] Translating rules.json...")
     translate_rules(data_dir)
 
