@@ -6,6 +6,42 @@
       "tier": 1,
       "decks": [
         {
+          "name": "クロニー単",
+          "image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/816edede419ef54297bdd7bca3f6844c-1080x608.png",
+          "ratings": {
+            "firepower": "◎",
+            "ease": "○",
+            "stability": "○",
+            "endurance": "◎",
+            "pressure": "◎"
+          },
+          "features": {
+            "ja": [
+              "先行でも後攻でも相手より先に2ndを起動が可能",
+              "1stを使いまわして大量にエール加速やバフ効果を使える",
+              "SPで追加ターンを使って2面取りをしよう！"
+            ],
+            "zh-TW": [
+              "無論是先攻或後攻，都能比對手更早啟動 2nd",
+              "透過重複使用 1st 來發動大量吶喊加速或增益效果",
+              "使用 SP 來獲得追加回合並達成 2 面取吧！"
+            ],
+            "en": [
+              "It's possible to activate 2nd before the opponent, whether going first or second.",
+              "Using 1st repeatedly allows for a large amount of Cheer acceleration and buff effects.",
+              "Use the SP for an extra turn to take two Stages!"
+            ],
+            "fr": [
+              "Possibilité d'activer le 2nd avant l'adversaire, que ce soit en premier ou en second.",
+              "Utiliser le 1st pour réutiliser et activer de nombreux Accélérations d'encouragement et effets de buff.",
+              "Utiliser le SP pour obtenir un tour supplémentaire et prendre 2 zones !"
+            ]
+          },
+          "recipe_url": "https://www.holocardstrategy.jp/ouro-kronii-deck/",
+          "vtuber": "オーロ・クロニー",
+          "id": "オーロ-クロニー-クロニー単"
+        },
+        {
           "name": "AZKi単",
           "image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/f1bf415c0add6572740384accb17646d-1080x608.png",
           "ratings": {
@@ -78,40 +114,40 @@
           "id": "azki-azkiカリ"
         },
         {
-          "name": "クロニー単",
-          "image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/816edede419ef54297bdd7bca3f6844c-1080x608.png",
+          "name": "ミオ推しハコリズ（エリザベールズ）",
+          "image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/dd963b989112663676ce7a8e0c4ccccb-1080x608.png",
           "ratings": {
             "firepower": "◎",
             "ease": "○",
             "stability": "○",
-            "endurance": "◎",
+            "endurance": "○",
             "pressure": "◎"
           },
           "features": {
             "ja": [
-              "先行でも後攻でも相手より先に2ndを起動が可能",
-              "1stを使いまわして大量にエール加速やバフ効果を使える",
-              "SPで追加ターンを使って2面取りをしよう！"
+              "2ターン目からBuzzのハコスを含む2枚を並べて、毎ターン2面取りを狙う",
+              "速度で相手の盤面が並べきる前に倒しきれる",
+              "エリザベスを前に出すと260の耐久力を押し付けられるのが魅力"
             ],
             "zh-TW": [
-              "無論是先攻或後攻，都能比對手更早啟動 2nd",
-              "透過重複使用 1st 來發動大量吶喊加速或增益效果",
-              "使用 SP 來獲得追加回合並達成 2 面取吧！"
+              "從第 2 回合開始，將 Buzz 的哈考斯等 2 張卡並列，目標是每回合 2 面取",
+              "透過速度，能在對手佈滿場面之前將其擊倒",
+              "將 Elizabeth 擺在前面時，能施加 260 的耐久力壓制，這是其魅力所在"
             ],
             "en": [
-              "It's possible to activate 2nd before the opponent, whether going first or second.",
-              "Using 1st repeatedly allows for a large amount of Cheer acceleration and buff effects.",
-              "Use the SP for an extra turn to take two Stages!"
+              "Starting from the 2nd turn, deploy 2 cards including Buzz's Hako, aiming to take two Stages each turn.",
+              "Defeat the opponent before they can establish their board by overwhelming them with speed.",
+              "Deploying Elizabeth in front applies a pressure of 260 durability, which is appealing."
             ],
             "fr": [
-              "Possibilité d'activer le 2nd avant l'adversaire, que ce soit en premier ou en second.",
-              "Utiliser le 1st pour réutiliser et activer de nombreux Accélérations d'encouragement et effets de buff.",
-              "Utiliser le SP pour obtenir un tour supplémentaire et prendre 2 zones !"
+              "À partir du 2ème tour, aligner 2 cartes, y compris le Mascotte du Buzz, pour viser la prise de 2 zones à chaque tour.",
+              "Vaincre l'adversaire avant que son terrain ne soit complètement établi grâce à la vitesse.",
+              "Le charme est de pouvoir imposer une endurance de 260 en plaçant Elizabeth devant."
             ]
           },
-          "recipe_url": "https://www.holocardstrategy.jp/ouro-kronii-deck/",
-          "vtuber": "オーロ・クロニー",
-          "id": "オーロ-クロニー-クロニー単"
+          "recipe_url": "https://www.holocardstrategy.jp/hakorizu_deck/",
+          "vtuber": "ハコス・ベールズ",
+          "id": "ハコス-ベールズ-ミオ推しハコリズ-エリザベールズ"
         }
       ]
     },
@@ -153,42 +189,6 @@
           "recipe_url": "https://www.holocardstrategy.jp/ha-totandeck/",
           "vtuber": "赤井はあと",
           "id": "赤井はあと-はあちゃま単"
-        },
-        {
-          "name": "ミオ推しハコリズ",
-          "image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/19b790bdece26fcc69631e73efeccb19-1080x608.png",
-          "ratings": {
-            "firepower": "◎",
-            "ease": "○",
-            "stability": "○",
-            "endurance": "○",
-            "pressure": "◎"
-          },
-          "features": {
-            "ja": [
-              "2ターン目からBuzzのハコスを含む2枚を並べて、毎ターン2面取りを狙う",
-              "速度で相手の盤面が並べきる前に倒しきれる",
-              "エリザベスを前に出すと260の耐久力を押し付けられるのが魅力"
-            ],
-            "zh-TW": [
-              "從第 2 回合開始，將 Buzz 的哈考斯等 2 張卡並列，目標是每回合 2 面取",
-              "透過速度，能在對手佈滿場面之前將其擊倒",
-              "將 Elizabeth 擺在前面時，能施加 260 的耐久力壓制，這是其魅力所在"
-            ],
-            "en": [
-              "Starting from the 2nd turn, deploy 2 cards including Buzz's Hako, aiming to take two Stages each turn.",
-              "Defeat the opponent before they can establish their board by overwhelming them with speed.",
-              "Deploying Elizabeth in front applies a pressure of 260 durability, which is appealing."
-            ],
-            "fr": [
-              "À partir du 2ème tour, aligner 2 cartes, y compris le Mascotte du Buzz, pour viser la prise de 2 zones à chaque tour.",
-              "Vaincre l'adversaire avant que son terrain ne soit complètement établi grâce à la vitesse.",
-              "Le charme est de pouvoir imposer une endurance de 260 en plaçant Elizabeth devant."
-            ]
-          },
-          "recipe_url": null,
-          "vtuber": "ハコス・ベールズ",
-          "id": "ハコス-ベールズ-ミオ推しハコリズ"
         },
         {
           "name": "AZKi推しルイクロ",
@@ -258,7 +258,7 @@
               "Défavorable contre AZKi, mais favorable contre l'autre Crony."
             ]
           },
-          "recipe_url": null,
+          "recipe_url": "https://www.holocardstrategy.jp/rapurasuda-kunesu-deck/",
           "vtuber": "ラプラス・ダークネス",
           "id": "ラプラス-ダークネス-ラプ推しラプラス単"
         },
@@ -317,7 +317,7 @@
               "Infliger les dégâts excédentaires du 2nd pour prendre 2 zones !"
             ]
           },
-          "recipe_url": null,
+          "recipe_url": "https://www.holocardstrategy.jp/watame-white-deck/",
           "vtuber": "角巻わため",
           "id": "角巻わため-わため単"
         },
