@@ -59,6 +59,22 @@ const USAGE_RATE_DATA = {
       { oshi: 'その他', pct: 31 },
     ],
   },
+  'WGP25-26 Kuala Lumpur': {
+    scope: { 'zh-TW': '預選ラウンド', en: 'Qualifier Round', ja: '予選ラウンド', fr: 'Qualifications' },
+    source: 'hololive OFFICIAL CARD GAME (@hololive_OCG)',
+    rates: [
+      { oshi: 'AZKi', pct: 23 },
+      { oshi: '大神ミオ', pct: 21 },
+      { oshi: 'オーロ・クロニー', pct: 11 },
+      { oshi: '角巻わため', pct: 6 },
+      { oshi: '赤井はあと', pct: 6 },
+      { oshi: '森カリオペ', pct: 4 },
+      { oshi: '星街すいせい', pct: 4 },
+      { oshi: '桃鈴ねね', pct: 3 },
+      { oshi: '百鬼あやめ', pct: 3 },
+      { oshi: 'その他', pct: 19 },
+    ],
+  },
   'ぐるっとツアー2026 Miyagi': {
     scope: { 'zh-TW': 'Trio 預選ラウンド', en: 'Trio Qualifier Round', ja: 'トリオバトル 予選ラウンド', fr: 'Trio Qualifications' },
     source: 'hololive OFFICIAL CARD GAME (@hololive_OCG)',

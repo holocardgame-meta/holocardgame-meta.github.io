@@ -322,5 +322,23 @@
     "event": "ぐるっとツアー2026 Miyagi",
     "event_date": "2026-04-04",
     "placement": "Trio 1st B Block (仙台女神トリオ頑張ろうの会)"
+  },
+  {
+    "code": "1RPBX",
+    "title": "ミオ単",
+    "oshi": "大神ミオ",
+    "source": "WGP25-26 Kuala Lumpur",
+    "event": "WGP25-26 Kuala Lumpur",
+    "event_date": "2026-04-19",
+    "placement": "1st (Zhenchin)"
+  },
+  {
+    "code": "7836H",
+    "title": "ミオ単",
+    "oshi": "大神ミオ",
+    "source": "WGP25-26 Kuala Lumpur",
+    "event": "WGP25-26 Kuala Lumpur",
+    "event_date": "2026-04-19",
+    "placement": "2nd (minato)"
   }
 ]
