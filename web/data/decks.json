@@ -322,10 +322,10 @@
   {
     "url": "https://www.holocardstrategy.jp/hakorizu_deck/",
     "title": {
-      "ja": "【ホロカ】超アグロ！ミオ推しハコリズ（エリザベールズ）のデッキレシピと回し方！",
-      "zh-TW": "【hOCG】超快攻！ミオ推しハコリズ（エリザベールズ）牌組配置與打法！",
-      "en": "【hOCG】Super Aggro! Mio Oshi HaCoLis (Elisabeths) Deck Recipe and How to Play!",
-      "fr": "【hOCG】Super Aggro ! Recette de deck et comment jouer Mio Oshi Hakuriizu (Elisabeths) !"
+      "ja": "【ホロカ】超アグロ！ミオ推しハコリズのデッキレシピと回し方！（ハコザべス、エリザベールズ）",
+      "zh-TW": "【hOCG】超侵略！大神ミオ推しハコリズ的牌組配置與打法！（ハコザべス、エリザベールズ）",
+      "en": "【hOCG】Super Aggro! Mio Oshi Hakoliz Deck Recipe and How to Play! (Hakoza Bess, Elizabess)",
+      "fr": "【hOCG】Super agro ! Recette de deck et comment jouer du Deck d'encouragement Oshi de Mio (Hako-zabeths, Elisabeths)"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/216401a6a261e96f26e6886dc2a0fee8.png",
     "description": {
@@ -479,7 +479,7 @@
         }
       }
     ],
-    "date": "2026-04-10",
+    "date": "2026-04-21",
     "deck_id": "ハコス-ベールズ-ミオ推しハコリズ-エリザベールズ",
     "tier": 1
   },
