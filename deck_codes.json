@@ -340,5 +340,131 @@
     "event": "WGP25-26 Kuala Lumpur",
     "event_date": "2026-04-19",
     "placement": "2nd (minato)"
+  },
+  {
+    "code": "59J29",
+    "title": "クロニー単",
+    "oshi": "オーロ・クロニー",
+    "source": "WGP25-26 Kuala Lumpur",
+    "event": "WGP25-26 Kuala Lumpur",
+    "event_date": "2026-04-19",
+    "placement": "Qualifier 1st (LightningJason)"
+  },
+  {
+    "code": "3K9T7",
+    "title": "ミオ単",
+    "oshi": "大神ミオ",
+    "source": "WGP25-26 Kuala Lumpur",
+    "event": "WGP25-26 Kuala Lumpur",
+    "event_date": "2026-04-19",
+    "placement": "Qualifier 2nd (Bagataro)"
+  },
+  {
+    "code": "5UNSD",
+    "title": "クロニー単",
+    "oshi": "オーロ・クロニー",
+    "source": "WGP25-26 Kuala Lumpur",
+    "event": "WGP25-26 Kuala Lumpur",
+    "event_date": "2026-04-19",
+    "placement": "Qualifier 3rd (Natskii)"
+  },
+  {
+    "code": "60AKX",
+    "title": "クロニー単",
+    "oshi": "オーロ・クロニー",
+    "source": "WGP25-26 Kuala Lumpur",
+    "event": "WGP25-26 Kuala Lumpur",
+    "event_date": "2026-04-19",
+    "placement": "Qualifier 4th (Gikuto)"
+  },
+  {
+    "code": "77BQV",
+    "title": "わため単",
+    "oshi": "角巻わため",
+    "source": "WGP25-26 Kuala Lumpur",
+    "event": "WGP25-26 Kuala Lumpur",
+    "event_date": "2026-04-19",
+    "placement": "Qualifier 6th (Bombaxus)"
+  },
+  {
+    "code": "51G0Z",
+    "title": "AZKi単",
+    "oshi": "AZKi",
+    "source": "WGP25-26 Kuala Lumpur",
+    "event": "WGP25-26 Kuala Lumpur",
+    "event_date": "2026-04-19",
+    "placement": "Qualifier 7th (bisa)"
+  },
+  {
+    "code": "6G72R",
+    "title": "ミオ単",
+    "oshi": "大神ミオ",
+    "source": "WGP25-26 Kuala Lumpur",
+    "event": "WGP25-26 Kuala Lumpur",
+    "event_date": "2026-04-19",
+    "placement": "Qualifier 8th (Mojito)"
+  },
+  {
+    "code": "ZCMH",
+    "title": "AZKi単",
+    "oshi": "AZKi",
+    "source": "WGP25-26 Kuala Lumpur",
+    "event": "WGP25-26 Kuala Lumpur",
+    "event_date": "2026-04-19",
+    "placement": "Qualifier 9th (Noark)"
+  },
+  {
+    "code": "7D2JZ",
+    "title": "ミオ単",
+    "oshi": "大神ミオ",
+    "source": "WGP25-26 Kuala Lumpur",
+    "event": "WGP25-26 Kuala Lumpur",
+    "event_date": "2026-04-19",
+    "placement": "Qualifier 10th (ephyra)"
+  },
+  {
+    "code": "2RZW9",
+    "title": "クロニー単",
+    "oshi": "オーロ・クロニー",
+    "source": "WGP25-26 Kuala Lumpur",
+    "event": "WGP25-26 Kuala Lumpur",
+    "event_date": "2026-04-19",
+    "placement": "Qualifier 11th (Xile)"
+  },
+  {
+    "code": "6ZT7P",
+    "title": "AZKi単",
+    "oshi": "AZKi",
+    "source": "WGP25-26 Kuala Lumpur",
+    "event": "WGP25-26 Kuala Lumpur",
+    "event_date": "2026-04-19",
+    "placement": "Qualifier 12th (CEO Nick)"
+  },
+  {
+    "code": "1WEDK",
+    "title": "クロニー単",
+    "oshi": "オーロ・クロニー",
+    "source": "WGP25-26 Kuala Lumpur",
+    "event": "WGP25-26 Kuala Lumpur",
+    "event_date": "2026-04-19",
+    "placement": "Qualifier 13th (Jo)"
+  },
+  {
+    "code": "152VP",
+    "title": "クロニー単",
+    "oshi": "オーロ・クロニー",
+    "source": "WGP25-26 Kuala Lumpur",
+    "event": "WGP25-26 Kuala Lumpur",
+    "event_date": "2026-04-19",
+    "placement": "Qualifier 15th (PY)"
+  },
+  {
+    "code": "5XP6M",
+    "title": "ミオ単",
+    "oshi": "大神ミオ",
+    "source": "WGP25-26 Kuala Lumpur",
+    "event": "WGP25-26 Kuala Lumpur",
+    "event_date": "2026-04-19",
+    "placement": "Qualifier 16th (Chocolat)"
   }
 ]
