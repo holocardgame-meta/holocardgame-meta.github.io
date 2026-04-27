@@ -11038,6 +11038,43 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP02/hBP02-026_U.png"
   },
   {
+    "image": "cardListImages/hCO01/hBP02-026_SR.png",
+    "name": "大神ミオ",
+    "type": "成員",
+    "tag": "#JP / #ゲーマーズ / #ケモミミ / #料理",
+    "product": "オフィシャルホロカコレクション-2025ライブセット-",
+    "color": "綠",
+    "hp": 100,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": {
+      "name": "アイドルとして成長した姿",
+      "effect": {
+        "zh-TW": "從自己的吶喊牌組展示1張與自己舞台上1位標示#ゲーマーズ的成員相同顏色的吶喊卡，發送給自己的成員。將吶喊牌組重新洗牌。",
+        "ja": "自分の吶喊デッキから自分のステージ上の#ゲーマーズのメンバーと同じ色の吶喊カード1枚を公開し、自分のメンバーに送る。その後、デッキをシャッフルする。",
+        "en": "Reveal 1 Cheer card from your Cheer Deck that is the same color as 1 member you control marked #Gamers on your Stage and send it to a member you control. Reshuffle your Cheer Deck.",
+        "fr": "Montrez une carte d'encouragement de la même couleur qu'un membre marqué #Gamer's sur votre Scène de votre Deck d'encouragement et envoyez-la à un membre de votre camp. Mélangez votre Deck d'encouragement.\n"
+      }
+    },
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_null.png"
+      ],
+      "name": "今年も見守っててね！",
+      "damage": 20,
+      "specialAttackImage": null,
+      "effect": null
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP02-026",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCO01/hBP02-026_SR.png"
+  },
+  {
     "image": "cardListImages/hBP02/hBP02-027_RR.png",
     "name": "大神ミオ",
     "type": "成員",
@@ -18789,6 +18826,49 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP03/hBP03-044_SR.png"
   },
   {
+    "image": "cardListImages/hCO01/hBP03-044_SR.png",
+    "name": "星街すいせい",
+    "type": "成員",
+    "tag": "#JP / #0期生 / #歌",
+    "product": "オフィシャルホロカコレクション-2025ライブセット-",
+    "color": "藍",
+    "hp": 150,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": {
+      "name": "プラネットステージ",
+      "effect": {
+        "zh-TW": "查看自己牌組上方的4張牌。展示1張「星街すいせい」並加入手牌。其餘依照喜歡的順序放回牌組下方。",
+        "ja": "自分のデッキの上から4枚のカードを見る。「星街すいせい」を1枚選び、手札に加える。残りは好きな順番でデッキの一番下に戻す。\n",
+        "en": "Look at the top 4 cards of your Deck. Reveal 1 \"Hoshimachi Suisei\" and add it to your Hand. Place the rest on the bottom of your Deck in any order.",
+        "fr": "Regardez les 4 cartes du dessus de votre Deck. Montrez 1 \"星街すいせい\" et ajoutez-le à votre Main. Placez le reste en bas de votre Deck dans l'ordre de votre choix."
+      }
+    },
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_blue.png",
+        "icons/arts_null.png"
+      ],
+      "name": "バーチャルゴースト",
+      "damage": 40,
+      "specialAttackImage": null,
+      "effect": {
+        "zh-TW": "自己的主推為「星街すいせい」時，可以將這個成員的1張藍色吶喊卡，替換給自己的後台成員「星街すいせい」。",
+        "ja": "自分の推しが「星街すいせい」の時、このメンバーの青のエールカード１枚を、自分の後列メンバー「星街すいせい」に交換できる。",
+        "en": "If your Oshi is \"Suisei Hoshimachi\", you may substitute 1 blue Cheer card of this Member for your Back row Member \"Suisei Hoshimachi\".",
+        "fr": "Si votre Oshi est \"星街すいせい\", vous pouvez échanger 1 carte d'encouragement bleue de ce Membre avec votre Membre Arrière \"星街すいせい\"."
+      }
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP03-044",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCO01/hBP03-044_SR.png"
+  },
+  {
     "image": "cardListImages/hBP03/hBP03-045_R.png",
     "name": "こぼ・かなえる",
     "type": "成員",
@@ -19511,6 +19591,49 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP03/hBP03-055_SR.png"
   },
   {
+    "image": "cardListImages/hCO01/hBP03-055_SR.png",
+    "name": "常闇トワ",
+    "type": "成員",
+    "tag": "#JP / #4期生 / #歌 / #シューター",
+    "product": "オフィシャルホロカコレクション-2025ライブセット-",
+    "color": "紫",
+    "hp": 130,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": null,
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_purple.png"
+      ],
+      "name": "トワとお家デートしたっていい",
+      "damage": 40,
+      "specialAttackImage": null,
+      "effect": null
+    },
+    "art2": {
+      "image": [
+        "icons/arts_purple.png",
+        "icons/arts_null.png"
+      ],
+      "name": "てんQ",
+      "damage": 50,
+      "specialAttackImage": null,
+      "effect": {
+        "zh-TW": "自己的後台成員標示#歌時，給予對手的聯動成員20點特殊傷害。",
+        "ja": "自分の後列メンバーが#歌を持つ時、相手のコラボメンバーに20点特殊ダメージを与える。",
+        "en": "When your Back row Member has the #Song trait, deal 20 Special damage to your opponent's Collab Member.",
+        "fr": "Quand votre Membre Arrière a le tag #歌, infligez 20 dégâts spéciaux au Membre Collab de votre adversaire."
+      }
+    },
+    "extra": null,
+    "id": "hBP03-055",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCO01/hBP03-055_SR.png"
+  },
+  {
     "image": "cardListImages/hBP03/hBP03-056_RR.png",
     "name": "常闇トワ",
     "type": "成員",
@@ -19802,6 +19925,43 @@
     "extra": null,
     "id": "hBP03-059",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP03/hBP03-059_U.png"
+  },
+  {
+    "image": "cardListImages/hBP03/hBP03-059_P.png",
+    "name": "ロボ子さん",
+    "type": "成員",
+    "tag": "#JP / #0期生 / #シューター",
+    "product": "PR卡",
+    "color": "紫",
+    "hp": 130,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": {
+      "name": "PONしたらその分",
+      "effect": {
+        "zh-TW": "查看自己牌組上方的3張牌。展示1張標示#0期生的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。",
+        "ja": "自分のデッキの上から3枚のカードを見る。1期生メンバーを1枚選び、手札に加える。残りは好きな順番でデッキの一番下に戻す。\n",
+        "en": "Look at the top 3 cards of your Deck. Reveal 1 Member marked as #0 Gen and add it to your Hand. Place the rest on the bottom of your Deck in any order.",
+        "fr": "Regardez les 3 cartes du dessus de votre Deck. Montrez 1 Membre #0期生 et ajoutez-le à votre Main. Placez le reste en bas de votre Deck dans l'ordre de votre choix."
+      }
+    },
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_null.png"
+      ],
+      "name": "笑顔になーーれっ",
+      "damage": 40,
+      "specialAttackImage": null,
+      "effect": null
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP03-059",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP03/hBP03-059_P.png"
   },
   {
     "image": "cardListImages/hBP03/hBP03-060_R.png",
@@ -32180,6 +32340,57 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP05/hBP05-037_UR.png"
   },
   {
+    "image": "cardListImages/hBP05/hBP05-037_P.png",
+    "name": "星街すいせい",
+    "type": "成員",
+    "tag": "#JP / #0期生 / #歌",
+    "product": "PR卡",
+    "color": "紅",
+    "hp": 210,
+    "bloom": "2nd",
+    "batonImage": [
+      "icons/arts_null.png",
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": null,
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_null.png"
+      ],
+      "name": "Non-Limit Boost",
+      "damage": 50,
+      "specialAttackImage": "icons/tokkou_50_purple.png",
+      "effect": {
+        "zh-TW": "如果這個成員有紅色吶喊卡與藍色吶喊卡，可以將自己存檔區的2張吶喊卡發送給這個成員。如果只有1種顏色的吶喊卡，可以將自己存檔區的1張吶喊卡發送給這個成員。",
+        "ja": "このメンバーが赤い「エール」と青い「エール」を持っている場合、自分のアーカイブから「エール」を2枚、このメンバーに送ることができる。どちらか1色の「エール」しか持っていない場合、自分のアーカイブから「エール」を1枚、このメンバーに送ることができる。",
+        "en": "If this Member has a red Cheer card and a blue Cheer card, you may send 2 Cheer cards from your Archive to this Member. If you only have Cheer cards of one color, you may send 1 Cheer card from your Archive to this Member.",
+        "fr": "Si ce membre a une carte d'encouragement rouge et une carte d'encouragement bleue, vous pouvez envoyer 2 cartes d'encouragement de votre archive à ce membre. Si vous n'avez qu'une seule couleur de carte d'encouragement, vous pouvez envoyer 1 carte d'encouragement de votre archive à ce membre."
+      }
+    },
+    "art2": {
+      "image": [
+        "icons/arts_null.png",
+        "icons/arts_null.png",
+        "icons/arts_null.png",
+        "icons/arts_null.png"
+      ],
+      "name": "Shout in Crisis",
+      "damage": 220,
+      "specialAttackImage": "icons/tokkou_50_purple.png",
+      "effect": {
+        "zh-TW": "將這個成員的所有吶喊卡放到存檔區。",
+        "ja": "このメンバーの「エール」全てをアーカイブに置く。",
+        "en": "Send all Cheer cards of this Member to the Archive.",
+        "fr": "Envoyez toutes les cartes d'encouragement de ce membre dans l'archive."
+      }
+    },
+    "extra": null,
+    "id": "hBP05-037",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP05/hBP05-037_P.png"
+  },
+  {
     "image": "cardListImages/hBP05/hBP05-038_R.png",
     "name": "モココ・アビスガード",
     "type": "成員",
@@ -32536,6 +32747,48 @@
     "extra": null,
     "id": "hBP05-043",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP05/hBP05-043_U.png"
+  },
+  {
+    "image": "cardListImages/hCO01/hBP05-043_SR.png",
+    "name": "猫又おかゆ",
+    "type": "成員",
+    "tag": "#JP / #ゲーマーズ / #ケモミミ",
+    "product": "オフィシャルホロカコレクション-2025ライブセット-",
+    "color": "藍",
+    "hp": 140,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": null,
+    "effectG": {
+      "name": "僕でよくな～い？",
+      "effect": {
+        "zh-TW": "[限定聯動位置]自己的中心成員標示#ゲーマーズ時，對手成員的藝能只能選擇自己的聯動成員為對象，特殊傷害除外。",
+        "ja": "[限定コラボ位置]自分のセンターメンバーが「#ゲーマーズ」を持つ場合、相手メンバーの「アーツ」は、自分のコラボメンバーのみを対象とする（特殊ダメージを除く）。",
+        "en": "[Limited Collab Position] When your Center Member has #ゲーマーズ, Arts used by opponent's Members can only target your Collab Member, excluding special damage.",
+        "fr": "[Position Collab UNIQUEMENT] Lorsque votre membre Centre est marqué #ゲーマーズ, les Arts des membres de votre adversaire ne peuvent cibler que vos membres Collab, à l'exception des dégâts spéciaux."
+      }
+    },
+    "art1": {
+      "image": [
+        "icons/arts_null.png"
+      ],
+      "name": "まだまだ遊べるよね～？",
+      "damage": 30,
+      "specialAttackImage": null,
+      "effect": {
+        "zh-TW": "可以將這個成員的1張藍色吶喊卡放到存檔區：給予對手的中心成員與1位後台成員10點特殊傷害。",
+        "ja": "このメンバーの青色の「エール」を1枚、アーカイブに置くことができる：相手のセンターメンバーとバックメンバー1人に10ダメージを与える。",
+        "en": "You can place 1 Blue Cheer from this Member into your Archive: Deal 10 Special Damage to your opponent's Center Member and 1 Back Member.",
+        "fr": "Vous pouvez placer 1 carte Encouragement bleue de ce Membre dans votre Archive : infligez 10 dégâts spéciaux au Membre Centre et à 1 Membre d'Arrière de votre adversaire."
+      }
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP05-043",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCO01/hBP05-043_SR.png"
   },
   {
     "image": "cardListImages/hBP05/hBP05-044_R.png",
@@ -34546,6 +34799,49 @@
     "extra": null,
     "id": "hBP05-069",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP05/hBP05-069_U.png"
+  },
+  {
+    "image": "cardListImages/hCO01/hBP05-069_SR.png",
+    "name": "白上フブキ",
+    "type": "成員",
+    "tag": "#JP / #1期生 / #ゲーマーズ / #ケモミミ / #絵",
+    "product": "オフィシャルホロカコレクション-2025ライブセット-",
+    "color": "黃",
+    "hp": 160,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": null,
+    "effectG": {
+      "name": "とびきりの笑顔",
+      "effect": {
+        "zh-TW": "[限定舞台後方]這個成員不會受到對手傷害。",
+        "ja": "[限定ステージ後方]このメンバーは相手からダメージを受けない。",
+        "en": "[Limited Back Stage Position] This Member takes no damage from the opponent.",
+        "fr": "[Position Arrière Scène UNIQUEMENT] Ce membre ne subira pas les dégâts de votre adversaire."
+      }
+    },
+    "art1": {
+      "image": [
+        "icons/arts_null.png",
+        "icons/arts_null.png"
+      ],
+      "name": "満点じゃい！",
+      "damage": 40,
+      "specialAttackImage": null,
+      "effect": {
+        "zh-TW": "可以將自己吶喊牌組上方的1張牌發送給這個成員。",
+        "ja": "自分のエールデッキの上から1枚のカードをこのメンバーに送ることができる。",
+        "en": "[59] You can send 1 card from the top of your Cheer Deck to this Member.",
+        "fr": "Vous pouvez envoyer 1 carte du dessus de votre Deck d'encouragement à ce membre."
+      }
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP05-069",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCO01/hBP05-069_SR.png"
   },
   {
     "image": "cardListImages/hBP05/hBP05-070_RR.png",
@@ -39447,6 +39743,48 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP06/hBP06-058_U.png"
   },
   {
+    "image": "cardListImages/hCO01/hBP06-058_SR.png",
+    "name": "森カリオペ",
+    "type": "成員",
+    "tag": "#EN / #Myth / #歌",
+    "product": "オフィシャルホロカコレクション-2025ライブセット-",
+    "color": "藍",
+    "hp": 160,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": {
+      "name": "Yes, Chef.",
+      "effect": {
+        "zh-TW": "從自己的牌組抽3張牌後，將2張手牌放到存檔區。",
+        "ja": "自分のデッキからカードを3枚引いた後、手札を2枚アーカイブに置く。\n",
+        "en": "Draw 3 cards from your Deck, then place 2 cards from your Hand into your Archive.",
+        "fr": "Pioche 3 cartes de votre Deck, puis placez 2 cartes de votre Main dans votre Archive."
+      }
+    },
+    "effectB": null,
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_null.png"
+      ],
+      "name": "a chef’s journey’s end.",
+      "damage": 30,
+      "specialAttackImage": null,
+      "effect": {
+        "zh-TW": "如果這個成員有紫色吶喊卡，從自己的牌組抽1張牌。之後，將自己牌組上方的2張牌放到存檔區。",
+        "ja": "このメンバーが紫色の「エール」を持っている場合、自分のデッキからカードを1枚引く。その後、自分のデッキの上からカードを2枚アーカイブに置く。",
+        "en": "If this Member has a purple Cheer card, draw 1 card from your Deck. Then, place the top 2 cards of your Deck into the Archive.",
+        "fr": "Si ce membre a une carte d'encouragement violette, piochez 1 carte de votre Deck. Ensuite, envoyez les 2 cartes du dessus de votre Deck dans l'archive."
+      }
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP06-058",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCO01/hBP06-058_SR.png"
+  },
+  {
     "image": "cardListImages/hBP06/hBP06-059_R.png",
     "name": "森カリオペ",
     "type": "成員",
@@ -41519,6 +41857,21 @@
     },
     "id": "hBP06-090",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP06/hBP06-090_P.png"
+  },
+  {
+    "image": "cardListImages/hCO01/hBP06-090_SR.png",
+    "name": "ブルームステージ",
+    "type": "支援・活動",
+    "tag": null,
+    "product": "オフィシャルホロカコレクション-2025ライブセット-",
+    "supportEffect": {
+      "zh-TW": "從自己的牌組抽2張牌。之後，如果自己的生命值在4以下，自己這個回合從Debut綻放為1st的1位成員，可以使用自己手牌的成員再次進行綻放。\n\nLIMITED：每個回合只能使用一張。",
+      "ja": "自分のデッキから2枚ドローする。その後、自分のライフが4以下の場合、このターン中、自分のDebutから1stになったメンバー1人は、自分の手札のメンバーを使い再度ブルームできる。\n\nLIMITED：毎ターン1枚のみ使用可能。",
+      "en": "Draw 2 cards from your Deck. Then, if your Life is 4 or less, 1 member you control who Bloomed from Debut to 1st this turn can use the effect of a member in your hand to Bloom again.\n\nLIMITED: Only 1 can be used per turn.",
+      "fr": "Piochez 2 cartes de votre Deck. Ensuite, si vos Points de vie sont à 4 ou moins, un membre de votre camp qui a Bloom de Debut à 1st durant ce tour peut utiliser une carte de membre de votre Main pour Bloom à nouveau.\n\nLIMITED : Une utilisation par tour.\n"
+    },
+    "id": "hBP06-090",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCO01/hBP06-090_SR.png"
   },
   {
     "image": "cardListImages/hBP06/hBP06-091_U.png",
@@ -46272,6 +46625,43 @@
     "extra": null,
     "id": "hBP07-066",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP07/hBP07-066_C.png"
+  },
+  {
+    "image": "cardListImages/hCO01/hBP07-066_SR.png",
+    "name": "AZKi",
+    "type": "成員",
+    "tag": "#JP / #0期生 / #歌",
+    "product": "オフィシャルホロカコレクション-2025ライブセット-",
+    "color": "紫",
+    "hp": 170,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": {
+      "name": "仮想世界の伴走する歌姫",
+      "effect": {
+        "zh-TW": "自己的1位成員HP回復30點。之後，選擇自己舞台上的1位成員。這個回合中，該成員的藝能傷害+10。",
+        "ja": "自分のメンバー１体のHPを30回復する。その後、自分のステージ上のメンバー１体を選ぶ。このターン中、そのメンバーのこのアーツのダメージ＋10。",
+        "en": "Restore 30 HP to 1 Member of yours. Then, choose 1 Member on your Stage. During this turn, that Member's Arts' damage +10.",
+        "fr": "Restaurez 30 Points de vie à 1 Membre. Ensuite, choisissez 1 Membre sur votre Scène. Les Dégâts d'Arts de ce Membre +10 pendant ce tour."
+      }
+    },
+    "effectB": null,
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_null.png"
+      ],
+      "name": "音楽と歌うことが大好き！",
+      "damage": 40,
+      "specialAttackImage": null,
+      "effect": null
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP07-066",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCO01/hBP07-066_SR.png"
   },
   {
     "image": "cardListImages/hBP07/hBP07-067_R.png",
@@ -58711,7 +59101,8 @@
       "補充包「エリートスパーク (hBP03)」",
       "起始牌組「黄 不知火フレア (hSD07)」",
       "起始牌組「FLOW GLOW 推し 虎金妃笑虎 (hSD11)」",
-      "起始牌組「推し Justice (hSD13)」"
+      "起始牌組「推し Justice (hSD13)」",
+      "起始牌組「ライブスタートデッキ 大空スバル (hSD19)」"
     ],
     "color": "黃",
     "yellEffect": {
