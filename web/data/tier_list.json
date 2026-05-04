@@ -7,7 +7,7 @@
       "decks": [
         {
           "name": "クロニー単",
-          "image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/816edede419ef54297bdd7bca3f6844c-1080x608.png",
+          "image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/565347cfef083be9075c52436c58c682-1080x608.png",
           "ratings": {
             "firepower": "◎",
             "ease": "○",
@@ -43,7 +43,7 @@
         },
         {
           "name": "AZKi単",
-          "image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/f1bf415c0add6572740384accb17646d-1080x608.png",
+          "image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/15299a805e4886b30bb7fe06b8a4a1d4-1080x608.png",
           "ratings": {
             "firepower": "○",
             "ease": "◎",
@@ -155,137 +155,6 @@
       "tier": 2,
       "decks": [
         {
-          "name": "はあちゃま単",
-          "image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/9c8aeab3167ae0ca8efb374eb941e32b-1080x608.png",
-          "ratings": {
-            "firepower": "◎",
-            "ease": "○",
-            "stability": "◎",
-            "endurance": "◎",
-            "pressure": "○"
-          },
-          "features": {
-            "ja": [
-              "大量のDebutとステージスキルのドローで高い安定感",
-              "AZKi環境に刺さる紫特攻が優秀！",
-              "デッキ下にDebutを戻して強力な追加効果＆高火力を得る"
-            ],
-            "zh-TW": [
-              "透過大量的 Debut 與舞台技能的抽牌，擁有高度穩定性",
-              "針對 AZKi 環境的紫色特攻非常優秀！",
-              "將 Debut 歸還至牌組下方，以獲得強力的追加效果＆高火力"
-            ],
-            "en": [
-              "High stability with a large number of Debut cards and Stage Skill draws.",
-              "The purple special attack that pierces the AZKi environment is excellent!",
-              "Return Debut to the bottom of the Deck to gain powerful additional effects & high firepower."
-            ],
-            "fr": [
-              "Grande stabilité grâce à une grande quantité de Debut et au tirage des compétences de Scène.",
-              "Excellent contre l'environnement AZKi avec des attaques spéciales violettes !",
-              "Obtenir des effets supplémentaires puissants et une Puissance de feu élevée en remettant Debut sous le Deck."
-            ]
-          },
-          "recipe_url": "https://www.holocardstrategy.jp/ha-totandeck/",
-          "vtuber": "赤井はあと",
-          "id": "赤井はあと-はあちゃま単"
-        },
-        {
-          "name": "AZKi推しルイクロ",
-          "image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/060a1c89484a11dfaa38c64373969e84-1080x608.png",
-          "ratings": {
-            "firepower": "◎",
-            "ease": "○",
-            "stability": "○",
-            "endurance": "◎",
-            "pressure": "△"
-          },
-          "features": {
-            "ja": [
-              "デッキからDebut以外のカードを抜き去ってスロット成功を狙う",
-              "推しスキルで山田ルイ54世を回収して1stや2ndに繋げる",
-              "2スロット＋ダウンで、終盤にライフ3枚取りが可能"
-            ],
-            "zh-TW": [
-              "從牌組中移除 Debut 以外的卡片，以爭取卡槽成功",
-              "透過 推技能 回收 山田ルイ54世，連接至 1st 或 2nd",
-              "2 個卡槽＋擊倒，終盤可達成 3 張生命值取回"
-            ],
-            "en": [
-              "Remove cards other than Debut from the Deck to aim for Slot success.",
-              "Use Oshi Skill to retrieve Yamada Lui 54世 and connect to 1st or 2nd.",
-              "With 2 slots + Down, it's possible to take 3 Life in the late game."
-            ],
-            "fr": [
-              "Retirer toutes les cartes sauf Debut du Deck pour viser la réussite de l'emplacement.",
-              "Récupérer Yamadaルイ 54世 avec la Compétence Oshi pour enchaîner avec le 1st ou le 2nd.",
-              "2 emplacements + K.O. permet de prendre 3 Points de vie en fin de partie."
-            ]
-          },
-          "recipe_url": null,
-          "vtuber": "沙花叉クロヱ",
-          "id": "沙花叉クロヱ-azki推しルイクロ"
-        },
-        {
-          "name": "ラプ推しラプラス単",
-          "image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/06/28dfb1f82803c2b8165d75a3b9120f27-1080x608.png",
-          "ratings": {
-            "firepower": "◎",
-            "ease": "◎",
-            "stability": "○",
-            "endurance": "○",
-            "pressure": "○"
-          },
-          "features": {
-            "ja": [
-              "7弾の新カードで足回りが強化され、火力とエールの問題が解決！",
-              "SPを使えないターンでも、新1stのバフとエール軽減で楽に2面取りをすることも可能",
-              "AZKiに対しては不利だが、もう一方のクロニーには有利に戦える"
-            ],
-            "zh-TW": [
-              "第 7 彈的新卡強化了腳步，解決了火力與吶喊的問題！",
-              "即使是無法使用 SP 的回合，也能透過新 1st 的增益與吶喊減輕，輕鬆達成 2 面取",
-              "對 AZKi 處於不利，但對另一方的 Chrono-san 則能有利地戰鬥"
-            ],
-            "en": [
-              "The new cards from Set 7 have strengthened the mobility, solving the problems of firepower and Cheer!",
-              "Even on turns when SP cannot be used, it's possible to easily take two Stages with the new 1st's buffs and Cheer reduction.",
-              "Disadvantageous against AZKi, but can fight advantageously against the other Crony."
-            ],
-            "fr": [
-              "Les nouvelles cartes du 7ème set renforcent la mobilité et résolvent les problèmes de Puissance de feu et d'Encouragement !",
-              "Même lors des tours où le SP ne peut pas être utilisé, il est possible de prendre facilement 2 zones grâce au buff et à la réduction d'encouragement du nouveau 1st.",
-              "Défavorable contre AZKi, mais favorable contre l'autre Crony."
-            ]
-          },
-          "recipe_url": "https://www.holocardstrategy.jp/rapurasuda-kunesu-deck/",
-          "vtuber": "ラプラス・ダークネス",
-          "id": "ラプラス-ダークネス-ラプ推しラプラス単"
-        },
-        {
-          "name": "ぺこら推しラプラス単",
-          "image": null,
-          "ratings": {},
-          "features": [],
-          "recipe_url": null,
-          "vtuber": "ラプラス・ダークネス",
-          "id": "ラプラス-ダークネス-ぺこら推しラプラス単"
-        },
-        {
-          "name": "ジジ推しラプラス単",
-          "image": null,
-          "ratings": {},
-          "features": [],
-          "recipe_url": null,
-          "vtuber": "ラプラス・ダークネス",
-          "id": "ラプラス-ダークネス-ジジ推しラプラス単"
-        }
-      ]
-    },
-    {
-      "tier": 3,
-      "decks": [
-        {
           "name": "わため単",
           "image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/3be1c0243b7f9604196ae8d0c6244836-1080x608.png",
           "ratings": {
@@ -394,82 +263,87 @@
           "id": "風真いろは-るいろは"
         },
         {
-          "name": "ころね単",
-          "image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/ee1d19b4421b3282815b0a07401c3e0d.png",
+          "name": "リオニコ",
+          "image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/fc117e0b8b16bf83c66c8813bc59da7f-1080x608.png",
           "ratings": {
             "firepower": "◎",
             "ease": "○",
             "stability": "○",
-            "endurance": "◎",
-            "pressure": "◎"
+            "endurance": "○",
+            "pressure": "○"
           },
           "features": {
             "ja": [
-              "高火力と高耐久を持ち合わせるライフ６",
-              "専用ツール「ゆび」でアーカイブから回収が可能",
-              "盤面のエールを増やして2面取りも狙える"
+              "デッキを掘って5枚以下にして、最後はSPでライフを削る",
+              "3枚デッキをアーカイブして210のダメージ＆赤特攻が優秀",
+              "エールとドローの問題は笑虎の新規カードで解決"
             ],
             "zh-TW": [
-              "兼具高火力與高耐久的生命值 6",
-              "可透過專用工具「Yubi」從存檔區回收",
-              "增加場面的吶喊，也能目標是 2 面取"
+              "挖掘牌組至5張以下，最後用SP削減生命值",
+              "將3張牌組存入存檔區，造成210點傷害＆紅色特攻很優秀",
+              "吶喊和抽牌的問題，用笑虎的新卡解決"
             ],
             "en": [
-              "Possesses both high firepower and high durability with 6 Life.",
-              "Can be retrieved from the Archive using the dedicated tool \"Yubi\".",
-              "Increase the Cheer on the board to aim for taking two Stages."
+              "Dig through your Deck to make it 5 or less, and finally shave Life with SP",
+              "Archive 3 cards from your Deck and deal 210 damage & Red Special Attack is excellent",
+              "The Cheer and Draw problems are solved with Shokora's new cards"
             ],
             "fr": [
-              "Possède une Puissance de feu et une endurance élevées, avec 6 Points de vie.",
-              "Possibilité de récupérer depuis l'Archive avec l'outil dédié \"Yubi\".",
-              "Augmenter l'encouragement sur le terrain pour viser la prise de 2 zones."
-            ]
-          },
-          "recipe_url": "https://www.holocardstrategy.jp/korone-deck/",
-          "vtuber": "戌神ころね",
-          "id": "戌神ころね-ころね単"
-        },
-        {
-          "name": "かなころ",
-          "image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/328bcfdd4dfd2d9d74539645d84b400f.png",
-          "ratings": {
-            "firepower": "◎",
-            "ease": "○",
-            "stability": "△",
-            "endurance": "◎",
-            "pressure": "◎"
-          },
-          "features": {
-            "ja": [
-              "かなたを採用し序,中盤の火力をサポート",
-              "凸待ちの睨み合いで勝ち切ることができる",
-              "安定感がやや落ちるのは注意"
-            ],
-            "zh-TW": [
-              "採用 Kaela 來支援序盤、中盤的火力",
-              "能在突擊對峙中獲勝",
-              "穩定性略有下降需注意"
-            ],
-            "en": [
-              "Adopt Kanata to support firepower in the early and mid-game.",
-              "Can win through standoffs in the \"Dekimachi\" (waiting room).",
-              "Be aware that stability is somewhat reduced."
-            ],
-            "fr": [
-              "Intégrer Kanata pour soutenir la Puissance de feu en début et milieu de partie.",
-              "Pouvoir gagner dans les confrontations de type \"regard fixe\".",
-              "Attention, la stabilité est légèrement réduite."
+              "Creuser le deck jusqu'à 5 cartes ou moins, et finir en retirant des points de vie avec la Compétence SP",
+              "Archiver 3 cartes du deck pour 210 de dégâts & une attaque spéciale rouge est excellente",
+              "Les problèmes d'Encouragement et de pioche sont résolus avec les nouvelles cartes de \"Shouko\""
             ]
           },
           "recipe_url": null,
-          "vtuber": "戌神ころね",
-          "id": "戌神ころね-かなころ"
+          "vtuber": "響咲リオナ",
+          "id": "響咲リオナ-リオニコ"
         },
         {
-          "name": "ミオ単",
-          "image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/e8dada94296dde4ce52f854e3d9fc203-1080x608.png",
+          "name": "はあちゃま単",
+          "image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/9c8aeab3167ae0ca8efb374eb941e32b-1080x608.png",
           "ratings": {
-            "firepower": "○",
+            "firepower": "◎",
+            "ease": "○",
+            "stability": "◎",
+            "endurance": "◎",
+            "pressure": "○"
+          },
+          "features": {
+            "ja": [
+              "大量のDebutとステージスキルのドローで高い安定感",
+              "AZKi環境に刺さる紫特攻が優秀！",
+              "デッキ下にDebutを戻して強力な追加効果＆高火力を得る"
+            ],
+            "zh-TW": [
+              "透過大量的 Debut 與舞台技能的抽牌，擁有高度穩定性",
+              "針對 AZKi 環境的紫色特攻非常優秀！",
+              "將 Debut 歸還至牌組下方，以獲得強力的追加效果＆高火力"
+            ],
+            "en": [
+              "High stability with a large number of Debut cards and Stage Skill draws.",
+              "The purple special attack that pierces the AZKi environment is excellent!",
+              "Return Debut to the bottom of the Deck to gain powerful additional effects & high firepower."
+            ],
+            "fr": [
+              "Grande stabilité grâce à une grande quantité de Debut et au tirage des compétences de Scène.",
+              "Excellent contre l'environnement AZKi avec des attaques spéciales violettes !",
+              "Obtenir des effets supplémentaires puissants et une Puissance de feu élevée en remettant Debut sous le Deck."
+            ]
+          },
+          "recipe_url": "https://www.holocardstrategy.jp/ha-totandeck/",
+          "vtuber": "赤井はあと",
+          "id": "赤井はあと-はあちゃま単"
+        }
+      ]
+    },
+    {
+      "tier": 3,
+      "decks": [
+        {
+          "name": "ねね単",
+          "image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/ad7049df8f443808ed2491da180c0f67-1080x608.png",
+          "ratings": {
+            "firepower": "◎",
             "ease": "○",
             "stability": "○",
             "endurance": "◎",
@@ -497,13 +371,94 @@
               "Viser à conclure la partie le plus tôt possible !"
             ]
           },
-          "recipe_url": "https://www.holocardstrategy.jp/miotan_deck/",
-          "vtuber": "大神ミオ",
-          "id": "大神ミオ-ミオ単"
+          "recipe_url": "https://www.holocardstrategy.jp/nenechi_deck/",
+          "vtuber": "桃鈴ねね",
+          "id": "桃鈴ねね-ねね単"
         },
         {
-          "name": "リオニコ",
-          "image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/fc117e0b8b16bf83c66c8813bc59da7f-1080x608.png",
+          "name": "ラプ推しラプラス単",
+          "image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/06/28dfb1f82803c2b8165d75a3b9120f27-1080x608.png",
+          "ratings": {
+            "firepower": "◎",
+            "ease": "◎",
+            "stability": "○",
+            "endurance": "○",
+            "pressure": "○"
+          },
+          "features": {
+            "ja": [
+              "7弾の新カードで足回りが強化され、火力とエールの問題が解決！",
+              "SPを使えないターンでも、新1stのバフとエール軽減で楽に2面取りをすることも可能",
+              "AZKiに対しては不利だが、もう一方のクロニーには有利に戦える"
+            ],
+            "zh-TW": [
+              "第 7 彈的新卡強化了腳步，解決了火力與吶喊的問題！",
+              "即使是無法使用 SP 的回合，也能透過新 1st 的增益與吶喊減輕，輕鬆達成 2 面取",
+              "對 AZKi 處於不利，但對另一方的 Chrono-san 則能有利地戰鬥"
+            ],
+            "en": [
+              "The new cards from Set 7 have strengthened the mobility, solving the problems of firepower and Cheer!",
+              "Even on turns when SP cannot be used, it's possible to easily take two Stages with the new 1st's buffs and Cheer reduction.",
+              "Disadvantageous against AZKi, but can fight advantageously against the other Crony."
+            ],
+            "fr": [
+              "Les nouvelles cartes du 7ème set renforcent la mobilité et résolvent les problèmes de Puissance de feu et d'Encouragement !",
+              "Même lors des tours où le SP ne peut pas être utilisé, il est possible de prendre facilement 2 zones grâce au buff et à la réduction d'encouragement du nouveau 1st.",
+              "Défavorable contre AZKi, mais favorable contre l'autre Crony."
+            ]
+          },
+          "recipe_url": "https://www.holocardstrategy.jp/rapurasuda-kunesu-deck/",
+          "vtuber": "ラプラス・ダークネス",
+          "id": "ラプラス-ダークネス-ラプ推しラプラス単"
+        },
+        {
+          "name": "ぺこら推しラプラス単",
+          "image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/ca8d1efb4ead63bb13193973e22dc275-1080x608.png",
+          "ratings": {},
+          "features": [],
+          "recipe_url": null,
+          "vtuber": "ラプラス・ダークネス",
+          "id": "ラプラス-ダークネス-ぺこら推しラプラス単"
+        },
+        {
+          "name": "AZKi推しルイクロ",
+          "image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/060a1c89484a11dfaa38c64373969e84-1080x608.png",
+          "ratings": {
+            "firepower": "◎",
+            "ease": "○",
+            "stability": "○",
+            "endurance": "◎",
+            "pressure": "△"
+          },
+          "features": {
+            "ja": [
+              "デッキからDebut以外のカードを抜き去ってスロット成功を狙う",
+              "推しスキルで山田ルイ54世を回収して1stや2ndに繋げる",
+              "2スロット＋ダウンで、終盤にライフ3枚取りが可能"
+            ],
+            "zh-TW": [
+              "從牌組中移除 Debut 以外的卡片，以爭取卡槽成功",
+              "透過 推技能 回收 山田ルイ54世，連接至 1st 或 2nd",
+              "2 個卡槽＋擊倒，終盤可達成 3 張生命值取回"
+            ],
+            "en": [
+              "Remove cards other than Debut from the Deck to aim for Slot success.",
+              "Use Oshi Skill to retrieve Yamada Lui 54世 and connect to 1st or 2nd.",
+              "With 2 slots + Down, it's possible to take 3 Life in the late game."
+            ],
+            "fr": [
+              "Retirer toutes les cartes sauf Debut du Deck pour viser la réussite de l'emplacement.",
+              "Récupérer Yamadaルイ 54世 avec la Compétence Oshi pour enchaîner avec le 1st ou le 2nd.",
+              "2 emplacements + K.O. permet de prendre 3 Points de vie en fin de partie."
+            ]
+          },
+          "recipe_url": null,
+          "vtuber": "沙花叉クロヱ",
+          "id": "沙花叉クロヱ-azki推しルイクロ"
+        },
+        {
+          "name": "カリオペいろは",
+          "image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/cbd81d2235d2ada9216d2b999eb3452e-1080x608.png",
           "ratings": {
             "firepower": "◎",
             "ease": "○",
@@ -511,46 +466,31 @@
             "endurance": "○",
             "pressure": "○"
           },
-          "features": [],
-          "recipe_url": null,
-          "vtuber": "響咲リオナ",
-          "id": "響咲リオナ-リオニコ"
-        },
-        {
-          "name": "あやめ単",
-          "image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/8a54a8cb42792e5cd0dcd8bce1a96e12-1080x608.png",
-          "ratings": {
-            "firepower": "○",
-            "ease": "○",
-            "stability": "◎",
-            "endurance": "◎",
-            "pressure": "○"
-          },
           "features": {
             "ja": [
-              "エールデッキを削って追加効果を得たり、SPのダメージを上げていく",
-              "B2ndのギフトで相手にコラボを強要させ、2面取りを狙う",
-              "マスコット「ぽよ余」のドロー効果で高い安定感を誇る"
+              "4エール220点の高火力をいろはで守りながら使う",
+              "SPでアーツを2回使用し、強引に2面取りができる",
+              "赤特攻も優秀で、ハコスデッキに対して一気にライフを4枚取ることも！"
             ],
             "zh-TW": [
-              "削弱吶喊牌組來獲得追加效果，或提升 SP 的傷害",
-              "透過 B2nd 的天賦強迫對方進行聯動，目標是 2 面取",
-              "吉祥物「Poyoyo」的抽牌效果帶來了高度穩定性"
+              "使用4吶喊220點的高火力，一邊用いろは守護一邊使用",
+              "使用SP的藝能2次，強行取下2個舞台",
+              "紅色特攻也很優秀，對應ハコス牌組時，一口氣取下4張生命值也可能！"
             ],
             "en": [
-              "Weaken the Cheer Deck to gain additional effects or increase SP damage.",
-              "Use B2nd's Gift to force the opponent into a Collab and aim to take two Stages.",
-              "Boasts high stability with the draw effect of Mascot \"Poyoyo\"."
+              "Use 4 Cheer and 220 damage high firepower while protecting with Iroha",
+              "Use Arts twice with SP, and forcibly take 2 Stages",
+              "Red Special Attack is also excellent, and you can take 4 Life at once against HakoS Deck!"
             ],
             "fr": [
-              "Réduire le Deck d'encouragement pour obtenir des effets supplémentaires, et augmenter les dégâts du SP.",
-              "Utiliser le Don du 2nd B pour forcer l'adversaire à un Collab et viser la prise de 2 zones.",
-              "Grande stabilité grâce à l'effet de tirage de la Mascotte \"Poyoyo\"."
+              "Utiliser 4 Encouragements et 220 points de puissance de feu tout en protégeant avec Iroha",
+              "Utiliser les Arts 2 fois avec la Compétence SP pour prendre de force 2 scènes",
+              "L'attaque spéciale rouge est également excellente, et il est même possible de retirer 4 points de vie d'un coup contre un deck Hako !"
             ]
           },
           "recipe_url": "https://amzn.to/4exLSaR",
-          "vtuber": "百鬼あやめ",
-          "id": "百鬼あやめ-あやめ単"
+          "vtuber": "森カリオペ",
+          "id": "森カリオペ-カリオペいろは"
         }
       ]
     }
