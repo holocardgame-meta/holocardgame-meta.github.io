@@ -22191,10 +22191,10 @@
     "tag": null,
     "product": "補充包「エリートスパーク (hBP03)」",
     "supportEffect": {
-      "zh-TW": "帶有這個粉絲的成員交棒需要的吶喊卡數量-1。\n\n這個粉絲只能附加給「戌神ころね」，每位成員可以帶有任意數量的粉絲。",
-      "ja": "このファンを持つメンバーの交替に必要なエールカードの枚数－１。\n\nこのファンは「戌神ころね」にのみ付与できる。メンバー１人につき、ファンはいくつでも持てる。",
-      "en": "The number of Cheer Cards required for Members with this Fan to perform a Collab is -1.\n\nThis Fan can only be attached to \"Inugami Korone\", and each Member can have any number of Fans.\n",
-      "fr": "Le nombre de cartes d'encouragement requis pour le relais des membres portant ce Fan -1.\n\nCe Fan ne peut être attaché qu'à « 戌神ころね », chaque membre peut porter un nombre illimité de Fans."
+      "zh-TW": "帶有這個粉絲的成員交棒需要的無色吶喊卡數量-1。\n\n這個粉絲只能附加給「戌神ころね」，每位成員可以帶有任意數量的粉絲。",
+      "ja": "このファンを持つメンバーの、受け渡しに必要な無色エールカードの枚数-1。\n\nこのファンは「戌神ころね」にのみ付けることができ、1人のメンバーは何人でもこのファンを持つことができる。",
+      "en": "The colorless Cheer cards required by a Member with this Fan for Handover is -1.\nThis Fan can only be attached to \"Inugami Korone\". Each Member can have any number of Fans.",
+      "fr": "Le membre portant ce Fan a le nombre de cartes d'encouragement incolores nécessaires pour le relais réduit de 1.\nCe Fan ne peut être attaché qu'à \"Inugami Korone\". Chaque membre peut porter un nombre quelconque de Fans."
     },
     "id": "hBP03-111",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP03/hBP03-111_C.png"
@@ -35340,10 +35340,10 @@
     "tag": "#食べ物",
     "product": "補充包「エンチャントレガリア (hBP05)」",
     "supportEffect": {
-      "zh-TW": "選擇自己的1位成員。這個回合中，該成員交棒需要的吶喊卡數量-2。之後，該成員HP回復20點。",
-      "ja": "自分のメンバーを1人選ぶ。このターン中、そのメンバーのチェンジに必要なエールカードの枚数-2。その後、そのメンバーのHPを20回復する。",
-      "en": "Choose 1 of your Members. During this turn, the Cheer card cost required for that Member's Handover -2. After that, that Member recovers 20 HP.",
-      "fr": "Choisissez 1 de vos membres. Pendant ce tour, le nombre de cartes d'encouragement nécessaires pour le relais de ce membre -2. Ensuite, les Points de vie de ce membre sont restaurés de 20."
+      "zh-TW": "選擇自己的1位成員。這個回合中，該成員交棒需要的無色吶喊卡數量-2。之後，該成員HP回復20點。",
+      "ja": "自分のメンバーを1人選び、このターン中、そのメンバーの受け渡しに必要な無色エールカードの枚数-2。\nその後、そのメンバーのHPを20回復する。",
+      "en": "Choose 1 of your Members. During this turn, the colorless Cheer cards required by that Member for Handover is -2. After that, restore that Member's HP by 20.",
+      "fr": "Choisissez 1 de vos membres. Pendant ce tour, le nombre de cartes d'encouragement incolores nécessaires pour le relais de ce membre est réduit de 2. Ensuite, restaurez 20 PV à ce membre."
     },
     "id": "hBP05-075",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP05/hBP05-075_C.png"
@@ -35355,10 +35355,10 @@
     "tag": "#食べ物",
     "product": "PR卡",
     "supportEffect": {
-      "zh-TW": "選擇自己的1位成員。這個回合中，該成員交棒需要的吶喊卡數量-2。之後，該成員HP回復20點。",
-      "ja": "自分のメンバーを1人選ぶ。このターン中、そのメンバーのチェンジに必要なエールカードの枚数-2。その後、そのメンバーのHPを20回復する。",
-      "en": "Choose 1 of your Members. During this turn, the Cheer card cost required for that Member's Handover -2. After that, that Member recovers 20 HP.",
-      "fr": "Choisissez 1 de vos membres. Pendant ce tour, le nombre de cartes d'encouragement nécessaires pour le relais de ce membre -2. Ensuite, les Points de vie de ce membre sont restaurés de 20."
+      "zh-TW": "選擇自己的1位成員。這個回合中，該成員交棒需要的無色吶喊卡數量-2。之後，該成員HP回復20點。",
+      "ja": "自分のメンバーを1人選び、このターン中、そのメンバーの受け渡しに必要な無色エールカードの枚数-2。\nその後、そのメンバーのHPを20回復する。",
+      "en": "Choose 1 of your Members. During this turn, the colorless Cheer cards required by that Member for Handover is -2. After that, restore that Member's HP by 20.",
+      "fr": "Choisissez 1 de vos membres. Pendant ce tour, le nombre de cartes d'encouragement incolores nécessaires pour le relais de ce membre est réduit de 2. Ensuite, restaurez 20 PV à ce membre."
     },
     "id": "hBP05-075",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP05/hBP05-075_P.png"
@@ -55152,10 +55152,10 @@
       "damage": 20,
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "直到下個對手回合結束，對手中心位置的1位成員交棒需要的吶喊卡數量+1。",
-        "ja": "次の相手のターン終了まで、相手のセンターにいるメンバーの交代に必要なエールカードの枚数+1。\n",
-        "en": "Until the end of the next opponent's turn, the number of Cheer cards required for the opponent's Center Member to pass +1.",
-        "fr": "Jusqu'à la fin du prochain tour de l'adversaire, le nombre de cartes d'Encouragement requis pour le passage du Membre au Centre de l'adversaire +1."
+        "zh-TW": "直到下個對手回合結束，對手中心位置的1位成員交棒需要的無色吶喊卡數量+1。",
+        "ja": "次の相手のターン終了まで、相手のセンターにいるメンバー1人の、受け渡しに必要な無色エールカードの枚数+1。",
+        "en": "Until the end of your opponent's next turn, the colorless Cheer cards required by 1 Member in your opponent's Center is +1.",
+        "fr": "Jusqu'à la fin du prochain tour de l'adversaire, le nombre de cartes d'encouragement incolores nécessaires pour le relais d'un membre au centre de l'adversaire est augmenté de 1."
       }
     },
     "art2": null,
@@ -55183,10 +55183,10 @@
     "effectC": {
       "name": "FLOW GLOWのえらい宣伝担当",
       "effect": {
-        "zh-TW": "直到下個對手回合結束，對手中心位置的1位成員交棒需要的吶喊卡數量+1。",
-        "ja": "次の相手のターン終了まで、相手のセンターにいるメンバーの交代に必要なエールカードの枚数+1。\n",
-        "en": "Until the end of the next opponent's turn, the number of Cheer cards required for the opponent's Center Member to pass +1.",
-        "fr": "Jusqu'à la fin du prochain tour de l'adversaire, le nombre de cartes d'Encouragement requis pour le passage du Membre au Centre de l'adversaire +1."
+        "zh-TW": "直到下個對手回合結束，對手中心位置的1位成員交棒需要的無色吶喊卡數量+1。",
+        "ja": "次の相手のターン終了まで、相手のセンターにいるメンバー1人の、受け渡しに必要な無色エールカードの枚数+1。",
+        "en": "Until the end of your opponent's next turn, the colorless Cheer cards required by 1 Member in your opponent's Center is +1.",
+        "fr": "Jusqu'à la fin du prochain tour de l'adversaire, le nombre de cartes d'encouragement incolores nécessaires pour le relais d'un membre au centre de l'adversaire est augmenté de 1."
       }
     },
     "effectB": null,
@@ -55199,10 +55199,10 @@
       "damage": 30,
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "如果對交棒需要的吶喊卡數量為2以上的成員使用這個藝能，將自己吶喊牌組上方的1張牌發送給自己的後台成員。",
-        "ja": "このアーツを使用したなら、交番に必要なエールカードの枚数が2枚以上であるメンバーに、自分のエールデッキの上から1枚を自分のバックヤードメンバーに送る。",
-        "en": "If the number of Cheer cards required for a handover to a Member is 2 or more, send 1 card from the top of your Cheer Deck to your Back Member.",
-        "fr": "Si vous utilisez cet Arts sur un membre dont le nombre de cartes d'Encouragement requis pour le relais est de 2 ou plus, envoyez 1 carte du dessus de votre Deck d'encouragement à un membre de votre Arrière."
+        "zh-TW": "如果對交棒需要的無色吶喊卡數量為2以上的成員使用這個藝能，將自己吶喊牌組上方的1張牌發送給自己的後台成員。",
+        "ja": "このアーツを、受け渡しに必要な無色エールカードの枚数が2以上のメンバーに使用した場合、自分のエールデッキの上から1枚を自分のバックのメンバーに送る。",
+        "en": "If this Arts is used on a Member whose required colorless Cheer cards for Handover is 2 or more, send the top card of your Cheer Deck to your Back Member.",
+        "fr": "Si vous utilisez cet Arts sur un membre dont le nombre de cartes d'encouragement incolores nécessaires pour le relais est de 2 ou plus, envoyez 1 carte du dessus de votre Deck d'encouragement à un membre de votre arrière."
       }
     },
     "art2": null,
@@ -55226,10 +55226,10 @@
     "effectC": {
       "name": "感情の伝令者",
       "effect": {
-        "zh-TW": "直到下個對手回合結束，對手中心位置的1位成員交棒需要的吶喊卡數量+3。",
-        "ja": "次の相手のターン終了まで、相手のセンターにいるメンバーの交代に必要なエールカードの枚数+3。\n",
-        "en": "Until the end of the next opponent's turn, the number of Cheer cards required for the opponent's Center Member to pass +3.",
-        "fr": "Jusqu'à la fin du prochain tour de l'adversaire, le nombre de cartes d'Encouragement requis pour le passage du Membre au Centre de l'adversaire +3."
+        "zh-TW": "直到下個對手回合結束，對手中心位置的1位成員交棒需要的無色吶喊卡數量+3。",
+        "ja": "次の相手のターン終了まで、相手のセンターにいるメンバー1人の、受け渡しに必要な無色エールカードの枚数+3。",
+        "en": "Until the end of your opponent's next turn, the colorless Cheer cards required by 1 Member in your opponent's Center is +3.",
+        "fr": "Jusqu'à la fin du prochain tour de l'adversaire, le nombre de cartes d'encouragement incolores nécessaires pour le relais d'un membre au centre de l'adversaire est augmenté de 3."
       }
     },
     "effectB": null,
@@ -55243,10 +55243,10 @@
       "damage": 100,
       "specialAttackImage": "icons/tokkou_50_purple.png",
       "effect": {
-        "zh-TW": "對成員使用這個藝能，該成員交棒需要的吶喊卡數量每有1個，給予10點特殊傷害。",
-        "ja": "メンバーにこのアーツを使用する際、そのメンバーの交代に必要な「エール」の枚数×10点の特殊ダメージを与える。",
-        "en": "When using this Arts on a Member, deal 10 special damage for each Cheer card required for that Member's handover.",
-        "fr": "Lorsque vous utilisez cet Arts sur un membre, pour chaque carte d'encouragement nécessaire pour le relais de ce membre, infligez 10 dégâts spéciaux."
+        "zh-TW": "對成員使用這個藝能，該成員交棒需要的無色吶喊卡數量每有1個，給予10點特殊傷害。",
+        "ja": "このアーツをメンバーに使用した場合、そのメンバーの受け渡しに必要な無色エールカードの枚数1つにつき、10点特殊ダメージを与える。",
+        "en": "If this Arts is used on a Member, give 10 special damage for each colorless Cheer card required by that Member for Handover.",
+        "fr": "Si vous utilisez cet Arts sur un membre, infligez 10 dégâts spéciaux pour chaque carte d'encouragement incolore nécessaire au relais de ce membre."
       }
     },
     "art2": null,
@@ -55270,10 +55270,10 @@
     "effectC": {
       "name": "感情の伝令者",
       "effect": {
-        "zh-TW": "直到下個對手回合結束，對手中心位置的1位成員交棒需要的吶喊卡數量+3。",
-        "ja": "次の相手のターン終了まで、相手のセンターにいるメンバーの交代に必要なエールカードの枚数+3。\n",
-        "en": "Until the end of the next opponent's turn, the number of Cheer cards required for the opponent's Center Member to pass +3.",
-        "fr": "Jusqu'à la fin du prochain tour de l'adversaire, le nombre de cartes d'Encouragement requis pour le passage du Membre au Centre de l'adversaire +3."
+        "zh-TW": "直到下個對手回合結束，對手中心位置的1位成員交棒需要的無色吶喊卡數量+3。",
+        "ja": "次の相手のターン終了まで、相手のセンターにいるメンバー1人の、受け渡しに必要な無色エールカードの枚数+3。",
+        "en": "Until the end of your opponent's next turn, the colorless Cheer cards required by 1 Member in your opponent's Center is +3.",
+        "fr": "Jusqu'à la fin du prochain tour de l'adversaire, le nombre de cartes d'encouragement incolores nécessaires pour le relais d'un membre au centre de l'adversaire est augmenté de 3."
       }
     },
     "effectB": null,
@@ -55287,10 +55287,10 @@
       "damage": 100,
       "specialAttackImage": "icons/tokkou_50_purple.png",
       "effect": {
-        "zh-TW": "對成員使用這個藝能，該成員交棒需要的吶喊卡數量每有1個，給予10點特殊傷害。",
-        "ja": "メンバーにこのアーツを使用する際、そのメンバーの交代に必要な「エール」の枚数×10点の特殊ダメージを与える。",
-        "en": "When using this Arts on a Member, deal 10 special damage for each Cheer card required for that Member's handover.",
-        "fr": "Lorsque vous utilisez cet Arts sur un membre, pour chaque carte d'encouragement nécessaire pour le relais de ce membre, infligez 10 dégâts spéciaux."
+        "zh-TW": "對成員使用這個藝能，該成員交棒需要的無色吶喊卡數量每有1個，給予10點特殊傷害。",
+        "ja": "このアーツをメンバーに使用した場合、そのメンバーの受け渡しに必要な無色エールカードの枚数1つにつき、10点特殊ダメージを与える。",
+        "en": "If this Arts is used on a Member, give 10 special damage for each colorless Cheer card required by that Member for Handover.",
+        "fr": "Si vous utilisez cet Arts sur un membre, infligez 10 dégâts spéciaux pour chaque carte d'encouragement incolore nécessaire au relais de ce membre."
       }
     },
     "art2": null,
