@@ -15962,10 +15962,10 @@
       "holoPower": -2,
       "name": "がんばり～リス！",
       "effect": {
-        "zh-TW": "[每場比賽一次]這個回合中，自己舞台上的所有「アユンダ・リス」藝能傷害+50。",
-        "ja": "[1試合に1回]\nこのターン中、自分の舞台上の全ての「アユンダ・リス」の\nアーツダメージ＋50。",
-        "en": "[Once per game] During this turn, all your \"アユンダ・リス\" on the Stage's Arts damage +50.",
-        "fr": "[Une fois par partie] Durant ce tour, les Arts de tous vos \"アユンダ・リス\" sur la Scène infligent +50 dégâts."
+        "zh-TW": "[每場比賽一次]這個回合中，自己舞台上所有的「アユンダ・リス」藝能傷害+50。",
+        "ja": "[試合に1度だけ]このターン中、自分のステージにいる全ての「アユンダ・リス」のArtsダメージ+50。",
+        "en": "[Once per game] All \"Ayunda Risu\" Arts on your Stage gain +50 Arts damage this turn.",
+        "fr": "[Chaque partie une fois] Durant ce tour, tous les Arts de vos \"アユンダ・リス\" sur la Scène infligent +50 dégâts."
       }
     },
     "id": "hBP03-008",
@@ -15992,10 +15992,10 @@
       "holoPower": -2,
       "name": "がんばり～リス！",
       "effect": {
-        "zh-TW": "[每場比賽一次]這個回合中，自己舞台上的所有「アユンダ・リス」藝能傷害+50。",
-        "ja": "[1試合に1回]\nこのターン中、自分の舞台上の全ての「アユンダ・リス」の\nアーツダメージ＋50。",
-        "en": "[Once per game] During this turn, all your \"アユンダ・リス\" on the Stage's Arts damage +50.",
-        "fr": "[Une fois par partie] Durant ce tour, les Arts de tous vos \"アユンダ・リス\" sur la Scène infligent +50 dégâts."
+        "zh-TW": "[每場比賽一次]這個回合中，自己舞台上所有的「アユンダ・リス」藝能傷害+50。",
+        "ja": "[試合に1度だけ]このターン中、自分のステージにいる全ての「アユンダ・リス」のArtsダメージ+50。",
+        "en": "[Once per game] All \"Ayunda Risu\" Arts on your Stage gain +50 Arts damage this turn.",
+        "fr": "[Chaque partie une fois] Durant ce tour, tous les Arts de vos \"アユンダ・リス\" sur la Scène infligent +50 dégâts."
       }
     },
     "id": "hBP03-008",
@@ -21684,10 +21684,10 @@
     "tag": null,
     "product": "補充包「エリートスパーク (hBP03)」",
     "supportEffect": {
-      "zh-TW": "查看自己牌組上方的4張牌。展示1張Debut成員與1st成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
-      "ja": "自分のデッキの上から4枚のカードを見る。Debutメンバーと1stメンバーを1枚ずつ選び、手札に加える。残りは好きな順番でデッキの一番下に戻す。\n\nLIMITED：各ターン、1枚しか使用できない。\n",
-      "en": "Look at the top 4 cards of your Deck. Reveal 1 Debut Member and 1 1st Member and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: You can only use 1 \"LIMITED\" per turn.",
-      "fr": "Regardez les 4 cartes du dessus de votre Deck. Montrez 1 Membre Debut et 1 Membre 1st et ajoutez-les à votre Main. Placez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Vous ne pouvez utiliser qu'une seule carte par tour."
+      "zh-TW": "查看自己牌組上方的4張牌。展示1張Debut成員與1張1st成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
+      "ja": "自分のデッキの上から4枚のカードを見る。Debutメンバー1枚と1stメンバー1枚を公開し、手札に加える。残りのカードはお好きな順番でデッキの下に戻す。\n\nLIMITED：各ターンに1枚しか使用できない。",
+      "en": "Look at the top 4 cards of your Deck. Reveal 1 Debut Member and 1 1st Member and add them to your Hand. Place the rest on the bottom of your Deck in any order.",
+      "fr": "Regardez les 4 cartes du dessus de votre Deck. Montrez 1 membre Debut et 1 membre 1st et ajoutez-les à votre main. Placez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Vous ne pouvez utiliser qu'une seule par tour."
     },
     "id": "hBP03-085",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP03/hBP03-085_U.png"
@@ -22448,10 +22448,10 @@
       "holoPower": -1,
       "name": "かわいい！ ポジティブ！ ジーニアス！",
       "effect": {
-        "zh-TW": "[每場比賽一次]對手回合中，自己的「一条莉々華」被擊倒時可以使用：從自己的牌組展示1張「一条莉々華」與「限界飯」並加入手牌。將牌組重新洗牌。",
-        "ja": "[1試合に1回]\n相手のターン中、自分の「一条莉々華」がダウンした時に使用できる：\n自分のデッキから「一条莉々華」と「限界飯」を1枚ずつ公開し手札に加える。\nデッキをシャッフルする。",
-        "en": "[Once per game] During your opponent's turn, when your \"一条莉々華\" is K.O.'d, you may use this: Reveal 1 \"一条莉々華\" and 1 \"限界飯\" from your Deck and add them to your Hand. Shuffle your Deck.",
-        "fr": "[Une fois par partie] Utilisable durant le tour adverse lorsque votre \"一条莉々華\" est mis K.O. : Montrez 1 \"一条莉々華\" et 1 \"限界飯\" de votre Deck et ajoutez-les à votre Main. Mélangez votre Deck."
+        "zh-TW": "[每場比賽一次]對手回合中，自己的「一条莉々華」被擊倒時可以使用：從自己的牌組展示1張「一条莉々華」與1張「限界飯」並加入手牌。將牌組重新洗牌。",
+        "ja": "[試合に1度だけ]相手のターン中、自分の「一条莉々華」がダウンした時に使用できる：自分のデッキから「一条莉々華」1枚と「限界飯」1枚を公開し、手札に加える。その後、デッキをシャッフルする。",
+        "en": "[Once per game] When one of your \"Ichijou Ririka\" is Down during your opponent's turn: Reveal 1 \"Ichijou Ririka\" and 1 \"Genkai Meshi\" from your Deck and add them to your Hand. Shuffle your Deck.",
+        "fr": "[Chaque partie une fois] Durant le tour de l'adversaire, lorsqu'une de vos \"一条莉々華\" est mise K.O. : Montrez 1 \"一条莉々華\" et 1 \"限界飯\" de votre Deck et ajoutez-les à votre main. Mélangez votre Deck."
       }
     },
     "id": "hBP04-003",
@@ -22478,10 +22478,10 @@
       "holoPower": -1,
       "name": "かわいい！ ポジティブ！ ジーニアス！",
       "effect": {
-        "zh-TW": "[每場比賽一次]對手回合中，自己的「一条莉々華」被擊倒時可以使用：從自己的牌組展示1張「一条莉々華」與「限界飯」並加入手牌。將牌組重新洗牌。",
-        "ja": "[1試合に1回]\n相手のターン中、自分の「一条莉々華」がダウンした時に使用できる：\n自分のデッキから「一条莉々華」と「限界飯」を1枚ずつ公開し手札に加える。\nデッキをシャッフルする。",
-        "en": "[Once per game] During your opponent's turn, when your \"一条莉々華\" is K.O.'d, you may use this: Reveal 1 \"一条莉々華\" and 1 \"限界飯\" from your Deck and add them to your Hand. Shuffle your Deck.",
-        "fr": "[Une fois par partie] Utilisable durant le tour adverse lorsque votre \"一条莉々華\" est mis K.O. : Montrez 1 \"一条莉々華\" et 1 \"限界飯\" de votre Deck et ajoutez-les à votre Main. Mélangez votre Deck."
+        "zh-TW": "[每場比賽一次]對手回合中，自己的「一条莉々華」被擊倒時可以使用：從自己的牌組展示1張「一条莉々華」與1張「限界飯」並加入手牌。將牌組重新洗牌。",
+        "ja": "[試合に1度だけ]相手のターン中、自分の「一条莉々華」がダウンした時に使用できる：自分のデッキから「一条莉々華」1枚と「限界飯」1枚を公開し、手札に加える。その後、デッキをシャッフルする。",
+        "en": "[Once per game] When one of your \"Ichijou Ririka\" is Down during your opponent's turn: Reveal 1 \"Ichijou Ririka\" and 1 \"Genkai Meshi\" from your Deck and add them to your Hand. Shuffle your Deck.",
+        "fr": "[Chaque partie une fois] Durant le tour de l'adversaire, lorsqu'une de vos \"一条莉々華\" est mise K.O. : Montrez 1 \"一条莉々華\" et 1 \"限界飯\" de votre Deck et ajoutez-les à votre main. Mélangez votre Deck."
       }
     },
     "id": "hBP04-003",
@@ -22508,10 +22508,10 @@
       "holoPower": -1,
       "name": "かわいい！ ポジティブ！ ジーニアス！",
       "effect": {
-        "zh-TW": "[每場比賽一次]對手回合中，自己的「一条莉々華」被擊倒時可以使用：從自己的牌組展示1張「一条莉々華」與「限界飯」並加入手牌。將牌組重新洗牌。",
-        "ja": "[1試合に1回]\n相手のターン中、自分の「一条莉々華」がダウンした時に使用できる：\n自分のデッキから「一条莉々華」と「限界飯」を1枚ずつ公開し手札に加える。\nデッキをシャッフルする。",
-        "en": "[Once per game] During your opponent's turn, when your \"一条莉々華\" is K.O.'d, you may use this: Reveal 1 \"一条莉々華\" and 1 \"限界飯\" from your Deck and add them to your Hand. Shuffle your Deck.",
-        "fr": "[Une fois par partie] Utilisable durant le tour adverse lorsque votre \"一条莉々華\" est mis K.O. : Montrez 1 \"一条莉々華\" et 1 \"限界飯\" de votre Deck et ajoutez-les à votre Main. Mélangez votre Deck."
+        "zh-TW": "[每場比賽一次]對手回合中，自己的「一条莉々華」被擊倒時可以使用：從自己的牌組展示1張「一条莉々華」與1張「限界飯」並加入手牌。將牌組重新洗牌。",
+        "ja": "[試合に1度だけ]相手のターン中、自分の「一条莉々華」がダウンした時に使用できる：自分のデッキから「一条莉々華」1枚と「限界飯」1枚を公開し、手札に加える。その後、デッキをシャッフルする。",
+        "en": "[Once per game] When one of your \"Ichijou Ririka\" is Down during your opponent's turn: Reveal 1 \"Ichijou Ririka\" and 1 \"Genkai Meshi\" from your Deck and add them to your Hand. Shuffle your Deck.",
+        "fr": "[Chaque partie une fois] Durant le tour de l'adversaire, lorsqu'une de vos \"一条莉々華\" est mise K.O. : Montrez 1 \"一条莉々華\" et 1 \"限界飯\" de votre Deck et ajoutez-les à votre main. Mélangez votre Deck."
       }
     },
     "id": "hBP04-003",
@@ -42951,10 +42951,10 @@
     "effectC": {
       "name": "はばないすでーい！！！",
       "effect": {
-        "zh-TW": "這個回合中，自己舞台上的所有「角巻わため」藝能傷害+20。之後，如果自己的中心成員有6張以上的吶喊卡，從自己的牌組抽2張牌。",
-        "ja": "このターン中、自分のステージにいる「角巻わため」全員のこのアーツのダメージ＋20。その後、自分のセンターメンバーに6枚以上のエールカードがある場合、自分のデッキからカードを2枚引く。",
-        "en": "During this turn, all \"角巻わため\" on your Stage Arts damage +20. Afterward, if your Center Member has 6 or more Cheer cards, draw 2 cards from your Deck.",
-        "fr": "Durant ce tour, les dégâts d'Arts de tous vos \"角巻わため\" sur votre Scène +20. Ensuite, si votre Membre Centre a 6 Encouragements ou plus, piochez 2 cartes de votre Deck."
+        "zh-TW": "這個回合中，自己舞台上所有的「角巻わため」藝能傷害+20。之後，如果自己的中心成員有6張以上的吶喊卡，從自己的牌組抽2張牌。",
+        "ja": "このターン中、自分のステージにいる全ての「角巻わため」のArtsダメージ+20。その後、自分のセンターメンバーに6枚以上のエールカードがある場合、自分のデッキから2枚引く。",
+        "en": "LIMITED: You can only use one of these per turn.\nAll \"Tsunomaki Watame\" Arts on your Stage gain +20 Arts damage this turn. Then, if you have 6 or more Cheer cards in your Center Member, draw 2 cards from your Deck.",
+        "fr": "Durant ce tour, tous les Arts de vos \"角巻わため\" sur la Scène infligent +20 dégâts. Ensuite, si votre membre Centre a 6 cartes d'Encouragement ou plus, piochez 2 cartes de votre Deck."
       }
     },
     "effectB": null,
