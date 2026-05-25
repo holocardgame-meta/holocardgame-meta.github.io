@@ -28,6 +28,10 @@ function _colorsFromValue(value) {
 }
 
 function _getDeckColors(deck, cardsMap) {
+  if (Array.isArray(deck?.colors) && deck.colors.length) {
+    return deck.colors.map(_normalizeColor).filter(Boolean);
+  }
+
   const colors = {};
   for (const c of deck.cards || []) {
     const id = c.card_id;
@@ -253,8 +257,8 @@ function renderGuideCard(deck, cardsMap, index = Infinity) {
 
   const desc = localized(deck.description, '');
   const descText = typeof desc === 'string' ? desc : '';
-  const cardCount = (deck.cards || []).length;
-  const stratCount = (deck.strategy || []).length;
+  const cardCount = deck.cards_count ?? (deck.cards || []).length;
+  const stratCount = deck.strategy_count ?? (deck.strategy || []).length;
 
   const jaTitle = typeof deck.title === 'object' ? (deck.title.ja || '') : (deck.title || '');
   const searchText = [jaTitle, title, descText, deck.deck_id].join(' ').toLowerCase();

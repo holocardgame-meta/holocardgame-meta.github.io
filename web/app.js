@@ -10,6 +10,7 @@ const TIER_LABEL = { '1': 'Tier 1', '2': 'Tier 2', '3': 'Tier 3', 'official': 'O
 const TYPE_LABEL = { '主推': '主推', '成員': '成員', 'support': '支援', '吶喊': '吶喊' };
 
 let cardsData = [];
+let cardIndexData = [];
 let tierData = null;
 let decksData = [];
 let decklogDecks = [];
@@ -25,30 +26,40 @@ const filters = {
 };
 
 const _loaded = { cards: false, decklog: false };
+const _guideDetailCache = new Map();
 
 function _fetchJSON(url) {
   return fetch(url).then(r => r.ok ? r.json() : null);
 }
 
 async function loadCoreData() {
-  const [tierResp, decksResp, guidesResp, officialResp, rulesResp] = await Promise.all([
+  const [tierResp, decksResp, guidesResp, officialResp, rulesResp, cardIndexResp] = await Promise.all([
     _fetchJSON('data/tier_list.json'),
     _fetchJSON('data/decks.json'),
-    _fetchJSON('data/all_guides.json'),
+    _fetchJSON('data/guides_index.json'),
     _fetchJSON('data/official_decks.json'),
     _fetchJSON('data/rules.json'),
+    _fetchJSON('data/card_index.json'),
   ]);
   tierData = tierResp;
   decksData = decksResp || [];
   allGuides = guidesResp || [];
   officialDecks = officialResp || [];
   rulesData = rulesResp;
+  cardIndexData = cardIndexResp || [];
+}
+
+async function ensureCardIndex() {
+  if (cardIndexData.length) return;
+  cardIndexData = (await _fetchJSON('data/card_index.json')) || [];
+  updateNavCounts();
 }
 
 async function ensureCards() {
   if (_loaded.cards) return;
   _loaded.cards = true;
   cardsData = (await _fetchJSON('data/cards.json')) || [];
+  if (!cardIndexData.length) cardIndexData = cardsData;
   updateNavCounts();
 }
 
@@ -57,6 +68,23 @@ async function ensureDecklog() {
   _loaded.decklog = true;
   decklogDecks = (await _fetchJSON('data/decklog_decks.json')) || [];
   updateNavCounts();
+}
+
+async function ensureGuideDetail(deckId) {
+  if (!deckId || _guideDetailCache.has(deckId)) return _guideDetailCache.get(deckId) || null;
+  const guide = allGuides?.find(d => d.deck_id === deckId);
+  if (!guide) return null;
+  if (guide.cards || !guide.detail_path) {
+    _guideDetailCache.set(deckId, guide);
+    return guide;
+  }
+
+  const detail = await _fetchJSON(guide.detail_path);
+  const fullGuide = detail ? { ...guide, ...detail } : guide;
+  const idx = allGuides.indexOf(guide);
+  if (idx >= 0) allGuides[idx] = fullGuide;
+  _guideDetailCache.set(deckId, fullGuide);
+  return fullGuide;
 }
 
 // ── View / filter state coordination ─────────────────────────────────────
@@ -105,19 +133,19 @@ async function render() {
   updateActiveFilterBar();
 
   if (currentView === 'guides') {
-    await ensureCards();
-    renderGuidesView(guidesView, allGuides, decksData, cardsData, _legacyFilters(), officialDecks);
+    await ensureCardIndex();
+    renderGuidesView(guidesView, allGuides, decksData, cardIndexData, _legacyFilters(), officialDecks);
     updateTopbarSubtitleFromGuides();
   } else if (currentView === 'tournament') {
-    await Promise.all([ensureDecklog(), ensureCards()]);
-    renderTournamentView(tournamentView, decklogDecks, cardsData);
+    await Promise.all([ensureDecklog(), ensureCardIndex()]);
+    renderTournamentView(tournamentView, decklogDecks, cardIndexData);
   } else if (currentView === 'cards') {
     await ensureCards();
     renderCardGallery(cardsView, cardsData, _legacyFilters(), rulesData);
     document.getElementById('topbarSubtitle').textContent = t('topbar_subtitle_cards', { total: cardsData.length });
   } else if (currentView === 'rules') {
-    await ensureCards();
-    renderRulesView(rulesView, rulesData, cardsData);
+    await ensureCardIndex();
+    renderRulesView(rulesView, rulesData, cardIndexData);
     document.getElementById('topbarSubtitle').textContent = t('topbar_subtitle_rules');
   }
 }
@@ -176,7 +204,7 @@ function updateNavCounts() {
     (allGuides?.filter(g => !decksData?.some(d => d.url === g.url)).length || 0);
   setText('navCountGuides', guidesCount || '·');
   setText('navCountTournament', decklogDecks?.length || (rulesData ? '·' : '·'));
-  setText('navCountCards', cardsData?.length || '·');
+  setText('navCountCards', cardIndexData?.length || cardsData?.length || '·');
   const rulesCount = ((rulesData?.restricted_cards?.length) || 0) +
     (Object.keys(rulesData?.errata || {}).length) +
     ((rulesData?.articles?.length) || 0);
@@ -488,8 +516,8 @@ function setupModals() {
     const tournamentDeckCard = e.target.closest('.tournament-deck-card');
     if (tournamentDeckCard) {
       const decklogId = tournamentDeckCard.dataset.decklogId;
-      await ensureCards();
-      renderTournamentDeckModal(deckModalBody, decklogId, decklogDecks, cardsData);
+      await ensureCardIndex();
+      renderTournamentDeckModal(deckModalBody, decklogId, decklogDecks, cardIndexData);
       deckModal.hidden = false;
       document.body.style.overflow = 'hidden';
       return;
@@ -498,8 +526,8 @@ function setupModals() {
     const deckCard = e.target.closest('.deck-card');
     if (deckCard) {
       const deckId = deckCard.dataset.deckId;
-      await ensureCards();
-      renderDeckModal(deckModalBody, deckId, tierData, decksData, allGuides, officialDecks, cardsData);
+      await Promise.all([ensureCardIndex(), ensureGuideDetail(deckId)]);
+      renderDeckModal(deckModalBody, deckId, tierData, decksData, allGuides, officialDecks, cardIndexData);
       deckModal.hidden = false;
       document.body.style.overflow = 'hidden';
       return;
@@ -553,10 +581,6 @@ async function init() {
   await loadCoreData();
   updateNavCounts();
   render();
-  // Preload card + tournament data in the background so nav counts populate
-  // without the user having to visit those views first.
-  ensureCards();
-  ensureDecklog();
 }
 
 init();

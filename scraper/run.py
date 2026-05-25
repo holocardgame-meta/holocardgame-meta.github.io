@@ -14,6 +14,7 @@ from scraper.scrape_official import scrape_official
 from scraper.scrape_rules import scrape_rules
 from scraper.scrape_x import scrape_x_posts
 from scraper.translate import translate_all
+from scraper.build_indexes import build_frontend_indexes
 
 
 def _assign_tier_to_guides(data_dir: Path):
@@ -231,6 +232,9 @@ def main():
         if src.exists():
             shutil.copy2(src, web_data_dir / f)
             print(f"  Copied {f}")
+
+    print("\n[Index] Building lightweight frontend indexes...")
+    build_frontend_indexes(web_data_dir)
 
     print("\n[LCP] Injecting LCP image preload hint...")
     _inject_lcp_preload(base / "web")

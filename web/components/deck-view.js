@@ -13,6 +13,10 @@ function _normColor(c) { return COLOR_ALIAS[String(c || '').trim()] || ''; }
 function _colorsFromValue(v) { return String(v || '').split('/').map(_normColor).filter(Boolean); }
 
 function _deckColors(deck, cardsMap) {
+  if (Array.isArray(deck?.colors) && deck.colors.length) {
+    return deck.colors.map(_normColor).filter(Boolean);
+  }
+
   const counts = {};
   for (const c of deck?.cards || []) {
     const dbCard = c.card_id ? cardsMap[c.card_id] : null;
