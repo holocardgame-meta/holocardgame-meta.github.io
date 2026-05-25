@@ -577,15 +577,27 @@
     </div>
   </div>
 
-  <div id="iosInstallPrompt" class="ios-install-prompt" hidden role="dialog" aria-live="polite" aria-labelledby="iosInstallTitle">
-    <img class="ios-install-icon" src="favicon.svg" alt="" width="42" height="42" aria-hidden="true">
-    <div class="ios-install-copy">
-      <div class="ios-install-title" id="iosInstallTitle" data-i18n="install_prompt_title">加入主畫面</div>
+  <div id="iosInstallPrompt" class="app-install-prompt" hidden role="dialog" aria-live="polite" aria-labelledby="iosInstallTitle">
+    <img class="app-install-icon" src="favicon.svg" alt="" width="42" height="42" aria-hidden="true">
+    <div class="app-install-copy">
+      <div class="app-install-title" id="iosInstallTitle" data-i18n="install_prompt_title">加入主畫面</div>
       <p data-i18n="install_prompt_body">在 Safari 按分享按鈕，選擇「加入主畫面」即可像 App 一樣快速開啟。</p>
     </div>
-    <div class="ios-install-actions">
-      <button type="button" class="ios-install-btn ios-install-btn-muted" id="iosInstallLater" data-i18n="install_prompt_later">稍後</button>
-      <button type="button" class="ios-install-btn" id="iosInstallDismiss" data-i18n="install_prompt_dismiss">知道了</button>
+    <div class="app-install-actions">
+      <button type="button" class="app-install-btn app-install-btn-muted" id="iosInstallLater" data-i18n="install_prompt_later">稍後</button>
+      <button type="button" class="app-install-btn" id="iosInstallDismiss" data-i18n="install_prompt_dismiss">知道了</button>
+    </div>
+  </div>
+
+  <div id="androidInstallPrompt" class="app-install-prompt" hidden role="dialog" aria-live="polite" aria-labelledby="androidInstallTitle">
+    <img class="app-install-icon" src="favicon.svg" alt="" width="42" height="42" aria-hidden="true">
+    <div class="app-install-copy">
+      <div class="app-install-title" id="androidInstallTitle" data-i18n="install_prompt_title">加入主畫面</div>
+      <p data-i18n="install_prompt_android_body">在 Chrome 按「加入」即可把 HOLOCARD META 安裝到主畫面，像 App 一樣快速開啟。</p>
+    </div>
+    <div class="app-install-actions">
+      <button type="button" class="app-install-btn app-install-btn-muted" id="androidInstallLater" data-i18n="install_prompt_later">稍後</button>
+      <button type="button" class="app-install-btn" id="androidInstallNow" data-i18n="install_prompt_android_install">加入</button>
     </div>
   </div>
 

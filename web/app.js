@@ -10,6 +10,7 @@ const TIER_LABEL = { '1': 'Tier 1', '2': 'Tier 2', '3': 'Tier 3', 'official': 'O
 const TYPE_LABEL = { '主推': '主推', '成員': '成員', 'support': '支援', '吶喊': '吶喊' };
 const GA_MEASUREMENT_ID = window.HOLOCARD_GA_ID || 'G-8WS4X0WWQQ';
 const IOS_INSTALL_DISMISSED_KEY = 'holo-ios-install-dismissed-until';
+const ANDROID_INSTALL_DISMISSED_KEY = 'holo-android-install-dismissed-until';
 const GA_PAGE_TITLES = {
   guides: 'HOLOCARD META - Deck Guides',
   tournament: 'HOLOCARD META - Tournament Decks',
@@ -727,6 +728,96 @@ function setupIosInstallPrompt() {
   dismissBtn.addEventListener('click', () => hidePrompt(30, 'dismiss'));
 }
 
+function setupAndroidInstallPrompt() {
+  const prompt = document.getElementById('androidInstallPrompt');
+  const laterBtn = document.getElementById('androidInstallLater');
+  const installBtn = document.getElementById('androidInstallNow');
+  if (!prompt || !laterBtn || !installBtn) return;
+
+  const ua = navigator.userAgent || '';
+  const isAndroidChrome = /Android/i.test(ua) &&
+    /Chrome/i.test(ua) &&
+    !/EdgA|OPR|SamsungBrowser|DuckDuckGo|Firefox|CriOS|FxiOS/i.test(ua);
+  const isStandalone = window.navigator.standalone === true ||
+    window.matchMedia('(display-mode: standalone)').matches;
+
+  if (!isAndroidChrome || isStandalone) return;
+
+  let dismissedUntil = 0;
+  try {
+    dismissedUntil = Number(localStorage.getItem(ANDROID_INSTALL_DISMISSED_KEY) || 0);
+  } catch {}
+  if (Date.now() < dismissedUntil) return;
+
+  let deferredPrompt = null;
+
+  const setDismissedUntil = (days) => {
+    try {
+      localStorage.setItem(ANDROID_INSTALL_DISMISSED_KEY, String(Date.now() + days * 24 * 60 * 60 * 1000));
+    } catch {}
+  };
+
+  const hidePrompt = (days, action) => {
+    prompt.classList.remove('is-visible');
+    window.setTimeout(() => { prompt.hidden = true; }, 180);
+    if (days > 0) setDismissedUntil(days);
+    trackGaEvent('pwa_install_prompt', {
+      platform: 'android_chrome',
+      prompt_action: action,
+    });
+  };
+
+  window.addEventListener('beforeinstallprompt', (event) => {
+    event.preventDefault();
+    deferredPrompt = event;
+    window.setTimeout(() => {
+      if (!deferredPrompt || window.matchMedia('(display-mode: standalone)').matches) return;
+      prompt.hidden = false;
+      requestAnimationFrame(() => prompt.classList.add('is-visible'));
+      trackGaEvent('pwa_install_prompt', {
+        platform: 'android_chrome',
+        prompt_action: 'show',
+      });
+    }, 1800);
+  });
+
+  window.addEventListener('appinstalled', () => {
+    deferredPrompt = null;
+    hidePrompt(365, 'installed');
+  });
+
+  laterBtn.addEventListener('click', () => hidePrompt(7, 'later'));
+  installBtn.addEventListener('click', async () => {
+    if (!deferredPrompt) {
+      hidePrompt(1, 'unavailable');
+      return;
+    }
+
+    trackGaEvent('pwa_install_prompt', {
+      platform: 'android_chrome',
+      prompt_action: 'install_click',
+    });
+    prompt.classList.remove('is-visible');
+
+    const installPrompt = deferredPrompt;
+    deferredPrompt = null;
+    try {
+      await installPrompt.prompt();
+    } catch {
+      hidePrompt(1, 'unavailable');
+      return;
+    }
+    const choice = await installPrompt.userChoice;
+    const outcome = choice && choice.outcome === 'accepted' ? 'accepted' : 'dismissed';
+    setDismissedUntil(outcome === 'accepted' ? 365 : 14);
+    window.setTimeout(() => { prompt.hidden = true; }, 180);
+    trackGaEvent('pwa_install_prompt', {
+      platform: 'android_chrome',
+      prompt_action: outcome,
+    });
+  });
+}
+
 // ── Boot ─────────────────────────────────────────────────────────────────
 async function init() {
   initI18n();
@@ -741,6 +832,7 @@ async function init() {
   setupModals();
   setupOutboundTracking();
   setupIosInstallPrompt();
+  setupAndroidInstallPrompt();
   applyFilterUI();
   await loadCoreData();
   updateNavCounts();
