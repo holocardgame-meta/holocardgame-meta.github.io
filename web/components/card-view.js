@@ -29,11 +29,25 @@ function _effectText(obj) {
 }
 
 function applyFilters(cards, filters) {
+  const colorSet = filters.colors instanceof Set ? filters.colors : null;
+  const typeSet = filters.types instanceof Set ? filters.types : null;
   return cards.filter(card => {
-    if (filters.color && filters.color !== 'all') {
+    if (colorSet && colorSet.size > 0) {
+      if (!colorSet.has(card.color)) return false;
+    } else if (filters.color && filters.color !== 'all') {
       if (card.color !== filters.color) return false;
     }
-    if (filters.type && filters.type !== 'all') {
+    if (typeSet && typeSet.size > 0) {
+      let match = false;
+      for (const sel of typeSet) {
+        if (sel === 'support') {
+          if (card.type?.startsWith('支援')) { match = true; break; }
+        } else if (card.type === sel) {
+          match = true; break;
+        }
+      }
+      if (!match) return false;
+    } else if (filters.type && filters.type !== 'all') {
       if (filters.type === 'support') {
         if (!card.type?.startsWith('支援')) return false;
       } else {

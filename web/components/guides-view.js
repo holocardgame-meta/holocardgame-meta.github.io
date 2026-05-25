@@ -2,6 +2,7 @@ import { t, localized } from '../i18n.js';
 
 const COLOR_ZH_MAP = { '白': '白', '綠': '緑', '紅': '赤', '藍': '青', '紫': '紫', '黃': '黄' };
 const PAGE_SIZE = 50;
+const TIER_LETTER = { 1: 'S', 2: 'A', 3: 'B' };
 
 function _getDeckColors(deck, cardsMap) {
   const colors = {};
@@ -45,24 +46,28 @@ export function renderGuidesView(container, allGuides, decksData, cardsData, fil
     }
   }
 
-  const colorFilter = filters?.color || 'all';
-  const tierFilter = filters?.tier || 'all';
+  // Multi-select filtering (Sets are authoritative; legacy single-value strings ignored)
+  const colorSet = filters?.colors instanceof Set ? filters.colors : new Set();
+  const tierSet = filters?.tiers instanceof Set ? filters.tiers : new Set();
+
   let filtered = combined;
-  if (colorFilter !== 'all') {
-    const targetJa = COLOR_ZH_MAP[colorFilter] || colorFilter;
+  if (colorSet.size > 0) {
     filtered = filtered.filter(d => {
       const deckColors = _getDeckColors(d, cardsMap);
-      return deckColors.includes(targetJa) || deckColors.includes(colorFilter);
+      for (const sel of colorSet) {
+        const ja = COLOR_ZH_MAP[sel] || sel;
+        if (deckColors.includes(ja) || deckColors.includes(sel)) return true;
+      }
+      return false;
     });
   }
-  if (tierFilter !== 'all') {
-    if (tierFilter === 'official') {
-      filtered = filtered.filter(d => d._source === 'official');
-    } else if (tierFilter === 'guide') {
-      filtered = filtered.filter(d => !d.tier && d._source !== 'official');
-    } else {
-      filtered = filtered.filter(d => String(d.tier) === tierFilter);
-    }
+  if (tierSet.size > 0) {
+    filtered = filtered.filter(d => {
+      if (tierSet.has('official') && d._source === 'official') return true;
+      if (tierSet.has('guide') && d._source === 'guide' && !d.tier) return true;
+      if (d.tier && tierSet.has(String(d.tier))) return true;
+      return false;
+    });
   }
 
   filtered.sort((a, b) => {
@@ -81,12 +86,34 @@ export function renderGuidesView(container, allGuides, decksData, cardsData, fil
   const loadMoreWrap = document.getElementById('guidesLoadMoreWrap');
   const loadMoreBtn = document.getElementById('guidesLoadMore');
 
+  if (titleEl) titleEl.textContent = t('guides_title');
+  if (descEl) descEl.textContent = t('guides_desc');
+  if (searchEl) searchEl.placeholder = t('guides_search_placeholder');
+
   if (!combined.length) {
-    titleEl.textContent = t('guides_title');
-    descEl.textContent = '';
     grid.innerHTML = `<div class="loading" style="grid-column:1/-1">${t('guides_no_data')}</div>`;
-    countEl.textContent = '';
+    if (countEl) countEl.textContent = '';
     loadMoreWrap.style.display = 'none';
+    return;
+  }
+
+  if (filtered.length === 0) {
+    grid.innerHTML = `
+      <div class="empty-state" style="grid-column:1/-1">
+        <div class="empty-glyph">∅</div>
+        <div class="empty-title">${t('empty_title')}</div>
+        <div class="empty-sub">${t('empty_sub')}</div>
+        <button class="empty-btn" id="emptyClearBtn">${t('empty_btn')}</button>
+      </div>
+    `;
+    if (countEl) countEl.textContent = t('guides_showing', { shown: 0, total: combined.length });
+    loadMoreWrap.style.display = 'none';
+    document.getElementById('emptyClearBtn')?.addEventListener('click', () => {
+      if (filters?.colors instanceof Set) filters.colors.clear();
+      if (filters?.tiers instanceof Set) filters.tiers.clear();
+      // Trigger active filter UI refresh via DOM event; app.js owns the actual refresh.
+      document.getElementById('clearAllBtn')?.click();
+    });
     return;
   }
 
@@ -96,11 +123,7 @@ export function renderGuidesView(container, allGuides, decksData, cardsData, fil
 
   _state = { filtered, cardsMap, shown };
 
-  titleEl.textContent = t('guides_title');
-  descEl.textContent = t('guides_desc');
-  searchEl.placeholder = t('guides_search_placeholder');
-  searchEl.value = '';
-  countEl.textContent = t('guides_showing', { shown: Math.min(shown, filtered.length), total: filtered.length });
+  if (countEl) countEl.textContent = t('guides_showing', { shown: Math.min(shown, filtered.length), total: filtered.length });
   grid.innerHTML = initial.map((d, i) => renderGuideCard(d, cardsMap, i)).join('');
 
   if (remaining > 0) {
@@ -120,7 +143,7 @@ export function renderGuidesView(container, allGuides, decksData, cardsData, fil
       grid.insertAdjacentHTML('beforeend', next.map(d => renderGuideCard(d, cardsMap)).join(''));
       _state.shown += next.length;
       const left = filtered.length - _state.shown;
-      countEl.textContent = t('guides_showing', { shown: Math.min(_state.shown, filtered.length), total: filtered.length });
+      if (countEl) countEl.textContent = t('guides_showing', { shown: Math.min(_state.shown, filtered.length), total: filtered.length });
       if (left <= 0) {
         loadMoreWrap.style.display = 'none';
       } else {
@@ -129,7 +152,7 @@ export function renderGuidesView(container, allGuides, decksData, cardsData, fil
     });
 
     let debounce;
-    searchEl.addEventListener('input', () => {
+    searchEl?.addEventListener('input', () => {
       clearTimeout(debounce);
       debounce = setTimeout(() => {
         if (!_state) return;
@@ -137,7 +160,7 @@ export function renderGuidesView(container, allGuides, decksData, cardsData, fil
         const q = searchEl.value.trim().toLowerCase();
         if (!q) {
           grid.innerHTML = filtered.slice(0, _state.shown).map(d => renderGuideCard(d, cardsMap)).join('');
-          countEl.textContent = t('guides_showing', { shown: Math.min(_state.shown, filtered.length), total: filtered.length });
+          if (countEl) countEl.textContent = t('guides_showing', { shown: Math.min(_state.shown, filtered.length), total: filtered.length });
           if (_state.shown < filtered.length) {
             loadMoreWrap.style.display = '';
             loadMoreBtn.textContent = t('guides_load_more', { remaining: filtered.length - _state.shown });
@@ -153,8 +176,16 @@ export function renderGuidesView(container, allGuides, decksData, cardsData, fil
           const text = [jaTitle, title, typeof desc === 'string' ? desc : '', d.deck_id].join(' ').toLowerCase();
           return text.includes(q);
         });
-        grid.innerHTML = matched.map(d => renderGuideCard(d, cardsMap)).join('');
-        countEl.textContent = `${matched.length} ${t('guides_count_label')}`;
+        grid.innerHTML = matched.length
+          ? matched.map(d => renderGuideCard(d, cardsMap)).join('')
+          : `
+            <div class="empty-state" style="grid-column:1/-1">
+              <div class="empty-glyph">∅</div>
+              <div class="empty-title">${t('empty_title')}</div>
+              <div class="empty-sub">${t('empty_sub')}</div>
+            </div>
+          `;
+        if (countEl) countEl.textContent = `${matched.length} ${t('guides_count_label')}`;
         loadMoreWrap.style.display = 'none';
       }, 200);
     });
@@ -175,6 +206,10 @@ function renderGuideCard(deck, cardsMap, index = Infinity) {
   const imgHtml = thumbSrc
     ? `<img class="${imgCls}" src="${thumbSrc}" alt="${title}"${loadAttr} decoding="async"${priorityAttr}>`
     : `<div class="guide-card-noimg">🃏</div>`;
+
+  const tierLetter = deck.tier && TIER_LETTER[deck.tier]
+    ? `<span class="deck-tier-letter" data-t="${deck.tier}">${TIER_LETTER[deck.tier]}</span>`
+    : '';
 
   const tierBadge = deck.tier
     ? `<span class="guide-tier-badge" data-tier="${deck.tier}">T${deck.tier}</span>`
@@ -201,7 +236,10 @@ function renderGuideCard(deck, cardsMap, index = Infinity) {
 
   return `
     <div class="guide-card deck-card" data-deck-id="${deck.deck_id}" data-search-text="${searchText.replace(/"/g, '')}">
-      ${imgHtml}
+      <div class="deck-thumb-wrap">
+        ${imgHtml}
+        ${tierLetter}
+      </div>
       <div class="guide-card-body">
         <div class="guide-card-top">
           ${sourceBadge}${tierBadge}

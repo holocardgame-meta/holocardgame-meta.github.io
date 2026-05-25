@@ -1,4 +1,4 @@
-const CACHE_NAME = 'holo-card-v8';
+const CACHE_NAME = 'holo-card-v9';
 
 const PRECACHE_URLS = [
   './',
@@ -9,6 +9,7 @@ const PRECACHE_URLS = [
   './components/deck-view.js',
   './components/card-view.js',
   './components/tournament-view.js',
+  './components/rules-view.js',
   './favicon.svg',
 ];
 

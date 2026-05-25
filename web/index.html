@@ -42,45 +42,24 @@
   <link rel="preload" as="image" href="https://www.holocardstrategy.jp/wp-content/uploads/2024/09/216401a6a261e96f26e6886dc2a0fee8.png" fetchpriority="high">
 
   <style>
-    :root{--bg-primary:#0a0e1a;--bg-secondary:#111827;--bg-card:#1a2235;--bg-card-hover:#1f2a42;--border:#2a3550;--text-primary:#e8eaf0;--text-secondary:#8892a8;--accent-cyan:#26c7ff;--accent-gold:#ffd700;--accent-purple:#a855f7;--tier1:#ffd700;--tier2:#c0c0c0;--tier3:#cd7f32;--radius:8px;--radius-lg:14px;--shadow:0 4px 20px rgba(0,0,0,.4)}
+    /* Critical CSS — minimal first-paint shell so .app grid is in place before style.css loads */
+    :root{--bg-0:#07090f;--bg-1:#0b0f1c;--bg-2:#111827;--border:#232f48;--border-2:#1a2335;--text-1:#e8eaf0;--text-2:#8892a8;--accent:#f4c842;--sidebar-w:270px;--rail-w:64px;--radius:8px}
     *{margin:0;padding:0;box-sizing:border-box}
-    body{background:var(--bg-primary);color:var(--text-primary);font-family:'Noto Sans TC',sans-serif;line-height:1.6;min-height:100vh}
-    .site-header{background:linear-gradient(135deg,#0f1629 0%,#1a1040 50%,#0f1629 100%);border-bottom:2px solid var(--accent-cyan);padding:2rem 1rem;text-align:center;position:relative;overflow:hidden;min-height:12rem}
-    .site-header::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(38,199,255,.12) 0%,transparent 60%);pointer-events:none}
-    .header-inner{position:relative;z-index:1}
-    .site-title{font-size:clamp(1.6rem,5vw,2.8rem);letter-spacing:.08em}
-    .title-holo{color:var(--accent-cyan)}.title-card{color:var(--text-primary)}
-    .title-meta{display:inline-block;background:var(--accent-cyan);color:var(--bg-primary);padding:0 .4em;margin-left:.3em;border-radius:4px;font-size:.75em}
-    .site-subtitle{color:var(--text-secondary);margin-top:.4rem;font-size:.9rem}
-    .lang-switcher{display:flex;justify-content:center;gap:.4rem;margin-top:.7rem}
-    .lang-btn{background:rgba(255,255,255,.08);color:var(--text-secondary);border:1px solid transparent;padding:3px 12px;border-radius:4px;font-size:.78rem;cursor:pointer;font-family:inherit}
-    .lang-btn.active{background:var(--accent-cyan);color:var(--bg-primary);font-weight:700}
-    .main-nav{display:flex;justify-content:center;gap:.5rem;padding:1rem;background:var(--bg-secondary);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50;min-height:3.5rem}
-    .nav-btn{background:transparent;color:var(--text-secondary);border:1px solid var(--border);padding:.5rem 1.5rem;border-radius:var(--radius);font-size:.95rem;cursor:pointer;font-family:inherit}
-    .nav-btn.active{background:var(--accent-cyan);color:var(--bg-primary);border-color:var(--accent-cyan);font-weight:700}
-    .filter-bar{background:var(--bg-secondary);padding:.8rem 1.5rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;border-bottom:1px solid var(--border)}
-    .filter-group{display:flex;align-items:center;gap:.5rem}
-    .filter-group label{font-size:.8rem;color:var(--text-secondary);white-space:nowrap}
-    .color-filters,.type-filters,.tier-filters{display:flex;gap:4px;flex-wrap:wrap}
-    .color-btn,.type-btn,.tier-btn{background:var(--bg-card);color:var(--text-secondary);border:1px solid var(--border);padding:3px 10px;border-radius:4px;font-size:.8rem;cursor:pointer;font-family:inherit}
-    .color-btn.active{background:var(--c,var(--accent-cyan));color:var(--ct,var(--bg-primary));border-color:transparent;font-weight:700}
-    .type-btn.active,.tier-btn.active{background:var(--accent-cyan);color:var(--bg-primary);border-color:transparent;font-weight:700}
-    .search-input{background:var(--bg-card);border:1px solid var(--border);color:var(--text-primary);padding:6px 12px;border-radius:var(--radius);font-size:.9rem;width:280px;font-family:inherit}
-    #mainContent{min-height:80vh}
-    .view{display:none;padding:1.5rem;max-width:1200px;margin:0 auto}.view.active{display:block}
-    .loading{text-align:center;color:var(--text-secondary);padding:4rem;font-size:1.1rem}
-    .site-footer{text-align:center;padding:2rem 1rem;color:var(--text-secondary);font-size:.78rem;border-top:1px solid var(--border);background:var(--bg-secondary)}
-    .site-footer a{color:var(--accent-cyan);text-decoration:none}
+    html,body{height:100%}
+    body{background:var(--bg-0);color:var(--text-1);font-family:'Noto Sans TC','Noto Sans JP',system-ui,sans-serif;line-height:1.55;overflow:hidden}
+    .app{display:grid;grid-template-columns:var(--sidebar-w) 1fr;height:100vh;background:var(--bg-0);transition:grid-template-columns .22s ease}
+    .app[data-collapsed="true"]{grid-template-columns:var(--rail-w) 1fr}
+    .sidebar{background:linear-gradient(180deg,var(--bg-1) 0%,var(--bg-0) 100%);border-right:1px solid var(--border-2);display:flex;flex-direction:column;min-width:0;position:relative}
+    .main{display:flex;flex-direction:column;overflow:hidden;min-width:0;background:var(--bg-0)}
+    #mainContent{flex:1;overflow-y:auto;min-width:0}
+    .view{display:none}.view.active{display:block;padding:1.4rem 1.6rem 3rem}
+    .loading{text-align:center;color:var(--text-2);padding:4rem;font-size:1.05rem}
     .modal[hidden]{display:none}
-    .guides-header{text-align:center;margin-bottom:1.5rem}
-    .guides-header h2{font-size:1.6rem;color:var(--text-primary);margin-bottom:.4rem}
-    .guides-desc{color:var(--text-secondary);font-size:.9rem;margin-bottom:1rem;min-height:2.88rem}
-    .guides-search-box{max-width:400px;margin:.6rem auto 0}
-    .guides-count{text-align:center;color:var(--text-secondary);font-size:.85rem;margin-bottom:1rem}
-    .guides-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
-    .skel-card{height:280px;background:var(--bg-card);border-radius:var(--radius-lg);animation:skel-pulse 1.5s ease-in-out infinite}
+    .guides-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+    .skel-card{height:280px;background:var(--bg-2);border-radius:14px;animation:skel-pulse 1.5s ease-in-out infinite}
     @keyframes skel-pulse{0%,100%{opacity:.6}50%{opacity:.3}}
-    @media(max-width:600px){.site-header{padding:1.2rem .8rem;min-height:9rem}.site-subtitle{font-size:.78rem}.lang-switcher{margin-top:.5rem}.lang-btn{padding:2px 10px;font-size:.72rem}.main-nav{padding:.6rem;gap:.35rem;min-height:2.8rem}.nav-btn{padding:.4rem .9rem;font-size:.82rem}.filter-bar{padding:.6rem .8rem;min-height:4.2rem;gap:.6rem}.filter-group label{font-size:.72rem}.color-btn,.type-btn,.tier-btn{padding:2px 8px;font-size:.72rem}.search-input{width:100%}.view{padding:1rem}.guides-header{margin-bottom:.8rem}.guides-header h2{font-size:1.2rem;margin-bottom:.2rem}.guides-desc{font-size:.8rem;min-height:2.56rem}.guides-count{margin-bottom:.6rem}.guides-grid{grid-template-columns:1fr}.skel-card{height:240px}.site-footer{padding:1.2rem .8rem}.color-filters,.tier-filters,.type-filters{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.color-filters::-webkit-scrollbar,.tier-filters::-webkit-scrollbar,.type-filters::-webkit-scrollbar{display:none}}
+    .mobile-hamburger,.mobile-close,.mobile-backdrop{display:none}
+    @media(max-width:768px){.app{grid-template-columns:1fr!important}.sidebar{position:fixed;top:0;bottom:0;left:0;width:280px;max-width:85vw;z-index:90;transform:translateX(-100%);transition:transform .26s cubic-bezier(.2,.85,.3,1)}.app[data-drawer="open"] .sidebar{transform:translateX(0)}}
   </style>
 
   <link rel="modulepreload" href="app.js">
@@ -90,11 +69,11 @@
   <link rel="modulepreload" href="components/card-view.js">
   <link rel="modulepreload" href="components/tournament-view.js">
 
-  <link rel="preload" href="style.css?v=3" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="style.css?v=4" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Cinzel:wght@500;700;900&family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@500;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
-    <link rel="stylesheet" href="style.css?v=3">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=optional">
+    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Cinzel:wght@500;700;900&family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@500;700;900&display=swap">
   </noscript>
 
   <script type="application/ld+json">
@@ -209,66 +188,238 @@
   </script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <h1 class="site-title">
-        <span class="title-holo">HOLO</span><span class="title-card">CARD</span>
-        <span class="title-meta">META</span>
-      </h1>
-      <p class="site-subtitle" data-i18n="subtitle">hololive OFFICIAL CARD GAME - 環境牌組資料庫</p>
-      <div class="lang-switcher" id="langSwitcher">
-        <button class="lang-btn active" data-lang="zh-TW">中文</button>
-        <button class="lang-btn" data-lang="ja">日本語</button>
-        <button class="lang-btn" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="fr">FR</button>
-      </div>
-    </div>
-  </header>
+  <h1 class="visually-hidden">
+    <span class="title-holo">HOLO</span><span class="title-card">CARD</span><span class="title-meta">META</span>
+    — hololive OFFICIAL CARD GAME 環境牌組資料庫
+  </h1>
 
-  <nav class="main-nav">
-    <button class="nav-btn active" data-view="guides" data-i18n="nav_guides">牌組攻略</button>
-    <button class="nav-btn" data-view="tournament" data-i18n="nav_tournament">大賽牌組</button>
-    <button class="nav-btn" data-view="cards" data-i18n="nav_cards">卡片搜尋</button>
-  </nav>
+  <div class="app" data-collapsed="false" data-style="arena" data-drawer="closed" id="appShell">
+    <div class="mobile-backdrop" id="mobileBackdrop" aria-hidden="true"></div>
 
-  <div class="filter-bar" id="filterBar">
-    <div class="filter-group">
-      <label data-i18n="filter_color">篩選顏色</label>
-      <div class="color-filters">
-        <button class="color-btn active" data-color="all">ALL</button>
-        <button class="color-btn" data-color="白" data-i18n="color_white" style="--c:#e8e8e8;--ct:#333">白</button>
-        <button class="color-btn" data-color="綠" data-i18n="color_green" style="--c:#4caf50;--ct:#fff">綠</button>
-        <button class="color-btn" data-color="紅" data-i18n="color_red" style="--c:#f44336;--ct:#fff">紅</button>
-        <button class="color-btn" data-color="藍" data-i18n="color_blue" style="--c:#2196f3;--ct:#fff">藍</button>
-        <button class="color-btn" data-color="紫" data-i18n="color_purple" style="--c:#9c27b0;--ct:#fff">紫</button>
-        <button class="color-btn" data-color="黃" data-i18n="color_yellow" style="--c:#ffeb3b;--ct:#333">黃</button>
+    <aside class="sidebar" aria-label="Primary navigation">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="none">
+            <g transform="rotate(-12 12 13)">
+              <rect x="5" y="6" width="11" height="14" rx="1.5" fill="currentColor" opacity=".55"/>
+            </g>
+            <g transform="rotate(8 12 13)">
+              <rect x="8" y="5" width="11" height="14" rx="1.5" fill="currentColor"/>
+              <circle cx="13.5" cy="12" r="2" fill="rgba(0,0,0,.4)"/>
+            </g>
+          </svg>
+        </div>
+        <div class="brand-text-wrap">
+          <div class="brand-name">
+            <span class="holo">HOLO</span><span class="card">CARD</span><span class="meta">META</span>
+          </div>
+          <div class="brand-sub" data-i18n="brand_sub">hOCG · 環境資料庫</div>
+        </div>
       </div>
-    </div>
-    <div class="filter-group" id="tierFilterGroup">
-      <label data-i18n="filter_tier">篩選 Tier</label>
-      <div class="tier-filters">
-        <button class="tier-btn active" data-tier="all">ALL</button>
-        <button class="tier-btn" data-tier="1">Tier 1</button>
-        <button class="tier-btn" data-tier="2">Tier 2</button>
-        <button class="tier-btn" data-tier="3">Tier 3</button>
-        <button class="tier-btn" data-tier="official">Official</button>
-        <button class="tier-btn" data-tier="guide" data-i18n="guides_filter_guide">其他攻略</button>
+
+      <button class="collapse-btn" id="collapseBtn" title="收合側邊欄" aria-label="Collapse sidebar">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m14 18-6-6 6-6"/>
+        </svg>
+      </button>
+
+      <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+
+      <div class="sidebar-body">
+        <div class="nav-section">
+          <div class="nav-section-label" data-i18n="nav_section_browse">瀏覽</div>
+          <div class="nav-item active" data-view="guides" role="button" tabindex="0">
+            <div class="nav-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
+            <div class="nav-label" data-i18n="nav_guides">牌組攻略</div>
+            <div class="nav-count" id="navCountGuides">·</div>
+          </div>
+          <div class="nav-item" data-view="tournament" role="button" tabindex="0">
+            <div class="nav-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55.47.98.97 1.21C12.15 18.75 13 20.24 13 22"/><path d="M14 14.66V17c0 .55-.47.98-.97 1.21C11.85 18.75 11 20.24 11 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+            </div>
+            <div class="nav-label" data-i18n="nav_tournament">大賽牌組</div>
+            <div class="nav-count" id="navCountTournament">·</div>
+          </div>
+          <div class="nav-item" data-view="cards" role="button" tabindex="0">
+            <div class="nav-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="13" height="16" rx="2"/><path d="M8 4v16"/><path d="M21 9v9a2 2 0 0 1-2 2h-3"/></svg>
+            </div>
+            <div class="nav-label" data-i18n="nav_cards">卡片搜尋</div>
+            <div class="nav-count" id="navCountCards">·</div>
+          </div>
+          <div class="nav-item" data-view="rules" role="button" tabindex="0">
+            <div class="nav-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/><path d="M9 13h6"/><path d="M9 17h4"/></svg>
+            </div>
+            <div class="nav-label" data-i18n="nav_rules">規則 / 勘誤表</div>
+            <div class="nav-count" id="navCountRules">·</div>
+          </div>
+        </div>
+
+        <div class="nav-section filter-section" id="filterSection">
+          <div class="filter-header" data-filter="color">
+            <span class="filter-header-label" data-i18n="filter_color">顏色</span>
+            <span class="filter-header-count" id="colorFilterCount" hidden>0</span>
+            <button class="filter-header-clear" id="colorFilterClear" hidden data-i18n="filter_clear">清除</button>
+          </div>
+          <div class="color-dot-grid" id="colorDotGrid" role="group" aria-label="Color filter">
+            <button class="color-dot" data-color="白" style="--c:#e0e0e0" title="白" aria-pressed="false">
+              <span class="color-dot-inner"></span>
+              <svg class="color-dot-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            </button>
+            <button class="color-dot" data-color="綠" style="--c:#4caf50" title="綠" aria-pressed="false">
+              <span class="color-dot-inner"></span>
+              <svg class="color-dot-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            </button>
+            <button class="color-dot" data-color="紅" style="--c:#f44336" title="紅" aria-pressed="false">
+              <span class="color-dot-inner"></span>
+              <svg class="color-dot-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            </button>
+            <button class="color-dot" data-color="藍" style="--c:#2196f3" title="藍" aria-pressed="false">
+              <span class="color-dot-inner"></span>
+              <svg class="color-dot-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            </button>
+            <button class="color-dot" data-color="紫" style="--c:#9c27b0" title="紫" aria-pressed="false">
+              <span class="color-dot-inner"></span>
+              <svg class="color-dot-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            </button>
+            <button class="color-dot" data-color="黃" style="--c:#ffeb3b" title="黃" aria-pressed="false">
+              <span class="color-dot-inner"></span>
+              <svg class="color-dot-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            </button>
+          </div>
+
+          <div class="filter-block-wrap" id="tierFilterBlock">
+            <div class="filter-header" data-filter="tier">
+              <span class="filter-header-label" data-i18n="filter_tier">Tier</span>
+              <span class="filter-header-count" id="tierFilterCount" hidden>0</span>
+              <button class="filter-header-clear" id="tierFilterClear" hidden data-i18n="filter_clear">清除</button>
+            </div>
+            <div class="tier-chip-row" id="tierChipRow" role="group" aria-label="Tier filter">
+              <button class="tier-chip" data-tier="1" data-t="1" aria-pressed="false">T1</button>
+              <button class="tier-chip" data-tier="2" data-t="2" aria-pressed="false">T2</button>
+              <button class="tier-chip" data-tier="3" data-t="3" aria-pressed="false">T3</button>
+              <button class="tier-chip" data-tier="official" data-t="official" aria-pressed="false">OFCL</button>
+              <button class="tier-chip" data-tier="guide" data-t="guide" aria-pressed="false">GUIDE</button>
+            </div>
+          </div>
+
+          <div class="filter-block-wrap" id="typeFilterBlock" hidden>
+            <div class="filter-header" data-filter="type">
+              <span class="filter-header-label" data-i18n="filter_type">類型</span>
+              <span class="filter-header-count" id="typeFilterCount" hidden>0</span>
+              <button class="filter-header-clear" id="typeFilterClear" hidden data-i18n="filter_clear">清除</button>
+            </div>
+            <div class="tier-chip-row" id="typeChipRow" role="group" aria-label="Card type filter">
+              <button class="tier-chip" data-type="主推" data-t="oshi" aria-pressed="false" data-i18n="type_oshi">主推</button>
+              <button class="tier-chip" data-type="成員" data-t="member" aria-pressed="false" data-i18n="type_member">成員</button>
+              <button class="tier-chip" data-type="support" data-t="support" aria-pressed="false" data-i18n="type_support">支援</button>
+              <button class="tier-chip" data-type="吶喊" data-t="cheer" aria-pressed="false" data-i18n="type_cheer">吶喊</button>
+            </div>
+          </div>
+
+          <button class="clear-all-btn" id="clearAllBtn" hidden>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            <span data-i18n="filter_clear_all">清除全部篩選</span>
+          </button>
+        </div>
       </div>
-    </div>
-    <div class="filter-group" id="cardSearchGroup" style="display:none">
-      <label data-i18n="filter_search">搜尋卡片</label>
-      <input type="text" id="cardSearch" data-i18n-placeholder="filter_search_placeholder" placeholder="輸入卡片名稱、標籤、效果..." class="search-input">
-    </div>
-    <div class="filter-group" id="cardTypeGroup" style="display:none">
-      <label data-i18n="filter_type">卡片類型</label>
-      <div class="type-filters">
-        <button class="type-btn active" data-type="all">ALL</button>
-        <button class="type-btn" data-type="主推" data-i18n="type_oshi">主推</button>
-        <button class="type-btn" data-type="成員" data-i18n="type_member">成員</button>
-        <button class="type-btn" data-type="support" data-i18n="type_support">支援</button>
-        <button class="type-btn" data-type="吶喊" data-i18n="type_cheer">吶喊</button>
+
+      <div class="sidebar-foot">
+        <div class="lang-picker">
+          <div class="lang-label">
+            <span class="globe-mini" aria-hidden="true"></span>
+            <span>Language</span>
+          </div>
+          <div class="lang-row" id="langSwitcher" role="radiogroup" aria-label="Language">
+            <button class="lang-seg active" data-lang="zh-TW" title="中文 · 繁體" role="radio" aria-checked="true">ZH</button>
+            <button class="lang-seg" data-lang="ja" title="日本語 · Japanese" role="radio" aria-checked="false">JA</button>
+            <button class="lang-seg" data-lang="en" title="English" role="radio" aria-checked="false">EN</button>
+            <button class="lang-seg" data-lang="fr" title="Français · French" role="radio" aria-checked="false">FR</button>
+          </div>
+        </div>
+        <div class="foot-meta">
+          <div class="foot-meta-line">
+            <span class="dot">●</span> <span data-i18n="footer_updated">Updated</span> · v4.0
+          </div>
+          <div class="foot-meta-line foot-meta-disclaimer" data-i18n="footer_disclaimer">Fan-made 環境資料庫。卡片資料 © 2016 COVER Corp. / hololive OFFICIAL CARD GAME</div>
+          <div class="foot-meta-sources">
+            <div class="foot-meta-sources-label"><span data-i18n="footer_sources">資料來源</span></div>
+            <ul class="foot-meta-sources-list">
+              <li><a href="https://hololive-cardgame.github.io/cards/" target="_blank" rel="noopener" data-i18n="footer_card_db">hololive卡牌資料庫</a></li>
+              <li><a href="https://www.holocardstrategy.jp/" target="_blank" rel="noopener" data-i18n="footer_strategy">ホロカ攻略ギルド</a></li>
+              <li><a href="https://decklog-en.bushiroad.com/" target="_blank" rel="noopener">Deck Log</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <button class="mobile-hamburger" id="mobileHamburger" aria-label="Open menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+
+        <div class="topbar-left">
+          <div class="crumb">
+            HOLOCARD META <span class="sep">/</span> <span class="cur" id="crumbCur">牌組攻略</span>
+          </div>
+          <div class="topbar-title">
+            <span id="topbarTitle">牌組攻略</span>
+            <small id="topbarSubtitle"></small>
+          </div>
+        </div>
+
+        <div class="topbar-search">
+          <span class="search-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          </span>
+          <input type="text" id="topbarSearch" data-i18n-placeholder="topbar_search_placeholder" placeholder="搜尋牌組、推し、卡片..." autocomplete="off" />
+        </div>
+      </div>
+
+      <div class="active-filter-bar" id="activeFilterBar" hidden></div>
+
+      <div id="mainContent">
+        <div id="guidesView" class="view active">
+          <div class="guides-header">
+            <h2 id="guidesTitle" hidden>&nbsp;</h2>
+            <p class="guides-desc" id="guidesDesc" hidden>&nbsp;</p>
+            <div class="guides-search-box" hidden>
+              <input type="text" id="guideSearch" class="search-input" placeholder="" />
+            </div>
+          </div>
+          <div class="result-meta">
+            <div class="result-meta-text" id="guidesCount">&nbsp;</div>
+          </div>
+          <div class="guides-grid" id="guidesGrid">
+            <div class="skel-card"></div><div class="skel-card"></div><div class="skel-card"></div><div class="skel-card"></div>
+            <div class="skel-card"></div><div class="skel-card"></div><div class="skel-card"></div><div class="skel-card"></div>
+          </div>
+          <div class="guides-load-more-wrap" id="guidesLoadMoreWrap" style="display:none">
+            <button class="guides-load-more-btn" id="guidesLoadMore"></button>
+          </div>
+        </div>
+        <div id="tournamentView" class="view">
+          <div class="loading" data-i18n="loading">載入中...</div>
+        </div>
+        <div id="cardsView" class="view">
+          <div class="loading" data-i18n="loading">載入中...</div>
+        </div>
+        <div id="rulesView" class="view">
+          <div class="loading" data-i18n="loading">載入中...</div>
+        </div>
+
+      </div>
+
+      <!-- Hidden mirror so view components can read/write search values without DOM lookups failing -->
+      <input type="text" id="cardSearch" hidden aria-hidden="true">
+    </main>
   </div>
 
   <noscript>
@@ -318,32 +469,6 @@
     </div>
   </noscript>
 
-  <main id="mainContent">
-    <div id="guidesView" class="view active">
-      <div class="guides-header">
-        <h2 id="guidesTitle">&nbsp;</h2>
-        <p class="guides-desc" id="guidesDesc">&nbsp;</p>
-        <div class="guides-search-box">
-          <input type="text" id="guideSearch" class="search-input" placeholder="" />
-        </div>
-      </div>
-      <div class="guides-count" id="guidesCount">&nbsp;</div>
-      <div class="guides-grid" id="guidesGrid">
-        <div class="skel-card"></div><div class="skel-card"></div><div class="skel-card"></div><div class="skel-card"></div>
-        <div class="skel-card"></div><div class="skel-card"></div><div class="skel-card"></div><div class="skel-card"></div>
-      </div>
-      <div class="guides-load-more-wrap" id="guidesLoadMoreWrap" style="display:none">
-        <button class="guides-load-more-btn" id="guidesLoadMore"></button>
-      </div>
-    </div>
-    <div id="tournamentView" class="view">
-      <div class="loading" data-i18n="loading">載入中...</div>
-    </div>
-    <div id="cardsView" class="view">
-      <div class="loading" data-i18n="loading">載入中...</div>
-    </div>
-  </main>
-
   <div id="deckModal" class="modal" hidden>
     <div class="modal-backdrop"></div>
     <div class="modal-content">
@@ -359,11 +484,6 @@
       <div id="cardModalBody"></div>
     </div>
   </div>
-
-  <footer class="site-footer">
-    <p data-i18n="footer_disclaimer">Fan-made 環境資料庫。卡片資料 © 2016 COVER Corp. / hololive OFFICIAL CARD GAME</p>
-    <p><span data-i18n="footer_sources">資料來源</span>: <a href="https://hololive-cardgame.github.io/cards/" target="_blank" data-i18n="footer_card_db">hololive卡牌資料庫</a> | <a href="https://www.holocardstrategy.jp/" target="_blank" data-i18n="footer_strategy">ホロカ攻略ギルド</a> | <a href="https://decklog-en.bushiroad.com/" target="_blank">Deck Log</a></p>
-  </footer>
 
   <script type="module" src="app.js"></script>
   <script>
