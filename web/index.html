@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="eMj5B-o8zvCf4EeEdcR3iRCgsoGeBQBm_a2FMwr4atM" />
+  <meta name="theme-color" content="#07090f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="HOLOCARD META">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>HOLOCARD META - hOCG Tier List, 牌組攻略 & Deck Guides</title>
   <meta name="description" content="Fan-made hololive OFFICIAL CARD GAME (hOCG / ホロカ) meta database: 牌組攻略、Tier rankings, deck guides, guides de decks, guías de mazos, tournament results, and card data.">
   <meta name="keywords" content="ホロカ, hOCG, ホロライブ カードゲーム, 環境, 最強デッキ, デッキレシピ, デッキ構築, Tier ランキング, 大会結果, WGP, おすすめデッキ, 回し方, 採用カード, hololive card game, hololive TCG, tier list, deck guide, deck recipe, tournament results, meta deck, card database, deck building, competitive, best deck, how to play, ホロカ攻略, ホロカード, hOCG meta, hololive卡牌遊戲, hOCG牌組攻略, 環境牌組, 大賽牌組, 卡片資料庫, guides de decks hOCG, recettes de decks, tier list hOCG, résultats de tournois hOCG, base de cartes hOCG, juego de cartas hololive, guías de mazos hOCG, recetas de decks, lista de tiers hOCG, resultados de torneos hOCG, base de datos de cartas hOCG">
@@ -42,6 +46,8 @@
   <meta name="twitter:image" content="https://holocardgame-meta.github.io/og-image.svg">
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
   <link rel="preload" as="image" href="images/lcp-hero-0.webp" type="image/webp" fetchpriority="high">
   <link rel="preload" as="image" href="images/lcp-hero-1.webp" type="image/webp" fetchpriority="high">
   <link rel="preload" as="image" href="images/lcp-hero-2.webp" type="image/webp" fetchpriority="high">
@@ -576,6 +582,18 @@
     <div class="modal-content card-modal-content">
       <button class="modal-close">&times;</button>
       <div id="cardModalBody"></div>
+    </div>
+  </div>
+
+  <div id="iosInstallPrompt" class="ios-install-prompt" hidden role="dialog" aria-live="polite" aria-labelledby="iosInstallTitle">
+    <div class="ios-install-icon" aria-hidden="true">H</div>
+    <div class="ios-install-copy">
+      <div class="ios-install-title" id="iosInstallTitle" data-i18n="install_prompt_title">加入主畫面</div>
+      <p data-i18n="install_prompt_body">在 Safari 按分享按鈕，選擇「加入主畫面」即可像 App 一樣快速開啟。</p>
+    </div>
+    <div class="ios-install-actions">
+      <button type="button" class="ios-install-btn ios-install-btn-muted" id="iosInstallLater" data-i18n="install_prompt_later">稍後</button>
+      <button type="button" class="ios-install-btn" id="iosInstallDismiss" data-i18n="install_prompt_dismiss">知道了</button>
     </div>
   </div>
 

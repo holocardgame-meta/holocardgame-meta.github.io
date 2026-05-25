@@ -9,6 +9,7 @@ const COLOR_HEX = { '白': '#e0e0e0', '綠': '#4caf50', '紅': '#f44336', '藍':
 const TIER_LABEL = { '1': 'Tier 1', '2': 'Tier 2', '3': 'Tier 3', 'official': 'Official', 'guide': '其他攻略' };
 const TYPE_LABEL = { '主推': '主推', '成員': '成員', 'support': '支援', '吶喊': '吶喊' };
 const GA_MEASUREMENT_ID = window.HOLOCARD_GA_ID || 'G-8WS4X0WWQQ';
+const IOS_INSTALL_DISMISSED_KEY = 'holo-ios-install-dismissed-until';
 const GA_PAGE_TITLES = {
   guides: 'HOLOCARD META - Deck Guides',
   tournament: 'HOLOCARD META - Tournament Decks',
@@ -686,6 +687,46 @@ function setupOutboundTracking() {
   });
 }
 
+function setupIosInstallPrompt() {
+  const prompt = document.getElementById('iosInstallPrompt');
+  const laterBtn = document.getElementById('iosInstallLater');
+  const dismissBtn = document.getElementById('iosInstallDismiss');
+  if (!prompt || !laterBtn || !dismissBtn) return;
+
+  const ua = navigator.userAgent || '';
+  const isIos = /iPad|iPhone|iPod/i.test(ua) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const isSafari = /Safari/i.test(ua) && !/CriOS|FxiOS|EdgiOS|OPiOS|DuckDuckGo|Edg/i.test(ua);
+  const isIosSafari = isIos && isSafari;
+  const isStandalone = window.navigator.standalone === true ||
+    window.matchMedia('(display-mode: standalone)').matches;
+
+  let dismissedUntil = 0;
+  try {
+    dismissedUntil = Number(localStorage.getItem(IOS_INSTALL_DISMISSED_KEY) || 0);
+  } catch {}
+
+  if (!isIosSafari || isStandalone || Date.now() < dismissedUntil) return;
+
+  const hidePrompt = (days, action) => {
+    prompt.classList.remove('is-visible');
+    window.setTimeout(() => { prompt.hidden = true; }, 180);
+    try {
+      localStorage.setItem(IOS_INSTALL_DISMISSED_KEY, String(Date.now() + days * 24 * 60 * 60 * 1000));
+    } catch {}
+    trackGaEvent('pwa_install_prompt', { prompt_action: action });
+  };
+
+  window.setTimeout(() => {
+    prompt.hidden = false;
+    requestAnimationFrame(() => prompt.classList.add('is-visible'));
+    trackGaEvent('pwa_install_prompt', { prompt_action: 'show' });
+  }, 2500);
+
+  laterBtn.addEventListener('click', () => hidePrompt(7, 'later'));
+  dismissBtn.addEventListener('click', () => hidePrompt(30, 'dismiss'));
+}
+
 // ── Boot ─────────────────────────────────────────────────────────────────
 async function init() {
   initI18n();
@@ -699,6 +740,7 @@ async function init() {
   setupLangSwitcher();
   setupModals();
   setupOutboundTracking();
+  setupIosInstallPrompt();
   applyFilterUI();
   await loadCoreData();
   updateNavCounts();

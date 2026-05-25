@@ -137,6 +137,10 @@ const TRANSLATIONS = {
     empty_sub: '試試清除篩選條件，或調整搜尋關鍵字。',
     empty_btn: '清除全部篩選',
     sort_label: '排序：日期新→舊',
+    install_prompt_title: '加入主畫面',
+    install_prompt_body: '在 Safari 按分享按鈕，選擇「加入主畫面」即可像 App 一樣快速開啟。',
+    install_prompt_later: '稍後',
+    install_prompt_dismiss: '知道了',
   },
   en: {
     lang_label: 'EN',
@@ -276,6 +280,10 @@ const TRANSLATIONS = {
     empty_sub: 'Try removing some filters or adjusting your search.',
     empty_btn: 'Clear all filters',
     sort_label: 'Sort: newest first',
+    install_prompt_title: 'Add to Home Screen',
+    install_prompt_body: 'In Safari, tap Share, then choose Add to Home Screen to open it like an app.',
+    install_prompt_later: 'Later',
+    install_prompt_dismiss: 'Got it',
   },
   ja: {
     lang_label: '日本語',
@@ -415,6 +423,10 @@ const TRANSLATIONS = {
     empty_sub: '絞り込み条件を解除するか、検索キーワードを調整してください。',
     empty_btn: 'すべて解除',
     sort_label: '並び順：新しい順',
+    install_prompt_title: 'ホーム画面に追加',
+    install_prompt_body: 'Safariで共有ボタンを押し、「ホーム画面に追加」を選ぶとアプリのように開けます。',
+    install_prompt_later: 'あとで',
+    install_prompt_dismiss: '了解',
   },
   fr: {
     lang_label: 'FR',
@@ -554,6 +566,10 @@ const TRANSLATIONS = {
     empty_sub: 'Essayez de retirer des filtres ou de modifier votre recherche.',
     empty_btn: 'Tout effacer',
     sort_label: 'Tri : récents d\'abord',
+    install_prompt_title: 'Ajouter à l’écran d’accueil',
+    install_prompt_body: 'Dans Safari, touchez Partager, puis Ajouter à l’écran d’accueil pour l’ouvrir comme une app.',
+    install_prompt_later: 'Plus tard',
+    install_prompt_dismiss: 'Compris',
   },
   es: {
     lang_label: 'ES',
@@ -693,6 +709,10 @@ const TRANSLATIONS = {
     empty_sub: 'Intenta quitar filtros o cambiar la búsqueda.',
     empty_btn: 'Limpiar todo',
     sort_label: 'Orden: recientes primero',
+    install_prompt_title: 'Añadir a pantalla de inicio',
+    install_prompt_body: 'En Safari, toca Compartir y elige Añadir a pantalla de inicio para abrirlo como una app.',
+    install_prompt_later: 'Más tarde',
+    install_prompt_dismiss: 'Entendido',
   },
 };
 

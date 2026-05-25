@@ -1,4 +1,4 @@
-const CACHE_NAME = 'holo-card-v31';
+const CACHE_NAME = 'holo-card-v32';
 
 const PRECACHE_URLS = [
   './',
@@ -10,7 +10,10 @@ const PRECACHE_URLS = [
   './components/card-view.js',
   './components/tournament-view.js',
   './components/rules-view.js',
+  './manifest.webmanifest',
   './favicon.svg',
+  './icons/icon-192.png',
+  './icons/icon-512.png',
 ];
 
 self.addEventListener('install', (e) => {
