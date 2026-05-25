@@ -19,8 +19,7 @@ wheels/
 .cursor/
 
 # Claude Design handoff bundles (extracted locally, not source)
-.design-handoff/
-.design-handoff-detail/
+.design-handoff*/
 
 # OS
 Thumbs.db

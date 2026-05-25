@@ -447,7 +447,8 @@ function setupModals() {
     const deckCard = e.target.closest('.deck-card');
     if (deckCard) {
       const deckId = deckCard.dataset.deckId;
-      renderDeckModal(deckModalBody, deckId, tierData, decksData, allGuides, officialDecks);
+      await ensureCards();
+      renderDeckModal(deckModalBody, deckId, tierData, decksData, allGuides, officialDecks, cardsData);
       deckModal.hidden = false;
       document.body.style.overflow = 'hidden';
       return;
