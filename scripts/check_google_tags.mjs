@@ -40,8 +40,10 @@ if (measurementIds.size !== 1 || !measurementIds.has(EXPECTED_GA_MEASUREMENT_ID)
 }
 
 const requiredSnippets = [
-  `gtag('config', '${EXPECTED_GA_MEASUREMENT_ID}')`,
-  `https://www.googletagmanager.com/gtag/js?id=${EXPECTED_GA_MEASUREMENT_ID}`,
+  `window.HOLOCARD_GA_ID = '${EXPECTED_GA_MEASUREMENT_ID}'`,
+  `window.gtag('config', window.HOLOCARD_GA_ID, { send_page_view: false })`,
+  `https://www.googletagmanager.com/gtag/js?id=' + window.HOLOCARD_GA_ID`,
+  'window.holocardLoadGoogleTag = load',
 ];
 
 for (const snippet of requiredSnippets) {

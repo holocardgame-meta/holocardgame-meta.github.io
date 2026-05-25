@@ -8,6 +8,13 @@ import { initI18n, setLang, getLang, applyStaticTranslations, t } from './i18n.j
 const COLOR_HEX = { '白': '#e0e0e0', '綠': '#4caf50', '紅': '#f44336', '藍': '#2196f3', '紫': '#9c27b0', '黃': '#ffeb3b' };
 const TIER_LABEL = { '1': 'Tier 1', '2': 'Tier 2', '3': 'Tier 3', 'official': 'Official', 'guide': '其他攻略' };
 const TYPE_LABEL = { '主推': '主推', '成員': '成員', 'support': '支援', '吶喊': '吶喊' };
+const GA_MEASUREMENT_ID = window.HOLOCARD_GA_ID || 'G-8WS4X0WWQQ';
+const GA_PAGE_TITLES = {
+  guides: 'HOLOCARD META - Deck Guides',
+  tournament: 'HOLOCARD META - Tournament Decks',
+  cards: 'HOLOCARD META - Card Search',
+  rules: 'HOLOCARD META - Rules / Errata',
+};
 
 let cardsData = [];
 let cardIndexData = [];
@@ -28,9 +35,26 @@ const filters = {
 const _loaded = { cards: false, decklog: false };
 const _guideDetailCache = new Map();
 
-function trackGaEvent(eventName, params = {}) {
-  const gtag = window.gtag;
-  if (typeof gtag !== 'function') return;
+function getGtag({ load = true } = {}) {
+  window.dataLayer = window.dataLayer || [];
+  if (typeof window.gtag !== 'function') {
+    window.gtag = function(){ window.dataLayer.push(arguments); };
+  }
+  if (load && typeof window.holocardLoadGoogleTag === 'function') {
+    window.holocardLoadGoogleTag();
+  }
+  return window.gtag;
+}
+
+function getGaPageLocation(viewName) {
+  const url = new URL(window.location.href);
+  url.searchParams.set('view', viewName);
+  url.hash = '';
+  return url.toString();
+}
+
+function trackGaEvent(eventName, params = {}, options = {}) {
+  const gtag = getGtag(options);
   gtag('event', eventName, {
     app_name: 'HOLOCARD META',
     view_name: currentView,
@@ -39,11 +63,13 @@ function trackGaEvent(eventName, params = {}) {
   });
 }
 
-function trackGaPageView(viewName) {
+function trackGaPageView(viewName, options = {}) {
   trackGaEvent('page_view', {
-    page_title: `HOLOCARD META - ${viewName}`,
-    page_location: `${window.location.origin}${window.location.pathname}#${viewName}`,
-  });
+    page_title: GA_PAGE_TITLES[viewName] || `HOLOCARD META - ${viewName}`,
+    page_location: getGaPageLocation(viewName),
+    page_path: `/${viewName}`,
+    view_name: viewName,
+  }, options);
 }
 
 function trackFilterChange(filterType, filterValue, isActive) {
@@ -677,6 +703,7 @@ async function init() {
   await loadCoreData();
   updateNavCounts();
   render();
+  trackGaPageView(currentView, { load: false });
 }
 
 init();

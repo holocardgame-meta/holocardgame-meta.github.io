@@ -581,22 +581,24 @@
 
   <script type="module" src="app.js"></script>
   <script>
+    window.HOLOCARD_GA_ID = 'G-8WS4X0WWQQ';
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-8WS4X0WWQQ');
+    window.gtag = window.gtag || function(){window.dataLayer.push(arguments);};
+    window.gtag('js', new Date());
+    window.gtag('config', window.HOLOCARD_GA_ID, { send_page_view: false });
     (function(){
       var loaded = false;
       function load(){
         if (loaded) return;
         loaded = true;
         var s = document.createElement('script');
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-8WS4X0WWQQ';
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.HOLOCARD_GA_ID;
         document.head.appendChild(s);
         ['click','scroll','keydown','touchstart'].forEach(function(e){
           document.removeEventListener(e, load, {capture:true});
         });
       }
+      window.holocardLoadGoogleTag = load;
       ['click','scroll','keydown','touchstart'].forEach(function(e){
         document.addEventListener(e, load, {capture:true,once:true,passive:true});
       });
