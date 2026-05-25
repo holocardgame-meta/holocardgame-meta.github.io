@@ -1,4 +1,4 @@
-const CACHE_NAME = 'holo-card-v27';
+const CACHE_NAME = 'holo-card-v29';
 
 const PRECACHE_URLS = [
   './',
@@ -35,7 +35,7 @@ self.addEventListener('fetch', (e) => {
   if (e.request.method !== 'GET') return;
 
   if (url.pathname.startsWith('/data/')) {
-    e.respondWith(networkFirst(e.request));
+    e.respondWith(staleWhileRevalidate(e.request));
     return;
   }
 
@@ -60,18 +60,6 @@ async function staleWhileRevalidate(request) {
     return resp;
   }).catch(() => cached);
   return cached || fetchPromise;
-}
-
-async function networkFirst(request) {
-  const cache = await caches.open(CACHE_NAME);
-  try {
-    const resp = await fetch(request);
-    if (resp.ok) cache.put(request, resp.clone());
-    return resp;
-  } catch {
-    const cached = await cache.match(request);
-    return cached || new Response('Offline', { status: 503 });
-  }
 }
 
 async function cacheFirst(request, maxAge) {
