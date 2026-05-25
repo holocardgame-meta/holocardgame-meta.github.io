@@ -13,8 +13,8 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -28,16 +28,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install uv
-        uses: astral-sh/setup-uv@v7
-
       - name: Set up Python
-        run: uv python install
+        if: github.event_name != 'push'
+        uses: actions/setup-python@v6
+        with:
+          python-version-file: .python-version
+
+      - name: Install uv
+        if: github.event_name != 'push'
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+          cache-dependency-glob: uv.lock
 
       - name: Install dependencies
-        run: uv sync
+        if: github.event_name != 'push'
+        run: uv sync --locked
 
       - name: Run scraper
+        if: github.event_name != 'push'
         id: scrape
         continue-on-error: true
         env:
@@ -45,9 +54,10 @@ jobs:
         run: uv run python -m scraper.run
 
       - name: Check scraper output
+        if: github.event_name != 'push'
         id: check
         run: |
-          if [ -f "web/data/cards.json" ] && [ -s "web/data/cards.json" ]; then
+          if [ "${{ steps.scrape.outcome }}" = "success" ] && [ -f "web/data/cards.json" ] && [ -s "web/data/cards.json" ]; then
             echo "fresh=true" >> "$GITHUB_OUTPUT"
             echo "Scraper produced fresh data"
           else
@@ -56,7 +66,7 @@ jobs:
           fi
 
       - name: Commit updated data & cache
-        if: steps.check.outputs.fresh == 'true'
+        if: github.event_name != 'push' && steps.check.outputs.fresh == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
