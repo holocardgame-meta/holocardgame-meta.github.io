@@ -12,7 +12,8 @@
         "ja": "一部カード効果の裁定変更のお知らせ",
         "zh-TW": "部分卡牌效果裁定變更通知",
         "en": "Notice regarding ruling changes for some card effects",
-        "fr": "Annonce de modification de l'interprétation de certains effets de carte"
+        "fr": "Annonce de modification de l'interprétation de certains effets de carte",
+        "es": "Aviso de cambio de arbitraje para el efecto de algunas cartas"
       }
     },
     "hBP01-030": {
@@ -22,7 +23,8 @@
         "ja": "一部カード効果の裁定変更のお知らせ",
         "zh-TW": "部分卡牌效果裁定變更通知",
         "en": "Notice regarding ruling changes for some card effects",
-        "fr": "Annonce de modification de l'interprétation de certains effets de carte"
+        "fr": "Annonce de modification de l'interprétation de certains effets de carte",
+        "es": "Aviso de cambio de arbitraje para el efecto de algunas cartas"
       }
     },
     "hSD11-009": {
@@ -32,7 +34,8 @@
         "ja": "一部カード効果の裁定変更のお知らせ",
         "zh-TW": "部分卡牌效果裁定變更通知",
         "en": "Notice regarding ruling changes for some card effects",
-        "fr": "Annonce de modification de l'interprétation de certains effets de carte"
+        "fr": "Annonce de modification de l'interprétation de certains effets de carte",
+        "es": "Aviso de cambio de arbitraje para el efecto de algunas cartas"
       }
     }
   },
@@ -45,7 +48,8 @@
         "ja": "一部カード効果の裁定変更のお知らせ",
         "zh-TW": "部分卡牌效果裁定變更通知",
         "en": "Notice regarding ruling changes for some card effects",
-        "fr": "Annonce de modification de l'interprétation de certains effets de carte"
+        "fr": "Annonce de modification de l'interprétation de certains effets de carte",
+        "es": "Aviso de cambio de arbitraje para el efecto de algunas cartas"
       },
       "type": "errata",
       "card_ids": [
@@ -62,7 +66,8 @@
         "ja": "ゲーム開始時の「手札の引き直し」に関するルール更新のお知らせ",
         "zh-TW": "關於遊戲開始時「手牌重抽」的規則更新通知",
         "en": "Notice regarding rule update for \"Redrawing Hand\" at the start of the game",
-        "fr": "Annonce de mise à jour des règles concernant le \"Remaniement de main\" en début de partie"
+        "fr": "Annonce de mise à jour des règles concernant le \"Remaniement de main\" en début de partie",
+        "es": "Anuncio de actualización de reglas sobre el «reparto de mano inicial» al inicio de la partida"
       },
       "type": "rule_update",
       "card_ids": []
@@ -75,7 +80,8 @@
         "ja": "制限カード解除のお知らせ[2025/12/8(月)施行]",
         "zh-TW": "限制卡解除通知[2025/12/8(一)施行]",
         "en": "Notice regarding the removal of Restricted Cards [Effective 2025/12/8 (Mon)]",
-        "fr": "Annonce de levée de restriction de carte [Applicable à partir du 2025/12/8 (lun)]"
+        "fr": "Annonce de levée de restriction de carte [Applicable à partir du 2025/12/8 (lun)]",
+        "es": "Aviso de eliminación de cartas restringidas [Aplicado el 8/12/2025 (lunes)]"
       },
       "type": "unrestricted",
       "card_ids": [
@@ -91,7 +97,8 @@
         "ja": "デッキ構築ルール",
         "zh-TW": "牌組構築規則",
         "en": "Deck Construction Rules",
-        "fr": "Règles de construction de deck"
+        "fr": "Règles de construction de deck",
+        "es": "Reglas de construcción de mazos"
       },
       "type": "deck_rules",
       "card_ids": [
@@ -109,7 +116,8 @@
         "ja": "制限カード追加のお知らせ[2025/4/21(月)施行]",
         "zh-TW": "限制卡追加通知[2025/4/21(一)施行]",
         "en": "Notice regarding the addition of Restricted Cards [Effective 2025/4/21 (Mon)]",
-        "fr": "Annonce d'ajout de restriction de carte [Applicable à partir du 2025/4/21 (lun)]"
+        "fr": "Annonce d'ajout de restriction de carte [Applicable à partir du 2025/4/21 (lun)]",
+        "es": "Aviso de adición de cartas restringidas [Aplicado el 21/4/2025 (lunes)]"
       },
       "type": "restricted",
       "card_ids": [
@@ -131,7 +139,8 @@
         "ja": "制限カード追加のお知らせ[2024/12/20(金)施行]",
         "zh-TW": "限制卡追加通知[2024/12/20(五)施行]",
         "en": "Notice regarding the addition of Restricted Cards [Effective 2024/12/20 (Fri)]",
-        "fr": "Annonce d'ajout de restriction de carte [Applicable à partir du 2024/12/20 (ven)]"
+        "fr": "Annonce d'ajout de restriction de carte [Applicable à partir du 2024/12/20 (ven)]",
+        "es": "Aviso de adición de cartas restringidas [Aplicado el 20/12/2024 (viernes)]"
       },
       "type": "restricted",
       "card_ids": [

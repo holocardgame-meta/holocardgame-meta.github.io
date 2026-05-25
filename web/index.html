@@ -330,17 +330,40 @@
       </div>
 
       <div class="sidebar-foot">
-        <div class="lang-picker">
-          <div class="lang-label">
+        <div class="lang-picker" id="langPicker">
+          <button class="lang-trigger" id="langTrigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Language">
             <span class="globe-mini" aria-hidden="true"></span>
-            <span>Language</span>
-          </div>
-          <div class="lang-row" id="langSwitcher" role="radiogroup" aria-label="Language">
-            <button class="lang-seg active" data-lang="zh-TW" title="中文 · 繁體" role="radio" aria-checked="true">ZH</button>
-            <button class="lang-seg" data-lang="ja" title="日本語 · Japanese" role="radio" aria-checked="false">JA</button>
-            <button class="lang-seg" data-lang="en" title="English" role="radio" aria-checked="false">EN</button>
-            <button class="lang-seg" data-lang="fr" title="Français · French" role="radio" aria-checked="false">FR</button>
-          </div>
+            <span class="lang-trigger-code" id="langTriggerCode">ZH</span>
+            <span class="lang-trigger-name" id="langTriggerName">繁體中文</span>
+            <svg class="lang-trigger-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <ul class="lang-pop" id="langPop" role="listbox" aria-label="Language" hidden>
+            <li class="lang-opt is-active" role="option" data-lang="zh-TW" aria-selected="true" tabindex="0">
+              <span class="lang-opt-code">ZH</span>
+              <span class="lang-opt-name">繁體中文</span>
+              <span class="lang-opt-check" aria-hidden="true">✓</span>
+            </li>
+            <li class="lang-opt" role="option" data-lang="ja" aria-selected="false" tabindex="0">
+              <span class="lang-opt-code">JA</span>
+              <span class="lang-opt-name">日本語</span>
+              <span class="lang-opt-check" aria-hidden="true">✓</span>
+            </li>
+            <li class="lang-opt" role="option" data-lang="en" aria-selected="false" tabindex="0">
+              <span class="lang-opt-code">EN</span>
+              <span class="lang-opt-name">English</span>
+              <span class="lang-opt-check" aria-hidden="true">✓</span>
+            </li>
+            <li class="lang-opt" role="option" data-lang="fr" aria-selected="false" tabindex="0">
+              <span class="lang-opt-code">FR</span>
+              <span class="lang-opt-name">Français</span>
+              <span class="lang-opt-check" aria-hidden="true">✓</span>
+            </li>
+            <li class="lang-opt" role="option" data-lang="es" aria-selected="false" tabindex="0">
+              <span class="lang-opt-code">ES</span>
+              <span class="lang-opt-name">Español</span>
+              <span class="lang-opt-check" aria-hidden="true">✓</span>
+            </li>
+          </ul>
         </div>
         <div class="foot-meta">
           <div class="foot-meta-line">

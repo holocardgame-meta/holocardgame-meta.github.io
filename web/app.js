@@ -389,24 +389,75 @@ function setupDrawer() {
   document.getElementById('mobileBackdrop')?.addEventListener('click', closeDrawer);
 }
 
-// ── Language ─────────────────────────────────────────────────────────────
+// ── Language (popover dropdown) ──────────────────────────────────────────
 function renderLangSwitcher() {
   const current = getLang();
-  document.querySelectorAll('#langSwitcher .lang-seg').forEach(btn => {
-    const on = btn.dataset.lang === current;
-    btn.classList.toggle('active', on);
-    btn.setAttribute('aria-checked', String(on));
+  const opts = document.querySelectorAll('#langPop .lang-opt');
+  let activeOpt = null;
+  opts.forEach(opt => {
+    const on = opt.dataset.lang === current;
+    opt.classList.toggle('is-active', on);
+    opt.setAttribute('aria-selected', String(on));
+    if (on) activeOpt = opt;
   });
+  if (activeOpt) {
+    const code = activeOpt.querySelector('.lang-opt-code')?.textContent;
+    const name = activeOpt.querySelector('.lang-opt-name')?.textContent;
+    const codeEl = document.getElementById('langTriggerCode');
+    const nameEl = document.getElementById('langTriggerName');
+    if (codeEl && code) codeEl.textContent = code;
+    if (nameEl && name) nameEl.textContent = name;
+  }
 }
 
 function setupLangSwitcher() {
-  document.querySelectorAll('#langSwitcher .lang-seg').forEach(btn => {
-    btn.addEventListener('click', () => {
-      setLang(btn.dataset.lang);
+  const trigger = document.getElementById('langTrigger');
+  const pop = document.getElementById('langPop');
+  const picker = document.getElementById('langPicker');
+  if (!trigger || !pop || !picker) return;
+
+  const openPop = () => {
+    pop.hidden = false;
+    trigger.setAttribute('aria-expanded', 'true');
+  };
+  const closePop = () => {
+    pop.hidden = true;
+    trigger.setAttribute('aria-expanded', 'false');
+  };
+  const togglePop = () => (pop.hidden ? openPop() : closePop());
+
+  trigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    togglePop();
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!pop.hidden && !picker.contains(e.target)) closePop();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !pop.hidden) {
+      closePop();
+      trigger.focus();
+    }
+  });
+
+  pop.querySelectorAll('.lang-opt').forEach(opt => {
+    const choose = () => {
+      setLang(opt.dataset.lang);
       applyStaticTranslations();
       renderLangSwitcher();
       updateNavCounts();
       render();
+      closePop();
+      trigger.focus();
+    };
+    opt.addEventListener('click', choose);
+    opt.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        choose();
+      }
     });
   });
 }

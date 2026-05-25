@@ -17,57 +17,58 @@ BATCH_SIZE = 80
 REQUEST_DELAY = 5.0
 MAX_RETRIES = 8
 
-TARGET_LANGS_JA = ["zh-TW", "en", "fr"]
-TARGET_LANGS_ZH = ["ja", "en", "fr"]
-TARGET_LANGS_EN = ["ja", "zh-TW", "fr"]
+TARGET_LANGS_JA = ["zh-TW", "en", "fr", "es"]
+TARGET_LANGS_ZH = ["ja", "en", "fr", "es"]
+TARGET_LANGS_EN = ["ja", "zh-TW", "fr", "es"]
 
 LANG_NAMES = {
     "ja": "Japanese",
     "zh-TW": "Traditional Chinese (Taiwan)",
     "en": "English",
     "fr": "French",
+    "es": "Spanish",
 }
 
 HOCG_GLOSSARY = """\
 hololive OFFICIAL CARD GAME (ホロカ / hOCG) official terminology:
 
-| Japanese | 繁體中文 | English | French |
-|---|---|---|---|
-| ホロカ | hOCG | hOCG | hOCG |
-| エール | 吶喊 | Cheer | Encouragement |
-| エールデッキ | 吶喊牌組 | Cheer Deck | Deck d'encouragement |
-| ブルーム | 綻放 | Bloom | Bloom |
-| アーツ | 藝能 | Arts | Arts |
-| ホロメン / メンバー | 成員 | Holomen / Member | Membre |
-| コラボ | 聯動 | Collab | Collab |
-| ダウン | 擊倒 | Down | K.O. |
-| 推し / 推しホロメン | 推 / 主推 | Oshi | Oshi |
-| 推しスキル | 推技能 | Oshi Skill | Compétence Oshi |
-| SPスキル | SP技能 | SP Skill | Compétence SP |
-| ホロパワー | Holo Power | Holo Power | Holo Power |
-| デッキ | 牌組 | Deck | Deck |
-| 手札 | 手牌 | Hand | Main |
-| アーカイブ | 存檔區 | Archive | Archive |
-| サポート | 支援卡 | Support | Support |
-| ステージ | 舞台 | Stage | Scène |
-| センター | 中心 | Center | Centre |
-| バック | 後方 | Back | Arrière |
-| ライフ | 生命值 | Life | Points de vie |
-| デッキレシピ | 牌組配置 | Deck Recipe | Recette de deck |
-| 回し方 | 打法 | How to play | Comment jouer |
-| 単 (デッキ) | 單色 | Mono | Mono |
-| ギフト | 天賦 | Gift | Don |
-| Debut / 1st / 2nd | Debut / 1st / 2nd | Debut / 1st / 2nd | Debut / 1st / 2nd |
-| Buzz | Buzz | Buzz | Buzz |
-| Spot | Spot | Spot | Spot |
-| LIMITED | LIMITED | LIMITED | LIMITED |
-| マスコット | 吉祥物 | Mascot | Mascotte |
-| ファン | 粉絲 | Fan | Fan |
-| 先攻 / 後攻 | 先攻 / 後攻 | Going first / Going second | Premier / Second |
-| ターン目 | 回合 | Turn | Tour |
-| 火力 | 火力 | Firepower | Puissance de feu |
-| 素点 / 素ダメ | 基礎傷害 | Base damage | Dégâts de base |
-| エール加速 | 吶喊加速 | Cheer acceleration | Accélération d'encouragement |
+| Japanese | 繁體中文 | English | French | Spanish |
+|---|---|---|---|---|
+| ホロカ | hOCG | hOCG | hOCG | hOCG |
+| エール | 吶喊 | Cheer | Encouragement | Cheer |
+| エールデッキ | 吶喊牌組 | Cheer Deck | Deck d'encouragement | Mazo Cheer |
+| ブルーム | 綻放 | Bloom | Bloom | Bloom |
+| アーツ | 藝能 | Arts | Arts | Arts |
+| ホロメン / メンバー | 成員 | Holomen / Member | Membre | Holomen / Miembro |
+| コラボ | 聯動 | Collab | Collab | Collab |
+| ダウン | 擊倒 | Down | K.O. | K.O. |
+| 推し / 推しホロメン | 推 / 主推 | Oshi | Oshi | Oshi |
+| 推しスキル | 推技能 | Oshi Skill | Compétence Oshi | Habilidad Oshi |
+| SPスキル | SP技能 | SP Skill | Compétence SP | Habilidad SP |
+| ホロパワー | Holo Power | Holo Power | Holo Power | Holo Power |
+| デッキ | 牌組 | Deck | Deck | Mazo |
+| 手札 | 手牌 | Hand | Main | Mano |
+| アーカイブ | 存檔區 | Archive | Archive | Archivo |
+| サポート | 支援卡 | Support | Support | Soporte |
+| ステージ | 舞台 | Stage | Scène | Escenario |
+| センター | 中心 | Center | Centre | Centro |
+| バック | 後方 | Back | Arrière | Retaguardia |
+| ライフ | 生命值 | Life | Points de vie | Vida |
+| デッキレシピ | 牌組配置 | Deck Recipe | Recette de deck | Receta de mazo |
+| 回し方 | 打法 | How to play | Comment jouer | Cómo jugar |
+| 単 (デッキ) | 單色 | Mono | Mono | Mono |
+| ギフト | 天賦 | Gift | Don | Don |
+| Debut / 1st / 2nd | Debut / 1st / 2nd | Debut / 1st / 2nd | Debut / 1st / 2nd | Debut / 1st / 2nd |
+| Buzz | Buzz | Buzz | Buzz | Buzz |
+| Spot | Spot | Spot | Spot | Spot |
+| LIMITED | LIMITED | LIMITED | LIMITED | LIMITED |
+| マスコット | 吉祥物 | Mascot | Mascotte | Mascota |
+| ファン | 粉絲 | Fan | Fan | Fan |
+| 先攻 / 後攻 | 先攻 / 後攻 | Going first / Going second | Premier / Second | Primero / Segundo |
+| ターン目 | 回合 | Turn | Tour | Turno |
+| 火力 | 火力 | Firepower | Puissance de feu | Potencia |
+| 素点 / 素ダメ | 基礎傷害 | Base damage | Dégâts de base | Daño base |
+| エール加速 | 吶喊加速 | Cheer acceleration | Accélération d'encouragement | Aceleración de Cheer |
 """
 
 SYSTEM_PROMPT_TEMPLATE = """\

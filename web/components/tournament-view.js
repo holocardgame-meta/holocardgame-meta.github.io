@@ -270,12 +270,7 @@ export function renderTournamentView(container, decklogDecks, cardsData) {
     g.decks.sort((a, b) => _placementOrder(a.placement) - _placementOrder(b.placement));
   }
 
-  let html = `
-    <div class="tournament-header">
-      <h2 class="tournament-title">${t('tournament_title')}</h2>
-      <p class="tournament-desc">${t('tournament_desc')}</p>
-    </div>
-  `;
+  let html = '';
 
   const today = new Date().toISOString().slice(0, 10);
   const usageRendered = new Set();
@@ -465,6 +460,88 @@ function renderTournamentDeckCard(deck, cardsMap) {
   `;
 }
 
+const _COLOR_HEX_TOURN = {
+  '白': '#e8e8e8', '綠': '#4caf50', '緑': '#4caf50',
+  '紅': '#f44336', '赤': '#f44336',
+  '藍': '#2196f3', '青': '#2196f3',
+  '紫': '#9c27b0', '黃': '#ffeb3b', '黄': '#ffeb3b',
+};
+const _COLOR_ALIAS_TOURN = {
+  '白': '白', '綠': '綠', '緑': '綠', '紅': '紅', '赤': '紅',
+  '藍': '藍', '青': '藍', '紫': '紫', '黃': '黃', '黄': '黃',
+};
+
+function _esc(s) {
+  return String(s ?? '').replace(/[&<>"']/g, c => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+  }[c]));
+}
+
+function _normColor(c) { return _COLOR_ALIAS_TOURN[String(c || '').trim()] || ''; }
+
+function _dominantDeckColor(deck, cardsMap) {
+  const counts = {};
+  const sources = [deck?.oshi_cards, deck?.main_deck];
+  for (const arr of sources) {
+    if (!arr) continue;
+    for (const c of arr) {
+      const dbCard = c.card_id ? cardsMap[c.card_id] : null;
+      const colors = String(dbCard?.color || c.color || '').split('/');
+      for (const col of colors) {
+        const norm = _normColor(col);
+        if (norm) counts[norm] = (counts[norm] || 0) + (c.count || 1);
+      }
+    }
+  }
+  const sorted = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
+  return sorted[0] || null;
+}
+
+function _glyphFromName(name) {
+  if (!name) return '?';
+  const m = String(name).match(/[぀-ヿ㐀-鿿ｦ-ﾟ]/);
+  return m ? m[0] : String(name)[0].toUpperCase();
+}
+
+function _renderDeckRow(c, cardsMap) {
+  const info = cardsMap[c.card_id] || {};
+  const imageUrl = info.imageUrl || c.imageUrl || '';
+  const name = info.name || c.name || c.card_id || '';
+  const color = _normColor(info.color || c.color || '') || '';
+  const cssColor = _COLOR_HEX_TOURN[color] || '#666';
+  const count = c.count || 1;
+  return `
+    <div class="dcr clickable-card" data-card-id="${_esc(c.card_id || '')}" style="--dcr-c:${cssColor}">
+      <div class="dcr-thumb">
+        ${imageUrl
+          ? `<img src="${_esc(imageUrl)}" alt="${_esc(name)}" loading="lazy" decoding="async">`
+          : `<div class="dcr-thumb-pattern"></div><span class="dcr-glyph">${_esc(_glyphFromName(name))}</span>`}
+      </div>
+      <div class="dcr-info">
+        <div class="dcr-name" title="${_esc(name)}">${_esc(name)}</div>
+        ${c.card_id ? `<div class="dcr-code">${_esc(c.card_id)}</div>` : ''}
+        ${count > 1 ? `<div class="dcr-count">×${count}</div>` : ''}
+      </div>
+    </div>
+  `;
+}
+
+function _renderDeckBlock(no, title, count, cards, cardsMap, gridClass) {
+  if (!cards?.length) return '';
+  return `
+    <div class="deckp-block">
+      <div class="deckp-section-head">
+        <span class="deckp-head-no">${_esc(no)}</span>
+        <h2>${_esc(title)}</h2>
+        <span class="deckp-head-count">×${_esc(count)}</span>
+      </div>
+      <div class="deck-rows-grid${gridClass ? ' ' + gridClass : ''}">
+        ${cards.map(c => _renderDeckRow(c, cardsMap)).join('')}
+      </div>
+    </div>
+  `;
+}
+
 export function renderTournamentDeckModal(container, decklogId, decklogDecks, cardsData) {
   const deck = decklogDecks?.find(d => d.deck_id === decklogId);
   if (!deck) {
@@ -473,66 +550,70 @@ export function renderTournamentDeckModal(container, decklogId, decklogDecks, ca
   }
 
   const cardsMap = {};
-  if (cardsData) {
-    for (const c of cardsData) cardsMap[c.id] = c;
-  }
+  if (cardsData) for (const c of cardsData) cardsMap[c.id] = c;
 
-  const oshiHtml = deck.oshi_cards?.length
-    ? renderCardSection(t('tournament_oshi_card'), deck.oshi_cards, cardsMap)
-    : '';
+  const oshiCount = (deck.oshi_cards || []).reduce((s, c) => s + (c.count || 1), 0);
+  const mainCount = deck.main_deck_count || (deck.main_deck || []).reduce((s, c) => s + (c.count || 1), 0);
+  const cheerCount = deck.cheer_deck_count || (deck.cheer_deck || []).reduce((s, c) => s + (c.count || 1), 0);
 
-  const mainHtml = deck.main_deck?.length
-    ? renderCardSection(t('tournament_main_deck') + ` (${deck.main_deck_count})`, deck.main_deck, cardsMap)
-    : '';
+  // Dominant color → drives oshi badge color tinting
+  const dominantColor = _dominantDeckColor(deck, cardsMap);
+  const oshiBadgeColor = dominantColor ? _COLOR_HEX_TOURN[dominantColor] : '#9333ea';
 
-  const cheerHtml = deck.cheer_deck?.length
-    ? renderCardSection(t('tournament_cheer_deck') + ` (${deck.cheer_deck_count})`, deck.cheer_deck, cardsMap)
-    : '';
+  const badges = [];
+  if (deck.oshi) badges.push({ kind: 'oshi', label: deck.oshi, style: `background:linear-gradient(135deg, ${oshiBadgeColor}cc 0%, ${oshiBadgeColor}99 100%); border-color: ${oshiBadgeColor};` });
+  if (deck.event) badges.push({ kind: 'event', label: deck.event });
+  if (deck.placement) badges.push({ kind: 'place', label: deck.placement });
+
+  const badgesHtml = badges.map(b => `<span class="xbadge xbadge-${b.kind}"${b.style ? ` style="${b.style}"` : ''}>${_esc(b.label)}</span>`).join('');
+
+  const countTilesHtml = `
+    <div class="deckp-hero-counts">
+      <div class="hc-tile"><div class="hc-val">${mainCount}</div><div class="hc-label">${_esc(t('tournament_main_deck'))}</div></div>
+      <div class="hc-tile"><div class="hc-val">${cheerCount}</div><div class="hc-label">${_esc(t('tournament_cheer_deck'))}</div></div>
+    </div>
+  `;
+
+  // Sections — only those with data
+  let n = 1;
+  const sectionsHtml = [
+    deck.oshi_cards?.length ? _renderDeckBlock(String(n++).padStart(2, '0'), t('tournament_oshi_card'), oshiCount, deck.oshi_cards, cardsMap, 'deck-rows-grid--oshi') : '',
+    deck.main_deck?.length ? _renderDeckBlock(String(n++).padStart(2, '0'), t('tournament_main_deck'), mainCount, deck.main_deck, cardsMap, '') : '',
+    deck.cheer_deck?.length ? _renderDeckBlock(String(n++).padStart(2, '0'), t('tournament_cheer_deck'), cheerCount, deck.cheer_deck, cardsMap, 'deck-rows-grid--cheers') : '',
+  ].join('');
+
+  const footerHtml = deck.url ? `
+    <div class="deckp-footer">
+      <a href="${_esc(deck.url)}" class="dl-btn" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+          <polyline points="15 3 21 3 21 9"/>
+          <line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
+        <span>${_esc(t('tournament_view_decklog')).replace(/→\s*$/, '')}</span>
+        <span class="dl-arrow">→</span>
+      </a>
+      <span class="deckp-footer-note">資料來源 · Bushiroad Deck Log</span>
+    </div>
+  ` : '';
 
   container.innerHTML = `
-    <div class="modal-deck-header">
-      <div class="modal-deck-title">${deck.title}</div>
-      <div class="modal-deck-meta">
-        <span class="tournament-oshi-badge">${deck.oshi}</span>
-        ${deck.event ? `<span class="tournament-event-badge">${deck.event}</span>` : ''}
-        ${deck.placement ? `<span class="tournament-placement-badge">${deck.placement}</span>` : ''}
-      </div>
-    </div>
-    ${oshiHtml}
-    ${mainHtml}
-    ${cheerHtml}
-    ${deck.url ? `
-      <div class="modal-section" style="padding-bottom:2rem">
-        <a class="modal-source-link" href="${deck.url}" target="_blank" rel="noopener">
-          ${t('tournament_view_decklog')}
-        </a>
-      </div>
-    ` : ''}
-  `;
-}
-
-function renderCardSection(title, cards, cardsMap) {
-  const cardsHtml = cards.map(c => {
-    const info = cardsMap[c.card_id] || {};
-    const imageUrl = info.imageUrl || c.imageUrl || '';
-    const name = info.name || c.name || c.card_id;
-    return `
-      <div class="dl-card-entry clickable-card" data-card-id="${c.card_id || ''}">
-        ${imageUrl ? `<img class="dl-card-img" src="${imageUrl}" alt="${name}" loading="lazy" decoding="async">` : '<div class="dl-card-placeholder"></div>'}
-        <div class="dl-card-info">
-          <div class="dl-card-name">${name}</div>
-          <div class="dl-card-id">${c.card_id}</div>
-          ${c.count > 1 ? `<div class="dl-card-count">x${c.count}</div>` : ''}
+    <div class="deck-page">
+      <header class="deckp-hero deckp-hero--flat">
+        <div class="deckp-hero-left">
+          <div class="deckp-hero-eyebrow">牌組 DECK · RECIPE</div>
+          <h1 class="deckp-hero-title">${_esc(deck.title || '')}</h1>
+          ${deck.oshi ? `<div class="deckp-hero-sub">${_esc(deck.oshi)}</div>` : ''}
+          ${badgesHtml ? `<div class="deckp-hero-badges">${badgesHtml}</div>` : ''}
         </div>
-      </div>
-    `;
-  }).join('');
+        ${countTilesHtml}
+      </header>
 
-  return `
-    <div class="modal-section">
-      <div class="modal-section-title">${title}</div>
-      <div class="dl-card-grid">
-        ${cardsHtml}
+      <div class="deckp-body deckp-body--flat">
+        <section class="deckp-flat-main">
+          ${sectionsHtml}
+          ${footerHtml}
+        </section>
       </div>
     </div>
   `;
