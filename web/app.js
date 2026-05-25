@@ -10,6 +10,7 @@ const TIER_LABEL = { '1': 'Tier 1', '2': 'Tier 2', '3': 'Tier 3', 'official': 'O
 const TYPE_LABEL = { '主推': '主推', '成員': '成員', 'support': '支援', '吶喊': '吶喊' };
 const GA_MEASUREMENT_ID = window.HOLOCARD_GA_ID || 'G-8WS4X0WWQQ';
 const IOS_INSTALL_DISMISSED_KEY = 'holo-ios-install-dismissed-until';
+const IOS_CHROME_INSTALL_DISMISSED_KEY = 'holo-ios-chrome-install-dismissed-until';
 const ANDROID_INSTALL_DISMISSED_KEY = 'holo-android-install-dismissed-until';
 const GA_PAGE_TITLES = {
   guides: 'HOLOCARD META - Deck Guides',
@@ -690,6 +691,7 @@ function setupOutboundTracking() {
 
 function setupIosInstallPrompt() {
   const prompt = document.getElementById('iosInstallPrompt');
+  const body = document.getElementById('iosInstallBody');
   const laterBtn = document.getElementById('iosInstallLater');
   const dismissBtn = document.getElementById('iosInstallDismiss');
   if (!prompt || !laterBtn || !dismissBtn) return;
@@ -698,30 +700,37 @@ function setupIosInstallPrompt() {
   const isIos = /iPad|iPhone|iPod/i.test(ua) ||
     (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
   const isSafari = /Safari/i.test(ua) && !/CriOS|FxiOS|EdgiOS|OPiOS|DuckDuckGo|Edg/i.test(ua);
+  const isIosChrome = isIos && /CriOS/i.test(ua);
   const isIosSafari = isIos && isSafari;
   const isStandalone = window.navigator.standalone === true ||
     window.matchMedia('(display-mode: standalone)').matches;
+  const platform = isIosChrome ? 'ios_chrome' : 'ios_safari';
+  const storageKey = isIosChrome ? IOS_CHROME_INSTALL_DISMISSED_KEY : IOS_INSTALL_DISMISSED_KEY;
 
   let dismissedUntil = 0;
   try {
-    dismissedUntil = Number(localStorage.getItem(IOS_INSTALL_DISMISSED_KEY) || 0);
+    dismissedUntil = Number(localStorage.getItem(storageKey) || 0);
   } catch {}
 
-  if (!isIosSafari || isStandalone || Date.now() < dismissedUntil) return;
+  if ((!isIosSafari && !isIosChrome) || isStandalone || Date.now() < dismissedUntil) return;
+
+  if (isIosChrome && body) {
+    body.textContent = t('install_prompt_ios_chrome_body');
+  }
 
   const hidePrompt = (days, action) => {
     prompt.classList.remove('is-visible');
     window.setTimeout(() => { prompt.hidden = true; }, 180);
     try {
-      localStorage.setItem(IOS_INSTALL_DISMISSED_KEY, String(Date.now() + days * 24 * 60 * 60 * 1000));
+      localStorage.setItem(storageKey, String(Date.now() + days * 24 * 60 * 60 * 1000));
     } catch {}
-    trackGaEvent('pwa_install_prompt', { prompt_action: action });
+    trackGaEvent('pwa_install_prompt', { platform, prompt_action: action });
   };
 
   window.setTimeout(() => {
     prompt.hidden = false;
     requestAnimationFrame(() => prompt.classList.add('is-visible'));
-    trackGaEvent('pwa_install_prompt', { prompt_action: 'show' });
+    trackGaEvent('pwa_install_prompt', { platform, prompt_action: 'show' });
   }, 2500);
 
   laterBtn.addEventListener('click', () => hidePrompt(7, 'later'));
