@@ -149,8 +149,17 @@ def _unwrap_result(item, target: str) -> str:
     return str(item)
 
 
-def _translate_batch_gemini(texts: list[str], source: str, target: str) -> list[str]:
-    """Translate a batch of texts using a single Gemini API call."""
+def _translate_batch_gemini(texts: list[str], source: str, target: str, _no_split: bool = False) -> list[str]:
+    """Translate a batch of texts using a single Gemini API call.
+
+    On persistent batch-size mismatch we split the batch in half rather than
+    positionally padding — padding shifts all items after the gap by one and
+    silently corrupts translations (e.g. card[N] gets card[N+1]'s text and
+    the last card gets its source-language text as a fallback).
+
+    `_no_split` is set when called recursively with a single item to avoid
+    unbounded recursion; that path falls back to source text on giving up.
+    """
     client = _get_client()
     system_prompt = _build_system_prompt(source, target)
 
@@ -175,12 +184,9 @@ def _translate_batch_gemini(texts: list[str], source: str, target: str) -> list[
                 return [_unwrap_result(r, target) for r in results]
             got = len(results) if isinstance(results, list) else 0
             print(f"    [warn] Batch size mismatch: expected {len(texts)}, got {got}")
-            if isinstance(results, list) and got > 0:
-                mismatch_retries += 1
-                if mismatch_retries >= 3:
-                    padded = [_unwrap_result(r, target) for r in results]
-                    padded.extend(texts[len(padded):])
-                    return padded[:len(texts)]
+            mismatch_retries += 1
+            if mismatch_retries >= 3:
+                break  # exit retry loop, fall through to split/give-up
             time.sleep(2)
             continue
         except json.JSONDecodeError:
@@ -198,7 +204,17 @@ def _translate_batch_gemini(texts: list[str], source: str, target: str) -> list[
         wait = min(REQUEST_DELAY * (2 ** attempt), 30)
         time.sleep(wait)
 
-    return texts
+    # Recovery path: try splitting to find which sub-batch is causing the misalignment.
+    if not _no_split and len(texts) > 1:
+        mid = len(texts) // 2
+        print(f"    [split] Recovering by splitting batch {len(texts)} -> {mid} + {len(texts) - mid}")
+        left = _translate_batch_gemini(texts[:mid], source, target, _no_split=(mid == 1))
+        right = _translate_batch_gemini(texts[mid:], source, target, _no_split=(len(texts) - mid == 1))
+        return left + right
+
+    # Single-item or already-split path: give up, return source text.
+    print(f"    [fail] Giving up on {len(texts)} items; keeping source text")
+    return list(texts)
 
 
 def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> dict[str, str]:

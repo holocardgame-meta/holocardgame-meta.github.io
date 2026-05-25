@@ -5,7 +5,7 @@
       "ja": "【ホロカ】ノエルtマリンのデッキレシピと回し方！第7弾版",
       "zh-TW": "【hOCG】Noel t Marine 牌組配置與打法！第7彈版",
       "en": "【hOCG】Noel t Marine Deck Recipe and How to Play! 7th Set Version",
-      "fr": "【ホロカ】ノエルtマリンのデッキレシピと回し方！第7弾版",
+      "fr": "【hOCG】Recette de deck et comment jouer Noel t Marine ! Version 7ème extension.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Noel t Marine! Versión 7ª expansión"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2026/03/17fc641afb54d82f7461d67298a3da6d-1080x608.png",
@@ -38,7 +38,7 @@
           "zh-TW": "職責：攻擊手\n・若已受到傷害，則消耗2點吶喊造成120點傷害！\n└第三回合可用較少吶喊行動的藝能\n・若聯動對象為三期生，則消耗3點吶喊造成160點傷害！\n└性價比◎",
           "en": "Role: Attacker\n・If you have taken damage, deal 120 damage with 2 Cheer!\n└Arts that allow you to act with fewer Cheer on turn 3.\n・If you Collab with a 3rd Generation Holomen, deal 160 damage with 3 Cheer!\n└Excellent cost performance!",
           "fr": "Rôle : Attaquant\n・Si vous avez subi des dégâts, 120 points de dégâts avec 2 Encouragements !\n└Arts faciles à utiliser avec peu d'Encouragements au 3ème tour\n・Avec un Collab et un membre de la 3ème génération, 160 points de dégâts avec 3 Encouragements !\n└Excellent rapport coût-efficacité",
-          "es": "役割：アタッカー\n・ダメージを受けていれば2エールで120ダメージ！\n└3ターン目に少ないエールで動きやすいアーツ\n・コラボに3期生なら3エールで160ダメージ！\n└コスパ◎"
+          "es": "Rol: Atacante\n・Si has recibido daño, 120 puntos de daño con 2 Cheers.\n└Arts que te permiten moverte con pocos Cheers en el tercer turno.\n・Si el Collab es de la 3ª generación, 160 puntos de daño con 3 Cheers.\n└¡¡Excelente relación calidad-precio!!"
         }
       },
       {
@@ -74,7 +74,7 @@
           "zh-TW": "角色：3期生版的保鏢\n・如果中心是3期生，則將攻擊引導到自身\n└保護2nd！",
           "en": "Role:\n3rd Generation version of Bodyguard\n・If the Center is a 3rd generation, it redirects attacks to itself\n└ Protect your 2nd!\n",
           "fr": "Rôle : Garde du corps version 3ème génération\n・Si le Centre est un membre de la 3ème génération, il redirige l'attaque vers soi.\n└ Protégez la 2ème !",
-          "es": "役割：3期生版の用心棒\n・センターが3期生なら自身に攻撃を誘導\n└2ndを守ろう！"
+          "es": "Rol: Versión de la 3ª generación del guardaespaldas\n・Si el Centro es de la 3ª generación, atrae el ataque hacia ti mismo.\n└¡¡Protege al 2nd!!"
         }
       },
       {
@@ -86,7 +86,7 @@
           "zh-TW": "角色：回收1st\n・僅限後攻第1回合，透過聯動搜尋1st\n└透過搜尋的1st來確保後續！",
           "en": "Role:\n1st Recovery\n・Search for 1st with Collab only on turn when going second\n└ Secure subsequent cards by recovering the searched 1st!\n",
           "fr": "Rôle : Récupération de la 1ère\n・Uniquement au tour 1 en jouant en second, cherchez la 1ère via Collab\n└ Récupérez la 1ère recherchée pour assurer les membres suivants !",
-          "es": "役割：1st回収\n・後攻委ターン目のみコラボで1stサーチ\n└サーチ1stを回収で後続を確保しよう！"
+          "es": "Rol: Recuperación de 1st\n・Busca 1st con Collab solo en el turno del oponente.\n└¡Asegura la continuación recuperando el 1st buscado!"
         }
       },
       {
@@ -98,7 +98,7 @@
           "zh-TW": "角色：2nd的火力提升\n・根據盤面上不同名稱的三期生數量，提升中心2nd的Arts！\n└如果Pekora在場，2nd可達210點傷害！",
           "en": "Role:\n2nd Firepower Up\n・Arts UP for the Center 2nd by the number of 3rd generation Holomen with different names on the board!\n└ If Pekora is present, 2nd can deal up to 210 damage!\n",
           "fr": "Rôle : Augmentation de la puissance de feu de la 2ème\n・Augmente les Arts de la 2ème en fonction du nombre de membres de la 3ème génération avec des noms différents sur le plateau !\n└ Si Pekora est présente, la 2ème peut infliger jusqu'à 210 dégâts !",
-          "es": "役割：2ndの火力アップ\n・盤面の名前が違う3期生の数分、センター2ndのアーツUP！\n└ぺこらが出ていれば2ndで210まで出せる！"
+          "es": "Rol: Aumento de potencia de fuego para el 2nd\n・¡Arts del Centro y 2nd aumentan según la cantidad de 3ª generación con nombres diferentes en el tablero!\n└¡Si Pekora está presente, el 2nd puede llegar hasta 210!"
         }
       }
     ],
@@ -236,7 +236,7 @@
           "zh-TW": "角色：3-look\n・綻放時，從牌組上方3張中回收1張Advent成員",
           "en": "Role:\n3 Look\n・When Blooming, recover 1 Advent Holomen from the top 3 cards of your Deck\n",
           "fr": "Rôle : 3 LOOK\n・Lors du Bloom, récupérez 1 membre Advent parmi les 3 premières cartes du deck.",
-          "es": "役割：3ルック\n・ブルーム時にデッキ上3枚からAdventホロメン1枚を回収"
+          "es": "Rol: Búsqueda de 3\n・Recupera 1 Holomen de Advent de las 3 cartas superiores del mazo al hacer Bloom."
         }
       },
       {
@@ -389,7 +389,7 @@
       "ja": "【ホロカ】ジジ・ムリン単のデッキレシピと回し方",
       "zh-TW": "【hOCG】Zizi Murin 單色牌組配置與打法",
       "en": "【hOCG】Jiji Murin Mono Deck Recipe and How to Play",
-      "fr": "【ホロカ】ジジ・ムリン単のデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Gigi Murin Mono.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Gigi Murin Mono"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2026/03/eb1eb7dea9f02f1a588bda1858b531ef-1080x608.png",
@@ -510,7 +510,7 @@
       "ja": "【ホロカ】フブミオデッキ（4弾新規フブキミオ）のレシピと回し方",
       "zh-TW": "【hOCG】FubuMio 牌組配置與打法 (4彈新規 Fubuki Mio)",
       "en": "【hOCG】FubuMio Deck (4th Set New Fubuki Mio) Recipe and How to Play",
-      "fr": "【ホロカ】フブミオデッキ（4弾新規フブキミオ）のレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Fubumio (nouveautés Fubuki Mio 4ème extension).",
       "es": "【hOCG】Receta de mazo y cómo jugar: FubuMio (Fubuki Mio, nuevo de la 4ª expansión)"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/12/3ab8f801759eeef08d6cb968ce8c020b-1080x747.png",
@@ -591,7 +591,7 @@
           "zh-TW": "職責：攻擊手\n・包含吉祥物在內，HP為170的耐久度\n・1點吶喊40點傷害也很優秀",
           "en": "Role: Attacker\n・Durability of 170 with Mascot attached.\n・40 damage with 1 Cheer is also great.",
           "fr": "Rôle : Attaquant\n・Durabilité de 170 PV avec une Mascotte incluse\n・40 points de dégâts par 1 Encouragement, c'est aussi excellent",
-          "es": "役割：アタッカー\n・マスコット込みでHP170の耐久力\n・1エール40点も偉い"
+          "es": "Atacante"
         }
       },
       {
@@ -615,7 +615,7 @@
           "zh-TW": "角色：增加HP＋抽牌\n・附加給任何人時HP+20\n・附加的Fubuki在聯動時獲得1張抽牌",
           "en": "Role:\nHP Increase + Draw\n・Increases HP +20 regardless of who it's attached to\n・Draw 1 card with the attached Fubuki during Collab\n",
           "fr": "Rôle : Augmentation des PV + Pioche\n・Peu importe à qui vous l'attachez, PV +20.\n・Lorsque Fubuki attaché fait un Collab, 1 pioche.",
-          "es": "役割：HP増強＋ドロー\n・誰につけてもHP+20\n・ついてるフブキがコラボで1ドロー"
+          "es": "Rol: Aumento de HP + Robo\n・HP +20 sin importar a quién se lo pongas.\n・La Fubuki adjunta roba 1 carta al hacer Collab."
         }
       },
       {
@@ -627,7 +627,7 @@
           "zh-TW": "角色：增加HP＋吶喊繼承\n・附加給任何人時HP+20\n・附加的Fubuki被擊倒時，可以將1張吶喊繼承給場上成員\n・即使沒有吶喊加速，2nd也能持續攻擊",
           "en": "Role:\nHP Increase + Cheer Inheritance\n・Increases HP +20 regardless of who it's attached to\n・When the attached Fubuki is Downed, 1 Cheer can be inherited by a Holomen on the field\n・2nd can attack continuously without Cheer acceleration\n",
           "fr": "Rôle : Augmentation des PV + Transfert d'Encouragement\n・Peu importe à qui vous l'attachez, PV +20.\n・Lorsque Fubuki attaché est mis K.O., vous pouvez transférer 1 Encouragement à un membre sur le plateau.\n・Vous pouvez attaquer en continu en 2ème sans accélération d'Encouragement.",
-          "es": "役割：HP増強＋エール継承\n・誰につけてもHP+20\n・ついてるフブキがダウンした時、エール1枚を場のホロメンに継承できる\n・エール加速なしでも2ndが継続的に攻撃できる"
+          "es": "Rol: Aumento de HP + Herencia de Cheer\n・HP +20 sin importar a quién se lo pongas.\n・Cuando la Fubuki adjunta es derribada, puedes heredar 1 Cheer a un Holomen en el campo.\n・El 2nd puede atacar continuamente sin aceleración de Cheer."
         }
       },
       {
@@ -639,7 +639,7 @@
           "zh-TW": "職責：HP增強＋火力增強\n・附加給任何人HP+20\n・將場上2張吶喊歸入存檔區，附加的FBK的藝能+50\n・雖然消耗較重，但火力提升強力\n・FBK牌組的致勝武器",
           "en": "Role: HP Boost + Firepower Boost\n・HP+20 regardless of who it's attached to.\n・If you send 2 Cheers on the field to Archive, Fubuki's Arts +50.\n・High cost, but powerful firepower boost.\n・Lethal weapon for Fubuki decks.",
           "fr": "Rôle : Augmentation des PV + augmentation de la puissance de feu\n・Quels que soient les membres auxquels il est attaché, PV+20\n・Archivez 2 Encouragements sur le terrain pour augmenter les Arts de Fubuki attaché de +50\n・Le coût est élevé, mais l'augmentation de la puissance de feu est puissante\n・L'arme ultime pour les decks Fubuki",
-          "es": "役割：HP増強＋火力増強\n・誰につけてもHP+20\n・場のエールを2枚アーカイブすると、ついてるフブキのアーツ+50\n・コストは重いが、火力アップが強力\n・フブキデッキのリーサルウェポン"
+          "es": "Rol: Aumento de HP + Aumento de potencia de fuego\n・HP +20 sin importar a quién se lo pongas.\n・Si archivas 2 Cheers del campo, la Arts de la Fubuki adjunta aumenta +50.\n・Aunque el coste es alto, el aumento de potencia de fuego es poderoso.\n・¡¡Arma letal para mazos de Fubuki!!"
         }
       },
       {
@@ -651,7 +651,7 @@
           "zh-TW": "職責：HP增強＋後排傷害防禦\n・附加給任何人HP+20\n・附加的FBK在後排時不受傷害\n・對應擁有後排攻擊手段的牌組",
           "en": "Role: HP Boost + Back Damage Defense\n・HP+20 regardless of who it's attached to.\n・If Fubuki is attached, take no damage from Back attacks.\n・Countermeasure against decks with Back attack options.",
           "fr": "Rôle : Augmentation des PV + défense contre les dégâts arrière\n・Quels que soient les membres auxquels il est attaché, PV+20\n・Fubuki attaché ne subit pas de dégâts par l'arrière\n・Contre-mesure pour les decks ayant des moyens d'attaquer par l'arrière",
-          "es": "役割：HP増強＋バックダメージ防御\n・誰につけてもHP+20\n・ついてるフブキはバックでダメージを受けない\n・バック攻撃手段があるデッキへの対策"
+          "es": "Rol: Aumento de HP + Defensa contra daño de retaguardia\n・HP +20 sin importar a quién se lo pongas.\n・La Fubuki adjunta no recibe daño en la retaguardia.\n・Contramedida contra mazos con medios de ataque de retaguardia."
         }
       },
       {
@@ -675,7 +675,7 @@
           "zh-TW": "職責：攻擊手\n・消耗2點吶喊造成80或110點傷害，與2nd同時攻擊可造成巨大傷害！！\n・附加吉祥物後可獲得260的超高耐久度！！",
           "en": "Role: Attacker\n・Deal 80 or 110 damage with 2 Cheer and attack simultaneously with 2nd for massive damage!!\n・With a Mascot attached, achieve super high durability of 260!!",
           "fr": "Rôle : Attaquant\n・80 ou 110 points de dégâts avec 2 Encouragements, attaquez en même temps que le 2nd pour infliger d'énormes dégâts !!\n・Avec une Mascotte attachée, il atteint une très haute durabilité de 260 !!",
-          "es": "役割：アタッカー\n・2エール80または110ダメージで2ndと同時に攻撃で大ダメージ！！\n・マスコットを付けることで260の超高耐久に！！"
+          "es": "Rol: Atacante\n・¡¡Gran daño al atacar simultáneamente con el 2nd con 80 o 110 de daño por 2 Cheers!!\n・¡¡Con un Mascota adjunto, alcanza una súper alta durabilidad de 260!!"
         }
       },
       {
@@ -687,7 +687,7 @@
           "zh-TW": "角色：第5張之後的2nd\n・回收2nd Fubuki、Mio！\n・也有可能讓2nd Fubuki、Mio並列在中心和聯動位置…？",
           "en": "Role:\n5th 2nd\n・Recover 2nd Fubuki, Mio!\n・Can you line up 2nd Fubuki and Mio in the Center and Collab...?\n",
           "fr": "Rôle : 5ème 2ème\n・Récupère les 2èmes Fubuki et Mio !\n・Est-il possible de faire aligner les 2èmes Fubuki et Mio au Centre et en Collab... ?",
-          "es": "役割：5枚目以降の2nd\n・2ndフブキ、ミオを回収！\n・2ndフブミオをセンターとコラボに並べることも…？"
+          "es": "Rol: Como 5º 2nd\n・¡Recupera a Fubuki y Mio de 2nd!\n・¿¿Es posible alinear Fubuki y Mio de 2nd en el Centro y Collab...??"
         }
       }
     ],
@@ -768,7 +768,7 @@
       "ja": "【ホロカ】0期生すいちゃん（すいロボ）デッキのデッキレシピと回し方",
       "zh-TW": "【hOCG】0期生Suichan（Suir Robo）牌組配置與打法",
       "en": "【hOCG】Deck Recipe and How to Play for 0th Generation Sui-chan (Suirobo) Deck",
-      "fr": "【ホロカ】0期生すいちゃん（すいロボ）デッキのデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer le deck de Suichan (Sui Robo) de la 0ème génération.",
       "es": "【hOCG】Receta y cómo jugar el mazo del 3º grupo."
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/04/0-edited.jpg",
@@ -906,7 +906,7 @@
       "ja": "【ホロカ】フブキ単のデッキレシピと回し方",
       "zh-TW": "【hOCG】Fubuki 單色牌組配置與打法",
       "en": "【hOCG】Fubuki Mono Deck Recipe and How to Play",
-      "fr": "【ホロカ】フブキ単のデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Fubuki Mono.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Fubuki Mono"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/12/0048224d5d722e054521aa5e48cfbe30.jpg",
@@ -975,7 +975,7 @@
           "zh-TW": "職責：攻擊手\n・包含吉祥物在內，HP為170的耐久度\n・1點吶喊40點傷害也很優秀",
           "en": "Role: Attacker\n・Durability of 170 with Mascot attached.\n・40 damage with 1 Cheer is also great.",
           "fr": "Rôle : Attaquant\n・Durabilité de 170 PV avec une Mascotte incluse\n・40 points de dégâts par 1 Encouragement, c'est aussi excellent",
-          "es": "役割：アタッカー\n・マスコット込みでHP170の耐久力\n・1エール40点も偉い"
+          "es": "Atacante"
         }
       },
       {
@@ -999,7 +999,7 @@
           "zh-TW": "職責：HP增強＋抽牌\n・附加給任何人HP+20\n・附加的FBK在聯動時抽1張牌\n・附加給任何人皆可輕鬆使用的卡片欄位",
           "en": "Role: HP Boost + Draw\n・HP+20 regardless of who it's attached to.\n・If Fubuki is attached, draw 1 card when you Collab.\n・Easy to use in any situation.",
           "fr": "Rôle : Augmentation des PV + pioche\n・Quels que soient les membres auxquels il est attaché, PV+20\n・Fubuki attaché pioche 1 carte lors d'un Collab\n・Une carte facile à utiliser pour n'importe qui",
-          "es": "役割：HP増強＋ドロー\n・誰につけてもHP+20\n・ついてるフブキがコラボで1ドロー\n・誰につけても雑に使いやすい枠"
+          "es": "Rol: Aumento de HP + Robo\n・HP +20 sin importar a quién se lo pongas.\n・La Fubuki adjunta roba 1 carta al hacer Collab.\n・Marco fácil de usar sin importar a quién se lo pongas."
         }
       },
       {
@@ -1011,7 +1011,7 @@
           "zh-TW": "職責：HP增強＋吉祥物再利用\n・附加給任何人HP+20\n・附加的FBK在聯動時從存檔區回收吉祥物\n・可將所有吉祥物+1",
           "en": "Role: HP Boost + Mascot Reuse\n・HP+20 regardless of who it's attached to.\n・If Fubuki is attached, recover 1 Mascot from Archive when you Collab.\n・Can boost any Mascot by +1.",
           "fr": "Rôle : Augmentation des PV + réutilisation des Mascottes\n・Quels que soient les membres auxquels il est attaché, PV+20\n・Fubuki attaché récupère une Mascotte de l'Archive lors d'un Collab\n・Permet d'augmenter de +1 toutes les Mascottes",
-          "es": "役割：HP増強＋マスコット再利用\n・誰につけてもHP+20\n・ついてるフブキがコラボでアーカイブからマスコット回収\n・あらゆるマスコットを+1できる"
+          "es": "Rol: Aumento de HP + Reutilización de Mascota\n・HP +20 sin importar a quién se lo pongas.\n・La Fubuki adjunta recupera Mascota del Archivo al hacer Collab.\n・Puedes aumentar cualquier Mascota en +1."
         }
       },
       {
@@ -1023,7 +1023,7 @@
           "zh-TW": "角色：增加HP＋吶喊繼承\n・附加給任何人時HP+20\n・附加的Fubuki被擊倒時，可以將附加的1張吶喊繼承給場上成員\n・即使沒有吶喊加速，2nd也能持續攻擊",
           "en": "Role:\nHP Increase + Cheer Inheritance\n・Increases HP +20 regardless of who it's attached to\n・When the attached Fubuki is Downed, 1 Cheer attached can be inherited by a Holomen on the field\n・2nd can attack continuously without Cheer acceleration\n",
           "fr": "Rôle : Augmentation des PV + Transfert d'Encouragement\n・Peu importe à qui vous l'attachez, PV +20.\n・Lorsque Fubuki attaché est mis K.O., vous pouvez transférer 1 Encouragement attaché à un membre sur le plateau.\n・Vous pouvez attaquer en continu en 2ème sans accélération d'Encouragement.",
-          "es": "役割：HP増強＋エール継承\n・誰につけてもHP+20\n・ついてるフブキがダウンした時、ついていたエール1枚を場のホロメンに継承できる\n・エール加速なしでも2ndが継続的に攻撃できる"
+          "es": "Rol: Aumento de HP + Herencia de Cheer\n・HP +20 sin importar a quién se lo pongas.\n・Cuando la Fubuki adjunta es derribada, puedes heredar 1 Cheer adjunto a un Holomen en el campo.\n・El 2nd puede atacar continuamente sin aceleración de Cheer."
         }
       },
       {
@@ -1035,7 +1035,7 @@
           "zh-TW": "職責：HP增強＋火力增強\n・附加給任何人HP+20\n・將場上2張吶喊歸入存檔區，附加的FBK的藝能+50\n・雖然消耗較重，但火力提升強力\n・FBK牌組的致勝武器",
           "en": "Role: HP Boost + Firepower Boost\n・HP+20 regardless of who it's attached to.\n・If you send 2 Cheers on the field to Archive, Fubuki's Arts +50.\n・High cost, but powerful firepower boost.\n・Lethal weapon for Fubuki decks.",
           "fr": "Rôle : Augmentation des PV + augmentation de la puissance de feu\n・Quels que soient les membres auxquels il est attaché, PV+20\n・Archivez 2 Encouragements sur le terrain pour augmenter les Arts de Fubuki attaché de +50\n・Le coût est élevé, mais l'augmentation de la puissance de feu est puissante\n・L'arme ultime pour les decks Fubuki",
-          "es": "役割：HP増強＋火力増強\n・誰につけてもHP+20\n・場のエールを2枚アーカイブすると、ついてるフブキのアーツ+50\n・コストは重いが、火力アップが強力\n・フブキデッキのリーサルウェポン"
+          "es": "Rol: Aumento de HP + Aumento de potencia de fuego\n・HP +20 sin importar a quién se lo pongas.\n・Si archivas 2 Cheers del campo, la Arts de la Fubuki adjunta aumenta +50.\n・Aunque el coste es alto, el aumento de potencia de fuego es poderoso.\n・¡¡Arma letal para mazos de Fubuki!!"
         }
       },
       {
@@ -1047,7 +1047,7 @@
           "zh-TW": "職責：HP增強＋後排傷害防禦\n・附加給任何人HP+20\n・附加的FBK在後排時不受傷害\n・對應擁有後排攻擊手段的牌組",
           "en": "Role: HP Boost + Back Damage Defense\n・HP+20 regardless of who it's attached to.\n・If Fubuki is attached, take no damage from Back attacks.\n・Countermeasure against decks with Back attack options.",
           "fr": "Rôle : Augmentation des PV + défense contre les dégâts arrière\n・Quels que soient les membres auxquels il est attaché, PV+20\n・Fubuki attaché ne subit pas de dégâts par l'arrière\n・Contre-mesure pour les decks ayant des moyens d'attaquer par l'arrière",
-          "es": "役割：HP増強＋バックダメージ防御\n・誰につけてもHP+20\n・ついてるフブキはバックでダメージを受けない\n・バック攻撃手段があるデッキへの対策"
+          "es": "Rol: Aumento de HP + Defensa contra daño de retaguardia\n・HP +20 sin importar a quién se lo pongas.\n・La Fubuki adjunta no recibe daño en la retaguardia.\n・Contramedida contra mazos con medios de ataque de retaguardia."
         }
       },
       {
@@ -1152,7 +1152,7 @@
       "ja": "【ホロカ】7弾更新版！ポルカ単（tキアラ）のデッキレシピと回し方！",
       "zh-TW": "【hOCG】7彈更新版！Polka單色 (t Kiara) 牌組配置與打法！",
       "en": "【hOCG】7th Set Update! Polka Mono (t Kiara) Deck Recipe and How to Play!",
-      "fr": "【ホロカ】7弾更新版！ポルカ単（tキアラ）のデッキレシピと回し方！",
+      "fr": "【hOCG】Mise à jour de la 7ème extension ! Recette de deck et comment jouer le deck Polka Mono (tKiara) !",
       "es": "【hOCG】¡Versión actualizada de la 7ª expansión! Receta de mazo y cómo jugar: Polka Mono (t Kiara)"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/5b5b18ae804de473adf0b48a233cbafd-1080x608.png",
@@ -1257,7 +1257,7 @@
           "zh-TW": "角色：Buzz支援\n・如果處於中心或聯動位置，即使附加了粉絲的Buzz被擊倒，生命值也只會減少1張！\n・Arts可以從牌組中回收2張存檔的Staff卡！\n└連接到抽牌卡或存檔回收！",
           "en": "Role:\nBuzz Support\n・If in the Center or Collab, even if Buzz with Fan attached is Downed, only 1 Life is lost!\n・Arts can recover Staff cards after archiving 2 cards from the Deck!\n└ Lead to draw sources or archive recovery!\n",
           "fr": "Rôle : Support Buzz\n・Si elle est au Centre ou en Collab, même si le Buzz avec un Fan attaché est mis K.O., vous ne perdez qu'une seule carte de Points de vie !\n・Les Arts permettent d'archiver 2 cartes du deck puis de récupérer des cartes du personnel !\n└ Mène à des sources de pioche ou à la récupération d'archives !",
-          "es": "役割：Buzzサポート\n・センターかコラボにいればファンが付いているBuzzがダウンしてもライフが1枚しか減らなくなる！\n・アーツはデッキ2枚をアーカイブしてからスタッフ枚を回収できる！\n└ドローソースやアーカイブ回収に繋げよう！"
+          "es": "Rol: Soporte Buzz\n・Si está en el Centro o Collab, incluso si el Buzz con Fans es derribado, solo pierdes 1 de Vida.\n・Arts puede recuperar cartas de Staff después de archivar 2 cartas del mazo.\n└¡¡Conéctalo a fuentes de robo o recuperación de Archivo!!"
         }
       },
       {
@@ -1515,7 +1515,7 @@
           "zh-TW": "作用：兩面增益\n・若推し是ミオしゃ，則翻開牌組上方3張卡片，每有一張支援卡，則全體舞台成員的藝能+20\n└可期待兩面擊倒或先攻第二回合的優勢",
           "en": "Role: 2-Panel Buff\n- If your Oshi is Mio-sha, reveal the top 3 cards of the Deck, and for each Support card among them, all Holomen on the Stage get +20 Arts.\n└ Can expect a 2-panel KO or an advantageous play on Turn 2 going first.",
           "fr": "Rôle : Buff sur deux fronts.\n- Si votre Oshi est Mio-sha, regardez les 3 cartes du dessus du deck, et pour chaque Support parmi elles, tous les membres sur la scène reçoivent +20 à leurs Arts.\n└ Permet d'espérer des éliminations sur deux fronts et des situations favorables au deuxième tour en jouant en premier.",
-          "es": "役割：2面バフ\n・推しがミオしゃなら、デッキ上3枚を表向きにして、その中のサポート1枚につきステージのホロメン全員のアーツ＋20\n└2面取りや先行2ターン目の上振れも期待できる"
+          "es": "Rol: 2 buffs de tablero\n・Si tu Oshi es Mio-sha, voltea las 3 cartas superiores del mazo, y por cada Soporte entre ellas, todas las Arts de los Holomen en el Escenario aumentan +20.\n└¡¡Se puede esperar una doble toma o una buena racha en el segundo turno yendo primero!!"
         }
       }
     ],
@@ -1596,8 +1596,8 @@
       "ja": "【ホロカ】5弾更新版！すいござ（すいせいいろは）のデッキレシピと回し方",
       "zh-TW": "【hOCG】5彈更新版！SuiGoz (Suisei Iroha) 牌組配置與打法",
       "en": "【hOCG】5th Set Updated! SuiGoz (Suisei Iroha) Deck Recipe and How to Play",
-      "fr": "【ホロカ】5弾更新版！すいござ（すいせいいろは）のデッキレシピと回し方",
-      "es": "【ホロカ】5弾更新版！すいござ（すいせいいろは）のデッキレシピと回し方"
+      "fr": "【hOCG】Mise à jour de la 5ème extension ! Recette de deck et comment jouer le deck Suigoza (Suisei Iroha).",
+      "es": "【hOCG】¡Actualización de la 5ª expansión! Receta de mazo y cómo jugar de Suigoza (Suisei Iroha)"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/12/45b56edb356db34df674e93b1c18476b-1080x747.png",
     "description": {
@@ -1653,7 +1653,7 @@
           "zh-TW": "角色：2nd的吶喊加速＆增益\n・2nd Suisei的火力從180提升至190\n・讓2nd Suisei可以連續使用Arts\n┗2點吶喊存檔後，加速1點吶喊→下一回合加速吶喊",
           "en": "Role:\n2nd Cheer Acceleration & Buff\n・Increases 2nd Suisei's firepower from 180 to 190\n・Allows 2nd Suisei to use Arts repeatedly\n┗After 2 Cheer Archive, accelerate 1 Cheer -> Cheer acceleration on the next turn\nBuy cards here\n",
           "fr": "Rôle : Accélération d'Encouragement & Buff pour la 2ème\n・La puissance de feu de la 2ème Suisei passe de 180 à 190.\n・Permet à la 2ème Suisei de lancer des Arts en continu.\n┗Après avoir archivé 2 Encouragements, accélération d'1 Encouragement → accélération d'Encouragement au tour suivant.",
-          "es": "役割：2ndのエール加速＆バフ\n・2ndすいせいの火力が180→190\n・2ndすいせいがアーツを連発できるようになる\n┗2エールアーカイブ後に1エール加速→次ターンのエール加速\nカードの購入はこちら"
+          "es": "Rol: Aceleración de Cheer y buff para el 2nd\n・La potencia de fuego del 2nd Suisei aumenta de 180 a 190.\n・El 2nd Suisei podrá usar Arts repetidamente.\n┗Aceleración de 1 Cheer después de archivar 2 Cheers → Aceleración de Cheer en el siguiente turno.\nCompra de cartas aquí"
         }
       },
       {
@@ -1779,7 +1779,7 @@
           "zh-TW": "・聯動可搜尋#promise的任何卡牌\n・先與Mumei聯動，則Center也能Bloom至2nd\n・根據後方數量，提升自身與聯動對象的火力",
           "en": "・If Collabbing with #promise, can search for anything\n・By Collabbing with Mumei first, Center can also Bloom to 2nd\n・Buffs your and your Collab partner's firepower based on the number of Back Holomen",
           "fr": "・Si la collab est avec \"#promise\", tout peut être recherché\n・En collaborant d'abord avec Mumei, le centre peut également faire Bloom sur le 2nd\n・Buff la puissance de feu de soi-même et du partenaire de collab en fonction du nombre de membres à l'arrière",
-          "es": "・コラボで#promiseならなんでもサーチできる\n・先にムメイでコラボすることでセンターも2ndにBloomできる\n・バックの数に応じて自身とコラボ相手の火力をバフ\nカードの購入はこちら"
+          "es": "・Si usas un Collab con #promise, puedes buscar cualquier carta.\n・Si usas a Mumei primero con un Collab, puedes hacer Bloom en el Centro y en el 2nd.\n・Potencia y Collab de uno mismo aumentan según la cantidad de cartas en Retaguardia.\nCompra de cartas aquí"
         }
       },
       {
@@ -2008,7 +2008,7 @@
       "ja": "【ホロカ】7弾ちはや単 デッキレシピと回し方",
       "zh-TW": "【hOCG】7彈 Chihaya 單色牌組配置與打法",
       "en": "【hOCG】7th Set Chihaya Mono Deck Recipe and How to Play",
-      "fr": "【ホロカ】7弾ちはや単 デッキレシピと回し方",
+      "fr": "【hOCG】7ème extension, recette de deck et comment jouer le deck Chihaya Mono.",
       "es": "【hOCG】7ª expansión: Receta de mazo y cómo jugar: Chihaya Mono"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2026/02/d53eddc9fa22cef9093cccd4eebd73f1-1080x605.png",
@@ -2101,7 +2101,7 @@
           "zh-TW": "角色：\n初期階段\n・後攻第1回合時，透過聯動效果搜尋1st成員（輪堂千速）和河豚太郎",
           "en": "Role:\nEarly Game\n・On turn 1 when going second, search for 1st Holomen (Rindou Chizuru) and Fugutarou with the Collab effect\n",
           "fr": "Rôle :\nDébut de partie\n・Si vous jouez en premier au tour 1, vous pouvez chercher la 1ère membre (Rindou Chizuru) et Fugutaro grâce à l'effet Collab.",
-          "es": "役割：\n序盤\n・後攻1ターン目ならコラボエフェクトで1stホロメン(輪堂千速)とふぐ太郎をデッキからサーチ"
+          "es": "Rol:\nPrincipio del juego\n・Si es el primer turno del oponente, busca el Holomen de 1st (Rindou Chizuru) y Fugutaro del mazo con el efecto de Collab."
         }
       }
     ],
@@ -2182,7 +2182,7 @@
       "ja": "【ホロカ】シオリ・ノヴェラ単のデッキレシピと回し方",
       "zh-TW": "【hOCG】Shiori Novella 單色牌組配置與打法",
       "en": "【hOCG】Shiori Novella Mono Deck Recipe and How to Play",
-      "fr": "【ホロカ】シオリ・ノヴェラ単のデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Shiori Novella Mono.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Shiori Novella Mono"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2026/03/38b1e518e54d3eae9f2545cf109c4e68-1080x608.png",
@@ -2251,7 +2251,7 @@
           "zh-TW": "角色：搜尋1st\n・綻放時，將手牌中的1張支援卡存檔，並從牌組中回收1張Advent的Debut或1st。\n・可以用2點吶喊打出40點傷害，並進行特殊20點傷害的散佈。",
           "en": "Role:\n1st Search\n・When Blooming, archive 1 Support from your Hand and recover 1 Advent Debut or 1st from your Deck.\n・Can also deal damage by spreading it with 40 damage and special 20 damage with 2 Cheer\n",
           "fr": "Rôle : Recherche de la 1ère\n・Lors du Bloom, archivez 1 Support de votre main et récupérez 1 Debut ou 1ère Advent du deck.\n・Vous pouvez également disperser des dégâts avec 40 points et 20 points spéciaux avec 2 Encouragements.",
-          "es": "役割：1stサーチ\n・ブルーム時に手札のサポート1枚をアーカイブして、デッキからAdventのDebutか1st1枚を回収。\n・2エールで40点と特殊20点でダメージのばら撒きも可能"
+          "es": "Rol: Búsqueda de 1st\n・Al hacer Bloom, archiva 1 carta de Soporte de tu mano y recupera 1 carta de Debut o 1st de Advent del mazo.\n・También es posible repartir daño con 2 Cheers y 40 puntos, además de 20 puntos especiales."
         }
       },
       {
@@ -2614,7 +2614,7 @@
       "ja": "【ホロカ】すいムーナのデッキレシピと回し方",
       "zh-TW": "【hOCG】SuiMoona 牌組配置與打法",
       "en": "【hOCG】Suimoon Deck Recipe and How to Play",
-      "fr": "【ホロカ】すいムーナのデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Suimoon.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Sui Moona"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/9C89C61D-E3E7-44AC-94F0-56FD557252A8_1_201_a-1-1080x739.jpeg",
@@ -2772,7 +2772,7 @@
       "ja": "【ホロカ】7弾更新版！ハコスクロニーのデッキレシピと回し方",
       "zh-TW": "【hOCG】7彈更新版！HakoSukurony 牌組配置與打法",
       "en": "【hOCG】7th Set Update! Hakos Crony Deck Recipe and How to Play",
-      "fr": "【ホロカ】7弾更新版！ハコスクロニーのデッキレシピと回し方",
+      "fr": "【hOCG】Mise à jour de la 7ème extension ! Recette de deck et comment jouer le deck Hakos Crony.",
       "es": "【hOCG】¡Versión actualizada de la 7ª expansión! Receta de mazo y cómo jugar: Hakos Crony"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/12/4f88610feb25c5a8d88b92fe8a96b383-1080x608.png",
@@ -2905,7 +2905,7 @@
       "ja": "【ホロカ】ムーナ・ホシノヴァ単のデッキリストと解説！",
       "zh-TW": "【hOCG】Moona Hoshinova 單色牌組配置與解說！",
       "en": "【hOCG】Moona Hoshinova Mono Deck List and Explanation!",
-      "fr": "【ホロカ】ムーナ・ホシノヴァ単のデッキリストと解説！",
+      "fr": "【hOCG】Recette de deck et commentaires de Muna Hoshinova Mono !",
       "es": "【hOCG】Lista de mazo y explicación: Moona Hoshinova Mono"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/12/9a95f5b36473c5f1491d78ea03cc1941-1080x608.png",
@@ -3071,7 +3071,7 @@
       "ja": "【ホロカ】すうにこデッキの構築と回し方（スタートデッキ虎金妃笑虎からのレベルアップに！）",
       "zh-TW": "【hOCG】SuuNiko 牌組構築與打法 (從起始牌組「虎金妃笑虎」升級！)",
       "en": "【hOCG】SuuNiko Deck Construction and How to Play (for Leveling up from Start Deck Tiger Golden Empress Tiger!)",
-      "fr": "【ホロカ】すうにこデッキの構築と回し方（スタートデッキ虎金妃笑虎からのレベルアップに！）",
+      "fr": "【hOCG】Construction de deck et comment jouer Suuniko (pour améliorer le deck de démarrage \"Tiger Gold Smile Tiger\" !).",
       "es": "【hOCG】Construcción y cómo jugar del mazo SuuNiko (¡Para mejorar desde el mazo de inicio 'Kinkihou Shiko'!)"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/11/f7309323a2a0baea62548f47da843c61-1080x608.png",
@@ -3281,7 +3281,7 @@
       "ja": "【ホロカ】かなたころねのデッキレシピと回し方",
       "zh-TW": "【hOCG】Kanata Korone 牌組配置與打法",
       "en": "【hOCG】Kanata Korone Deck Recipe and How to Play",
-      "fr": "【ホロカ】かなたころねのデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Kanata Korone.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Kanata Korone"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2026/02/328bcfdd4dfd2d9d74539645d84b400f-1080x608.png",
@@ -3302,7 +3302,7 @@
           "zh-TW": "作用：回收2nd & 生命值6\n・生命值6的推し成員\n・消耗2點Holo Power可啟動休息狀態的ころさん\n・SP消耗3點Holo Power，當黃色成員被擊倒時，繼承一張吶喊，並將一名疊加的成員回收至手牌",
           "en": "Role: 2nd Recovery & Life 6\n- Oshi Holomen with 6 Life.\n- Can activate resting Korone with 2 Holo Power.\n- SP costs 3 Holo Power to inherit 1 Cheer when a Yellow Holomen is KO'd and recover one stacked Holomen to hand.",
           "fr": "Rôle : Récupération du 2nd & 6 points de vie.\n- Membre Oshi avec 6 points de vie.\n- Peut activer Korone au repos pour 2 Holo Power.\n- La SP consomme 3 Holo Power et, lorsque un membre jaune est mis K.O., il hérite d'un encouragement et un membre superposé est récupéré dans la main.",
-          "es": "役割：2nd回収＆ライフ6\n・ライフ6推しホロメン\n・ホロパワー2でお休み状態のころさんをアクティブにできる\n・SPはホロパワー3消費で黄色ホロメンがダウンした時エールを1枚継承し、重なっているホロメン1人を手札に回収"
+          "es": "Rol: Recuperación de 2nd y Vida 6\n・Holomen Oshi con Vida 6.\n・Puedes activar a Korosan, que está en estado de descanso, con 2 Holo Power.\n・El SP consume 3 Holo Power y, cuando un Holomen amarillo es derribado, hereda 1 Cheer y recupera a 1 de los Holomen apilados en tu mano."
         }
       },
       {
@@ -3386,7 +3386,7 @@
           "zh-TW": "作用：攻擊者\n・透過天賦效果減輕所需吶喊\n・若使用推技能，藝能威力將提升至210！",
           "en": "Role: Attacker\n- Reduces required Cheer with Gift effect.\n- If Oshi Skill is used, the Arts power becomes 210!",
           "fr": "Rôle : Attaquant.\n- L'effet Don réduit les encouragements nécessaires.\n- Si la Compétence Oshi est utilisée, la puissance de l'Arts atteint 210 !",
-          "es": "役割：アタッカー\n・ギフト効果で必要エールを軽減\n・推しスキルを使っていればアーツの威力が210に！"
+          "es": "Rol: Atacante\n・El Don reduce los Cheers necesarios.\n・Si usas la Habilidad Oshi, ¡¡la potencia de Arts llega a 210!!"
         }
       },
       {
@@ -3560,7 +3560,7 @@
           "zh-TW": "角色：提升FLOWGLOW的增益\n・想打出220點以上傷害時，或作為第2回合的1st時很優秀",
           "en": "Role:\nBuffs FLOWGLOW\n・Excellent as a 1st that deals over 220 damage or rides on turn 2\n",
           "fr": "Rôle : Buff pour FLOWGLOW\n・Excellent lorsque vous voulez infliger 220 dégâts ou plus, ou comme 1ère pour le tour 2.",
-          "es": "役割：FLOWGLOWをバフ\n・220点以上出したい時や、2ターン目に乗る1stとして優秀"
+          "es": "Rol: Buff para FLOWGLOW\n・Excelente como 1st para cuando quieres sacar más de 220 puntos o para el segundo turno."
         }
       },
       {
@@ -3584,7 +3584,7 @@
           "zh-TW": "角色：搜尋1st兼增加Debut\n・後攻第1回合的聯動時，從牌組搜尋持有聯動效果的FLOWGLOW。\n・雖然無法搜尋2nd，但可以將自身拉出來形成盤面。\n透過搜尋1st來提高穩定性。",
           "en": "Role:\n1st Search & Increase Debut\n・Search for FLOWGLOW with the Collab effect on turn 1 when going second.\n・Although you cannot search for 2nd, you bring yourself to form the board.\nAim to improve stability by bringing 1st.\n",
           "fr": "Rôle : Recherche de la 1ère et augmentation de Debut\n・Au tour 1 en jouant en second, cherchez FLOWGLOW avec effet Collab depuis le deck.\n・Bien que vous ne puissiez pas chercher la 2ème, vous formez un plateau en vous cherchant vous-même.\nVous pouvez viser à améliorer la stabilité en cherchant la 1ère.",
-          "es": "役割：1stサーチ兼Debutを増やす\n・後攻1ターン目のコラボでデッキからコラボエフェクト持ちのFLOWGLOWをサーチ。\n・2ndをサーチできないものの自身を持ってきて盤面形成。\n1stを持ってきて安定感の向上を狙える。"
+          "es": "Rol: Búsqueda de 1st y aumento de Debut\n・Busca FLOWGLOW con efecto de Collab del mazo en el primer turno del oponente.\n・Aunque no puedas buscar el 2nd, formas el tablero trayéndote a ti mismo.\nPuedes apuntar a mejorar la estabilidad buscando el 1st."
         }
       }
     ],
@@ -3600,7 +3600,7 @@
       "ja": "【ホロカ】カリオペクロヱのデッキレシピと回し方",
       "zh-TW": "【hOCG】CalliopeKuroe 牌組配置與打法",
       "en": "【hOCG】CalliopeChloe Deck Recipe and How to Play",
-      "fr": "【ホロカ】カリオペクロヱのデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Calliope Chloe.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Calliope Chloe"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/216401a6a261e96f26e6886dc2a0fee8.png",
@@ -3902,7 +3902,7 @@
           "ja": "耐久\n・1エール30点と2エール50点の使い分けが可能",
           "zh-TW": "耐久力\n・可區分使用1吶喊30點與2吶喊50點",
           "en": "Durability\n・Can choose between 30 damage with 1 Cheer and 50 damage with 2 Cheer",
-          "fr": "耐久\n・1エール30点と2エール50点の使い分けが可能",
+          "fr": "Endurance\n・Possibilité de choisir entre 30 points de dégâts avec 1 Encouragement et 50 points de dégâts avec 2 Encouragements.",
           "es": "El ideal final es preparar 4 armas antiguas en el campo y apuntar a un one-shot del 2nd del oponente con el daño de 200 del 2nd."
         }
       },
@@ -4137,7 +4137,7 @@
       "ja": "【ホロカ】6弾！ロボ子さん単のデッキレシピと回し方",
       "zh-TW": "【hOCG】6彈！Roboco-san 單色牌組配置與打法",
       "en": "【hOCG】6th Set! Roboco-san Mono Deck Recipe and How to Play",
-      "fr": "【ホロカ】6弾！ロボ子さん単のデッキレシピと回し方",
+      "fr": "【hOCG】6ème extension ! Recette de deck et comment jouer le deck Roboco-san Mono.",
       "es": "【hOCG】¡6ª expansión! Receta de mazo y cómo jugar: Roboco-san Mono"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/12/f119972fa02ed6e4fac5fda238d27ca6-1080x608.png",
@@ -4182,7 +4182,7 @@
           "zh-TW": "職責：搜尋Robosa\n・後攻第一回合聯動時，從牌組回收最多2張Robosa\n・HP110也很吸引人\n購買卡片請點此",
           "en": "Role: Robosa Search\n・Recover up to 2 Robosa from your Deck with a Collab on the first turn when going second.\n・HP 110 is also attractive.\nBuy cards here",
           "fr": "Rôle : Recherche deろぼさー\n・Récupérez jusqu'à 2ろぼさー du Deck lors du premier tour de l'adversaire avec un Collab\n・HP 110 est également attrayant\nAchetez la carte ici",
-          "es": "役割：ろぼさーサーチ\n・後攻1ターン目のコラボでデッキからろぼさー2枚まで回収\n・㏋110も魅力\nカードの購入はこちら"
+          "es": "Rol: Búsqueda de Robosa\n・Recupera hasta 2 Robosa del mazo con un Collab en el primer turno del oponente.\n・HP 110 también es atractivo.\nCompra de cartas aquí"
         }
       },
       {
@@ -4230,7 +4230,7 @@
           "zh-TW": "職責：回收Robosa\n・聯動時最多可歸入2張手牌，並回收與該張數相同的存檔區Robosa\n・在SP技能用完後變得重要的卡片\n購買卡片請點此",
           "en": "Role: Robosa Recovery\n・When you Collab, you can Archive up to 2 cards from your hand, and recover Robosa from Archive equal to the number of cards archived.\n・Important card after using up SP.",
           "fr": "Rôle : Récupération deろぼさー\n・Lors d'un Collab, vous pouvez archiver jusqu'à 2 cartes de votre main et récupérer autant deろぼさー de l'Archive que le nombre de cartes archivées\n・Carte importante après avoir épuisé vos SP",
-          "es": "役割：ろぼさー回収\n・コラボ時に手札を2枚までアーカイブでき、その枚数分アーカイブのろぼさーを回収できる\n・SPを使い切った後に重要になるカード\nカードの購入はこちら"
+          "es": "Rol: Recuperación de Robosa\n・Puedes archivar hasta 2 cartas de tu mano al hacer Collab, y recuperar tantas Robosa del Archivo como el número de cartas.\n・Carta importante después de agotar el SP.\nCompra de cartas aquí"
         }
       },
       {
@@ -4266,7 +4266,7 @@
           "zh-TW": "職責：攻擊手\n・可將喜歡的卡片送入存檔區\n└增加回收目標或進行牌組壓縮\n・附加3張Robosa可造成0點吶喊200點傷害",
           "en": "Role: Attacker\n・Allows you to send any card to Archive.\n└Increases recovery targets or compresses the Deck.\n・By attaching 3 Robosa, you can deal 200 damage with 0 Cheer.\nBuy cards here",
           "fr": "Rôle : Attaquant\n・Permet d'envoyer la carte de votre choix dans l'Archive\n└Augmente les cibles de récupération ou compresse le Deck\n・Avec 3ろぼさー attachés, vous pouvez infliger 200 points de dégâts avec 0 Encouragement\nAchetez la carte ici",
-          "es": "役割：アタッカー\n・好きなカードをアーカイブに送れる\n└回収先を増やしたりデッキの圧縮になる\n・ろぼさー3枚つけることで0エール200ダメージだせる\nカードの購入はこちら"
+          "es": "Compra de cartas aquí"
         }
       },
       {
@@ -4287,8 +4287,8 @@
         "title": {
           "ja": "【1ターン目】Debutを三人以上出すのが目標",
           "zh-TW": "【第一回合】目標是派出3名以上的Debut",
-          "en": "【1ターン目】Debutを三人以上出すのが目標",
-          "fr": "【1ターン目】Debutを三人以上出すのが目標",
+          "en": "【1st Turn】Goal is to put out 3 or more Debut Holomen.",
+          "fr": "【1er Tour】Objectif : Invoquer 3 Membres ou plus de type Debut",
           "es": "【1er Turno】 El objetivo es desplegar 3 o más Debut. \n"
         },
         "text": {
@@ -4460,7 +4460,7 @@
           "zh-TW": "角色：2nd的保鏢\n・想保護附加了3點吶喊的Marine\n・後半段更容易進行2次攻擊",
           "en": "Role:\nBodyguard for 2nd\n・Want to protect Marine with 3 Cheer attached\n・Makes it easier to attack 2 boards in the late game\n",
           "fr": "Rôle : Garde du corps pour protéger la 2ème\n・Vous voulez protéger Marine avec 3 Encouragements attachés.\n・Il devient plus facile de faire des attaques sur 2 emplacements en fin de partie.",
-          "es": "役割：2ndを守る用心棒\n・3エール付いたマリンを守りたい\n・後半で2面攻撃がしやすくなる"
+          "es": "Rol: Guardaespaldas para el 2nd\n・Quiero proteger a Marine con 3 Cheers.\n・Facilita el ataque doble en la fase final."
         }
       },
       {
@@ -4484,7 +4484,7 @@
           "zh-TW": "角色：2nd火力提升\n・聯動時，為中心的3期生提供20點增益\n・可被Marine的Summer Debut回收",
           "en": "Role:\n2nd Firepower Up\n・Buffs the Center 3rd generation by 20 when Collabing\n・Can be recovered by Marine's Summer Debut\n",
           "fr": "Rôle : Augmentation de la puissance de feu de la 2ème\n・Lors d'un Collab, buff de 20 points pour la 3ème génération au Centre.\n・Peut être récupéré par Debut Summer de Marine.",
-          "es": "役割：2nd火力UP\n・コラボ時にセンターの3期生を20バフする\n・マリンのサマーDebutで回収可能"
+          "es": "Rol: Aumento de potencia de fuego para el 2nd\n・Buffea 20 puntos al 3er Holomen del Centro durante un Collab.\n・Recuperable con el Debut de verano de Marine."
         }
       }
     ],
@@ -4565,7 +4565,7 @@
       "ja": "【ホロカ】イオフィムーナ(エンチャントレガリア)のデッキレシピと回し方",
       "zh-TW": "【hOCG】IoFi Moona (Enchant Regalia) 牌組配置與打法",
       "en": "【hOCG】IoFi Moona (Enchant Regalia) Deck Recipe and How to Play",
-      "fr": "【ホロカ】イオフィムーナ(エンチャントレガリア)のデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Ophi Moon (Enchanted Regalia).",
       "es": "【hOCG】Receta de mazo y cómo jugar: IoFi Moona (Enchant Regalia)"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/08/94ad4af5146ba99d8fa7225a4c5c466d-1080x608.jpg",
@@ -4715,7 +4715,7 @@
       "ja": "【ホロカ】こぼイオフィのデッキレシピと回し方(エンチャントレガリア版)",
       "zh-TW": "【hOCG】KoboIoFi 牌組配置與打法 (Enchant Regalia版)",
       "en": "【hOCG】Kobo IoFi Deck Recipe and How to Play (Enchant Regalia Version)",
-      "fr": "【ホロカ】こぼイオフィのデッキレシピと回し方(エンチャントレガリア版)",
+      "fr": "【hOCG】Recette de deck et comment jouer Koboi Ophi (version Enchanted Regalia).",
       "es": "【hOCG】Receta de mazo y cómo jugar: Kobo IoFi (versión Enchant Regalia)"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/09/d65fc4069e26c875e9aaccdb38b1ad5a-1080x608.png",
@@ -4760,7 +4760,7 @@
           "zh-TW": "職責：攻擊手\n・造成50點傷害，同時對後排3位Holomen造成10點傷害\n・可大幅削弱對手的Debut、1st",
           "en": "Role: Attacker\n・Deal 50 damage while dealing 10 damage to 3 Back Holomen.\n・Significantly reduces the opponent's Debut and 1st.",
           "fr": "Rôle : Attaquant\n・Inflige 50 points de dégâts tout en infligeant 10 points de dégâts à 3 Membres arrière\n・Réduit considérablement le Debut et le 1st de l'adversaire\nAchetez la carte ici",
-          "es": "役割：アタッカー\n・50ダメージ与えつつバックホロメン3人に10ダメージ\n・相手のDebut、1stを大きく削れる\nカードの購入はこちら"
+          "es": "Rol: Atacante\n・Inflige 50 puntos de daño y 10 puntos de daño a 3 Holomen en retaguardia.\n・Reduce significativamente el Debut y el 1st del oponente.\nCompra de cartas aquí"
         }
       },
       {
@@ -4845,7 +4845,7 @@
       "ja": "【ホロカ】アキロゼータのデッキレシピと回し方(エンチャントレガリア版)",
       "zh-TW": "【hOCG】AkiRose Zeta 牌組配置與打法 (Enchant Regalia版)",
       "en": "【hOCG】AkiRose Zeta Deck Recipe and How to Play (Enchant Regalia Version)",
-      "fr": "【ホロカ】アキロゼータのデッキレシピと回し方(エンチャントレガリア版)",
+      "fr": "【hOCG】Recette de deck et comment jouer AkiRozeta (version Enchanted Regalia).",
       "es": "【hOCG】Receta de mazo y cómo jugar: Aki Zeta (versión Enchant Regalia)"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/09/e244830969bed45126ca8fea6598a35e-1080x616.jpg",
@@ -5031,7 +5031,7 @@
       "ja": "【ホロカ】おかゆクロヱ（推しすいせい）のデッキレシピと回し方",
       "zh-TW": "【hOCG】OkaYuKuroe (推Suisei) 牌組配置與打法",
       "en": "【hOCG】OkayuChloe (Oshi Suisei) Deck Recipe and How to Play",
-      "fr": "【ホロカ】おかゆクロヱ（推しすいせい）のデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Okayu Chloe (Oshi Suisei).",
       "es": "【hOCG】Receta de mazo y cómo jugar: Okayu Chloe (Oshi Suisei)"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/10/babcc721ac46fb66f269999a58970e21-1080x747.png",
@@ -5225,7 +5225,7 @@
       "ja": "【ホロカ】7弾更新版！癒月ちょこ単のデッキレシピと回し方",
       "zh-TW": "【hOCG】7彈更新版！Yuzuki Choco 單色牌組配置與打法",
       "en": "【hOCG】7th Set Update! Yuzuki Choco Mono Deck Recipe and How to Play",
-      "fr": "【ホロカ】7弾更新版！癒月ちょこ単のデッキレシピと回し方",
+      "fr": "【hOCG】Mise à jour de la 7ème extension ! Recette de deck et comment jouer le deck Yuzuki Choco Mono.",
       "es": "【hOCG】¡Versión actualizada de la 7ª expansión! Receta de mazo y cómo jugar: Yuzuki Choco Mono"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/09/a90364b0b1819a84d25efd5a41236d21-1080x608.png",
@@ -5783,7 +5783,7 @@
       "ja": "【ホロカ】ネリッサ・レイヴンクロフトのデッキレシピと回し方",
       "zh-TW": "【hOCG】Nerissa Ravenecroft 牌組配置與打法",
       "en": "【hOCG】Nerissa Ravencroft Deck Recipe and How to Play",
-      "fr": "【ホロカ】ネリッサ・レイヴンクロフトのデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Nerissa Ravencroft.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Nerissa Ravencroft"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/09/8985eb9afcd8f26c7dc57edeb97d7bd3-1080x747.png",
@@ -5840,7 +5840,7 @@
           "zh-TW": "・最快後攻第2回合即可使用推/主推SP技能！\n・即使是先攻，第3回合也能存滿4點Holo Power，因此Jeilbird的吶喊繼承的重要性降低",
           "en": "・Enables the use of Oshi SP Skill on the second turn when going second!\n・Even when going first, Holo Power reaches 4 on the third turn, reducing the importance of Jeilbird's Cheer inheritance",
           "fr": "・Permet d'utiliser la compétence Oshi SP dès le 2ème tour en étant second !\n・Même en étant premier, grâce aux 4 Holo Power accumulés au 3ème tour, l'importance de l'héritage d'encouragement de Jeilbird diminue",
-          "es": "・最速後攻２ターン目に推しSPスキルを使うことが可能に！\n・先攻でも3ターン目にホロパワーが４貯まるおかげで、Jeilbirdのエール継承の重要度が低下"
+          "es": "・¡Es posible usar la Habilidad Oshi SP más rápido en el segundo turno del oponente!\n・Incluso si vas primero, gracias a que se acumulan 4 Holo Power en el tercer turno, la importancia de la herencia de Cheer de Jeilbird disminuye."
         }
       },
       {
@@ -6005,7 +6005,7 @@
       "ja": "【ホロカ】エントリーでも使用可能！！りりビジュー（らでん莉々華ビジュー）のデッキレシピと回し方",
       "zh-TW": "【hOCG】即使是Entry也能使用！！RiriBijou (Raden Ririka Bijou) 牌組配置與打法",
       "en": "【hOCG】Also usable in Entry!! RiriBijou (Raden Ririka Bijou) Deck Recipe and How to Play",
-      "fr": "【ホロカ】エントリーでも使用可能！！りりビジュー（らでん莉々華ビジュー）のデッキレシピと回し方",
+      "fr": "【hOCG】Peut également être utilisé dans les tournois d'entrée !! Recette de deck et comment jouer RiriBijou (Raden Ririka Bijou).",
       "es": "【hOCG】¡También utilizable en torneos de entrada! Receta de mazo y cómo jugar: Riri Bijou (Raden Ririka Bijou)"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/06/0a0ccfd113a0fa3ad276f402a54f8f68-1080x747.png",
@@ -6098,7 +6098,7 @@
           "zh-TW": "職責：Debut兼抽牌來源\n・聯動時，若中心為ReGLOSS且手牌為5張以下則可抽牌\n└從背後支撐牌組穩定性的卡片！！",
           "en": "Role: Debut & Draw Source\n・When you Collab, if Center is Regloss and you have 5 or fewer cards in hand, you can draw.\n└A card that secretly supports the Deck's stability!!",
           "fr": "Rôle : debut et source de pioche\n・Lors d'un Collab, si le Centre estリグロス et que vous avez 5 cartes ou moins en main, vous pouvez piocher\n└Une carte qui soutient la stabilité du Deck en coulisses !!",
-          "es": "役割：debut兼ドローソース\n・コラボ時にセンターがリグロスで手札が5枚以下ならドローできる\n└デッキの安定感を陰から支えているカード！！"
+          "es": "Rol: Debut y fuente de robo\n・Si el Centro es de Rigros y tienes 5 o menos cartas en mano al hacer Collab, puedes robar.\n└¡¡Carta que apoya la estabilidad del mazo desde las sombras!!"
         }
       },
       {
@@ -6158,7 +6158,7 @@
           "zh-TW": "角色：作為第5張1st\n・如果可以將Debut移回，則可以從包括Bijou在內的4種1st中選擇想要的\n・將限界飯回收的1st拉出來的打法很強！",
           "en": "Role:\nAs a 5th 1st\n・If you have Debut to return, you can choose from 4 types of 1st, including Bijou\n・The move of bringing back 1st that can recover \"Limit Meal\" is strong!\n",
           "fr": "Rôle : Comme 5ème 1ère\n・Si vous avez Debut à retourner, vous pouvez choisir parmi 4 types de 1ères, y compris Bijou.\n・Il est puissant de ramener une 1ère qui peut récupérer le \"repas limité\" !",
-          "es": "役割：5枚目以降の1stとして\n・戻すdebutがあればビジューも含め4種の1stから欲しいのを選べる\n・限界飯を回収できる1stを持ってくる動きが強い！"
+          "es": "Rol: Como 5º 1st\n・Si devuelves un Debut, puedes elegir el que desees entre 4 tipos de 1st, incluyendo Bijou.\n・¡Es fuerte la jugada de traer un 1st que recupere la comida limitada!"
         }
       }
     ],
@@ -6239,7 +6239,7 @@
       "ja": "【ホロカ】りりらでのデッキレシピと回し方！LIFE6でドローもできる！？",
       "zh-TW": "【hOCG】RiriRade 牌組配置與打法！LIFE 6也能抽牌！？",
       "en": "【hOCG】RiriRade Deck Recipe and How to Play! Can also draw with LIFE 6!?",
-      "fr": "【ホロカ】りりらでのデッキレシピと回し方！LIFE6でドローもできる！？",
+      "fr": "【hOCG】Recette de deck et comment jouer Ririrede ! Peut aussi piocher avec 6 LIFE !?",
       "es": "【hOCG】Receta de mazo y cómo jugar: RiriRade! ¿Puedes robar con Vida 6?"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/06/09d2971ae1156bd82237ec16b14a958c-1-1080x1314.png",
@@ -6320,7 +6320,7 @@
           "zh-TW": "職責：攻擊手\n・\n由於Raden若不使用生命值則無法在先攻第三回合攻擊，\n因此是為了在先攻第三回合施放藝能而準備的2nd\n・能擊倒Subaru或Anya也很重要",
           "en": "Role: Attacker\n・\nSince Raden cannot attack on turn 3 when going first without using Life,\nthis is for using Arts on turn 3 when going first.\n・Also significant for taking down Subaru or Anya.",
           "fr": "Rôle : Attaquant\n・\nCommeらでん ne peut pas attaquer au 3ème tour en premier sans utiliser de Points de vie,\nc'est un 2nd pour lancer des Arts au 3ème tour en premier\n・Il est également important de pouvoir prendreスバル ouアーニャ",
-          "es": "役割：アタッカー\n・\nらでんがライフを使わないと先行3ターン目に殴れないため、\n先行3ターン目にアーツを打つ用の2nd\n・スバルやアーニャを取れるのも大きい"
+          "es": "Rol: Atacante\n・Dado que Raden no puede atacar en el tercer turno yendo primero a menos que use vida,\nes un 2nd para lanzar Arts en el tercer turno yendo primero.\n・También es significativo que puedas eliminar a Subaru o Anya."
         }
       },
       {
@@ -6368,7 +6368,7 @@
           "zh-TW": "角色：\n提升傷害\n&交換吶喊\n・無回合限制的增益事件\n（即使不移動吶喊，附加3張時也會成為增益對象）\n・吶喊交換與2nd的相性絕佳",
           "en": "Role:\nDamage Up\n& Cheer Transfer\n・Buff event with no turn limit\n(Buff target if 3 Cheers are attached, even without moving Cheer)\n・Cheer transfer is excellent with 2nds\n",
           "fr": "Rôle :\nAugmentation des dégâts\n& Transfert d'Encouragement\n・Événement de buff sans limite de tour\n（Même si vous ne déplacez pas l'Encouragement, il s'applique si 3 sont attachés）\n・Le transfert d'Encouragement est excellent en synergie avec la 2ème.",
-          "es": "役割：\n打点アップ\n&エール付け替え\n・ターン制限のないバフイベント\n（エール移動させなくても3枚付いていたらバフ対象）\n・エール付け替えが2ndと相性抜群"
+          "es": "Rol:\nAumento de daño\n& Reasignación de Cheer\n・Evento de buff sin límite de turno\n（Incluso si no mueves Cheer, si hay 3 cartas, son objetivo del buff）\n・La reasignación de Cheer es excelente con el 2nd."
         }
       },
       {
@@ -6485,7 +6485,7 @@
       "ja": "【ホロカ】フレジジのデッキリストと回し方",
       "zh-TW": "【hOCG】FureZizi 牌組配置與打法",
       "en": "【hOCG】FureJiji Deck List and How to Play",
-      "fr": "【ホロカ】フレジジのデッキリストと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Flare Gigi.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Flare Gigi"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/09/ca9ca01cc3b7c1dc873933d98f47196b-1080x608.png",
@@ -6518,7 +6518,7 @@
           "zh-TW": "職責：攻擊手\n・消耗3點吶喊造成120點傷害，額外+60點傷害或1張抽牌\n└效果取決於剩餘生命值和骰子點數！\n・藝能後可更換吶喊並回收1st\n└方便準備後續的優秀卡片！",
           "en": "Role: Attacker\n・Deal 120 damage with 3 Cheer, plus an additional +60 damage or 1 Draw.\n└Effect changes depending on remaining Life and dice roll!\n・After Arts, you can re-attach Cheer and recover 1st.\n└Excellent card for preparing subsequent plays!",
           "fr": "Rôle : Attaquant\n・120 points de dégâts avec 3 Encouragements, plus +60 dégâts ou 1 pioche\n└L'effet change en fonction des Points de vie restants et du résultat du dé !\n・Après les Arts, vous pouvez changer d'Encouragement et récupérer le 1st\n└Une excellente carte qui facilite la préparation des cartes suivantes !",
-          "es": "役割：アタッカー\n・3エールで120に追加で＋60ダメージor1ドロー\n└残りライフとダイスの目次第で効果が変わる！\n・アーツ後にエール付け替えと1st回収が可能\n└後続を用意しやすい優秀なカード！"
+          "es": "Rol: Atacante\n・Por 3 Cheers, 120 puntos de daño más +60 de daño o 1 robo.\n└El efecto cambia según la vida restante y el resultado del dado.\n・Después de Arts, puedes cambiar Cheer y recuperar 1st.\n└¡¡Carta excelente que facilita la preparación de la continuación!!"
         }
       },
       {
@@ -6699,7 +6699,7 @@
       "ja": "【ホロカ】6弾更新姫森ルーナのデッキレシピと回し方",
       "zh-TW": "【hOCG】6彈更新 Himemori Luna 牌組配置與打法",
       "en": "【hOCG】6th Set Update Himemori Luna Deck Recipe and How to Play",
-      "fr": "【ホロカ】6弾更新姫森ルーナのデッキレシピと回し方",
+      "fr": "【hOCG】Mise à jour de la 6ème extension, recette de deck et comment jouer le deck Himemori Luna.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Himei Luna, actualización de la 6ª expansión"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/07/f7a498b9ba6bf3b03c52236e555609c1-1080x747.png",
@@ -6909,7 +6909,7 @@
       "ja": "【ホロカ】ババドナ（スバルマリン）のデッキレシピと回し方",
       "zh-TW": "【hOCG】Babadona (Subaru Marine) 牌組配置與打法",
       "en": "【hOCG】Babadona (Subaru Marine) Deck Recipe and How to Play",
-      "fr": "【ホロカ】ババドナ（スバルマリン）のデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Babadona (Subaru Marine).",
       "es": "【hOCG】Receta de mazo y cómo jugar: Baba Dona (Subaru Marine)"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/07/babcc721ac46fb66f269999a58970e21.png",
@@ -7232,7 +7232,7 @@
           "zh-TW": "角色：不只是20點增益！\n・初期抽到時，攻擊性能大幅提升！！\n└後手第1回合可能打出90點傷害！？\n・附加給2nd Sora醬時，火力大幅提升！！\n└2次攻擊可達200點傷害，幾乎可以擊倒所有2nd！！",
           "en": "Role:\nNot just 20 Buff!\n・If drawn in the early game, greatly increases aggressive performance!!\n└ May be able to deal 90 damage on turn 1 when going second?\n・Greatly increases firepower when attached to 2nd Sora-chan!!\n└ With double attacks, damage can reach up to 200, defeating most 2nds!!\n",
           "fr": "Rôle : Pas seulement 20 de buff !\n・Si vous le piochez en début de partie, la performance en aggro augmente considérablement !!\n└ Vous pourriez infliger 90 dégâts au tour 1 en jouant en second ?\n・Si vous l'attachez à la 2ème Sora-chan, la puissance de feu augmente considérablement !!\n└ Avec 2 attaques, vous pouvez infliger jusqu'à 200 dégâts et mettre K.O. la plupart des 2èmes !!",
-          "es": "役割：20バフだけ？じゃない！\n・序盤に引けばアグロ性能大幅UP ！！\n└後手1ターン目で90が出せるかも？\n・2ndそらちゃんにつけると大幅火力UP！！\n└2回攻撃で200までダメージが出てほとんどの2ndを落とせる！！"
+          "es": "Rol: ¿Solo 20 de buff? ¡¡No!!\n・Si lo robas al principio, ¡¡la capacidad de agresión aumenta enormemente!!\n└¿¡Es posible sacar 90 en el primer turno del oponente!?\n・¡¡Si se lo pones al 2nd Sora-chan, la potencia de fuego aumenta enormemente!!\n└¡¡Con 2 ataques, el daño llega hasta 200 y puedes eliminar a la mayoría de los 2nd!!"
         }
       }
     ],
@@ -7313,7 +7313,7 @@
       "ja": "【ホロカ】6弾更新ラミィ単のデッキレシピと回し方",
       "zh-TW": "【hOCG】6彈更新 Lamy單色牌組配置與打法",
       "en": "【hOCG】6th Set Update Lamy Mono Deck Recipe and How to Play",
-      "fr": "【ホロカ】6弾更新ラミィ単のデッキレシピと回し方",
+      "fr": "【hOCG】Mise à jour de la 6ème extension, recette de deck et comment jouer le deck Lamy Mono.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Lamy Mono, actualización de la 6ª expansión"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/12/96ed366a6331907c56b9dd0b65f46120-1080x747.png",
@@ -7550,7 +7550,7 @@
         "role": {
           "ja": "バフで2ndの火力補助\n・HP130のコラボエフェクトを持つ1st。\n・自身に火力と耐久力はあまりないため、基本的にはコラボして火力を上げるサポートカード。",
           "zh-TW": "透過增益來輔助 2nd 的火力。\n・具有 HP130 的聯動效果的 1st。\n・自身火力與耐久力不高，基本上是透過聯動來提升火力的支援卡。",
-          "en": "バフで2ndの火力補助\n・HP130のコラボエフェクトを持つ1st。\n・自身に火力と耐久力はあまりないため、基本的にはコラボして火力を上げるサポートカード。",
+          "en": "Support 2nd Turn's Firepower with Buffs.\n・A 1st Turn Holomen with a Collab Effect and 130 HP.\n・Since this Holomen has little Firepower or Durability on its own, it's basically a Support Card that increases Firepower through Collab.",
           "fr": "Support pour la puissance de feu de la 2nd avec des buffs\n・ 1st avec un effet Collab de 130 HP.\n・ Comme elle a peu de puissance de feu et de durabilité, c'est principalement une carte de support qui augmente la puissance de feu par Collab.",
           "es": "Potencia de fuego de apoyo para 2nd.\n└Un 1st con efecto de Collab y HP130.\n└Como su propia potencia de fuego y durabilidad son bajas, es básicamente una carta de apoyo que aumenta la potencia de fuego al hacer Collab."
         }
@@ -7693,7 +7693,7 @@
       "ja": "【ホロカ】ぺこらムーナのデッキレシピと回し方",
       "zh-TW": "【hOCG】Pekora Moona 牌組配置與打法",
       "en": "【hOCG】Pekora Moona Deck Recipe and How to Play",
-      "fr": "【ホロカ】ぺこらムーナのデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Pekora Moon.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Pekora Moona"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/06/135bd7c33498d922c8d5130648c34a02-1080x747.png",
@@ -7903,7 +7903,7 @@
       "ja": "【ホロカ】らでん単のデッキレシピと回し方！（6弾更新版）",
       "zh-TW": "【hOCG】Raden 單色牌組配置與打法！(6彈更新版)",
       "en": "【hOCG】Raden Mono Deck Recipe and How to Play! (6th Set Update)",
-      "fr": "【ホロカ】らでん単のデッキレシピと回し方！（6弾更新版）",
+      "fr": "【hOCG】Recette de deck et comment jouer Raden Mono ! (Mise à jour 6ème extension).",
       "es": "【hOCG】Receta de mazo y cómo jugar: Raden Mono (¡Versión actualizada de la 6ª expansión!)"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/06/6fd22e9c0041935ad4834b16beed26a1-1080x608.png",
@@ -7996,7 +7996,7 @@
           "zh-TW": "角色：HP回復\n・如果使用了持有#蘑菇 的支援卡，則透過聯動效果回復HP\n・是Raden唯一能打出30點傷害的Debut",
           "en": "Role:\nHP Recovery\n・If you used a Support with #Mushroom, recover HP with the Collab effect\n・The only Debut that deals 30 damage with Raden\n",
           "fr": "Rôle : Récupération des PV\n・Si vous avez utilisé un Support avec \"Champignon\" (#), vous récupérez des PV grâce à l'effet Collab.\n・Le seul Debut qui inflige 30 dégâts avec \"Radish\".",
-          "es": "役割：HP回復\n・#キノコ を持つサポートを使っていたらコラボエフェクトでHP回復\n・らでんで唯一30点が出るdebut"
+          "es": "Rol: Recuperación de HP\n・Si usaste un Soporte con #hongos, recupera HP con el efecto de Collab.\n・Debut que inflige 30 puntos de daño, único en Raden."
         }
       },
       {
@@ -8008,7 +8008,7 @@
           "zh-TW": "職責：搜尋香菇＆耐久\n・消耗2點吶喊搜尋香菇同時施放藝能\n・\n利用前回合從聯動中攻擊的2nd來提升藝能火力\n",
           "en": "Role: Mushroom Search & Durability\n・Search for Mushroom while using Arts with 2 Cheer.\n・\nUtilize 2nd from the previous turn's Collab attack to boost Arts firepower.",
           "fr": "Rôle : Recherche de champignons & endurance\n・Lancez des Arts tout en recherchant des champignons avec 2 Encouragements\n・\nUtilisez le 2nd qui a attaqué par Collab le tour précédent pour augmenter la puissance des Arts",
-          "es": "役割：きのこサーチ&耐久\n・2エールできのこサーチしながらアーツを打つ\n・\n前ターンにコラボから殴った2ndを利用しアーツ火力UP"
+          "es": "Rol: Búsqueda de Hongos y durabilidad\n・Busca hongos con 2 Cheers mientras lanzas Arts.\n・\nUtiliza el 2nd que atacó desde un Collab en el turno anterior para aumentar la potencia de fuego de Arts."
         }
       },
       {
@@ -8020,7 +8020,7 @@
           "zh-TW": "角色：\n提升傷害\n&交換吶喊\n・無回合限制的增益事件\n（即使不移動吶喊，附加3張時也會成為增益對象）\n・吶喊交換與2nd的相性絕佳",
           "en": "Role:\nDamage Up\n& Cheer Transfer\n・Buff event with no turn limit\n(Buff target if 3 Cheers are attached, even without moving Cheer)\n・Cheer transfer is excellent with 2nds\n",
           "fr": "Rôle :\nAugmentation des dégâts\n& Transfert d'Encouragement\n・Événement de buff sans limite de tour\n（Même si vous ne déplacez pas l'Encouragement, il s'applique si 3 sont attachés）\n・Le transfert d'Encouragement est excellent en synergie avec la 2ème.",
-          "es": "役割：\n打点アップ\n&エール付け替え\n・ターン制限のないバフイベント\n（エール移動させなくても3枚付いていたらバフ対象）\n・エール付け替えが2ndと相性抜群"
+          "es": "Rol:\nAumento de daño\n& Reasignación de Cheer\n・Evento de buff sin límite de turno\n（Incluso si no mueves Cheer, si hay 3 cartas, son objetivo del buff）\n・La reasignación de Cheer es excelente con el 2nd."
         }
       },
       {
@@ -8125,7 +8125,7 @@
       "ja": "【ホロカ】まがまがーずのデッキレシピと回し方",
       "zh-TW": "【hOCG】Magamagāzu 牌組配置與打法",
       "en": "【hOCG】Magamagāzu Deck Recipe and How to Play",
-      "fr": "【ホロカ】まがまがーずのデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Magamagāzu.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Maga Maga's"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/06/208940e60bf4dd91985ab5e82e91b8e0-1080x748.png",
@@ -8335,7 +8335,7 @@
       "ja": "【ホロカ】こよりいろは（こよいろ）のデッキレシピと回し方",
       "zh-TW": "【hOCG】Koyori Iroha (KoyoIro) 牌組配置與打法",
       "en": "【hOCG】Koyori Iroha (KoyoIro) Deck Recipe and How to Play",
-      "fr": "【ホロカ】こよりいろは（こよいろ）のデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Koyori Iroha (KoyoIro).",
       "es": "【hOCG】Receta de mazo y cómo jugar: Koyori Iroha (KoyoIro)"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/06/799fbe75265bd15d7c9da91a6cb36b3f-1080x608.png",
@@ -8440,7 +8440,7 @@
           "zh-TW": "角色：守護2nd！\n・保護中心的2nd或僅有的1張1st\n└此牌組的主要卡片！！",
           "en": "Role:\nProtect your 2nd!\n・Protects the Center 2nd or a single 1st\n└ This deck's main card!!\n",
           "fr": "Rôle : Protéger la 2ème !\n・Protège la 2ème au Centre ou la 1ère unique.\n└ Carte principale de ce deck !!",
-          "es": "役割：2ndを守り抜く！\n・センターの2ndや1枚しかない1stを守る\n└このデッキの主要カード！！"
+          "es": "Rol: ¡Protege al 2nd!\n・Protege al 2nd del Centro o al único 1st.\n└¡¡Carta principal de este mazo!!"
         }
       },
       {
@@ -8617,7 +8617,7 @@
       "ja": "【ホロカ】かなた塩シャチのデッキレシピと回し方",
       "zh-TW": "【hOCG】Kanata Shio Shachi 牌組配置與打法",
       "en": "【hOCG】Kanata Shio Shachi Deck Recipe and How to Play",
-      "fr": "【ホロカ】かなた塩シャチのデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Kanata Shio Shachi.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Kanata Shio Shachi"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/06/1327c15417ecae598ae45f22a1e8cb1f-1080x744.png",
@@ -8770,7 +8770,7 @@
           "zh-TW": "職責：道具的再運用\n・可從存檔區回收與電腦相關的卡片\n┗透過雙色電腦重建不足的後續卡片。\n┗從副電腦回收LIMITED，提升穩定性。",
           "en": "Role: Item Reuse\n・Recover PC-related items from Archive.\n┗Rebuild subsequent plays that lacked resources with Two-tone PC.\n┗Recover LIMITED from Sub PC to improve stability.",
           "fr": "Rôle : Réutilisation des objets\n・Permet de récupérer des éléments liés aux ordinateurs depuis l'Archive\n┗Reconstruisez les cartes suivantes qui manquent avec l'ordinateur bicolore.\n┗Récupérez des objets LIMITÉS depuis l'ordinateur secondaire pour améliorer la stabilité.",
-          "es": "役割：アイテムの再運用\n・アーカイブからパソコン関係を回収できる\n┗ツートンカラーパソコンで足らなくなった後続を再構築。\n┗サブパソコンから、limitedを回収して安定度の底上げ。"
+          "es": "Rol: Reutilización de objetos\n・Puedes recuperar elementos relacionados con ordenadores del Archivo.\n┗Reconstruye la continuación que faltaba con \"Two-tone Computer\".\n┗Mejora la estabilidad recuperando LIMITED de \"Sub-computer\"."
         }
       },
       {
@@ -8794,7 +8794,7 @@
           "zh-TW": "角色：回收1st。\n・Debut過剩時的轉換要素。\n└在1st不足時，或是在3-look Shion之後追求更穩定時需要。",
           "en": "Role:\nRecovery of 1st.\n・Conversion element when Debut overflows.\n┗Necessary when 1st is insufficient or when seeking further stability after 3-look Shion.\n",
           "fr": "Rôle : Récupération de la 1ère.\n・Élément de conversion lorsque Debut déborde.\n┗Nécessaire lorsque la 1ère est insuffisante ou lorsque vous recherchez une stabilité accrue à partir de 3 LOOK Shion.",
-          "es": "役割：1stの回収。\n・debutが溢れた時の変換要素。\n┗1stが足りない時や、3ルックシオンからのさらなる安定を求める場合に必要。"
+          "es": "Rol: Recuperación de 1st.\n・Elemento de conversión cuando el Debut se desborda.\n┗Necesario cuando faltan 1st o cuando buscas mayor estabilidad a partir de una búsqueda de 3 cartas de Sion."
         }
       }
     ],
@@ -8879,7 +8879,7 @@
           "ja": "【ドロソ&エール代わり】\n・ライフ５の推しホロメン\n・推しスキルホロパワー2消費で1ターンの間ダイスを1度に3回振る時の目をすべて5にできる\n・SP推しスキルホロパワー3消費で＃秘密結社holoXを持つホロメン1人がエールを持たずにアーツが使えるようになる",
           "zh-TW": "【抽牌&吶喊替代】\n・生命值5的推成員\n・消耗2點推技能Holo Power，1回合內擲骰時，所有結果皆可變為5\n・消耗3點SP推技能Holo Power，使1名持有「＃秘密結社holoX」的成員，可在無吶喊狀態下使用藝能",
           "en": "【Draw Source & Cheer Substitute】\n・Oshi Holomen with 5 Life\n・Using 2 Oshi Skill Holo Power, you can make all dice rolls 5 when rolling 3 dice at once for 1 turn.\n・Using 3 SP Oshi Skill Holo Power, 1 Holomen with the #Secret Society holoX trait can use Arts without Cheer.",
-          "fr": "【ドロソ&エール代わり】\n・ライフ５の推しホロメン\n・推しスキルホロパワー2消費で1ターンの間ダイスを1度に3回振る時の目をすべて5にできる\n・SP推しスキルホロパワー3消費で＃秘密結社holoXを持つホロメン1人がエールを持たずにアーツが使えるようになる",
+          "fr": "【Pioche & Remplacement d'encouragement】\n・Oshi Membre avec 5 Points de vie.\n・Compétence Oshi : Dépensez 2 Holo Power pour que tous les dés lancés 3 fois en 1 tour obtiennent 5.\n・Compétence SP Oshi : Dépensez 3 Holo Power pour qu'un Membre possédant le tag ＃秘密結社holoX puisse utiliser un Arts sans Encouragement.",
           "es": "【Lanzador de Draw y atacante principal】\n・Solo se puede usar una vez por turno, pero al archivar 1 carta de la Mano, puedes lanzar los dados 3 veces y robar tantas cartas como el número de resultados impares.\n┗ Si has usado la Habilidad Oshi, puedes robar 3 cartas con certeza.\n・Con el efecto Arts, puedes infligir daño especial igual al número de veces que lanzaste los dados en este turno x10 al Centro, así que úsalo junto con el 1st del efecto Collab."
         }
       },
@@ -8903,7 +8903,7 @@
           "ja": "【ドロソ&メインアタッカー】\n・ターン1しか使えないが、手札を1枚アーカイブすることで、ダイスを3回振り奇数が出た数だけドローができる\n┗推しスキルを使っていれば確定で3ドロー出来る\n・アーツ効果でこのターン中にダイスを振った回数×10の特殊ダメージをセンターに与えることができるので、コラボエフェクトの1stと合わせて使いたい",
           "zh-TW": "【抽牌&主要攻擊者】\n・每回合僅能使用1次，但透過將1張手牌存檔，可擲骰3次，依據出現的奇數次數進行抽牌\n┗若使用推技能，可確定抽3張\n・藝能效果為此回合擲骰次數×10的特殊傷害給中心，想與聯動效果的1st搭配使用",
           "en": "【Draw Source & Main Attacker】\n・Can only be used once per turn, but by archiving 1 card from your Hand, you can roll dice 3 times and draw cards equal to the number of odd rolls.\n┗ If you use Oshi Skill, you can draw 3 cards for sure.\n・With the Arts effect, you can deal 10 special damage per dice roll this turn to the Center, so use it in conjunction with the Collab Effect 1st.",
-          "fr": "【ドロソ&メインアタッカー】\n・ターン1しか使えないが、手札を1枚アーカイブすることで、ダイスを3回振り奇数が出た数だけドローができる\n┗推しスキルを使っていれば確定で3ドロー出来る\n・アーツ効果でこのターン中にダイスを振った回数×10の特殊ダメージをセンターに与えることができるので、コラボエフェクトの1stと合わせて使いたい",
+          "fr": "【Pioche & Attaquant principal】\n・Ne peut être utilisé qu'une fois par tour, mais en archivant 1 carte de votre main, vous pouvez lancer les dés 3 fois et piocher autant de fois que le nombre d'impairs obtenus.\n┗ Si vous utilisez une Compétence Oshi, vous piochez 3 cartes de manière certaine.\n・L'effet Arts vous permet d'infliger des dégâts spéciaux égaux au nombre de fois où vous avez lancé les dés dans ce tour × 10 au Centre, alors utilisez-le en combinaison avec le 1st de l'effet Collab.",
           "es": "【Lanzador de Draw】\n・Solo cuando haces Bloom desde Debut, 1 Discard por 2 Draw."
         }
       },
@@ -8927,7 +8927,7 @@
           "ja": "【エール加速要員】\n・エールデッキの上から3枚を見てエールをホロメンにつけられる\n・エールデッキを山上から見ていき固定して色を任意のタイミングにつけることも可能（高難易度）",
           "zh-TW": "【吶喊加速要員】\n・從牌組上方3張牌中選擇，可將吶喊附加給成員\n・也可從牌組上方檢視並固定牌組顏色，於任意時機附加（高難易度）",
           "en": "【Cheer Acceleration Factor】\n・Look at the top 3 cards of your Cheer Deck and attach Cheer to a Holomen.\n・You can also look at your Cheer Deck from the top, fix it, and attach colors at any time (high difficulty).",
-          "fr": "【エール加速要員】\n・エールデッキの上から3枚を見てエールをホロメンにつけられる\n・エールデッキを山上から見ていき固定して色を任意のタイミングにつけることも可能（高難易度）",
+          "fr": "【Agent d'accélération d'encouragement】\n・Regardez les 3 premières cartes de votre Deck d'encouragement et attachez un Encouragement à un Membre.\n・Vous pouvez regarder votre Deck d'encouragement de haut en bas, le fixer et lui attribuer une couleur à tout moment (difficile).",
           "es": "【Atacante secundario de lanzamiento lento】\n・Se usa como miembro de ataque especial blanco y, muy raramente, como miembro de remate."
         }
       },
@@ -8939,7 +8939,7 @@
           "ja": "【スロカスなサブアタッカー】\n・白特攻要員&ごく稀に捲り要員として使う",
           "zh-TW": "【慢速的副攻擊者】\n・作為白色特攻要員&極少數情況下的翻盤要員使用",
           "en": "【Slow Slotting Sub-Attacker】\n・Used as a white special attack factor & very rarely as a comeback factor.",
-          "fr": "【スロカスなサブアタッカー】\n・白特攻要員&ごく稀に捲り要員として使う",
+          "fr": "【Sous-attaquant lent】\n・Utilisé comme agent d'attaque spéciale blanche et, très rarement, comme agent de retournement.",
           "es": "【Lanzador de Draw y sustituto de Cheer】\n・Oshi Holomen con 5 de Vida.\n・Consume 2 de Holo Power de Habilidad Oshi para poder lanzar los dados 3 veces en un turno y que todos los resultados sean 5.\n・Consume 3 de Holo Power de Habilidad Oshi SP para que 1 Miembro con \"#Secret Society holoX\" pueda usar Arts sin Cheer."
         }
       },
@@ -8951,7 +8951,7 @@
           "ja": "【ドロソ】\n・débutからブルームした時限定で1ディス2ドロー",
           "zh-TW": "【抽牌】\n・僅限Debut時綻放，1張棄牌換2張抽牌",
           "en": "【Draw Source】\n・1 Draw 2 Discard, limited to when Blooming from Debut.",
-          "fr": "【ドロソ】\n・débutからブルームした時限定で1ディス2ドロー",
+          "fr": "【Pioche】\n・1 carte défaussée, 2 cartes piochées, limité aux cas où vous passez de Debut à Bloom.",
           "es": "【hOCG】Receta de mazo y cómo jugar el mazo de Suichan (Suir Robo) del 0º grupo."
         }
       },
@@ -9198,7 +9198,7 @@
           "zh-TW": "角色：作為第5張1st\n・可以從3種1st中選擇想要的",
           "en": "Role:\nAs a 5th 1st\n・Can choose from 3 types of 1st\n",
           "fr": "Rôle : Comme 5ème 1ère\n・Vous pouvez choisir parmi 3 types de 1ères.",
-          "es": "役割：5枚目以降の1stとして\n・3種の1stから欲しいのを選べる"
+          "es": "Rol: Como 5º 1st\n・Puedes elegir el que desees entre 3 tipos de 1st."
         }
       }
     ],
@@ -9273,7 +9273,7 @@
       "ja": "【ホロカ】かなたReGLOSSのデッキレシピと回し方",
       "zh-TW": "【hOCG】Kanata ReGLOSS 牌組配置與打法",
       "en": "【hOCG】Kanata ReGLOSS Deck Recipe and How to Play",
-      "fr": "【ホロカ】かなたReGLOSSのデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Kanata ReGLOSS.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Kanata ReGLOSS"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/05/c62649873713493443382af85c8e128c-1080x890.png",
@@ -9488,7 +9488,7 @@
           "zh-TW": "職責：Debut兼抽牌來源\n・聯動時，若手牌為5張以下則可抽牌\n└從背後支撐牌組穩定性的卡片！！",
           "en": "Role: Debut & Draw Source\n・When you Collab, if you have 5 or fewer cards in hand, you can draw.\n└A card that secretly supports the Deck's stability!!",
           "fr": "Rôle : debut et source de pioche\n・Lors d'un Collab, si vous avez 5 cartes ou moins en main, vous pouvez piocher\n└Une carte qui soutient la stabilité du Deck en coulisses !!",
-          "es": "役割：debut兼ドローソース\n・コラボ時に手札が5枚以下ならドローできる\n└デッキの安定感を陰から支えているカード！！"
+          "es": "Rol: Debut y fuente de robo\n・Si tienes 5 o menos cartas en mano al hacer Collab, puedes robar.\n└¡¡Carta que apoya la estabilidad del mazo desde las sombras!!"
         }
       },
       {
@@ -9581,7 +9581,7 @@
       "ja": "【ホロカ】FUWAMOCO（フワモコ）のデッキレシピと回し方",
       "zh-TW": "【hOCG】FUWAMOCO 牌組配置與打法",
       "en": "【hOCG】FUWAMOCO Deck Recipe and How to Play",
-      "fr": "【ホロカ】FUWAMOCO（フワモコ）のデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer FUWAMOCO.",
       "es": "【hOCG】Receta de mazo y cómo jugar: FUWAMOCO"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/03/FUWAMOCO-1080x608.png",
@@ -9957,7 +9957,7 @@
       "ja": "【ホロカ】フレアポルカ(フレポル)のデッキレシピと回し方",
       "zh-TW": "【hOCG】Flare Polka (FurePoku) 牌組配置與打法",
       "en": "【hOCG】Flare Polka (Fepo) Deck Recipe and How to Play",
-      "fr": "【ホロカ】フレアポルカ(フレポル)のデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Flare Polka (FlarePoka).",
       "es": "【hOCG】Receta de mazo y cómo jugar: Flare Polka (FurePoku)"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/03/ec123c030eb9a93c6a53ea29e5702fb8-1080x608.png",
@@ -10122,7 +10122,7 @@
           "zh-TW": "角色：Buzz搜尋\n・1/2的機率搜尋Buzz\n・由於是Spot卡，在此牌組中無法搜尋",
           "en": "Role:\nBuzz Search\n・Buzz search with a 50% probability\n・Cannot be searched in this deck as it is a Spot\n",
           "fr": "Rôle : Recherche Buzz\n・Recherche Buzz avec une probabilité de 1 sur 2.\n・Étant un Spot, il ne peut pas être recherché dans ce deck.",
-          "es": "役割：Buzzサーチ\n・2分の1の確率でBuzzサーチ\n・spotなためこのデッキだとサーチ不可能"
+          "es": "Rol: Búsqueda de Buzz\n・Busca Buzz con una probabilidad de 1/2.\n・Como es Spot, no se puede buscar en este mazo."
         }
       }
     ],
@@ -10316,7 +10316,7 @@
       "ja": "【ホロカ】ポルーナのデッキレシピと回し方",
       "zh-TW": "【hOCG】PooLona 牌組配置與打法",
       "en": "【hOCG】Poloona Deck Recipe and How to Play",
-      "fr": "【ホロカ】ポルーナのデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Poloona.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Poluuna"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/03/D3B76937-2867-4818-8C22-1FDE8C8DC6F3_1_201_a-1080x747.jpeg",
@@ -10506,7 +10506,7 @@
       "ja": "【ホロカ】さくらみこ単のデッキレシピと回し方",
       "zh-TW": "【hOCG】Sakura Miko 單色牌組配置與打法",
       "en": "【hOCG】Sakura Miko Mono Deck Recipe and How to Play",
-      "fr": "【ホロカ】さくらみこ単のデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Sakura Miko Mono.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Sakura Miko Mono"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2026/02/40-1080x608.png",
@@ -10575,7 +10575,7 @@
           "zh-TW": "功用：35P檢索\n・透過35P檢索來壓縮牌組\n・1張35P與1張吶喊可造成60點傷害\n┗為前期火力做出貢獻",
           "en": "Role: 35P Search\n・Deck compression with 35P Search\n・60 points with 1 35P and 1 Cheer\n┗Contribution to early game firepower\n",
           "fr": "Rôle : Recherche de 35P\n・Compression du deck grâce à la recherche de 35P\n・1 35P et 1 Encouragement = 60 points\n┗ Contribution à la puissance de feu en début de partie",
-          "es": "役割：35Pサーチ\n・35Pサーチでデッキ圧縮\n・35P１枚とエール１枚で60点\n┗序盤の火力貢献"
+          "es": "Rol: Búsqueda de 35P\n・Compresión de mazo con búsqueda de 35P.\n・1 35P y 1 Cheer hacen 60 puntos.\n┗Contribución a la potencia de fuego inicial."
         }
       },
       {
@@ -10611,7 +10611,7 @@
           "zh-TW": "功用：補充35P與回收存檔區的成員\n・透過將自己舞台上的1張吶喊放入存檔區，即可回收存檔區的粉絲與成員\n・考量到提升牌組整體的穩定性與35P的搭配性而採用",
           "en": "Role: 35P Replenishment and Holomen Recovery from Archive\n・Recover Fans and Holomen from the Archive by archiving 1 Cheer on your Stage\n・Adopted considering overall deck stability and synergy with 35P\n",
           "fr": "Rôle : Réapprovisionnement de 35P et récupération de Membres depuis l'Archive\n・En archivant 1 Encouragement sur votre Scène, vous pouvez récupérer des Fans et des Membres de l'Archive.\n・Adopté pour améliorer la stabilité globale du deck et en considération de la synergie avec les 35P.",
-          "es": "役割：35P補充とアーカイブのホロメン回収\n・自分のステージのエール１枚をアーカイブすることでアーカイブのファンとホロメンを回収できる\n・デッキ全体の安定感UPと35Pとの相性を考慮して採用"
+          "es": "Rol: Reposición de 35P y recuperación de Holomen del Archivo\n・Al archivar 1 Cheer de tu Escenario, puedes recuperar Fans y Holomen del Archivo.\n・Se incluye para mejorar la estabilidad general del mazo y considerar la sinergia con 35P."
         }
       }
     ],
@@ -10627,7 +10627,7 @@
       "ja": "【ホロカ】こぼレイネマリンデッキのレシピと回し方",
       "zh-TW": "【hOCG】Kobo ReineMarine 牌組配置與打法",
       "en": "【hOCG】Kobo Reine Marine Deck Recipe and How to Play",
-      "fr": "【ホロカ】こぼレイネマリンデッキのレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer le deck Koboreine Marine.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Kobo Reine Marine"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/484dc25b1cdfb42bd474519e4d7a3921.png",
@@ -10684,7 +10684,7 @@
           "zh-TW": "角色：HP回復+吶喊加速\n・每有一種盤面上的吶喊顏色，就回復自身成員HP10點\n・Arts可以從存檔區送入吶喊",
           "en": "Role:\nHP Recovery + Cheer Acceleration\n・Recovers your Holomen's HP by 10 for each type of Cheer color on the board\n・Can send Cheer from Archive with Arts\n",
           "fr": "Rôle : Récupération des PV + Accélération d'Encouragement\n・Pour chaque type d'Encouragement sur le plateau, récupérez 10 PV de vos membres.\n・Avec les Arts, vous pouvez envoyer de l'Encouragement depuis l'Archive.",
-          "es": "役割：HP回復+エール加速\n・盤面のエール色1種類につき自分のホロメンのHP10回復\n・アーツでアーカイブからエールを送れる"
+          "es": "Rol: Recuperación de HP + Aceleración de Cheer\n・Por cada tipo de color de Cheer en el tablero, recupera 10 HP de tu Holomen.\n・Puedes enviar Cheer desde el Archivo con Arts."
         }
       },
       {
@@ -10744,7 +10744,7 @@
           "zh-TW": "角色：4-look抽牌卡\n・對Pavolia和Houshou Marine都適用的4-look抽牌卡",
           "en": "Role:\n4 Look Draw Source\n・4 Look draw source compatible with both Pavolia and Hoshou Marine\n",
           "fr": "Rôle : Pioche 4 LOOK\n・Pioche 4 LOOK compatible avec Pavolia et Houshou Marine.",
-          "es": "役割：4ルックドロソ\n・パヴォリアと宝鐘マリン両方に対応した4ルックドロソ"
+          "es": "Rol: Carta de robo de búsqueda de 4\n・Carta de robo de búsqueda de 4 compatible tanto con Pavolia como con Houshou Marine."
         }
       },
       {
@@ -10756,7 +10756,7 @@
           "zh-TW": "角色：提升HP＆火力\n・附加給任何人時Arts+10\n・附加給Reine時HP+30\n・2nd為220點，1st為160～150點，耐久力很高",
           "en": "Role:\nHP & Firepower Up\n・Arts +10 regardless of who it's attached to\n・Attaching to Reine increases HP +30\n・2nd becomes high durability at 220, 1st at 160-150\n",
           "fr": "Rôle : Augmentation des PV & Puissance de feu\n・Peu importe à qui vous l'attachez, Arts +10.\n・Si vous l'attachez à Reine, PV +30.\n・Les 2èmes atteignent 220 PV, les 1ères 160~150 PV, avec une grande durabilité.",
-          "es": "役割：HP&火力アップ\n・誰につけてもアーツ+10\n・レイネにつけるとHP+30\n・2ndが220、1stが160~150と高耐久に"
+          "es": "Rol: Aumento de HP y potencia de fuego\n・Arts +10 sin importar a quién se lo pongas.\n・Si se lo pones a Reine, HP +30.\n・El 2nd llega a 220, el 1st a 160-150, con alta durabilidad."
         }
       },
       {
@@ -10901,7 +10901,7 @@
           "zh-TW": "角色：提升HP＆火力\n・附加給Reine時HP+30\n・2nd為220點，1st為190～160點，耐久力很高",
           "en": "Role:\nHP & Firepower Up\n・Attaching to Reine increases HP +30\n・2nd becomes high durability at 220, 1st at 190-160\n",
           "fr": "Rôle : Augmentation des PV & Puissance de feu\n・Si vous l'attachez à Reine, PV +30.\n・Les 2èmes atteignent 220 PV, les 1ères 190~160 PV, avec une grande durabilité.",
-          "es": "役割：HP&火力アップ\n・レイネにつけるとHP+30\n・2ndが220、1stが190~160と高耐久に"
+          "es": "Rol: Aumento de HP y potencia de fuego\n・Si se lo pones a Reine, HP +30.\n・El 2nd llega a 220, el 1st a 190-160, con alta durabilidad."
         }
       },
       {
@@ -11006,7 +11006,7 @@
       "ja": "【ホロカ】トワネリッサのデッキレシピと回し方",
       "zh-TW": "【hOCG】Towa Nerissa 牌組配置與打法",
       "en": "【hOCG】Towa Nerissa Deck Recipe and How to Play",
-      "fr": "【ホロカ】トワネリッサのデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Towa Nerissa.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Towa Nerissa"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/03/5a32a1d871804228544aba14ba8edec9-1080x910.png",
@@ -11156,7 +11156,7 @@
       "ja": "【ホロカ】おかころのデッキレシピと回し方",
       "zh-TW": "【hOCG】OkaKoro 牌組配置與打法",
       "en": "【hOCG】OkaKoro Deck Recipe and How to Play",
-      "fr": "【ホロカ】おかころのデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Okakoro.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Okakoro"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/03/acfbee2e9f2135fdfaaf40af803ab055-1080x608.png",
@@ -11394,7 +11394,7 @@
       "ja": "【ホロカ】アキロゼはあとのデッキレシピと回し方",
       "zh-TW": "【hOCG】AkiRose Haato 牌組配置與打法",
       "en": "【hOCG】AkiRose Haato Deck Recipe and How to Play",
-      "fr": "【ホロカ】アキロゼはあとのデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer AkiRose Haato.",
       "es": "【hOCG】Receta de mazo y cómo jugar: AkiRose"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/03/19f4576944be90c9f3dbb78141230f82-1080x910.png",
@@ -11660,7 +11660,7 @@
           "ja": "・このデッキの重要なダメージ増加要員\n・コラボエフェクトでセンターかコラボに20ダメージ\n・2ターン目以降のコラボはできる限りこのトワ様で行いたい\n・アーツの追加効果はエールの消費枚数に見合ってないため使用する機会は限りなく少なそう",
           "zh-TW": "・此牌組重要的傷害增加要員\n・合作效果對中心或合作位置造成20點傷害\n・第2回合以後的合作，盡可能希望由Towa來執行\n・藝能的追加效果與消耗的吶喊數量不符，因此使用機會微乎其微",
           "en": "・Important damage increasing unit for this Deck\n・Deals 20 damage to Center or Collab with Collab effect\n・Want to perform Collab with Towa-sama from turn 2 onwards as much as possible\n・The additional effects of Arts do not match the Cheer cost, so the opportunities to use them are extremely limited",
-          "fr": "・このデッキの重要なダメージ増加要員\n・コラボエフェクトでセンターかコラボに20ダメージ\n・2ターン目以降のコラボはできる限りこのトワ様で行いたい\n・アーツの追加効果はエールの消費枚数に見合ってないため使用する機会は限りなく少なそう",
+          "fr": "【hOCG】Agent d'augmentation de dégâts important pour ce deck.\n・20 dégâts au Centre ou à un Collab avec l'effet Collab.\n・Essayez d'utiliser Towa-sama pour les Collabs à partir du 2ème tour autant que possible.\n・L'effet supplémentaire des Arts ne vaut pas la peine de dépenser les Encouragements, donc il y aura très peu d'occasions de l'utiliser.",
           "es": "・Factor importante de aumento de daño de este mazo\n・Inflige 20 puntos de daño al Centro o Collab con el efecto de Collab\n・Quiero hacer el Collab del turno 2 o posterior con esta Towa-sama tanto como sea posible\n・El efecto adicional del Art no se corresponde con la cantidad de Cheer consumido, por lo que es poco probable que se use"
         }
       },
@@ -11766,7 +11766,7 @@
       "ja": "【ホロカ】アユンダ・リスのデッキレシピと回し方",
       "zh-TW": "【hOCG】Ayunda Risu 牌組配置與打法",
       "en": "【hOCG】Ayunda Risu Deck Recipe and How to Play",
-      "fr": "【ホロカ】アユンダ・リスのデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Ayunda Risu.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Ayunda Risu"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/03/52297c94ed67d51e00110e0c67b7738b-1080x608.png",
@@ -11976,7 +11976,7 @@
       "ja": "【ホロカ】すいせい単（5弾更新版）のデッキレシピと回し方",
       "zh-TW": "【hOCG】Suisei 單色 (5彈更新版) 牌組配置與打法",
       "en": "【hOCG】Suisei Mono (5th Set Update) Deck Recipe and How to Play",
-      "fr": "【ホロカ】すいせい単（5弾更新版）のデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Suisei Mono (mise à jour 5ème extension).",
       "es": "【hOCG】Receta de mazo y cómo jugar: Suisei Mono (versión actualizada de la 5ª expansión)"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/03/b7e9279f1654333a6a24719483285a73.png",
@@ -12207,7 +12207,7 @@
           "zh-TW": "作用：回收2nd & 生命值6\n・生命值6的推し成員\n・消耗2點Holo Power可啟動休息狀態的ころさん\n・SP消耗3點Holo Power，當黃色成員被擊倒時，繼承一張吶喊，並將一名疊加的成員回收至手牌",
           "en": "Role: 2nd Recovery & Life 6\n- Oshi Holomen with 6 Life.\n- Can activate resting Korone with 2 Holo Power.\n- SP costs 3 Holo Power to inherit 1 Cheer when a Yellow Holomen is KO'd and recover one stacked Holomen to hand.",
           "fr": "Rôle : Récupération du 2nd & 6 points de vie.\n- Membre Oshi avec 6 points de vie.\n- Peut activer Korone au repos pour 2 Holo Power.\n- La SP consomme 3 Holo Power et, lorsque un membre jaune est mis K.O., il hérite d'un encouragement et un membre superposé est récupéré dans la main.",
-          "es": "役割：2nd回収＆ライフ6\n・ライフ6推しホロメン\n・ホロパワー2でお休み状態のころさんをアクティブにできる\n・SPはホロパワー3消費で黄色ホロメンがダウンした時エールを1枚継承し、重なっているホロメン1人を手札に回収"
+          "es": "Rol: Recuperación de 2nd y Vida 6\n・Holomen Oshi con Vida 6.\n・Puedes activar a Korosan, que está en estado de descanso, con 2 Holo Power.\n・El SP consume 3 Holo Power y, cuando un Holomen amarillo es derribado, hereda 1 Cheer y recupera a 1 de los Holomen apilados en tu mano."
         }
       },
       {
@@ -12315,7 +12315,7 @@
           "zh-TW": "作用：攻擊者\n・透過天賦效果減輕所需吶喊\n・若使用推技能，藝能威力將提升至210！",
           "en": "Role: Attacker\n- Reduces required Cheer with Gift effect.\n- If Oshi Skill is used, the Arts power becomes 210!",
           "fr": "Rôle : Attaquant.\n- L'effet Don réduit les encouragements nécessaires.\n- Si la Compétence Oshi est utilisée, la puissance de l'Arts atteint 210 !",
-          "es": "役割：アタッカー\n・ギフト効果で必要エールを軽減\n・推しスキルを使っていればアーツの威力が210に！"
+          "es": "Rol: Atacante\n・El Don reduce los Cheers necesarios.\n・Si usas la Habilidad Oshi, ¡¡la potencia de Arts llega a 210!!"
         }
       },
       {
@@ -12489,7 +12489,7 @@
           "zh-TW": "職責：對應Kanata・Chloe＆防禦\n・擁有除了擊倒以外不會奪取生命值的Gift\n└注意需要再對手演出前宣告\n・消耗2點吶喊可造成50點傷害並回復\n└回復需要有工具卡附加！",
           "en": "Role: Kanata & Chloe Countermeasure & Wall\n・Has a Gift that prevents Life loss except by Down.\n└Note that you must declare this before the opponent's performance.\n・Deals 50 damage with 2 Cheer while also recovering.\n└Requires a Tool to be attached for recovery!",
           "fr": "Rôle : Contre-mesure et mur pourかなた・クロヱ\n・Possède un Don qui empêche de prendre des Points de vie autrement que par K.O.\n└Attention, il faut le déclarer avant la performance de l'adversaire\n・Inflige 50 points de dégâts avec 2 Encouragements tout en soignant\n└La guérison nécessite un outil !",
-          "es": "役割：かなた・クロヱ対策＆壁\n・ダウン以外でライフを取られないギフトを持つ\n└相手パフォーマンス前に宣言が必要なので注意\n・2エールで50ダメージ出しつつ回復も\n└回復にはツールが付いている必要が！"
+          "es": "Rol: Contra Kanata/Chloe y muro\n・Tiene un Don que no te quita vida excepto por ser derribado.\n└Ten cuidado, ya que debes declararlo antes de la actuación del oponente.\n・Inflige 50 puntos de daño con 2 Cheers y también recupera.\n└¡¡Necesitas una herramienta para la recuperación!!"
         }
       },
       {
@@ -12513,7 +12513,7 @@
           "zh-TW": "職責：AkiRose的火力來源\n・提升2nd AkiRose的藝能50點！\n└讓AkiRose的藝能擁有高火力！\n・附加給任何人皆可提升藝能10點\n└沒有反動是與石斧的區別點！",
           "en": "Role: AkiRose's Firepower Source\n・Boost 2nd AkiRose's Arts by 50!\n└AkiRose's Arts become high-powered!\n・Arts +10 regardless of who it's attached to.\n└The lack of recoil differentiates it from Stone Axe!",
           "fr": "Rôle : Source de puissance de feu pourアキロゼ\n・Augmente les Arts du 2ndアキロゼ de 50 !\n└Les Arts d'アキロゼ deviennent une puissance de feu élevée !\n・Augmente les Arts de 10 pour n'importe quel membre auquel il est attaché\n└La différence avec la hache de pierre est qu'il n'y a pas de contrecoup !",
-          "es": "役割：アキロゼの火力元\n・2ndアキロゼのアーツを50UP！\n└アキロゼのアーツが高火力に！\n・誰につけてもアーツ10上昇\n└反動がないのが石の斧との差別化点！"
+          "es": "Rol: Fuente de potencia de fuego para AkiRose\n・¡Aumenta las Arts del 2nd AkiRose en 50!\n└¡¡Las Arts de AkiRose alcanzan una alta potencia de fuego!!\n・Aumenta las Arts en 10 sin importar a quién se lo pongas.\n└¡¡La diferencia con el \"Hacha de Piedra\" es que no tiene retroceso!!"
         }
       },
       {
@@ -12606,7 +12606,7 @@
       "ja": "【ホロカ】こぼムーナのデッキレシピと回し方",
       "zh-TW": "【hOCG】KoboMoona 牌組配置與打法",
       "en": "【hOCG】Kobo Moona Deck Recipe and How to Play",
-      "fr": "【ホロカ】こぼムーナのデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Kobomoon.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Kobo Moona"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/03/677E4EFC-1EE9-4C0A-BC9A-609B4F72FD94_1_201_a.jpeg",
@@ -12865,7 +12865,7 @@
       "ja": "【ホロカ】かなござのデッキレシピと回し方",
       "zh-TW": "【hOCG】KanaGoza 牌組配置與打法",
       "en": "【hOCG】Kanagoz Deck Recipe and How to Play",
-      "fr": "【ホロカ】かなござのデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Suigo.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Kanagoza"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/03/5CDACE16-00B6-4334-B218-2BAF755F7CDA_1_201_a-1080x751.jpeg",
@@ -13258,7 +13258,7 @@
           "zh-TW": "角色：HP回復+吶喊加速\n・每有一種盤面上的吶喊顏色，就回復自身成員HP10點\n┗在被對方2次攻擊用Buzz Zeta防禦後，可以回復溢出的傷害\n・Arts效果可以從存檔區任意供給吶喊",
           "en": "Role:\nHP Recovery + Cheer Acceleration\n・Recovers your Holomen's HP by 10 for each type of Cheer color on the board\n┗Can recover from residual damage after defending against the opponent's double attack once with Buzz Zeta\n・Supplies Cheer from Archive as desired with Arts effect\n",
           "fr": "Rôle : Récupération des PV + Accélération d'Encouragement\n・Pour chaque type d'Encouragement sur le plateau, récupérez 10 PV de vos membres.\n┗Vous pouvez récupérer les dégâts restants après avoir protégé une attaque sur 2 emplacements une fois avec Buzz Zeta.\n・Avec l'effet Arts, vous pouvez fournir l'Encouragement souhaité depuis l'Archive.",
-          "es": "役割：HP回復+エール加速\n・盤面のエール色1種類につき自分のホロメンのHP10回復\n┗相手の2面攻撃を1回Buzzゼータで守った後、おこぼれのダメージを回復できる\n・アーツ効果でアーカイブからエールを好きな供給"
+          "es": "Rol: Recuperación de HP + Aceleración de Cheer\n・Por cada tipo de color de Cheer en el tablero, recupera 10 HP de tu Holomen.\n┗Puedes recuperar el daño sobrante después de defenderte de un ataque doble del oponente con Buzz Zeta.\n・Suministra Cheer desde el Archivo a voluntad con el efecto Arts."
         }
       },
       {
@@ -13330,7 +13330,7 @@
           "zh-TW": "角色：提升HP＆火力\n限制\n・附加給任何人時Arts+10\n・附加給Reine時HP+30\n┗2nd為220點，1st為160～150點，耐久力很高",
           "en": "Role:\nHP & Firepower Up\nRestriction\n・Arts +10 regardless of who it's attached to\n・Attaching to Reine increases HP +30\n┗ 2nd becomes high durability at 220, 1st at 160-150\n",
           "fr": "Rôle : Augmentation des PV & Puissance de feu\nRestriction\n・Peu importe à qui vous l'attachez, Arts +10.\n・Si vous l'attachez à Reine, PV +30.\n┗Les 2èmes atteignent 220 PV, les 1ères 160~150 PV, avec une grande durabilité.",
-          "es": "役割：HP&火力アップ\n制限\n・誰につけてもアーツ+10\n・レイネにつけるとHP+30\n┗2ndが220、1stが160~150と高耐久に"
+          "es": "Rol: Aumento de HP y potencia de fuego\nRestricción\n・Arts +10 sin importar a quién se lo pongas.\n・Si se lo pones a Reine, HP +30.\n┗El 2nd llega a 220, el 1st a 160-150, con alta durabilidad."
         }
       },
       {
@@ -13378,7 +13378,7 @@
           "zh-TW": "角色：第5張2nd\n/預防Holo Power下降\n・可以將想要的成員從存檔區移回\n・與SP技能組合，可以在1回合內準備好5C 2nd Reine",
           "en": "Role:\n5th 2nd\n/ \nCare for Holo Power drop\n・Can return any Holomen from Archive\n・With SP Skill, you can prepare 5C 2nd Reine in one turn\n",
           "fr": "Rôle : 5ème 2ème\n/ Soin contre la perte de Holo Power\n・Vous pouvez retourner le membre de votre choix depuis l'Archive.\n・Avec la Compétence SP, vous pouvez préparer la 2ème Reine de 5C en 1 tour.",
-          "es": "役割：5枚目の2nd\n/\nホロパワー落ちケア\n・好きなホロメンをアーカイブから戻せる\n・SPスキルと合わせて1ターンで5C 2ndレイネを用意できる"
+          "es": "Rol: 5º 2nd\n/\nCuidado con la caída de Holo Power\n・Puedes devolver cualquier Holomen del Archivo.\n・Con la Habilidad SP, puedes preparar a Reine de 2nd de 5C en un turno."
         }
       },
       {
@@ -13402,7 +13402,7 @@
           "zh-TW": "角色：0.5張LIMITED\n・可以搜尋任何LIMITED的萬能卡\n・每次都可以選擇想要的LIMITED",
           "en": "Role:\n0.5th LIMITED\n・Versatile card that can search for any LIMITED\n・Can choose the desired LIMITED each time\n",
           "fr": "Rôle : LIMITED 0.5\n・Carte polyvalente qui permet de chercher n'importe quel LIMITED.\n・Vous pouvez choisir le LIMITED souhaité à chaque fois.",
-          "es": "役割：0.5枚目のLIMITED\n・どのLIMITEDも引きに行ける万能カード\n・その都度欲しいLIMITEDを選べる"
+          "es": "Rol: 0.5ª carta LIMITED\n・Carta versátil que te permite buscar cualquier LIMITED.\n・Puedes elegir la LIMITED que desees en cada momento."
         }
       },
       {
@@ -13450,7 +13450,7 @@
           "zh-TW": "角色：4-look抽牌卡\n・對Reine和Iofi都適用的4-look抽牌卡\n・無法拾取Zeta是個難點",
           "en": "Role:\n4 Look Draw Source\n・4 Look draw source compatible with both Reine and Iofi\n・The drawback is that you cannot pick up Zeta\n",
           "fr": "Rôle : Pioche 4 LOOK\n・Pioche 4 LOOK compatible avec Reine et IoFi.\n・Le problème est qu'elle ne peut pas récupérer Zeta.",
-          "es": "役割：4ルックドロソ\n・レイネとイオフィ両方に対応した4ルックドロソ\n・ゼータを拾えないのが難点"
+          "es": "Rol: Carta de robo de búsqueda de 4\n・Carta de robo de búsqueda de 4 compatible tanto con Reine como con Iofi.\n・El inconveniente es que no puedes recoger a Zeta."
         }
       }
     ],
@@ -13466,7 +13466,7 @@
       "ja": "【ホロカ】フブアキ（俺達、白亜紀）のデッキレシピと回し方",
       "zh-TW": "【hOCG】FubuAki (我們，白堊紀) 牌組配置與打法",
       "en": "【hOCG】FubuAki (We are, Cretaceous) Deck Recipe and How to Play",
-      "fr": "【ホロカ】フブアキ（俺達、白亜紀）のデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Fubuki Aki (Nous, Crétacé).",
       "es": "【hOCG】Receta de mazo y cómo jugar: FubuAki (Nosotros, Cretácico)"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/03/45a0b4f836ef39bb191a6c7094b2ff40-1080x608.png",
@@ -13700,7 +13700,7 @@
       "ja": "【ホロカ】キアラクロヱのデッキレシピと回し方！！WGP優勝者が攻略法まで解説！！",
       "zh-TW": "【hOCG】Kiara Kuroe 牌組配置與打法！！WGP優勝者將解說攻略法！！",
       "en": "【hOCG】KiaraChloe Deck Recipe and How to Play!! WGP Winner Explains Strategy!!",
-      "fr": "【ホロカ】キアラクロヱのデッキレシピと回し方！！WGP優勝者が攻略法まで解説！！",
+      "fr": "【hOCG】Recette de deck et comment jouer Kiara Chloe !! Le vainqueur du WGP explique la stratégie !!",
       "es": "【hOCG】Receta de mazo y cómo jugar: Kiara Chloe!! ¡El ganador del WGP explica la estrategia!"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/03/b8c00291a3ab28668b05ed815ac0c3df.png",
@@ -13757,7 +13757,7 @@
           "zh-TW": "職責：侵略最強的1st\n・雖然HP較低，但攻擊力高\n└1點吶喊50點傷害是破格的！！\n・下方的技能也可分配，容易調整！\n購買卡片請點此",
           "en": "Role: Aggro's Strongest 1st\n・Low HP but high attack power.\n└50 damage with 1 Cheer is exceptional!!\n・Lower skills can be distributed, making adjustments easy!\nBuy cards here",
           "fr": "Rôle : Le meilleur 1st pour l'aggro !\n・Faible en PV mais haute puissance d'attaque\n└50 points de dégâts par 1 Encouragement, c'est exceptionnel !!\n・Les compétences inférieures peuvent être réparties, ce qui facilite les ajustements !\nAchetez la carte ici",
-          "es": "役割：アグロ最強の1st\n・HPが低い代わりに高い攻撃力\n└1エール50点は破格！！\n・下技も振り分けができるため調節しやすい！\nカードの購入はこちら"
+          "es": "Rol: El mejor 1st para agresión\n・Baja HP pero alta potencia de ataque.\n└¡¡50 puntos de daño por 1 Cheer es extraordinario!!\n・La habilidad inferior también se puede repartir, por lo que es fácil de ajustar.\nCompra de cartas aquí"
         }
       },
       {
@@ -13781,7 +13781,7 @@
           "zh-TW": "職責：不只是Debut！\n・捨棄1張手牌，變為1點吶喊40點傷害！\n└歸入存檔區的牌堆對牌組是優勢！\n購買卡片請點此",
           "en": "Role: Not Just Any Debut!\n・By discarding 1 card from hand, deal 40 damage with 1 Cheer!\n└Filling the Archive is a benefit!\nBuy cards here",
           "fr": "Rôle : Pas juste un debut !\n・En coupant 1 carte de votre main, transformez-la en 40 points de dégâts par 1 Encouragement !\n└L'engraissement de l'Archive devient un avantage !\nAchetez la carte ici",
-          "es": "役割：ただのdebutじゃない！\n・手札1枚を切ることで1エール40点に！\n└アーカイブ肥やしはメリットになる！\nカードの購入はこちら"
+          "es": "Rol: ¡No es solo un Debut!\n・¡¡Con 1 carta de tu mano, obtienes 40 puntos de daño por 1 Cheer!!\n└¡¡La acumulación de Archivo es beneficiosa!!\nCompra de cartas aquí"
         }
       },
       {
@@ -13793,7 +13793,7 @@
           "zh-TW": "職責：搜尋Kotori\n・聯動時歸入1張手牌並從牌組回收吉祥物！\n（中心為＃トリ 時）\n└實質上也可作為抽牌卡！\n・與マネちゃん相性絕佳！\n購買卡片請點此",
           "en": "Role: Kotori Search\n・When you Collab, Archive 1 card and recover 1 Mascot from your Deck!\n(When Center is #Tori)\n└Also functions as a practical draw card!\n・Excellent synergy with Mane-chan!\nBuy cards here",
           "fr": "Rôle : Recherche de Kotori\n・Archivez 1 carte de votre main et récupérez une Mascotte du Deck lors d'un Collab !\n（Quand le Centre est ＃トリ ）\n└C'est aussi une carte de pioche effective !\n・Excellente synergie avecマネちゃん !\nAchetez la carte ici",
-          "es": "役割：Kotoriサーチ\n・コラボ時に手札1枚アーカイブしデッキからマスコット回収！\n（センターが＃トリ の時）\n└実質的なドローカードとしても！\n・マネちゃんとの相性抜群！\nカードの購入はこちら"
+          "es": "Rol: Búsqueda de Kotori\n・Al hacer Collab, archiva 1 carta de tu mano y recupera Mascota del mazo.\n（Cuando el Centro es #Tori）\n└¡¡También funciona como una carta de robo efectiva!!\n・¡¡Excelente sinergia con Mane-chan!!\nCompra de cartas aquí"
         }
       },
       {
@@ -13817,7 +13817,7 @@
           "zh-TW": "職責：提升侵略性能！\n・以藝能+20為代價，自稱10點傷害，但是……？\n└若附加Kotori則可抵銷！無負面效果！！\n購買卡片請點此",
           "en": "Role: Make Aggro Performance Even Better!\n・In exchange for Arts +20, you deal 10 damage yourself...?\n└If Kotori is attached, it's a trade! No downside!!\nBuy cards here",
           "fr": "Rôle : Augmenter la performance d'aggro !\n・Au lieu de +20 aux Arts, vous vous auto-proclamez 10 points de dégâts, mais... ?\n└Si Kotori est attaché, c'est une compensation ! Sans inconvénient !!\nAchetez la carte ici",
-          "es": "役割：アグロ性能をより高く！\n・アーツ＋20の代わりに自称10点ですが、、、？\n└Kotoriが付いていれば相殺！デメリット無しに！！\nカードの購入はこちら"
+          "es": "Rol: ¡Mejora aún más la capacidad de agresión!\n・En lugar de +20 a Arts, te autodenominas 10 puntos, pero...?\n└Si Kotori está presente, ¡¡se cancela!! ¡¡Sin desventajas!!\nCompra de cartas aquí"
         }
       },
       {
@@ -13829,7 +13829,7 @@
           "zh-TW": "職責：搜尋Debut\n・以早期佈局Chloe為目標\n・作為牌組壓縮也很優秀\n・注意牌組中的Holomen數量會減少",
           "en": "Role: Debut Search\n・Aims for an early deployment of Chloe.\n・Also excellent for Deck compression.\n・Be careful as the number of Holomen in your Deck will decrease.",
           "fr": "Rôle : Recherche de debut\n・Vise le déploiement précoce deクロヱ\n・Excellent pour compresser le Deck\n・Attention à la diminution du nombre de Membres dans le Deck",
-          "es": "役割：debutサーチ\n・クロヱの早期着地を狙う\n・デッキ圧縮としても優秀\n・デッキのホロメン枚数が少なくなるのは注意"
+          "es": "Rol: Búsqueda de Debut\n・Apunta a un despliegue temprano de Chloe.\n・Excelente para la compresión de mazo.\n・Ten cuidado con la disminución del número de Holomen en el mazo."
         }
       },
       {
@@ -14196,7 +14196,7 @@
       "ja": "【ホロカ】わため単のデッキレシピと回し方",
       "zh-TW": "【hOCG】Watame 單色牌組配置與打法",
       "en": "【hOCG】Watame Mono Deck Recipe and How to Play",
-      "fr": "【ホロカ】わため単のデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Watame Mono.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Watame Mono"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/03/484dc25b1cdfb42bd474519e4d7a3921.png",
@@ -14649,7 +14649,7 @@
           "zh-TW": "角色：HP回復+吶喊加速\n・每有一種盤面上的吶喊顏色，就回復自身成員HP10點\n・Arts可以從存檔區送入吶喊",
           "en": "Role:\nHP Recovery + Cheer Acceleration\n・Recovers your Holomen's HP by 10 for each type of Cheer color on the board\n・Can send Cheer from Archive with Arts\n",
           "fr": "Rôle : Récupération des PV + Accélération d'Encouragement\n・Pour chaque type d'Encouragement sur le plateau, récupérez 10 PV de vos membres.\n・Avec les Arts, vous pouvez envoyer de l'Encouragement depuis l'Archive.",
-          "es": "役割：HP回復+エール加速\n・盤面のエール色1種類につき自分のホロメンのHP10回復\n・アーツでアーカイブからエールを送れる"
+          "es": "Rol: Recuperación de HP + Aceleración de Cheer\n・Por cada tipo de color de Cheer en el tablero, recupera 10 HP de tu Holomen.\n・Puedes enviar Cheer desde el Archivo con Arts."
         }
       },
       {
@@ -14733,7 +14733,7 @@
           "zh-TW": "角色：提升HP＆火力\n・附加給任何人時Arts+10\n・附加給Reine時HP+30\n・2nd為220點，1st為190～150點，耐久力很高",
           "en": "Role:\nHP & Firepower Up\n・Arts +10 regardless of who it's attached to\n・Attaching to Reine increases HP +30\n・2nd becomes high durability at 220, 1st at 190-150\n",
           "fr": "Rôle : Augmentation des PV & Puissance de feu\n・Peu importe à qui vous l'attachez, Arts +10.\n・Si vous l'attachez à Reine, PV +30.\n・Les 2èmes atteignent 220 PV, les 1ères 190~150 PV, avec une grande durabilité.",
-          "es": "役割：HP&火力アップ\n・誰につけてもアーツ+10\n・レイネにつけるとHP+30\n・2ndが220、1stが190~150と高耐久に"
+          "es": "Rol: Aumento de HP y potencia de fuego\n・Arts +10 sin importar a quién se lo pongas.\n・Si se lo pones a Reine, HP +30.\n・El 2nd llega a 220, el 1st a 190-150, con alta durabilidad."
         }
       },
       {
@@ -14745,7 +14745,7 @@
           "zh-TW": "角色：讓2次攻擊更容易！\n・如果生命值競賽落後，則將對方聯動的成員拉到我方場上\n└Iofi聯動2次時，會剩下很多吶喊，更容易奪取2個盤面！",
           "en": "Role:\nMakes taking 2 boards easier!\n・If you are losing the Life race, call Holomen to the opponent's Collab\n└ If Iofi Collabs twice, you'll have a lot of Cheer left and it'll be easier to take 2 boards!\n",
           "fr": "Rôle : Facilite la prise de 2 emplacements !\n・Si vous perdez la course aux Points de vie, vous attirez des membres du Collab de l'adversaire.\n└ Si IoFi fait 2 Collabs, vous aurez beaucoup d'Encouragement excédentaire et il sera facile de prendre 2 emplacements !",
-          "es": "役割：2面取りをしやすく！\n・ライフレースに負けていると相手のコラボにホロメンを呼び寄せる\n└イオフィが2回コラボするとかなりエールが余り2面取りしやすい！"
+          "es": "Rol: ¡Facilita la doble toma!\n・Si pierdes la carrera de vida, atraes Holomen al Collab del oponente.\n└Si IoFi hace Collab 2 veces, sobran muchos Cheers y es fácil hacer doble toma."
         }
       }
     ],
@@ -14826,7 +14826,7 @@
       "ja": "【ホロカ】マリン単（tノエル）デッキレシピと回し方！",
       "zh-TW": "【hOCG】Marine 單色 (t Noel) 牌組配置與打法！",
       "en": "【hOCG】Marine Mono (t Noel) Deck Recipe and How to Play!",
-      "fr": "【ホロカ】マリン単（tノエル）デッキレシピと回し方！",
+      "fr": "【hOCG】Recette de deck et comment jouer Marine Mono (t Noel) !",
       "es": "【hOCG】Receta de mazo y cómo jugar: Marine Mono (t Noel)"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/12/a4b517adf5cb464fe138e4a4c505b5c3-1080x747.png",
@@ -15012,7 +15012,7 @@
       "ja": "【ホロカ】ノエぺこ（ノエルぺこら）のデッキレシピと回し方！第5弾版",
       "zh-TW": "【hOCG】NoePeko (Noel Pekora) 牌組配置與打法！第5彈版",
       "en": "【hOCG】NoePeko (Noel Pekora) Deck Recipe and How to Play! 5th Set Version",
-      "fr": "【ホロカ】ノエぺこ（ノエルぺこら）のデッキレシピと回し方！第5弾版",
+      "fr": "【hOCG】Recette de deck et comment jouer NoePeko (Noel Pekora) ! Version 5ème extension.",
       "es": "【hOCG】Receta de mazo y cómo jugar: NoelPeko (Noel Pekora)! Versión 5ª expansión"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/09/5a0e7355c5e9da494b397fda1dca19f4-1080x608.png",
@@ -15045,7 +15045,7 @@
           "zh-TW": "職責：攻擊手\n・若已受到傷害，則消耗2點吶喊造成120點傷害！\n└第三回合可用較少吶喊行動的藝能\n・若聯動對象為三期生，則消耗3點吶喊造成160點傷害！\n└性價比◎",
           "en": "Role: Attacker\n・If you have taken damage, deal 120 damage with 2 Cheer!\n└Arts that allow you to act with fewer Cheer on turn 3.\n・If you Collab with a 3rd Generation Holomen, deal 160 damage with 3 Cheer!\n└Excellent cost performance!",
           "fr": "Rôle : Attaquant\n・Si vous avez subi des dégâts, 120 points de dégâts avec 2 Encouragements !\n└Arts faciles à utiliser avec peu d'Encouragements au 3ème tour\n・Avec un Collab et un membre de la 3ème génération, 160 points de dégâts avec 3 Encouragements !\n└Excellent rapport coût-efficacité",
-          "es": "役割：アタッカー\n・ダメージを受けていれば2エールで120ダメージ！\n└3ターン目に少ないエールで動きやすいアーツ\n・コラボに3期生なら3エールで160ダメージ！\n└コスパ◎"
+          "es": "Rol: Atacante\n・Si has recibido daño, 120 puntos de daño con 2 Cheers.\n└Arts que te permiten moverte con pocos Cheers en el tercer turno.\n・Si el Collab es de la 3ª generación, 160 puntos de daño con 3 Cheers.\n└¡¡Excelente relación calidad-precio!!"
         }
       },
       {
@@ -15081,7 +15081,7 @@
           "zh-TW": "角色：3期生版的保鏢\n・如果中心是3期生，則將攻擊引導到自身\n└保護2nd！",
           "en": "Role:\n3rd Generation version of Bodyguard\n・If the Center is a 3rd generation, it redirects attacks to itself\n└ Protect your 2nd!\n",
           "fr": "Rôle : Garde du corps version 3ème génération\n・Si le Centre est un membre de la 3ème génération, il redirige l'attaque vers soi.\n└ Protégez la 2ème !",
-          "es": "役割：3期生版の用心棒\n・センターが3期生なら自身に攻撃を誘導\n└2ndを守ろう！"
+          "es": "Rol: Versión de la 3ª generación del guardaespaldas\n・Si el Centro es de la 3ª generación, atrae el ataque hacia ti mismo.\n└¡¡Protege al 2nd!!"
         }
       },
       {
@@ -15105,7 +15105,7 @@
           "zh-TW": "角色：回收1st\n・僅限後攻第1回合，透過聯動搜尋1st\n└透過搜尋的1st來確保後續！",
           "en": "Role:\n1st Recovery\n・Search for 1st with Collab only on turn when going second\n└ Secure subsequent cards by recovering the searched 1st!\n",
           "fr": "Rôle : Récupération de la 1ère\n・Uniquement au tour 1 en jouant en second, cherchez la 1ère via Collab\n└ Récupérez la 1ère recherchée pour assurer les membres suivants !",
-          "es": "役割：1st回収\n・後攻委ターン目のみコラボで1stサーチ\n└サーチ1stを回収で後続を確保しよう！"
+          "es": "Rol: Recuperación de 1st\n・Busca 1st con Collab solo en el turno del oponente.\n└¡Asegura la continuación recuperando el 1st buscado!"
         }
       },
       {
@@ -15117,7 +15117,7 @@
           "zh-TW": "角色：2nd的火力提升\n・根據盤面上不同名稱的三期生數量，提升中心2nd的Arts！\n└如果Pekora在場，2nd可達210點傷害！",
           "en": "Role:\n2nd Firepower Up\n・Arts UP for the Center 2nd by the number of 3rd generation Holomen with different names on the board!\n└ If Pekora is present, 2nd can deal up to 210 damage!\n",
           "fr": "Rôle : Augmentation de la puissance de feu de la 2ème\n・Augmente les Arts de la 2ème en fonction du nombre de membres de la 3ème génération avec des noms différents sur le plateau !\n└ Si Pekora est présente, la 2ème peut infliger jusqu'à 210 dégâts !",
-          "es": "役割：2ndの火力アップ\n・盤面の名前が違う3期生の数分、センター2ndのアーツUP！\n└ぺこらが出ていれば2ndで210まで出せる！"
+          "es": "Rol: Aumento de potencia de fuego para el 2nd\n・¡Arts del Centro y 2nd aumentan según la cantidad de 3ª generación con nombres diferentes en el tablero!\n└¡Si Pekora está presente, el 2nd puede llegar hasta 210!"
         }
       },
       {
@@ -15153,7 +15153,7 @@
           "zh-TW": "角色：2nd火力補助\n附加給3點以上吶喊的Noel時，Arts+30！\n└讓2nd能打出190點傷害！",
           "en": "Role:\n2nd Firepower Support\n・+30 to Noel's Arts when 3 or more Cheer are attached!\n└ To allow 2nd to deal 190 damage!\n",
           "fr": "Rôle : Aide à la puissance de feu de la 2ème\nAugmente les Arts de Noel avec 3 Encouragements ou plus de +30 !\n└ Permet à la 2ème d'infliger 190 dégâts !",
-          "es": "役割：2nd火力補助\n3エール以上付いたノエルのアーツを＋30！\n└2ndが190ダメージ出るように！"
+          "es": "Rol: Soporte de potencia de fuego para el 2nd\n¡¡Arts de Noel con 3 o más Cheers aumentan +30!!\n└¡¡Para que el 2nd pueda infligir 190 de daño!!"
         }
       }
     ],
@@ -15234,7 +15234,7 @@
       "ja": "【ホロカ】かなクロのデッキレシピと回し方",
       "zh-TW": "【hOCG】KanaKuro 牌組配置與打法",
       "en": "【hOCG】KanKuro Deck Recipe and How to Play",
-      "fr": "【ホロカ】かなクロのデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer KanCro.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Kanata Chloe"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/12/2535b24eb553d5c520941bb2478e16e7-1-1080x747.png",
@@ -15291,7 +15291,7 @@
           "zh-TW": "職責：搜尋うぱお\n・可搜尋擁有10點增益/20點反擊的うぱお\n・與附加了吶喊的增益Kanata聯動後進行Bloom，可實質輸出70點（自身40點＋隊友30點增益）\n購買卡片請點此",
           "en": "Role: Upao Search\n・Allows you to search for Upao, who has a powerful 10 buff/20 counter.\n・If you Collab with a buffed Kanata with Cheer attached and then Bloom, you can deal effectively 70 damage (40 damage yourself + 30 buff to ally).\nBuy cards here",
           "fr": "Rôle : Recherche d'うぱお\n・Permet de rechercherうぱお, dont le buff de 10/ contre-attaque de 20 est puissant\n・Après un Collab avecかなた buffé par Encouragement, si vous le faites Bloom, vous pouvez infliger 70 points de dégâts (40 points par vous-même + 30 points de buff pour les alliés)\nAchetez la carte ici",
-          "es": "役割：うぱおサーチ\n・10バフ/20反撃が強力なうぱおをサーチ可能\n・エールの付いたバフかなたでコラボした後にBloomさせると、実質70点出せる（自身で40点＋味方に30バフ）\nカードの購入はこちら"
+          "es": "Rol: Búsqueda de Upa-o\n・Permite buscar Upa-o, que tiene un potente buff de 10 / contraataque de 20.\n・Si haces Collab con Kanata con Cheer adjunto y luego haces Bloom, puedes infligir efectivamente 70 puntos de daño (40 puntos tú mismo + 30 de buff a un aliado).\nCompra de cartas aquí"
         }
       },
       {
@@ -15303,7 +15303,7 @@
           "zh-TW": "職責：攻擊手\n・Bloom時對中心造成30點傷害\n┗與藝能合計可獨自造成80點傷害\n・有助於第三回合Kanata的50點過度擊殺",
           "en": "Role: Attacker\n・Deal 30 damage to Center when you Bloom.\n┗With Arts, can deal 80 damage alone.\n・Useful for Kanata's 50 overkill on turn 3.",
           "fr": "Rôle : Attaquant\n・30 points de dégâts au Centre lors du Bloom\n┗Avec les Arts, il peut infliger 80 points de dégâts à lui seul\n・Utile pour le dépassement de 50 points deかなた au 3ème tour\nAchetez la carte ici",
-          "es": "役割：アタッカー\n・Bloomした時センターに30ダメージ\n┗アーツと合わせて1人で80ダメージ出せる\n・3ターン目の2ndかなたの50オーバーキルに役立つ\nカードの購入はこちら"
+          "es": "Rol: Atacante\n・30 puntos de daño al Centro cuando haces Bloom.\n┗Puedes infligir 80 puntos de daño por ti mismo junto con Arts.\n・Útil para el \"overkill\" de 50 puntos del 2nd Kanata en el tercer turno.\nCompra de cartas aquí"
         }
       },
       {
@@ -15480,7 +15480,7 @@
       "ja": "【ホロカ】クロエいろはのデッキレシピと回し方",
       "zh-TW": "【hOCG】Kuroe Iroha 牌組配置與打法",
       "en": "【hOCG】Chloe Iroha Deck Recipe and How to Play",
-      "fr": "【ホロカ】クロエいろはのデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Chloe Iroha.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Chloe Iroha"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/01/9f6335b81890be524b54d8997ef9364e-1080x608.png",
@@ -15771,7 +15771,7 @@
           "zh-TW": "角色：\n主要攻擊者\n・綻放時骰子50%機率操作吶喊\n・給予對方中心附加的吶喊張數×20點傷害給中心和聯動雙方\n┗以吶喊3張計算，一邊獲得80+60，另一邊獲得60，合計200點傷害",
           "en": "Role:\nMain Attacker\n・50% chance to manipulate Cheer on Bloom\n・Deals damage equal to 20 times the number of Cheers on the opponent's Center to both the Center and Collab\n┗With 3 Cheers, deals 80+60 to one and 60 to the other, for a total of 200 damage\n",
           "fr": "Rôle :\nAttaquant principal\n・Lors du Bloom, opération d'Encouragement avec 50% de chances au dé.\n・Inflige des dégâts égaux au nombre d'Encouragements attachés au Centre de l'adversaire × 20 au Centre et au Collab.\n┗Avec 3 Encouragements, 80+60 sur une cible, 60 sur l'autre, total 200 dégâts.",
-          "es": "役割：\nメインアタッカー\n・ブルーム時サイコロ50%でエール操作\n・相手のセンターについているエール数×20点をセンターとコラボ両方に与える\n┗エール3枚計算なら片方に80+60、もう片方に60の合計200ダメージ"
+          "es": "Rol:\nAtacante principal\n・Al hacer Bloom, opera Cheer con un 50% de probabilidad.\n・Inflige 20 puntos de daño al Centro y al Collab por cada Cheer en el Centro del oponente.\n┗Si calculas 3 Cheers, son 80+60 a un lado y 60 al otro, un total de 200 de daño."
         }
       },
       {
@@ -15860,7 +15860,7 @@
       "ja": "【ホロカ】6弾更新版！ルイクロのデッキレシピと回し方",
       "zh-TW": "【hOCG】6彈更新版！RuiKuro 牌組配置與打法",
       "en": "【hOCG】6th Set Update! LuiKuro Deck Recipe and How to Play",
-      "fr": "【ホロカ】6弾更新版！ルイクロのデッキレシピと回し方",
+      "fr": "【hOCG】Mise à jour de la 6ème extension ! Recette de deck et comment jouer le deck LuiCro.",
       "es": "【hOCG】¡Versión actualizada de la 6ª expansión! Receta de mazo y cómo jugar: Lui Chloe"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/fe90a0b4155159c749b0a9ae133eb59f-1080x608.png",
@@ -15989,7 +15989,7 @@
           "zh-TW": "角色：2張抽牌＋搜尋1st＋固定牌底\n・一張卡片可以挖掘7張牌組，優秀的抽牌卡！\n└確保第4回合能穩定到達固定位置！",
           "en": "Role:\n2 Draw + 1st Search + Bottom Fix\n・Excellent draw source that digs through 7 cards with one card!\n└ Stabilizes reaching the fixed position on turn 4!\n",
           "fr": "Rôle : 2 pioches + Recherche de la 1ère + Fixation du fond\n・Excellente carte de pioche qui permet de creuser 7 cartes du deck !\n└ Permet d'atteindre la position fixe au tour 4 de manière stable !",
-          "es": "役割：2ドロー＋1stサーチ＋ボトム固定\n・1枚で7枚デッキを掘れる優秀なドロソ！\n└4ターン目に固定場所の到達が安定するように！"
+          "es": "Rol: 2 robos + búsqueda de 1st + fijación de la parte inferior\n¡¡Excelente carta de robo que te permite excavar 7 cartas del mazo con una sola carta!!\n└¡¡Para que la llegada a la posición fija en el cuarto turno sea estable!!"
         }
       },
       {
@@ -16094,7 +16094,7 @@
       "ja": "【ホロカ】イナニスのデッキレシピと回し方",
       "zh-TW": "【hOCG】Inanis 牌組配置與打法",
       "en": "【hOCG】Inanis Deck Recipe and How to Play",
-      "fr": "【ホロカ】イナニスのデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Inanis.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Inanis"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/216401a6a261e96f26e6886dc2a0fee8.png",
@@ -16127,7 +16127,7 @@
           "zh-TW": "職責：攻擊手\n・根據存檔區Myth的數量獲得追加效果\n└5張時發動自身吶喊更換\n→相鄰的Holomen可多行動1點吶喊\n└10張時藝能變為110點傷害",
           "en": "Role: Attacker\n・Additional effects based on the number of Myth in Archive.\n└If 5, activate your own Cheer re-attachment.\n→Adjacent Holomen can act with 1 extra Cheer.\n└If 10, Arts become 110 damage.",
           "fr": "Rôle : Attaquant\n・Effet supplémentaire en fonction du nombre de Myth dans l'Archive\n└Avec 5 cartes, déclenche le changement d'Encouragement de soi-même\n→Le Membre adjacent peut agir avec 1 Encouragement de plus\n└Avec 10 cartes, les Arts infligent 110 points de dégâts",
-          "es": "役割：アタッカー\n・アーカイブのMythの数で追加効果\n└5枚で自身のエール付け替え発動\n→隣のホロメンが1エール多く動ける\n└10枚でアーツが110ダメージに"
+          "es": "Rol: Atacante\n・Efecto adicional según la cantidad de Myth en el Archivo.\n└Si son 5, se activa el cambio de Cheer propio.\n→El Holomen adyacente puede moverse con 1 Cheer más.\n└Si son 10, Arts inflige 110 puntos de daño."
         }
       },
       {
@@ -16409,7 +16409,7 @@
           "zh-TW": "角色：Buzz搜尋\n・聯動時，骰子出現偶數則搜尋Buzz\n・第1回合以後難以派出，且有失敗的風險\n・由於無法抽到Buzz Mio就無法開始牌組，因此有採用價值",
           "en": "Role:\nBuzz Search\n・If you roll an even number with dice during Collab, Buzz search\n・Difficult to deploy after turn 1 when going first, and there is a risk of failure\n・Since the deck doesn't start without drawing Buzz Mio, it's worth considering\n",
           "fr": "Rôle : Recherche Buzz\n・Lors d'un Collab, si vous obtenez un nombre pair au dé, vous cherchez Buzz.\n・Il est difficile de le jouer après le tour 1 en premier, et il y a un risque d'échec.\n・Comme le deck ne peut pas commencer sans piocher Buzz Mio, il a une valeur d'utilisation.",
-          "es": "役割：Buzzサーチ\n・コラボ時サイコロで偶数がでればBuzzサーチ\n・先攻1ターン目以降で出しづらい上に、失敗するリスクがある\n・Buzzミオを引けないと始まらないデッキなので、採用価値あり"
+          "es": "Rol: Búsqueda de Buzz\n・Si sacas un número par en el dado al hacer Collab, busca Buzz.\n・Es difícil de sacar después del primer turno yendo primero, y existe el riesgo de fallar.\n・Dado que el mazo no puede empezar sin robar Buzz Mio, tiene valor de inclusión."
         }
       }
     ],
@@ -16490,7 +16490,7 @@
       "ja": "【ホロカ】オリーイオフィのデッキレシピと回し方",
       "zh-TW": "【hOCG】Ollie IoFi 牌組配置與打法",
       "en": "【hOCG】Ollie IoFi Deck Recipe and How to Play",
-      "fr": "【ホロカ】オリーイオフィのデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Ollie Ophi.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Ollie IoFi"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/12/219c1c2e227ea88096bd9d434426e84e-1080x747.png",
@@ -16724,7 +16724,7 @@
       "ja": "【ホロカ】ぺこマリ（マリンぺこら）のデッキレシピの回し方",
       "zh-TW": "【hOCG】PekoMari (Marine Pekora) 牌組配置與打法",
       "en": "【hOCG】PekoMari (Marine Pekora) Deck Recipe and How to Play",
-      "fr": "【ホロカ】ぺこマリ（マリンぺこら）のデッキレシピの回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Pekomari (Marine Pekora).",
       "es": "【hOCG】Receta de mazo y cómo jugar: PekoMari (Marine Pekora)"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/12/pekora-marinn-1-1080x747.png",
@@ -16906,7 +16906,7 @@
       "ja": "【ホロカ】クロエ単のデッキレシピと回し方",
       "zh-TW": "【hOCG】Kuroe 單色牌組配置與打法",
       "en": "【hOCG】Chloe Mono Deck Recipe and How to Play",
-      "fr": "【ホロカ】クロエ単のデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Chloe Mono.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Chloe Mono"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/12/9-1080x747.png",
@@ -16987,7 +16987,7 @@
           "zh-TW": "職責：攻擊手\n・透過Gift查看牌堆上方3張，若Bloom等級相同則可奪取生命值\n┗老實說，即使是抽卡這個能力也是作弊\n・火力最高可達160點，與聯動攻擊即可擊倒對手的2nd\n・擁有對白色特攻也非常嬉しい\n┗對應Kanata的對戰很強",
           "en": "Role: Attacker\n・With a Gift, look at the top 3 cards and if they have the same Bloom level, you can take Life.\n┗Honestly, this ability is cheating even in a gacha.\n・Firepower can reach up to 160, so if you Collab and attack, you can take out the opponent's 2nd.\n・Having a White-type advantage is also very welcome.\n┗Strong against Kanata matchups.",
           "fr": "Rôle : Attaquant\n・Avec le Don, regardez les 3 cartes du dessus et prenez des Points de vie si le niveau de Bloom est le même\n┗Honnêtement, cette capacité est une triche même à la loterie\n・La puissance de feu peut atteindre 160, donc si vous attaquez avec un Collab, vous pouvez éliminer le 2nd de l'adversaire\n・Possède également une attaque spéciale contre les cartes blanches, ce qui est très apprécié\n┗Fort contre les matchups contreかなた",
-          "es": "役割：アタッカー\n・ギフトで山上3枚見て同じブルームレベルならライフを取れる\n┗正直ガチャでもこの能力はチート\n・火力も最大160出せるので、コラボと殴れば相手の2ndは取れる\n・白特攻持ちなのも非常に嬉しい\n┗かなた対面に強い"
+          "es": "Rol: Atacante\n・Con el Don, puedes ver las 3 cartas superiores y quitar vida si tienen el mismo nivel de Bloom.\n┗Honestamente, esta habilidad es \"cheat\" incluso en una \"gacha\".\n・La potencia de fuego también puede llegar hasta 160, por lo que si haces Collab y atacas, puedes eliminar al 2nd del oponente.\n・También es muy útil tener \"ataque especial blanco\".\n┗Fuerte contra el enfrentamiento contra Kanata."
         }
       },
       {
@@ -16999,7 +16999,7 @@
           "zh-TW": "角色：\n提升火力+吶喊加速\n・Arts火力提升10點\n・附加Inu並擊倒對方成員時，可以從存檔區回收吶喊，這點很棒\n・可以選擇吶喊的附加對象，這點很強力",
           "en": "Role:\nFirepower UP + Cheer Acceleration\n・Increases Arts firepower by 10\n・It's great that you can recover Cheer from Archive if you Down an opponent's Holomen with Inu attached\n・The ability to choose where to attach Cheer is powerful\n",
           "fr": "Rôle :\nAugmentation de la puissance de feu + Accélération d'Encouragement\n・Augmente la puissance de feu des Arts de 10 points.\n・Si vous mettez K.O. un membre de l'adversaire avec Inu attaché, vous pouvez récupérer de l'Encouragement depuis l'Archive, ce qui est excellent.\n・Il est puissant de pouvoir choisir où attacher l'Encouragement.",
-          "es": "役割：\n火力UP+エール加速\n・アーツの火力10点上げる\n・イヌをつけて相手のホロメンをダウンさせれば、アーカイブからエール回収できるのが偉い\n・エールのつけ先も選べるところが強力"
+          "es": "Rol:\nPotencia de fuego + Aceleración de Cheer\n・Aumenta la potencia de fuego de Arts en 10 puntos.\n・Si usas a Inu y derribas al Holomen del oponente, es genial poder recuperar Cheer del Archivo.\n・Es poderoso poder elegir dónde colocar el Cheer."
         }
       }
     ],
@@ -17226,7 +17226,7 @@
       "ja": "【ホロカ】みおかゆ（おかゆミオ）のデッキレシピと回し方",
       "zh-TW": "【hOCG】MioKaya (Kaya Mio) 牌組配置與打法",
       "en": "【hOCG】MioOkayu (Okayu Mio) Deck Recipe and How to Play",
-      "fr": "【ホロカ】みおかゆ（おかゆミオ）のデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Miokayu (Okayu Mio).",
       "es": "【hOCG】Receta de mazo y cómo jugar: MioKayu (Okayu Mio)"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/12/c3627a94907890f48764fdb7e93cee1d-1080x747.png",
@@ -17444,7 +17444,7 @@
       "ja": "【ホロカ】ノエル単（withぺこら）のデッキレシピと回し方",
       "zh-TW": "【hOCG】Noel 單色 (with Pekora) 牌組配置與打法",
       "en": "【hOCG】Noel Mono (with Pekora) Deck Recipe and How to Play",
-      "fr": "【ホロカ】ノエル単（withぺこら）のデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Noel Mono (avec Pekora).",
       "es": "【hOCG】Receta de mazo y cómo jugar: Noel Mono (con Pekora)"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/12/fb6ef1b1e0c9aaa5d11910e2a4a5c6c6-1080x747.png",
@@ -17513,7 +17513,7 @@
           "zh-TW": "職責：攻擊手\n・HP260，是Buzz中耐久度最高的\n・雖然需要3點吶喊，但最多可造成140點傷害\n┗若有Pekora，最快可在第二回合打出140點\n・只需要一張白色吶喊，與其他三期生相性良好",
           "en": "Role: Attacker\n・HP 260, the highest durability among Buzz.\n・Requires 3 Cheer, but can deal up to 140 damage.\n┗If Pekora is present, can deal 140 damage as early as turn 2.\n・Only requires one White Cheer, so it has good synergy with other 3rd Generation Holomen.",
           "fr": "Rôle : Attaquant\n・Durabilité de 260 PV, la plus élevée parmi les Buzz\n・Nécessite 3 Encouragements, mais peut infliger jusqu'à 140 points de dégâts\n┗Avecぺこら, il peut infliger 140 points de dégâts dès le 2ème tour\n・Nécessite seulement un Encouragement blanc, donc une bonne synergie avec les autres membres de la 3ème génération",
-          "es": "役割：アタッカー\n・HP260とBuzzの中でトップの耐久力\n・3エール必要だが、最大140点のダメージを出せる\n┗ぺこらがいれば最速2ターン目で140点飛ばせる\n・白エール一枚でいいので、他の3期生との相性もいい"
+          "es": "Rol: Atacante\n・La mayor durabilidad entre los Buzz con HP 260.\n・Requiere 3 Cheers, pero puede infligir hasta 140 puntos de daño.\n┗Si Pekora está presente, puedes lanzar 140 puntos de daño en el segundo turno más rápido.\n・Solo se necesita un Cheer blanco, por lo que tiene buena sinergia con otros miembros de la 3ª generación."
         }
       },
       {
@@ -17537,7 +17537,7 @@
           "zh-TW": "角色：\n提升火力\n・附加持有#酒的成員時，無風險獲得+20點傷害\n・與Noel相性良好，如果組隊以Noel為主，可以考慮加入\n・即使是初期附加給Debut Noel，也能獲得40點傷害，這點很棒",
           "en": "Role:\nFirepower Up\n・Attaching to a Holomen with #Alcohol results in +20 damage with no risk\n・Good synergy with Noel, so if you build a Noel deck, you might want to include it\n・It's also great that it deals 40 damage just by attaching it to Debut Noel at the start\n",
           "fr": "Rôle :\nAugmentation de la puissance de feu\n・Si vous l'attachez à un membre tenant une boisson (#), vous obtenez +20 points sans risque.\n・Il a une bonne synergie avec Noel, et si vous construisez un deck avec Noel, vous pouvez l'inclure.\n・Il est également excellent de pouvoir infliger 40 dégâts simplement en l'attachant à Debut Noel au début.",
-          "es": "役割：\n火力アップ\n・#お酒を持っているホロメンにつけるとノーリスクで+20点\n・ノエルとの相性が良く、ノエルたんで組むなら入れてもいい\n・地味に初手でデビューノエルにつけるだけで40点になるのも偉い"
+          "es": "Rol:\nAumento de potencia de fuego\n・Si se lo pones a un Holomen con #alcohol, obtienes +20 puntos sin riesgo.\n・Tiene buena sinergia con Noel, y si armas un mazo con Noel-tan, puedes incluirlo.\n・Es genial que simplemente poniéndoselo a Noel de Debut al principio se obtengan 40 puntos."
         }
       }
     ],
@@ -17602,7 +17602,7 @@
       "ja": "【ホロカ】シオン単のデッキレシピと回し方",
       "zh-TW": "【hOCG】Shion 單色牌組配置與打法",
       "en": "【hOCG】Shion Mono Deck Recipe and How to Play",
-      "fr": "【ホロカ】シオン単のデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Shion Mono.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Shion Mono"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/12/15-1080x747.png",
@@ -17695,7 +17695,7 @@
           "zh-TW": "角色：\n主要攻擊者\n・綻放時骰子50%機率操作吶喊\n・給予對方中心附加的吶喊張數×20點傷害給中心和聯動雙方\n┗以吶喊3張計算，一邊獲得80+60，另一邊獲得60，合計200點傷害",
           "en": "Role:\nMain Attacker\n・50% chance to manipulate Cheer on Bloom\n・Deals damage equal to 20 times the number of Cheers on the opponent's Center to both the Center and Collab\n┗With 3 Cheers, deals 80+60 to one and 60 to the other, for a total of 200 damage\n",
           "fr": "Rôle :\nAttaquant principal\n・Lors du Bloom, opération d'Encouragement avec 50% de chances au dé.\n・Inflige des dégâts égaux au nombre d'Encouragements attachés au Centre de l'adversaire × 20 au Centre et au Collab.\n┗Avec 3 Encouragements, 80+60 sur une cible, 60 sur l'autre, total 200 dégâts.",
-          "es": "役割：\nメインアタッカー\n・ブルーム時サイコロ50%でエール操作\n・相手のセンターについているエール数×20点をセンターとコラボ両方に与える\n┗エール3枚計算なら片方に80+60、もう片方に60の合計200ダメージ"
+          "es": "Rol:\nAtacante principal\n・Al hacer Bloom, opera Cheer con un 50% de probabilidad.\n・Inflige 20 puntos de daño al Centro y al Collab por cada Cheer en el Centro del oponente.\n┗Si calculas 3 Cheers, son 80+60 a un lado y 60 al otro, un total de 200 de daño."
         }
       },
       {
@@ -17820,7 +17820,7 @@
       "ja": "【ホロカ】オリーポルカのデッキレシピと回し方",
       "zh-TW": "【hOCG】Ollie Polka 牌組配置與打法",
       "en": "【hOCG】Ollie Polka Deck Recipe and How to Play",
-      "fr": "【ホロカ】オリーポルカのデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Ollie Polka.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Ollie Polka"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/11/a597fd46e9072818f40341ba53d8e0df-1080x608.png",
@@ -17901,7 +17901,7 @@
           "zh-TW": "角色：Buzz搜尋+附加粉絲\n・可以附加粉絲野的朋友\n・聯動時搜尋Debut Pekora",
           "en": "Role:\nBuzz Search +\nFan Attachment Unit\n・Can attach Fan \"Noel Friend\"\n・Search for Debut Polka with Collab\nBuy cards here\n",
           "fr": "Rôle : Recherche Buzz +\nAgent d'application de Fan\n・Vous pouvez attacher \"Fan no Elf Friend\".\n・Cherchez Debut Polka lors d'un Collab.",
-          "es": "役割：Buzzサーチ+\nファン付け要員\n・ファン野エルフレンドをつけられる\n・コラボでdebutポルカサーチ\nカードの購入はこちら"
+          "es": "Rol: Búsqueda de Buzz +\nAgente de colocación de Fans\n・Puedes colocar a \"Noy El Friend\".\n・Busca Polka de Debut con Collab.\nCompra de cartas aquí"
         }
       },
       {
@@ -17961,7 +17961,7 @@
           "zh-TW": "角色：回收Buzz Pekora\n・聯動時，骰子1/2機率回收Buzz Pekora\n└注意容易在聯動時被擊倒\n・將野兔同盟存檔，可以重擲Pekora的骰子\n└粉絲數量減少，Pekora的回收機率會提高！",
           "en": "Role:\nBuzz Polka Recovery\n・Can recover Buzz Polka with a 1/2 dice roll during Collab\n└ Be careful as it can be easily defeated only during Collab\n・By archiving the Usagi Alliance, you can re-roll Pekora's dice\n└ As the number of Fans decreases, the probability of recovering Polka increases!\nBuy cards here\n",
           "fr": "Rôle : Récupération de Buzz Polka\n・Lors d'un Collab, vous pouvez récupérer Buzz Polka avec 1/2 de probabilité au dé.\n└ Attention, il est facile de se faire mettre K.O. en Collab.\n・En archivant \"Usagi Alliance\", vous pouvez relancer le dé de Pekora.\n└ En réduisant le nombre de Fans, la probabilité de récupérer Polka augmente !",
-          "es": "役割：Buzzポルカ回収\n・コラボ時ダイス1/2でBuzzポルカを回収できる\n└コラボ限定でやられやすい点には注意\n・野うさぎ同盟はアーカイブすることでぺこらのダイスを振りなおせる\n└ファンの枚数が減る分、ポルカの回収確立が高くなる！\nカードの購入はこちら"
+          "es": "Rol: Recuperación de Buzz Polka\n・Recupera Buzz Polka con un dado de 1/2 al hacer Collab.\n└Ten cuidado con el punto de ser fácilmente eliminado en Collab.\n・Puedes volver a tirar el dado de Pekora archivando \"Nousagi Alliance\".\n└¡¡Cuanto menos Fans tengas, mayor será la probabilidad de recuperar a Polka!!\nCompra de cartas aquí"
         }
       },
       {
@@ -18066,7 +18066,7 @@
       "ja": "【ホロカ】5弾更新版！かなた単のデッキレシピと回し方！",
       "zh-TW": "【hOCG】5彈更新版！Kanata單色牌組配置與打法！",
       "en": "【hOCG】5th Set Updated! Kanata Mono Deck Recipe and How to Play!",
-      "fr": "【ホロカ】5弾更新版！かなた単のデッキレシピと回し方！",
+      "fr": "【hOCG】Mise à jour de la 5ème extension ! Recette de deck et comment jouer le deck Kanata Mono !",
       "es": "【hOCG】¡Actualización de la 5ª expansión! Receta de mazo y cómo jugar el mazo SuiGoz (Suisei Iroha)."
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/11/b9e002a87dbd28b23967ef58eee2b714-1080x747.png",
@@ -18123,7 +18123,7 @@
           "zh-TW": "職責：搜尋うぱお\n・可搜尋擁有10點增益/20點反擊的うぱお\n・與附加了吶喊的增益Kanata聯動後進行Bloom，可實質輸出70點（自身40點＋隊友30點增益）\n購買卡片請點此",
           "en": "Role: Upao Search\n・Allows you to search for Upao, who has a powerful 10 buff/20 counter.\n・If you Collab with a buffed Kanata with Cheer attached and then Bloom, you can deal effectively 70 damage (40 damage yourself + 30 buff to ally).\nBuy cards here",
           "fr": "Rôle : Recherche d'うぱお\n・Permet de rechercherうぱお, dont le buff de 10/ contre-attaque de 20 est puissant\n・Après un Collab avecかなた buffé par Encouragement, si vous le faites Bloom, vous pouvez infliger 70 points de dégâts (40 points par vous-même + 30 points de buff pour les alliés)\nAchetez la carte ici",
-          "es": "役割：うぱおサーチ\n・10バフ/20反撃が強力なうぱおをサーチ可能\n・エールの付いたバフかなたでコラボした後にBloomさせると、実質70点出せる（自身で40点＋味方に30バフ）\nカードの購入はこちら"
+          "es": "Rol: Búsqueda de Upa-o\n・Permite buscar Upa-o, que tiene un potente buff de 10 / contraataque de 20.\n・Si haces Collab con Kanata con Cheer adjunto y luego haces Bloom, puedes infligir efectivamente 70 puntos de daño (40 puntos tú mismo + 30 de buff a un aliado).\nCompra de cartas aquí"
         }
       },
       {
@@ -18135,7 +18135,7 @@
           "zh-TW": "職責：攻擊手\n・Bloom時對中心造成30點傷害\n┗與藝能合計可獨自造成80點傷害\n・有助於第三回合Kanata的50點過度擊殺",
           "en": "Role: Attacker\n・Deal 30 damage to Center when you Bloom.\n┗With Arts, can deal 80 damage alone.\n・Useful for Kanata's 50 overkill on turn 3.",
           "fr": "Rôle : Attaquant\n・30 points de dégâts au Centre lors du Bloom\n┗Avec les Arts, il peut infliger 80 points de dégâts à lui seul\n・Utile pour le dépassement de 50 points deかなた au 3ème tour\nAchetez la carte ici",
-          "es": "役割：アタッカー\n・Bloomした時センターに30ダメージ\n┗アーツと合わせて1人で80ダメージ出せる\n・3ターン目の2ndかなたの50オーバーキルに役立つ\nカードの購入はこちら"
+          "es": "Rol: Atacante\n・30 puntos de daño al Centro cuando haces Bloom.\n┗Puedes infligir 80 puntos de daño por ti mismo junto con Arts.\n・Útil para el \"overkill\" de 50 puntos del 2nd Kanata en el tercer turno.\nCompra de cartas aquí"
         }
       },
       {
@@ -18357,7 +18357,7 @@
           "zh-TW": "職責：搜尋あん肝\n・是將ときのそら培養成副攻擊手的必備卡\n・將あん肝附加給Sora，藝能所需的吶喊會減少1\n購買卡片請點此",
           "en": "Role: Ankimo Search\n・Essential for developing Tokino Sora into a sub-attacker.\n・Attaching Ankimo to Sora reduces the Cheer needed for Arts by 1.\nBuy cards here",
           "fr": "Rôle : Recherche d'あん肝\n・Indispensable pour faire évoluerときのそら en tant que sous-attaquant\n・Si vous attachez あん肝 àそら, l'Encouragement nécessaire pour les Arts diminue de 1\nAchetez la carte ici",
-          "es": "役割：あん肝サーチ\n・ときのそらをサブアタッカーへ育てるために必須\n・あん肝をそらに付ければアーツに必要なエールが1減る\nカードの購入はこちら"
+          "es": "Rol: Búsqueda de Ankimo\n・Esencial para desarrollar a Tokino Sora como atacante secundario.\n・Si le pones Ankimo a Sora, los Cheers necesarios para Arts se reducen en 1."
         }
       },
       {
@@ -18369,7 +18369,7 @@
           "zh-TW": "職責：攻擊手\n・Bloom時對中心造成30點傷害\n・與藝能合計可獨自造成80點傷害\n購買卡片請點此",
           "en": "Role: Attacker\n・Deal 30 damage to Center when you Bloom.\n・With Arts, can deal 80 damage alone.\nBuy cards here",
           "fr": "Rôle : Attaquant\n・30 points de dégâts au Centre lors du Bloom\n・Avec les Arts, il peut infliger 80 points de dégâts à lui seul\nAchetez la carte ici",
-          "es": "役割：アタッカー\n・ブルームした時センターに30ダメージ\n・アーツと合わせて1人で80ダメージ出せる\nカードの購入はこちら"
+          "es": "Compra de cartas aquí"
         }
       },
       {
@@ -18591,7 +18591,7 @@
           "zh-TW": "職責：攻擊手\n・造成50點傷害，同時對後排3位Holomen造成10點傷害\n・可大幅削弱對手的Debut、1st",
           "en": "Role: Attacker\n・Deal 50 damage while dealing 10 damage to 3 Back Holomen.\n・Significantly reduces the opponent's Debut and 1st.",
           "fr": "Rôle : Attaquant\n・Inflige 50 points de dégâts tout en infligeant 10 points de dégâts à 3 Membres arrière\n・Réduit considérablement le Debut et le 1st de l'adversaire\nAchetez la carte ici",
-          "es": "役割：アタッカー\n・50ダメージ与えつつバックホロメン3人に10ダメージ\n・相手のDebut、1stを大きく削れる\nカードの購入はこちら"
+          "es": "Rol: Atacante\n・Inflige 50 puntos de daño y 10 puntos de daño a 3 Holomen en retaguardia.\n・Reduce significativamente el Debut y el 1st del oponente.\nCompra de cartas aquí"
         }
       },
       {
@@ -18712,7 +18712,7 @@
       "ja": "【ホロカ】キアラポルカのデッキレシピと回し方",
       "zh-TW": "【hOCG】Kiara Polka 牌組配置與打法",
       "en": "【hOCG】Kiara Polka Deck Recipe and How to Play",
-      "fr": "【ホロカ】キアラポルカのデッキレシピと回し方",
+      "fr": "【hOCG】Recette de deck et comment jouer Kiara Polka.",
       "es": "【hOCG】Receta de mazo y cómo jugar: Kiara Polka"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/915fc2387d9e348a329350241e53d915-1-1080x1154.png",
@@ -18817,7 +18817,7 @@
           "zh-TW": "職責：攻擊手\n・兩種藝能皆具攻擊性且優秀\n┗1點吶喊造成50點傷害\n┗2點吶喊造成40+40點傷害\n・可增加存檔區Holomen的數量",
           "en": "Role: Attacker\n・Both Arts are offensive and excellent.\n┗50 damage with 1 Cheer.\n┗40+40 damage with 2 Cheer.\n・Increases the number of Holomen in Archive.",
           "fr": "Rôle : Attaquant\n・Les deux Arts sont offensifs et excellents\n┗50 points de dégâts avec 1 Encouragement\n┗40 + 40 points de dégâts avec 2 Encouragements\n・Permet d'accumuler le nombre de Membres dans l'Archive\nAchetez la carte ici",
-          "es": "役割：アタッカー\n・アーツが両方攻撃的で優秀\n┗1エールで50ダメージ\n┗2エールで40+40ダメージ\n・アーカイブのホロメンの枚数を稼げる\nカードの購入はこちら"
+          "es": "Rol: Atacante\n・Ambas Arts son ofensivas y excelentes.\n┗50 puntos de daño con 1 Cheer.\n┗40 + 40 puntos de daño con 2 Cheers.\n・Aumenta la cantidad de Holomen en el Archivo.\nCompra de cartas aquí"
         }
       },
       {
@@ -18934,7 +18934,7 @@
       "ja": "【ホロカ】5弾更新版！AZKi単のデッキレシピと回し方",
       "zh-TW": "【hOCG】5彈更新版！AZKi單色牌組配置與打法",
       "en": "【hOCG】5th Set Updated! AZKi Mono Deck Recipe and How to Play",
-      "fr": "【ホロカ】5弾更新版！AZKi単のデッキレシピと回し方",
+      "fr": "【hOCG】Mise à jour de la 5ème extension ! Recette de deck et comment jouer le deck AZKi Mono.",
       "es": "【hOCG】¡Actualización de la 5ª expansión! ¡Receta de mazo y cómo jugar el mazo Mono Kanata!"
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/10/6002d5b7f4100f01c4b4f5f3c573e423-1080x747.png",

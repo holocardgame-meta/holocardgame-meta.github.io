@@ -597,7 +597,7 @@ export function renderTournamentDeckModal(container, decklogId, decklogDecks, ca
         <span>${_esc(t('tournament_view_decklog')).replace(/→\s*$/, '')}</span>
         <span class="dl-arrow">→</span>
       </a>
-      <span class="deckp-footer-note">資料來源 · Bushiroad Deck Log</span>
+      <span class="deckp-footer-note">${_esc(t('tournament_source'))} · Bushiroad Deck Log</span>
     </div>
   ` : '';
 
@@ -605,7 +605,7 @@ export function renderTournamentDeckModal(container, decklogId, decklogDecks, ca
     <div class="deck-page">
       <header class="deckp-hero deckp-hero--flat">
         <div class="deckp-hero-left">
-          <div class="deckp-hero-eyebrow">牌組 DECK · RECIPE</div>
+          <div class="deckp-hero-eyebrow">${_esc(t('eyebrow_deck_recipe'))}</div>
           <h1 class="deckp-hero-title">${_esc(deck.title || '')}</h1>
           ${deck.oshi ? `<div class="deckp-hero-sub">${_esc(deck.oshi)}</div>` : ''}
           ${badgesHtml ? `<div class="deckp-hero-badges">${badgesHtml}</div>` : ''}

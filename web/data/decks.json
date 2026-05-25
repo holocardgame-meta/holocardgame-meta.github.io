@@ -1234,7 +1234,7 @@
       "ja": "【ホロカ】7弾更新版！ラプラス・ダークネス単のデッキレシピと回し方",
       "zh-TW": "【hOCG】7彈更新版！Laplus Darkness-san 單色牌組配置與打法",
       "en": "【hOCG】7th Set Update! Laplace Darkness Mono Deck Recipe and How to Play",
-      "fr": "【ホロカ】7弾更新版！ラプラス・ダークネス単のデッキレシピと回し方",
+      "fr": "【hOCG】Mise à jour de la 7ème extension ! Recette de deck et comment jouer du deck mono Laplus Darkness",
       "es": "【hOCG】 ¡Actualización de la 7ª expansión! Receta de mazo y cómo jugar con Laplace Darkness Mono."
     },
     "deck_image": "https://www.holocardstrategy.jp/wp-content/uploads/2025/06/28dfb1f82803c2b8165d75a3b9120f27-1080x608.png",
@@ -1254,7 +1254,7 @@
           "ja": "【ドロソ&エール軽減】\n・推しスキルで2ndと1stに使えるダイス操作\n└特に2ndの確定3ドローが強い！\n・SP推しスキルで＃秘密結社holoXを持つホロメン1人のアーツをタダ打ち！",
           "zh-TW": "【抽牌&減輕吶喊】\n・推技能可操作2nd與1st的骰子\n└特別是2nd的確定3張抽牌很強！\n・SP推技能使1名持有「＃秘密結社holoX」的成員的藝能免費使用！",
           "en": "【Draw Source & Cheer Reduction】\n・Dice manipulation usable for 2nd and 1st with Oshi Skill\n└ Especially the guaranteed 3 draws for 2nd are strong!\n・Free Arts for 1 Holomen with the #Secret Society holoX trait with SP Oshi Skill!",
-          "fr": "【ドロソ&エール軽減】\n・推しスキルで2ndと1stに使えるダイス操作\n└特に2ndの確定3ドローが強い！\n・SP推しスキルで＃秘密結社holoXを持つホロメン1人のアーツをタダ打ち！",
+          "fr": "【Source de pioche & Réduction d'encouragement】\n・Manipulation des dés utilisable pour le 2ème et le 1er Membre avec la Compétence Oshi\n└Surtout, la pioche garantie de 3 cartes du 2ème Membre est puissante !\n・Utilisez la Compétence Oshi SP pour lancer gratuitement les Arts d'un Membre possédant le tag ＃秘密結社holoX !",
           "es": "【Fuente de robo y reducción de Cheer】\n・Manipulación de dados que se puede usar para 2nd y 1st con la Habilidad Oshi.\n└ ¡Especialmente fuerte es el robo seguro de 3 cartas para 2nd!\n・¡Lanza 1 Arts de un Holomen con \"#Secret Society holoX\" gratis con la Habilidad Oshi SP!"
         }
       },
@@ -1314,7 +1314,7 @@
           "ja": "【デッキの安定感向上とエール軽減】\n・HP170の1stホロメン\n・CEでアーツを無色2エール軽減\n┗その後ブルームで2ndに効果を引き継ぐことも可能\n・アーツでラプラス・ダークネスなんでもサーチでデッキの安定感も向上",
           "zh-TW": "【提升牌組穩定性與減輕吶喊】\n・HP170的1st成員\n・CE使藝能減免2點無色吶喊\n┗之後也可透過綻放將效果繼承給2nd\n・藝能可搜尋「ラプラス・ダークネス」，提升牌組穩定性",
           "en": "【Improve Deck Stability and Reduce Cheer】\n・1st Holomen with 170 HP\n・Reduce Arts by 2 colorless Cheer with CE\n└ It's also possible to pass the effect to a 2nd with Bloom afterwards.\n・Arts allow searching for Laplace Darkness, etc., improving deck stability.",
-          "fr": "【デッキの安定感向上とエール軽減】\n・HP170の1stホロメン\n・CEでアーツを無色2エール軽減\n┗その後ブルームで2ndに効果を引き継ぐことも可能\n・アーツでラプラス・ダークネスなんでもサーチでデッキの安定感も向上",
+          "fr": "【Amélioration de la stabilité du deck et réduction de l'encouragement】\n・1er Membre avec 170 PV\n・Réduit les Arts de 2 Encouragements incolores avec CE\n┗Il est ensuite possible de transférer l'effet au 2ème avec Bloom\n・Les Arts permettent de chercher n'importe quelle carte du type Laplus Darkness, améliorant la stabilité du deck",
           "es": "【Mejora de la estabilidad del mazo y reducción de Cheer】\n・Holomen 1st con 170 HP.\n・Reduce 2 Cheer de Arts a incoloro con CE.\n┗ Después de eso, también es posible transferir el efecto a 2nd con Bloom.\n・Mejora la estabilidad del mazo buscando cualquier carta con Arts de Laplace Darkness."
         }
       },
@@ -1326,7 +1326,7 @@
           "ja": "【ドロソ&アタッカー】\n・ターン1だが優秀なドローソース！（推しスキルを使っていれば確定で3ドローできる）\n・アーツ効果でこのターン中にダイスを振った回数×10の特殊ダメージをセンターに与えるので、コラボエフェクトの1stと合わせて使いたい",
           "zh-TW": "【抽牌&攻擊者】\n・每回合1次，但優秀的抽牌來源！（若使用推技能，可確定抽3張）\n・藝能效果為此回合擲骰次數×10的特殊傷害給中心，想與聯動效果的1st搭配使用",
           "en": "【Draw Source & Attacker】\n・Once per turn, but an excellent draw source! (If you use Oshi Skill, you can draw 3 cards for sure)\n・With the Arts effect, deal 10 special damage per dice roll this turn to the Center, so use it in conjunction with the Collab Effect 1st.",
-          "fr": "【ドロソ&アタッカー】\n・ターン1だが優秀なドローソース！（推しスキルを使っていれば確定で3ドローできる）\n・アーツ効果でこのターン中にダイスを振った回数×10の特殊ダメージをセンターに与えるので、コラボエフェクトの1stと合わせて使いたい",
+          "fr": "【Source de pioche & Attaquant】\n・Source de pioche excellente, mais limitée à 1 fois par tour ! (Si vous utilisez une Compétence Oshi, vous pouvez piocher 3 cartes avec certitude)\n・L'effet des Arts inflige des dégâts spéciaux au Centre égaux au nombre de fois où les dés ont été lancés pendant ce tour ×10, donc utilisez-la en combinaison avec le 1er Membre du Collab Effect",
           "es": "【Fuente de robo y atacante】\n・¡Excelente fuente de robo, aunque limitada a 1 vez por turno! (Si has usado la Habilidad Oshi, puedes robar 3 cartas con seguridad).\n・Inflige daño especial al Centro igual al número de veces que se lanzaron dados en este turno ×10 con el efecto de Arts, así que quieres usarlo junto con 1st del efecto de Collab."
         }
       },
@@ -1338,7 +1338,7 @@
           "ja": "【ドロソ&アタッカー】\n・ブルームエフェクトで山上3枚からホロメンを好きな枚数回収\n・アーツの火力は少し物足りないものの旧2nd等でダメージを割り振っておいて単騎で倒せるように調整",
           "zh-TW": "【抽牌&攻擊者】\n・綻放效果從牌組上方3張牌中任意回收成員\n・藝能的火力稍嫌不足，但可透過舊2nd等分配傷害，調整為單獨擊倒",
           "en": "【Draw Source & Attacker】\n・Recover any number of Holomen from the top 3 cards with the Bloom effect.\n・Although the Arts firepower is a bit lacking, adjust it by distributing damage with an old 2nd, etc., so you can defeat them with a single unit.",
-          "fr": "【ドロソ&アタッカー】\n・ブルームエフェクトで山上3枚からホロメンを好きな枚数回収\n・アーツの火力は少し物足りないものの旧2nd等でダメージを割り振っておいて単騎で倒せるように調整",
+          "fr": "【Source de pioche & Attaquant】\n・Récupérez le nombre de Membres souhaité parmi les 3 cartes du dessus avec l'effet Bloom\n・Bien que la puissance de feu des Arts soit un peu insuffisante, ajustez pour pouvoir vaincre en solo en répartissant les dégâts avec un ancien 2ème Membre, etc.",
           "es": "【Fuente de robo y atacante】\n・Recupera cualquier número de Holomen de las 3 cartas superiores con el efecto Bloom.\n・Aunque la potencia de fuego de Arts es un poco insuficiente, ajusta para poder derribar a un solo Holomen asignando daño con 2nd antiguo, etc."
         }
       }

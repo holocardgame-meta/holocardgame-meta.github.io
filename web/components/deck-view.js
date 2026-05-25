@@ -151,10 +151,10 @@ function _renderGuidePage(container, { deckInfo, tierNum, recipe, cardsData }) {
 
   // Build TOC dynamically — only show sections that have real data
   const sections = [];
-  if (descText) sections.push({ id: 'overview', no: '01', title: '概要',     titleEn: 'Overview' });
-  if (featuresList.length) sections.push({ id: 'features', no: String(sections.length + 1).padStart(2, '0'), title: '特徴',     titleEn: 'Features' });
-  if (cards.length) sections.push({ id: 'keycards', no: String(sections.length + 1).padStart(2, '0'), title: '採用カード', titleEn: 'Key cards' });
-  if (strategy.length) sections.push({ id: 'strategy', no: String(sections.length + 1).padStart(2, '0'), title: '回し方',     titleEn: 'Strategy' });
+  if (descText) sections.push({ id: 'overview', no: '01', title: t('section_overview'),     titleEn: 'Overview' });
+  if (featuresList.length) sections.push({ id: 'features', no: String(sections.length + 1).padStart(2, '0'), title: t('section_features'),     titleEn: 'Features' });
+  if (cards.length) sections.push({ id: 'keycards', no: String(sections.length + 1).padStart(2, '0'), title: t('official_key_cards'), titleEn: 'Key cards' });
+  if (strategy.length) sections.push({ id: 'strategy', no: String(sections.length + 1).padStart(2, '0'), title: t('section_strategy'),     titleEn: 'Strategy' });
 
   if (sections.length === 0) {
     container.innerHTML = `
@@ -179,10 +179,10 @@ function _renderGuidePage(container, { deckInfo, tierNum, recipe, cardsData }) {
   const deckImage = recipe?.deck_image || deckInfo?.image || '';
 
   const heroMeta = [
-    vtuber ? { label: '推し', val: _esc(vtuber) } : null,
-    colorsHtml ? { label: '色',  valHtml: `<span class="hero-meta-val hero-colors">${colorsHtml}</span>`, raw: true } : null,
-    recipe?.deck_id ? { label: 'ID',  val: _esc(recipe.deck_id), mono: true } : null,
-    recipe?.date ? { label: '更新', val: _esc(recipe.date), mono: true } : null,
+    vtuber ? { label: t('meta_oshi'), val: _esc(vtuber) } : null,
+    colorsHtml ? { label: t('meta_color'),  valHtml: `<span class="hero-meta-val hero-colors">${colorsHtml}</span>`, raw: true } : null,
+    recipe?.deck_id ? { label: t('meta_id'),  val: _esc(recipe.deck_id), mono: true } : null,
+    recipe?.date ? { label: t('meta_updated'), val: _esc(recipe.date), mono: true } : null,
   ].filter(Boolean);
 
   const heroMetaHtml = heroMeta.map(m => {
@@ -199,7 +199,7 @@ function _renderGuidePage(container, { deckInfo, tierNum, recipe, cardsData }) {
       <span class="toc-no">${s.no}</span>
       <span class="toc-text">
         <span class="toc-title">${_esc(s.title)}</span>
-        <span class="toc-titleEn">${_esc(s.titleEn)}</span>
+        ${s.title.toLowerCase() !== s.titleEn.toLowerCase() ? `<span class="toc-titleEn">${_esc(s.titleEn)}</span>` : ''}
       </span>
     </button>
   `).join('');
@@ -262,7 +262,7 @@ function _renderGuidePage(container, { deckInfo, tierNum, recipe, cardsData }) {
           <div class="section-no">${s.no}</div>
           <div>
             <h2>${_esc(s.title)}</h2>
-            <div class="section-sub">${_esc(s.titleEn)}</div>
+            ${s.title.toLowerCase() !== s.titleEn.toLowerCase() ? `<div class="section-sub">${_esc(s.titleEn)}</div>` : ''}
           </div>
         </header>
         ${body}
@@ -273,7 +273,7 @@ function _renderGuidePage(container, { deckInfo, tierNum, recipe, cardsData }) {
   const railHtml = recipe?.url
     ? `<aside class="guide-rail">
         <div class="rail-block">
-          <div class="rail-label">出典 / Source</div>
+          <div class="rail-label">${_esc(t('meta_source'))} / Source</div>
           <ul class="rail-sources">
             <li><a href="${_esc(recipe.url)}" target="_blank" rel="noopener">${_esc(t('source_link'))}</a></li>
           </ul>
@@ -294,7 +294,7 @@ function _renderGuidePage(container, { deckInfo, tierNum, recipe, cardsData }) {
             ${tierLetter}
           </div>
           <div class="guide-hero-text">
-            <div class="guide-hero-eyebrow">攻略 GUIDE</div>
+            <div class="guide-hero-eyebrow">${_esc(t('eyebrow_guide'))}</div>
             <h1 class="guide-hero-title">${_esc(titleZh)}</h1>
             ${titleJa || titleEn ? `<div class="guide-hero-sub">${_esc(titleJa || titleEn)}</div>` : ''}
             ${heroMetaHtml ? `<div class="guide-hero-meta">${heroMetaHtml}</div>` : ''}
@@ -351,12 +351,12 @@ function _renderOfficialDeckModal(container, deck) {
 
   // Build TOC dynamically — only show sections that have data
   const sections = [];
-  if (descText) sections.push({ id: 'overview', no: '01', title: '概要',       titleEn: 'Overview' });
-  if (deck.oshi || deck.oshi_image) sections.push({ id: 'oshi', no: String(sections.length + 1).padStart(2, '0'), title: '推し',       titleEn: 'Oshi' });
-  if (keyCards.length) sections.push({ id: 'keycards', no: String(sections.length + 1).padStart(2, '0'), title: '主要卡片',   titleEn: 'Key cards' });
-  if (mainDeck.length) sections.push({ id: 'main',     no: String(sections.length + 1).padStart(2, '0'), title: 'メインデッキ', titleEn: 'Main deck' });
-  if (cheerDeck.length) sections.push({ id: 'cheer',   no: String(sections.length + 1).padStart(2, '0'), title: 'エールデッキ', titleEn: 'Cheer deck' });
-  if (strategy.length) sections.push({ id: 'strategy', no: String(sections.length + 1).padStart(2, '0'), title: '戦略',       titleEn: 'Strategy' });
+  if (descText) sections.push({ id: 'overview', no: '01', title: t('section_overview'),  titleEn: 'Overview' });
+  if (deck.oshi || deck.oshi_image) sections.push({ id: 'oshi', no: String(sections.length + 1).padStart(2, '0'), title: t('tournament_oshi_card'),  titleEn: 'Oshi' });
+  if (keyCards.length) sections.push({ id: 'keycards', no: String(sections.length + 1).padStart(2, '0'), title: t('official_key_cards'),   titleEn: 'Key cards' });
+  if (mainDeck.length) sections.push({ id: 'main',     no: String(sections.length + 1).padStart(2, '0'), title: t('tournament_main_deck'), titleEn: 'Main deck' });
+  if (cheerDeck.length) sections.push({ id: 'cheer',   no: String(sections.length + 1).padStart(2, '0'), title: t('tournament_cheer_deck'),titleEn: 'Cheer deck' });
+  if (strategy.length) sections.push({ id: 'strategy', no: String(sections.length + 1).padStart(2, '0'), title: t('section_strategy'),     titleEn: 'Strategy' });
 
   if (sections.length === 0) {
     container.innerHTML = `<div class="guide-page"><header class="guide-hero"><h1 class="guide-hero-title">${_esc(title)}</h1></header></div>`;
@@ -364,9 +364,9 @@ function _renderOfficialDeckModal(container, deck) {
   }
 
   const heroMeta = [
-    deck.oshi ? { label: '推し', val: _esc(deck.oshi) } : null,
-    deck.date ? { label: '更新', val: _esc(deck.date), mono: true } : null,
-    deck.source ? { label: '出典', val: _esc(deck.source) } : null,
+    deck.oshi ? { label: t('meta_oshi'), val: _esc(deck.oshi) } : null,
+    deck.date ? { label: t('meta_updated'), val: _esc(deck.date), mono: true } : null,
+    deck.source ? { label: t('meta_source'), val: _esc(deck.source) } : null,
   ].filter(Boolean);
 
   const heroMetaHtml = heroMeta.map(m => {
@@ -382,7 +382,7 @@ function _renderOfficialDeckModal(container, deck) {
       <span class="toc-no">${s.no}</span>
       <span class="toc-text">
         <span class="toc-title">${_esc(s.title)}</span>
-        <span class="toc-titleEn">${_esc(s.titleEn)}</span>
+        ${s.title.toLowerCase() !== s.titleEn.toLowerCase() ? `<span class="toc-titleEn">${_esc(s.titleEn)}</span>` : ''}
       </span>
     </button>
   `).join('');
@@ -413,7 +413,7 @@ function _renderOfficialDeckModal(container, deck) {
         <div class="oshi-spotlight clickable-card"${oshiId ? ` data-card-id="${_esc(oshiId)}"` : ''}>
           ${deck.oshi_image ? `<img class="oshi-img" src="${_esc(deck.oshi_image)}" alt="${_esc(deck.oshi || '')}" loading="lazy" decoding="async">` : ''}
           <div class="oshi-info">
-            <div class="oshi-eyebrow">推しホロメン</div>
+            <div class="oshi-eyebrow">${_esc(t('oshi_holomen_label'))}</div>
             <div class="oshi-name">${_esc(deck.oshi || '')}</div>
             ${oshiId ? `<div class="oshi-id">${_esc(oshiId)}</div>` : ''}
           </div>
@@ -460,7 +460,7 @@ function _renderOfficialDeckModal(container, deck) {
           <div class="section-no">${s.no}</div>
           <div>
             <h2>${_esc(s.title)}</h2>
-            <div class="section-sub">${_esc(s.titleEn)}</div>
+            ${s.title.toLowerCase() !== s.titleEn.toLowerCase() ? `<div class="section-sub">${_esc(s.titleEn)}</div>` : ''}
           </div>
         </header>
         ${body}
@@ -471,7 +471,7 @@ function _renderOfficialDeckModal(container, deck) {
   const railHtml = deck.url
     ? `<aside class="guide-rail">
         <div class="rail-block">
-          <div class="rail-label">出典 / Source</div>
+          <div class="rail-label">${_esc(t('meta_source'))} / Source</div>
           <ul class="rail-sources">
             <li><a href="${_esc(deck.url)}" target="_blank" rel="noopener">${_esc(t('source_link'))}</a></li>
           </ul>
@@ -492,7 +492,7 @@ function _renderOfficialDeckModal(container, deck) {
             <div class="emblem-letter">OFCL</div>
           </div>
           <div class="guide-hero-text">
-            <div class="guide-hero-eyebrow">公式 OFFICIAL</div>
+            <div class="guide-hero-eyebrow">${_esc(t('eyebrow_official'))}</div>
             <h1 class="guide-hero-title">${_esc(title)}</h1>
             ${heroMetaHtml ? `<div class="guide-hero-meta">${heroMetaHtml}</div>` : ''}
           </div>
