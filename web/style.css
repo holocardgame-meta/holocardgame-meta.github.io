@@ -3354,6 +3354,13 @@ body {
   border-bottom: 1px solid transparent;
   transition: background 0.15s;
 }
+.tournament-group-meta {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.85rem;
+  margin-left: auto;
+}
 .tournament-group-header::-webkit-details-marker { display: none; }
 .tournament-group-header::before {
   content: '▶';
@@ -3446,6 +3453,43 @@ body {
   background: rgba(0, 200, 255, 0.15);
   color: var(--accent-cyan);
   border: 1px solid rgba(0, 200, 255, 0.3);
+}
+
+/* Mobile: title on own row, meta wraps below */
+@media (max-width: 640px) {
+  .tournament-group-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 0.55rem;
+    row-gap: 6px;
+    padding: 0.7rem 0.85rem;
+    align-items: baseline;
+  }
+  .tournament-group-header::before {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+  }
+  .tournament-group-name {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 0.98rem;
+    line-height: 1.25;
+  }
+  .tournament-group-meta {
+    grid-column: 2;
+    grid-row: 2;
+    margin-left: 0;
+    gap: 4px 0.7rem;
+    font-size: 0.72rem;
+  }
+  .tournament-group-meta .tournament-event-date,
+  .tournament-group-meta .tournament-event-location,
+  .tournament-group-meta .tournament-event-count {
+    font-size: 0.72rem;
+    white-space: nowrap;
+  }
+  .tournament-group-body { padding: 0.7rem; }
 }
 .upcoming-event {
   opacity: 0.7;

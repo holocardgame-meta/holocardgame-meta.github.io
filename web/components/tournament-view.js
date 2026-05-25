@@ -360,14 +360,18 @@ export function renderTournamentView(container, decklogDecks, cardsData) {
       ? `<span class="tournament-event-location">${group.location}</span>`
       : '';
 
+    const metaBits = [
+      group.date ? `<span class="tournament-event-date">${group.date}</span>` : '',
+      groupLocationHtml,
+      groupStatusBadge,
+      totalDecks ? `<span class="tournament-event-count">${totalDecks} ${t('decks_count')}</span>` : '',
+    ].filter(Boolean).join('');
+
     html += `
       <details class="tournament-group${isUpcomingGroup ? ' upcoming-event' : ''}" ${isOpen ? 'open' : ''}>
         <summary class="tournament-group-header">
           <span class="tournament-group-name">${groupKey}</span>
-          ${group.date ? `<span class="tournament-event-date">${group.date}</span>` : ''}
-          ${groupLocationHtml}
-          ${groupStatusBadge}
-          ${totalDecks ? `<span class="tournament-event-count">${totalDecks} ${t('decks_count')}</span>` : ''}
+          ${metaBits ? `<span class="tournament-group-meta">${metaBits}</span>` : ''}
         </summary>
         <div class="tournament-group-body">
           ${innerHtml}
