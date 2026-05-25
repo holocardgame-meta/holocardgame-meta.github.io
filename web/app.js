@@ -28,6 +28,32 @@ const filters = {
 const _loaded = { cards: false, decklog: false };
 const _guideDetailCache = new Map();
 
+function trackGaEvent(eventName, params = {}) {
+  const gtag = window.gtag;
+  if (typeof gtag !== 'function') return;
+  gtag('event', eventName, {
+    app_name: 'HOLOCARD META',
+    view_name: currentView,
+    language: getLang(),
+    ...params,
+  });
+}
+
+function trackGaPageView(viewName) {
+  trackGaEvent('page_view', {
+    page_title: `HOLOCARD META - ${viewName}`,
+    page_location: `${window.location.origin}${window.location.pathname}#${viewName}`,
+  });
+}
+
+function trackFilterChange(filterType, filterValue, isActive) {
+  trackGaEvent('filter_change', {
+    filter_type: filterType,
+    filter_value: filterValue,
+    filter_state: isActive ? 'add' : 'remove',
+  });
+}
+
 function _fetchJSON(url) {
   return fetch(url).then(r => r.ok ? r.json() : null);
 }
@@ -177,9 +203,12 @@ function updateTopbarSubtitleFromGuides() {
 function setupNav() {
   document.querySelectorAll('.nav-item[data-view]').forEach(btn => {
     const activate = () => {
+      const nextView = btn.dataset.view;
       document.querySelectorAll('.nav-item[data-view]').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      currentView = btn.dataset.view;
+      const changedView = nextView !== currentView;
+      currentView = nextView;
+      if (changedView) trackGaPageView(currentView);
       closeDrawer();
       render();
     };
@@ -216,8 +245,10 @@ function setupFilters() {
   document.querySelectorAll('#colorDotGrid .color-dot').forEach(btn => {
     btn.addEventListener('click', () => {
       const v = btn.dataset.color;
-      if (filters.colors.has(v)) filters.colors.delete(v);
-      else filters.colors.add(v);
+      const nextActive = !filters.colors.has(v);
+      if (nextActive) filters.colors.add(v);
+      else filters.colors.delete(v);
+      trackFilterChange('color', v, nextActive);
       applyFilterUI();
       render();
     });
@@ -226,8 +257,10 @@ function setupFilters() {
   document.querySelectorAll('#tierChipRow .tier-chip').forEach(btn => {
     btn.addEventListener('click', () => {
       const v = btn.dataset.tier;
-      if (filters.tiers.has(v)) filters.tiers.delete(v);
-      else filters.tiers.add(v);
+      const nextActive = !filters.tiers.has(v);
+      if (nextActive) filters.tiers.add(v);
+      else filters.tiers.delete(v);
+      trackFilterChange('tier', v, nextActive);
       applyFilterUI();
       render();
     });
@@ -236,8 +269,10 @@ function setupFilters() {
   document.querySelectorAll('#typeChipRow .tier-chip').forEach(btn => {
     btn.addEventListener('click', () => {
       const v = btn.dataset.type;
-      if (filters.types.has(v)) filters.types.delete(v);
-      else filters.types.add(v);
+      const nextActive = !filters.types.has(v);
+      if (nextActive) filters.types.add(v);
+      else filters.types.delete(v);
+      trackFilterChange('type', v, nextActive);
       applyFilterUI();
       render();
     });
@@ -247,18 +282,21 @@ function setupFilters() {
   document.getElementById('colorFilterClear')?.addEventListener('click', (e) => {
     e.stopPropagation();
     filters.colors.clear();
+    trackGaEvent('filter_clear', { filter_type: 'color' });
     applyFilterUI();
     render();
   });
   document.getElementById('tierFilterClear')?.addEventListener('click', (e) => {
     e.stopPropagation();
     filters.tiers.clear();
+    trackGaEvent('filter_clear', { filter_type: 'tier' });
     applyFilterUI();
     render();
   });
   document.getElementById('typeFilterClear')?.addEventListener('click', (e) => {
     e.stopPropagation();
     filters.types.clear();
+    trackGaEvent('filter_clear', { filter_type: 'type' });
     applyFilterUI();
     render();
   });
@@ -267,6 +305,7 @@ function setupFilters() {
     filters.colors.clear();
     filters.tiers.clear();
     filters.types.clear();
+    trackGaEvent('filter_clear', { filter_type: 'all' });
     applyFilterUI();
     render();
   });
@@ -350,6 +389,7 @@ function updateActiveFilterBar() {
       const val = p.dataset.value;
       const set = kind === 'color' ? filters.colors : kind === 'tier' ? filters.tiers : filters.types;
       set.delete(val);
+      trackFilterChange(kind, val, false);
       applyFilterUI();
       render();
     });
@@ -358,6 +398,7 @@ function updateActiveFilterBar() {
     filters.colors.clear();
     filters.tiers.clear();
     filters.types.clear();
+    trackGaEvent('filter_clear', { filter_type: 'all_active_bar' });
     applyFilterUI();
     render();
   });
@@ -373,6 +414,12 @@ function setupTopbarSearch() {
     timeout = setTimeout(() => {
       const v = topSearch.value.trim();
       filters.search = v;
+      if (v.length >= 2) {
+        trackGaEvent('search', {
+          search_term: v,
+          search_context: currentView,
+        });
+      }
 
       if (currentView === 'guides') {
         const g = document.getElementById('guideSearch');
@@ -472,10 +519,18 @@ function setupLangSwitcher() {
 
   pop.querySelectorAll('.lang-opt').forEach(opt => {
     const choose = () => {
-      setLang(opt.dataset.lang);
+      const previousLanguage = getLang();
+      const selectedLanguage = opt.dataset.lang;
+      setLang(selectedLanguage);
       applyStaticTranslations();
       renderLangSwitcher();
       updateNavCounts();
+      if (selectedLanguage !== previousLanguage) {
+        trackGaEvent('language_change', {
+          previous_language: previousLanguage,
+          selected_language: selectedLanguage,
+        });
+      }
       render();
       closePop();
       trigger.focus();
@@ -505,6 +560,11 @@ function setupModals() {
         await ensureCards();
         const card = cardsData.find(c => c.id === cardId);
         if (card) {
+          trackGaEvent('select_content', {
+            content_type: 'card',
+            item_id: cardId,
+            source: 'inline_card',
+          });
           renderCardDetail(cardModalBody, card, cardsData, rulesData);
           cardModal.hidden = false;
           document.body.style.overflow = 'hidden';
@@ -517,6 +577,10 @@ function setupModals() {
     if (tournamentDeckCard) {
       const decklogId = tournamentDeckCard.dataset.decklogId;
       await ensureCardIndex();
+      trackGaEvent('select_content', {
+        content_type: 'tournament_deck',
+        item_id: decklogId,
+      });
       renderTournamentDeckModal(deckModalBody, decklogId, decklogDecks, cardIndexData);
       deckModal.hidden = false;
       document.body.style.overflow = 'hidden';
@@ -527,6 +591,10 @@ function setupModals() {
     if (deckCard) {
       const deckId = deckCard.dataset.deckId;
       await Promise.all([ensureCardIndex(), ensureGuideDetail(deckId)]);
+      trackGaEvent('select_content', {
+        content_type: 'deck_guide',
+        item_id: deckId,
+      });
       renderDeckModal(deckModalBody, deckId, tierData, decksData, allGuides, officialDecks, cardIndexData);
       deckModal.hidden = false;
       document.body.style.overflow = 'hidden';
@@ -538,6 +606,11 @@ function setupModals() {
       const cardId = galleryCard.dataset.cardId;
       await ensureCards();
       const card = cardsData.find(c => c.id === cardId);
+      trackGaEvent('select_content', {
+        content_type: 'card',
+        item_id: cardId,
+        source: 'card_gallery',
+      });
       renderCardDetail(cardModalBody, card, cardsData, rulesData);
       cardModal.hidden = false;
       document.body.style.overflow = 'hidden';
@@ -565,6 +638,28 @@ function setupModals() {
   });
 }
 
+function setupOutboundTracking() {
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href]');
+    if (!link) return;
+    const href = link.getAttribute('href');
+    if (!href) return;
+
+    let url;
+    try {
+      url = new URL(href, window.location.href);
+    } catch {
+      return;
+    }
+    if (url.origin === window.location.origin) return;
+
+    trackGaEvent('click_outbound', {
+      link_domain: url.hostname,
+      link_url: url.href,
+    });
+  });
+}
+
 // ── Boot ─────────────────────────────────────────────────────────────────
 async function init() {
   initI18n();
@@ -577,6 +672,7 @@ async function init() {
   setupDrawer();
   setupLangSwitcher();
   setupModals();
+  setupOutboundTracking();
   applyFilterUI();
   await loadCoreData();
   updateNavCounts();
