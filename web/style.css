@@ -4354,15 +4354,10 @@ body {
 .ios-install-icon {
   width: 42px;
   height: 42px;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(180deg, #ffeb9a 0%, #f4c842 60%, #c98e1f 100%);
-  color: #1a0e02;
-  border: 1px solid #ffe48a;
+  display: block;
   border-radius: 8px;
-  font-family: 'Cinzel', serif;
-  font-weight: 900;
   box-shadow: 0 6px 18px rgba(0,0,0,.38);
+  flex-shrink: 0;
 }
 .ios-install-copy {
   min-width: 0;
