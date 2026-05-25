@@ -1,20 +1,44 @@
 import { t, localized } from '../i18n.js';
 
-const COLOR_ZH_MAP = { '白': '白', '綠': '緑', '紅': '赤', '藍': '青', '紫': '紫', '黃': '黄' };
+const COLOR_ALIAS = {
+  '白': '白',
+  '綠': '綠',
+  '緑': '綠',
+  '紅': '紅',
+  '赤': '紅',
+  '藍': '藍',
+  '青': '藍',
+  '紫': '紫',
+  '黃': '黃',
+  '黄': '黃',
+};
+const COLOR_CSS = { '白': '#e8e8e8', '綠': '#4caf50', '紅': '#f44336', '藍': '#2196f3', '紫': '#9c27b0', '黃': '#ffeb3b' };
 const PAGE_SIZE = 50;
 const TIER_LETTER = { 1: 'S', 2: 'A', 3: 'B' };
+
+function _normalizeColor(color) {
+  return COLOR_ALIAS[String(color || '').trim()] || '';
+}
+
+function _colorsFromValue(value) {
+  return String(value || '')
+    .split('/')
+    .map(_normalizeColor)
+    .filter(Boolean);
+}
 
 function _getDeckColors(deck, cardsMap) {
   const colors = {};
   for (const c of deck.cards || []) {
     const id = c.card_id;
-    if (!id) continue;
-    const dbCard = cardsMap[id];
-    if (dbCard?.color) {
-      colors[dbCard.color] = (colors[dbCard.color] || 0) + 1;
+    const dbCard = id ? cardsMap[id] : null;
+    for (const color of _colorsFromValue(dbCard?.color || c.color)) {
+      colors[color] = (colors[color] || 0) + 1;
     }
   }
-  return Object.keys(colors).sort((a, b) => colors[b] - colors[a]);
+  return Object.keys(colors)
+    .filter(c => COLOR_CSS[c])
+    .sort((a, b) => colors[b] - colors[a]);
 }
 
 let _state = null;
@@ -55,8 +79,7 @@ export function renderGuidesView(container, allGuides, decksData, cardsData, fil
     filtered = filtered.filter(d => {
       const deckColors = _getDeckColors(d, cardsMap);
       for (const sel of colorSet) {
-        const ja = COLOR_ZH_MAP[sel] || sel;
-        if (deckColors.includes(ja) || deckColors.includes(sel)) return true;
+        if (deckColors.includes(_normalizeColor(sel))) return true;
       }
       return false;
     });
@@ -192,8 +215,6 @@ export function renderGuidesView(container, allGuides, decksData, cardsData, fil
     });
   }
 }
-
-const COLOR_CSS = { '白': '#e8e8e8', '緑': '#4caf50', '赤': '#f44336', '青': '#2196f3', '紫': '#9c27b0', '黄': '#ffeb3b' };
 
 function renderGuideCard(deck, cardsMap, index = Infinity) {
   const title = localized(deck.title, deck.deck_id || '');
