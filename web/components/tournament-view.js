@@ -183,10 +183,50 @@ const USAGE_RATE_DATA = {
   },
 };
 
-const USAGE_COLORS = [
-  '#00c8ff', '#ff6b9d', '#ffd93d', '#6bcb77',
-  '#9b59b6', '#ff8c42', '#45b7d1', '#96ceb4',
-];
+// Oshi color (from hololive OCG card color) → bar fill colour.
+// Lets the same oshi show in the same colour across every chart.
+const OSHI_COLOR = {
+  // 綠 (green)
+  'AZKi': 'green',
+  '儒烏風亭らでん': 'green',
+  '兎田ぺこら': 'green',
+  '大神ミオ': 'green',
+  '風真いろは': 'green',
+  // 藍 (blue)
+  'オーロ・クロニー': 'blue',
+  'シオリ・ノヴェラ': 'blue',
+  '星街すいせい': 'blue',
+  '沙花叉クロヱ': 'blue',
+  // 紫 (purple)
+  'クレイジー・オリー': 'purple',
+  'ラプラス・ダークネス': 'purple',
+  '森カリオペ': 'purple',
+  // 黃 (yellow)
+  '大空スバル': 'yellow',
+  '戌神ころね': 'yellow',
+  '桃鈴ねね': 'yellow',
+  '角巻わため': 'yellow',
+  // 紅 (red)
+  '宝鐘マリン': 'red',
+  '小鳥遊キアラ': 'red',
+  '尾丸ポルカ': 'red',
+  '百鬼あやめ': 'red',
+  '赤井はあと': 'red',
+  // 白 (white)
+  '天音かなた': 'white',
+  '姫森ルーナ': 'white',
+  '響咲リオナ': 'white',
+};
+
+const CARD_COLOR_HEX = {
+  green:  '#4caf50',
+  blue:   '#2196f3',
+  purple: '#9c27b0',
+  yellow: '#ffeb3b',
+  red:    '#f44336',
+  white:  '#e0e0e0',
+  other:  '#888888',
+};
 
 export function renderTournamentView(container, decklogDecks, cardsData) {
   const cardsMap = {};
@@ -240,38 +280,104 @@ export function renderTournamentView(container, decklogDecks, cardsData) {
   const today = new Date().toISOString().slice(0, 10);
   const usageRendered = new Set();
 
-  for (const [event, { decks, date, location }] of sortedEvents) {
-    const isUpcoming = date > today;
-    const statusBadge = isUpcoming
-      ? `<span class="tournament-event-status upcoming">${t('tournament_upcoming')}</span>`
-      : '';
+  // Group sub-events back under their parent tournament name (everything before the first " - ").
+  // e.g. "WGP25-26 Fukuoka - 個人戦 - A Block" → group "WGP25-26 Fukuoka".
+  const groups = {};
+  const groupOrder = [];
+  for (const [event, data] of sortedEvents) {
+    const groupKey = event.split(' - ')[0];
+    if (!groups[groupKey]) {
+      groups[groupKey] = { events: [], date: data.date || '', location: data.location || '' };
+      groupOrder.push(groupKey);
+    }
+    groups[groupKey].events.push([event, data]);
+    if (!groups[groupKey].location && data.location) groups[groupKey].location = data.location;
+  }
 
-    const locationHtml = location
-      ? `<span class="tournament-event-location">${location}</span>`
-      : '';
+  for (let gi = 0; gi < groupOrder.length; gi++) {
+    const groupKey = groupOrder[gi];
+    const group = groups[groupKey];
+    const totalDecks = group.events.reduce((sum, [, d]) => sum + d.decks.length, 0);
+    const isUpcomingGroup = group.date > today;
+    const isOpen = gi === 0; // first (most recent) group starts open
+    const subSectionCount = group.events.length;
+    const showInnerHeader = subSectionCount > 1; // single-section groups don't need the redundant inner header
 
-    const usageKey = _findUsageKey(event);
-    let usageHtml = '';
-    if (usageKey && !usageRendered.has(usageKey)) {
-      usageRendered.add(usageKey);
-      usageHtml = _renderUsageChart(USAGE_RATE_DATA[usageKey]);
+    let innerHtml = '';
+    for (const [event, { decks, date, location }] of group.events) {
+      const isUpcoming = date > today;
+      const statusBadge = isUpcoming
+        ? `<span class="tournament-event-status upcoming">${t('tournament_upcoming')}</span>`
+        : '';
+
+      const locationHtml = (showInnerHeader && location)
+        ? `<span class="tournament-event-location">${location}</span>`
+        : '';
+
+      const usageKey = _findUsageKey(event);
+      let usageHtml = '';
+      if (usageKey && !usageRendered.has(usageKey)) {
+        usageRendered.add(usageKey);
+        usageHtml = _renderUsageChart(USAGE_RATE_DATA[usageKey]);
+      }
+
+      // Sub-section label is the part of the event name AFTER the group prefix (e.g. "個人戦 - A Block").
+      const subLabel = event.startsWith(groupKey + ' - ') ? event.slice(groupKey.length + 3) : event;
+      const innerHeader = showInnerHeader
+        ? `<div class="tournament-event-header tournament-subsection-header">
+            <span class="tournament-event-name">${subLabel}</span>
+            ${locationHtml}
+            ${statusBadge}
+            ${decks.length ? `<span class="tournament-event-count">${decks.length} ${t('decks_count')}</span>` : ''}
+          </div>`
+        : '';
+
+      // Split decks into 本戦 (finals) vs 予選ラウンド (qualifier round) when both exist.
+      const mainEventDecks = decks.filter(d => !(d.placement || '').includes('Qualifier'));
+      const qualifierDecks = decks.filter(d =>  (d.placement || '').includes('Qualifier'));
+      let decksHtml;
+      if (mainEventDecks.length && qualifierDecks.length) {
+        decksHtml = `
+          <div class="tournament-subsection-label">${t('tournament_main_event')}</div>
+          <div class="tournament-deck-grid">${mainEventDecks.map(deck => renderTournamentDeckCard(deck, cardsMap)).join('')}</div>
+          <div class="tournament-subsection-label">${t('tournament_qualifier')}</div>
+          <div class="tournament-deck-grid">${qualifierDecks.map(deck => renderTournamentDeckCard(deck, cardsMap)).join('')}</div>
+        `;
+      } else if (decks.length) {
+        decksHtml = `<div class="tournament-deck-grid">${decks.map(deck => renderTournamentDeckCard(deck, cardsMap)).join('')}</div>`;
+      } else {
+        decksHtml = `<div class="tournament-no-deck-placeholder">${isUpcoming ? t('tournament_upcoming_msg') : t('tournament_no_deck_data')}</div>`;
+      }
+
+      innerHtml += `
+        <section class="tournament-event-section${isUpcoming ? ' upcoming-event' : ''}">
+          ${innerHeader}
+          ${usageHtml}
+          ${decksHtml}
+        </section>
+      `;
     }
 
+    const groupStatusBadge = isUpcomingGroup
+      ? `<span class="tournament-event-status upcoming">${t('tournament_upcoming')}</span>`
+      : '';
+    const groupLocationHtml = group.location
+      ? `<span class="tournament-event-location">${group.location}</span>`
+      : '';
+
     html += `
-      <section class="tournament-event-section${isUpcoming ? ' upcoming-event' : ''}">
-        <div class="tournament-event-header">
-          <span class="tournament-event-name">${event}</span>
-          ${date ? `<span class="tournament-event-date">${date}</span>` : ''}
-          ${locationHtml}
-          ${statusBadge}
-          ${decks.length ? `<span class="tournament-event-count">${decks.length} ${t('decks_count')}</span>` : ''}
+      <details class="tournament-group${isUpcomingGroup ? ' upcoming-event' : ''}" ${isOpen ? 'open' : ''}>
+        <summary class="tournament-group-header">
+          <span class="tournament-group-name">${groupKey}</span>
+          ${group.date ? `<span class="tournament-event-date">${group.date}</span>` : ''}
+          ${groupLocationHtml}
+          ${groupStatusBadge}
+          ${totalDecks ? `<span class="tournament-event-count">${totalDecks} ${t('decks_count')}</span>` : ''}
+        </summary>
+        <div class="tournament-group-body">
+          ${innerHtml}
         </div>
-        ${usageHtml}
-        ${decks.length
-          ? `<div class="tournament-deck-grid">${decks.map(deck => renderTournamentDeckCard(deck, cardsMap)).join('')}</div>`
-          : `<div class="tournament-no-deck-placeholder">${isUpcoming ? t('tournament_upcoming_msg') : t('tournament_no_deck_data')}</div>`
-        }
-      </section>
+      </details>
     `;
   }
 
@@ -290,8 +396,8 @@ function _renderUsageChart(data) {
   const scope = data.scope[lang] || data.scope['en'] || '';
   const maxPct = Math.max(...data.rates.map(r => r.pct));
 
-  const bars = data.rates.map((r, i) => {
-    const color = USAGE_COLORS[i % USAGE_COLORS.length];
+  const bars = data.rates.map((r) => {
+    const color = CARD_COLOR_HEX[OSHI_COLOR[r.oshi]] || CARD_COLOR_HEX.other;
     const width = Math.max((r.pct / maxPct) * 100, 2);
     return `
       <div class="usage-bar-row">
