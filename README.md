@@ -13,7 +13,7 @@ scraper (Python) → JSON data → static frontend (HTML/CSS/JS) → GitHub Page
 ```
 
 - **Scraper** fetches card data from [hololive-cardgame](https://github.com/hololive-cardgame/cards) and tier/deck info from [ホロカ攻略ギルド](https://www.holocardstrategy.jp/)
-- **GitHub Actions** runs the scraper monthly (and on every push) to keep data fresh
+- **GitHub Actions** deploys committed frontend/data on every `master` push; scheduled/manual runs refresh scraped data weekly before deployment
 - **Frontend** is vanilla HTML/CSS/JS with a dark hololive-themed design
 
 ## Local Development

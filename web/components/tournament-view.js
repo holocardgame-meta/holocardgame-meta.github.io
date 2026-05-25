@@ -1,4 +1,5 @@
 import { t, getLang } from '../i18n.js';
+import { escapeHtml as _esc, safeUrl } from '../utils/sanitize.js';
 
 const KNOWN_WGP_EVENTS = [
   { event: 'WGP2025 Tokyo',               date: '2025-05-05', location: 'Tokyo Big Sight' },
@@ -306,7 +307,7 @@ export function renderTournamentView(container, decklogDecks, cardsData) {
         : '';
 
       const locationHtml = (showInnerHeader && location)
-        ? `<span class="tournament-event-location">${location}</span>`
+        ? `<span class="tournament-event-location">${_esc(location)}</span>`
         : '';
 
       const usageKey = _findUsageKey(event);
@@ -320,10 +321,10 @@ export function renderTournamentView(container, decklogDecks, cardsData) {
       const subLabel = event.startsWith(groupKey + ' - ') ? event.slice(groupKey.length + 3) : event;
       const innerHeader = showInnerHeader
         ? `<div class="tournament-event-header tournament-subsection-header">
-            <span class="tournament-event-name">${subLabel}</span>
+            <span class="tournament-event-name">${_esc(subLabel)}</span>
             ${locationHtml}
             ${statusBadge}
-            ${decks.length ? `<span class="tournament-event-count">${decks.length} ${t('decks_count')}</span>` : ''}
+            ${decks.length ? `<span class="tournament-event-count">${decks.length} ${_esc(t('decks_count'))}</span>` : ''}
           </div>`
         : '';
 
@@ -357,20 +358,20 @@ export function renderTournamentView(container, decklogDecks, cardsData) {
       ? `<span class="tournament-event-status upcoming">${t('tournament_upcoming')}</span>`
       : '';
     const groupLocationHtml = group.location
-      ? `<span class="tournament-event-location">${group.location}</span>`
+      ? `<span class="tournament-event-location">${_esc(group.location)}</span>`
       : '';
 
     const metaBits = [
-      group.date ? `<span class="tournament-event-date">${group.date}</span>` : '',
+      group.date ? `<span class="tournament-event-date">${_esc(group.date)}</span>` : '',
       groupLocationHtml,
       groupStatusBadge,
-      totalDecks ? `<span class="tournament-event-count">${totalDecks} ${t('decks_count')}</span>` : '',
+      totalDecks ? `<span class="tournament-event-count">${totalDecks} ${_esc(t('decks_count'))}</span>` : '',
     ].filter(Boolean).join('');
 
     html += `
       <details class="tournament-group${isUpcomingGroup ? ' upcoming-event' : ''}" ${isOpen ? 'open' : ''}>
         <summary class="tournament-group-header">
-          <span class="tournament-group-name">${groupKey}</span>
+          <span class="tournament-group-name">${_esc(groupKey)}</span>
           ${metaBits ? `<span class="tournament-group-meta">${metaBits}</span>` : ''}
         </summary>
         <div class="tournament-group-body">
@@ -400,10 +401,10 @@ function _renderUsageChart(data) {
     const width = Math.max((r.pct / maxPct) * 100, 2);
     return `
       <div class="usage-bar-row">
-        <span class="usage-bar-label">${r.oshi}</span>
+        <span class="usage-bar-label">${_esc(r.oshi)}</span>
         <div class="usage-bar-track">
           <div class="usage-bar-fill" style="width:${width}%;background:${color}">
-            <span class="usage-bar-pct">${r.pct}%</span>
+            <span class="usage-bar-pct">${_esc(r.pct)}%</span>
           </div>
         </div>
       </div>`;
@@ -411,16 +412,16 @@ function _renderUsageChart(data) {
 
   return `
     <details class="usage-chart-wrapper" open>
-      <summary class="usage-chart-title">${t('tournament_usage_rate')}<span class="usage-chart-scope">${scope}</span></summary>
+      <summary class="usage-chart-title">${_esc(t('tournament_usage_rate'))}<span class="usage-chart-scope">${_esc(scope)}</span></summary>
       <div class="usage-chart-bars">${bars}</div>
-      <div class="usage-chart-source">${t('tournament_source')}: ${data.source}</div>
+      <div class="usage-chart-source">${_esc(t('tournament_source'))}: ${_esc(data.source)}</div>
     </details>`;
 }
 
 function renderTournamentDeckCard(deck, cardsMap) {
   if (deck.missing) {
     const placementHtml = deck.placement
-      ? `<span class="tournament-placement">${deck.placement}</span>`
+      ? `<span class="tournament-placement">${_esc(deck.placement)}</span>`
       : '';
     return `
       <div class="tournament-deck-card missing-deck">
@@ -443,22 +444,22 @@ function renderTournamentDeckCard(deck, cardsMap) {
   const oshiImage = oshiInfo?.imageUrl || '';
 
   const placementHtml = deck.placement
-    ? `<span class="tournament-placement">${deck.placement}</span>`
+    ? `<span class="tournament-placement">${_esc(deck.placement)}</span>`
     : '';
 
   return `
-    <div class="tournament-deck-card" data-decklog-id="${deck.deck_id}">
+    <div class="tournament-deck-card" data-decklog-id="${_esc(deck.deck_id)}">
       <div class="tournament-deck-top">
-        ${oshiImage ? `<img class="tournament-oshi-img" src="${oshiImage}" alt="${deck.oshi}" loading="lazy" decoding="async">` : '<div class="tournament-oshi-placeholder"></div>'}
+        ${oshiImage ? `<img class="tournament-oshi-img" src="${safeUrl(oshiImage)}" alt="${_esc(deck.oshi)}" loading="lazy" decoding="async">` : '<div class="tournament-oshi-placeholder"></div>'}
         <div class="tournament-deck-info">
-          <div class="tournament-deck-name">${deck.title}</div>
-          <div class="tournament-deck-oshi">${deck.oshi}</div>
+          <div class="tournament-deck-name">${_esc(deck.title)}</div>
+          <div class="tournament-deck-oshi">${_esc(deck.oshi)}</div>
           ${placementHtml}
         </div>
       </div>
       <div class="tournament-deck-stats">
-        <span>${t('tournament_main_deck')}: ${deck.main_deck_count} ${t('tournament_cards')}</span>
-        <span>${t('tournament_cheer_deck')}: ${deck.cheer_deck_count} ${t('tournament_cards')}</span>
+        <span>${_esc(t('tournament_main_deck'))}: ${_esc(deck.main_deck_count)} ${_esc(t('tournament_cards'))}</span>
+        <span>${_esc(t('tournament_cheer_deck'))}: ${_esc(deck.cheer_deck_count)} ${_esc(t('tournament_cards'))}</span>
       </div>
     </div>
   `;
@@ -474,12 +475,6 @@ const _COLOR_ALIAS_TOURN = {
   '白': '白', '綠': '綠', '緑': '綠', '紅': '紅', '赤': '紅',
   '藍': '藍', '青': '藍', '紫': '紫', '黃': '黃', '黄': '黃',
 };
-
-function _esc(s) {
-  return String(s ?? '').replace(/[&<>"']/g, c => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
-  }[c]));
-}
 
 function _normColor(c) { return _COLOR_ALIAS_TOURN[String(c || '').trim()] || ''; }
 
@@ -518,13 +513,13 @@ function _renderDeckRow(c, cardsMap) {
     <div class="dcr clickable-card" data-card-id="${_esc(c.card_id || '')}" style="--dcr-c:${cssColor}">
       <div class="dcr-thumb">
         ${imageUrl
-          ? `<img src="${_esc(imageUrl)}" alt="${_esc(name)}" loading="lazy" decoding="async">`
+          ? `<img src="${safeUrl(imageUrl)}" alt="${_esc(name)}" loading="lazy" decoding="async">`
           : `<div class="dcr-thumb-pattern"></div><span class="dcr-glyph">${_esc(_glyphFromName(name))}</span>`}
       </div>
       <div class="dcr-info">
         <div class="dcr-name" title="${_esc(name)}">${_esc(name)}</div>
         ${c.card_id ? `<div class="dcr-code">${_esc(c.card_id)}</div>` : ''}
-        ${count > 1 ? `<div class="dcr-count">×${count}</div>` : ''}
+        ${count > 1 ? `<div class="dcr-count">×${_esc(count)}</div>` : ''}
       </div>
     </div>
   `;
@@ -573,8 +568,8 @@ export function renderTournamentDeckModal(container, decklogId, decklogDecks, ca
 
   const countTilesHtml = `
     <div class="deckp-hero-counts">
-      <div class="hc-tile"><div class="hc-val">${mainCount}</div><div class="hc-label">${_esc(t('tournament_main_deck'))}</div></div>
-      <div class="hc-tile"><div class="hc-val">${cheerCount}</div><div class="hc-label">${_esc(t('tournament_cheer_deck'))}</div></div>
+      <div class="hc-tile"><div class="hc-val">${_esc(mainCount)}</div><div class="hc-label">${_esc(t('tournament_main_deck'))}</div></div>
+      <div class="hc-tile"><div class="hc-val">${_esc(cheerCount)}</div><div class="hc-label">${_esc(t('tournament_cheer_deck'))}</div></div>
     </div>
   `;
 
@@ -588,7 +583,7 @@ export function renderTournamentDeckModal(container, decklogId, decklogDecks, ca
 
   const footerHtml = deck.url ? `
     <div class="deckp-footer">
-      <a href="${_esc(deck.url)}" class="dl-btn" target="_blank" rel="noopener">
+      <a href="${safeUrl(deck.url)}" class="dl-btn" target="_blank" rel="noopener">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
           <polyline points="15 3 21 3 21 9"/>

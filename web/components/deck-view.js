@@ -1,4 +1,5 @@
 import { t, localized } from '../i18n.js';
+import { escapeHtml as _esc, safeUrl } from '../utils/sanitize.js';
 
 const COLOR_ALIAS = {
   '白': '白', '綠': '綠', '緑': '綠', '紅': '紅', '赤': '紅',
@@ -27,12 +28,6 @@ function _deckColors(deck, cardsMap) {
   return Object.keys(counts)
     .filter(c => COLOR_HEX[c])
     .sort((a, b) => counts[b] - counts[a]);
-}
-
-function _esc(s) {
-  return String(s ?? '').replace(/[&<>"']/g, c => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
-  }[c]));
 }
 
 const PHASE_MARKERS = {
@@ -126,7 +121,7 @@ function _heroEmblemImage({ recipe, deckInfo, deck, cardsMap }) {
 function _renderHeroEmblem({ image, imageAlt, colors = [], glyph, badgeHtml = '' }) {
   const normalizedColors = colors.map(_normColor).filter(c => COLOR_HEX[c]);
   const imageHtml = image?.src
-    ? `<img class="guide-hero-emblem-img" src="${_esc(image.src)}" alt="${_esc(imageAlt || image.alt || '')}" loading="lazy" decoding="async">`
+    ? `<img class="guide-hero-emblem-img" src="${safeUrl(image.src)}" alt="${_esc(imageAlt || image.alt || '')}" loading="lazy" decoding="async">`
     : '';
   const colorsHtml = !imageHtml && normalizedColors.length
     ? `<div class="guide-hero-emblem-colors" data-count="${normalizedColors.length}">
@@ -288,7 +283,7 @@ function _renderGuidePage(container, { deckInfo, tierNum, recipe, cardsData }) {
             })();
         return `
           <article class="keycard clickable-card" data-card-id="${_esc(c.card_id || '')}">
-            ${c.image ? `<img class="keycard-img" src="${_esc(c.image)}" alt="${_esc(c.name)}" loading="lazy" decoding="async">` : '<div class="keycard-noimg">🃏</div>'}
+            ${c.image ? `<img class="keycard-img" src="${safeUrl(c.image)}" alt="${_esc(c.name)}" loading="lazy" decoding="async">` : '<div class="keycard-noimg">🃏</div>'}
             <div class="keycard-info">
               <div class="keycard-name">${_esc(c.name || '')}</div>
               ${c.card_id ? `<div class="keycard-id">${colorDot}${_esc(c.card_id)}</div>` : ''}
@@ -335,7 +330,7 @@ function _renderGuidePage(container, { deckInfo, tierNum, recipe, cardsData }) {
         <div class="rail-block">
           <div class="rail-label">${_esc(t('meta_source'))} / Source</div>
           <ul class="rail-sources">
-            <li><a href="${_esc(recipe.url)}" target="_blank" rel="noopener">${_esc(t('source_link'))}</a></li>
+            <li><a href="${safeUrl(recipe.url)}" target="_blank" rel="noopener">${_esc(t('source_link'))}</a></li>
           </ul>
         </div>
       </aside>`
@@ -365,7 +360,7 @@ function _renderGuidePage(container, { deckInfo, tierNum, recipe, cardsData }) {
           <span class="banner-corner banner-corner-tr"></span>
           <span class="banner-corner banner-corner-bl"></span>
           <span class="banner-corner banner-corner-br"></span>
-          <img src="${_esc(deckImage)}" alt="${_esc(titleZh)}" loading="lazy" decoding="async">
+          <img src="${safeUrl(deckImage)}" alt="${_esc(titleZh)}" loading="lazy" decoding="async">
           <figcaption class="banner-caption">牌組構築 / DECK SNAPSHOT</figcaption>
         </figure>` : ''}
       </header>
@@ -453,7 +448,7 @@ function _renderOfficialDeckModal(container, deck) {
       <div class="official-card-grid">
         ${cards.map(c => `
           <div class="official-card-entry clickable-card" data-card-id="${_esc(c.card_id || '')}">
-            ${c.imageUrl ? `<img src="${_esc(c.imageUrl)}" alt="${_esc(c.card_id || '')}" loading="lazy" decoding="async">` : ''}
+            ${c.imageUrl ? `<img src="${safeUrl(c.imageUrl)}" alt="${_esc(c.card_id || '')}" loading="lazy" decoding="async">` : ''}
             <span class="official-card-count">×${_esc(c.count)}</span>
             ${c.card_id ? `<span class="official-card-id">${_esc(c.card_id)}</span>` : ''}
           </div>
@@ -470,7 +465,7 @@ function _renderOfficialDeckModal(container, deck) {
       const oshiId = deck.oshi_card_id || '';
       body = `
         <div class="oshi-spotlight clickable-card"${oshiId ? ` data-card-id="${_esc(oshiId)}"` : ''}>
-          ${deck.oshi_image ? `<img class="oshi-img" src="${_esc(deck.oshi_image)}" alt="${_esc(deck.oshi || '')}" loading="lazy" decoding="async">` : ''}
+          ${deck.oshi_image ? `<img class="oshi-img" src="${safeUrl(deck.oshi_image)}" alt="${_esc(deck.oshi || '')}" loading="lazy" decoding="async">` : ''}
           <div class="oshi-info">
             <div class="oshi-eyebrow">${_esc(t('oshi_holomen_label'))}</div>
             <div class="oshi-name">${_esc(deck.oshi || '')}</div>
@@ -481,7 +476,7 @@ function _renderOfficialDeckModal(container, deck) {
     } else if (s.id === 'keycards') {
       body = `<div class="keycards-grid">${keyCards.map(k => `
         <article class="keycard clickable-card" data-card-id="${_esc(k.card_id || '')}">
-          ${k.imageUrl ? `<img class="keycard-img" src="${_esc(k.imageUrl)}" alt="${_esc(k.name || '')}" loading="lazy" decoding="async">` : '<div class="keycard-noimg">🃏</div>'}
+          ${k.imageUrl ? `<img class="keycard-img" src="${safeUrl(k.imageUrl)}" alt="${_esc(k.name || '')}" loading="lazy" decoding="async">` : '<div class="keycard-noimg">🃏</div>'}
           <div class="keycard-info">
             <div class="keycard-name">${_esc(k.name || '')}</div>
             ${k.card_id ? `<div class="keycard-id">${_esc(k.card_id)}</div>` : ''}
@@ -532,7 +527,7 @@ function _renderOfficialDeckModal(container, deck) {
         <div class="rail-block">
           <div class="rail-label">${_esc(t('meta_source'))} / Source</div>
           <ul class="rail-sources">
-            <li><a href="${_esc(deck.url)}" target="_blank" rel="noopener">${_esc(t('source_link'))}</a></li>
+            <li><a href="${safeUrl(deck.url)}" target="_blank" rel="noopener">${_esc(t('source_link'))}</a></li>
           </ul>
         </div>
       </aside>`

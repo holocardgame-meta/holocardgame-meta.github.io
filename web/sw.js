@@ -1,10 +1,11 @@
-const CACHE_NAME = 'holo-card-v35';
+const CACHE_NAME = 'holo-card-v37';
 
 const PRECACHE_URLS = [
   './',
   './style.css',
   './app.js',
   './i18n.js',
+  './utils/sanitize.js',
   './components/guides-view.js',
   './components/deck-view.js',
   './components/card-view.js',
@@ -67,24 +68,31 @@ async function staleWhileRevalidate(request) {
 
 async function cacheFirst(request, maxAge) {
   const cache = await caches.open(CACHE_NAME);
+  const metaRequest = cacheMetaRequest(request);
   const cached = await cache.match(request);
   if (cached) {
-    const dateHeader = cached.headers.get('sw-cache-time');
-    if (dateHeader && (Date.now() - parseInt(dateHeader)) < maxAge) {
+    const meta = await cache.match(metaRequest);
+    const cachedAt = meta ? Number(await meta.text()) : 0;
+    if (cachedAt && (Date.now() - cachedAt) < maxAge) {
       return cached;
     }
   }
   try {
     const resp = await fetch(request);
-    if (resp.ok) {
-      const headers = new Headers(resp.headers);
-      headers.set('sw-cache-time', String(Date.now()));
-      const copy = new Response(await resp.blob(), { status: resp.status, statusText: resp.statusText, headers });
-      cache.put(request, copy);
+    if (resp.ok || resp.type === 'opaque') {
+      await Promise.all([
+        cache.put(request, resp.clone()),
+        cache.put(metaRequest, new Response(String(Date.now()))),
+      ]);
       return resp;
     }
     return cached || resp;
   } catch {
     return cached || new Response('Offline', { status: 503 });
   }
+}
+
+function cacheMetaRequest(request) {
+  const metaUrl = new URL('__sw-cache-meta?url=' + encodeURIComponent(request.url), self.registration.scope);
+  return new Request(metaUrl.toString());
 }

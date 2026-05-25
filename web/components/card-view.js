@@ -1,4 +1,5 @@
 import { t, localized } from '../i18n.js';
+import { escapeHtml as _escape, safeUrl, sanitizeUrl } from '../utils/sanitize.js';
 
 const COLOR_MAP = {
   '白': '#e0e0e0',
@@ -85,23 +86,26 @@ function renderPage(container) {
     const color = COLOR_MAP[card.color] || '#666';
     const isRestricted = restricted.has(card.id);
     const hasErrata = card.id in errata;
+    const cardId = _escape(card.id || '');
+    const cardName = _escape(card.name || '');
+    const imageUrl = safeUrl(card.imageUrl || '');
     let badgesHtml = '';
     if (isRestricted) badgesHtml += `<span class="card-rule-badge restricted" title="${t('rule_restricted_desc')}">${t('rule_restricted')}</span>`;
     if (hasErrata) badgesHtml += `<span class="card-rule-badge errata" title="${t('rule_errata_desc')}">${t('rule_errata')}</span>`;
 
     html += `
-      <div class="gallery-card" data-card-id="${card.id}">
+      <div class="gallery-card" data-card-id="${cardId}">
         <div class="gallery-card-img-wrap">
-          <img class="gallery-card-img" src="${card.imageUrl || ''}" alt="${card.name}" loading="lazy" decoding="async"
+          <img class="gallery-card-img" src="${imageUrl}" alt="${cardName}" loading="lazy" decoding="async"
                onerror="this.style.display='none'">
           ${badgesHtml ? `<div class="card-rule-badges">${badgesHtml}</div>` : ''}
         </div>
         <div class="gallery-card-info">
-          <div class="gallery-card-name" title="${card.name}">${card.name}</div>
+          <div class="gallery-card-name" title="${cardName}">${cardName}</div>
           <div class="gallery-card-meta">
             <span class="gallery-card-color" style="background:${color}"></span>
-            <span>${card.type || ''}</span>
-            ${card.bloom ? `<span>· ${card.bloom}</span>` : ''}
+            <span>${_escape(card.type || '')}</span>
+            ${card.bloom ? `<span>· ${_escape(card.bloom)}</span>` : ''}
           </div>
         </div>
       </div>
@@ -124,12 +128,6 @@ function renderPage(container) {
       renderPage(container);
     });
   }
-}
-
-function _escape(s) {
-  return String(s ?? '').replace(/[&<>"']/g, c => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
-  }[c]));
 }
 
 const _COLOR_HEX = {
@@ -285,7 +283,7 @@ export function renderCardDetail(container, card, allCards, rulesData) {
         const title = typeof a.title === 'object' ? localized(a.title) : a.title;
         return `<li class="rule-article-item">
           <span class="rule-article-date">${_escape(a.date || '')}</span>
-          <a href="${_escape(a.url)}" target="_blank" rel="noopener" class="rule-article-link">${_escape(title)}</a>
+          <a href="${safeUrl(a.url)}" target="_blank" rel="noopener" class="rule-article-link">${_escape(title)}</a>
         </li>`;
       }).join('');
     }
@@ -310,7 +308,7 @@ export function renderCardDetail(container, card, allCards, rulesData) {
           const suffix = _rarityLabel(v.imageUrl);
           return `<button type="button" class="variant-thumb${i === 0 ? ' is-active' : ''}" data-variant-idx="${i}">
             <span class="variant-mini">
-              <img src="${_escape(v.imageUrl)}" alt="${_escape(suffix)}" loading="lazy" decoding="async">
+              <img src="${safeUrl(v.imageUrl)}" alt="${_escape(suffix)}" loading="lazy" decoding="async">
               <span class="variant-tag">${_escape(suffix)}</span>
             </span>
           </button>`;
@@ -339,7 +337,7 @@ export function renderCardDetail(container, card, allCards, rulesData) {
             <span class="cardv-corner cardv-corner-tr"></span>
             <span class="cardv-corner cardv-corner-bl"></span>
             <span class="cardv-corner cardv-corner-br"></span>
-            <img class="cardv-img" id="cardDetailMainImg" src="${_escape(card.imageUrl || '')}" alt="${_escape(card.name)}"
+            <img class="cardv-img" id="cardDetailMainImg" src="${safeUrl(card.imageUrl || '')}" alt="${_escape(card.name)}"
                  onerror="this.style.display='none'">
           </div>
           ${variantsHtml}
@@ -376,7 +374,7 @@ export function renderCardDetail(container, card, allCards, rulesData) {
     container.querySelectorAll('.variant-thumb').forEach(thumb => {
       thumb.addEventListener('click', () => {
         const idx = parseInt(thumb.dataset.variantIdx);
-        mainImg.src = variants[idx].imageUrl;
+        mainImg.src = sanitizeUrl(variants[idx].imageUrl);
         mainImg.style.display = '';
         container.querySelectorAll('.variant-thumb').forEach(t => t.classList.remove('is-active'));
         thumb.classList.add('is-active');

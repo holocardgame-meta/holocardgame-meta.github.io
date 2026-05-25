@@ -1,4 +1,5 @@
 import { t, localized } from '../i18n.js';
+import { escapeHtml as _esc, safeUrl } from '../utils/sanitize.js';
 
 const COLOR_ALIAS = {
   '白': '白',
@@ -222,6 +223,7 @@ export function renderGuidesView(container, allGuides, decksData, cardsData, fil
 
 function renderGuideCard(deck, cardsMap, index = Infinity) {
   const title = localized(deck.title, deck.deck_id || '');
+  const safeTitle = _esc(title);
   let thumbSrc = deck.deck_image || deck.oshi_image;
   if (index < 4 && window.__LCP_OPTS && window.__LCP_OPTS[index]) thumbSrc = window.__LCP_OPTS[index];
   const isCardArt = !deck.deck_image && !!deck.oshi_image;
@@ -230,17 +232,17 @@ function renderGuideCard(deck, cardsMap, index = Infinity) {
   const loadAttr = isEager ? '' : ' loading="lazy"';
   const priorityAttr = index < 4 ? ' fetchpriority="high"' : '';
   const imgHtml = thumbSrc
-    ? `<img class="${imgCls}" src="${thumbSrc}" alt="${title}"${loadAttr} decoding="async"${priorityAttr}>`
+    ? `<img class="${imgCls}" src="${safeUrl(thumbSrc)}" alt="${safeTitle}"${loadAttr} decoding="async"${priorityAttr}>`
     : `<div class="guide-card-noimg">🃏</div>`;
 
   const tierLetter = deck.tier && TIER_LETTER[deck.tier]
-    ? `<span class="deck-tier-letter" data-t="${deck.tier}">${TIER_LETTER[deck.tier]}</span>`
+    ? `<span class="deck-tier-letter" data-t="${_esc(deck.tier)}">${_esc(TIER_LETTER[deck.tier])}</span>`
     : '';
 
   // Tier tag overlay (top-left) — gold for T1, silver T2, bronze T3; orange for official, cyan for guide
   let tierTag = '';
   if (deck.tier) {
-    tierTag = `<span class="deck-tier-tag" data-t="${deck.tier}">T${deck.tier}</span>`;
+    tierTag = `<span class="deck-tier-tag" data-t="${_esc(deck.tier)}">T${_esc(deck.tier)}</span>`;
   } else if (deck._source === 'official') {
     tierTag = `<span class="deck-tier-tag official">OFFICIAL</span>`;
   } else if (deck._source === 'guide') {
@@ -257,6 +259,7 @@ function renderGuideCard(deck, cardsMap, index = Infinity) {
 
   const desc = localized(deck.description, '');
   const descText = typeof desc === 'string' ? desc : '';
+  const safeDesc = _esc(descText.slice(0, 100));
   const cardCount = deck.cards_count ?? (deck.cards || []).length;
   const stratCount = deck.strategy_count ?? (deck.strategy || []).length;
 
@@ -264,7 +267,7 @@ function renderGuideCard(deck, cardsMap, index = Infinity) {
   const searchText = [jaTitle, title, descText, deck.deck_id].join(' ').toLowerCase();
 
   return `
-    <div class="guide-card deck-card" data-deck-id="${deck.deck_id}" data-search-text="${searchText.replace(/"/g, '')}">
+    <div class="guide-card deck-card" data-deck-id="${_esc(deck.deck_id)}" data-search-text="${_esc(searchText)}">
       <div class="deck-thumb-wrap">
         ${imgHtml}
         ${tierTag}
@@ -274,13 +277,13 @@ function renderGuideCard(deck, cardsMap, index = Infinity) {
       <div class="deck-body">
         <div class="deck-meta-row">
           ${colorDots ? `<span class="color-dots">${colorDots}</span>` : ''}
-          ${deck.date ? `<span class="deck-date">${deck.date}</span>` : ''}
+          ${deck.date ? `<span class="deck-date">${_esc(deck.date)}</span>` : ''}
         </div>
-        <div class="deck-title">${title}</div>
-        ${descText ? `<p class="deck-desc">${descText.slice(0, 100)}${descText.length > 100 ? '...' : ''}</p>` : ''}
+        <div class="deck-title">${safeTitle}</div>
+        ${descText ? `<p class="deck-desc">${safeDesc}${descText.length > 100 ? '...' : ''}</p>` : ''}
         <div class="deck-foot">
-          ${cardCount ? `<span><span class="stat-n">${cardCount}</span> <span class="stat-lbl">${t('guides_cards')}</span></span>` : ''}
-          ${stratCount ? `<span><span class="stat-n">${stratCount}</span> <span class="stat-lbl">${t('guides_strats')}</span></span>` : ''}
+          ${cardCount ? `<span><span class="stat-n">${_esc(cardCount)}</span> <span class="stat-lbl">${_esc(t('guides_cards'))}</span></span>` : ''}
+          ${stratCount ? `<span><span class="stat-n">${_esc(stratCount)}</span> <span class="stat-lbl">${_esc(t('guides_strats'))}</span></span>` : ''}
           <span class="deck-foot-arrow" aria-hidden="true">→</span>
         </div>
       </div>

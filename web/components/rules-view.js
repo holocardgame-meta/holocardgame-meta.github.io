@@ -1,4 +1,5 @@
 import { t, localized } from '../i18n.js';
+import { escapeHtml as _esc, safeClassToken, safeUrl } from '../utils/sanitize.js';
 
 export function renderRulesView(container, rulesData, cardsData) {
   if (!rulesData) {
@@ -61,7 +62,7 @@ export function renderRulesView(container, rulesData, cardsData) {
         ${t('rules_meta', { restricted: restricted.length, errata: errataKeys.length, articles: articles.length })}
       </div>
       <div class="rules-meta-updated">
-        ${rulesData.scraped_at ? `${t('updated')}: <span>${rulesData.scraped_at}</span>` : ''}
+        ${rulesData.scraped_at ? `${_esc(t('updated'))}: <span>${_esc(rulesData.scraped_at)}</span>` : ''}
       </div>
     </div>
     ${restrictedHtml}
@@ -74,22 +75,22 @@ function renderRestrictedCard(id, cardsMap, errataEntry) {
   const card = cardsMap[id];
   const name = card?.name || id;
   const img = card?.imageUrl
-    ? `<img class="rules-card-img" src="${card.imageUrl}" alt="${name}" loading="lazy" decoding="async" onerror="this.style.display='none'">`
+    ? `<img class="rules-card-img" src="${safeUrl(card.imageUrl)}" alt="${_esc(name)}" loading="lazy" decoding="async" onerror="this.style.display='none'">`
     : `<div class="rules-card-img rules-card-img-placeholder">🃏</div>`;
   const errataNote = errataEntry
     ? `<div class="rules-card-note errata-note">${t('rule_errata_desc')}</div>`
     : '';
 
   return `
-    <div class="rules-card clickable-card" data-card-id="${id}">
+    <div class="rules-card clickable-card" data-card-id="${_esc(id)}">
       <div class="rules-card-img-wrap">
         ${img}
         <span class="rules-card-badge restricted-badge">${t('rule_restricted')}</span>
         ${errataEntry ? `<span class="rules-card-badge errata-badge">${t('rule_errata')}</span>` : ''}
       </div>
       <div class="rules-card-info">
-        <div class="rules-card-name" title="${name}">${name}</div>
-        <div class="rules-card-id">${id}</div>
+        <div class="rules-card-name" title="${_esc(name)}">${_esc(name)}</div>
+        <div class="rules-card-id">${_esc(id)}</div>
         <div class="rules-card-note restricted-note">${t('rule_restricted_desc')}</div>
         ${errataNote}
       </div>
@@ -101,21 +102,21 @@ function renderErrataCard(id, cardsMap, entry) {
   const card = cardsMap[id];
   const name = card?.name || id;
   const img = card?.imageUrl
-    ? `<img class="rules-card-img" src="${card.imageUrl}" alt="${name}" loading="lazy" decoding="async" onerror="this.style.display='none'">`
+    ? `<img class="rules-card-img" src="${safeUrl(card.imageUrl)}" alt="${_esc(name)}" loading="lazy" decoding="async" onerror="this.style.display='none'">`
     : `<div class="rules-card-img rules-card-img-placeholder">🃏</div>`;
   const title = entry?.title ? localized(entry.title, '') : '';
 
   return `
-    <div class="rules-card clickable-card" data-card-id="${id}">
+    <div class="rules-card clickable-card" data-card-id="${_esc(id)}">
       <div class="rules-card-img-wrap">
         ${img}
         <span class="rules-card-badge errata-badge">${t('rule_errata')}</span>
       </div>
       <div class="rules-card-info">
-        <div class="rules-card-name" title="${name}">${name}</div>
-        <div class="rules-card-id">${id}</div>
-        ${entry?.date ? `<div class="rules-card-date">${entry.date}</div>` : ''}
-        ${title ? `<div class="rules-card-link-title">${title}</div>` : ''}
+        <div class="rules-card-name" title="${_esc(name)}">${_esc(name)}</div>
+        <div class="rules-card-id">${_esc(id)}</div>
+        ${entry?.date ? `<div class="rules-card-date">${_esc(entry.date)}</div>` : ''}
+        ${title ? `<div class="rules-card-link-title">${_esc(title)}</div>` : ''}
       </div>
     </div>
   `;
@@ -126,18 +127,19 @@ function renderArticle(article) {
   const dateStr = article.date || '';
   const type = article.type || '';
   const typeLabel = type === 'errata' ? t('rule_errata') : type === 'rule_update' ? t('rules_article_rule_update') : type;
+  const typeToken = safeClassToken(type, 'other');
   const cardChips = (article.card_ids || []).slice(0, 8).map(cid =>
-    `<span class="rules-article-chip">${cid}</span>`
+    `<span class="rules-article-chip">${_esc(cid)}</span>`
   ).join('');
 
   return `
     <li class="rules-article-item">
       <div class="rules-article-meta">
-        <span class="rules-article-date">${dateStr}</span>
-        ${typeLabel ? `<span class="rules-article-type rules-article-type-${type}">${typeLabel}</span>` : ''}
+        <span class="rules-article-date">${_esc(dateStr)}</span>
+        ${typeLabel ? `<span class="rules-article-type rules-article-type-${typeToken}">${_esc(typeLabel)}</span>` : ''}
       </div>
       <div class="rules-article-body">
-        <a class="rules-article-link" href="${article.url}" target="_blank" rel="noopener">${title}</a>
+        <a class="rules-article-link" href="${safeUrl(article.url)}" target="_blank" rel="noopener">${_esc(title)}</a>
         ${cardChips ? `<div class="rules-article-chips">${cardChips}</div>` : ''}
       </div>
     </li>
