@@ -126,6 +126,51 @@ function renderPage(container) {
   }
 }
 
+function _escape(s) {
+  return String(s ?? '').replace(/[&<>"']/g, c => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+  }[c]));
+}
+
+const _COLOR_HEX = {
+  '白': '#e8e8e8',
+  '綠': '#4caf50',
+  '紅': '#f44336',
+  '藍': '#2196f3',
+  '紫': '#9c27b0',
+  '黃': '#ffeb3b',
+};
+
+function _statTile(label, value, opts = {}) {
+  if (value == null || value === '') return '';
+  const valClass = opts.cost ? ' cps-cost' : (opts.color ? ' cps-color' : '');
+  const inner = opts.color
+    ? `<span class="cd" style="background:${_COLOR_HEX[value] || '#666'}"></span>${_escape(value)}`
+    : _escape(value);
+  return `<div class="cardp-stat">
+    <div class="cps-label">${_escape(label)}</div>
+    <div class="cps-val${valClass}">${inner}</div>
+  </div>`;
+}
+
+function _abilityBlock({ kind, name, text, damage, holoPower, variant }) {
+  const damageHtml = damage
+    ? `<span class="ability-damage">${t('stat_damage')} <strong>${_escape(damage)}</strong></span>`
+    : (holoPower != null
+        ? `<span class="ability-damage">HP <strong>${_escape(holoPower)}</strong></span>`
+        : '');
+  const nameHtml = name ? `<span class="ability-name">${_escape(name)}</span>` : '';
+  const textHtml = text ? `<p class="ability-text">${_escape(text)}</p>` : '';
+  return `<div class="ability-block ability-${variant}">
+    <div class="ability-head">
+      <span class="ability-kind">${_escape(kind)}</span>
+      ${nameHtml}
+      ${damageHtml}
+    </div>
+    ${textHtml}
+  </div>`;
+}
+
 export function renderCardDetail(container, card, allCards, rulesData) {
   if (!card) {
     container.innerHTML = `<p>${t('card_not_found')}</p>`;
@@ -139,73 +184,89 @@ export function renderCardDetail(container, card, allCards, rulesData) {
   const isSupport = card.type?.startsWith('支援');
   const isCheer = card.type === '吶喊';
 
-  let statsHtml = '';
+  const mainRarity = _rarityLabel(card.imageUrl);
+
+  // Stats grid — fill 3 cells minimum so the bordered grid looks even.
+  const statsCells = [];
   if (isOshi) {
-    statsHtml = `
-      <div class="stat-label">${t('stat_life')}</div><div class="stat-value">${card.life || '?'}</div>
-      <div class="stat-label">${t('stat_color')}</div><div class="stat-value">${card.color || '?'}</div>
-    `;
+    statsCells.push(_statTile('Life', card.life, { cost: true }));
+    statsCells.push(_statTile(t('stat_color'), card.color, { color: true }));
+    statsCells.push(_statTile(t('stat_type'), card.type));
   } else if (isMember) {
-    statsHtml = `
-      <div class="stat-label">${t('stat_hp')}</div><div class="stat-value">${card.hp || '?'}</div>
-      <div class="stat-label">${t('stat_bloom')}</div><div class="stat-value">${card.bloom || '?'}</div>
-      <div class="stat-label">${t('stat_color')}</div><div class="stat-value">${card.color || '?'}</div>
-    `;
-  } else if (isSupport || isCheer) {
-    statsHtml = `
-      <div class="stat-label">${t('stat_type')}</div><div class="stat-value">${card.type}</div>
-      ${card.color ? `<div class="stat-label">${t('stat_color')}</div><div class="stat-value">${card.color}</div>` : ''}
-    `;
+    statsCells.push(_statTile('HP', card.hp, { cost: true }));
+    statsCells.push(_statTile('Bloom', card.bloom));
+    statsCells.push(_statTile(t('stat_color'), card.color, { color: true }));
+    statsCells.push(_statTile(t('stat_type'), card.type));
+  } else {
+    statsCells.push(_statTile(t('stat_type'), card.type));
+    if (card.color) statsCells.push(_statTile(t('stat_color'), card.color, { color: true }));
   }
+  statsCells.push(_statTile('Rarity', mainRarity));
+  if (variants.length > 1) statsCells.push(_statTile('Arts', variants.length, { cost: true }));
+  const statsHtml = statsCells.filter(Boolean).join('');
 
-  let effectsHtml = '';
+  // Sets (収録) — split product string into rows
+  const productList = Array.isArray(card.product)
+    ? card.product
+    : (card.product ? String(card.product).split(/[,、\/]/).map(s => s.trim()).filter(Boolean) : []);
+  const setsHtml = productList.map(p => {
+    const codeMatch = String(p).match(/(h[A-Z]+\d+)/);
+    const code = codeMatch ? codeMatch[1] : '';
+    const label = code ? String(p).replace(code, '').trim() || p : p;
+    return `<div class="set-row">
+      <span class="set-kind">SET</span>
+      <span class="set-label">${_escape(label)}</span>
+      ${code ? `<span class="set-code">${_escape(code)}</span>` : ''}
+    </div>`;
+  }).join('');
 
+  // Abilities — colored blocks. Bloom-family = gold; Arts = red.
+  const abilityBlocks = [];
   if (isOshi) {
-    if (card.oshiSkill) {
-      effectsHtml += renderEffect(t('effect_oshi_skill') + ': ' + card.oshiSkill.name, _effectText(card.oshiSkill), `HP: ${card.oshiSkill.holoPower}`);
-    }
-    if (card.spSkill) {
-      effectsHtml += renderEffect(t('effect_sp') + ': ' + card.spSkill.name, _effectText(card.spSkill), `HP: ${card.spSkill.holoPower}`);
-    }
+    if (card.oshiSkill) abilityBlocks.push(_abilityBlock({
+      kind: t('effect_oshi_skill'), name: card.oshiSkill.name,
+      text: _effectText(card.oshiSkill), holoPower: card.oshiSkill.holoPower, variant: 'bloom',
+    }));
+    if (card.spSkill) abilityBlocks.push(_abilityBlock({
+      kind: t('effect_sp'), name: card.spSkill.name,
+      text: _effectText(card.spSkill), holoPower: card.spSkill.holoPower, variant: 'arts',
+    }));
   } else if (isMember) {
-    const effectKeys = [['effectC', 'effect_collab'], ['effectB', 'effect_bloom'], ['effectG', 'effect_gift']];
-    for (const [key, i18nKey] of effectKeys) {
-      const eff = card[key];
-      if (eff) effectsHtml += renderEffect(`${t(i18nKey)}: ${eff.name}`, _effectText(eff));
-    }
-    if (card.art1) {
-      const artEffect = _effectText(card.art1);
-      effectsHtml += renderEffect(
-        `${t('effect_arts')}: ${card.art1.name}`,
-        [card.art1.damage ? `${t('stat_damage')}: ${card.art1.damage}` : '', artEffect].filter(Boolean).join('\n')
-      );
-    }
-    if (card.art2) {
-      const artEffect = _effectText(card.art2);
-      effectsHtml += renderEffect(
-        `${t('effect_arts2')}: ${card.art2.name}`,
-        [card.art2.damage ? `${t('stat_damage')}: ${card.art2.damage}` : '', artEffect].filter(Boolean).join('\n')
-      );
-    }
-    if (card.extra) {
-      effectsHtml += renderEffect(t('effect_extra'), localized(card.extra));
-    }
-  } else if (isSupport) {
-    if (card.supportEffect) {
-      effectsHtml += renderEffect(t('effect_support'), localized(card.supportEffect));
-    }
-  } else if (isCheer) {
-    if (card.yellEffect) {
-      effectsHtml += renderEffect(t('effect_cheer'), localized(card.yellEffect));
-    }
+    if (card.effectC) abilityBlocks.push(_abilityBlock({
+      kind: t('effect_collab'), name: card.effectC.name, text: _effectText(card.effectC), variant: 'bloom',
+    }));
+    if (card.effectB) abilityBlocks.push(_abilityBlock({
+      kind: t('effect_bloom'), name: card.effectB.name, text: _effectText(card.effectB), variant: 'bloom',
+    }));
+    if (card.effectG) abilityBlocks.push(_abilityBlock({
+      kind: t('effect_gift'), name: card.effectG.name, text: _effectText(card.effectG), variant: 'bloom',
+    }));
+    if (card.art1) abilityBlocks.push(_abilityBlock({
+      kind: t('effect_arts'), name: card.art1.name, text: _effectText(card.art1), damage: card.art1.damage, variant: 'arts',
+    }));
+    if (card.art2) abilityBlocks.push(_abilityBlock({
+      kind: t('effect_arts2'), name: card.art2.name, text: _effectText(card.art2), damage: card.art2.damage, variant: 'arts',
+    }));
+    if (card.extra) abilityBlocks.push(_abilityBlock({
+      kind: t('effect_extra'), text: localized(card.extra), variant: 'bloom',
+    }));
+  } else if (isSupport && card.supportEffect) {
+    abilityBlocks.push(_abilityBlock({
+      kind: t('effect_support'), text: localized(card.supportEffect), variant: 'bloom',
+    }));
+  } else if (isCheer && card.yellEffect) {
+    abilityBlocks.push(_abilityBlock({
+      kind: t('effect_cheer'), text: localized(card.yellEffect), variant: 'bloom',
+    }));
   }
+  const abilitiesHtml = abilityBlocks.join('');
 
+  // Tags — source may already include leading '#'
   const tagsHtml = card.tag
-    ? card.tag.split('/').map(tg => `<span class="tag-chip">${tg.trim()}</span>`).join('')
+    ? card.tag.split('/').map(tg => tg.trim().replace(/^#+/, '')).filter(Boolean).map(tg => `<span class="kw-chip">#${_escape(tg)}</span>`).join('')
     : '';
 
-  const productText = Array.isArray(card.product) ? card.product.join(', ') : (card.product || '');
-
+  // Rules (restricted / errata / related articles) — keep functionality, render inline in info column
   const restricted = new Set(rulesData?.restricted_cards || []);
   const errataMap = rulesData?.errata || {};
   const isRestricted = restricted.has(card.id);
@@ -223,8 +284,8 @@ export function renderCardDetail(container, card, allCards, rulesData) {
       articlesListHtml = relatedArticles.map(a => {
         const title = typeof a.title === 'object' ? localized(a.title) : a.title;
         return `<li class="rule-article-item">
-          <span class="rule-article-date">${a.date || ''}</span>
-          <a href="${a.url}" target="_blank" rel="noopener" class="rule-article-link">${title}</a>
+          <span class="rule-article-date">${_escape(a.date || '')}</span>
+          <a href="${_escape(a.url)}" target="_blank" rel="noopener" class="rule-article-link">${_escape(title)}</a>
         </li>`;
       }).join('');
     }
@@ -242,45 +303,83 @@ export function renderCardDetail(container, card, allCards, rulesData) {
     `;
   }
 
+  // Variant strip
   const variantsHtml = variants.length > 1
-    ? `<div class="card-variants">
-        <div class="card-variants-label">${t('card_variants', { count: variants.length })}</div>
-        <div class="card-variants-grid">
-          ${variants.map((v, i) => {
-            const suffix = _rarityLabel(v.imageUrl);
-            return `<div class="card-variant-thumb${i === 0 ? ' active' : ''}" data-variant-idx="${i}">
-              <img src="${v.imageUrl}" alt="${suffix}" loading="lazy" decoding="async">
-              <span class="card-variant-rarity">${suffix}</span>
-            </div>`;
-          }).join('')}
-        </div>
+    ? `<div class="variant-strip">
+        ${variants.map((v, i) => {
+          const suffix = _rarityLabel(v.imageUrl);
+          return `<button type="button" class="variant-thumb${i === 0 ? ' is-active' : ''}" data-variant-idx="${i}">
+            <span class="variant-mini">
+              <img src="${_escape(v.imageUrl)}" alt="${_escape(suffix)}" loading="lazy" decoding="async">
+              <span class="variant-tag">${_escape(suffix)}</span>
+            </span>
+          </button>`;
+        }).join('')}
       </div>`
     : '';
 
+  const cvColor = _COLOR_HEX[card.color] || 'var(--accent)';
+
   container.innerHTML = `
-    <div class="card-detail">
-      <img class="card-detail-img" id="cardDetailMainImg" src="${card.imageUrl || ''}" alt="${card.name}">
-      <div class="card-detail-info">
-        <div class="card-detail-name">${card.name}</div>
-        <div class="card-detail-id">${card.id}</div>
-        ${ruleSectionHtml}
-        ${tagsHtml ? `<div class="card-detail-tags">${tagsHtml}</div>` : ''}
-        <div class="card-detail-stats">${statsHtml}</div>
-        ${productText ? `<div style="font-size:0.75rem;color:var(--text-secondary);margin-bottom:0.8rem">${t('product_label')}: ${productText}</div>` : ''}
-        ${variantsHtml}
-        <div class="card-detail-effects">${effectsHtml}</div>
+    <div class="card-page">
+      <header class="cardp-hero">
+        <div class="cardp-hero-eyebrow">卡片 CARD · ${_escape(card.id || '')}</div>
+        <div class="cardp-hero-row">
+          <div class="cardp-set-tag">
+            <span class="set-rarity">${_escape(mainRarity)}</span>
+            <span class="set-num">${_escape(card.id || '')}</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="cardp-body">
+        <section class="cardp-viewer">
+          <div class="cardv-frame" style="--cv-color:${cvColor}">
+            <span class="cardv-corner cardv-corner-tl"></span>
+            <span class="cardv-corner cardv-corner-tr"></span>
+            <span class="cardv-corner cardv-corner-bl"></span>
+            <span class="cardv-corner cardv-corner-br"></span>
+            <img class="cardv-img" id="cardDetailMainImg" src="${_escape(card.imageUrl || '')}" alt="${_escape(card.name)}"
+                 onerror="this.style.display='none'">
+          </div>
+          ${variantsHtml}
+        </section>
+
+        <section class="cardp-info">
+          <h1 class="cardp-title">${_escape(card.name)}</h1>
+
+          <div class="cardp-stats">${statsHtml}</div>
+
+          ${ruleSectionHtml}
+
+          ${setsHtml ? `<div class="cardp-section">
+            <div class="cardp-section-label">収録 / SETS</div>
+            <div class="sets-list">${setsHtml}</div>
+          </div>` : ''}
+
+          ${abilitiesHtml ? `<div class="cardp-section">
+            <div class="cardp-section-label">能力 / ABILITIES</div>
+            <div class="ability-list">${abilitiesHtml}</div>
+          </div>` : ''}
+
+          ${tagsHtml ? `<div class="cardp-section">
+            <div class="cardp-section-label">標籤 / TAGS</div>
+            <div class="kw-row">${tagsHtml}</div>
+          </div>` : ''}
+        </section>
       </div>
     </div>
   `;
 
   if (variants.length > 1) {
     const mainImg = container.querySelector('#cardDetailMainImg');
-    container.querySelectorAll('.card-variant-thumb').forEach(thumb => {
+    container.querySelectorAll('.variant-thumb').forEach(thumb => {
       thumb.addEventListener('click', () => {
         const idx = parseInt(thumb.dataset.variantIdx);
         mainImg.src = variants[idx].imageUrl;
-        container.querySelectorAll('.card-variant-thumb').forEach(t => t.classList.remove('active'));
-        thumb.classList.add('active');
+        mainImg.style.display = '';
+        container.querySelectorAll('.variant-thumb').forEach(t => t.classList.remove('is-active'));
+        thumb.classList.add('is-active');
       });
     });
   }

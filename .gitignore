@@ -18,6 +18,10 @@ wheels/
 # IDE
 .cursor/
 
+# Claude Design handoff bundles (extracted locally, not source)
+.design-handoff/
+.design-handoff-detail/
+
 # OS
 Thumbs.db
 .DS_Store
