@@ -76,6 +76,62 @@ const USAGE_RATE_DATA = {
       { oshi: 'その他', pct: 19 },
     ],
   },
+  'WGP25-26 Fukuoka': [
+    {
+      scope: { 'zh-TW': '個人戰 預選ラウンド', en: 'Individual Qualifier Round', ja: '個人戦 予選ラウンド', fr: 'Qualifications individuelles' },
+      source: 'hololive OFFICIAL CARD GAME',
+      rates: [
+        { oshi: 'AZKi', pct: 23 },
+        { oshi: 'オーロ・クロニー', pct: 14 },
+        { oshi: '大神ミオ', pct: 14 },
+        { oshi: '角巻わため', pct: 6 },
+        { oshi: '風真いろは', pct: 5 },
+        { oshi: '桃鈴ねね', pct: 5 },
+        { oshi: '響咲リオナ', pct: 4 },
+        { oshi: '赤井はあと', pct: 3 },
+        { oshi: '森カリオペ', pct: 3 },
+        { oshi: '戌神ころね', pct: 2 },
+        { oshi: '兎田ぺこら', pct: 2 },
+        { oshi: 'その他', pct: 19 },
+      ],
+    },
+    {
+      scope: { 'zh-TW': 'Trio 預選ラウンド', en: 'Trio Qualifier Round', ja: 'トリオバトル 予選ラウンド', fr: 'Trio Qualifications' },
+      source: 'hololive OFFICIAL CARD GAME',
+      rates: [
+        { oshi: 'AZKi', pct: 24 },
+        { oshi: 'オーロ・クロニー', pct: 18 },
+        { oshi: '大神ミオ', pct: 17 },
+        { oshi: '角巻わため', pct: 5 },
+        { oshi: '風真いろは', pct: 4 },
+        { oshi: '響咲リオナ', pct: 4 },
+        { oshi: '赤井はあと', pct: 3 },
+        { oshi: '桃鈴ねね', pct: 3 },
+        { oshi: '兎田ぺこら', pct: 3 },
+        { oshi: '戌神ころね', pct: 2 },
+        { oshi: '森カリオペ', pct: 2 },
+        { oshi: '百鬼あやめ', pct: 1 },
+        { oshi: 'その他', pct: 14 },
+      ],
+    },
+    {
+      scope: { 'zh-TW': 'らでんのまいたけぐるぐるカップ', en: "Raden's Maitake Guruguru Cup", ja: 'らでんのまいたけぐるぐるカップ', fr: 'Coupe Maitake Guruguru de Raden' },
+      source: 'hololive OFFICIAL CARD GAME',
+      rates: [
+        { oshi: '儒烏風亭らでん', pct: 28 },
+        { oshi: 'AZKi', pct: 21 },
+        { oshi: 'オーロ・クロニー', pct: 14 },
+        { oshi: '大神ミオ', pct: 6 },
+        { oshi: '角巻わため', pct: 4 },
+        { oshi: '風真いろは', pct: 3 },
+        { oshi: '森カリオペ', pct: 2 },
+        { oshi: '桃鈴ねね', pct: 2 },
+        { oshi: '赤井はあと', pct: 2 },
+        { oshi: '戌神ころね', pct: 2 },
+        { oshi: 'その他', pct: 16 },
+      ],
+    },
+  ],
   'WGP25-26 Hong Kong': {
     scope: { 'zh-TW': '預選ラウンド', en: 'Qualifier Round', ja: '予選ラウンド', fr: 'Qualifications' },
     source: 'hololive OFFICIAL CARD GAME',
@@ -182,7 +238,9 @@ export function renderTournamentView(container, decklogDecks, cardsData) {
     let usageHtml = '';
     if (usageKey && !usageRendered.has(usageKey)) {
       usageRendered.add(usageKey);
-      usageHtml = _renderUsageChart(USAGE_RATE_DATA[usageKey]);
+      const usageEntry = USAGE_RATE_DATA[usageKey];
+      const charts = Array.isArray(usageEntry) ? usageEntry : [usageEntry];
+      usageHtml = charts.map(_renderUsageChart).join('');
     }
 
     html += `
