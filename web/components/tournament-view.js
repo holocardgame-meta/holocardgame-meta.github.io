@@ -9,6 +9,7 @@ const KNOWN_WGP_EVENTS = [
   { event: 'ぐるっとツアー2026 Miyagi',    date: '2026-04-04', location: '仙台市中小企業活性化センター' },
   { event: 'WGP25-26 Kuala Lumpur',       date: '2026-04-19', location: 'World Trade Centre KL' },
   { event: 'WGP25-26 Fukuoka',            date: '2026-05-10', location: 'Kitakyushu Messe' },
+  { event: 'WGP25-26 Hong Kong',          date: '2026-05-23', location: '' },
 ];
 
 const USAGE_RATE_DATA = {
@@ -73,6 +74,22 @@ const USAGE_RATE_DATA = {
       { oshi: '桃鈴ねね', pct: 3 },
       { oshi: '百鬼あやめ', pct: 3 },
       { oshi: 'その他', pct: 19 },
+    ],
+  },
+  'WGP25-26 Hong Kong': {
+    scope: { 'zh-TW': '預選ラウンド', en: 'Qualifier Round', ja: '予選ラウンド', fr: 'Qualifications' },
+    source: 'hololive OFFICIAL CARD GAME',
+    rates: [
+      { oshi: 'AZKi', pct: 36 },
+      { oshi: 'オーロ・クロニー', pct: 20 },
+      { oshi: '大神ミオ', pct: 12 },
+      { oshi: '角巻わため', pct: 5 },
+      { oshi: '風真いろは', pct: 5 },
+      { oshi: '赤井はあと', pct: 5 },
+      { oshi: '桃鈴ねね', pct: 3 },
+      { oshi: '百鬼あやめ', pct: 2 },
+      { oshi: 'ラプラス・ダークネス', pct: 2 },
+      { oshi: 'その他', pct: 10 },
     ],
   },
   'ぐるっとツアー2026 Miyagi': {

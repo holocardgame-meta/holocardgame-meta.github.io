@@ -466,5 +466,149 @@
     "event": "WGP25-26 Kuala Lumpur",
     "event_date": "2026-04-19",
     "placement": "Qualifier 16th (Chocolat)"
+  },
+  {
+    "code": "3AU7R",
+    "title": "はあちゃま単",
+    "oshi": "赤井はあと",
+    "source": "WGP25-26 Hong Kong",
+    "event": "WGP25-26 Hong Kong",
+    "event_date": "2026-05-23",
+    "placement": "1st (Jerry)"
+  },
+  {
+    "code": "778AT",
+    "title": "AZKi単",
+    "oshi": "AZKi",
+    "source": "WGP25-26 Hong Kong",
+    "event": "WGP25-26 Hong Kong",
+    "event_date": "2026-05-23",
+    "placement": "2nd (fmy)"
+  },
+  {
+    "code": "1J9DM",
+    "title": "クロニー単",
+    "oshi": "オーロ・クロニー",
+    "source": "WGP25-26 Hong Kong",
+    "event": "WGP25-26 Hong Kong",
+    "event_date": "2026-05-23",
+    "placement": "Qualifier 1st (假澳一)"
+  },
+  {
+    "code": "3GAPH",
+    "title": "ミオ単",
+    "oshi": "大神ミオ",
+    "source": "WGP25-26 Hong Kong",
+    "event": "WGP25-26 Hong Kong",
+    "event_date": "2026-05-23",
+    "placement": "Qualifier 2nd (TONG)"
+  },
+  {
+    "code": "1EYY7",
+    "title": "ミオ単",
+    "oshi": "大神ミオ",
+    "source": "WGP25-26 Hong Kong",
+    "event": "WGP25-26 Hong Kong",
+    "event_date": "2026-05-23",
+    "placement": "Qualifier 3rd (Kai)"
+  },
+  {
+    "code": "6HUX9",
+    "title": "クロニー単",
+    "oshi": "オーロ・クロニー",
+    "source": "WGP25-26 Hong Kong",
+    "event": "WGP25-26 Hong Kong",
+    "event_date": "2026-05-23",
+    "placement": "Qualifier 4th (DebYE)"
+  },
+  {
+    "code": "504A7",
+    "title": "AZKi単",
+    "oshi": "AZKi",
+    "source": "WGP25-26 Hong Kong",
+    "event": "WGP25-26 Hong Kong",
+    "event_date": "2026-05-23",
+    "placement": "Qualifier 5th (ITDog)"
+  },
+  {
+    "code": "432Q7",
+    "title": "AZKi単",
+    "oshi": "AZKi",
+    "source": "WGP25-26 Hong Kong",
+    "event": "WGP25-26 Hong Kong",
+    "event_date": "2026-05-23",
+    "placement": "Qualifier 6th (Mojito)"
+  },
+  {
+    "code": "646NX",
+    "title": "AZKi単",
+    "oshi": "AZKi",
+    "source": "WGP25-26 Hong Kong",
+    "event": "WGP25-26 Hong Kong",
+    "event_date": "2026-05-23",
+    "placement": "Qualifier 8th (JerrySun)"
+  },
+  {
+    "code": "2FGAT",
+    "title": "クロニー単",
+    "oshi": "オーロ・クロニー",
+    "source": "WGP25-26 Hong Kong",
+    "event": "WGP25-26 Hong Kong",
+    "event_date": "2026-05-23",
+    "placement": "Qualifier 9th (LemonYeee)"
+  },
+  {
+    "code": "6SESX",
+    "title": "クロニー単",
+    "oshi": "オーロ・クロニー",
+    "source": "WGP25-26 Hong Kong",
+    "event": "WGP25-26 Hong Kong",
+    "event_date": "2026-05-23",
+    "placement": "Qualifier 10th (Ki)"
+  },
+  {
+    "code": "62XEF",
+    "title": "クロニー単",
+    "oshi": "オーロ・クロニー",
+    "source": "WGP25-26 Hong Kong",
+    "event": "WGP25-26 Hong Kong",
+    "event_date": "2026-05-23",
+    "placement": "Qualifier 11th (超快樂拉拉熊)"
+  },
+  {
+    "code": "4UT9H",
+    "title": "AZKi単",
+    "oshi": "AZKi",
+    "source": "WGP25-26 Hong Kong",
+    "event": "WGP25-26 Hong Kong",
+    "event_date": "2026-05-23",
+    "placement": "Qualifier 12th (nonomi)"
+  },
+  {
+    "code": "3LNCK",
+    "title": "AZKi単",
+    "oshi": "AZKi",
+    "source": "WGP25-26 Hong Kong",
+    "event": "WGP25-26 Hong Kong",
+    "event_date": "2026-05-23",
+    "placement": "Qualifier 13th (Shirofox)"
+  },
+  {
+    "code": "5Z2PR",
+    "title": "ミオ単",
+    "oshi": "大神ミオ",
+    "source": "WGP25-26 Hong Kong",
+    "event": "WGP25-26 Hong Kong",
+    "event_date": "2026-05-23",
+    "placement": "Qualifier 14th (eric)"
+  },
+  {
+    "code": "4G783",
+    "title": "AZKi単",
+    "oshi": "AZKi",
+    "source": "WGP25-26 Hong Kong",
+    "event": "WGP25-26 Hong Kong",
+    "event_date": "2026-05-23",
+    "placement": "Qualifier 16th (Kcend)"
   }
 ]
