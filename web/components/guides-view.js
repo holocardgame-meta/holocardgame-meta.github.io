@@ -139,8 +139,9 @@ export function renderGuidesView(container, allGuides, decksData, cardsData, fil
     loadMoreBtn.addEventListener('click', () => {
       if (!_state) return;
       const { filtered, cardsMap } = _state;
-      const next = filtered.slice(_state.shown, _state.shown + PAGE_SIZE);
-      grid.insertAdjacentHTML('beforeend', next.map(d => renderGuideCard(d, cardsMap)).join(''));
+      const start = _state.shown;
+      const next = filtered.slice(start, start + PAGE_SIZE);
+      grid.insertAdjacentHTML('beforeend', next.map((d, i) => renderGuideCard(d, cardsMap, start + i)).join(''));
       _state.shown += next.length;
       const left = filtered.length - _state.shown;
       if (countEl) countEl.textContent = t('guides_showing', { shown: Math.min(_state.shown, filtered.length), total: filtered.length });
@@ -159,7 +160,7 @@ export function renderGuidesView(container, allGuides, decksData, cardsData, fil
         const { filtered, cardsMap } = _state;
         const q = searchEl.value.trim().toLowerCase();
         if (!q) {
-          grid.innerHTML = filtered.slice(0, _state.shown).map(d => renderGuideCard(d, cardsMap)).join('');
+          grid.innerHTML = filtered.slice(0, _state.shown).map((d, i) => renderGuideCard(d, cardsMap, i)).join('');
           if (countEl) countEl.textContent = t('guides_showing', { shown: Math.min(_state.shown, filtered.length), total: filtered.length });
           if (_state.shown < filtered.length) {
             loadMoreWrap.style.display = '';
@@ -177,7 +178,7 @@ export function renderGuidesView(container, allGuides, decksData, cardsData, fil
           return text.includes(q);
         });
         grid.innerHTML = matched.length
-          ? matched.map(d => renderGuideCard(d, cardsMap)).join('')
+          ? matched.map((d, i) => renderGuideCard(d, cardsMap, i)).join('')
           : `
             <div class="empty-state" style="grid-column:1/-1">
               <div class="empty-glyph">∅</div>
@@ -211,19 +212,22 @@ function renderGuideCard(deck, cardsMap, index = Infinity) {
     ? `<span class="deck-tier-letter" data-t="${deck.tier}">${TIER_LETTER[deck.tier]}</span>`
     : '';
 
-  const tierBadge = deck.tier
-    ? `<span class="guide-tier-badge" data-tier="${deck.tier}">T${deck.tier}</span>`
-    : '';
+  // Tier tag overlay (top-left) — gold for T1, silver T2, bronze T3; orange for official, cyan for guide
+  let tierTag = '';
+  if (deck.tier) {
+    tierTag = `<span class="deck-tier-tag" data-t="${deck.tier}">T${deck.tier}</span>`;
+  } else if (deck._source === 'official') {
+    tierTag = `<span class="deck-tier-tag official">OFFICIAL</span>`;
+  } else if (deck._source === 'guide') {
+    tierTag = `<span class="deck-tier-tag guide">GUIDE</span>`;
+  }
 
-  const sourceBadge = deck._source === 'official'
-    ? `<span class="guide-source-badge official-src">Official</span>`
-    : deck._source === 'tier'
-    ? `<span class="guide-source-badge tier-src">Tier</span>`
-    : `<span class="guide-source-badge guide-src">Guide</span>`;
+  // Rank badge (top-right) — index is 0-based position in the filtered list
+  const rank = Number.isFinite(index) ? `<span class="deck-src-badge">#${String(index + 1).padStart(2, '0')}</span>` : '';
 
   const deckColors = _getDeckColors(deck, cardsMap);
   const colorDots = deckColors.slice(0, 3).map(c =>
-    `<span class="guide-color-dot" style="background:${COLOR_CSS[c] || '#888'}"></span>`
+    `<span class="cd" style="background:${COLOR_CSS[c] || '#888'}"></span>`
   ).join('');
 
   const desc = localized(deck.description, '');
@@ -238,19 +242,21 @@ function renderGuideCard(deck, cardsMap, index = Infinity) {
     <div class="guide-card deck-card" data-deck-id="${deck.deck_id}" data-search-text="${searchText.replace(/"/g, '')}">
       <div class="deck-thumb-wrap">
         ${imgHtml}
+        ${tierTag}
+        ${rank}
         ${tierLetter}
       </div>
-      <div class="guide-card-body">
-        <div class="guide-card-top">
-          ${sourceBadge}${tierBadge}
-          ${colorDots ? `<span class="guide-color-dots">${colorDots}</span>` : ''}
+      <div class="deck-body">
+        <div class="deck-meta-row">
+          ${colorDots ? `<span class="color-dots">${colorDots}</span>` : ''}
+          ${deck.date ? `<span class="deck-date">${deck.date}</span>` : ''}
         </div>
-        <div class="guide-card-title">${title}</div>
-        ${descText ? `<p class="guide-card-desc">${descText.slice(0, 100)}${descText.length > 100 ? '...' : ''}</p>` : ''}
-        <div class="guide-card-meta">
-          ${deck.date ? `<span class="guide-card-date">${deck.date}</span>` : ''}
-          ${cardCount ? `<span>${cardCount} ${t('guides_cards')}</span>` : ''}
-          ${stratCount ? `<span>${stratCount} ${t('guides_strats')}</span>` : ''}
+        <div class="deck-title">${title}</div>
+        ${descText ? `<p class="deck-desc">${descText.slice(0, 100)}${descText.length > 100 ? '...' : ''}</p>` : ''}
+        <div class="deck-foot">
+          ${cardCount ? `<span><span class="stat-n">${cardCount}</span> <span class="stat-lbl">${t('guides_cards')}</span></span>` : ''}
+          ${stratCount ? `<span><span class="stat-n">${stratCount}</span> <span class="stat-lbl">${t('guides_strats')}</span></span>` : ''}
+          <span class="deck-foot-arrow" aria-hidden="true">→</span>
         </div>
       </div>
     </div>

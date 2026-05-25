@@ -111,8 +111,8 @@ function renderPage(container) {
 
   if (hasMore) {
     const remaining = filteredCards.length - end;
-    html += `<div style="text-align:center;padding:1.5rem">
-      <button class="nav-btn" id="loadMoreCards">${t('load_more', { remaining })}</button>
+    html += `<div class="guides-load-more-wrap">
+      <button class="guides-load-more-btn" id="loadMoreCards">${t('load_more', { remaining })}</button>
     </div>`;
   }
 

@@ -49,12 +49,14 @@ async function ensureCards() {
   if (_loaded.cards) return;
   _loaded.cards = true;
   cardsData = (await _fetchJSON('data/cards.json')) || [];
+  updateNavCounts();
 }
 
 async function ensureDecklog() {
   if (_loaded.decklog) return;
   _loaded.decklog = true;
   decklogDecks = (await _fetchJSON('data/decklog_decks.json')) || [];
+  updateNavCounts();
 }
 
 // ── View / filter state coordination ─────────────────────────────────────
@@ -499,6 +501,10 @@ async function init() {
   await loadCoreData();
   updateNavCounts();
   render();
+  // Preload card + tournament data in the background so nav counts populate
+  // without the user having to visit those views first.
+  ensureCards();
+  ensureDecklog();
 }
 
 init();
