@@ -91,6 +91,65 @@ function _glyphFrom(text) {
   return a ? a[0].toUpperCase() : '★';
 }
 
+function _cardImage(card, cardsMap) {
+  const dbCard = card?.card_id ? cardsMap?.[card.card_id] : null;
+  const src = card?.image || card?.imageUrl || dbCard?.imageUrl || dbCard?.image || '';
+  if (!src) return null;
+  return {
+    src,
+    alt: card?.name || dbCard?.name || card?.card_id || '',
+  };
+}
+
+function _heroEmblemImage({ recipe, deckInfo, deck, cardsMap }) {
+  if (deck?.oshi_image) return { src: deck.oshi_image, alt: deck.oshi || deck.title || '' };
+  if (recipe?.oshi_image) return { src: recipe.oshi_image, alt: deckInfo?.vtuber || '' };
+
+  const cards = recipe?.cards || [];
+  const oshiName = deck?.oshi || deckInfo?.vtuber || '';
+  if (oshiName) {
+    const matchedCard = cards.find(c => {
+      const name = String(c?.name || cardsMap?.[c?.card_id]?.name || '');
+      return name && (name.includes(oshiName) || oshiName.includes(name));
+    });
+    const matchedImage = _cardImage(matchedCard, cardsMap);
+    if (matchedImage) return matchedImage;
+  }
+
+  for (const card of cards) {
+    const image = _cardImage(card, cardsMap);
+    if (image) return image;
+  }
+  return null;
+}
+
+function _renderHeroEmblem({ image, imageAlt, colors = [], glyph, badgeHtml = '' }) {
+  const normalizedColors = colors.map(_normColor).filter(c => COLOR_HEX[c]);
+  const imageHtml = image?.src
+    ? `<img class="guide-hero-emblem-img" src="${_esc(image.src)}" alt="${_esc(imageAlt || image.alt || '')}" loading="lazy" decoding="async">`
+    : '';
+  const colorsHtml = !imageHtml && normalizedColors.length
+    ? `<div class="guide-hero-emblem-colors" data-count="${normalizedColors.length}">
+        ${normalizedColors.map(c => `<span class="guide-hero-emblem-color" style="background:${COLOR_HEX[c]}" title="${_esc(c)}"></span>`).join('')}
+      </div>`
+    : '';
+  const glyphHtml = !imageHtml && !colorsHtml
+    ? `<div class="emblem-glyph">${_esc(glyph || '?')}</div>`
+    : '';
+  const stateClass = imageHtml ? ' has-image' : colorsHtml ? ' has-colors' : '';
+  return `
+    <div class="guide-hero-emblem${stateClass}">
+      ${imageHtml}
+      ${colorsHtml}
+      ${glyphHtml}
+      <span class="emblem-corner emblem-corner-tl"></span>
+      <span class="emblem-corner emblem-corner-tr"></span>
+      <span class="emblem-corner emblem-corner-bl"></span>
+      <span class="emblem-corner emblem-corner-br"></span>
+      ${badgeHtml}
+    </div>`;
+}
+
 export function renderDeckModal(container, deckId, tierData, decksData, allGuides, officialDecks, cardsData) {
   let deckInfo = null;
   let tierNum = null;
@@ -177,6 +236,7 @@ function _renderGuidePage(container, { deckInfo, tierNum, recipe, cardsData }) {
 
   const vtuber = deckInfo?.vtuber || '';
   const deckImage = recipe?.deck_image || deckInfo?.image || '';
+  const heroImage = _heroEmblemImage({ recipe, deckInfo, cardsMap });
 
   const heroMeta = [
     vtuber ? { label: t('meta_oshi'), val: _esc(vtuber) } : null,
@@ -285,14 +345,13 @@ function _renderGuidePage(container, { deckInfo, tierNum, recipe, cardsData }) {
     <div class="guide-page">
       <header class="guide-hero">
         <div class="guide-hero-grid">
-          <div class="guide-hero-emblem">
-            <div class="emblem-glyph">${_esc(_glyphFrom(titleJa || titleZh))}</div>
-            <span class="emblem-corner emblem-corner-tl"></span>
-            <span class="emblem-corner emblem-corner-tr"></span>
-            <span class="emblem-corner emblem-corner-bl"></span>
-            <span class="emblem-corner emblem-corner-br"></span>
-            ${tierLetter}
-          </div>
+          ${_renderHeroEmblem({
+            image: heroImage,
+            imageAlt: vtuber || titleZh,
+            colors: deckColors,
+            glyph: _glyphFrom(titleJa || titleZh),
+            badgeHtml: tierLetter,
+          })}
           <div class="guide-hero-text">
             <div class="guide-hero-eyebrow">${_esc(t('eyebrow_guide'))}</div>
             <h1 class="guide-hero-title">${_esc(titleZh)}</h1>
@@ -478,19 +537,18 @@ function _renderOfficialDeckModal(container, deck) {
         </div>
       </aside>`
     : '';
+  const heroImage = _heroEmblemImage({ deck });
 
   container.innerHTML = `
     <div class="guide-page">
       <header class="guide-hero">
         <div class="guide-hero-grid">
-          <div class="guide-hero-emblem">
-            <div class="emblem-glyph">${_esc(_glyphFrom(deck.oshi || title))}</div>
-            <span class="emblem-corner emblem-corner-tl"></span>
-            <span class="emblem-corner emblem-corner-tr"></span>
-            <span class="emblem-corner emblem-corner-bl"></span>
-            <span class="emblem-corner emblem-corner-br"></span>
-            <div class="emblem-letter">OFCL</div>
-          </div>
+          ${_renderHeroEmblem({
+            image: heroImage,
+            imageAlt: deck.oshi || title,
+            glyph: _glyphFrom(deck.oshi || title),
+            badgeHtml: '<div class="emblem-letter">OFCL</div>',
+          })}
           <div class="guide-hero-text">
             <div class="guide-hero-eyebrow">${_esc(t('eyebrow_official'))}</div>
             <h1 class="guide-hero-title">${_esc(title)}</h1>
