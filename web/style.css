@@ -131,15 +131,16 @@ body {
 .brand-mark {
   width: 42px; height: 42px;
   border-radius: 8px;
-  background: radial-gradient(circle at 30% 30%, #5fdcff 0%, #26c7ff 35%, #0d7aa6 100%);
-  display: grid; place-items: center;
-  color: #051018;
-  font-family: 'Orbitron', sans-serif;
-  font-weight: 900;
-  font-size: 1.1rem;
-  letter-spacing: .02em;
+  background: transparent;
+  display: block;
+  overflow: hidden;
   flex-shrink: 0;
   box-shadow: 0 0 0 1px rgba(95,220,255,.3), 0 4px 14px rgba(38,199,255,.2);
+}
+.brand-mark-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 .brand-name {
   font-family: 'Orbitron', sans-serif;
@@ -1022,16 +1023,9 @@ body {
   margin-bottom: .2rem;
 }
 .app[data-style="arena"] .brand-mark {
-  background: linear-gradient(135deg, #f4c842 0%, #c98e1f 100%);
-  color: #1a0e02;
-  border-radius: 4px;
-  border: 1px solid #ffe48a;
-  font-family: 'Cinzel', serif;
-  font-weight: 700;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.4),
-    inset 0 -1px 0 rgba(0,0,0,.3),
-    0 4px 14px rgba(244,200,66,.25);
+  background: transparent;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(244,200,66,.25);
 }
 .app[data-style="arena"] .brand-name {
   font-family: 'Noto Sans TC', sans-serif;
