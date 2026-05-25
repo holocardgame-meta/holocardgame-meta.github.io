@@ -8,6 +8,6 @@ dependencies = [
     "beautifulsoup4>=4.14.3",
     "google-genai>=1.70.0",
     "httpx>=0.28.1",
-    "lxml>=6.0.2",
-    "pillow>=12.1.1",
+    "lxml>=6.1.0",
+    "pillow>=12.2.0",
 ]
