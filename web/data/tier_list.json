@@ -417,7 +417,7 @@
           "ratings": {
             "firepower": "◎",
             "ease": "◎",
-            "stability": "○",
+            "stability": "△",
             "endurance": "○",
             "pressure": "○"
           },
@@ -462,8 +462,8 @@
           "ratings": {
             "firepower": "◎",
             "ease": "○",
-            "stability": "◎",
-            "endurance": "◎",
+            "stability": "○",
+            "endurance": "○",
             "pressure": "○"
           },
           "features": {
@@ -488,9 +488,86 @@
               "Obtenir des effets supplémentaires puissants et une Puissance de feu élevée en remettant Debut sous le Deck."
             ]
           },
-          "recipe_url": "https://amzn.to/4exLSaR",
+          "recipe_url": "https://www.holocardstrategy.jp/ha-totandeck/",
           "vtuber": "赤井はあと",
           "id": "赤井はあと-はあちゃま単"
+        }
+      ]
+    },
+    {
+      "tier": 4,
+      "decks": [
+        {
+          "name": "ちはにこ",
+          "image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/933d1f7c5ce2b9ac74edab1b59eeffcd-1080x608.png",
+          "ratings": {
+            "firepower": "○",
+            "ease": "△",
+            "stability": "◎",
+            "endurance": "○",
+            "pressure": "○"
+          },
+          "features": {
+            "ja": [
+              "後攻2ターン目に一気にブルームして、2面取りを狙う！",
+              "クロニー環境に刺さる青特攻が優秀！",
+              "手札の枚数確保や火力の調整・SPのタイミングなどの判断が重要"
+            ],
+            "zh-TW": [
+              "後攻第二回合一口氣綻放，目標是拿下兩面！",
+              "能有效對抗克洛伊環境的藍色特攻很優秀！",
+              "判斷手牌張數的確保、火力的調整、SP的時機等很重要"
+            ],
+            "en": [
+              "Bloom all at once on the second turn going second, and aim for a two-panel capture!",
+              "A blue-special attack that pierces through the \"ChroNoiR\" environment is excellent!",
+              "Decisions such as securing the number of cards in Hand, adjusting firepower, and the timing of SP are important."
+            ],
+            "fr": [
+              "Faire un Bloom en masse au deuxième tour en second et viser à prendre 2 scènes !",
+              "Une attaque spéciale bleue qui transperce l'environnement de Chrony est excellente !",
+              "Il est important de juger de la conservation du nombre de cartes en main, de l'ajustement de la puissance de feu, du timing des SP, etc."
+            ]
+          },
+          "recipe_url": null,
+          "vtuber": "輪堂千速",
+          "id": "輪堂千速-ちはにこ"
+        },
+        {
+          "name": "シオリ単",
+          "image": "https://www.holocardstrategy.jp/wp-content/uploads/2024/09/553039454d0c9be191dd2d80579e9237-1080x608.png",
+          "ratings": {
+            "firepower": "○",
+            "ease": "○",
+            "stability": "○",
+            "endurance": "△",
+            "pressure": "◎"
+          },
+          "features": {
+            "ja": [
+              "大量のサポートをうまく使っていくのが特徴",
+              "ステラやSPでバックホロメンの狙撃が可能！",
+              "単騎では火力が足りないデッキなので打点調整が重要"
+            ],
+            "zh-TW": [
+              "特色是能好好運用大量的支援卡",
+              "能透過Stella或SP狙擊後方成員！",
+              "單獨作戰時火力不足的牌組，因此調整打點很重要"
+            ],
+            "en": [
+              "The characteristic is to make good use of a large number of Supports.",
+              "Snipe Back Holomen with Stella or SP!",
+              "Since the firepower is insufficient for a solo attack, adjusting the damage is important."
+            ],
+            "fr": [
+              "La caractéristique est d'utiliser habilement une grande quantité de Supports",
+              "Il est possible de cibler les membres à l'arrière avec Stella ou SP !",
+              "C'est un deck qui manque de puissance de feu en solo, donc ajuster les dégâts est important"
+            ]
+          },
+          "recipe_url": "https://amzn.to/4exLSaR",
+          "vtuber": "シオリ・ノヴェラ",
+          "id": "シオリ-ノヴェラ-シオリ単"
         }
       ]
     }
