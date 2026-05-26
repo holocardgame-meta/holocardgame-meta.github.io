@@ -583,7 +583,7 @@ export function renderTournamentDeckModal(container, decklogId, decklogDecks, ca
 
   const footerHtml = deck.url ? `
     <div class="deckp-footer">
-      <a href="${safeUrl(deck.url)}" class="dl-btn" target="_blank" rel="noopener">
+      <a href="${safeUrl(deck.url)}" class="dl-btn" target="_blank" rel="noopener" data-ga-link="decklog" data-ga-item-id="${_esc(deck.deck_id || '')}">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
           <polyline points="15 3 21 3 21 9"/>

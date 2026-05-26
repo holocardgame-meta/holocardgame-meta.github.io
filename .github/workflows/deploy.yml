@@ -39,6 +39,9 @@ jobs:
       - name: Verify rendered external data is sanitized
         run: node scripts/check_render_sanitization.mjs
 
+      - name: Verify key GA event contract
+        run: node scripts/check_key_ga_events.mjs
+
       - name: Set up Python
         if: github.event_name != 'push'
         uses: actions/setup-python@v6

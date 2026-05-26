@@ -83,6 +83,13 @@ function trackFilterChange(filterType, filterValue, isActive) {
   });
 }
 
+function trackContentOpen(openEventName, params) {
+  trackGaEvent(openEventName, {
+    event_role: 'key_event_candidate',
+    ...params,
+  });
+}
+
 function _fetchJSON(url) {
   return fetch(url).then(r => r.ok ? r.json() : null);
 }
@@ -610,6 +617,11 @@ function setupModals() {
         content_type: 'tournament_deck',
         item_id: decklogId,
       });
+      trackContentOpen('deck_open', {
+        content_type: 'tournament_deck',
+        item_id: decklogId,
+        content_source: 'decklog',
+      });
       renderTournamentDeckModal(deckModalBody, decklogId, decklogDecks, cardIndexData);
       deckModal.hidden = false;
       document.body.style.overflow = 'hidden';
@@ -619,10 +631,19 @@ function setupModals() {
     const deckCard = e.target.closest('.deck-card');
     if (deckCard) {
       const deckId = deckCard.dataset.deckId;
+      const deckSource = deckCard.dataset.source || 'deck';
       await Promise.all([ensureCardIndex(), ensureGuideDetail(deckId)]);
       trackGaEvent('select_content', {
         content_type: 'deck_guide',
         item_id: deckId,
+        content_source: deckSource,
+      });
+      const openEventName = deckSource === 'guide' ? 'guide_open' : 'deck_open';
+      trackGaEvent(openEventName, {
+        event_role: 'key_event_candidate',
+        content_type: deckSource === 'guide' ? 'guide' : 'deck',
+        item_id: deckId,
+        content_source: deckSource,
       });
       renderDeckModal(deckModalBody, deckId, tierData, decksData, allGuides, officialDecks, cardIndexData);
       deckModal.hidden = false;
@@ -667,6 +688,25 @@ function setupModals() {
   });
 }
 
+function trackKeyOutboundLink(link, url) {
+  const linkType = link.dataset.gaLink;
+  if (linkType === 'decklog') {
+    trackGaEvent('decklog_click', {
+      event_role: 'key_event_candidate',
+      item_id: link.dataset.gaItemId || '',
+      link_domain: url.hostname,
+      link_url: url.href,
+    });
+  } else if (linkType === 'source_guide') {
+    trackGaEvent('source_guide_click', {
+      event_role: 'key_event_candidate',
+      item_id: link.dataset.gaItemId || '',
+      link_domain: url.hostname,
+      link_url: url.href,
+    });
+  }
+}
+
 function setupOutboundTracking() {
   document.addEventListener('click', (e) => {
     const link = e.target.closest('a[href]');
@@ -686,6 +726,7 @@ function setupOutboundTracking() {
       link_domain: url.hostname,
       link_url: url.href,
     });
+    trackKeyOutboundLink(link, url);
   });
 }
 
@@ -734,7 +775,14 @@ function setupIosInstallPrompt() {
   }, 2500);
 
   laterBtn.addEventListener('click', () => hidePrompt(7, 'later'));
-  dismissBtn.addEventListener('click', () => hidePrompt(30, 'dismiss'));
+  dismissBtn.addEventListener('click', () => {
+    trackGaEvent('pwa_install_accept', {
+      event_role: 'key_event_candidate',
+      platform,
+      install_method: 'manual_instructions',
+    });
+    hidePrompt(30, 'dismiss');
+  });
 }
 
 function setupAndroidInstallPrompt() {
@@ -792,6 +840,10 @@ function setupAndroidInstallPrompt() {
 
   window.addEventListener('appinstalled', () => {
     deferredPrompt = null;
+    trackGaEvent('pwa_installed', {
+      event_role: 'key_event_candidate',
+      platform: 'android_chrome',
+    });
     hidePrompt(365, 'installed');
   });
 
@@ -820,6 +872,13 @@ function setupAndroidInstallPrompt() {
     const outcome = choice && choice.outcome === 'accepted' ? 'accepted' : 'dismissed';
     setDismissedUntil(outcome === 'accepted' ? 365 : 14);
     window.setTimeout(() => { prompt.hidden = true; }, 180);
+    if (outcome === 'accepted') {
+      trackGaEvent('pwa_install_accept', {
+        event_role: 'key_event_candidate',
+        platform: 'android_chrome',
+        install_method: 'browser_prompt',
+      });
+    }
     trackGaEvent('pwa_install_prompt', {
       platform: 'android_chrome',
       prompt_action: outcome,

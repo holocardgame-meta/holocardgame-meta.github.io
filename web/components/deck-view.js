@@ -330,7 +330,7 @@ function _renderGuidePage(container, { deckInfo, tierNum, recipe, cardsData }) {
         <div class="rail-block">
           <div class="rail-label">${_esc(t('meta_source'))} / Source</div>
           <ul class="rail-sources">
-            <li><a href="${safeUrl(recipe.url)}" target="_blank" rel="noopener">${_esc(t('source_link'))}</a></li>
+            <li><a href="${safeUrl(recipe.url)}" target="_blank" rel="noopener" data-ga-link="source_guide" data-ga-item-id="${_esc(recipe.deck_id || '')}">${_esc(t('source_link'))}</a></li>
           </ul>
         </div>
       </aside>`
@@ -527,7 +527,7 @@ function _renderOfficialDeckModal(container, deck) {
         <div class="rail-block">
           <div class="rail-label">${_esc(t('meta_source'))} / Source</div>
           <ul class="rail-sources">
-            <li><a href="${safeUrl(deck.url)}" target="_blank" rel="noopener">${_esc(t('source_link'))}</a></li>
+            <li><a href="${safeUrl(deck.url)}" target="_blank" rel="noopener" data-ga-link="source_guide" data-ga-item-id="${_esc(deck.deck_id || '')}">${_esc(t('source_link'))}</a></li>
           </ul>
         </div>
       </aside>`

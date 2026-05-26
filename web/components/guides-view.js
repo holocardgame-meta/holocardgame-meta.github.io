@@ -265,9 +265,10 @@ function renderGuideCard(deck, cardsMap, index = Infinity) {
 
   const jaTitle = typeof deck.title === 'object' ? (deck.title.ja || '') : (deck.title || '');
   const searchText = [jaTitle, title, descText, deck.deck_id].join(' ').toLowerCase();
+  const source = deck._source || 'deck';
 
   return `
-    <div class="guide-card deck-card" data-deck-id="${_esc(deck.deck_id)}" data-search-text="${_esc(searchText)}">
+    <div class="guide-card deck-card" data-deck-id="${_esc(deck.deck_id)}" data-source="${_esc(source)}" data-search-text="${_esc(searchText)}">
       <div class="deck-thumb-wrap">
         ${imgHtml}
         ${tierTag}

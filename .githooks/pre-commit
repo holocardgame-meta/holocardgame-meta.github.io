@@ -3,3 +3,4 @@ set -eu
 
 node scripts/check_google_tags.mjs
 node scripts/check_render_sanitization.mjs
+node scripts/check_key_ga_events.mjs
