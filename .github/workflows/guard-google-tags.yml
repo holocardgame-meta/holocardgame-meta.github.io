@@ -21,3 +21,8 @@ jobs:
 
       - name: Verify Google site and analytics tags
         run: node scripts/check_google_tags.mjs
+
+      - name: Verify multilingual SEO pages
+        run: |
+          node scripts/build_seo_pages.mjs
+          node scripts/check_seo_pages.mjs

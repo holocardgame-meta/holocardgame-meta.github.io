@@ -33,6 +33,12 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Generate static SEO language pages
+        run: node scripts/build_seo_pages.mjs
+
+      - name: Verify multilingual SEO pages
+        run: node scripts/check_seo_pages.mjs
+
       - name: Verify Google site and analytics tags
         run: node scripts/check_google_tags.mjs
 

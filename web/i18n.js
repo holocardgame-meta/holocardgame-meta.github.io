@@ -1,3 +1,13 @@
+import {
+  FALLBACK_LANG,
+  SEO_METADATA,
+  SITE_URL,
+  SUPPORTED_LANGS,
+  getExplicitLangFromLocation,
+  getLanguageUrl,
+  getSeoMetadata,
+} from './seo-config.mjs';
+
 const TRANSLATIONS = {
   'zh-TW': {
     lang_label: '中文',
@@ -731,47 +741,10 @@ const TRANSLATIONS = {
   },
 };
 
-const SUPPORTED_LANGS = ['zh-TW', 'en', 'ja', 'fr', 'es'];
-const FALLBACK_LANG = 'en';
-const SITE_URL = 'https://holocardgame-meta.github.io/';
-const SEO_METADATA = {
-  'zh-TW': {
-    title: 'HOLOCARD META - hOCG Tier List, 牌組攻略與卡片資料庫',
-    description: 'hololive OFFICIAL CARD GAME (hOCG / ホロカ) 粉絲製環境資料庫：Tier 排行榜、牌組攻略、牌組配方、大賽結果與卡片搜尋。',
-    url: `${SITE_URL}?lang=zh-TW`,
-    locale: 'zh_TW',
-  },
-  en: {
-    title: 'HOLOCARD META - hOCG Tier List, Deck Guides & Card Database',
-    description: 'Fan-made hololive card game (hOCG) meta database with tier lists, deck guides, deck recipes, tournament results, and a full card database.',
-    url: `${SITE_URL}?lang=en`,
-    locale: 'en_US',
-  },
-  ja: {
-    title: 'HOLOCARD META - ホロカ環境Tierランキング・デッキ攻略',
-    description: 'ホロライブカードゲーム (hOCG / ホロカ) のファンメイド環境データベース。Tierランキング、デッキ攻略、デッキレシピ、大会結果、カード検索を掲載。',
-    url: `${SITE_URL}?lang=ja`,
-    locale: 'ja_JP',
-  },
-  fr: {
-    title: 'HOLOCARD META - Tier List hOCG, Guides de Decks et Base de Cartes',
-    description: 'Base de données fan-made pour hololive OFFICIAL CARD GAME (hOCG): tier list, guides de decks hOCG, recettes de decks, résultats de tournois WGP et recherche de cartes.',
-    url: `${SITE_URL}?lang=fr`,
-    locale: 'fr_FR',
-  },
-  es: {
-    title: 'HOLOCARD META - Tier list hOCG, guías de mazos y cartas',
-    description: 'Base de datos fan-made de hololive OFFICIAL CARD GAME (hOCG): tier list, guías de mazos, recetas de decks, resultados de torneos WGP y búsqueda de cartas.',
-    url: `${SITE_URL}?lang=es`,
-    locale: 'es_ES',
-  },
-};
-
 let currentLang = FALLBACK_LANG;
 
-function _getUrlLang() {
-  const lang = new URLSearchParams(window.location.search).get('lang');
-  return SUPPORTED_LANGS.includes(lang) ? lang : '';
+function _getExplicitLang() {
+  return getExplicitLangFromLocation(window.location);
 }
 
 function _setMetaContent(selector, content) {
@@ -785,8 +758,9 @@ function _setLinkHref(selector, href) {
 }
 
 function _applySeoMetadata() {
-  const meta = SEO_METADATA[currentLang] || SEO_METADATA[FALLBACK_LANG];
-  const pageUrl = _getUrlLang() ? meta.url : SITE_URL;
+  const explicitLang = _getExplicitLang();
+  const meta = getSeoMetadata(currentLang, Boolean(explicitLang));
+  const pageUrl = explicitLang ? getLanguageUrl(currentLang) : SITE_URL;
 
   document.title = meta.title;
   _setMetaContent('meta[name="description"]', meta.description);
@@ -797,6 +771,15 @@ function _applySeoMetadata() {
   _setMetaContent('meta[name="twitter:title"]', meta.title);
   _setMetaContent('meta[name="twitter:description"]', meta.description);
   _setLinkHref('link[rel="canonical"]', pageUrl);
+}
+
+function _pushLanguageUrl(lang) {
+  if (!window.history?.pushState) return;
+  if (!document.querySelector('base')) return;
+  const url = new URL(window.location.href);
+  url.pathname = `/${lang}/`;
+  url.searchParams.delete('lang');
+  window.history.pushState({}, '', url);
 }
 
 function _detectBrowserLang() {
@@ -813,7 +796,7 @@ function _detectBrowserLang() {
 }
 
 export function initI18n() {
-  const urlLang = _getUrlLang();
+  const urlLang = _getExplicitLang();
   const saved = localStorage.getItem('holo-card-lang');
   if (urlLang) {
     currentLang = urlLang;
@@ -827,10 +810,11 @@ export function initI18n() {
   return currentLang;
 }
 
-export function setLang(lang) {
+export function setLang(lang, options = {}) {
   if (!SUPPORTED_LANGS.includes(lang)) return;
   currentLang = lang;
   localStorage.setItem('holo-card-lang', lang);
+  if (options.updateUrl) _pushLanguageUrl(lang);
   document.documentElement.lang = lang;
   _applySeoMetadata();
 }

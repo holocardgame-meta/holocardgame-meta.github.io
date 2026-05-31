@@ -557,7 +557,7 @@ function setupLangSwitcher() {
     const choose = () => {
       const previousLanguage = getLang();
       const selectedLanguage = opt.dataset.lang;
-      setLang(selectedLanguage);
+      setLang(selectedLanguage, { updateUrl: true });
       applyStaticTranslations();
       renderLangSwitcher();
       updateNavCounts();
