@@ -44071,11 +44071,11 @@
     "effectB": {
       "name": "Re:START",
       "effect": {
-        "zh-TW": "如果自己的生命值比對手少，可以將自己吶喊牌組上方的1張牌發送給自己的「夏色まつり」。",
-        "ja": "自分のライフが相手より少ないなら、自分のエールデッキの上から1枚を自分の「夏色まつり」に送る。",
-        "en": "If your Life is less than your opponent's, you may send 1 card from the top of your Cheer Deck to your \"Natsuiro Matsuri\".",
-        "fr": "Si vos Points de vie sont inférieurs à ceux de l'adversaire, vous pouvez envoyer 1 carte du dessus de votre Deck d'encouragement à votre \"Natsuiro Matsuri\".",
-        "es": "Si tu Vida es menor que la de tu oponente, puedes enviar 1 carta de la parte superior de tu Mazo Cheer a tu \"夏色まつり\"."
+        "zh-TW": "如果自己的生命值在對手以下，可以將自己吶喊牌組上方的1張牌發送給自己的「夏色まつり」。",
+        "ja": "自分のライフが相手以下なら、自分のエールデッキの上から１枚を自分の「夏色まつり」に送ることができる。",
+        "en": "If your Life is less than your opponent's, you may send 1 card from the top of your Cheer Deck to Natsuiro Matsuri.",
+        "fr": "Si vos Points de vie sont inférieurs à ceux de l'adversaire, vous pouvez envoyer 1 carte du dessus de votre Deck d'encouragement à votre \"夏色まつり\".",
+        "es": "Si tu Vida es inferior a la de tu oponente, puedes enviar 1 carta de la parte superior de tu Mazo Cheer a tu \"Natsuiro Matsuri\"."
       }
     },
     "effectG": null,
@@ -44118,11 +44118,11 @@
     "effectB": {
       "name": "Re:START",
       "effect": {
-        "zh-TW": "如果自己的生命值比對手少，可以將自己吶喊牌組上方的1張牌發送給自己的「夏色まつり」。",
-        "ja": "自分のライフが相手より少ないなら、自分のエールデッキの上から1枚を自分の「夏色まつり」に送る。",
-        "en": "If your Life is less than your opponent's, you may send 1 card from the top of your Cheer Deck to your \"Natsuiro Matsuri\".",
-        "fr": "Si vos Points de vie sont inférieurs à ceux de l'adversaire, vous pouvez envoyer 1 carte du dessus de votre Deck d'encouragement à votre \"Natsuiro Matsuri\".",
-        "es": "Si tu Vida es menor que la de tu oponente, puedes enviar 1 carta de la parte superior de tu Mazo Cheer a tu \"夏色まつり\"."
+        "zh-TW": "如果自己的生命值在對手以下，可以將自己吶喊牌組上方的1張牌發送給自己的「夏色まつり」。",
+        "ja": "自分のライフが相手以下なら、自分のエールデッキの上から１枚を自分の「夏色まつり」に送ることができる。",
+        "en": "If your Life is less than your opponent's, you may send 1 card from the top of your Cheer Deck to Natsuiro Matsuri.",
+        "fr": "Si vos Points de vie sont inférieurs à ceux de l'adversaire, vous pouvez envoyer 1 carte du dessus de votre Deck d'encouragement à votre \"夏色まつり\".",
+        "es": "Si tu Vida es inferior a la de tu oponente, puedes enviar 1 carta de la parte superior de tu Mazo Cheer a tu \"Natsuiro Matsuri\"."
       }
     },
     "effectG": null,
@@ -44165,11 +44165,11 @@
     "effectB": {
       "name": "Re:START",
       "effect": {
-        "zh-TW": "如果自己的生命值比對手少，可以將自己吶喊牌組上方的1張牌發送給自己的「夏色まつり」。",
-        "ja": "自分のライフが相手より少ないなら、自分のエールデッキの上から1枚を自分の「夏色まつり」に送る。",
-        "en": "If your Life is less than your opponent's, you may send 1 card from the top of your Cheer Deck to your \"Natsuiro Matsuri\".",
-        "fr": "Si vos Points de vie sont inférieurs à ceux de l'adversaire, vous pouvez envoyer 1 carte du dessus de votre Deck d'encouragement à votre \"Natsuiro Matsuri\".",
-        "es": "Si tu Vida es menor que la de tu oponente, puedes enviar 1 carta de la parte superior de tu Mazo Cheer a tu \"夏色まつり\"."
+        "zh-TW": "如果自己的生命值在對手以下，可以將自己吶喊牌組上方的1張牌發送給自己的「夏色まつり」。",
+        "ja": "自分のライフが相手以下なら、自分のエールデッキの上から１枚を自分の「夏色まつり」に送ることができる。",
+        "en": "If your Life is less than your opponent's, you may send 1 card from the top of your Cheer Deck to Natsuiro Matsuri.",
+        "fr": "Si vos Points de vie sont inférieurs à ceux de l'adversaire, vous pouvez envoyer 1 carte du dessus de votre Deck d'encouragement à votre \"夏色まつり\".",
+        "es": "Si tu Vida es inferior a la de tu oponente, puedes enviar 1 carta de la parte superior de tu Mazo Cheer a tu \"Natsuiro Matsuri\"."
       }
     },
     "effectG": null,
@@ -57445,11 +57445,11 @@
     "effectG": {
       "name": "なんでも入る巾着",
       "effect": {
-        "zh-TW": "[限定聯動位置]對手回合中，自己的成員被擊倒時，如果自己的生命值比對手少，可以將自己存檔區1張卡名包含「パソコン」的物品返回手牌。",
-        "ja": "[限定コラボ位置]相手のターン中、自分のメンバーがダウンした場合、自分のライフが相手より少ない場合、自分のアーカイブから「パソコン」を含むカード1枚を手札に戻す。",
-        "en": "[Limited Collab Position] During your opponent's turn, when your Member is defeated, if your Life is less than your opponent's, you may return 1 Item card with \"パソコン\" in its name from your Archive to your Hand.",
-        "fr": "[Position Collab UNIQUEMENT] Durant le tour de votre adversaire, lorsque votre membre est mis K.O., si vos Points de vie sont inférieurs à ceux de votre adversaire, vous pouvez renvoyer 1 objet dont le nom de carte contient \"パソコン\" de votre Archive dans votre main.",
-        "es": "[Solo posición Collab] Durante el turno del oponente, cuando un Miembro en tu lado es derrotado, si tu Vida es menor que la del oponente, puedes devolver 1 Objeto con \"PC\" en su nombre de tu Archivo a tu Mano."
+        "zh-TW": "[限定聯動位置]對手回合中，自己的成員被擊倒時，如果自己的生命值在對手以下，可以將自己存檔區1張卡名包含「パソコン」的物品返回手牌。",
+        "ja": "[LIMITED コラボ配置]相手ターン中、自分のメンバーがダウンした時、自分のライフが相手以下なら、自分のアーカイブからカード名に「パソコン」を含むカードを１枚手札に戻すことができる。",
+        "en": "[LIMITED Collab Slot] During your opponent's turn, if one of your Members is Downed, and your Life is less than your opponent's, you may return 1 Item card with \"パソコン\" in its name from your Archive to your Hand.",
+        "fr": "[LIMITED Collab Spot] Durant le tour de l'adversaire, lorsqu'un de vos Membres est mis K.O., si vos Points de vie sont inférieurs à ceux de l'adversaire, vous pouvez renvoyer 1 carte d'Objet dont le nom contient「パソコン」de votre Archive à votre Main.",
+        "es": "[Posición de Collab LIMITADA] Durante el turno del oponente, cuando un Miembro tuyo es K.O., si tu Vida es menor que la del oponente, puedes devolver 1 carta de Objeto con 'パソコン' en su nombre de tu Archivo a tu Mano."
       }
     },
     "art1": {
