@@ -63,10 +63,12 @@ def _deck_colors(deck: dict[str, Any], cards_by_id: dict[str, dict[str, Any]]) -
 
 
 def _detail_filename(index: int, guide: dict[str, Any]) -> str:
+    # No ordering prefix: filenames stay stable when the guide list reorders,
+    # so unchanged guides stop churning as renames in git history.
     source = guide.get("deck_id") or guide.get("url") or f"guide-{index}"
     slug = re.sub(r"[^A-Za-z0-9_-]+", "-", str(source)).strip("-").lower()[:48]
     digest = hashlib.sha1(str(source).encode("utf-8")).hexdigest()[:8]
-    return f"{index:03d}-{slug or 'guide'}-{digest}.json"
+    return f"{slug or 'guide'}-{digest}.json"
 
 
 def build_frontend_indexes(data_dir: Path | str) -> None:

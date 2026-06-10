@@ -92,7 +92,7 @@ function trackContentOpen(openEventName, params) {
 }
 
 function _fetchJSON(url) {
-  return fetch(url).then(r => r.ok ? r.json() : null);
+  return fetch(url).then(r => r.ok ? r.json() : null).catch(() => null);
 }
 
 async function loadCoreData() {
@@ -122,19 +122,39 @@ async function ensureCardIndex() {
   updateNavCounts();
 }
 
-async function ensureCards() {
-  if (_loaded.cards) return;
-  _loaded.cards = true;
-  cardsData = (await _fetchJSON('data/cards.json')) || [];
-  if (!cardIndexData.length) cardIndexData = cardsData;
-  updateNavCounts();
+// Mark loaded only on success so a failed fetch retries on the next call;
+// _inflight dedupes concurrent callers onto one request.
+const _inflight = {};
+
+function ensureCards() {
+  if (_loaded.cards) return Promise.resolve();
+  if (!_inflight.cards) {
+    _inflight.cards = _fetchJSON('data/cards.json').then(data => {
+      _inflight.cards = null;
+      if (data) {
+        _loaded.cards = true;
+        cardsData = data;
+        if (!cardIndexData.length) cardIndexData = cardsData;
+        updateNavCounts();
+      }
+    });
+  }
+  return _inflight.cards;
 }
 
-async function ensureDecklog() {
-  if (_loaded.decklog) return;
-  _loaded.decklog = true;
-  decklogDecks = (await _fetchJSON('data/decklog_decks.json')) || [];
-  updateNavCounts();
+function ensureDecklog() {
+  if (_loaded.decklog) return Promise.resolve();
+  if (!_inflight.decklog) {
+    _inflight.decklog = _fetchJSON('data/decklog_decks.json').then(data => {
+      _inflight.decklog = null;
+      if (data) {
+        _loaded.decklog = true;
+        decklogDecks = data;
+        updateNavCounts();
+      }
+    });
+  }
+  return _inflight.decklog;
 }
 
 async function ensureGuideDetail(deckId) {
@@ -205,16 +225,36 @@ async function render() {
     updateTopbarSubtitleFromGuides();
   } else if (currentView === 'tournament') {
     await Promise.all([ensureDecklog(), ensureCardIndex()]);
-    renderTournamentView(tournamentView, decklogDecks, cardIndexData);
+    if (!_loaded.decklog) {
+      _renderLoadError(tournamentView);
+    } else {
+      renderTournamentView(tournamentView, decklogDecks, cardIndexData);
+    }
   } else if (currentView === 'cards') {
     await ensureCards();
-    renderCardGallery(cardsView, cardsData, _legacyFilters(), rulesData);
-    document.getElementById('topbarSubtitle').textContent = t('topbar_subtitle_cards', { total: cardsData.length });
+    if (!_loaded.cards) {
+      _renderLoadError(cardsView);
+      document.getElementById('topbarSubtitle').textContent = '';
+    } else {
+      renderCardGallery(cardsView, cardsData, _legacyFilters(), rulesData);
+      document.getElementById('topbarSubtitle').textContent = t('topbar_subtitle_cards', { total: cardsData.length });
+    }
   } else if (currentView === 'rules') {
     await ensureCardIndex();
     renderRulesView(rulesView, rulesData, cardIndexData);
     document.getElementById('topbarSubtitle').textContent = t('topbar_subtitle_rules');
   }
+}
+
+function _renderLoadError(container) {
+  container.innerHTML = `
+    <div class="load-error">
+      <div class="load-error-glyph" aria-hidden="true">⚠</div>
+      <div class="load-error-title">${t('load_error_title')}</div>
+      <div class="load-error-sub">${t('load_error_sub')}</div>
+      <button class="empty-btn load-error-retry">${t('load_error_retry')}</button>
+    </div>`;
+  container.querySelector('.load-error-retry')?.addEventListener('click', () => render());
 }
 
 function updateTopbar() {
@@ -654,6 +694,61 @@ function setupLangSwitcher() {
 }
 
 // ── Modals ───────────────────────────────────────────────────────────────
+function _topOpenModal() {
+  const cardModal = document.getElementById('cardModal');
+  if (cardModal && !cardModal.hidden) return cardModal;
+  const deckModal = document.getElementById('deckModal');
+  if (deckModal && !deckModal.hidden) return deckModal;
+  return null;
+}
+
+function _focusablesIn(root) {
+  return [...root.querySelectorAll(
+    "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])"
+  )].filter(el => el.offsetParent !== null);
+}
+
+function _openModalEl(modal) {
+  modal._restoreFocus = document.activeElement;
+  modal.hidden = false;
+  document.body.style.overflow = 'hidden';
+  modal.querySelector('.modal-close')?.focus();
+}
+
+let _toastTimer;
+function _showToast(msg) {
+  let el = document.getElementById('appToast');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'appToast';
+    el.className = 'app-toast';
+    el.setAttribute('role', 'status');
+    document.body.appendChild(el);
+  }
+  el.textContent = msg;
+  el.classList.add('is-visible');
+  clearTimeout(_toastTimer);
+  _toastTimer = window.setTimeout(() => el.classList.remove('is-visible'), 1800);
+}
+
+async function shareCurrentRoute() {
+  const url = window.location.href;
+  trackGaEvent('share', {
+    method: navigator.share ? 'web_share' : 'clipboard',
+    content_id: window.location.hash.slice(1) || currentView,
+  });
+  if (navigator.share) {
+    try { await navigator.share({ title: document.title, url }); } catch {}
+    return;
+  }
+  try {
+    await navigator.clipboard.writeText(url);
+    _showToast(t('share_copied'));
+  } catch {
+    _showToast(url);
+  }
+}
+
 async function openDeckById(deckId) {
   await Promise.all([ensureCardIndex(), ensureGuideDetail(deckId)]);
   const src = officialDecks?.some(d => d.deck_id === deckId) ? 'official'
@@ -667,8 +762,7 @@ async function openDeckById(deckId) {
     content_source: src,
   });
   renderDeckModal(document.getElementById('deckModalBody'), deckId, tierData, decksData, allGuides, officialDecks, cardIndexData);
-  document.getElementById('deckModal').hidden = false;
-  document.body.style.overflow = 'hidden';
+  _openModalEl(document.getElementById('deckModal'));
   _openDeck = { type: 'deck', id: deckId };
 }
 
@@ -680,8 +774,7 @@ async function openTournamentDeckById(decklogId) {
     content_source: 'decklog',
   });
   renderTournamentDeckModal(document.getElementById('deckModalBody'), decklogId, decklogDecks, cardIndexData);
-  document.getElementById('deckModal').hidden = false;
-  document.body.style.overflow = 'hidden';
+  _openModalEl(document.getElementById('deckModal'));
   _openDeck = { type: 'tdeck', id: decklogId };
 }
 
@@ -689,21 +782,26 @@ async function openCardById(cardId) {
   await ensureCards();
   const card = cardsData.find(c => c.id === cardId);
   renderCardDetail(document.getElementById('cardModalBody'), card, cardsData, rulesData);
-  document.getElementById('cardModal').hidden = false;
-  document.body.style.overflow = 'hidden';
+  _openModalEl(document.getElementById('cardModal'));
   _openCard = cardId;
 }
 
 function _closeCardModalEl() {
-  document.getElementById('cardModal').hidden = true;
+  const modal = document.getElementById('cardModal');
+  modal.hidden = true;
   _openCard = null;
   if (document.getElementById('deckModal').hidden) document.body.style.overflow = '';
+  if (modal._restoreFocus?.focus && document.contains(modal._restoreFocus)) modal._restoreFocus.focus();
+  modal._restoreFocus = null;
 }
 
 function _closeDeckModalEl() {
-  document.getElementById('deckModal').hidden = true;
+  const modal = document.getElementById('deckModal');
+  modal.hidden = true;
   _openDeck = null;
   if (document.getElementById('cardModal').hidden) document.body.style.overflow = '';
+  if (modal._restoreFocus?.focus && document.contains(modal._restoreFocus)) modal._restoreFocus.focus();
+  modal._restoreFocus = null;
 }
 
 function setupModals() {
@@ -777,6 +875,7 @@ function setupModals() {
   for (const modal of [deckModal, cardModal]) {
     modal.querySelector('.modal-backdrop')?.addEventListener('click', () => closeModal(modal));
     modal.querySelector('.modal-close')?.addEventListener('click', () => closeModal(modal));
+    modal.querySelector('.modal-share')?.addEventListener('click', () => shareCurrentRoute());
   }
 
   document.addEventListener('keydown', (e) => {
@@ -784,6 +883,23 @@ function setupModals() {
       if (!cardModal.hidden) closeModal(cardModal);
       else if (!deckModal.hidden) closeModal(deckModal);
       else closeDrawer();
+      return;
+    }
+    // Focus trap: keep Tab cycling inside the topmost open modal.
+    if (e.key !== 'Tab') return;
+    const modal = _topOpenModal();
+    if (!modal) return;
+    const focusables = _focusablesIn(modal);
+    if (!focusables.length) return;
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+    const inside = modal.contains(document.activeElement);
+    if (e.shiftKey && (!inside || document.activeElement === first)) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && (!inside || document.activeElement === last)) {
+      e.preventDefault();
+      first.focus();
     }
   });
 }

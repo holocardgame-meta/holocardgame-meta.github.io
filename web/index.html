@@ -83,10 +83,10 @@
   <link rel="modulepreload" href="components/tournament-view.js">
 
   <link rel="preload" href="style.css?v=4" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Cinzel:wght@500;700;900&family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@500;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&family=Noto+Sans+JP:wght@400;700&family=Cinzel:wght@500;700;900&family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@500;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="style.css?v=4">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Cinzel:wght@500;700;900&family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@500;700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&family=Noto+Sans+JP:wght@400;700&family=Cinzel:wght@500;700;900&family=JetBrains+Mono:wght@400;500;700&family=Orbitron:wght@500;900&display=swap">
   </noscript>
 
   <script type="application/ld+json">
@@ -447,16 +447,22 @@
 
   <div id="deckModal" class="modal" hidden>
     <div class="modal-backdrop"></div>
-    <div class="modal-content">
-      <button class="modal-close">&times;</button>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-label="牌組詳情 Deck details">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <button class="modal-share" type="button" aria-label="分享 Share" title="Share">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+      </button>
       <div id="deckModalBody"></div>
     </div>
   </div>
 
   <div id="cardModal" class="modal" hidden>
     <div class="modal-backdrop"></div>
-    <div class="modal-content card-modal-content">
-      <button class="modal-close">&times;</button>
+    <div class="modal-content card-modal-content" role="dialog" aria-modal="true" aria-label="卡片詳情 Card details">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <button class="modal-share" type="button" aria-label="分享 Share" title="Share">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+      </button>
       <div id="cardModalBody"></div>
     </div>
   </div>
@@ -464,7 +470,7 @@
   <div id="consentBanner" class="consent-banner" hidden role="dialog" aria-live="polite" aria-labelledby="consentTitle">
     <div class="consent-copy">
       <div class="consent-title" id="consentTitle" data-i18n="consent_title">Cookie 與分析</div>
-      <p class="consent-body" data-i18n="consent_body">我們使用 Google Analytics 了解網站使用情況（需要 Cookie）。你可以接受或拒絕，拒絕不影響任何功能。</p>
+      <p class="consent-body" data-i18n="consent_body">我們使用 Google Analytics 了解網站使用情況。接受即啟用 Cookie 完整統計；拒絕則僅傳送無 Cookie 的匿名訊號，不影響任何功能。</p>
     </div>
     <div class="consent-actions">
       <a class="consent-link" href="privacy.html" target="_blank" rel="noopener" data-i18n="consent_privacy">隱私權政策</a>
@@ -502,34 +508,37 @@
     window.HOLOCARD_GA_ID = 'G-8WS4X0WWQQ';
     window.dataLayer = window.dataLayer || [];
     window.gtag = window.gtag || function(){window.dataLayer.push(arguments);};
-    // GDPR consent mode: analytics stays denied (and gtag.js unloaded) until the
-    // visitor accepts via the consent banner. Choice persists in localStorage.
-    window.gtag('consent', 'default', {
-      analytics_storage: 'denied',
-      ad_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied'
-    });
+    // Advanced Consent Mode: gtag.js always loads (lazily), but analytics_storage
+    // stays denied until the visitor accepts via the consent banner — GA then
+    // receives only cookieless anonymous pings and models the gap. The stored
+    // choice is applied as the default before config to avoid a denied->granted
+    // flip on every page load.
+    (function(){
+      var granted = false;
+      try { granted = localStorage.getItem('holo-consent') === 'granted'; } catch (e) {}
+      window.gtag('consent', 'default', {
+        analytics_storage: granted ? 'granted' : 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
+    })();
     window.gtag('js', new Date());
     window.gtag('config', window.HOLOCARD_GA_ID, { send_page_view: false });
     (function(){
       var loaded = false;
-      function consentGranted(){
-        try { return localStorage.getItem('holo-consent') === 'granted'; } catch (e) { return false; }
-      }
-      function inject(){
+      function load(){
         if (loaded) return;
         loaded = true;
-        window.gtag('consent', 'update', { analytics_storage: 'granted' });
         var s = document.createElement('script');
         s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.HOLOCARD_GA_ID;
         document.head.appendChild(s);
       }
-      function load(){
-        if (consentGranted()) inject();
-      }
       window.holocardLoadGoogleTag = load;
-      window.holocardConsentGranted = inject;
+      window.holocardConsentGranted = function(){
+        window.gtag('consent', 'update', { analytics_storage: 'granted' });
+        load();
+      };
       ['click','scroll','keydown','touchstart'].forEach(function(e){
         document.addEventListener(e, load, {capture:true,once:true,passive:true});
       });
