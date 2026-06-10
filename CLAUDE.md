@@ -37,7 +37,7 @@ GitHub Pages. No build step, no backend. See README.md for architecture.
 
 ## Generated / never commit
 
-- `web/deck/` (entity pages — rebuilt in CI before every deploy)
+- `web/deck/` (entity pages + the `/deck/` index — rebuilt in CI before every deploy)
 - `translation_cache.json` (GitHub Actions cache; git-history seed fallback)
 - `data/` (scraper staging dir; `web/data/` is the published copy)
 

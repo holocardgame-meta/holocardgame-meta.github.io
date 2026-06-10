@@ -47,10 +47,12 @@ Key properties:
 | URL | What it is |
 |---|---|
 | `/#guides` `/#tournament` `/#cards` `/#rules` | SPA views (hash-routed) |
-| `/#deck/<id>` `/#tdeck/<code>` `/#card/<id>` | Shareable deep links to modals; nested `/#deck/<id>/card/<id>` works |
-| `/deck/<slug>/` | Static, indexable per-deck summary pages (~144), generated at build time |
+| `/#deck/<id>` `/#tdeck/<code>` `/#card/<id>` | Deep links to modals; nested `/#deck/<id>/card/<id>` works. Guide/official deck modals share their static `/deck/<slug>/` URL instead |
+| `/deck/` | Crawlable index of all deck pages (grouped by tier/guide/official), linked from the footer |
+| `/deck/<slug>/` | Static, indexable per-deck pages (~144) with related-deck links, generated at build time |
 | `/zh-TW/` `/ja/` `/en/` `/fr/` `/es/` | Language entry pages (full SPA copies with localized meta) |
 | `/privacy.html` | Privacy policy (5 languages) |
+| `/404.html` | Branded not-found page (noindex) |
 
 Entity slugs are human-readable (derived from English titles, falling back to
 talent romaji) and **permanently frozen** in `web/data/slug_registry.json` on
