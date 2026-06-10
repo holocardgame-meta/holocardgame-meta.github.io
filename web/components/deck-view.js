@@ -423,7 +423,9 @@ function _renderOfficialDeckModal(container, deck) {
   `).join('');
 
   const _gridSection = (cards) => {
-    const total = cards.reduce((s, c) => s + (c.count || 1), 0);
+    // Numeric coercion is load-bearing: scraped counts flow into innerHTML
+    // unescaped via the {total} interpolation below.
+    const total = cards.reduce((s, c) => s + (Number(c.count) || 1), 0);
     return `
       <div class="grid-totals">${t('deck_total_cards', { total: `<strong>${total}</strong>` })}</div>
       <div class="official-card-grid">

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'holo-card-v41';
+const CACHE_NAME = 'holo-card-v42';
 
 const PRECACHE_URLS = [
   './',

@@ -106,11 +106,42 @@ def _get_client() -> genai.Client:
     return _client
 
 
+# Kana, CJK ideographs, and halfwidth katakana — "is this string actually
+# Japanese/Chinese prose" for the poison heuristic below.
+_CJK_RE = re.compile(r"[぀-ヿ㐀-鿿ｦ-ﾟ]")
+
+
+def _is_poisoned_entry(key: str, value) -> bool:
+    """True when a cache entry is a give-up fallback cached by older code:
+    the "translation" is the verbatim source text of a CJK-heavy, non-trivial
+    string. Short tokens (card IDs, 'AZKi') legitimately survive translation
+    unchanged, so only strings over 20 chars with substantial CJK count.
+    """
+    if not isinstance(value, str):
+        return True
+    parts = key.split("|", 3)
+    if len(parts) != 4:
+        return False
+    text = parts[3]
+    if value != text or len(text) <= 20:
+        return False
+    return len(_CJK_RE.findall(text)) >= 8
+
+
 def _load_cache(base_dir: Path):
-    global _cache, _cache_path
+    global _cache, _cache_path, _cache_dirty
     _cache_path = base_dir / "translation_cache.json"
     if _cache_path.exists():
         _cache = json.loads(_cache_path.read_text(encoding="utf-8"))
+        # Evict poison on every load (not just once): the deploy workflow
+        # reseeds the cache from git history on a cold Actions cache, so old
+        # poisoned copies can resurface at any time.
+        poisoned = [k for k, v in _cache.items() if _is_poisoned_entry(k, v)]
+        for k in poisoned:
+            del _cache[k]
+        if poisoned:
+            _cache_dirty = True
+            print(f"[cache] Evicted {len(poisoned)} untranslated give-up entries; this run retranslates them")
         print(f"[cache] Loaded {len(_cache)} cached translations")
     else:
         _cache = {}
@@ -149,7 +180,9 @@ def _unwrap_result(item, target: str) -> str:
     return str(item)
 
 
-def _translate_batch_gemini(texts: list[str], source: str, target: str, _no_split: bool = False) -> list[str]:
+def _translate_batch_gemini(
+    texts: list[str], source: str, target: str, _no_split: bool = False
+) -> list[str | None]:
     """Translate a batch of texts using a single Gemini API call.
 
     On persistent batch-size mismatch we split the batch in half rather than
@@ -158,7 +191,10 @@ def _translate_batch_gemini(texts: list[str], source: str, target: str, _no_spli
     the last card gets its source-language text as a fallback).
 
     `_no_split` is set when called recursively with a single item to avoid
-    unbounded recursion; that path falls back to source text on giving up.
+    unbounded recursion. Items that still fail after that come back as None —
+    callers fall back to source text themselves and must NOT cache the
+    failure, so the next run retries instead of serving untranslated text
+    forever.
     """
     client = _get_client()
     system_prompt = _build_system_prompt(source, target)
@@ -212,9 +248,9 @@ def _translate_batch_gemini(texts: list[str], source: str, target: str, _no_spli
         right = _translate_batch_gemini(texts[mid:], source, target, _no_split=(len(texts) - mid == 1))
         return left + right
 
-    # Single-item or already-split path: give up, return source text.
-    print(f"    [fail] Giving up on {len(texts)} items; keeping source text")
-    return list(texts)
+    # Single-item or already-split path: give up, signal failure per item.
+    print(f"    [fail] Giving up on {len(texts)} items; leaving them untranslated")
+    return [None] * len(texts)
 
 
 def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> dict[str, str]:
@@ -246,10 +282,17 @@ def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> 
 
         results = _translate_batch_gemini(batch, source, target)
 
+        failed = 0
         for text, result in zip(batch, results):
+            if result is None:
+                mapping[text] = text
+                failed += 1
+                continue
             mapping[text] = result
             _cache[_cache_key(source, target, text)] = result
             _cache_dirty = True
+        if failed:
+            print(f"    [warn] {failed} failed items left uncached; next run will retry them")
 
         if batch_start + BATCH_SIZE < len(to_translate):
             time.sleep(REQUEST_DELAY)
