@@ -4,11 +4,12 @@ import { renderTournamentView, renderTournamentDeckModal } from './components/to
 import { renderGuidesView } from './components/guides-view.js';
 import { renderRulesView } from './components/rules-view.js';
 import { initI18n, setLang, getLang, applyStaticTranslations, t } from './i18n.js';
+import { COLOR_HEX } from './utils/colors.js';
 
-const COLOR_HEX = { '白': '#e0e0e0', '綠': '#4caf50', '紅': '#f44336', '藍': '#2196f3', '紫': '#9c27b0', '黃': '#ffeb3b' };
-const TIER_LABEL = { '1': 'Tier 1', '2': 'Tier 2', '3': 'Tier 3', 'official': 'Official', 'guide': '其他攻略' };
-const TYPE_LABEL = { '主推': '主推', '成員': '成員', 'support': '支援', '吶喊': '吶喊' };
+const TIER_LABEL = { '1': 'Tier 1', '2': 'Tier 2', '3': 'Tier 3', '4': 'Tier 4', 'official': 'Official' };
+const TYPE_LABEL_KEY = { '主推': 'type_oshi', '成員': 'type_member', 'support': 'type_support', '吶喊': 'type_cheer' };
 const GA_MEASUREMENT_ID = window.HOLOCARD_GA_ID || 'G-8WS4X0WWQQ';
+const CONSENT_KEY = 'holo-consent';
 const IOS_INSTALL_DISMISSED_KEY = 'holo-ios-install-dismissed-until';
 const IOS_CHROME_INSTALL_DISMISSED_KEY = 'holo-ios-chrome-install-dismissed-until';
 const ANDROID_INSTALL_DISMISSED_KEY = 'holo-android-install-dismissed-until';
@@ -95,13 +96,14 @@ function _fetchJSON(url) {
 }
 
 async function loadCoreData() {
-  const [tierResp, decksResp, guidesResp, officialResp, rulesResp, cardIndexResp] = await Promise.all([
+  const [tierResp, decksResp, guidesResp, officialResp, rulesResp, cardIndexResp, metaResp] = await Promise.all([
     _fetchJSON('data/tier_list.json'),
     _fetchJSON('data/decks.json'),
     _fetchJSON('data/guides_index.json'),
     _fetchJSON('data/official_decks.json'),
     _fetchJSON('data/rules.json'),
     _fetchJSON('data/card_index.json'),
+    _fetchJSON('data/meta.json'),
   ]);
   tierData = tierResp;
   decksData = decksResp || [];
@@ -109,6 +111,9 @@ async function loadCoreData() {
   officialDecks = officialResp || [];
   rulesData = rulesResp;
   cardIndexData = cardIndexResp || [];
+
+  const footDate = document.getElementById('footMetaDate');
+  if (footDate && metaResp?.generated_at) footDate.textContent = metaResp.generated_at;
 }
 
 async function ensureCardIndex() {
@@ -235,18 +240,79 @@ function updateTopbarSubtitleFromGuides() {
   }
 }
 
+// ── Routing ──────────────────────────────────────────────────────────────
+// Hash grammar: #<view> · #deck/<id> · #tdeck/<code> · #card/<id> ·
+// #<view>/card/<id> (card over any view) · #deck/<id>/card/<id> (nested).
+// Clicks only set location.hash; the hashchange handler drives all view and
+// modal state so deep links, back/forward, and in-app navigation share one path.
+const VIEWS = ['guides', 'tournament', 'cards', 'rules'];
+let _openDeck = null;   // { type: 'deck' | 'tdeck', id }
+let _openCard = null;   // card id
+
+function _decodeSeg(s) {
+  try { return decodeURIComponent(s || ''); } catch { return s || ''; }
+}
+
+function parseRoute(hash) {
+  const seg = String(hash || '').replace(/^#/, '').split('/');
+  if (seg[0] === 'deck' && seg[1]) {
+    return { view: 'guides', deck: { type: 'deck', id: _decodeSeg(seg[1]) }, card: seg[2] === 'card' && seg[3] ? _decodeSeg(seg[3]) : null };
+  }
+  if (seg[0] === 'tdeck' && seg[1]) {
+    return { view: 'tournament', deck: { type: 'tdeck', id: _decodeSeg(seg[1]) }, card: seg[2] === 'card' && seg[3] ? _decodeSeg(seg[3]) : null };
+  }
+  if (seg[0] === 'card' && seg[1]) {
+    return { view: 'cards', deck: null, card: _decodeSeg(seg[1]) };
+  }
+  if (VIEWS.includes(seg[0]) && seg[1] === 'card' && seg[2]) {
+    return { view: seg[0], deck: null, card: _decodeSeg(seg[2]) };
+  }
+  return { view: VIEWS.includes(seg[0]) ? seg[0] : 'guides', deck: null, card: null };
+}
+
+function _hashFor(kind, id) {
+  const enc = encodeURIComponent;
+  if (kind === 'card') {
+    if (_openDeck) return `#${_openDeck.type}/${enc(_openDeck.id)}/card/${enc(id)}`;
+    if (currentView !== 'cards') return `#${currentView}/card/${enc(id)}`;
+    return `#card/${enc(id)}`;
+  }
+  if (kind === 'tdeck') return `#tdeck/${enc(id)}`;
+  if (kind === 'deck') return `#deck/${enc(id)}`;
+  return '#' + currentView;
+}
+
+function navigateHash(target) {
+  if (window.location.hash === target) {
+    applyRoute(parseRoute(target));
+    return;
+  }
+  window.location.hash = target;
+}
+
+async function applyRoute(route, { initial = false } = {}) {
+  const viewChanged = route.view !== currentView;
+  if (viewChanged || initial) {
+    currentView = route.view;
+    updateNavActive();
+    if (viewChanged && !initial) trackGaPageView(currentView);
+    await render();
+  }
+  if (_openCard && _openCard !== route.card) _closeCardModalEl();
+  if (_openDeck && (!route.deck || route.deck.type !== _openDeck.type || route.deck.id !== _openDeck.id)) _closeDeckModalEl();
+  if (route.deck && (!_openDeck || _openDeck.id !== route.deck.id || _openDeck.type !== route.deck.type)) {
+    if (route.deck.type === 'tdeck') await openTournamentDeckById(route.deck.id);
+    else await openDeckById(route.deck.id);
+  }
+  if (route.card && _openCard !== route.card) await openCardById(route.card);
+}
+
 // ── Nav (sidebar) ────────────────────────────────────────────────────────
 function setupNav() {
   document.querySelectorAll('.nav-item[data-view]').forEach(btn => {
     const activate = () => {
-      const nextView = btn.dataset.view;
-      document.querySelectorAll('.nav-item[data-view]').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const changedView = nextView !== currentView;
-      currentView = nextView;
-      if (changedView) trackGaPageView(currentView);
       closeDrawer();
-      render();
+      navigateHash('#' + btn.dataset.view);
     };
     btn.addEventListener('click', activate);
     btn.addEventListener('keydown', (e) => {
@@ -256,6 +322,11 @@ function setupNav() {
       }
     });
   });
+}
+
+function updateNavActive() {
+  document.querySelectorAll('.nav-item[data-view]').forEach(b =>
+    b.classList.toggle('active', b.dataset.view === currentView));
 }
 
 function updateNavCounts() {
@@ -403,16 +474,17 @@ function updateActiveFilterBar() {
       </button>`);
   }
   for (const v of filters.tiers) {
+    const label = v === 'guide' ? t('guides_filter_guide') : (TIER_LABEL[v] || v);
     parts.push(`
       <button class="active-filter-pill" data-kind="tier" data-value="${v}">
-        ${TIER_LABEL[v] || v}
+        ${label}
         <span class="active-filter-x" aria-hidden="true">×</span>
       </button>`);
   }
   for (const v of filters.types) {
     parts.push(`
       <button class="active-filter-pill" data-kind="type" data-value="${v}">
-        ${TYPE_LABEL[v] || v}
+        ${TYPE_LABEL_KEY[v] ? t(TYPE_LABEL_KEY[v]) : v}
         <span class="active-filter-x" aria-hidden="true">×</span>
       </button>`);
   }
@@ -581,12 +653,62 @@ function setupLangSwitcher() {
   });
 }
 
-// ── Modals (carry-over from original) ────────────────────────────────────
+// ── Modals ───────────────────────────────────────────────────────────────
+async function openDeckById(deckId) {
+  await Promise.all([ensureCardIndex(), ensureGuideDetail(deckId)]);
+  const src = officialDecks?.some(d => d.deck_id === deckId) ? 'official'
+    : decksData?.some(d => d.deck_id === deckId) ? 'tier'
+    : 'guide';
+  const openEventName = src === 'guide' ? 'guide_open' : 'deck_open';
+  trackGaEvent(openEventName, {
+    event_role: 'key_event_candidate',
+    content_type: src === 'guide' ? 'guide' : 'deck',
+    item_id: deckId,
+    content_source: src,
+  });
+  renderDeckModal(document.getElementById('deckModalBody'), deckId, tierData, decksData, allGuides, officialDecks, cardIndexData);
+  document.getElementById('deckModal').hidden = false;
+  document.body.style.overflow = 'hidden';
+  _openDeck = { type: 'deck', id: deckId };
+}
+
+async function openTournamentDeckById(decklogId) {
+  await Promise.all([ensureDecklog(), ensureCardIndex()]);
+  trackContentOpen('deck_open', {
+    content_type: 'tournament_deck',
+    item_id: decklogId,
+    content_source: 'decklog',
+  });
+  renderTournamentDeckModal(document.getElementById('deckModalBody'), decklogId, decklogDecks, cardIndexData);
+  document.getElementById('deckModal').hidden = false;
+  document.body.style.overflow = 'hidden';
+  _openDeck = { type: 'tdeck', id: decklogId };
+}
+
+async function openCardById(cardId) {
+  await ensureCards();
+  const card = cardsData.find(c => c.id === cardId);
+  renderCardDetail(document.getElementById('cardModalBody'), card, cardsData, rulesData);
+  document.getElementById('cardModal').hidden = false;
+  document.body.style.overflow = 'hidden';
+  _openCard = cardId;
+}
+
+function _closeCardModalEl() {
+  document.getElementById('cardModal').hidden = true;
+  _openCard = null;
+  if (document.getElementById('deckModal').hidden) document.body.style.overflow = '';
+}
+
+function _closeDeckModalEl() {
+  document.getElementById('deckModal').hidden = true;
+  _openDeck = null;
+  if (document.getElementById('cardModal').hidden) document.body.style.overflow = '';
+}
+
 function setupModals() {
   const deckModal = document.getElementById('deckModal');
-  const deckModalBody = document.getElementById('deckModalBody');
   const cardModal = document.getElementById('cardModal');
-  const cardModalBody = document.getElementById('cardModalBody');
 
   document.addEventListener('click', async (e) => {
     const clickableCard = e.target.closest('.clickable-card');
@@ -594,16 +716,13 @@ function setupModals() {
       const cardId = clickableCard.dataset.cardId;
       if (cardId) {
         await ensureCards();
-        const card = cardsData.find(c => c.id === cardId);
-        if (card) {
+        if (cardsData.some(c => c.id === cardId)) {
           trackGaEvent('select_content', {
             content_type: 'card',
             item_id: cardId,
             source: 'inline_card',
           });
-          renderCardDetail(cardModalBody, card, cardsData, rulesData);
-          cardModal.hidden = false;
-          document.body.style.overflow = 'hidden';
+          navigateHash(_hashFor('card', cardId));
           return;
         }
       }
@@ -612,19 +731,12 @@ function setupModals() {
     const tournamentDeckCard = e.target.closest('.tournament-deck-card');
     if (tournamentDeckCard) {
       const decklogId = tournamentDeckCard.dataset.decklogId;
-      await ensureCardIndex();
+      if (!decklogId) return;
       trackGaEvent('select_content', {
         content_type: 'tournament_deck',
         item_id: decklogId,
       });
-      trackContentOpen('deck_open', {
-        content_type: 'tournament_deck',
-        item_id: decklogId,
-        content_source: 'decklog',
-      });
-      renderTournamentDeckModal(deckModalBody, decklogId, decklogDecks, cardIndexData);
-      deckModal.hidden = false;
-      document.body.style.overflow = 'hidden';
+      navigateHash(_hashFor('tdeck', decklogId));
       return;
     }
 
@@ -632,46 +744,34 @@ function setupModals() {
     if (deckCard) {
       const deckId = deckCard.dataset.deckId;
       const deckSource = deckCard.dataset.source || 'deck';
-      await Promise.all([ensureCardIndex(), ensureGuideDetail(deckId)]);
       trackGaEvent('select_content', {
         content_type: 'deck_guide',
         item_id: deckId,
         content_source: deckSource,
       });
-      const openEventName = deckSource === 'guide' ? 'guide_open' : 'deck_open';
-      trackGaEvent(openEventName, {
-        event_role: 'key_event_candidate',
-        content_type: deckSource === 'guide' ? 'guide' : 'deck',
-        item_id: deckId,
-        content_source: deckSource,
-      });
-      renderDeckModal(deckModalBody, deckId, tierData, decksData, allGuides, officialDecks, cardIndexData);
-      deckModal.hidden = false;
-      document.body.style.overflow = 'hidden';
+      navigateHash(_hashFor('deck', deckId));
       return;
     }
 
     const galleryCard = e.target.closest('.gallery-card');
     if (galleryCard) {
       const cardId = galleryCard.dataset.cardId;
-      await ensureCards();
-      const card = cardsData.find(c => c.id === cardId);
       trackGaEvent('select_content', {
         content_type: 'card',
         item_id: cardId,
         source: 'card_gallery',
       });
-      renderCardDetail(cardModalBody, card, cardsData, rulesData);
-      cardModal.hidden = false;
-      document.body.style.overflow = 'hidden';
+      navigateHash(_hashFor('card', cardId));
       return;
     }
   });
 
   function closeModal(modal) {
-    modal.hidden = true;
-    if (modal === cardModal && !deckModal.hidden) return;
-    document.body.style.overflow = '';
+    if (modal === cardModal && _openDeck) {
+      navigateHash(`#${_openDeck.type}/${encodeURIComponent(_openDeck.id)}`);
+    } else {
+      navigateHash('#' + currentView);
+    }
   }
 
   for (const modal of [deckModal, cardModal]) {
@@ -730,6 +830,50 @@ function setupOutboundTracking() {
   });
 }
 
+// ── Cookie consent ───────────────────────────────────────────────────────
+function getStoredConsent() {
+  try { return localStorage.getItem(CONSENT_KEY); } catch { return null; }
+}
+
+// Runs fn once the visitor has made a consent choice (or immediately if already decided).
+// Used to keep install prompts from stacking on top of the consent banner.
+function afterConsentDecision(fn) {
+  if (getStoredConsent()) { fn(); return; }
+  document.addEventListener('holo-consent-decided', fn, { once: true });
+}
+
+function setupConsentBanner() {
+  const banner = document.getElementById('consentBanner');
+  const acceptBtn = document.getElementById('consentAccept');
+  const declineBtn = document.getElementById('consentDecline');
+  if (!banner || !acceptBtn || !declineBtn) return;
+
+  const showBanner = () => {
+    banner.hidden = false;
+    requestAnimationFrame(() => banner.classList.add('is-visible'));
+  };
+  const hideBanner = () => {
+    banner.classList.remove('is-visible');
+    window.setTimeout(() => { banner.hidden = true; }, 180);
+  };
+
+  const choose = (value) => {
+    try { localStorage.setItem(CONSENT_KEY, value); } catch {}
+    hideBanner();
+    document.dispatchEvent(new CustomEvent('holo-consent-decided'));
+    if (value === 'granted' && typeof window.holocardConsentGranted === 'function') {
+      window.holocardConsentGranted();
+      trackGaEvent('consent_update', { consent_state: 'granted' }, { load: false });
+    }
+  };
+
+  acceptBtn.addEventListener('click', () => choose('granted'));
+  declineBtn.addEventListener('click', () => choose('denied'));
+  document.getElementById('consentSettings')?.addEventListener('click', showBanner);
+
+  if (!getStoredConsent()) showBanner();
+}
+
 function setupIosInstallPrompt() {
   const prompt = document.getElementById('iosInstallPrompt');
   const body = document.getElementById('iosInstallBody');
@@ -768,11 +912,13 @@ function setupIosInstallPrompt() {
     trackGaEvent('pwa_install_prompt', { platform, prompt_action: action });
   };
 
-  window.setTimeout(() => {
-    prompt.hidden = false;
-    requestAnimationFrame(() => prompt.classList.add('is-visible'));
-    trackGaEvent('pwa_install_prompt', { platform, prompt_action: 'show' });
-  }, 2500);
+  afterConsentDecision(() => {
+    window.setTimeout(() => {
+      prompt.hidden = false;
+      requestAnimationFrame(() => prompt.classList.add('is-visible'));
+      trackGaEvent('pwa_install_prompt', { platform, prompt_action: 'show' });
+    }, 2500);
+  });
 
   laterBtn.addEventListener('click', () => hidePrompt(7, 'later'));
   dismissBtn.addEventListener('click', () => {
@@ -827,15 +973,17 @@ function setupAndroidInstallPrompt() {
   window.addEventListener('beforeinstallprompt', (event) => {
     event.preventDefault();
     deferredPrompt = event;
-    window.setTimeout(() => {
-      if (!deferredPrompt || window.matchMedia('(display-mode: standalone)').matches) return;
-      prompt.hidden = false;
-      requestAnimationFrame(() => prompt.classList.add('is-visible'));
-      trackGaEvent('pwa_install_prompt', {
-        platform: 'android_chrome',
-        prompt_action: 'show',
-      });
-    }, 1800);
+    afterConsentDecision(() => {
+      window.setTimeout(() => {
+        if (!deferredPrompt || window.matchMedia('(display-mode: standalone)').matches) return;
+        prompt.hidden = false;
+        requestAnimationFrame(() => prompt.classList.add('is-visible'));
+        trackGaEvent('pwa_install_prompt', {
+          platform: 'android_chrome',
+          prompt_action: 'show',
+        });
+      }, 1800);
+    });
   });
 
   window.addEventListener('appinstalled', () => {
@@ -899,12 +1047,16 @@ async function init() {
   setupLangSwitcher();
   setupModals();
   setupOutboundTracking();
+  setupConsentBanner();
   setupIosInstallPrompt();
   setupAndroidInstallPrompt();
   applyFilterUI();
   await loadCoreData();
   updateNavCounts();
-  render();
+  window.addEventListener('hashchange', () => {
+    applyRoute(parseRoute(window.location.hash));
+  });
+  await applyRoute(parseRoute(window.location.hash), { initial: true });
   trackGaPageView(currentView, { load: false });
 }
 

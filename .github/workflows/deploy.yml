@@ -27,6 +27,10 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Full history so the translation-cache seed step can recover the
+          # last committed translation_cache.json on a cold Actions cache.
+          fetch-depth: 0
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -65,12 +69,45 @@ jobs:
         if: github.event_name != 'push'
         run: uv sync --locked
 
+      - name: Restore translation cache
+        if: github.event_name != 'push'
+        uses: actions/cache/restore@v4
+        with:
+          path: translation_cache.json
+          key: translation-cache-${{ github.run_id }}
+          restore-keys: |
+            translation-cache-
+
+      - name: Seed translation cache from git history (cold-cache fallback)
+        if: github.event_name != 'push'
+        run: |
+          if [ ! -f translation_cache.json ]; then
+            # Most recent commit touching the file is its removal commit, so
+            # fall back to that commit's parent where the file still existed.
+            last=$(git rev-list -1 HEAD -- translation_cache.json || true)
+            if [ -n "$last" ] && git show "$last:translation_cache.json" > translation_cache.json 2>/dev/null; then
+              echo "Seeded translation cache from commit $last"
+            elif [ -n "$last" ] && git show "$last^:translation_cache.json" > translation_cache.json 2>/dev/null; then
+              echo "Seeded translation cache from parent of removal commit $last"
+            else
+              rm -f translation_cache.json
+              echo "No translation cache in history; starting fresh."
+            fi
+          fi
+
       - name: Run scraper
         if: github.event_name != 'push'
         id: scrape
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: uv run python -m scraper.run
+
+      - name: Save translation cache
+        if: always() && github.event_name != 'push'
+        uses: actions/cache/save@v4
+        with:
+          path: translation_cache.json
+          key: translation-cache-${{ github.run_id }}
 
       - name: Check scraper output
         if: github.event_name != 'push'
@@ -84,13 +121,13 @@ jobs:
             exit 1
           fi
 
-      - name: Commit updated data & cache
+      - name: Commit updated data
         if: github.event_name != 'push' && steps.check.outputs.fresh == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add web/data/ translation_cache.json
-          git diff --cached --quiet || git commit -m "chore: update scraped data & translation cache [skip ci]"
+          git add web/data/
+          git diff --cached --quiet || git commit -m "chore: update scraped data [skip ci]"
           git push
 
       - name: Setup Pages

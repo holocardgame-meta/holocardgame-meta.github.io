@@ -1,8 +1,8 @@
 """Scrape official recommended decks from en.hololive-official-cardgame.com."""
 
+import json
 import re
 import time
-import json
 from pathlib import Path
 
 import httpx

@@ -5,8 +5,8 @@ Supports proactive tweet discovery by crawling:
   - Known aggregator blogs that embed @hololive_OCG tweets
 """
 
-import re
 import json
+import re
 import sys
 import time
 from pathlib import Path
@@ -385,7 +385,7 @@ def scrape_x_posts(x_posts_path: Path, deck_codes_path: Path, output_dir: Path) 
         print(f"    Event: {info['event_raw']}")
         print(f"    Team: {info['team']} | Players: {len(info['players'])} | Codes: {len(_parse_decklog_codes(tweet))}")
         if is_truncated:
-            print(f"    [NOTE] Tweet is truncated (note tweet) - some deck codes may be missing")
+            print("    [NOTE] Tweet is truncated (note tweet) - some deck codes may be missing")
         if new_count:
             print(f"    {new_count} new deck code(s) found")
 

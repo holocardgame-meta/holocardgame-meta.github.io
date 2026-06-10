@@ -446,7 +446,7 @@ def scrape_all_guides(output_dir: Path, existing_urls: set[str] | None = None, c
         try:
             result = scrape_deck(url)
             if not result.get("cards"):
-                print(f"    Skipped (no card entries)")
+                print("    Skipped (no card entries)")
                 time.sleep(0.5)
                 continue
             slug = url.rstrip("/").split("/")[-1]

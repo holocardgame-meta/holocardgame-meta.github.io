@@ -4,8 +4,8 @@ Matches the SVG at web/favicon.svg: gold gradient backdrop, dark card-fan glyph,
 gold border. Output sized for GitHub's avatar slot (recommended >= 500x500).
 """
 
-import math
 from pathlib import Path
+
 from PIL import Image, ImageDraw
 
 SIZE = 512
@@ -42,7 +42,6 @@ def rounded_rect_mask(size: int, radius: int) -> Image.Image:
 
 def draw_card(width: int, height: int, radius: int, rotate_deg: float, with_dot: bool, opacity: int) -> Image.Image:
     """Draw a single dark card rounded rectangle, then rotate it."""
-    pad = max(width, height) // 2
     canvas_size = max(width, height) * 2
     layer = Image.new("RGBA", (canvas_size, canvas_size), (0, 0, 0, 0))
     d = ImageDraw.Draw(layer)

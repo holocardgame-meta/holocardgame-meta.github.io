@@ -1,32 +1,9 @@
 import { t, localized } from '../i18n.js';
 import { escapeHtml as _esc, safeUrl } from '../utils/sanitize.js';
+import { COLOR_HEX, normalizeColor as _normalizeColor, colorsFromValue as _colorsFromValue } from '../utils/colors.js';
 
-const COLOR_ALIAS = {
-  '白': '白',
-  '綠': '綠',
-  '緑': '綠',
-  '紅': '紅',
-  '赤': '紅',
-  '藍': '藍',
-  '青': '藍',
-  '紫': '紫',
-  '黃': '黃',
-  '黄': '黃',
-};
-const COLOR_CSS = { '白': '#e8e8e8', '綠': '#4caf50', '紅': '#f44336', '藍': '#2196f3', '紫': '#9c27b0', '黃': '#ffeb3b' };
 const PAGE_SIZE = 50;
-const TIER_LETTER = { 1: 'S', 2: 'A', 3: 'B' };
-
-function _normalizeColor(color) {
-  return COLOR_ALIAS[String(color || '').trim()] || '';
-}
-
-function _colorsFromValue(value) {
-  return String(value || '')
-    .split('/')
-    .map(_normalizeColor)
-    .filter(Boolean);
-}
+const TIER_LETTER = { 1: 'S', 2: 'A', 3: 'B', 4: 'C' };
 
 function _getDeckColors(deck, cardsMap) {
   if (Array.isArray(deck?.colors) && deck.colors.length) {
@@ -42,7 +19,7 @@ function _getDeckColors(deck, cardsMap) {
     }
   }
   return Object.keys(colors)
-    .filter(c => COLOR_CSS[c])
+    .filter(c => COLOR_HEX[c])
     .sort((a, b) => colors[b] - colors[a]);
 }
 
@@ -254,7 +231,7 @@ function renderGuideCard(deck, cardsMap, index = Infinity) {
 
   const deckColors = _getDeckColors(deck, cardsMap);
   const colorDots = deckColors.slice(0, 3).map(c =>
-    `<span class="cd" style="background:${COLOR_CSS[c] || '#888'}"></span>`
+    `<span class="cd" style="background:${COLOR_HEX[c] || '#888'}"></span>`
   ).join('');
 
   const desc = localized(deck.description, '');

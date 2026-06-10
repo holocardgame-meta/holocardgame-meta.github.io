@@ -6,9 +6,9 @@ import hashlib
 import json
 import re
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
-
 
 COLOR_ALIAS = {
     "白": "白",
@@ -117,8 +117,12 @@ def build_frontend_indexes(data_dir: Path | str) -> None:
         )
     _write_json(data_path / "guides_index.json", guide_index)
 
+    generated_at = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    _write_json(data_path / "meta.json", {"generated_at": generated_at})
+
     print(f"  Built card_index.json ({len(card_index)} cards)")
     print(f"  Built guides_index.json + {len(guide_index)} guide detail files")
+    print(f"  Built meta.json (generated_at={generated_at})")
 
 
 def main() -> None:

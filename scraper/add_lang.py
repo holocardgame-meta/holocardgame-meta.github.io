@@ -25,7 +25,6 @@ from scraper.translate import (
     _translate_unique_map,
 )
 
-
 # Keys that indicate a multilang dict (not a structural dict). If a node has
 # any of these keys, treat it as multilang.
 LANG_KEYS = {"ja", "zh-TW", "en", "fr", "es"}

@@ -1,5 +1,6 @@
 import { t, getLang } from '../i18n.js';
 import { escapeHtml as _esc, safeUrl } from '../utils/sanitize.js';
+import { COLOR_HEX, normalizeColor as _normColor, glyphFrom as _glyphFromName } from '../utils/colors.js';
 
 const KNOWN_WGP_EVENTS = [
   { event: 'WGP2025 Tokyo',               date: '2025-05-05', location: 'Tokyo Big Sight' },
@@ -220,12 +221,12 @@ const OSHI_COLOR = {
 };
 
 const CARD_COLOR_HEX = {
-  green:  '#4caf50',
-  blue:   '#2196f3',
-  purple: '#9c27b0',
-  yellow: '#ffeb3b',
-  red:    '#f44336',
-  white:  '#e0e0e0',
+  green:  COLOR_HEX['綠'],
+  blue:   COLOR_HEX['藍'],
+  purple: COLOR_HEX['紫'],
+  yellow: COLOR_HEX['黃'],
+  red:    COLOR_HEX['紅'],
+  white:  COLOR_HEX['白'],
   other:  '#888888',
 };
 
@@ -465,19 +466,6 @@ function renderTournamentDeckCard(deck, cardsMap) {
   `;
 }
 
-const _COLOR_HEX_TOURN = {
-  '白': '#e8e8e8', '綠': '#4caf50', '緑': '#4caf50',
-  '紅': '#f44336', '赤': '#f44336',
-  '藍': '#2196f3', '青': '#2196f3',
-  '紫': '#9c27b0', '黃': '#ffeb3b', '黄': '#ffeb3b',
-};
-const _COLOR_ALIAS_TOURN = {
-  '白': '白', '綠': '綠', '緑': '綠', '紅': '紅', '赤': '紅',
-  '藍': '藍', '青': '藍', '紫': '紫', '黃': '黃', '黄': '黃',
-};
-
-function _normColor(c) { return _COLOR_ALIAS_TOURN[String(c || '').trim()] || ''; }
-
 function _dominantDeckColor(deck, cardsMap) {
   const counts = {};
   const sources = [deck?.oshi_cards, deck?.main_deck];
@@ -496,18 +484,12 @@ function _dominantDeckColor(deck, cardsMap) {
   return sorted[0] || null;
 }
 
-function _glyphFromName(name) {
-  if (!name) return '?';
-  const m = String(name).match(/[぀-ヿ㐀-鿿ｦ-ﾟ]/);
-  return m ? m[0] : String(name)[0].toUpperCase();
-}
-
 function _renderDeckRow(c, cardsMap) {
   const info = cardsMap[c.card_id] || {};
   const imageUrl = info.imageUrl || c.imageUrl || '';
   const name = info.name || c.name || c.card_id || '';
   const color = _normColor(info.color || c.color || '') || '';
-  const cssColor = _COLOR_HEX_TOURN[color] || '#666';
+  const cssColor = COLOR_HEX[color] || '#666';
   const count = c.count || 1;
   return `
     <div class="dcr clickable-card" data-card-id="${_esc(c.card_id || '')}" style="--dcr-c:${cssColor}">
@@ -557,7 +539,7 @@ export function renderTournamentDeckModal(container, decklogId, decklogDecks, ca
 
   // Dominant color → drives oshi badge color tinting
   const dominantColor = _dominantDeckColor(deck, cardsMap);
-  const oshiBadgeColor = dominantColor ? _COLOR_HEX_TOURN[dominantColor] : '#9333ea';
+  const oshiBadgeColor = dominantColor ? COLOR_HEX[dominantColor] : '#9333ea';
 
   const badges = [];
   if (deck.oshi) badges.push({ kind: 'oshi', label: deck.oshi, style: `background:linear-gradient(135deg, ${oshiBadgeColor}cc 0%, ${oshiBadgeColor}99 100%); border-color: ${oshiBadgeColor};` });

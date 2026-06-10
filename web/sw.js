@@ -1,4 +1,4 @@
-const CACHE_NAME = 'holo-card-v38';
+const CACHE_NAME = 'holo-card-v39';
 
 const PRECACHE_URLS = [
   './',
@@ -7,11 +7,14 @@ const PRECACHE_URLS = [
   './en/',
   './fr/',
   './es/',
+  './privacy.html',
   './style.css',
   './app.js',
   './seo-config.mjs',
   './i18n.js',
   './utils/sanitize.js',
+  './utils/colors.js',
+  './utils/aliases.js',
   './components/guides-view.js',
   './components/deck-view.js',
   './components/card-view.js',

@@ -30,7 +30,8 @@
   <meta property="og:title" content="Tier list hOCG, guides de decks et cartes | HOLOCARD META">
   <meta property="og:description" content="Suivez le meta hololive OFFICIAL CARD GAME (hOCG) avec tier list, guides de decks, recettes de decks, resultats WGP et base de cartes consultable.">
   <meta property="og:url" content="https://holocardgame-meta.github.io/fr/">
-  <meta property="og:image" content="https://holocardgame-meta.github.io/og-image.svg">
+  <meta property="og:image" content="https://holocardgame-meta.github.io/og-image.png">
+  <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="HOLOCARD META">
@@ -43,7 +44,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Tier list hOCG, guides de decks et cartes | HOLOCARD META">
   <meta name="twitter:description" content="Suivez le meta hololive OFFICIAL CARD GAME (hOCG) avec tier list, guides de decks, recettes de decks, resultats WGP et base de cartes consultable.">
-  <meta name="twitter:image" content="https://holocardgame-meta.github.io/og-image.svg">
+  <meta name="twitter:image" content="https://holocardgame-meta.github.io/og-image.png">
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="manifest" href="manifest.webmanifest">
@@ -235,6 +236,7 @@
               <button class="tier-chip" data-tier="1" data-t="1" aria-pressed="false">T1</button>
               <button class="tier-chip" data-tier="2" data-t="2" aria-pressed="false">T2</button>
               <button class="tier-chip" data-tier="3" data-t="3" aria-pressed="false">T3</button>
+              <button class="tier-chip" data-tier="4" data-t="4" aria-pressed="false">T4</button>
               <button class="tier-chip" data-tier="official" data-t="official" aria-pressed="false">OFCL</button>
               <button class="tier-chip" data-tier="guide" data-t="guide" aria-pressed="false">GUIDE</button>
             </div>
@@ -299,9 +301,14 @@
         </div>
         <div class="foot-meta">
           <div class="foot-meta-line">
-            <span class="dot">●</span> <span data-i18n="footer_updated">Updated</span> · v4.0
+            <span class="dot">●</span> <span data-i18n="footer_updated">Updated</span> · <span id="footMetaDate">v4.0</span>
           </div>
           <div class="foot-meta-line foot-meta-disclaimer" data-i18n="footer_disclaimer">Fan-made 環境資料庫。卡片資料 © 2016 COVER Corp. / hololive OFFICIAL CARD GAME</div>
+          <div class="foot-meta-line foot-links">
+            <a href="privacy.html" target="_blank" rel="noopener" data-i18n="consent_privacy">隱私權政策</a>
+            <span aria-hidden="true">·</span>
+            <button type="button" class="foot-link-btn" id="consentSettings" data-i18n="footer_cookie_settings">Cookie 設定</button>
+          </div>
           <div class="foot-meta-sources">
             <div class="foot-meta-sources-label"><span data-i18n="footer_sources">資料來源</span></div>
             <ul class="foot-meta-sources-list">
@@ -380,7 +387,7 @@
   <noscript>
     <div style="max-width:700px;margin:2rem auto;padding:1rem;color:#ccc">
       <h2>HOLOCARD META - hOCG Tier List & Deck Guide Database</h2>
-      <p>The most comprehensive fan-made meta deck database for hololive OFFICIAL CARD GAME (hOCG / ホロカ). Browse competitive tier rankings, deck recipes, tournament results, and a full card database — updated monthly. Not affiliated with COVER Corp.</p>
+      <p>The most comprehensive fan-made meta deck database for hololive OFFICIAL CARD GAME (hOCG / ホロカ). Browse competitive tier rankings, deck recipes, tournament results, and a full card database — updated weekly. Not affiliated with COVER Corp.</p>
 
       <h3>hololive Card Game Tier List & Meta Rankings</h3>
       <p>Our tier list ranks every competitive hOCG deck into Tier 1, Tier 2, and Tier 3 based on WGP tournament win rates, usage rates, and overall meta performance. Find out which Oshi decks dominate the current competitive scene.</p>
@@ -434,7 +441,7 @@
       <h4>Tier 排行榜、牌組配方與大賽結果</h4>
       <p>依 WGP 大賽入賞資料整理 Tier 1、Tier 2、Tier 3 牌組，收錄官方推薦牌組、Deck Log 代碼、推し使用率與色組策略，協助玩家比較環境牌組與構築方向。</p>
 
-      <p>Available in Chinese (繁體中文), English, Japanese (日本語), French (Français), and Spanish (Español). Data sourced from holocardstrategy.jp, Bushiroad Deck Log, and en.hololive-official-cardgame.com. Updated monthly.</p>
+      <p>Available in Chinese (繁體中文), English, Japanese (日本語), French (Français), and Spanish (Español). Data sourced from holocardstrategy.jp, Bushiroad Deck Log, and en.hololive-official-cardgame.com. Updated weekly.</p>
       <p>Please enable JavaScript to use this application.</p>
     </div>
   </noscript>
@@ -452,6 +459,18 @@
     <div class="modal-content card-modal-content">
       <button class="modal-close">&times;</button>
       <div id="cardModalBody"></div>
+    </div>
+  </div>
+
+  <div id="consentBanner" class="consent-banner" hidden role="dialog" aria-live="polite" aria-labelledby="consentTitle">
+    <div class="consent-copy">
+      <div class="consent-title" id="consentTitle" data-i18n="consent_title">Cookie 與分析</div>
+      <p class="consent-body" data-i18n="consent_body">我們使用 Google Analytics 了解網站使用情況（需要 Cookie）。你可以接受或拒絕，拒絕不影響任何功能。</p>
+    </div>
+    <div class="consent-actions">
+      <a class="consent-link" href="privacy.html" target="_blank" rel="noopener" data-i18n="consent_privacy">隱私權政策</a>
+      <button type="button" class="app-install-btn app-install-btn-muted" id="consentDecline" data-i18n="consent_decline">拒絕</button>
+      <button type="button" class="app-install-btn" id="consentAccept" data-i18n="consent_accept">接受</button>
     </div>
   </div>
 
@@ -484,21 +503,34 @@
     window.HOLOCARD_GA_ID = 'G-8WS4X0WWQQ';
     window.dataLayer = window.dataLayer || [];
     window.gtag = window.gtag || function(){window.dataLayer.push(arguments);};
+    // GDPR consent mode: analytics stays denied (and gtag.js unloaded) until the
+    // visitor accepts via the consent banner. Choice persists in localStorage.
+    window.gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
     window.gtag('js', new Date());
     window.gtag('config', window.HOLOCARD_GA_ID, { send_page_view: false });
     (function(){
       var loaded = false;
-      function load(){
+      function consentGranted(){
+        try { return localStorage.getItem('holo-consent') === 'granted'; } catch (e) { return false; }
+      }
+      function inject(){
         if (loaded) return;
         loaded = true;
+        window.gtag('consent', 'update', { analytics_storage: 'granted' });
         var s = document.createElement('script');
         s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.HOLOCARD_GA_ID;
         document.head.appendChild(s);
-        ['click','scroll','keydown','touchstart'].forEach(function(e){
-          document.removeEventListener(e, load, {capture:true});
-        });
+      }
+      function load(){
+        if (consentGranted()) inject();
       }
       window.holocardLoadGoogleTag = load;
+      window.holocardConsentGranted = inject;
       ['click','scroll','keydown','touchstart'].forEach(function(e){
         document.addEventListener(e, load, {capture:true,once:true,passive:true});
       });

@@ -1,8 +1,8 @@
 """Scrape official rule articles from hololive-official-cardgame.com/cat_news/rule/."""
 
+import json
 import re
 import time
-import json
 from datetime import datetime
 from pathlib import Path
 
@@ -85,13 +85,10 @@ def _parse_restricted_cards(soup: BeautifulSoup) -> list[str]:
     body_text = soup.get_text(" ", strip=False)
 
     current_section = ""
-    latest_date_marker = None
     for el in soup.select(".article-inner, .post-content, .news-detail, article, .entry-content, body"):
         current_section = el.get_text(" ", strip=False)
         if current_section:
             break
-
-    ids_after_latest = []
 
     sections = re.split(r"(制限カード)", current_section)
     if not sections:
@@ -103,7 +100,6 @@ def _parse_restricted_cards(soup: BeautifulSoup) -> list[str]:
 
     if first_block_end != -1:
         first_block = current_section[:first_block_end]
-        second_block = current_section[first_block_end:]
         first_ids = CARD_ID_RE.findall(first_block)
         if first_ids:
             return list(dict.fromkeys(first_ids))

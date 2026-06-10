@@ -31,7 +31,18 @@ uv run python -m scraper.run
 
 # Serve frontend locally
 uv run python -m http.server 8080 --directory web
+
+# Lint & tests
+uv run ruff check scraper scripts tests
+uv run pytest
 ```
+
+Notes:
+
+- `translation_cache.json` is not committed; CI persists it via GitHub Actions cache
+  and falls back to the last committed copy in git history on a cold cache.
+- The scraper refuses to publish a dataset that shrank below 80% of the published
+  baseline (`scraper/data_guard.py`); set `DATA_GUARD_BYPASS=1` for intentional shrinks.
 
 For CI/CD, add `GEMINI_API_KEY` as a repository secret in GitHub Settings → Secrets.
 

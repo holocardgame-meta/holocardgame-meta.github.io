@@ -1,7 +1,7 @@
 [project]
 name = "holo-card"
 version = "0.1.0"
-description = "Add your description here"
+description = "Scraper pipeline and static frontend for HOLOCARD META, a hololive OFFICIAL CARD GAME meta database"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
@@ -11,3 +11,21 @@ dependencies = [
     "lxml>=6.1.0",
     "pillow>=12.2.0",
 ]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "ruff>=0.8",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

@@ -1,14 +1,7 @@
 import { t, localized } from '../i18n.js';
 import { escapeHtml as _escape, safeUrl, sanitizeUrl } from '../utils/sanitize.js';
-
-const COLOR_MAP = {
-  '白': '#e0e0e0',
-  '綠': '#4caf50',
-  '紅': '#f44336',
-  '藍': '#2196f3',
-  '紫': '#9c27b0',
-  '黃': '#ffeb3b',
-};
+import { COLOR_HEX } from '../utils/colors.js';
+import { aliasTextFor } from '../utils/aliases.js';
 
 const PAGE_SIZE = 60;
 let currentPage = 0;
@@ -58,7 +51,7 @@ function applyFilters(cards, filters) {
     if (filters.search) {
       const q = filters.search.toLowerCase();
       const searchable = [
-        card.name, card.id, card.tag, card.type,
+        card.name, aliasTextFor(card.name), card.id, card.tag, card.type,
         card.oshiSkill?.name, _effectText(card.oshiSkill),
         card.spSkill?.name, _effectText(card.spSkill),
         card.effectC?.name, _effectText(card.effectC),
@@ -83,7 +76,7 @@ function renderPage(container) {
   const errata = _rulesData?.errata || {};
 
   for (const card of visible) {
-    const color = COLOR_MAP[card.color] || '#666';
+    const color = COLOR_HEX[card.color] || '#666';
     const isRestricted = restricted.has(card.id);
     const hasErrata = card.id in errata;
     const cardId = _escape(card.id || '');
@@ -130,20 +123,11 @@ function renderPage(container) {
   }
 }
 
-const _COLOR_HEX = {
-  '白': '#e8e8e8',
-  '綠': '#4caf50',
-  '紅': '#f44336',
-  '藍': '#2196f3',
-  '紫': '#9c27b0',
-  '黃': '#ffeb3b',
-};
-
 function _statTile(label, value, opts = {}) {
   if (value == null || value === '') return '';
   const valClass = opts.cost ? ' cps-cost' : (opts.color ? ' cps-color' : '');
   const inner = opts.color
-    ? `<span class="cd" style="background:${_COLOR_HEX[value] || '#666'}"></span>${_escape(value)}`
+    ? `<span class="cd" style="background:${COLOR_HEX[value] || '#666'}"></span>${_escape(value)}`
     : _escape(value);
   return `<div class="cardp-stat">
     <div class="cps-label">${_escape(label)}</div>
@@ -316,7 +300,7 @@ export function renderCardDetail(container, card, allCards, rulesData) {
       </div>`
     : '';
 
-  const cvColor = _COLOR_HEX[card.color] || 'var(--accent)';
+  const cvColor = COLOR_HEX[card.color] || 'var(--accent)';
 
   container.innerHTML = `
     <div class="card-page">
@@ -402,12 +386,3 @@ function _rarityLabel(url) {
   return suffix || '?';
 }
 
-function renderEffect(title, text, subtitle) {
-  if (!text) return '';
-  return `
-    <div class="effect-block">
-      <div class="effect-name">${title}${subtitle ? ` <span style="color:var(--text-secondary);font-size:0.75rem">(${subtitle})</span>` : ''}</div>
-      <div class="effect-text">${text}</div>
-    </div>
-  `;
-}

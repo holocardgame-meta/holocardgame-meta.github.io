@@ -1,17 +1,6 @@
 import { t, localized } from '../i18n.js';
 import { escapeHtml as _esc, safeUrl } from '../utils/sanitize.js';
-
-const COLOR_ALIAS = {
-  '白': '白', '綠': '綠', '緑': '綠', '紅': '紅', '赤': '紅',
-  '藍': '藍', '青': '藍', '紫': '紫', '黃': '黃', '黄': '黃',
-};
-const COLOR_HEX = {
-  '白': '#e8e8e8', '綠': '#4caf50', '紅': '#f44336',
-  '藍': '#2196f3', '紫': '#9c27b0', '黃': '#ffeb3b',
-};
-
-function _normColor(c) { return COLOR_ALIAS[String(c || '').trim()] || ''; }
-function _colorsFromValue(v) { return String(v || '').split('/').map(_normColor).filter(Boolean); }
+import { COLOR_HEX, normalizeColor as _normColor, colorsFromValue as _colorsFromValue, glyphFrom as _glyphFrom } from '../utils/colors.js';
 
 function _deckColors(deck, cardsMap) {
   if (Array.isArray(deck?.colors) && deck.colors.length) {
@@ -76,14 +65,6 @@ function _parsePhases(text) {
     });
   }
   return phases;
-}
-
-function _glyphFrom(text) {
-  if (!text) return '?';
-  const m = String(text).match(/[぀-ヿ㐀-鿿ｦ-ﾟ]/);
-  if (m) return m[0];
-  const a = String(text).match(/[A-Za-z]/);
-  return a ? a[0].toUpperCase() : '★';
 }
 
 function _cardImage(card, cardsMap) {
@@ -361,7 +342,7 @@ function _renderGuidePage(container, { deckInfo, tierNum, recipe, cardsData }) {
           <span class="banner-corner banner-corner-bl"></span>
           <span class="banner-corner banner-corner-br"></span>
           <img src="${safeUrl(deckImage)}" alt="${_esc(titleZh)}" loading="lazy" decoding="async">
-          <figcaption class="banner-caption">牌組構築 / DECK SNAPSHOT</figcaption>
+          <figcaption class="banner-caption">${_esc(t('deck_snapshot_caption'))} / DECK SNAPSHOT</figcaption>
         </figure>` : ''}
       </header>
 
@@ -444,7 +425,7 @@ function _renderOfficialDeckModal(container, deck) {
   const _gridSection = (cards) => {
     const total = cards.reduce((s, c) => s + (c.count || 1), 0);
     return `
-      <div class="grid-totals">合計 <strong>${total}</strong> 張</div>
+      <div class="grid-totals">${t('deck_total_cards', { total: `<strong>${total}</strong>` })}</div>
       <div class="official-card-grid">
         ${cards.map(c => `
           <div class="official-card-entry clickable-card" data-card-id="${_esc(c.card_id || '')}">

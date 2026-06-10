@@ -71,13 +71,11 @@ function emptyFilters() {
 resetDom();
 const [
   { renderCardGallery },
-  { renderTierView },
   { renderRulesView },
   { renderGuidesView },
   { renderTournamentView },
 ] = await Promise.all([
   import('../web/components/card-view.js'),
-  import('../web/components/tier-view.js'),
   import('../web/components/rules-view.js'),
   import('../web/components/guides-view.js'),
   import('../web/components/tournament-view.js'),
@@ -95,27 +93,6 @@ resetDom();
     color: '白',
   }], emptyFilters(), {});
   assertSanitized('card gallery', container.innerHTML);
-}
-
-resetDom();
-{
-  const deckId = `deck-${ATTR_PAYLOAD}`;
-  const container = makeElement('tiers');
-  renderTierView(container, {
-    updated: TEXT_PAYLOAD,
-    tiers: [{
-      tier: 1,
-      decks: [{
-        id: deckId,
-        image: BAD_URL,
-        name: TEXT_PAYLOAD,
-        vtuber: TEXT_PAYLOAD,
-        ratings: { firepower: ATTR_PAYLOAD },
-        features: [TEXT_PAYLOAD],
-      }],
-    }],
-  }, [{ deck_id: deckId }]);
-  assertSanitized('tier view', container.innerHTML);
 }
 
 resetDom();

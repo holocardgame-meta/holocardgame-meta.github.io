@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<!-- Source template for web/og-image.png — rendered at exactly 1200x630 by
+     scripts/build_og_image.py via headless Chrome. Tokens mirror the live
+     Arena theme in web/style.css (.app[data-style="arena"]). -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Cinzel:wght@700;900&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap">
+<style>
+  :root {
+    --bg-0: #0a0e1f;
+    --bg-1: #0f1530;
+    --text-1: #f0e6d2;
+    --text-2: #b5a98b;
+    --text-3: #7a6f55;
+    --accent: #f4c842;
+    --accent-2: #d63838;
+    --border: #3a3258;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    font-family: 'Noto Sans TC', 'Noto Sans JP', system-ui, sans-serif;
+    color: var(--text-1);
+    background:
+      radial-gradient(ellipse 75% 55% at 50% -12%, rgba(244, 200, 66, .14) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 45% at 50% 115%, rgba(214, 56, 56, .07) 0%, transparent 60%),
+      linear-gradient(180deg, #0f1530 0%, #0a0e1f 55%, #06081a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  /* Gold edge lines — echoes the arena sidebar edge gradient */
+  .edge { position: absolute; left: 0; right: 0; height: 3px; }
+  .edge.top { top: 0; background: linear-gradient(90deg, transparent 0%, var(--accent) 35%, var(--accent) 65%, transparent 100%); opacity: .65; }
+  .edge.bottom { bottom: 0; background: linear-gradient(90deg, transparent 0%, var(--accent) 35%, var(--accent) 65%, transparent 100%); opacity: .35; }
+
+  /* Corner brackets — the site's emblem-corner motif */
+  .corner { position: absolute; width: 34px; height: 34px; border-color: var(--accent); border-style: solid; opacity: .8; }
+  .corner.tl { top: 24px; left: 24px; border-width: 2px 0 0 2px; }
+  .corner.tr { top: 24px; right: 24px; border-width: 2px 2px 0 0; }
+  .corner.bl { bottom: 24px; left: 24px; border-width: 0 0 2px 2px; }
+  .corner.br { bottom: 24px; right: 24px; border-width: 0 2px 2px 0; }
+
+  .stage { text-align: center; }
+
+  .mark { width: 116px; height: 116px; margin: 0 auto 30px; filter: drop-shadow(0 10px 30px rgba(244, 200, 66, .25)); }
+  .mark svg { width: 100%; height: 100%; display: block; }
+
+  /* Wordmark — mirrors .brand-name (Orbitron 900; gold / parchment / gold pill) */
+  .wordmark {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    font-size: 86px;
+    letter-spacing: .06em;
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .wordmark .holo { color: var(--accent); }
+  .wordmark .card { color: var(--text-1); }
+  .wordmark .meta {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--bg-0);
+    padding: .04em .3em .02em;
+    margin-left: .28em;
+    border-radius: 8px;
+    font-size: .62em;
+    vertical-align: .08em;
+  }
+
+  .sub {
+    margin-top: 26px;
+    font-size: 27px;
+    font-weight: 500;
+    color: var(--text-2);
+    letter-spacing: .04em;
+  }
+
+  .features {
+    margin-top: 34px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+  }
+  .chip {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: .08em;
+    color: var(--accent);
+    border: 1px solid rgba(244, 200, 66, .45);
+    background: rgba(244, 200, 66, .08);
+    border-radius: 6px;
+    padding: 9px 20px;
+  }
+
+  .langs {
+    margin-top: 32px;
+    font-size: 18px;
+    letter-spacing: .28em;
+    color: var(--text-3);
+    text-transform: uppercase;
+  }
+  .langs .dot { color: var(--accent); opacity: .6; }
+
+  .url {
+    position: absolute;
+    bottom: 30px;
+    left: 0; right: 0;
+    text-align: center;
+    font-size: 17px;
+    letter-spacing: .08em;
+    color: var(--text-3);
+  }
+</style>
+</head>
+<body>
+  <div class="edge top"></div>
+  <div class="edge bottom"></div>
+  <div class="corner tl"></div>
+  <div class="corner tr"></div>
+  <div class="corner bl"></div>
+  <div class="corner br"></div>
+
+  <div class="stage">
+    <div class="mark">
+      <!-- web/favicon.svg, inlined -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+        <defs>
+          <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#f4c842"/>
+            <stop offset="100%" stop-color="#c98e1f"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="64" height="64" rx="10" ry="10" fill="url(#bg)"/>
+        <rect x="0" y="0" width="64" height="64" rx="10" ry="10" fill="none" stroke="#ffe48a" stroke-width="2"/>
+        <g transform="translate(-1 -2) scale(2.75)" fill="#1a0e02">
+          <g transform="rotate(-12 12 13)">
+            <rect x="5" y="6" width="11" height="14" rx="1.8" ry="1.8" opacity=".55"/>
+          </g>
+          <g transform="rotate(8 12 13)">
+            <rect x="8" y="5" width="11" height="14" rx="1.8" ry="1.8"/>
+            <circle cx="13.5" cy="12" r="2" fill="rgba(0,0,0,.4)"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <div class="wordmark"><span class="holo">HOLO</span><span class="card">CARD</span><span class="meta">META</span></div>
+
+    <div class="sub">ホロカ環境 · hOCG Tier List · 牌組攻略 · Deck Guides</div>
+
+    <div class="features">
+      <span class="chip">TIER LIST</span>
+      <span class="chip">100+ GUIDES</span>
+      <span class="chip">WGP RESULTS</span>
+      <span class="chip">1600+ CARDS</span>
+    </div>
+
+    <div class="langs">ZH<span class="dot"> · </span>JA<span class="dot"> · </span>EN<span class="dot"> · </span>FR<span class="dot"> · </span>ES</div>
+  </div>
+
+  <div class="url">holocardgame-meta.github.io</div>
+</body>
+</html>

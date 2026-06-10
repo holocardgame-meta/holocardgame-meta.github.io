@@ -19,10 +19,10 @@ export function renderRulesView(container, rulesData, cardsData) {
       <section class="rules-section">
         <h3 class="rules-section-title">
           <span class="rules-section-tag restricted-tag">${t('rule_restricted')}</span>
-          <span data-i18n="rules_restricted_heading">制限カード</span>
+          <span>${_esc(t('rules_restricted_heading'))}</span>
           <span class="rules-section-count">${restricted.length}</span>
         </h3>
-        <p class="rules-section-desc" data-i18n="rules_restricted_desc">每副牌組中此卡僅限放入 1 張。</p>
+        <p class="rules-section-desc">${_esc(t('rules_restricted_desc'))}</p>
         <div class="rules-card-grid">
           ${restricted.map(id => renderRestrictedCard(id, cardsMap, errata[id])).join('')}
         </div>
@@ -34,10 +34,10 @@ export function renderRulesView(container, rulesData, cardsData) {
       <section class="rules-section">
         <h3 class="rules-section-title">
           <span class="rules-section-tag errata-tag">${t('rule_errata')}</span>
-          <span data-i18n="rules_errata_heading">裁定變更</span>
+          <span>${_esc(t('rules_errata_heading'))}</span>
           <span class="rules-section-count">${errataKeys.length}</span>
         </h3>
-        <p class="rules-section-desc" data-i18n="rules_errata_desc">官方公告調整了下列卡片的判定。</p>
+        <p class="rules-section-desc">${_esc(t('rules_errata_desc'))}</p>
         <div class="rules-card-grid">
           ${errataKeys.map(id => renderErrataCard(id, cardsMap, errata[id])).join('')}
         </div>
@@ -48,7 +48,7 @@ export function renderRulesView(container, rulesData, cardsData) {
       <section class="rules-section">
         <h3 class="rules-section-title">
           <span class="rules-section-tag articles-tag">NEWS</span>
-          <span data-i18n="rules_articles_heading">官方規則更新</span>
+          <span>${_esc(t('rules_articles_heading'))}</span>
           <span class="rules-section-count">${articles.length}</span>
         </h3>
         <ul class="rules-article-list">

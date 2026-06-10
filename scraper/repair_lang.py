@@ -35,7 +35,6 @@ from scraper.translate import (
     _translate_unique_map,
 )
 
-
 LANG_KEYS = {"ja", "zh-TW", "en", "fr", "es"}
 SOURCE_PRIORITY = ("ja", "zh-TW", "en")
 CJK_RE = re.compile(r"[぀-ヿ㐀-鿿ｦ-ﾟ]")

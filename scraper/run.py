@@ -6,15 +6,16 @@ import re
 import shutil
 from pathlib import Path
 
+from scraper.build_indexes import build_frontend_indexes
+from scraper.data_guard import enforce as enforce_data_guard
 from scraper.fetch_cards import fetch_cards
-from scraper.scrape_tiers import scrape_tiers
-from scraper.scrape_decks import scrape_all_decks, scrape_all_guides
 from scraper.scrape_decklog import scrape_decklog
+from scraper.scrape_decks import scrape_all_decks, scrape_all_guides
 from scraper.scrape_official import scrape_official
 from scraper.scrape_rules import scrape_rules
+from scraper.scrape_tiers import scrape_tiers
 from scraper.scrape_x import scrape_x_posts
 from scraper.translate import translate_all
-from scraper.build_indexes import build_frontend_indexes
 
 
 def _assign_tier_to_guides(data_dir: Path):
@@ -61,6 +62,7 @@ def _assign_tier_to_guides(data_dir: Path):
 def _optimize_lcp_image(web_dir: Path, lcp_url: str, suffix: int = 0) -> str | None:
     """Download an LCP image, resize to 400px wide, and save as WebP."""
     import io
+
     import httpx
     from PIL import Image
 
@@ -224,6 +226,9 @@ def main():
 
     print("\n[10/10] Translating scraped data (ja -> zh-TW, en, fr)...")
     translate_all(data_dir)
+
+    print("\n[Guard] Comparing fresh data against published web/data/ baseline...")
+    enforce_data_guard(data_dir, web_data_dir)
 
     print("\n[Copy] Copying data to web/data/ for frontend...")
     web_data_dir.mkdir(parents=True, exist_ok=True)
