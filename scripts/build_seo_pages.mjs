@@ -112,6 +112,12 @@ function escapeHtml(v) {
   }[c]));
 }
 
+// Serialized JSON-LD goes inside a <script> tag — escape "<" so scraped
+// titles/card names can never terminate the tag.
+function jsonLdScript(data) {
+  return JSON.stringify(data).replace(/</g, '\\u003c');
+}
+
 function localizedText(value, lang) {
   if (value == null) return '';
   if (typeof value === 'string') return value;
@@ -299,7 +305,49 @@ function collectEntities() {
   return entities;
 }
 
-function buildEntityPage(e, slug) {
+function entityHeadline(e) {
+  return localizedText(e.title, 'zh-TW') || localizedText(e.title, 'ja')
+    || localizedText(e.title, 'en') || e.deckId;
+}
+
+function entityBadge(e) {
+  return e.tier ? `Tier ${e.tier}` : e.kind === 'official' ? 'OFFICIAL' : 'GUIDE';
+}
+
+// Deterministic "related decks" per entity: shared talent (romaji token)
+// outweighs same tier, which outweighs same kind; ties broken by date desc
+// then deckId so a re-run with identical data renders identical pages.
+function computeRelated(entities, slugs) {
+  const tokens = new Map(entities.map(e => [
+    e.deckId,
+    new Set(talentTokens([localizedText(e.title, 'ja'), e.oshi || ''].join(' '))),
+  ]));
+  const related = new Map();
+  for (const e of entities) {
+    const mine = tokens.get(e.deckId);
+    const scored = [];
+    for (const o of entities) {
+      if (o.deckId === e.deckId) continue;
+      let score = 0;
+      for (const tk of tokens.get(o.deckId)) if (mine.has(tk)) score += 100;
+      if (e.tier && o.tier && String(e.tier) === String(o.tier)) score += 10;
+      if (o.kind === e.kind) score += 1;
+      if (score > 0) scored.push({ o, score });
+    }
+    scored.sort((a, b) =>
+      b.score - a.score
+      || String(b.o.date || '').localeCompare(String(a.o.date || ''))
+      || String(a.o.deckId).localeCompare(String(b.o.deckId)));
+    related.set(e.deckId, scored.slice(0, 6).map(({ o }) => ({
+      slug: slugs.get(o.deckId),
+      headline: entityHeadline(o),
+      badge: entityBadge(o),
+    })));
+  }
+  return related;
+}
+
+function buildEntityPage(e, slug, related = []) {
   const url = `${SITE_URL}deck/${slug}/`;
   const zhTitle = localizedText(e.title, 'zh-TW');
   const jaTitle = localizedText(e.title, 'ja');
@@ -307,12 +355,15 @@ function buildEntityPage(e, slug) {
   const zhDesc = localizedText(e.description, 'zh-TW');
   const enDesc = localizedText(e.description, 'en');
   const jaDesc = localizedText(e.description, 'ja');
-  const headline = zhTitle || jaTitle || enTitle || e.deckId;
-  const pageTitle = `${headline} | HOLOCARD META`;
+  const headline = entityHeadline(e);
+  const kindLabel = e.kind === 'official'
+    ? 'hOCG 官方推薦牌組'
+    : e.tier ? `hOCG Tier ${e.tier} 牌組攻略` : 'hOCG 牌組攻略';
+  const pageTitle = `${headline}｜${kindLabel} | HOLOCARD META`;
   const metaDesc = (zhDesc || enDesc || jaDesc || `hOCG deck recipe: ${headline}`).replace(/\s+/g, ' ').slice(0, 155);
   const ogImage = /^https?:\/\//.test(e.image || '') ? e.image : `${SITE_URL}og-image.png`;
   const hashRoute = `/#deck/${encodeURIComponent(e.deckId)}`;
-  const badge = e.tier ? `Tier ${e.tier}` : e.kind === 'official' ? 'OFFICIAL' : 'GUIDE';
+  const badge = entityBadge(e);
   const cards = (e.cards || []).filter(c => c && c.name).slice(0, 60);
 
   const metaBits = [
@@ -335,15 +386,48 @@ ${cards.map(c => `        <li>${c.count ? `<strong>${escapeHtml(c.count)}×</str
       </ul>
     </section>` : '';
 
-  const jsonLd = JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline,
-    ...(e.date ? { datePublished: String(e.date).slice(0, 10) } : {}),
-    inLanguage: 'zh-TW',
-    mainEntityOfPage: url,
-    publisher: { '@type': 'Organization', name: 'HOLOCARD META' },
-  });
+  const relatedHtml = related.length ? `
+    <section>
+      <h2>相關牌組 / Related Decks</h2>
+      <ul class="related">
+${related.map(r => `        <li><a href="/deck/${r.slug}/">${escapeHtml(r.headline)}</a> <span class="rel-badge">${escapeHtml(r.badge)}</span></li>`).join('\n')}
+      </ul>
+    </section>` : '';
+
+  const jsonLd = jsonLdScript([
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline,
+      description: metaDesc,
+      image: ogImage,
+      ...(e.date ? { datePublished: String(e.date).slice(0, 10) } : {}),
+      inLanguage: 'zh-TW',
+      mainEntityOfPage: url,
+      ...(e.sourceName ? { author: { '@type': 'Organization', name: e.sourceName } } : {}),
+      publisher: { '@type': 'Organization', name: 'HOLOCARD META' },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'HOLOCARD META', item: SITE_URL },
+        { '@type': 'ListItem', position: 2, name: '牌組一覽 / Decks', item: `${SITE_URL}deck/` },
+        { '@type': 'ListItem', position: 3, name: headline, item: url },
+      ],
+    },
+    ...(cards.length ? [{
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: `${headline} — 採用卡片 / Card List`,
+      numberOfItems: cards.length,
+      itemListElement: cards.map((c, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: c.count ? `${c.name} ×${c.count}` : c.name,
+      })),
+    }] : []),
+  ]);
 
   return `<!DOCTYPE html>
 <html lang="zh-TW">
@@ -366,8 +450,9 @@ ${cards.map(c => `        <li>${c.count ? `<strong>${escapeHtml(c.count)}×</str
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background: var(--bg-0); color: var(--text-1); font-family: 'Noto Sans TC', 'Noto Sans JP', system-ui, sans-serif; line-height: 1.7; padding: 2rem 1.25rem 4rem; }
     main { max-width: 720px; margin: 0 auto; }
-    .home { color: var(--text-2); text-decoration: none; font-size: .85rem; }
-    .home:hover { color: var(--text-1); }
+    .home { color: var(--text-2); font-size: .85rem; }
+    .home a { color: var(--text-2); text-decoration: none; }
+    .home a:hover { color: var(--text-1); }
     h1 { font-size: 1.45rem; margin: 1rem 0 .35rem; }
     .sub { color: var(--text-2); margin-bottom: .8rem; }
     .meta { display: flex; gap: .7rem; align-items: center; color: var(--text-2); font-size: .85rem; margin-bottom: 1.4rem; }
@@ -379,6 +464,11 @@ ${cards.map(c => `        <li>${c.count ? `<strong>${escapeHtml(c.count)}×</str
     .cards { list-style: none; columns: 2; column-gap: 2rem; }
     .cards li { font-size: .88rem; color: var(--text-2); padding: .18rem 0; break-inside: avoid; }
     .cards strong { color: var(--text-1); }
+    .related { list-style: none; }
+    .related li { font-size: .9rem; padding: .22rem 0; }
+    .related a { color: var(--text-1); text-decoration: none; }
+    .related a:hover { color: var(--accent); }
+    .rel-badge { color: var(--text-2); font-size: .72rem; border: 1px solid var(--border); border-radius: 4px; padding: .05rem .35rem; margin-left: .3rem; }
     code { font-size: .78rem; color: var(--accent); opacity: .8; }
     .cta { display: inline-block; background: var(--accent); color: #1a0e02; font-weight: 700; text-decoration: none; padding: .65rem 1.4rem; border-radius: 8px; margin: .4rem 0 1rem; }
     .source, footer { color: var(--text-2); font-size: .8rem; }
@@ -389,7 +479,7 @@ ${cards.map(c => `        <li>${c.count ? `<strong>${escapeHtml(c.count)}×</str
 </head>
 <body>
   <main>
-    <a class="home" href="/">&larr; HOLOCARD META</a>
+    <nav class="home" aria-label="Breadcrumb"><a href="/">HOLOCARD META</a> <span aria-hidden="true">›</span> <a href="/deck/">牌組一覽 / Decks</a></nav>
     <h1>${escapeHtml(headline)}</h1>
     ${jaTitle && jaTitle !== headline ? `<div class="sub" lang="ja">${escapeHtml(jaTitle)}</div>` : ''}
     <div class="meta">
@@ -399,8 +489,128 @@ ${cards.map(c => `        <li>${c.count ? `<strong>${escapeHtml(c.count)}×</str
       ${descBlocks}
     </div>` : ''}
     ${cardsHtml}
+    ${relatedHtml}
     <a class="cta" href="${escapeHtml(hashRoute)}">在 HOLOCARD META 開啟完整內容 / Open in app →</a>
     ${e.sourceUrl ? `<p class="source">出典 / Source: <a href="${escapeHtml(e.sourceUrl)}" rel="noopener nofollow" target="_blank">${escapeHtml(e.sourceName || e.sourceUrl)}</a></p>` : ''}
+    <footer>Fan-made. Card data © 2016 COVER Corp. / hololive OFFICIAL CARD GAME · <a href="/privacy.html">Privacy</a></footer>
+  </main>
+</body>
+</html>
+`;
+}
+
+// ── /deck/ index page ──────────────────────────────────────────────────────
+// Crawlable directory of every entity page so none of them is an orphan:
+// root footer links here, this page links to all 144+, each entity page
+// links back. Grouped by kind; deterministic ordering (tier asc, date desc).
+
+function buildDeckIndexPage(entities, slugs) {
+  const url = `${SITE_URL}deck/`;
+  const pageTitle = `hOCG 牌組一覽（${entities.length} 副）｜Tier 牌組・攻略・官方推薦 | HOLOCARD META`;
+  const metaDesc = `hololive OFFICIAL CARD GAME (hOCG / ホロカ) 全部 ${entities.length} 副牌組一覽：環境 Tier 牌組、牌組攻略與官方推薦牌組，附完整卡表。`;
+
+  const byDateDesc = (a, b) =>
+    String(b.date || '').localeCompare(String(a.date || ''))
+    || String(a.deckId).localeCompare(String(b.deckId));
+  const groups = [
+    {
+      heading: '環境 Tier 牌組 / Tier Decks',
+      items: entities.filter(e => e.kind === 'tier')
+        .sort((a, b) => String(a.tier || '9').localeCompare(String(b.tier || '9')) || byDateDesc(a, b)),
+    },
+    { heading: '牌組攻略 / Deck Guides', items: entities.filter(e => e.kind === 'guide').sort(byDateDesc) },
+    { heading: '官方推薦牌組 / Official Decks', items: entities.filter(e => e.kind === 'official').sort(byDateDesc) },
+  ].filter(g => g.items.length);
+
+  const sectionsHtml = groups.map(g => `
+    <section>
+      <h2>${escapeHtml(g.heading)} <span class="count">${g.items.length}</span></h2>
+      <ul class="related">
+${g.items.map(e => {
+    const date = String(e.date || '').slice(0, 10);
+    return `        <li><a href="/deck/${slugs.get(e.deckId)}/">${escapeHtml(entityHeadline(e))}</a> <span class="rel-badge">${escapeHtml(entityBadge(e))}</span>${date ? ` <time datetime="${escapeHtml(date)}">${escapeHtml(date)}</time>` : ''}</li>`;
+  }).join('\n')}
+      </ul>
+    </section>`).join('\n');
+
+  const jsonLd = jsonLdScript([
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'hOCG 牌組一覽 / All Deck Recipes',
+      description: metaDesc,
+      url,
+      inLanguage: 'zh-TW',
+      isPartOf: { '@type': 'WebSite', name: 'HOLOCARD META', url: SITE_URL },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'HOLOCARD META', item: SITE_URL },
+        { '@type': 'ListItem', position: 2, name: '牌組一覽 / Decks', item: url },
+      ],
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'hOCG 牌組一覽 / All Deck Recipes',
+      numberOfItems: entities.length,
+      itemListElement: groups.flatMap(g => g.items).map((e, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: entityHeadline(e),
+        url: `${SITE_URL}deck/${slugs.get(e.deckId)}/`,
+      })),
+    },
+  ]);
+
+  return `<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${escapeHtml(pageTitle)}</title>
+  <meta name="description" content="${escapeHtml(metaDesc)}">
+  <link rel="canonical" href="${escapeHtml(url)}">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="${escapeHtml(pageTitle)}">
+  <meta property="og:description" content="${escapeHtml(metaDesc)}">
+  <meta property="og:url" content="${escapeHtml(url)}">
+  <meta property="og:image" content="${SITE_URL}og-image.png">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">${jsonLd}</script>
+  <style>
+    :root { --bg-0: #0a0e1f; --bg-2: #161d3e; --border: #3a3258; --text-1: #f0e6d2; --text-2: #b5a98b; --accent: #f4c842; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--bg-0); color: var(--text-1); font-family: 'Noto Sans TC', 'Noto Sans JP', system-ui, sans-serif; line-height: 1.7; padding: 2rem 1.25rem 4rem; }
+    main { max-width: 880px; margin: 0 auto; }
+    .home { color: var(--text-2); font-size: .85rem; }
+    .home a { color: var(--text-2); text-decoration: none; }
+    .home a:hover { color: var(--text-1); }
+    h1 { font-size: 1.45rem; margin: 1rem 0 .35rem; }
+    .sub { color: var(--text-2); margin-bottom: 1.4rem; }
+    section { border: 1px solid var(--border); background: var(--bg-2); border-radius: 10px; padding: 1.1rem 1.4rem; margin-bottom: 1.1rem; }
+    h2 { font-size: 1rem; color: var(--accent); margin-bottom: .7rem; }
+    h2 .count { color: var(--text-2); font-weight: 400; font-size: .85rem; }
+    .related { list-style: none; }
+    .related li { font-size: .9rem; padding: .22rem 0; }
+    .related a { color: var(--text-1); text-decoration: none; }
+    .related a:hover { color: var(--accent); }
+    .rel-badge { color: var(--text-2); font-size: .72rem; border: 1px solid var(--border); border-radius: 4px; padding: .05rem .35rem; margin-left: .3rem; }
+    time { color: var(--text-2); font-size: .78rem; margin-left: .3rem; }
+    footer { color: var(--text-2); font-size: .8rem; margin-top: 2rem; }
+    footer a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <nav class="home" aria-label="Breadcrumb"><a href="/">HOLOCARD META</a> <span aria-hidden="true">›</span> 牌組一覽 / Decks</nav>
+    <h1>hOCG 牌組一覽 / All Deck Recipes</h1>
+    <p class="sub">hololive OFFICIAL CARD GAME 環境 Tier 牌組、攻略與官方推薦牌組（${entities.length}）。</p>
+${sectionsHtml}
+    <a class="home" href="/">&larr; 回 HOLOCARD META / Back to app</a>
     <footer>Fan-made. Card data © 2016 COVER Corp. / hololive OFFICIAL CARD GAME · <a href="/privacy.html">Privacy</a></footer>
   </main>
 </body>
@@ -428,6 +638,13 @@ ${url.lastmod ? `    <lastmod>${url.lastmod}</lastmod>\n` : ''}    <changefreq>w
 ${alternates}
   </url>`).join('\n');
 
+  // /deck/ index has no language variants — no hreflang block.
+  const deckIndexEntry = `  <url>
+    <loc>${SITE_URL}deck/</loc>
+${lastmodDefault ? `    <lastmod>${lastmodDefault}</lastmod>\n` : ''}    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>`;
+
   const entityEntries = entityUrls.map(e => `  <url>
     <loc>${e.loc}</loc>
 ${e.lastmod ? `    <lastmod>${e.lastmod}</lastmod>\n` : ''}    <changefreq>monthly</changefreq>
@@ -438,6 +655,7 @@ ${e.lastmod ? `    <lastmod>${e.lastmod}</lastmod>\n` : ''}    <changefreq>month
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${coreEntries}
+${deckIndexEntry}
 ${entityEntries}
 </urlset>
 `;
@@ -459,19 +677,21 @@ const slugs = assignSlugs(entities);
 if (new Set(slugs.values()).size !== entities.length) {
   throw new Error('entity slug collision after dedup — investigate readableSlug()');
 }
+const relatedByDeckId = computeRelated(entities, slugs);
 const entityUrls = [];
 for (const e of entities) {
   const slug = slugs.get(e.deckId);
   const dir = path.join(deckOutDir, slug);
   fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, 'index.html'), buildEntityPage(e, slug));
+  fs.writeFileSync(path.join(dir, 'index.html'), buildEntityPage(e, slug, relatedByDeckId.get(e.deckId)));
   const date = String(e.date || '').slice(0, 10);
   entityUrls.push({
     loc: `${SITE_URL}deck/${slug}/`,
     lastmod: /^\d{4}-\d{2}-\d{2}$/.test(date) ? date : lastmodDefault,
   });
 }
+fs.writeFileSync(path.join(deckOutDir, 'index.html'), buildDeckIndexPage(entities, slugs));
 
 fs.writeFileSync(path.join(webDir, 'sitemap.xml'), buildSitemap(entityUrls, lastmodDefault));
 
-console.log(`Generated ${SUPPORTED_LANGS.length} language entry pages, ${entities.length} deck pages, and sitemap.`);
+console.log(`Generated ${SUPPORTED_LANGS.length} language entry pages, ${entities.length} deck pages, deck index, and sitemap.`);

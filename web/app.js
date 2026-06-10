@@ -731,8 +731,19 @@ function _showToast(msg) {
   _toastTimer = window.setTimeout(() => el.classList.remove('is-visible'), 1800);
 }
 
+// Share the static, indexable /deck/<slug>/ URL when a guide/official deck
+// modal is open (no card overlay) so links posted off-site point at pages
+// search engines can crawl; every other route shares the hash URL as-is.
+let _slugRegistry = null;
+async function _staticShareUrl() {
+  if (_openDeck?.type !== 'deck' || _openCard) return null;
+  if (!_slugRegistry) _slugRegistry = await _fetchJSON('data/slug_registry.json');
+  const slug = _slugRegistry?.[_openDeck.id];
+  return slug ? new URL(`deck/${slug}/`, document.baseURI).href : null;
+}
+
 async function shareCurrentRoute() {
-  const url = window.location.href;
+  const url = (await _staticShareUrl()) || window.location.href;
   trackGaEvent('share', {
     method: navigator.share ? 'web_share' : 'clipboard',
     content_id: window.location.hash.slice(1) || currentView,

@@ -74,6 +74,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://holocardgame-meta.github.io/"/>
   </url>
   <url>
+    <loc>https://holocardgame-meta.github.io/deck/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://holocardgame-meta.github.io/deck/recommended-deck-nerissa-ravencroft/</loc>
     <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>

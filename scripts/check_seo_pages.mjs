@@ -97,6 +97,31 @@ if (!readFile('web/i18n.js').includes('getExplicitLangFromLocation')) {
   failures.push('Runtime i18n should detect language from /{lang}/ paths, not only ?lang=');
 }
 
+// Deck index page: keeps the 144+ entity pages from being orphans.
+assertIncludes('Sitemap deck index', sitemap, `<loc>${siteUrl}deck/</loc>`);
+assertIncludes('Root footer deck-index link', rootHtml, 'href="deck/"');
+
+const deckIndexPath = path.join(webDir, 'deck', 'index.html');
+if (!fs.existsSync(deckIndexPath)) {
+  failures.push('Missing generated web/deck/index.html — run scripts/build_seo_pages.mjs first.');
+} else {
+  const deckIndexHtml = fs.readFileSync(deckIndexPath, 'utf8');
+  const deckCanonical = getTag(deckIndexHtml, 'rel', 'canonical');
+  if (getAttr(deckCanonical, 'href') !== `${siteUrl}deck/`) {
+    failures.push(`web/deck/index.html canonical should be ${siteUrl}deck/.`);
+  }
+  if (!deckIndexHtml.includes('href="/deck/')) {
+    failures.push('web/deck/index.html should link to entity pages.');
+  }
+}
+
+const notFoundPath = path.join(webDir, '404.html');
+if (!fs.existsSync(notFoundPath)) {
+  failures.push('Missing web/404.html.');
+} else if (!fs.readFileSync(notFoundPath, 'utf8').includes('noindex')) {
+  failures.push('web/404.html should carry a noindex robots meta.');
+}
+
 if (failures.length) {
   console.error('SEO page contract failed:');
   for (const failure of failures) console.error(`- ${failure}`);
