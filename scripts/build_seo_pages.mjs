@@ -9,6 +9,7 @@ import {
   getAlternateLinks,
   getLanguageUrl,
 } from '../web/seo-config.mjs';
+import { NAME_ALIASES } from '../web/utils/aliases.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, '..');
@@ -117,10 +118,119 @@ function localizedText(value, lang) {
   return value[lang] ?? value['zh-TW'] ?? value.ja ?? value.en ?? Object.values(value)[0] ?? '';
 }
 
-function entitySlug(deckId) {
-  const slug = String(deckId).replace(/[^A-Za-z0-9_-]+/g, '-').replace(/^-+|-+$/g, '').toLowerCase().slice(0, 48);
-  const digest = crypto.createHash('sha1').update(String(deckId)).digest('hex').slice(0, 8);
-  return `${slug || 'deck'}-${digest}`;
+function entityHash(deckId) {
+  return crypto.createHash('sha1').update(String(deckId)).digest('hex').slice(0, 8);
+}
+
+function slugifyAscii(text) {
+  return String(text || '')
+    .normalize('NFKD')
+    .replace(/[^A-Za-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .toLowerCase();
+}
+
+// Scan JP text for known talent names and return their iconic romaji tokens.
+function talentTokens(text) {
+  const found = [];
+  for (const [jp, alias] of Object.entries(NAME_ALIASES)) {
+    if (text.includes(jp)) {
+      const words = alias.split(' ');
+      const token = words[1] || words[0];
+      if (token && !found.includes(token)) found.push(token);
+      if (found.length >= 2) break;
+    }
+  }
+  return found;
+}
+
+// Human-readable slug: english title -> talent romaji -> hash fallback.
+// Collisions are resolved order-independently: every member of a colliding
+// group gets its deck_id hash appended, so reordering source data can never
+// swap two URLs between entities.
+// Stripped wherever they appear (titles bury these mid-string too).
+const SLUG_BOILERPLATE = [
+  'deck-recipe-and-how-to-play',
+  'deck-recipe-how-to-play',
+  'recipe-and-how-to-play',
+  'deck-build-and-strategy',
+  'and-how-to-play',
+  'how-to-play',
+  'deck-recipe',
+];
+
+function readableSlug(e) {
+  const jaText = [localizedText(e.title, 'ja'), e.oshi || ''].join(' ');
+  const talents = talentTokens(jaText);
+  const talentForm = talents.length
+    ? `${talents.join('-')}-${e.kind === 'official' ? 'official-deck' : 'deck'}`
+    : '';
+
+  const enTitle = localizedText(e.title, 'en');
+  let slug = slugifyAscii(enTitle)
+    .replace(/^hocg-/, '')
+    .replace(/-hocg-/g, '-');
+  for (const phrase of SLUG_BOILERPLATE) {
+    const trimmed = slug.split(phrase).join('-').replace(/-+/g, '-').replace(/^-+|-+$/g, '').replace(/^for-/, '');
+    if (trimmed.replace(/-/g, '').length >= 8) slug = trimmed;
+  }
+  if (slug.length > 45) {
+    // Mis-scraped titles (strategy text leaking into the title field) — use
+    // the talent form when one is identifiable, else hard-cap on a word boundary.
+    if (talentForm) return talentForm;
+    slug = slug.slice(0, 45);
+    const cut = slug.lastIndexOf('-');
+    if (cut > 20) slug = slug.slice(0, cut);
+    slug = slug.replace(/-+$/, '');
+  }
+  if (slug.replace(/-/g, '').length >= 8) return slug;
+  if (talentForm) return talentForm;
+  return `deck-${entityHash(e.deckId)}`;
+}
+
+// Slug registry: once a deck_id is assigned a slug it keeps it forever, even
+// if the source title is edited/re-translated or a later deck collides with
+// its base form. Lives in web/data/ so the CI data commit persists it.
+const registryPath = path.join(dataDir, 'slug_registry.json');
+
+function assignSlugs(entities) {
+  const registry = loadJson(registryPath, {});
+  const taken = new Set(Object.values(registry));
+  const slugs = new Map();
+  const newcomers = [];
+
+  for (const e of entities) {
+    if (registry[e.deckId]) {
+      slugs.set(e.deckId, registry[e.deckId]);
+    } else {
+      newcomers.push(e);
+    }
+  }
+
+  // Group same-run newcomers by base slug so a batch collision is resolved
+  // order-independently (all members get their hash); registered slugs are
+  // never disturbed — a clashing newcomer is the one that gets suffixed.
+  const groups = new Map();
+  for (const e of newcomers) {
+    const base = readableSlug(e);
+    if (!groups.has(base)) groups.set(base, []);
+    groups.get(base).push(e);
+  }
+  for (const [base, members] of groups) {
+    for (const e of members) {
+      let slug = members.length === 1 && !taken.has(base) ? base : `${base}-${entityHash(e.deckId)}`;
+      while (taken.has(slug)) slug = `${slug}-${entityHash(slug + e.deckId)}`;
+      taken.add(slug);
+      slugs.set(e.deckId, slug);
+      registry[e.deckId] = slug;
+    }
+  }
+
+  if (newcomers.length) {
+    const sorted = Object.fromEntries(Object.entries(registry).sort(([a], [b]) => a.localeCompare(b)));
+    fs.writeFileSync(registryPath, JSON.stringify(sorted, null, 2) + '\n');
+  }
+  return slugs;
 }
 
 function collectEntities() {
@@ -345,9 +455,13 @@ const lastmodDefault = /^\d{4}-\d{2}-\d{2}/.test(meta.generated_at || '') ? meta
 const deckOutDir = path.join(webDir, 'deck');
 fs.rmSync(deckOutDir, { recursive: true, force: true });
 const entities = collectEntities();
+const slugs = assignSlugs(entities);
+if (new Set(slugs.values()).size !== entities.length) {
+  throw new Error('entity slug collision after dedup — investigate readableSlug()');
+}
 const entityUrls = [];
 for (const e of entities) {
-  const slug = entitySlug(e.deckId);
+  const slug = slugs.get(e.deckId);
   const dir = path.join(deckOutDir, slug);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'index.html'), buildEntityPage(e, slug));
