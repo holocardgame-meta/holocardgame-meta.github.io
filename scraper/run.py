@@ -222,7 +222,7 @@ def main():
     scrape_official(data_dir)
 
     print("\n[9/10] Scraping official rule updates...")
-    scrape_rules(data_dir)
+    scrape_rules(data_dir, web_data_dir)
 
     print("\n[10/10] Translating scraped data (ja -> zh-TW, en, fr)...")
     translate_all(data_dir)

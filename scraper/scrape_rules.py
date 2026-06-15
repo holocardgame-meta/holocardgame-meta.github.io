@@ -17,6 +17,15 @@ REQUEST_DELAY = 1.5
 
 CARD_ID_RE = re.compile(r"h[A-Z]{1,4}\d{2}-\d{3}")
 
+# The source site retired its static restricted-card page (rule01, now 404) in
+# favour of dated news posts that announce *changes* in prose. Each operative
+# card is tagged 制限カード：「ID」 (newly restricted) or 制限解除カード：「ID」
+# (restriction lifted); all other card IDs in the body are contextual mentions.
+# 制限カード：「…」 cannot match inside 制限解除カード：「…」 (解除 breaks the run),
+# so the two patterns never overlap.
+RESTRICT_ADD_RE = re.compile(r"制限カード[：:\s]*「([^」]*)」")
+RESTRICT_REMOVE_RE = re.compile(r"制限解除カード[：:\s]*「([^」]*)」")
+
 
 def _fetch(url: str) -> str | None:
     try:
@@ -76,35 +85,45 @@ def _classify_article(title: str, slug: str) -> str:
     return "rule_update"
 
 
-def _parse_restricted_cards(soup: BeautifulSoup) -> list[str]:
-    """Extract the current restricted card IDs from the deck building rules page.
+def _parse_restriction_deltas(body_text: str) -> tuple[list[str], list[str]]:
+    """Return (added, removed) restricted-card IDs marked in a restriction post.
 
-    Parses the first restriction table/section which represents the current
-    active restrictions (the most recent date block).
+    Only cards tagged with the 制限カード：「…」 / 制限解除カード：「…」 markers are
+    returned; contextual card mentions elsewhere in the prose are ignored.
     """
-    body_text = soup.get_text(" ", strip=False)
+    removed: list[str] = []
+    for m in RESTRICT_REMOVE_RE.finditer(body_text):
+        removed.extend(CARD_ID_RE.findall(m.group(1)))
+    added: list[str] = []
+    for m in RESTRICT_ADD_RE.finditer(body_text):
+        added.extend(CARD_ID_RE.findall(m.group(1)))
+    return list(dict.fromkeys(added)), list(dict.fromkeys(removed))
 
-    current_section = ""
-    for el in soup.select(".article-inner, .post-content, .news-detail, article, .entry-content, body"):
-        current_section = el.get_text(" ", strip=False)
-        if current_section:
-            break
 
-    sections = re.split(r"(制限カード)", current_section)
-    if not sections:
-        return CARD_ID_RE.findall(body_text)
+def _resolve_restricted_cards(
+    seed: list[str],
+    seed_date: str,
+    restriction_posts: list[tuple[str, list[str], list[str]]],
+) -> list[str]:
+    """Carry the last published restricted list forward, applying new deltas.
 
-    first_block_end = current_section.find("まで適用")
-    if first_block_end == -1:
-        first_block_end = current_section.find("より適用")
-
-    if first_block_end != -1:
-        first_block = current_section[:first_block_end]
-        first_ids = CARD_ID_RE.findall(first_block)
-        if first_ids:
-            return list(dict.fromkeys(first_ids))
-
-    return list(dict.fromkeys(CARD_ID_RE.findall(body_text)))
+    ``seed`` / ``seed_date`` come from the previously published rules.json. Only
+    posts dated *after* seed_date are applied: older changes are already baked
+    into the seed, and replaying them is unsafe because the source reuses post
+    slugs and no longer serves its superseded posts. Add/remove are idempotent
+    set operations, so a delta that is re-seen on a later run is a no-op.
+    """
+    current = list(dict.fromkeys(seed))
+    for date, added, removed in sorted(restriction_posts, key=lambda p: p[0]):
+        if date <= seed_date:
+            continue
+        rm = set(removed)
+        current = [c for c in current if c not in rm]
+        for cid in added:
+            if cid not in current:
+                current.append(cid)
+        print(f"    Applied restriction delta [{date}]: +{added or '[]'} -{removed or '[]'}")
+    return current
 
 
 def _scrape_article(url: str) -> dict | None:
@@ -148,16 +167,37 @@ def _build_errata_map(articles: list[dict]) -> dict:
     return errata
 
 
-def scrape_rules(output_dir: Path) -> dict:
-    """Scrape all official rule articles and output rules.json."""
+def _load_restricted_seed(baseline_dir: Path | None) -> tuple[list[str], str]:
+    """Read the previously published restricted list and its snapshot date."""
+    if baseline_dir is None:
+        return [], ""
+    baseline_path = baseline_dir / "rules.json"
+    if not baseline_path.exists():
+        return [], ""
+    try:
+        prev = json.loads(baseline_path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return [], ""
+    return list(prev.get("restricted_cards") or []), prev.get("scraped_at") or ""
+
+
+def scrape_rules(output_dir: Path, baseline_dir: Path | None = None) -> dict:
+    """Scrape all official rule articles and output rules.json.
+
+    ``baseline_dir`` (the published web/data/) seeds the restricted-card list:
+    the source no longer hosts a canonical current-list page, so the prior list
+    is carried forward and newly-announced add/remove deltas are applied.
+    """
     output_dir.mkdir(parents=True, exist_ok=True)
+
+    seed, seed_date = _load_restricted_seed(baseline_dir)
 
     print("  Collecting rule article URLs...")
     entries = _collect_rule_urls()
     print(f"  Found {len(entries)} rule articles")
 
     articles = []
-    restricted_cards: list[str] = []
+    restriction_posts: list[tuple[str, list[str], list[str]]] = []
 
     for i, entry in enumerate(entries):
         print(f"  [{i+1}/{len(entries)}] {entry['url']}")
@@ -167,9 +207,9 @@ def scrape_rules(output_dir: Path) -> dict:
 
         art_type = _classify_article(result["title"], entry["slug"])
 
-        if entry["slug"] == DECK_RULES_SLUG:
-            restricted_cards = _parse_restricted_cards(result["soup"])
-            print(f"    Current restricted cards: {restricted_cards}")
+        added, removed = _parse_restriction_deltas(result["body_text"])
+        if added or removed:
+            restriction_posts.append((entry["date"], added, removed))
 
         article = {
             "url": entry["url"],
@@ -181,6 +221,9 @@ def scrape_rules(output_dir: Path) -> dict:
         }
         articles.append(article)
         time.sleep(REQUEST_DELAY)
+
+    restricted_cards = _resolve_restricted_cards(seed, seed_date, restriction_posts)
+    print(f"    Current restricted cards: {restricted_cards}")
 
     errata_map = _build_errata_map(articles)
 
