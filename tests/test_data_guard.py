@@ -92,18 +92,47 @@ def test_tier_list_counts_decks_across_tiers(tmp_path):
     assert "tier_list.json" in failures[0]
 
 
-def test_rules_counter_combines_sections(tmp_path):
+def test_rules_sections_guarded_independently(tmp_path):
+    """Each rules.json section is checked on its own: emptied sections are
+    flagged, but a volatile section churning down is not."""
     old, new = tmp_path / "old", tmp_path / "new"
     full = {
         "restricted_cards": ["a", "b", "c", "d"],
         "errata": {"x": {}, "y": {}, "z": {}},
         "articles": _cards(5),
     }
+    # restricted_cards + errata empty out (real regression); articles churn down (benign)
+    shrunk = {"restricted_cards": [], "errata": {}, "articles": _cards(2)}
     _write(old, "rules.json", full)
-    _write(new, "rules.json", {"restricted_cards": [], "errata": {}, "articles": _cards(2)})
+    _write(new, "rules.json", shrunk)
+    failures = check_data_regression(new, old)
+    assert any("restricted_cards" in f for f in failures)
+    assert any("errata" in f for f in failures)
+    assert not any("articles" in f for f in failures)
+
+
+def test_rules_article_churn_does_not_trip_guard(tmp_path):
+    """News posts 404'ing (articles list shrinking) must not block the publish.
+    This is the June-15 fragility: a dropped article shouldn't veto everything."""
+    old, new = tmp_path / "old", tmp_path / "new"
+    base = {"restricted_cards": ["a", "b"], "errata": {"x": {}, "y": {}, "z": {}}, "articles": _cards(6)}
+    churned = {"restricted_cards": ["a", "b"], "errata": {"x": {}, "y": {}, "z": {}}, "articles": _cards(3)}
+    _write(old, "rules.json", base)
+    _write(new, "rules.json", churned)
+    assert check_data_regression(new, old) == []
+
+
+def test_rules_restricted_section_emptied_fails(tmp_path):
+    """restricted_cards dropping to 0 (the rule01-removal bug) must be caught
+    precisely, even though it's a small section."""
+    old, new = tmp_path / "old", tmp_path / "new"
+    base = {"restricted_cards": ["a", "b"], "errata": {"x": {}, "y": {}, "z": {}}, "articles": _cards(6)}
+    zeroed = {"restricted_cards": [], "errata": {"x": {}, "y": {}, "z": {}}, "articles": _cards(6)}
+    _write(old, "rules.json", base)
+    _write(new, "rules.json", zeroed)
     failures = check_data_regression(new, old)
     assert len(failures) == 1
-    assert "rules.json" in failures[0]
+    assert "restricted_cards" in failures[0]
 
 
 def test_enforce_raises_systemexit(tmp_path, monkeypatch):

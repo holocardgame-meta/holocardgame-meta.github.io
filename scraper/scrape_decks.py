@@ -8,8 +8,13 @@ from pathlib import Path
 import httpx
 from bs4 import BeautifulSoup, Tag
 
+from scraper.concurrency import concurrent_map
+
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; HoloCardBot/1.0)"}
-REQUEST_DELAY = 1.5
+# Concurrency for holocardstrategy.jp page fetches. Kept low: it's a small
+# WordPress site, so bounded parallelism replaces the old per-request delay
+# without hammering it.
+SCRAPE_WORKERS = 3
 
 
 CARD_TABLE_KEYWORDS = ["採用カード", "収録カード", "入れ替え候補", "おすすめカード"]
@@ -396,7 +401,7 @@ def scrape_all_decks(tier_list_path: Path, output_dir: Path, cards_path: Path | 
     cards_db = _build_cards_db(cards_path) if cards_path else {}
 
     urls_seen: set[str] = set()
-    deck_results: list[dict] = []
+    jobs: list[tuple[str, str, int]] = []  # (url, deck_id, tier)
 
     for tier in tier_data.get("tiers", []):
         for deck in tier.get("decks", []):
@@ -406,17 +411,18 @@ def scrape_all_decks(tier_list_path: Path, output_dir: Path, cards_path: Path | 
             if "holocardstrategy.jp" not in url:
                 continue
             urls_seen.add(url)
+            jobs.append((url, deck["id"], tier["tier"]))
 
-            print(f"  [tier] Scraping: {url}")
-            try:
-                result = scrape_deck(url)
-                result["deck_id"] = deck["id"]
-                result["tier"] = tier["tier"]
-                deck_results.append(result)
-            except Exception as e:
-                print(f"  ERROR scraping {url}: {e}")
+    print(f"  Scraping {len(jobs)} tier-linked deck pages (concurrent)...")
+    pages = concurrent_map(lambda job: scrape_deck(job[0]), jobs, max_workers=SCRAPE_WORKERS)
 
-            time.sleep(REQUEST_DELAY)
+    deck_results: list[dict] = []
+    for (url, deck_id, tier_num), result in zip(jobs, pages):
+        if not result:
+            continue
+        result["deck_id"] = deck_id
+        result["tier"] = tier_num
+        deck_results.append(result)
 
     _resolve_missing_ids(deck_results, cards_db)
     for deck in deck_results:
@@ -440,23 +446,18 @@ def scrape_all_guides(output_dir: Path, existing_urls: set[str] | None = None, c
     new_urls = [u for u in all_urls if u not in existing_urls and u.rstrip("/") + "/" not in {x.rstrip("/") + "/" for x in existing_urls}]
     print(f"  Found {len(all_urls)} total, {len(new_urls)} new (not in tier decks)")
 
+    print(f"  Scraping {len(new_urls)} guide pages (concurrent)...")
+    pages = concurrent_map(scrape_deck, new_urls, max_workers=SCRAPE_WORKERS)
+
     guide_results: list[dict] = []
-    for i, url in enumerate(new_urls):
-        print(f"  [{i+1}/{len(new_urls)}] {url}")
-        try:
-            result = scrape_deck(url)
-            if not result.get("cards"):
-                print("    Skipped (no card entries)")
-                time.sleep(0.5)
-                continue
-            slug = url.rstrip("/").split("/")[-1]
-            result["deck_id"] = f"guide-{slug}"
-            result["tier"] = None
-            result["source"] = "holocardstrategy_guide"
-            guide_results.append(result)
-        except Exception as e:
-            print(f"    ERROR: {e}")
-        time.sleep(REQUEST_DELAY)
+    for url, result in zip(new_urls, pages):
+        if not result or not result.get("cards"):
+            continue
+        slug = url.rstrip("/").split("/")[-1]
+        result["deck_id"] = f"guide-{slug}"
+        result["tier"] = None
+        result["source"] = "holocardstrategy_guide"
+        guide_results.append(result)
 
     _resolve_missing_ids(guide_results, cards_db)
     for deck in guide_results:

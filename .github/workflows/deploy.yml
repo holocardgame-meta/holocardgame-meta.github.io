@@ -22,35 +22,27 @@ env:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
         with:
-          # Full history so the translation-cache seed step can recover the
-          # last committed translation_cache.json on a cold Actions cache.
-          fetch-depth: 0
+          # Shallow by default; the cold-cache seed step deepens history on
+          # demand (only when it must recover translation_cache.json).
+          fetch-depth: 1
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Generate static SEO language pages
+      # Push builds from committed data; scrape/dispatch runs rebuild from fresh
+      # data after scraping (below), so they skip this and verify the rebuild.
+      - name: Generate static SEO language pages (committed data)
+        if: github.event_name == 'push'
         run: node scripts/build_seo_pages.mjs
-
-      - name: Verify multilingual SEO pages
-        run: node scripts/check_seo_pages.mjs
-
-      - name: Verify Google site and analytics tags
-        run: node scripts/check_google_tags.mjs
-
-      - name: Verify rendered external data is sanitized
-        run: node scripts/check_render_sanitization.mjs
-
-      - name: Verify key GA event contract
-        run: node scripts/check_key_ga_events.mjs
 
       - name: Set up Python
         if: github.event_name != 'push'
@@ -82,6 +74,8 @@ jobs:
         if: github.event_name != 'push'
         run: |
           if [ ! -f translation_cache.json ]; then
+            # Cold cache: deepen the shallow clone so history lookups work.
+            git fetch --unshallow --quiet 2>/dev/null || true
             # Most recent commit touching the file is its removal commit, so
             # fall back to that commit's parent where the file still existed.
             last=$(git rev-list -1 HEAD -- translation_cache.json || true)
@@ -124,6 +118,20 @@ jobs:
       - name: Rebuild SEO pages with fresh data
         if: github.event_name != 'push'
         run: node scripts/build_seo_pages.mjs
+
+      # Verify the final built pages (committed-data build on push, fresh-data
+      # rebuild on scrape/dispatch).
+      - name: Verify multilingual SEO pages
+        run: node scripts/check_seo_pages.mjs
+
+      - name: Verify Google site and analytics tags
+        run: node scripts/check_google_tags.mjs
+
+      - name: Verify rendered external data is sanitized
+        run: node scripts/check_render_sanitization.mjs
+
+      - name: Verify key GA event contract
+        run: node scripts/check_key_ga_events.mjs
 
       - name: Commit updated data
         if: github.event_name != 'push' && steps.check.outputs.fresh == 'true'
@@ -191,5 +199,39 @@ jobs:
                 title: 'Scrape & Deploy pipeline failing',
                 body,
                 labels: [label],
+              });
+            }
+
+  close-issue-on-success:
+    needs: build-and-deploy
+    # Only a successful scrape (not a frontend-only push deploy) proves the
+    # pipeline recovered, so scope this to non-push events.
+    if: ${{ success() && github.event_name != 'push' }}
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Close resolved pipeline-failure issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const label = 'pipeline-failure';
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const open = await github.rest.issues.listForRepo({
+              ...context.repo,
+              state: 'open',
+              labels: label,
+            });
+            for (const issue of open.data) {
+              await github.rest.issues.createComment({
+                ...context.repo,
+                issue_number: issue.number,
+                body: `✅ Resolved by a successful Scrape & Deploy run: ${runUrl}`,
+              });
+              await github.rest.issues.update({
+                ...context.repo,
+                issue_number: issue.number,
+                state: 'closed',
+                state_reason: 'completed',
               });
             }

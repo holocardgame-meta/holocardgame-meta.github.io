@@ -8,6 +8,8 @@ from pathlib import Path
 import httpx
 from bs4 import BeautifulSoup
 
+from scraper.concurrency import concurrent_map
+
 BASE_URL = "https://en.hololive-official-cardgame.com"
 LIST_URL = f"{BASE_URL}/deck/recommend/"
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; HoloCardMeta/1.0)"}
@@ -199,10 +201,11 @@ def scrape_official(output_dir: Path) -> list[dict]:
     entries = _collect_deck_urls()
     print(f"  Found {len(entries)} deck URLs")
 
+    print(f"  Scraping {len(entries)} deck pages (concurrent)...")
+    pages = concurrent_map(lambda e: _scrape_deck_page(e["url"]), entries)
+
     results = []
-    for i, entry in enumerate(entries):
-        print(f"  [{i+1}/{len(entries)}] {entry['url']}")
-        deck = _scrape_deck_page(entry["url"])
+    for entry, deck in zip(entries, pages):
         if not deck:
             continue
         deck["date"] = _parse_date(entry.get("date_text", ""))
@@ -210,7 +213,6 @@ def scrape_official(output_dir: Path) -> list[dict]:
         slug = entry["url"].rstrip("/").split("/")[-1]
         deck["deck_id"] = f"official-{slug}"
         results.append(deck)
-        time.sleep(REQUEST_DELAY)
 
     out_path = output_dir / "official_decks.json"
     out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")

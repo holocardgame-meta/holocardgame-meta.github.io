@@ -34,17 +34,25 @@ def _count_tier_decks(data: Any) -> int:
     return sum(len(tier.get("decks") or []) for tier in data.get("tiers") or [])
 
 
-def _count_rules(data: Any) -> int:
+def _count_rules(data: Any) -> dict[str, int]:
+    """Count each rules.json section separately.
+
+    Returning a per-section breakdown (rather than one combined total) lets the
+    guard check each section on its own. The June-15 incident showed why the
+    combined total is wrong on both ends: a volatile section churning down
+    (one news article 404'ing) tripped the publish, while a meaningful section
+    emptying (restricted_cards -> 0) slipped under the combined ratio.
+    """
     if not isinstance(data, dict):
-        return 0
-    return (
-        len(data.get("restricted_cards") or [])
-        + len(data.get("errata") or {})
-        + len(data.get("articles") or [])
-    )
+        return {"restricted_cards": 0, "errata": 0, "articles": 0}
+    return {
+        "restricted_cards": len(data.get("restricted_cards") or []),
+        "errata": len(data.get("errata") or {}),
+        "articles": len(data.get("articles") or []),
+    }
 
 
-DATASET_COUNTERS: dict[str, Callable[[Any], int]] = {
+DATASET_COUNTERS: dict[str, Callable[[Any], int | dict[str, int]]] = {
     "cards.json": _count_list,
     "decks.json": _count_list,
     "all_guides.json": _count_list,
@@ -53,6 +61,29 @@ DATASET_COUNTERS: dict[str, Callable[[Any], int]] = {
     "tier_list.json": _count_tier_decks,
     "rules.json": _count_rules,
 }
+
+
+def _regression_message(
+    label: str, old_count: int, new_count: int, min_ratio: float, min_baseline: int
+) -> str | None:
+    """Compare one count against its baseline; return a failure string or None."""
+    if old_count > 0 and new_count == 0:
+        return f"{label}: emptied ({old_count} -> 0)"
+    if old_count >= min_baseline and new_count < old_count * min_ratio:
+        return (
+            f"{label}: shrank {old_count} -> {new_count} "
+            f"(below {min_ratio:.0%} of baseline)"
+        )
+    return None
+
+
+def _as_sections(count: int | dict[str, int]) -> dict[str, int]:
+    """Normalize a counter result to a {section: count} mapping.
+
+    Whole-file datasets use the empty-string section; multi-section datasets
+    (rules.json) keep their named sections so each is guarded independently.
+    """
+    return count if isinstance(count, dict) else {"": count}
 
 
 def check_data_regression(
@@ -69,28 +100,28 @@ def check_data_regression(
         if not old_path.exists():
             continue  # first run for this dataset — nothing to compare against
         try:
-            old_count = counter(json.loads(old_path.read_text(encoding="utf-8")))
+            old_sections = _as_sections(counter(json.loads(old_path.read_text(encoding="utf-8"))))
         except (json.JSONDecodeError, OSError):
             continue  # unreadable baseline can't veto fresh data
 
         new_path = new_dir / name
         if not new_path.exists():
-            if old_count > 0:
-                failures.append(f"{name}: new file missing (baseline had {old_count} entries)")
+            if any(c > 0 for c in old_sections.values()):
+                failures.append(f"{name}: new file missing (baseline had data)")
             continue
         try:
-            new_count = counter(json.loads(new_path.read_text(encoding="utf-8")))
+            new_sections = _as_sections(counter(json.loads(new_path.read_text(encoding="utf-8"))))
         except (json.JSONDecodeError, OSError) as exc:
             failures.append(f"{name}: new file unreadable ({exc})")
             continue
 
-        if old_count > 0 and new_count == 0:
-            failures.append(f"{name}: emptied ({old_count} -> 0)")
-        elif old_count >= min_baseline and new_count < old_count * min_ratio:
-            failures.append(
-                f"{name}: shrank {old_count} -> {new_count} "
-                f"(below {min_ratio:.0%} of baseline)"
+        for section, old_count in old_sections.items():
+            label = f"{name}[{section}]" if section else name
+            message = _regression_message(
+                label, old_count, new_sections.get(section, 0), min_ratio, min_baseline
             )
+            if message:
+                failures.append(message)
     return failures
 
 

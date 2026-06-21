@@ -72,3 +72,26 @@ def test_parse_card_id_and_count():
     assert so._parse_card_id_from_src("/img/logo.png") == ""
     assert so._parse_count("x4") == 4
     assert so._parse_count("") == 1
+
+
+def test_scrape_official_preserves_order_and_skips_failures(tmp_path, monkeypatch):
+    """Concurrent fetching must keep input order and drop pages that fail."""
+    entries = [
+        {"url": "https://en.hololive-official-cardgame.com/deck/a/", "date_text": "Feb. 1, 2026"},
+        {"url": "https://en.hololive-official-cardgame.com/deck/b/", "date_text": ""},
+        {"url": "https://en.hololive-official-cardgame.com/deck/c/", "date_text": ""},
+    ]
+    monkeypatch.setattr(so, "_collect_deck_urls", lambda: entries)
+
+    def fake_page(url):
+        if "/b/" in url:
+            return None  # a page that failed to parse
+        return {"title": url, "main_deck": [], "cheer_deck": []}
+
+    monkeypatch.setattr(so, "_scrape_deck_page", fake_page)
+
+    decks = so.scrape_official(tmp_path)
+
+    assert [d["deck_id"] for d in decks] == ["official-a", "official-c"]
+    assert decks[0]["date"] == "2026-02-01"
+    assert all(d["source"] == "official" for d in decks)
