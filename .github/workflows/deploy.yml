@@ -139,8 +139,30 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add web/data/ web/sitemap.xml
-          git diff --cached --quiet || git commit -m "chore: update scraped data [skip ci]"
-          git push
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: update scraped data [skip ci]"
+          # Tolerate a concurrent push to master (e.g. a frontend commit landing
+          # mid-run): re-stage ONLY our regenerated data on top of the latest tip
+          # and retry, rather than failing the whole deploy. Using a mixed reset
+          # (not --soft) keeps the concurrent commit's files in the index, so they
+          # are preserved; we only overlay web/data + web/sitemap.xml.
+          for attempt in 1 2 3 4 5; do
+            if git push; then exit 0; fi
+            echo "Push attempt $attempt rejected; re-syncing onto latest master."
+            git fetch origin master
+            git reset --mixed FETCH_HEAD
+            git add web/data/ web/sitemap.xml
+            if git diff --cached --quiet; then
+              echo "Remote already has this data; nothing to push."
+              exit 0
+            fi
+            git commit -m "chore: update scraped data [skip ci]"
+          done
+          echo "::error::Failed to push scraped data after 5 attempts."
+          exit 1
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
