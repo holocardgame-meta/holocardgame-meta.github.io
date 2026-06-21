@@ -3,6 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    /* Consolidate legacy ?lang=X entry URLs onto the canonical /X/ language
+       pages (the SPA reads language from the path). Runs before render so
+       crawlers and users land on the canonical URL instead of a duplicate. */
+    (function () {
+      if (location.pathname !== '/') return;
+      var m = location.search.match(/[?&]lang=([^&]+)/);
+      if (!m) return;
+      var lang = decodeURIComponent(m[1]).replace(/\/+$/, '');
+      if (['zh-TW', 'ja', 'en', 'fr', 'es'].indexOf(lang) === -1) return;
+      location.replace('/' + lang + '/' + location.hash);
+    })();
+  </script>
   <meta name="google-site-verification" content="eMj5B-o8zvCf4EeEdcR3iRCgsoGeBQBm_a2FMwr4atM" />
   <meta name="theme-color" content="#07090f">
   <meta name="apple-mobile-web-app-capable" content="yes">
