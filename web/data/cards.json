@@ -24393,7 +24393,7 @@
         "zh-TW": "[每場比賽一次]對手回合中，自己帶有「こよりの助手くん」的「博衣こより」受到對手傷害時可以使用：該1位成員受到的傷害-100。",
         "ja": "[1試合に1回]\n相手のターン中、自分の「こよりの助手くん」が付いている「博衣こより」が\n相手からダメージを受けた時に使用できる：\nそのメンバーが受けるダメージ－100。",
         "en": "[Once per game] During your opponent's turn, when a \"Koyori's Assistant\" attached to \"Hakui Koyori\" takes damage from your opponent, you may use this: Reduce the damage taken by that Member by 100.",
-        "fr": "[每場比賽一次]對手回合中，自己帶有「こよりの助手くん」的「博衣こより」受到對手傷害時可以使用：該1位成員受到的傷害-100。",
+        "fr": "[Une fois par partie] Pendant le tour de votre adversaire, lorsque votre \"Hakui Koyori\" avec \"Koyori no Joshu-kun\" subit des dégâts de votre adversaire, vous pouvez utiliser : Les dégâts subis par ce Membre -100.",
         "es": "[Una vez por partida] Durante el Turno del oponente, cuando tu 「博衣こより」 con 「こよりの助手くん」 recibe daño del oponente, puedes usar esto: El daño recibido por ese Miembro se reduce en 100."
       }
     },
@@ -24425,7 +24425,7 @@
         "zh-TW": "[每場比賽一次]對手回合中，自己帶有「こよりの助手くん」的「博衣こより」受到對手傷害時可以使用：該1位成員受到的傷害-100。",
         "ja": "[1試合に1回]\n相手のターン中、自分の「こよりの助手くん」が付いている「博衣こより」が\n相手からダメージを受けた時に使用できる：\nそのメンバーが受けるダメージ－100。",
         "en": "[Once per game] During your opponent's turn, when a \"Koyori's Assistant\" attached to \"Hakui Koyori\" takes damage from your opponent, you may use this: Reduce the damage taken by that Member by 100.",
-        "fr": "[每場比賽一次]對手回合中，自己帶有「こよりの助手くん」的「博衣こより」受到對手傷害時可以使用：該1位成員受到的傷害-100。",
+        "fr": "[Une fois par partie] Pendant le tour de votre adversaire, lorsque votre \"Hakui Koyori\" avec \"Koyori no Joshu-kun\" subit des dégâts de votre adversaire, vous pouvez utiliser : Les dégâts subis par ce Membre -100.",
         "es": "[Una vez por partida] Durante el Turno del oponente, cuando tu 「博衣こより」 con 「こよりの助手くん」 recibe daño del oponente, puedes usar esto: El daño recibido por ese Miembro se reduce en 100."
       }
     },
@@ -24457,7 +24457,7 @@
         "zh-TW": "[每場比賽一次]對手回合中，自己帶有「こよりの助手くん」的「博衣こより」受到對手傷害時可以使用：該1位成員受到的傷害-100。",
         "ja": "[1試合に1回]\n相手のターン中、自分の「こよりの助手くん」が付いている「博衣こより」が\n相手からダメージを受けた時に使用できる：\nそのメンバーが受けるダメージ－100。",
         "en": "[Once per game] During your opponent's turn, when a \"Koyori's Assistant\" attached to \"Hakui Koyori\" takes damage from your opponent, you may use this: Reduce the damage taken by that Member by 100.",
-        "fr": "[每場比賽一次]對手回合中，自己帶有「こよりの助手くん」的「博衣こより」受到對手傷害時可以使用：該1位成員受到的傷害-100。",
+        "fr": "[Une fois par partie] Pendant le tour de votre adversaire, lorsque votre \"Hakui Koyori\" avec \"Koyori no Joshu-kun\" subit des dégâts de votre adversaire, vous pouvez utiliser : Les dégâts subis par ce Membre -100.",
         "es": "[Una vez por partida] Durante el Turno del oponente, cuando tu 「博衣こより」 con 「こよりの助手くん」 recibe daño del oponente, puedes usar esto: El daño recibido por ese Miembro se reduce en 100."
       }
     },
@@ -25215,7 +25215,7 @@
         "zh-TW": "可以將自己存檔區的1張「こよりの助手くん」附加給自己其他的「博衣こより」。",
         "ja": "自分のアーカイブから「こよりの助手くん」1枚を選び、自分の他の「博衣こより」に付与することができる。",
         "en": "You may attach 1 \"Koyori's Assistant\" from your Archive to another one of your \"Hakui Koyori\".",
-        "fr": "可以將自己存檔區的1張「こよりの助手くん」附加給自己其他的「博衣こより」。",
+        "fr": "Vous pouvez attacher 1 \"Koyori no Joshu-kun\" de votre Archive à un autre de vos \"Hakui Koyori\".",
         "es": "Puedes adjuntar 1 「こよりの助手くん」 de tu Archivo a otra de tus 「博衣こより」."
       }
     },
@@ -41175,7 +41175,7 @@
         "zh-TW": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。",
         "ja": "このターン中、自分が#きのこを持つイベントを使用したことがある場合、自分のデッキからカードを2枚引く。「濡羽色のほころび」は各ターン1回しか使用できない。",
         "en": "If you have used an Arts with #きのこ this Turn, draw 2 cards from your Deck. 「濡羽色のほころび」 can only be used once per Turn.",
-        "fr": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。",
+        "fr": "Si vous avez utilisé un événement avec le tag #きのこ ce tour, piochez 2 cartes de votre Deck. Vous ne pouvez utiliser \"Nureba-iro no Hokorobi\" qu'une fois par tour.",
         "es": "Si en este Turno has usado una Arts con la etiqueta #きのこ, roba 2 cartas de tu Mazo. 「濡羽色のほころび」 solo puede usarse una vez por Turno."
       }
     },
@@ -41219,7 +41219,7 @@
         "zh-TW": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。",
         "ja": "このターン中、自分が#きのこを持つイベントを使用したことがある場合、自分のデッキからカードを2枚引く。「濡羽色のほころび」は各ターン1回しか使用できない。",
         "en": "If you have used an Arts with #きのこ this Turn, draw 2 cards from your Deck. 「濡羽色のほころび」 can only be used once per Turn.",
-        "fr": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。",
+        "fr": "Si vous avez utilisé un événement avec le tag #きのこ ce tour, piochez 2 cartes de votre Deck. Vous ne pouvez utiliser \"Nureba-iro no Hokorobi\" qu'une fois par tour.",
         "es": "Si en este Turno has usado una Arts con la etiqueta #きのこ, roba 2 cartas de tu Mazo. 「濡羽色のほころび」 solo puede usarse una vez por Turno."
       }
     },
@@ -41263,7 +41263,7 @@
         "zh-TW": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。",
         "ja": "このターン中、自分が#きのこを持つイベントを使用したことがある場合、自分のデッキからカードを2枚引く。「濡羽色のほころび」は各ターン1回しか使用できない。",
         "en": "If you have used an Arts with #きのこ this Turn, draw 2 cards from your Deck. 「濡羽色のほころび」 can only be used once per Turn.",
-        "fr": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。",
+        "fr": "Si vous avez utilisé un événement avec le tag #きのこ ce tour, piochez 2 cartes de votre Deck. Vous ne pouvez utiliser \"Nureba-iro no Hokorobi\" qu'une fois par tour.",
         "es": "Si en este Turno has usado una Arts con la etiqueta #きのこ, roba 2 cartas de tu Mazo. 「濡羽色のほころび」 solo puede usarse una vez por Turno."
       }
     },
@@ -45233,7 +45233,7 @@
         "zh-TW": "這個成員交棒並移動到舞台後方時，這個回合中，自己舞台上的1位「博衣こより」藝能傷害+20。",
         "ja": "このメンバーが手札交換をしてステージ後方に移動した場合、このターン中、自分のステージにいる「博衣こより」1人のこのアーツのダメージ＋20。",
         "en": "When this Member tags out and moves to the Back position on your Stage, one of your \"Hiyoi Koyori\" on your Stage gains +20 Arts damage for the rest of this turn.",
-        "fr": "這個成員交棒並移動到舞台後方時，這個回合中，自己舞台上的1位「博衣こより」藝能傷害+20。",
+        "fr": "Lorsque ce Membre passe le relais et se déplace à l'Arrière de la Scène, pendant ce tour, les dégâts d'Arts d'un de vos \"Hakui Koyori\" sur votre Scène +20.",
         "es": "Cuando este Miembro pasa el relevo y se mueve a la Retaguardia del Escenario, este Turno, el daño de Arts de 1 「博衣こより」 en tu Escenario aumenta en 20."
       }
     },
@@ -45411,7 +45411,7 @@
       "zh-TW": "這個回合中，自己舞台上的1位「博衣こより」藝能傷害+30。",
       "ja": "このターン中、自分のステージにいる「博衣こより」1人のこのアーツのダメージ＋30。",
       "en": "For the rest of this turn, one of your \"Hiyoi Koyori\" on your Stage gains +30 Arts damage.",
-      "fr": "這個回合中，自己舞台上的1位「博衣こより」藝能傷害+30。",
+      "fr": "Pendant ce tour, les dégâts d'Arts d'un de vos \"Hakui Koyori\" sur votre Scène +30.",
       "es": "Este Turno, el daño de Arts de 1 「博衣こより」 en tu Escenario aumenta en 30."
     },
     "id": "hBP06-092",
