@@ -124,18 +124,24 @@ _JA_GRAMMAR_RE = re.compile(
     r"を|の|する|した|して|され|でき|です|ます|ない|れる|られる"
     r"|ので|から|けど|たり|ながら|など|という|ように|まで|より|だっ|でも"
 )
+# VTuber / card names are kept in their original kana inside corner brackets and
+# can carry a stray grammar char (「ふつうのパソコン」). Strip quoted spans first so
+# a name's の doesn't read as a Japanese sentence.
+_JA_QUOTE_RE = re.compile(r"[「『][^」』]*[」』]")
 
 
 def _looks_untranslated(text: object, target: str) -> bool:
     """True when a non-Japanese target value still reads as Japanese prose.
 
     Used both to reject fresh under-translations before caching and to evict
-    sticky ones already in the cache. Two grammar markers are enough: correct
-    Chinese/English output has zero, while Japanese sentences have several.
+    sticky ones already in the cache. After dropping quoted names, even one
+    grammar marker means Japanese: correct Chinese/English output has none,
+    while short Japanese titles ("...のデッキレシピと回し方") have at least one.
     """
     if target == "ja" or not isinstance(text, str):
         return False
-    return len(_JA_GRAMMAR_RE.findall(text)) >= 2
+    outside_names = _JA_QUOTE_RE.sub("", text)
+    return len(_JA_GRAMMAR_RE.findall(outside_names)) >= 1
 
 
 def _is_poisoned_entry(key: str, value) -> bool:

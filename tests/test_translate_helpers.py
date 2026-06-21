@@ -145,6 +145,20 @@ def test_looks_untranslated_ignores_english_and_ja_target():
     assert translate._looks_untranslated("デッキを展開する。", "ja") is False
 
 
+def test_looks_untranslated_flags_short_template_titles():
+    """The common guide-title template is fully Japanese but carries only one
+    grammar marker (の) — it must still be caught."""
+    assert translate._looks_untranslated("【hOCG】鷹嶺ルイ(紫)のデッキレシピと回し方", "zh-TW") is True
+    assert translate._looks_untranslated("【hOCG】IRyS単(tクロニー)のデッキレシピと回し方", "zh-TW") is True
+
+
+def test_looks_untranslated_ignores_quoted_japanese_card_names():
+    """A correct Chinese sentence that quotes a Japanese card name containing の
+    (e.g. 「ふつうのパソコン」) must NOT be flagged — the の lives inside the name."""
+    assert translate._looks_untranslated("如果有「ふつうのパソコン」，就檢索並進行聯動。", "zh-TW") is False
+    assert translate._looks_untranslated("將「星街すいせい」加入手牌。", "zh-TW") is False
+
+
 def test_is_poisoned_entry_evicts_undertranslated_target():
     """A zh-TW value that still reads as Japanese prose is poison even though it
     differs from the source (so the exact-match check alone misses it)."""
