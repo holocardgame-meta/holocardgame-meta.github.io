@@ -24392,9 +24392,9 @@
       "effect": {
         "zh-TW": "[每場比賽一次]對手回合中，自己帶有「こよりの助手くん」的「博衣こより」受到對手傷害時可以使用：該1位成員受到的傷害-100。",
         "ja": "[1試合に1回]\n相手のターン中、自分の「こよりの助手くん」が付いている「博衣こより」が\n相手からダメージを受けた時に使用できる：\nそのメンバーが受けるダメージ－100。",
-        "en": "[Once per game] During your opponent's turn, when your \"博衣こより\" with \"こよりの助手くん\" takes damage from your opponent, you may use this: The damage taken by that Member -100.",
-        "fr": "[Une fois par partie] Utilisable durant le tour adverse lorsque votre \"博衣こより\" portant \"こよりの助手くん\" subit des dégâts de l'adversaire : Les dégâts subis par ce membre sont réduits de 100.",
-        "es": "[Una vez por partida] Usable durante el turno del oponente cuando tu \"博衣こより\" con \"こよりの助手くん\" recibe daño del oponente: El daño recibido por ese miembro se reduce en 100."
+        "en": "[Once per game] During your opponent's turn, when a \"Koyori's Assistant\" attached to \"Hakui Koyori\" takes damage from your opponent, you may use this: Reduce the damage taken by that Member by 100.",
+        "fr": "[每場比賽一次]對手回合中，自己帶有「こよりの助手くん」的「博衣こより」受到對手傷害時可以使用：該1位成員受到的傷害-100。",
+        "es": "[每場比賽一次]對手回合中，自己帶有「こよりの助手くん」的「博衣こより」受到對手傷害時可以使用：該1位成員受到的傷害-100。"
       }
     },
     "id": "hBP04-001",
@@ -24424,9 +24424,9 @@
       "effect": {
         "zh-TW": "[每場比賽一次]對手回合中，自己帶有「こよりの助手くん」的「博衣こより」受到對手傷害時可以使用：該1位成員受到的傷害-100。",
         "ja": "[1試合に1回]\n相手のターン中、自分の「こよりの助手くん」が付いている「博衣こより」が\n相手からダメージを受けた時に使用できる：\nそのメンバーが受けるダメージ－100。",
-        "en": "[Once per game] During your opponent's turn, when your \"博衣こより\" with \"こよりの助手くん\" takes damage from your opponent, you may use this: The damage taken by that Member -100.",
-        "fr": "[Une fois par partie] Utilisable durant le tour adverse lorsque votre \"博衣こより\" portant \"こよりの助手くん\" subit des dégâts de l'adversaire : Les dégâts subis par ce membre sont réduits de 100.",
-        "es": "[Una vez por partida] Usable durante el turno del oponente cuando tu \"博衣こより\" con \"こよりの助手くん\" recibe daño del oponente: El daño recibido por ese miembro se reduce en 100."
+        "en": "[Once per game] During your opponent's turn, when a \"Koyori's Assistant\" attached to \"Hakui Koyori\" takes damage from your opponent, you may use this: Reduce the damage taken by that Member by 100.",
+        "fr": "[每場比賽一次]對手回合中，自己帶有「こよりの助手くん」的「博衣こより」受到對手傷害時可以使用：該1位成員受到的傷害-100。",
+        "es": "[每場比賽一次]對手回合中，自己帶有「こよりの助手くん」的「博衣こより」受到對手傷害時可以使用：該1位成員受到的傷害-100。"
       }
     },
     "id": "hBP04-001",
@@ -24456,9 +24456,9 @@
       "effect": {
         "zh-TW": "[每場比賽一次]對手回合中，自己帶有「こよりの助手くん」的「博衣こより」受到對手傷害時可以使用：該1位成員受到的傷害-100。",
         "ja": "[1試合に1回]\n相手のターン中、自分の「こよりの助手くん」が付いている「博衣こより」が\n相手からダメージを受けた時に使用できる：\nそのメンバーが受けるダメージ－100。",
-        "en": "[Once per game] During your opponent's turn, when your \"博衣こより\" with \"こよりの助手くん\" takes damage from your opponent, you may use this: The damage taken by that Member -100.",
-        "fr": "[Une fois par partie] Utilisable durant le tour adverse lorsque votre \"博衣こより\" portant \"こよりの助手くん\" subit des dégâts de l'adversaire : Les dégâts subis par ce membre sont réduits de 100.",
-        "es": "[Una vez por partida] Usable durante el turno del oponente cuando tu \"博衣こより\" con \"こよりの助手くん\" recibe daño del oponente: El daño recibido por ese miembro se reduce en 100."
+        "en": "[Once per game] During your opponent's turn, when a \"Koyori's Assistant\" attached to \"Hakui Koyori\" takes damage from your opponent, you may use this: Reduce the damage taken by that Member by 100.",
+        "fr": "[每場比賽一次]對手回合中，自己帶有「こよりの助手くん」的「博衣こより」受到對手傷害時可以使用：該1位成員受到的傷害-100。",
+        "es": "[每場比賽一次]對手回合中，自己帶有「こよりの助手くん」的「博衣こより」受到對手傷害時可以使用：該1位成員受到的傷害-100。"
       }
     },
     "id": "hBP04-001",
@@ -25214,9 +25214,9 @@
       "effect": {
         "zh-TW": "可以將自己存檔區的1張「こよりの助手くん」附加給自己其他的「博衣こより」。",
         "ja": "自分のアーカイブから「こよりの助手くん」1枚を選び、自分の他の「博衣こより」に付与することができる。",
-        "en": "[69] You can attach 1 \"こよりの助手くん\" from your Archive to another of your \"博衣こより\".",
-        "fr": "Vous pouvez retourner 1 \"こよりの助手くん\" de votre Archive et le superposer à un autre de vos \"博衣こより\".",
-        "es": "Puedes adjuntar 1 \"こよりの助手くん\" de tu Archivo a otro \"博衣こより\" tuyo."
+        "en": "You may attach 1 \"Koyori's Assistant\" from your Archive to another one of your \"Hakui Koyori\".",
+        "fr": "可以將自己存檔區的1張「こよりの助手くん」附加給自己其他的「博衣こより」。",
+        "es": "可以將自己存檔區的1張「こよりの助手くん」附加給自己其他的「博衣こより」。"
       }
     },
     "art2": null,
@@ -25258,9 +25258,9 @@
       "effect": {
         "zh-TW": "這個成員帶有「こよりの助手くん」時，從自己的牌組抽1張牌。",
         "ja": "このメンバーが「こよりの助手くん」を持っている場合、自分のデッキからカードを1枚引く。",
-        "en": "If this Member has \"こよりの助手くん\", draw 1 card from your Deck.",
-        "fr": "Quand ce Membre est accompagné de \"こよりの助手くん\", piochez 1 carte de votre Deck.",
-        "es": "Si este Miembro tiene \"こよりの助手くん\", roba 1 carta de tu Mazo."
+        "en": "When this Member has \"Koyori's Assistant\" attached, draw 1 card from your Deck.",
+        "fr": "這個成員帶有「こよりの助手くん」時，從自己的牌組抽1張牌。",
+        "es": "這個成員帶有「こよりの助手くん」時，從自己的牌組抽1張牌。"
       }
     },
     "art2": null,
@@ -25302,9 +25302,9 @@
       "effect": {
         "zh-TW": "這個成員帶有「こよりの助手くん」時，從自己的牌組抽1張牌。",
         "ja": "このメンバーが「こよりの助手くん」を持っている場合、自分のデッキからカードを1枚引く。",
-        "en": "If this Member has \"こよりの助手くん\", draw 1 card from your Deck.",
-        "fr": "Quand ce Membre est accompagné de \"こよりの助手くん\", piochez 1 carte de votre Deck.",
-        "es": "Si este Miembro tiene \"こよりの助手くん\", roba 1 carta de tu Mazo."
+        "en": "When this Member has \"Koyori's Assistant\" attached, draw 1 card from your Deck.",
+        "fr": "這個成員帶有「こよりの助手くん」時，從自己的牌組抽1張牌。",
+        "es": "這個成員帶有「こよりの助手くん」時，從自己的牌組抽1張牌。"
       }
     },
     "art2": null,
@@ -41175,8 +41175,8 @@
         "zh-TW": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。",
         "ja": "このターン中、自分が#きのこを持つイベントを使用したことがある場合、自分のデッキからカードを2枚引く。「濡羽色のほころび」は各ターン1回しか使用できない。",
         "en": "If you have used an Event with #きのこ this turn, draw 2 cards from your Deck. \"Nureba-iro no Hokorobi\" can only be used once per turn.",
-        "fr": "Si vous avez utilisé un événement marqué #きのこ ce tour-ci, piochez 2 cartes de votre deck. \"濡羽色のほころび\" ne peut être utilisé qu'une fois par tour.",
-        "es": "Si usaste una actividad con la etiqueta #きのこ este turno, roba 2 cartas de tu Mazo. \"濡羽色のほころび\" solo se puede usar una vez por turno."
+        "fr": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。",
+        "es": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。"
       }
     },
     "effectG": null,
@@ -41219,8 +41219,8 @@
         "zh-TW": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。",
         "ja": "このターン中、自分が#きのこを持つイベントを使用したことがある場合、自分のデッキからカードを2枚引く。「濡羽色のほころび」は各ターン1回しか使用できない。",
         "en": "If you have used an Event with #きのこ this turn, draw 2 cards from your Deck. \"Nureba-iro no Hokorobi\" can only be used once per turn.",
-        "fr": "Si vous avez utilisé un événement marqué #きのこ ce tour-ci, piochez 2 cartes de votre deck. \"濡羽色のほころび\" ne peut être utilisé qu'une fois par tour.",
-        "es": "Si usaste una actividad con la etiqueta #きのこ este turno, roba 2 cartas de tu Mazo. \"濡羽色のほころび\" solo se puede usar una vez por turno."
+        "fr": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。",
+        "es": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。"
       }
     },
     "effectG": null,
@@ -41263,8 +41263,8 @@
         "zh-TW": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。",
         "ja": "このターン中、自分が#きのこを持つイベントを使用したことがある場合、自分のデッキからカードを2枚引く。「濡羽色のほころび」は各ターン1回しか使用できない。",
         "en": "If you have used an Event with #きのこ this turn, draw 2 cards from your Deck. \"Nureba-iro no Hokorobi\" can only be used once per turn.",
-        "fr": "Si vous avez utilisé un événement marqué #きのこ ce tour-ci, piochez 2 cartes de votre deck. \"濡羽色のほころび\" ne peut être utilisé qu'une fois par tour.",
-        "es": "Si usaste una actividad con la etiqueta #きのこ este turno, roba 2 cartas de tu Mazo. \"濡羽色のほころび\" solo se puede usar una vez por turno."
+        "fr": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。",
+        "es": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。"
       }
     },
     "effectG": null,
@@ -67218,9 +67218,9 @@
     "supportEffect": {
       "zh-TW": "自己舞台上的所有成員都標示#Advent才能使用。\n\n給予對手的中心成員20點特殊傷害。之後，將自己存檔區的1張吶喊卡發送給自己的成員。\n「脱獄を果たした共犯者たち」每個回合只能使用一次。",
       "ja": "自分のステージにいるメンバー全員が#Adventの場合のみ使用できる。\n相手のセンターメンバーに20点特殊ダメージを与える。その後、自分のアーカイブからエールカードを1枚自分のメンバーに送る。\n「脱獄を果たした共犯者たち」は、1ターンに1度しか使用できない。",
-      "en": "All Members on your Stage must have #Advent to use this.\n\nDeal 20 Special damage to the opponent's Center Member. Afterward, send 1 Cheer card from your Archive to your Member.\n\"脱獄を果たした共犯者たち\" can only be used once per turn.",
-      "fr": "Utilisable uniquement si tous les Membres sur votre Scène sont marqués #Advent.\n\nInfligez 20 dégâts spéciaux au Membre Centre de votre adversaire. Ensuite, envoyez 1 carte d'Encouragement de votre Archive à l'un de vos Membres.\n\"脱獄を果たした共犯者たち\" ne peut être utilisé qu'une fois par tour.",
-      "es": "Solo puedes usar esto si todos tus Miembros en el Escenario tienen la etiqueta #Advent.\n\nInflige 20 de daño especial al Miembro del Centro de tu oponente. Luego, envía 1 carta de Cheer de tu Archivo a tus Miembros.\n\"脱獄を果たした共犯者たち\" solo puede usarse una vez por turno."
+      "en": "This can only be used if all Members on your Stage have the #Advent trait.\n\nDeal 20 special damage to the opponent's Center Member. Then, attach 1 Cheer card from your Archive to one of your Members.\n\"Accomplices Who Achieved Escape\" can only be used once per turn.",
+      "fr": "自己舞台上的所有成員都標示#Advent才能使用。\n\n給予對手的中心成員20點特殊傷害。之後，將自己存檔區的1張吶喊卡發送給自己的成員。\n「脱獄を果たした共犯者たち」每個回合只能使用一次。",
+      "es": "自己舞台上的所有成員都標示#Advent才能使用。\n\n給予對手的中心成員20點特殊傷害。之後，將自己存檔區的1張吶喊卡發送給自己的成員。\n「脱獄を果たした共犯者たち」每個回合只能使用一次。"
     },
     "id": "hSD12-015",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD12/hSD12-015_U.png"
