@@ -13,10 +13,12 @@ from google.genai import types
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 GEMINI_MODEL = "gemini-2.5-flash-lite"
-# Stronger model used only to retry items the default echoes back untranslated
-# (the ja->zh-TW shared-Han-script failure mode). Keeps the cheap model for the
-# bulk while reliably finishing the hard strings.
+# Escalation ladder for items the cheap model echoes back untranslated (the
+# ja->zh-TW shared-Han-script failure mode). Each tier only retries what the
+# previous one couldn't finish, so the bulk stays on the cheap model.
 STRONG_MODEL = "gemini-2.5-flash"
+STRONGEST_MODEL = "gemini-2.5-pro"
+ESCALATION_MODELS = [STRONG_MODEL, STRONGEST_MODEL]
 BATCH_SIZE = 80
 REQUEST_DELAY = 5.0
 MAX_RETRIES = 8
@@ -344,28 +346,35 @@ def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> 
         if batch_start + BATCH_SIZE < len(to_translate):
             time.sleep(REQUEST_DELAY)
 
-    # Escalation: the cheap model echoes hard ja->zh-TW strings back untranslated
-    # (shared Han script). Retry only those rejects on the stronger model; cache
-    # the ones that now pass and leave any stubborn remainder uncached to retry
-    # next run — never cache an under-translation, which is what made them sticky.
-    if failed_items:
-        print(f"    {source}->{target}: escalating {len(failed_items)} items to {STRONG_MODEL}")
-        still_failed = 0
-        for esc_start in range(0, len(failed_items), BATCH_SIZE):
-            esc_batch = failed_items[esc_start:esc_start + BATCH_SIZE]
-            results = _translate_batch_gemini(esc_batch, source, target, model=STRONG_MODEL)
+    # Escalation ladder: the cheap model echoes hard ja->zh-TW strings back
+    # untranslated (shared Han script). Retry rejects on progressively stronger
+    # models, carrying only what each tier still can't finish to the next. Cache
+    # what passes; leave any remainder uncached to retry next run — never cache
+    # an under-translation, which is what made them sticky in the first place.
+    remaining = failed_items
+    for esc_model in ESCALATION_MODELS:
+        if not remaining:
+            break
+        print(f"    {source}->{target}: escalating {len(remaining)} items to {esc_model}")
+        next_remaining: list[str] = []
+        for esc_start in range(0, len(remaining), BATCH_SIZE):
+            esc_batch = remaining[esc_start:esc_start + BATCH_SIZE]
+            results = _translate_batch_gemini(esc_batch, source, target, model=esc_model)
             for text, result in zip(esc_batch, results):
                 if result is None or _looks_untranslated(result, target):
-                    mapping[text] = text
-                    still_failed += 1
+                    next_remaining.append(text)
                     continue
                 mapping[text] = result
                 _cache[_cache_key(source, target, text)] = result
                 _cache_dirty = True
-            if esc_start + BATCH_SIZE < len(failed_items):
+            if esc_start + BATCH_SIZE < len(remaining):
                 time.sleep(REQUEST_DELAY)
-        if still_failed:
-            print(f"    [warn] {still_failed} items still untranslated after escalation; next run retries")
+        remaining = next_remaining
+
+    for text in remaining:
+        mapping[text] = text  # still untranslated at the top tier -> source, uncached
+    if remaining:
+        print(f"    [warn] {len(remaining)} items still untranslated after escalation; next run retries")
 
     return mapping
 

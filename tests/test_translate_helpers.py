@@ -228,3 +228,23 @@ def test_unique_map_escalates_under_translations_to_strong_model(monkeypatch):
 
     assert mapping["甲"] == good
     assert translate._cache.get(_cache_key("ja", "zh-TW", "甲")) == good
+
+
+def test_unique_map_escalates_to_strongest_model_when_flash_fails(monkeypatch):
+    """Items even the strong model echoes back are retried on the strongest
+    model before being left for next run."""
+    bad = "・相手のホロメンをアーカイブするように動かす。"
+    good = "・讓對手的成員進入存檔區。"
+
+    def fake_batch(batch, s, t, _no_split=False, model=None):
+        # Only the top-tier model manages to translate it.
+        return [good if model == translate.STRONGEST_MODEL else bad for _ in batch]
+
+    monkeypatch.setattr(translate, "_translate_batch_gemini", fake_batch)
+    monkeypatch.setattr(translate.time, "sleep", lambda *_: None)
+    translate._cache.clear()
+
+    mapping = translate._translate_unique_map(["甲"], "ja", "zh-TW")
+
+    assert mapping["甲"] == good
+    assert translate._cache.get(_cache_key("ja", "zh-TW", "甲")) == good
