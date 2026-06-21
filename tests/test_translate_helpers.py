@@ -109,9 +109,11 @@ def test_unique_map_does_not_cache_failed_items(monkeypatch):
     """A failed item falls back to source text in the mapping but must NOT be
     written to the cache, so the next run retries it instead of serving the
     untranslated source forever."""
-    monkeypatch.setattr(
-        translate, "_translate_batch_gemini", lambda batch, s, t: ["B-translated", None]
-    )
+    def _mock(batch, s, t, _no_split=False, model=None):
+        # 甲 fails on both the default and the escalation model.
+        return ["B-translated" if x == "乙" else None for x in batch]
+
+    monkeypatch.setattr(translate, "_translate_batch_gemini", _mock)
     monkeypatch.setattr(translate.time, "sleep", lambda *_: None)
     translate._cache.clear()
 
@@ -157,15 +159,58 @@ def test_unique_map_does_not_cache_undertranslated(monkeypatch):
     """A result that comes back still-Japanese is treated like a failure: shown
     as source fallback, never cached, so it retries next run."""
     bad = "・相手のホロメンをアーカイブするように動かす。"
-    monkeypatch.setattr(
-        translate, "_translate_batch_gemini", lambda batch, s, t: ["翻譯良好的中文", bad]
-    )
+
+    def _mock(batch, s, t, _no_split=False, model=None):
+        # 乙 stays under-translated even on the escalation model.
+        return ["翻譯良好的中文" if x == "甲" else bad for x in batch]
+
+    monkeypatch.setattr(translate, "_translate_batch_gemini", _mock)
     monkeypatch.setattr(translate.time, "sleep", lambda *_: None)
     translate._cache.clear()
 
     mapping = translate._translate_unique_map(["甲", "乙"], "ja", "zh-TW")
 
     assert mapping["甲"] == "翻譯良好的中文"
-    assert mapping["乙"] == "乙"  # under-translated → fell back to source
+    assert mapping["乙"] == "乙"  # under-translated by both models → fell back to source
     assert translate._cache.get(_cache_key("ja", "zh-TW", "甲")) == "翻譯良好的中文"
     assert _cache_key("ja", "zh-TW", "乙") not in translate._cache
+
+
+def test_translate_batch_passes_model_through(monkeypatch):
+    """The model is selectable so callers can escalate to a stronger one."""
+    captured = {}
+
+    class _Models:
+        def generate_content(self, **kwargs):
+            captured["model"] = kwargs.get("model")
+
+            class _R:
+                text = '["X"]'
+
+            return _R()
+
+    class _Client:
+        models = _Models()
+
+    monkeypatch.setattr(translate, "_get_client", lambda: _Client())
+    translate._translate_batch_gemini(["甲"], "ja", "en", model="gemini-2.5-flash")
+    assert captured["model"] == "gemini-2.5-flash"
+
+
+def test_unique_map_escalates_under_translations_to_strong_model(monkeypatch):
+    """When the default model echoes Japanese (ja->zh-TW shared-script failure),
+    the rejects are retried on the stronger model and cached if they pass."""
+    bad = "・相手のホロメンをアーカイブするように動かす。"  # weak model echoes Japanese
+    good = "・讓對手的成員進入存檔區的招式。"  # strong model actually translates
+
+    def fake_batch(batch, s, t, _no_split=False, model=None):
+        return [good if model == translate.STRONG_MODEL else bad for _ in batch]
+
+    monkeypatch.setattr(translate, "_translate_batch_gemini", fake_batch)
+    monkeypatch.setattr(translate.time, "sleep", lambda *_: None)
+    translate._cache.clear()
+
+    mapping = translate._translate_unique_map(["甲"], "ja", "zh-TW")
+
+    assert mapping["甲"] == good
+    assert translate._cache.get(_cache_key("ja", "zh-TW", "甲")) == good

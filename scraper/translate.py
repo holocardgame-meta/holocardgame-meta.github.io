@@ -13,6 +13,10 @@ from google.genai import types
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 GEMINI_MODEL = "gemini-2.5-flash-lite"
+# Stronger model used only to retry items the default echoes back untranslated
+# (the ja->zh-TW shared-Han-script failure mode). Keeps the cheap model for the
+# bulk while reliably finishing the hard strings.
+STRONG_MODEL = "gemini-2.5-flash"
 BATCH_SIZE = 80
 REQUEST_DELAY = 5.0
 MAX_RETRIES = 8
@@ -212,7 +216,7 @@ def _unwrap_result(item, target: str) -> str:
 
 
 def _translate_batch_gemini(
-    texts: list[str], source: str, target: str, _no_split: bool = False
+    texts: list[str], source: str, target: str, _no_split: bool = False, model: str | None = None
 ) -> list[str | None]:
     """Translate a batch of texts using a single Gemini API call.
 
@@ -229,6 +233,7 @@ def _translate_batch_gemini(
     """
     client = _get_client()
     system_prompt = _build_system_prompt(source, target)
+    model_id = model or GEMINI_MODEL
 
     numbered = "\n".join(f"[{i+1}] {t}" for i, t in enumerate(texts))
     user_prompt = f"Translate these {len(texts)} items:\n\n{numbered}"
@@ -237,7 +242,7 @@ def _translate_batch_gemini(
     for attempt in range(MAX_RETRIES):
         try:
             response = client.models.generate_content(
-                model=GEMINI_MODEL,
+                model=model_id,
                 contents=user_prompt,
                 config=types.GenerateContentConfig(
                     system_instruction=system_prompt,
@@ -275,8 +280,10 @@ def _translate_batch_gemini(
     if not _no_split and len(texts) > 1:
         mid = len(texts) // 2
         print(f"    [split] Recovering by splitting batch {len(texts)} -> {mid} + {len(texts) - mid}")
-        left = _translate_batch_gemini(texts[:mid], source, target, _no_split=(mid == 1))
-        right = _translate_batch_gemini(texts[mid:], source, target, _no_split=(len(texts) - mid == 1))
+        left = _translate_batch_gemini(texts[:mid], source, target, _no_split=(mid == 1), model=model)
+        right = _translate_batch_gemini(
+            texts[mid:], source, target, _no_split=(len(texts) - mid == 1), model=model
+        )
         return left + right
 
     # Single-item or already-split path: give up, signal failure per item.
@@ -305,6 +312,7 @@ def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> 
     if not to_translate:
         return mapping
 
+    failed_items: list[str] = []
     for batch_start in range(0, len(to_translate), BATCH_SIZE):
         batch = to_translate[batch_start:batch_start + BATCH_SIZE]
         batch_num = batch_start // BATCH_SIZE + 1
@@ -313,23 +321,45 @@ def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> 
 
         results = _translate_batch_gemini(batch, source, target)
 
-        failed = 0
+        batch_failed = 0
         for text, result in zip(batch, results):
-            # Treat a still-Japanese result like a failure: show the source as a
-            # best effort but never cache it, so the next run retries instead of
-            # serving the under-translation forever.
+            # A give-up (None) or still-Japanese result is deferred to the
+            # escalation pass below rather than cached as-is.
             if result is None or _looks_untranslated(result, target):
-                mapping[text] = text
-                failed += 1
+                failed_items.append(text)
+                batch_failed += 1
                 continue
             mapping[text] = result
             _cache[_cache_key(source, target, text)] = result
             _cache_dirty = True
-        if failed:
-            print(f"    [warn] {failed} failed/untranslated items left uncached; next run will retry them")
+        if batch_failed:
+            print(f"    [warn] {batch_failed} items not translated by {GEMINI_MODEL}; will escalate")
 
         if batch_start + BATCH_SIZE < len(to_translate):
             time.sleep(REQUEST_DELAY)
+
+    # Escalation: the cheap model echoes hard ja->zh-TW strings back untranslated
+    # (shared Han script). Retry only those rejects on the stronger model; cache
+    # the ones that now pass and leave any stubborn remainder uncached to retry
+    # next run — never cache an under-translation, which is what made them sticky.
+    if failed_items:
+        print(f"    {source}->{target}: escalating {len(failed_items)} items to {STRONG_MODEL}")
+        still_failed = 0
+        for esc_start in range(0, len(failed_items), BATCH_SIZE):
+            esc_batch = failed_items[esc_start:esc_start + BATCH_SIZE]
+            results = _translate_batch_gemini(esc_batch, source, target, model=STRONG_MODEL)
+            for text, result in zip(esc_batch, results):
+                if result is None or _looks_untranslated(result, target):
+                    mapping[text] = text
+                    still_failed += 1
+                    continue
+                mapping[text] = result
+                _cache[_cache_key(source, target, text)] = result
+                _cache_dirty = True
+            if esc_start + BATCH_SIZE < len(failed_items):
+                time.sleep(REQUEST_DELAY)
+        if still_failed:
+            print(f"    [warn] {still_failed} items still untranslated after escalation; next run retries")
 
     return mapping
 
