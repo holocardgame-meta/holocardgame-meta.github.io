@@ -122,8 +122,11 @@ _CJK_RE = re.compile(r"[぀-ヿ㐀-鿿ｦ-ﾟ]")
 # carry none — so counting them separates "Japanese prose left untranslated"
 # from "a correct translation that keeps a name in kana". The ja->zh-TW pair is
 # the main offender: the shared Han script lets the model pass Japanese through.
+# The possessive の counts as grammar only after a noun (kanji/katakana/latin).
+# Inside a kana name (とき->の<-そら) it sits between hiragana, so a negative
+# lookbehind keeps a kept VTuber name from reading as a Japanese sentence.
 _JA_GRAMMAR_RE = re.compile(
-    r"を|の|する|した|して|され|でき|です|ます|ない|れる|られる"
+    r"を|(?<![ぁ-ゟ])の|する|した|して|され|でき|です|ます|ない|れる|られる"
     r"|ので|から|けど|たり|ながら|など|という|ように|まで|より|だっ|でも"
 )
 # VTuber / card names are kept in their original kana inside corner brackets and

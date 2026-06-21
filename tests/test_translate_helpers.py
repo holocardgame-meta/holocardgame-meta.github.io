@@ -159,6 +159,14 @@ def test_looks_untranslated_ignores_quoted_japanese_card_names():
     assert translate._looks_untranslated("將「星街すいせい」加入手牌。", "zh-TW") is False
 
 
+def test_looks_untranslated_ignores_no_inside_kana_names():
+    """の inside a kana name (ときのそら = Tokino Sora) is not grammar — a correct
+    Chinese translation keeping the name must not be rejected. Grammatical の
+    (after a noun/kanji) still counts."""
+    assert translate._looks_untranslated("將ときのそら培養為副攻手。", "zh-TW") is False
+    assert translate._looks_untranslated("ジジ一人の効果を使用。", "zh-TW") is True
+
+
 def test_is_poisoned_entry_evicts_undertranslated_target():
     """A zh-TW value that still reads as Japanese prose is poison even though it
     differs from the source (so the exact-match check alone misses it)."""
