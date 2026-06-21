@@ -82,6 +82,7 @@ RULES:
 5. Keep numbers, symbols, and formatting (like ・, └, ＋, ＋20) unchanged.
 6. Preserve line breaks (\\n) exactly as in the original.
 7. Return ONLY a JSON array of translated strings, no other text.
+8. Translate EVERY word into {target_lang}. The output must contain NO leftover Japanese hiragana or katakana, except proper names kept per rule 3. Japanese and Chinese share kanji — never pass Japanese text through untranslated just because it looks similar.
 
 {glossary}
 """
@@ -110,19 +111,49 @@ def _get_client() -> genai.Client:
 # Japanese/Chinese prose" for the poison heuristic below.
 _CJK_RE = re.compile(r"[぀-ヿ㐀-鿿ｦ-ﾟ]")
 
+# Japanese grammar markers (particles, verb/aux endings, connectors). Chinese,
+# English, etc. never use these, and VTuber names kept in kana (すいせい, ぺこら)
+# carry none — so counting them separates "Japanese prose left untranslated"
+# from "a correct translation that keeps a name in kana". The ja->zh-TW pair is
+# the main offender: the shared Han script lets the model pass Japanese through.
+_JA_GRAMMAR_RE = re.compile(
+    r"を|の|する|した|して|され|でき|です|ます|ない|れる|られる"
+    r"|ので|から|けど|たり|ながら|など|という|ように|まで|より|だっ|でも"
+)
+
+
+def _looks_untranslated(text: object, target: str) -> bool:
+    """True when a non-Japanese target value still reads as Japanese prose.
+
+    Used both to reject fresh under-translations before caching and to evict
+    sticky ones already in the cache. Two grammar markers are enough: correct
+    Chinese/English output has zero, while Japanese sentences have several.
+    """
+    if target == "ja" or not isinstance(text, str):
+        return False
+    return len(_JA_GRAMMAR_RE.findall(text)) >= 2
+
 
 def _is_poisoned_entry(key: str, value) -> bool:
-    """True when a cache entry is a give-up fallback cached by older code:
-    the "translation" is the verbatim source text of a CJK-heavy, non-trivial
-    string. Short tokens (card IDs, 'AZKi') legitimately survive translation
-    unchanged, so only strings over 20 chars with substantial CJK count.
+    """True when a cache entry should be evicted and retranslated, covering two
+    failure modes:
+
+    1. Give-up fallback cached by older code: the "translation" is the verbatim
+       source text of a CJK-heavy, non-trivial string. Short tokens (card IDs,
+       'AZKi') legitimately survive translation unchanged, so only strings over
+       20 chars with substantial CJK count.
+    2. Under-translation: a non-ja target whose value still reads as Japanese
+       prose. It differs from the source (so the exact-match check below misses
+       it) yet shows Japanese in the UI — the ja->zh-TW shared-script failure.
     """
     if not isinstance(value, str):
         return True
     parts = key.split("|", 3)
     if len(parts) != 4:
         return False
-    text = parts[3]
+    target, text = parts[2], parts[3]
+    if _looks_untranslated(value, target):
+        return True
     if value != text or len(text) <= 20:
         return False
     return len(_CJK_RE.findall(text)) >= 8
@@ -284,7 +315,10 @@ def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> 
 
         failed = 0
         for text, result in zip(batch, results):
-            if result is None:
+            # Treat a still-Japanese result like a failure: show the source as a
+            # best effort but never cache it, so the next run retries instead of
+            # serving the under-translation forever.
+            if result is None or _looks_untranslated(result, target):
                 mapping[text] = text
                 failed += 1
                 continue
@@ -292,7 +326,7 @@ def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> 
             _cache[_cache_key(source, target, text)] = result
             _cache_dirty = True
         if failed:
-            print(f"    [warn] {failed} failed items left uncached; next run will retry them")
+            print(f"    [warn] {failed} failed/untranslated items left uncached; next run will retry them")
 
         if batch_start + BATCH_SIZE < len(to_translate):
             time.sleep(REQUEST_DELAY)

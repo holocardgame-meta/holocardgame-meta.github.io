@@ -120,3 +120,52 @@ def test_unique_map_does_not_cache_failed_items(monkeypatch):
     assert mapping == {"乙": "B-translated", "甲": "甲"}
     assert translate._cache.get(_cache_key("ja", "en", "乙")) == "B-translated"
     assert _cache_key("ja", "en", "甲") not in translate._cache
+
+
+def test_looks_untranslated_flags_japanese_prose():
+    """Japanese grammar in a non-ja target = under-translated (the ja->zh-TW
+    shared-Han-script failure mode)."""
+    ja_prose = "・コラボ時にジジ一人のアーツを、体力が減っているホロメンも対象にできるように。"
+    assert translate._looks_untranslated(ja_prose, "zh-TW") is True
+    assert translate._looks_untranslated("hOCGの「IRyS単」のデッキ構築や役割を解説するので", "fr") is True
+
+
+def test_looks_untranslated_allows_chinese_with_kept_names():
+    """A correct zh-TW translation uses Chinese grammar (的/設為/由) and keeps
+    VTuber names in kana — it must NOT be flagged just for containing kana."""
+    assert translate._looks_untranslated("介紹hOCG「すいせい」的牌組構成及採用卡牌的角色。", "zh-TW") is False
+    assert translate._looks_untranslated("將累積4點吶喊的2ndすいせい設為中心，由1stいろは保護。", "zh-TW") is False
+
+
+def test_looks_untranslated_ignores_english_and_ja_target():
+    assert translate._looks_untranslated("Go for lethal in the late game.", "en") is False
+    # The Japanese source column itself is never validated.
+    assert translate._looks_untranslated("デッキを展開する。", "ja") is False
+
+
+def test_is_poisoned_entry_evicts_undertranslated_target():
+    """A zh-TW value that still reads as Japanese prose is poison even though it
+    differs from the source (so the exact-match check alone misses it)."""
+    src = "相手のホロメンをアーカイブする効果。"
+    bad_zh = "・相手のホロメンをアーカイブするように動かす。"  # differs from src, still Japanese
+    assert translate._is_poisoned_entry(_cache_key("ja", "zh-TW", src), bad_zh) is True
+    good_zh = "讓對手的成員進入存檔區的效果。"
+    assert translate._is_poisoned_entry(_cache_key("ja", "zh-TW", src), good_zh) is False
+
+
+def test_unique_map_does_not_cache_undertranslated(monkeypatch):
+    """A result that comes back still-Japanese is treated like a failure: shown
+    as source fallback, never cached, so it retries next run."""
+    bad = "・相手のホロメンをアーカイブするように動かす。"
+    monkeypatch.setattr(
+        translate, "_translate_batch_gemini", lambda batch, s, t: ["翻譯良好的中文", bad]
+    )
+    monkeypatch.setattr(translate.time, "sleep", lambda *_: None)
+    translate._cache.clear()
+
+    mapping = translate._translate_unique_map(["甲", "乙"], "ja", "zh-TW")
+
+    assert mapping["甲"] == "翻譯良好的中文"
+    assert mapping["乙"] == "乙"  # under-translated → fell back to source
+    assert translate._cache.get(_cache_key("ja", "zh-TW", "甲")) == "翻譯良好的中文"
+    assert _cache_key("ja", "zh-TW", "乙") not in translate._cache
