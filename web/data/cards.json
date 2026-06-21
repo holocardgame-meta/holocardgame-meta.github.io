@@ -24488,9 +24488,9 @@
       "effect": {
         "zh-TW": "[每場比賽一次]將自己存檔區1~4張標示#きのこ的活動返回手牌。每將2張牌返回手牌，從自己的牌組抽1張牌。",
         "ja": "[1試合に1回]\n自分のアーカイブから#きのこが付いているアクティブを\n1～4枚まで手札に戻す。\nカードを2枚手札に戻すごとに、\n自分のデッキからカードを1枚引く。",
-        "en": "[每場比賽一次]將自己存檔區1~4張標示#きのこ的活動返回手牌。每將2張牌返回手牌，從自己的牌組抽1張牌。",
-        "fr": "[每場比賽一次]將自己存檔區1~4張標示#きのこ的活動返回手牌。每將2張牌返回手牌，從自己的牌組抽1張牌。",
-        "es": "[每場比賽一次]將自己存檔區1~4張標示#きのこ的活動返回手牌。每將2張牌返回手牌，從自己的牌組抽1張牌。"
+        "en": "[Once per game] Return 1 to 4 #きのこ Activities from your Archive to your Hand. For every 2 cards returned to your Hand, draw 1 card from your Deck.",
+        "fr": "[Une fois par match] Renvoyez 1 à 4 cartes d'événement marquées #きのこ de votre archive dans votre main. Pour chaque 2 cartes renvoyées dans votre main, piochez 1 carte de votre deck.",
+        "es": "[Una vez por partida] Devuelve 1~4 cartas de Actividad con la etiqueta #きのこ de tu Archivo a tu mano. Por cada 2 cartas devueltas a tu mano, roba 1 carta de tu mazo."
       }
     },
     "id": "hBP04-002",
@@ -24520,9 +24520,9 @@
       "effect": {
         "zh-TW": "[每場比賽一次]將自己存檔區1~4張標示#きのこ的活動返回手牌。每將2張牌返回手牌，從自己的牌組抽1張牌。",
         "ja": "[1試合に1回]\n自分のアーカイブから#きのこが付いているアクティブを\n1～4枚まで手札に戻す。\nカードを2枚手札に戻すごとに、\n自分のデッキからカードを1枚引く。",
-        "en": "[每場比賽一次]將自己存檔區1~4張標示#きのこ的活動返回手牌。每將2張牌返回手牌，從自己的牌組抽1張牌。",
-        "fr": "[每場比賽一次]將自己存檔區1~4張標示#きのこ的活動返回手牌。每將2張牌返回手牌，從自己的牌組抽1張牌。",
-        "es": "[每場比賽一次]將自己存檔區1~4張標示#きのこ的活動返回手牌。每將2張牌返回手牌，從自己的牌組抽1張牌。"
+        "en": "[Once per game] Return 1 to 4 #きのこ Activities from your Archive to your Hand. For every 2 cards returned to your Hand, draw 1 card from your Deck.",
+        "fr": "[Une fois par match] Renvoyez 1 à 4 cartes d'événement marquées #きのこ de votre archive dans votre main. Pour chaque 2 cartes renvoyées dans votre main, piochez 1 carte de votre deck.",
+        "es": "[Una vez por partida] Devuelve 1~4 cartas de Actividad con la etiqueta #きのこ de tu Archivo a tu mano. Por cada 2 cartas devueltas a tu mano, roba 1 carta de tu mazo."
       }
     },
     "id": "hBP04-002",
@@ -24552,9 +24552,9 @@
       "effect": {
         "zh-TW": "[每場比賽一次]將自己存檔區1~4張標示#きのこ的活動返回手牌。每將2張牌返回手牌，從自己的牌組抽1張牌。",
         "ja": "[1試合に1回]\n自分のアーカイブから#きのこが付いているアクティブを\n1～4枚まで手札に戻す。\nカードを2枚手札に戻すごとに、\n自分のデッキからカードを1枚引く。",
-        "en": "[每場比賽一次]將自己存檔區1~4張標示#きのこ的活動返回手牌。每將2張牌返回手牌，從自己的牌組抽1張牌。",
-        "fr": "[每場比賽一次]將自己存檔區1~4張標示#きのこ的活動返回手牌。每將2張牌返回手牌，從自己的牌組抽1張牌。",
-        "es": "[每場比賽一次]將自己存檔區1~4張標示#きのこ的活動返回手牌。每將2張牌返回手牌，從自己的牌組抽1張牌。"
+        "en": "[Once per game] Return 1 to 4 #きのこ Activities from your Archive to your Hand. For every 2 cards returned to your Hand, draw 1 card from your Deck.",
+        "fr": "[Une fois par match] Renvoyez 1 à 4 cartes d'événement marquées #きのこ de votre archive dans votre main. Pour chaque 2 cartes renvoyées dans votre main, piochez 1 carte de votre deck.",
+        "es": "[Una vez por partida] Devuelve 1~4 cartas de Actividad con la etiqueta #きのこ de tu Archivo a tu mano. Por cada 2 cartas devueltas a tu mano, roba 1 carta de tu mazo."
       }
     },
     "id": "hBP04-002",
@@ -26032,9 +26032,9 @@
       "effect": {
         "zh-TW": "這個回合自己有使用過標示#きのこ的活動時，自己1位標示#ReGLOSS的成員HP回復20點。",
         "ja": "このターン自分は#きのこのカードを使用した場合、自分の#ReGLOSSのメンバー1人のHPを20回復する。",
-        "en": "這個回合自己有使用過標示#きのこ的活動時，自己1位標示#ReGLOSS的成員HP回復20點。",
-        "fr": "這個回合自己有使用過標示#きのこ的活動時，自己1位標示#ReGLOSS的成員HP回復20點。",
-        "es": "這個回合自己有使用過標示#きのこ的活動時，自己1位標示#ReGLOSS的成員HP回復20點。"
+        "en": "When you used a #きのこ Activity this turn, restore 20 HP to 1 of your #ReGLOSS Members.",
+        "fr": "Lorsque vous avez utilisé une carte d'événement marquée #きのこ ce tour-ci, 1 membre marqué #ReGLOSS de votre côté récupère 20 points de vie.",
+        "es": "Cuando hayas usado una carta de Actividad con la etiqueta #きのこ en este turno, 1 Miembro con la etiqueta #ReGLOSS de tu lado recupera 20 puntos de Vida."
       }
     },
     "effectB": null,
@@ -26237,7 +26237,7 @@
         "ja": "自分のデッキから#きのこ のアクティブ1枚を公開し、手札に加える。その後、デッキをシャッフルする。",
         "en": "Reveal 1 \"Kinoko\" marked #Kinoko from your Deck and add it to your hand. Reshuffle your Deck.",
         "fr": "Montrez une carte marquée #Kinoko de votre Deck et ajoutez-la à votre Main. Mélangez votre Deck.\n",
-        "es": "從自己的牌組展示1張標示#きのこ的活動並加入手牌。將牌組重新洗牌。"
+        "es": "Muestra 1 carta de Actividad con la etiqueta #きのこ de tu mazo y añádela a tu mano. Baraja tu mazo."
       }
     },
     "effectB": null,
@@ -26285,7 +26285,7 @@
         "ja": "自分のデッキから#きのこ のアクティブ1枚を公開し、手札に加える。その後、デッキをシャッフルする。",
         "en": "Reveal 1 \"Kinoko\" marked #Kinoko from your Deck and add it to your hand. Reshuffle your Deck.",
         "fr": "Montrez une carte marquée #Kinoko de votre Deck et ajoutez-la à votre Main. Mélangez votre Deck.\n",
-        "es": "從自己的牌組展示1張標示#きのこ的活動並加入手牌。將牌組重新洗牌。"
+        "es": "Muestra 1 carta de Actividad con la etiqueta #きのこ de tu mazo y añádela a tu mano. Baraja tu mazo."
       }
     },
     "effectB": null,
@@ -26333,7 +26333,7 @@
         "ja": "自分のデッキから#きのこ のアクティブ1枚を公開し、手札に加える。その後、デッキをシャッフルする。",
         "en": "Reveal 1 \"Kinoko\" marked #Kinoko from your Deck and add it to your hand. Reshuffle your Deck.",
         "fr": "Montrez une carte marquée #Kinoko de votre Deck et ajoutez-la à votre Main. Mélangez votre Deck.\n",
-        "es": "從自己的牌組展示1張標示#きのこ的活動並加入手牌。將牌組重新洗牌。"
+        "es": "Muestra 1 carta de Actividad con la etiqueta #きのこ de tu mazo y añádela a tu mano. Baraja tu mazo."
       }
     },
     "effectB": null,
@@ -41174,9 +41174,9 @@
       "effect": {
         "zh-TW": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。",
         "ja": "このターン中、自分が#きのこを持つイベントを使用したことがある場合、自分のデッキからカードを2枚引く。「濡羽色のほころび」は各ターン1回しか使用できない。",
-        "en": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。",
+        "en": "If you have used an Arts with #きのこ this Turn, draw 2 cards from your Deck. 「濡羽色のほころび」 can only be used once per Turn.",
         "fr": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。",
-        "es": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。"
+        "es": "Si en este Turno has usado una Arts con la etiqueta #きのこ, roba 2 cartas de tu Mazo. 「濡羽色のほころび」 solo puede usarse una vez por Turno."
       }
     },
     "effectG": null,
@@ -41218,9 +41218,9 @@
       "effect": {
         "zh-TW": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。",
         "ja": "このターン中、自分が#きのこを持つイベントを使用したことがある場合、自分のデッキからカードを2枚引く。「濡羽色のほころび」は各ターン1回しか使用できない。",
-        "en": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。",
+        "en": "If you have used an Arts with #きのこ this Turn, draw 2 cards from your Deck. 「濡羽色のほころび」 can only be used once per Turn.",
         "fr": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。",
-        "es": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。"
+        "es": "Si en este Turno has usado una Arts con la etiqueta #きのこ, roba 2 cartas de tu Mazo. 「濡羽色のほころび」 solo puede usarse una vez por Turno."
       }
     },
     "effectG": null,
@@ -41262,9 +41262,9 @@
       "effect": {
         "zh-TW": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。",
         "ja": "このターン中、自分が#きのこを持つイベントを使用したことがある場合、自分のデッキからカードを2枚引く。「濡羽色のほころび」は各ターン1回しか使用できない。",
-        "en": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。",
+        "en": "If you have used an Arts with #きのこ this Turn, draw 2 cards from your Deck. 「濡羽色のほころび」 can only be used once per Turn.",
         "fr": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。",
-        "es": "如果這個回合自己有使用過標示#きのこ的活動，從自己的牌組抽2張牌。「濡羽色のほころび」每個回合只能使用一次。"
+        "es": "Si en este Turno has usado una Arts con la etiqueta #きのこ, roba 2 cartas de tu Mazo. 「濡羽色のほころび」 solo puede usarse una vez por Turno."
       }
     },
     "effectG": null,
@@ -68400,9 +68400,9 @@
       "effect": {
         "zh-TW": "[每個回合一次]從自己的牌組展示1張標示#きのこ的活動並加入手牌。將牌組重新洗牌。",
         "ja": "[各ターン1回]自分のデッキから#きのこを持つイベントを1枚公開し、手札に加える。その後、デッキをシャッフルする。",
-        "en": "[每個回合一次]從自己的牌組展示1張標示#きのこ的活動並加入手牌。將牌組重新洗牌。",
-        "fr": "[每個回合一次]從自己的牌組展示1張標示#きのこ的活動並加入手牌。將牌組重新洗牌。",
-        "es": "[每個回合一次]從自己的牌組展示1張標示#きのこ的活動並加入手牌。將牌組重新洗牌。"
+        "en": "[Once per turn] Reveal 1 #きのこ Activity from your Deck and add it to your Hand. Shuffle your Deck.",
+        "fr": "[Chaque tour une fois] Montrez 1 carte d'événement marquée #きのこ de votre deck et ajoutez-la à votre main. Mélangez votre deck.",
+        "es": "[Cada turno una vez] Muestra 1 carta de Actividad con la etiqueta #きのこ de tu mazo y añádela a tu mano. Baraja tu mazo."
       }
     },
     "spSkill": {
@@ -68411,9 +68411,9 @@
       "effect": {
         "zh-TW": "[每場比賽一次]將自己吶喊牌組上方的1張牌發送給自己的「儒烏風亭らでん」。之後，將自己存檔區1張標示#きのこ的活動返回手牌。",
         "ja": "[1試合に1回]自分のエールデッキの上からカードを1枚、自分の「儒烏風亭らでん」に送る。その後、自分のアーカイブから#きのこを持つイベントを1枚手札に戻す。",
-        "en": "[每場比賽一次]將自己吶喊牌組上方的1張牌發送給自己的「儒烏風亭らでん」。之後，將自己存檔區1張標示#きのこ的活動返回手牌。",
-        "fr": "[每場比賽一次]將自己吶喊牌組上方的1張牌發送給自己的「儒烏風亭らでん」。之後，將自己存檔區1張標示#きのこ的活動返回手牌。",
-        "es": "[每場比賽一次]將自己吶喊牌組上方的1張牌發送給自己的「儒烏風亭らでん」。之後，將自己存檔區1張標示#きのこ的活動返回手牌。"
+        "en": "[Once per game] Send 1 card from the top of your Cheer Deck to your \"るう風亭らでん\". Then, return 1 #きのこ Activity from your Archive to your Hand.",
+        "fr": "[Une fois par match] Envoyez 1 carte du dessus de votre deck d'encouragement à votre \"儒烏風亭らでん\". Ensuite, renvoyez 1 carte d'événement marquée #きのこ de votre archive dans votre main.",
+        "es": "[Una vez por partida] Envía 1 carta de la parte superior de tu Mazo Cheer a tu \"儒烏風亭らでん\". Después, devuelve 1 carta de Actividad con la etiqueta #きのこ de tu Archivo a tu mano."
       }
     },
     "id": "hSD15-001",
@@ -68666,9 +68666,9 @@
       "effect": {
         "zh-TW": "如果這個回合自己有使用過標示#きのこ的活動，這個藝能傷害+10。",
         "ja": "このターン中、自分が#きのこを持つイベントを使用したことがある場合、このカードのダメージ+10。",
-        "en": "如果這個回合自己有使用過標示#きのこ的活動，這個藝能傷害+10。",
-        "fr": "如果這個回合自己有使用過標示#きのこ的活動，這個藝能傷害+10。",
-        "es": "如果這個回合自己有使用過標示#きのこ的活動，這個藝能傷害+10。"
+        "en": "If you used a #きのこ Activity this turn, this Arts deals +10 damage.",
+        "fr": "Si vous avez utilisé une carte d'événement marquée #きのこ ce tour-ci, les dégâts de cet Arts +10.",
+        "es": "Si has usado una carta de Actividad con la etiqueta #きのこ en este turno, el daño de este Arts +10."
       }
     },
     "art2": null,
