@@ -9620,8 +9620,8 @@
       "zh-TW": "帶有這個吉祥物的成員HP+10。\n\n◆附加給「ときのそら」有追加效果\n帶有這個吉祥物的成員使用藝能時，這個吉祥物也視為白色吶喊卡。\n\n每位成員只能帶有1張吉祥物。",
       "ja": "このマスコットを持つメンバーのHP＋１０。\n\n◆「ときのそら」に付与された場合、追加効果\nこのマスコットを持つメンバーがアーツを使用した時、このマスコットも白のエールカードとして扱う。\n\nメンバー１人につき、マスコットは１枚までしか持てない。",
       "en": "Members with this Mascot gain +10 HP.\n\n◆Additional effect for \"Tokino Sora\"\nWhen a Member with this Mascot uses an Arts, this Mascot is also treated as a White Cheer Card.\n\nEach Member can only have 1 Mascot.",
-      "fr": "帶有這個吉祥物的成員HP+10。\n\n◆附加給「ときのそら」有追加效果\n帶有這個吉祥物的成員使用藝能時，這個吉祥物也視為白色吶喊卡。\n\n每位成員只能帶有1張吉祥物。",
-      "es": "帶有這個吉祥物的成員HP+10。\n\n◆附加給「ときのそら」有追加效果\n帶有這個吉祥物的成員使用藝能時，這個吉祥物也視為白色吶喊卡。\n\n每位成員只能帶有1張吉祥物。"
+      "fr": "Les Points de vie du Membre avec cette Mascotte augmentent de 10.\n\n◆ Effet additionnel si attachée à 「ときのそら」\nLorsque le Membre avec cette Mascotte utilise un Arts, cette Mascotte est également considérée comme une carte d'encouragement blanche.\n\nChaque Membre ne peut avoir qu'une seule Mascotte.",
+      "es": "El Miembro con esta Mascota tiene +10 de Vida.\n\n◆ Efecto adicional si se adjunta a 「ときのそら」\nCuando el Miembro con esta Mascota usa Arts, esta Mascota también se considera una carta Cheer blanca.\n\nCada Miembro solo puede tener 1 Mascota."
     },
     "id": "hBP01-118",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP01/hBP01-118_C.png"
@@ -12614,7 +12614,7 @@
         "ja": "自分のデッキから「宝鐘マリン」1枚を公開し、手札に加える。その後、デッキをシャッフルする。「宝鐘の海賊団」は毎ターン1回のみ使用可能。",
         "en": "Reveal 1 \"Houshou Marine\" from your Deck and add it to your hand. Reshuffle your Deck. \"Houshou Pirate Crew\" can only be used once per turn.",
         "fr": "Montrez \"Houshou Marine\" de votre Deck et ajoutez-la à votre Main. Mélangez votre Deck. \"Houshou Pirate Crew\" ne peut être utilisé qu'une fois par tour.\n",
-        "es": "從自己的牌組展示1張「宝鐘マリン」並加入手牌。將牌組重新洗牌。「宝鐘の海賊団」每個回合只能使用一次。"
+        "es": "Desde tu Mazo, revela 1 「宝鐘マリン」 y añádela a tu Mano. Baraja tu Mazo. 「宝鐘の海賊団」 solo se puede usar una vez por Turno."
       }
     },
     "effectG": null,
@@ -12653,7 +12653,7 @@
         "ja": "自分のデッキから「宝鐘マリン」1枚を公開し、手札に加える。その後、デッキをシャッフルする。「宝鐘の海賊団」は毎ターン1回のみ使用可能。",
         "en": "Reveal 1 \"Houshou Marine\" from your Deck and add it to your hand. Reshuffle your Deck. \"Houshou Pirate Crew\" can only be used once per turn.",
         "fr": "Montrez \"Houshou Marine\" de votre Deck et ajoutez-la à votre Main. Mélangez votre Deck. \"Houshou Pirate Crew\" ne peut être utilisé qu'une fois par tour.\n",
-        "es": "從自己的牌組展示1張「宝鐘マリン」並加入手牌。將牌組重新洗牌。「宝鐘の海賊団」每個回合只能使用一次。"
+        "es": "Desde tu Mazo, revela 1 「宝鐘マリン」 y añádela a tu Mano. Baraja tu Mazo. 「宝鐘の海賊団」 solo se puede usar una vez por Turno."
       }
     },
     "effectG": null,
@@ -12692,7 +12692,7 @@
         "ja": "自分のデッキから「宝鐘マリン」1枚を公開し、手札に加える。その後、デッキをシャッフルする。「宝鐘の海賊団」は毎ターン1回のみ使用可能。",
         "en": "Reveal 1 \"Houshou Marine\" from your Deck and add it to your hand. Reshuffle your Deck. \"Houshou Pirate Crew\" can only be used once per turn.",
         "fr": "Montrez \"Houshou Marine\" de votre Deck et ajoutez-la à votre Main. Mélangez votre Deck. \"Houshou Pirate Crew\" ne peut être utilisé qu'une fois par tour.\n",
-        "es": "從自己的牌組展示1張「宝鐘マリン」並加入手牌。將牌組重新洗牌。「宝鐘の海賊団」每個回合只能使用一次。"
+        "es": "Desde tu Mazo, revela 1 「宝鐘マリン」 y añádela a tu Mano. Baraja tu Mazo. 「宝鐘の海賊団」 solo se puede usar una vez por Turno."
       }
     },
     "effectG": null,
@@ -14677,8 +14677,8 @@
         "zh-TW": "可以將自己存檔區的1張「森カリオペの鎌」或「Death-sensei」返回手牌。",
         "ja": "自分のアーカイブから「森カリオペの鎌」または「Death-sensei」1枚を選び、手札に加える。",
         "en": "You can return 1 \"Mori Calliope's Scythe\" or \"Death-sensei\" from your Archive to your Hand.",
-        "fr": "可以將自己存檔區的1張「森カリオペの鎌」或「Death-sensei」返回手牌。",
-        "es": "可以將自己存檔區的1張「森カリオペの鎌」或「Death-sensei」返回手牌。"
+        "fr": "Vous pouvez renvoyer 1 「森カリオペの鎌」 ou 「Death-sensei」 de votre Archive à votre Main.",
+        "es": "Puedes devolver 1 「森カリオペの鎌」 o 「Death-sensei」 de tu Archivo a tu Mano."
       }
     },
     "effectG": null,
@@ -14722,8 +14722,8 @@
         "zh-TW": "可以將自己存檔區的1張「森カリオペの鎌」或「Death-sensei」返回手牌。",
         "ja": "自分のアーカイブから「森カリオペの鎌」または「Death-sensei」1枚を選び、手札に加える。",
         "en": "You can return 1 \"Mori Calliope's Scythe\" or \"Death-sensei\" from your Archive to your Hand.",
-        "fr": "可以將自己存檔區的1張「森カリオペの鎌」或「Death-sensei」返回手牌。",
-        "es": "可以將自己存檔區的1張「森カリオペの鎌」或「Death-sensei」返回手牌。"
+        "fr": "Vous pouvez renvoyer 1 「森カリオペの鎌」 ou 「Death-sensei」 de votre Archive à votre Main.",
+        "es": "Puedes devolver 1 「森カリオペの鎌」 o 「Death-sensei」 de tu Archivo a tu Mano."
       }
     },
     "effectG": null,
@@ -24382,8 +24382,8 @@
         "zh-TW": "[每個回合一次]這個回合中，自己1位帶著標示#こよラボ的支援卡的「博衣こより」藝能傷害+30。",
         "ja": "[各ターンに1度]このターン中、自分の#こよラボを持つサポートカードが付いている「博衣こより」のアーツダメージ+30。",
         "en": "[Once per turn] For the rest of this turn, one of your \"Hiyoi Koyori\" with #こよラボ marked Support gains +30 Arts damage.",
-        "fr": "[每個回合一次]這個回合中，自己1位帶著標示#こよラボ的支援卡的「博衣こより」藝能傷害+30。",
-        "es": "[每個回合一次]這個回合中，自己1位帶著標示#こよラボ的支援卡的「博衣こより」藝能傷害+30。"
+        "fr": "[Chaque tour, une fois] Durant ce tour, les Arts de 1 de vos Membres avec la marque #こよラボ et de type Support infligent +30 dégâts.",
+        "es": "[Cada turno una vez] Durante este turno, las cartas de Arts de 1 Miembro de Soporte con la etiqueta #こよラボ de tu lado infligen +30 de daño."
       }
     },
     "spSkill": {
@@ -24394,7 +24394,7 @@
         "ja": "[1試合に1回]\n相手のターン中、自分の「こよりの助手くん」が付いている「博衣こより」が\n相手からダメージを受けた時に使用できる：\nそのメンバーが受けるダメージ－100。",
         "en": "[Once per game] During your opponent's turn, when a \"Koyori's Assistant\" attached to \"Hakui Koyori\" takes damage from your opponent, you may use this: Reduce the damage taken by that Member by 100.",
         "fr": "[每場比賽一次]對手回合中，自己帶有「こよりの助手くん」的「博衣こより」受到對手傷害時可以使用：該1位成員受到的傷害-100。",
-        "es": "[每場比賽一次]對手回合中，自己帶有「こよりの助手くん」的「博衣こより」受到對手傷害時可以使用：該1位成員受到的傷害-100。"
+        "es": "[Una vez por partida] Durante el Turno del oponente, cuando tu 「博衣こより」 con 「こよりの助手くん」 recibe daño del oponente, puedes usar esto: El daño recibido por ese Miembro se reduce en 100."
       }
     },
     "id": "hBP04-001",
@@ -24414,8 +24414,8 @@
         "zh-TW": "[每個回合一次]這個回合中，自己1位帶著標示#こよラボ的支援卡的「博衣こより」藝能傷害+30。",
         "ja": "[各ターンに1度]このターン中、自分の#こよラボを持つサポートカードが付いている「博衣こより」のアーツダメージ+30。",
         "en": "[Once per turn] For the rest of this turn, one of your \"Hiyoi Koyori\" with #こよラボ marked Support gains +30 Arts damage.",
-        "fr": "[每個回合一次]這個回合中，自己1位帶著標示#こよラボ的支援卡的「博衣こより」藝能傷害+30。",
-        "es": "[每個回合一次]這個回合中，自己1位帶著標示#こよラボ的支援卡的「博衣こより」藝能傷害+30。"
+        "fr": "[Chaque tour, une fois] Durant ce tour, les Arts de 1 de vos Membres avec la marque #こよラボ et de type Support infligent +30 dégâts.",
+        "es": "[Cada turno una vez] Durante este turno, las cartas de Arts de 1 Miembro de Soporte con la etiqueta #こよラボ de tu lado infligen +30 de daño."
       }
     },
     "spSkill": {
@@ -24426,7 +24426,7 @@
         "ja": "[1試合に1回]\n相手のターン中、自分の「こよりの助手くん」が付いている「博衣こより」が\n相手からダメージを受けた時に使用できる：\nそのメンバーが受けるダメージ－100。",
         "en": "[Once per game] During your opponent's turn, when a \"Koyori's Assistant\" attached to \"Hakui Koyori\" takes damage from your opponent, you may use this: Reduce the damage taken by that Member by 100.",
         "fr": "[每場比賽一次]對手回合中，自己帶有「こよりの助手くん」的「博衣こより」受到對手傷害時可以使用：該1位成員受到的傷害-100。",
-        "es": "[每場比賽一次]對手回合中，自己帶有「こよりの助手くん」的「博衣こより」受到對手傷害時可以使用：該1位成員受到的傷害-100。"
+        "es": "[Una vez por partida] Durante el Turno del oponente, cuando tu 「博衣こより」 con 「こよりの助手くん」 recibe daño del oponente, puedes usar esto: El daño recibido por ese Miembro se reduce en 100."
       }
     },
     "id": "hBP04-001",
@@ -24446,8 +24446,8 @@
         "zh-TW": "[每個回合一次]這個回合中，自己1位帶著標示#こよラボ的支援卡的「博衣こより」藝能傷害+30。",
         "ja": "[各ターンに1度]このターン中、自分の#こよラボを持つサポートカードが付いている「博衣こより」のアーツダメージ+30。",
         "en": "[Once per turn] For the rest of this turn, one of your \"Hiyoi Koyori\" with #こよラボ marked Support gains +30 Arts damage.",
-        "fr": "[每個回合一次]這個回合中，自己1位帶著標示#こよラボ的支援卡的「博衣こより」藝能傷害+30。",
-        "es": "[每個回合一次]這個回合中，自己1位帶著標示#こよラボ的支援卡的「博衣こより」藝能傷害+30。"
+        "fr": "[Chaque tour, une fois] Durant ce tour, les Arts de 1 de vos Membres avec la marque #こよラボ et de type Support infligent +30 dégâts.",
+        "es": "[Cada turno una vez] Durante este turno, las cartas de Arts de 1 Miembro de Soporte con la etiqueta #こよラボ de tu lado infligen +30 de daño."
       }
     },
     "spSkill": {
@@ -24458,7 +24458,7 @@
         "ja": "[1試合に1回]\n相手のターン中、自分の「こよりの助手くん」が付いている「博衣こより」が\n相手からダメージを受けた時に使用できる：\nそのメンバーが受けるダメージ－100。",
         "en": "[Once per game] During your opponent's turn, when a \"Koyori's Assistant\" attached to \"Hakui Koyori\" takes damage from your opponent, you may use this: Reduce the damage taken by that Member by 100.",
         "fr": "[每場比賽一次]對手回合中，自己帶有「こよりの助手くん」的「博衣こより」受到對手傷害時可以使用：該1位成員受到的傷害-100。",
-        "es": "[每場比賽一次]對手回合中，自己帶有「こよりの助手くん」的「博衣こより」受到對手傷害時可以使用：該1位成員受到的傷害-100。"
+        "es": "[Una vez por partida] Durante el Turno del oponente, cuando tu 「博衣こより」 con 「こよりの助手くん」 recibe daño del oponente, puedes usar esto: El daño recibido por ese Miembro se reduce en 100."
       }
     },
     "id": "hBP04-001",
@@ -25216,7 +25216,7 @@
         "ja": "自分のアーカイブから「こよりの助手くん」1枚を選び、自分の他の「博衣こより」に付与することができる。",
         "en": "You may attach 1 \"Koyori's Assistant\" from your Archive to another one of your \"Hakui Koyori\".",
         "fr": "可以將自己存檔區的1張「こよりの助手くん」附加給自己其他的「博衣こより」。",
-        "es": "可以將自己存檔區的1張「こよりの助手くん」附加給自己其他的「博衣こより」。"
+        "es": "Puedes adjuntar 1 「こよりの助手くん」 de tu Archivo a otra de tus 「博衣こより」."
       }
     },
     "art2": null,
@@ -25259,8 +25259,8 @@
         "zh-TW": "這個成員帶有「こよりの助手くん」時，從自己的牌組抽1張牌。",
         "ja": "このメンバーが「こよりの助手くん」を持っている場合、自分のデッキからカードを1枚引く。",
         "en": "When this Member has \"Koyori's Assistant\" attached, draw 1 card from your Deck.",
-        "fr": "這個成員帶有「こよりの助手くん」時，從自己的牌組抽1張牌。",
-        "es": "這個成員帶有「こよりの助手くん」時，從自己的牌組抽1張牌。"
+        "fr": "Lorsque ce Membre a 「こよりの助手くん」, piochez 1 carte de votre Deck.",
+        "es": "Cuando este Miembro tiene 「こよりの助手くん」, roba 1 carta de tu Mazo."
       }
     },
     "art2": null,
@@ -25303,8 +25303,8 @@
         "zh-TW": "這個成員帶有「こよりの助手くん」時，從自己的牌組抽1張牌。",
         "ja": "このメンバーが「こよりの助手くん」を持っている場合、自分のデッキからカードを1枚引く。",
         "en": "When this Member has \"Koyori's Assistant\" attached, draw 1 card from your Deck.",
-        "fr": "這個成員帶有「こよりの助手くん」時，從自己的牌組抽1張牌。",
-        "es": "這個成員帶有「こよりの助手くん」時，從自己的牌組抽1張牌。"
+        "fr": "Lorsque ce Membre a 「こよりの助手くん」, piochez 1 carte de votre Deck.",
+        "es": "Cuando este Miembro tiene 「こよりの助手くん」, roba 1 carta de tu Mazo."
       }
     },
     "art2": null,
@@ -29414,7 +29414,7 @@
         "zh-TW": "[限定中心位置或聯動位置]這個成員帶有「森カリオペの鎌」或「Death-sensei」時，自己標示#Myth的中心成員藝能傷害+30。",
         "ja": "[限定中心位置またはコラボ位置]このメンバーが「森カリオペの鎌」または「Death-sensei」を持つ場合、自分の「#Myth」を持つセンターメンバーの「アーツ」ダメージ＋30。",
         "en": "[Center or Collab position only] When this Member has \"Mori Calliope's Scythe\" or \"Death-sensei\", your #Myth marked Center Member gains +30 Arts damage.",
-        "fr": "[限定中心位置或聯動位置]這個成員帶有「森カリオペの鎌」或「Death-sensei」時，自己標示#Myth的中心成員藝能傷害+30。",
+        "fr": "[Uniquement en position Centre ou Collab] Lorsque ce Membre a 「森カリオペの鎌」 ou 「Death-sensei」, les dégâts d'Arts de votre Membre Centre avec #Myth augmentent de 30.",
         "es": "[Solo posición central o Collab] Cuando este Miembro tiene \"Kama de Calliope Mori\" o \"Death-sensei\", el daño de Arts de los Miembros centrales con la etiqueta #Myth en tu lado aumenta en 30."
       }
     },
@@ -29466,7 +29466,7 @@
         "zh-TW": "[限定中心位置或聯動位置]這個成員帶有「森カリオペの鎌」或「Death-sensei」時，自己標示#Myth的中心成員藝能傷害+30。",
         "ja": "[限定中心位置またはコラボ位置]このメンバーが「森カリオペの鎌」または「Death-sensei」を持つ場合、自分の「#Myth」を持つセンターメンバーの「アーツ」ダメージ＋30。",
         "en": "[Center or Collab position only] When this Member has \"Mori Calliope's Scythe\" or \"Death-sensei\", your #Myth marked Center Member gains +30 Arts damage.",
-        "fr": "[限定中心位置或聯動位置]這個成員帶有「森カリオペの鎌」或「Death-sensei」時，自己標示#Myth的中心成員藝能傷害+30。",
+        "fr": "[Uniquement en position Centre ou Collab] Lorsque ce Membre a 「森カリオペの鎌」 ou 「Death-sensei」, les dégâts d'Arts de votre Membre Centre avec #Myth augmentent de 30.",
         "es": "[Solo posición central o Collab] Cuando este Miembro tiene \"Kama de Calliope Mori\" o \"Death-sensei\", el daño de Arts de los Miembros centrales con la etiqueta #Myth en tu lado aumenta en 30."
       }
     },
@@ -29518,7 +29518,7 @@
         "zh-TW": "[限定中心位置或聯動位置]這個成員帶有「森カリオペの鎌」或「Death-sensei」時，自己標示#Myth的中心成員藝能傷害+30。",
         "ja": "[限定中心位置またはコラボ位置]このメンバーが「森カリオペの鎌」または「Death-sensei」を持つ場合、自分の「#Myth」を持つセンターメンバーの「アーツ」ダメージ＋30。",
         "en": "[Center or Collab position only] When this Member has \"Mori Calliope's Scythe\" or \"Death-sensei\", your #Myth marked Center Member gains +30 Arts damage.",
-        "fr": "[限定中心位置或聯動位置]這個成員帶有「森カリオペの鎌」或「Death-sensei」時，自己標示#Myth的中心成員藝能傷害+30。",
+        "fr": "[Uniquement en position Centre ou Collab] Lorsque ce Membre a 「森カリオペの鎌」 ou 「Death-sensei」, les dégâts d'Arts de votre Membre Centre avec #Myth augmentent de 30.",
         "es": "[Solo posición central o Collab] Cuando este Miembro tiene \"Kama de Calliope Mori\" o \"Death-sensei\", el daño de Arts de los Miembros centrales con la etiqueta #Myth en tu lado aumenta en 30."
       }
     },
@@ -31841,7 +31841,7 @@
       "ja": "このカードのメンバーの藝能ダメージを+10する。\n\n◆1st以上の「博衣こより」にこのカードを附加した時の追加効果\n自分のメインフェイズ中、このカードのメンバーの吶喊カード1枚をアーカイブに置くことで、自分の#秘密結社holoXのメンバー1人をアクティブ状態にする。\n\nメンバーごとに1枚しか道具を装備できない。",
       "en": "Arts damage dealt by members with this item equipped is +10.\n\n◆Additional effect for \"Hakui Koyori\" marked 1st or higher\nDuring your Main Phase, you can send 1 Cheer card equipped with this item to the Archive: Activate 1 member you control marked #Secret_Society_holoX in a resting state.\n\nOnly 1 item can be equipped per member.",
       "fr": "Les Arts du membre avec cet objet infligent +10 dégâts.\n\n◆Effet supplémentaire si attaché à \"Hakui Koyori\" de 1st ou plus\nDurant votre phase principale, vous pouvez placer une carte d'encouragement avec cet objet dans votre Archive : Mettez un membre de votre camp marqué #Secret Society HOLOLIVE X en état actif.\n\nChaque membre ne peut être équipé que d'un seul objet.",
-      "es": "帶有這個道具的成員藝能傷害+10。\n\n◆附加給1st以上的「博衣こより」有追加效果\n自己的主要階段，可以將帶有這個道具的成員的1張吶喊卡放到存檔區：將自己1位標示#秘密結社holoX且休息狀態的成員改為活動狀態。\n\n每位成員只能帶有1張道具。"
+      "es": "El Miembro con este objeto tiene +10 de daño de Arts.\n\n◆ Efecto adicional si se adjunta a 「博衣こより」 1st o superior\nDurante tu Fase Principal, puedes enviar 1 carta Cheer del Miembro con este objeto a tu Archivo: Cambia 1 de tus Miembros con #秘密結社holoX en estado de descanso a estado activo.\n\nCada Miembro solo puede tener 1 objeto."
     },
     "id": "hBP04-097",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP04/hBP04-097_U.png"
@@ -31888,8 +31888,8 @@
       "zh-TW": "帶有這個吉祥物的成員HP+20。\n\n◆附加給「博衣こより」有追加效果\n帶有這個吉祥物的成員聯動時，這個回合中，這個成員的藝能傷害+10。\n\n每位成員只能帶有1張吉祥物。",
       "ja": "このマスコットを持つメンバーのHP＋２０。\n\n◆「博衣こより」に付与された場合、追加効果\nこのマスコットを持つメンバーがコラボした時、このターン中、このメンバーのアーツのダメージ＋１０。\n\nメンバー１人につき、マスコットは１枚までしか持てない。",
       "en": "Members with this Mascot gain +20 HP.\n\n◆Additional effect for \"Hakui Koyori\"\nWhen a Member with this Mascot performs a Collab, this Member's Arts damage is +10 this turn.\n\nEach Member can only have 1 Mascot.",
-      "fr": "帶有這個吉祥物的成員HP+20。\n\n◆附加給「博衣こより」有追加效果\n帶有這個吉祥物的成員聯動時，這個回合中，這個成員的藝能傷害+10。\n\n每位成員只能帶有1張吉祥物。",
-      "es": "帶有這個吉祥物的成員HP+20。\n\n◆附加給「博衣こより」有追加效果\n帶有這個吉祥物的成員聯動時，這個回合中，這個成員的藝能傷害+10。\n\n每位成員只能帶有1張吉祥物。"
+      "fr": "Les Points de vie du Membre avec cette Mascotte augmentent de 20.\n\n◆ Effet additionnel si attachée à 「博衣こより」\nLorsque le Membre avec cette Mascotte fait une Collab, les dégâts d'Arts de ce Membre augmentent de 10 ce tour.\n\nChaque Membre ne peut avoir qu'une seule Mascotte.",
+      "es": "El Miembro con esta Mascota tiene +20 de Vida.\n\n◆ Efecto adicional si se adjunta a 「博衣こより」\nCuando el Miembro con esta Mascota Collab, el daño de Arts de este Miembro aumenta en 10 este Turno.\n\nCada Miembro solo puede tener 1 Mascota."
     },
     "id": "hBP04-100",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP04/hBP04-100_C.png"
@@ -31968,8 +31968,8 @@
       "zh-TW": "這個粉絲從手牌或存檔區附加給成員時，可以將自己舞台上的1張吶喊卡，替換給帶有這個粉絲的成員。\n\n這個粉絲只能附加給「博衣こより」，每位成員可以帶有任意數量的粉絲。",
       "ja": "このファンがメンバーに手札かアーカイブから付与された時、自分のステージ上のエールカード1枚を、このファンが付与されたメンバーと入れ替えることができる。\nこのファンは「博衣こより」にのみ付与でき、メンバーごとに好きな枚数付与できる。",
       "en": "When this Fan is attached to a Member from your Hand or Archive, you can replace 1 Cheer card on your Stage with the Member this Fan is attached to.\n\nYou can only attach this Fan to \"Hiyoi Koyori\", and you can attach any number of Fans per Member.",
-      "fr": "這個粉絲從手牌或存檔區附加給成員時，可以將自己舞台上的1張吶喊卡，替換給帶有這個粉絲的成員。\n\n這個粉絲只能附加給「博衣こより」，每位成員可以帶有任意數量的粉絲。",
-      "es": "這個粉絲從手牌或存檔區附加給成員時，可以將自己舞台上的1張吶喊卡，替換給帶有這個粉絲的成員。\n\n這個粉絲只能附加給「博衣こより」，每位成員可以帶有任意數量的粉絲。"
+      "fr": "Lorsque ce Fan est attaché à un Membre depuis votre Main ou votre Archive, vous pouvez échanger 1 carte d'encouragement de votre Scène avec le Membre ayant ce Fan.\n\nCe Fan ne peut être attaché qu'à 「博衣こより」, et chaque Membre peut avoir n'importe quel nombre de Fans.",
+      "es": "Cuando este Fan se adjunta a un Miembro desde tu Mano o Archivo, puedes intercambiar 1 carta Cheer de tu Escenario con el Miembro que tiene este Fan.\n\nEste Fan solo se puede adjuntar a 「博衣こより」, y cada Miembro puede tener cualquier número de Fans."
     },
     "id": "hBP04-105",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP04/hBP04-105_U.png"
@@ -31984,8 +31984,8 @@
       "zh-TW": "這個粉絲從手牌或存檔區附加給成員時，可以將自己舞台上的1張吶喊卡，替換給帶有這個粉絲的成員。\n\n這個粉絲只能附加給「博衣こより」，每位成員可以帶有任意數量的粉絲。",
       "ja": "このファンがメンバーに手札かアーカイブから付与された時、自分のステージ上のエールカード1枚を、このファンが付与されたメンバーと入れ替えることができる。\nこのファンは「博衣こより」にのみ付与でき、メンバーごとに好きな枚数付与できる。",
       "en": "When this Fan is attached to a Member from your Hand or Archive, you can replace 1 Cheer card on your Stage with the Member this Fan is attached to.\n\nYou can only attach this Fan to \"Hiyoi Koyori\", and you can attach any number of Fans per Member.",
-      "fr": "這個粉絲從手牌或存檔區附加給成員時，可以將自己舞台上的1張吶喊卡，替換給帶有這個粉絲的成員。\n\n這個粉絲只能附加給「博衣こより」，每位成員可以帶有任意數量的粉絲。",
-      "es": "這個粉絲從手牌或存檔區附加給成員時，可以將自己舞台上的1張吶喊卡，替換給帶有這個粉絲的成員。\n\n這個粉絲只能附加給「博衣こより」，每位成員可以帶有任意數量的粉絲。"
+      "fr": "Lorsque ce Fan est attaché à un Membre depuis votre Main ou votre Archive, vous pouvez échanger 1 carte d'encouragement de votre Scène avec le Membre ayant ce Fan.\n\nCe Fan ne peut être attaché qu'à 「博衣こより」, et chaque Membre peut avoir n'importe quel nombre de Fans.",
+      "es": "Cuando este Fan se adjunta a un Miembro desde tu Mano o Archivo, puedes intercambiar 1 carta Cheer de tu Escenario con el Miembro que tiene este Fan.\n\nEste Fan solo se puede adjuntar a 「博衣こより」, y cada Miembro puede tener cualquier número de Fans."
     },
     "id": "hBP04-105",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP04/hBP04-105_S.png"
@@ -37107,7 +37107,7 @@
         "ja": "自分のデッキから「ネリッサ・レイヴンクロフトの杖」または「Jailbird」1枚を公開し、手札に加える。その後、デッキをシャッフルする。",
         "en": "Reveal 1 \"Nerissa Ravencroft's Staff\" or \"Jailbird\" from your Deck and add it to your hand. Reshuffle your Deck.",
         "fr": "Montrez \"Nerissa Ravencroft's Staff\" ou \"Jailbird\" de votre Deck et ajoutez-le à votre Main. Mélangez votre Deck.\n",
-        "es": "從自己的牌組展示1張「ネリッサ・レイヴンクロフトの杖」或「Jailbird」並加入手牌。將牌組重新洗牌。"
+        "es": "Desde tu Mazo, revela 1 「ネリッサ・レイヴンクロフトの杖」 o 「Jailbird」 y añádela a tu Mano. Baraja tu Mazo."
       }
     },
     "effectG": null,
@@ -37152,7 +37152,7 @@
         "ja": "自分のデッキから「ネリッサ・レイヴンクロフトの杖」または「Jailbird」1枚を公開し、手札に加える。その後、デッキをシャッフルする。",
         "en": "Reveal 1 \"Nerissa Ravencroft's Staff\" or \"Jailbird\" from your Deck and add it to your hand. Reshuffle your Deck.",
         "fr": "Montrez \"Nerissa Ravencroft's Staff\" ou \"Jailbird\" de votre Deck et ajoutez-le à votre Main. Mélangez votre Deck.\n",
-        "es": "從自己的牌組展示1張「ネリッサ・レイヴンクロフトの杖」或「Jailbird」並加入手牌。將牌組重新洗牌。"
+        "es": "Desde tu Mazo, revela 1 「ネリッサ・レイヴンクロフトの杖」 o 「Jailbird」 y añádela a tu Mano. Baraja tu Mazo."
       }
     },
     "effectG": null,
@@ -44003,7 +44003,7 @@
         "ja": "このメンバーがこのターン、自分の「無限の体力」という推しスキルによってアクティブ状態になった場合、このアーツのダメージ＋50。",
         "en": "If this Member was put into Active status by your Oshi Skill \"Infinite Stamina\" this turn, this gains +50 Arts damage.",
         "fr": "Si ce membre est passé en position active grâce à votre compétence Oshi \"体力 infinie\" pendant ce tour, les Arts +50.",
-        "es": "如果這個成員在這個回合因自己的主推技能「無限の体力」改為活動狀態，這個藝能傷害+50。"
+        "es": "Si este Miembro cambió a estado activo este Turno debido a tu Habilidad Oshi 「無限の体力」, el daño de Arts de esta carta aumenta en 50."
       }
     },
     "art2": null,
@@ -44047,7 +44047,7 @@
         "ja": "このメンバーがこのターン、自分の「無限の体力」という推しスキルによってアクティブ状態になった場合、このアーツのダメージ＋50。",
         "en": "If this Member was put into Active status by your Oshi Skill \"Infinite Stamina\" this turn, this gains +50 Arts damage.",
         "fr": "Si ce membre est passé en position active grâce à votre compétence Oshi \"体力 infinie\" pendant ce tour, les Arts +50.",
-        "es": "如果這個成員在這個回合因自己的主推技能「無限の体力」改為活動狀態，這個藝能傷害+50。"
+        "es": "Si este Miembro cambió a estado activo este Turno debido a tu Habilidad Oshi 「無限の体力」, el daño de Arts de esta carta aumenta en 50."
       }
     },
     "art2": null,
@@ -44095,7 +44095,7 @@
         "ja": "このターン中に自分の推しスキル「無限の体力」を使用したなら、このアーツのダメージ＋40。",
         "en": "If your Oshi Skill \"Infinite Stamina\" was used this turn, this Arts's damage +40.",
         "fr": "Si vous avez utilisé votre compétence Oshi \"体力 infinie\" pendant ce tour, les Arts +40.",
-        "es": "如果這個回合有使用過自己的主推技能「無限の体力」，這個藝能傷害+40。"
+        "es": "Si usaste tu Habilidad Oshi 「無限の体力」 este Turno, el daño de Arts de esta carta aumenta en 40."
       }
     },
     "art2": null,
@@ -44143,7 +44143,7 @@
         "ja": "このターン中に自分の推しスキル「無限の体力」を使用したなら、このアーツのダメージ＋40。",
         "en": "If your Oshi Skill \"Infinite Stamina\" was used this turn, this Arts's damage +40.",
         "fr": "Si vous avez utilisé votre compétence Oshi \"体力 infinie\" pendant ce tour, les Arts +40.",
-        "es": "如果這個回合有使用過自己的主推技能「無限の体力」，這個藝能傷害+40。"
+        "es": "Si usaste tu Habilidad Oshi 「無限の体力」 este Turno, el daño de Arts de esta carta aumenta en 40."
       }
     },
     "art2": null,
@@ -44191,7 +44191,7 @@
         "ja": "このターン中に自分の推しスキル「無限の体力」を使用したなら、このアーツのダメージ＋40。",
         "en": "If your Oshi Skill \"Infinite Stamina\" was used this turn, this Arts's damage +40.",
         "fr": "Si vous avez utilisé votre compétence Oshi \"体力 infinie\" pendant ce tour, les Arts +40.",
-        "es": "如果這個回合有使用過自己的主推技能「無限の体力」，這個藝能傷害+40。"
+        "es": "Si usaste tu Habilidad Oshi 「無限の体力」 este Turno, el daño de Arts de esta carta aumenta en 40."
       }
     },
     "art2": null,
@@ -45056,7 +45056,7 @@
         "ja": "このターン中に自分の推しスキル「神秘の儀式」を使用したなら、自分のアーカイブの「アーニャ・メルフィッサ」を1～3枚手札に戻す。",
         "en": "If your Oshi Skill \"Mysterious Ritual\" was used this turn, you may return 1-3 \"Anya Melfissa\" cards from your Archive to your Hand.",
         "fr": "Si vous avez utilisé votre compétence Oshi \"Rituel mystique\" pendant ce tour, vous pouvez renvoyer 1 à 3 \"アーニャ・メルフィッサ\" depuis votre archive dans votre main.",
-        "es": "如果這個回合有使用過自己的主推技能「神秘の儀式」，可以將自己存檔區1~3張的「アーニャ・メルフィッサ」返回手牌。"
+        "es": "Si usaste tu Habilidad Oshi 「神秘の儀式」 este Turno, puedes devolver 1~3 「アーニャ・メルフィッサ」 de tu Archivo a tu Mano."
       }
     },
     "art2": null,
@@ -45101,7 +45101,7 @@
         "ja": "このターン中に自分の推しスキル「神秘の儀式」を使用したなら、自分のアーカイブの「アーニャ・メルフィッサ」を1～3枚手札に戻す。",
         "en": "If your Oshi Skill \"Mysterious Ritual\" was used this turn, you may return 1-3 \"Anya Melfissa\" cards from your Archive to your Hand.",
         "fr": "Si vous avez utilisé votre compétence Oshi \"Rituel mystique\" pendant ce tour, vous pouvez renvoyer 1 à 3 \"アーニャ・メルフィッサ\" depuis votre archive dans votre main.",
-        "es": "如果這個回合有使用過自己的主推技能「神秘の儀式」，可以將自己存檔區1~3張的「アーニャ・メルフィッサ」返回手牌。"
+        "es": "Si usaste tu Habilidad Oshi 「神秘の儀式」 este Turno, puedes devolver 1~3 「アーニャ・メルフィッサ」 de tu Archivo a tu Mano."
       }
     },
     "art2": null,
@@ -45234,7 +45234,7 @@
         "ja": "このメンバーが手札交換をしてステージ後方に移動した場合、このターン中、自分のステージにいる「博衣こより」1人のこのアーツのダメージ＋20。",
         "en": "When this Member tags out and moves to the Back position on your Stage, one of your \"Hiyoi Koyori\" on your Stage gains +20 Arts damage for the rest of this turn.",
         "fr": "這個成員交棒並移動到舞台後方時，這個回合中，自己舞台上的1位「博衣こより」藝能傷害+20。",
-        "es": "這個成員交棒並移動到舞台後方時，這個回合中，自己舞台上的1位「博衣こより」藝能傷害+20。"
+        "es": "Cuando este Miembro pasa el relevo y se mueve a la Retaguardia del Escenario, este Turno, el daño de Arts de 1 「博衣こより」 en tu Escenario aumenta en 20."
       }
     },
     "art1": {
@@ -45412,7 +45412,7 @@
       "ja": "このターン中、自分のステージにいる「博衣こより」1人のこのアーツのダメージ＋30。",
       "en": "For the rest of this turn, one of your \"Hiyoi Koyori\" on your Stage gains +30 Arts damage.",
       "fr": "這個回合中，自己舞台上的1位「博衣こより」藝能傷害+30。",
-      "es": "這個回合中，自己舞台上的1位「博衣こより」藝能傷害+30。"
+      "es": "Este Turno, el daño de Arts de 1 「博衣こより」 en tu Escenario aumenta en 30."
     },
     "id": "hBP06-092",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP06/hBP06-092_C.png"
@@ -52773,7 +52773,7 @@
       "ja": "このマスコットを持つメンバーのHP＋２０。\n\n◆「オーロ・クロニー」に付与された場合、追加効果\nこの試合で自分の「オーロ・クロニー」のSP推しスキル「時間の典獄」を使用した場合、このメンバーのアーツのダメージ＋２０。\n\nメンバー１人につき、マスコットは１枚までしか持てない。",
       "en": "Members with this Mascot gain +20 HP.\n\n◆Additional effect for \"Ouro Kronii\"\nIf you have used your \"Ouro Kronii\" SP Oshi Skill \"Warden of Time\" in this game, this Member's Arts damage is +20.\n\nEach Member can only have 1 Mascot.",
       "fr": "Les membres portant cette mascotte ont leurs PV +20.\n\n◆Effet supplémentaire si attaché à \"オーロ・クロニー\"\nSi vous avez utilisé la compétence SP Oshi \"La prison du temps\" de votre \"オーロ・クロニー\" pendant cette partie, les Arts de ce membre +20.\n\nChaque membre ne peut porter qu'une seule mascotte.",
-      "es": "帶有這個吉祥物的成員HP+20。\n\n◆附加給「オーロ・クロニー」有追加效果\n如果在這場比賽中使用了自己「オーロ・クロニー」的SP主推技能「時間の典獄」，這個成員的藝能傷害+20。\n\n每位成員只能帶有1張吉祥物。"
+      "es": "El Miembro con esta Mascota tiene +20 de Vida.\n\n◆ Efecto adicional si se adjunta a 「オーロ・クロニー」\nSi usaste la Habilidad SP Oshi 「時間の典獄」 de tu 「オーロ・クロニー」 en esta partida, el daño de Arts de este Miembro aumenta en 20.\n\nCada Miembro solo puede tener 1 Mascota."
     },
     "id": "hBP07-107",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP07/hBP07-107_U.png"
@@ -59304,8 +59304,8 @@
       "zh-TW": "自己舞台上的所有成員都為「癒月ちょこ」，且自己的生命值在3以下才能使用。\n\n這個回合中，自己舞台上所有的Debut成員與1st成員藝能傷害+20。之後，自己舞台上所有的2nd成員藝能傷害+60。\n\n「ちょこのなすユッケ」每個回合只能使用一次。",
       "ja": "自分のステージにいる全てのメンバーが「癒月ちょこ」で、自分のライフが3以下の場合のみ使用できる。\n\nこのターン中、自分のステージにいる全てのDebutメンバーと1stメンバーのアーツダメージ+20。その後、自分のステージにいる全ての2ndメンバーのアーツダメージ+60。\n\n「ちょこのなすユッケ」は各ターンに1回しか使用できない。",
       "en": "You can only use this if all Members on your Stage are \"Choco Yuzuki\", and your Life is 3 or less.\n\nThis turn, all Debut Members and 1st Generation Members on your Stage gain Arts Damage +20. Then, all 2nd Generation Members on your Stage gain Arts Damage +60.\n\n\"Choco's Nasu Yukke\" can only be used once per turn.\n",
-      "fr": "自己舞台上的所有成員都為「癒月ちょこ」，且自己的生命值在3以下才能使用。\n\n這個回合中，自己舞台上所有的Debut成員與1st成員藝能傷害+20。之後，自己舞台上所有的2nd成員藝能傷害+60。\n\n「ちょこのなすユッケ」每個回合只能使用一次。",
-      "es": "自己舞台上的所有成員都為「癒月ちょこ」，且自己的生命值在3以下才能使用。\n\n這個回合中，自己舞台上所有的Debut成員與1st成員藝能傷害+20。之後，自己舞台上所有的2nd成員藝能傷害+60。\n\n「ちょこのなすユッケ」每個回合只能使用一次。"
+      "fr": "Vous ne pouvez utiliser ceci que si tous les Membres sur votre Scène sont 「癒月ちょこ」 et que vos Points de vie sont de 3 ou moins.\n\nCe tour, les dégâts d'Arts de tous vos Membres Debut et 1st sur votre Scène augmentent de 20. Ensuite, les dégâts d'Arts de tous vos Membres 2nd sur votre Scène augmentent de 60.\n\n「ちょこのなすユッケ」 ne peut être utilisée qu'une fois par tour.",
+      "es": "Solo puedes usar esto si todos los Miembros en tu Escenario son 「癒月ちょこ」, y tu Vida es 3 o menos.\n\nEste Turno, el daño de Arts de todos tus Miembros Debut y 1st en tu Escenario aumenta en 20. Después, el daño de Arts de todos tus Miembros 2nd en tu Escenario aumenta en 60.\n\n「ちょこのなすユッケ」 solo se puede usar una vez por Turno."
     },
     "id": "hBP08-093",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP08/hBP08-093_U.png"
@@ -59320,8 +59320,8 @@
       "zh-TW": "自己舞台上的所有成員都為「癒月ちょこ」，且自己的生命值在3以下才能使用。\n\n這個回合中，自己舞台上所有的Debut成員與1st成員藝能傷害+20。之後，自己舞台上所有的2nd成員藝能傷害+60。\n\n「ちょこのなすユッケ」每個回合只能使用一次。",
       "ja": "自分のステージにいる全てのメンバーが「癒月ちょこ」で、自分のライフが3以下の場合のみ使用できる。\n\nこのターン中、自分のステージにいる全てのDebutメンバーと1stメンバーのアーツダメージ+20。その後、自分のステージにいる全ての2ndメンバーのアーツダメージ+60。\n\n「ちょこのなすユッケ」は各ターンに1回しか使用できない。",
       "en": "You can only use this if all Members on your Stage are \"Choco Yuzuki\", and your Life is 3 or less.\n\nThis turn, all Debut Members and 1st Generation Members on your Stage gain Arts Damage +20. Then, all 2nd Generation Members on your Stage gain Arts Damage +60.\n\n\"Choco's Nasu Yukke\" can only be used once per turn.\n",
-      "fr": "自己舞台上的所有成員都為「癒月ちょこ」，且自己的生命值在3以下才能使用。\n\n這個回合中，自己舞台上所有的Debut成員與1st成員藝能傷害+20。之後，自己舞台上所有的2nd成員藝能傷害+60。\n\n「ちょこのなすユッケ」每個回合只能使用一次。",
-      "es": "自己舞台上的所有成員都為「癒月ちょこ」，且自己的生命值在3以下才能使用。\n\n這個回合中，自己舞台上所有的Debut成員與1st成員藝能傷害+20。之後，自己舞台上所有的2nd成員藝能傷害+60。\n\n「ちょこのなすユッケ」每個回合只能使用一次。"
+      "fr": "Vous ne pouvez utiliser ceci que si tous les Membres sur votre Scène sont 「癒月ちょこ」 et que vos Points de vie sont de 3 ou moins.\n\nCe tour, les dégâts d'Arts de tous vos Membres Debut et 1st sur votre Scène augmentent de 20. Ensuite, les dégâts d'Arts de tous vos Membres 2nd sur votre Scène augmentent de 60.\n\n「ちょこのなすユッケ」 ne peut être utilisée qu'une fois par tour.",
+      "es": "Solo puedes usar esto si todos los Miembros en tu Escenario son 「癒月ちょこ」, y tu Vida es 3 o menos.\n\nEste Turno, el daño de Arts de todos tus Miembros Debut y 1st en tu Escenario aumenta en 20. Después, el daño de Arts de todos tus Miembros 2nd en tu Escenario aumenta en 60.\n\n「ちょこのなすユッケ」 solo se puede usar una vez por Turno."
     },
     "id": "hBP08-093",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP08/hBP08-093_S.png"
@@ -59384,8 +59384,8 @@
       "zh-TW": "選擇自己舞台上的1位成員。該成員HP回復20點。之後，如果自己的存檔區有2張以上標示#食べ物的活動，將自己存檔區的1張吶喊卡發送給該成員。\n\n「りっちしょこらのハンバーグ」每個回合只能使用一次。",
       "ja": "自分のステージにいるメンバーを1人選ぶ。そのメンバーのHPを20回復する。その後、自分のアーカイブに#食べ物が記載されているアクティビティが2枚以上ある場合、自分のアーカイブからエールカードを1枚、そのメンバーに送る。\n\n「りっちしょこらのハンバーグ」は各ターンに1回しか使用できない。",
       "en": "Choose 1 Member on your Stage. That Member recovers 20 HP. Then, if there are 2 or more #Food Events in your Archive, send 1 Cheer card from your Archive to that Member.\n\n\"Rich Choco Hamburg\" can only be used once per turn.\n",
-      "fr": "選擇自己舞台上的1位成員。該成員HP回復20點。之後，如果自己的存檔區有2張以上標示#食べ物的活動，將自己存檔區的1張吶喊卡發送給該成員。\n\n「りっちしょこらのハンバーグ」每個回合只能使用一次。",
-      "es": "選擇自己舞台上的1位成員。該成員HP回復20點。之後，如果自己的存檔區有2張以上標示#食べ物的活動，將自己存檔區的1張吶喊卡發送給該成員。\n\n「りっちしょこらのハンバーグ」每個回合只能使用一次。"
+      "fr": "Choisissez 1 Membre sur votre Scène. Les Points de vie de ce Membre sont restaurés de 20. Ensuite, si vous avez 2 Activités ou plus avec #食べ物 dans votre Archive, envoyez 1 carte d'encouragement de votre Archive à ce Membre.\n\n「りっちしょこらのハンバーグ」 ne peut être utilisée qu'une fois par tour.",
+      "es": "Elige 1 Miembro en tu Escenario. Ese Miembro recupera 20 de Vida. Después, si tienes 2 o más cartas de Actividad con #食べ物 en tu Archivo, envía 1 carta Cheer de tu Archivo a ese Miembro.\n\n「りっちしょこらのハンバーグ」 solo se puede usar una vez por Turno."
     },
     "id": "hBP08-097",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP08/hBP08-097_C.png"
@@ -60255,8 +60255,8 @@
         "zh-TW": "「ときのそら」在自己的舞台上時，將自己吶喊牌組上方的1張牌，發送給自己的成員。",
         "ja": "自分のステージに「ときのそら」がいる場合、自分のエールデッキの上から1枚を、自分のメンバーに送る。",
         "en": "When \"Tokino Sora\" is on your Stage, send the top card of your Cheer Deck to one of your Members.",
-        "fr": "「ときのそら」在自己的舞台上時，將自己吶喊牌組上方的1張牌，發送給自己的成員。",
-        "es": "「ときのそら」在自己的舞台上時，將自己吶喊牌組上方的1張牌，發送給自己的成員。"
+        "fr": "Lorsque 「ときのそら」 est sur votre Scène, envoyez 1 carte du dessus de votre Deck d'encouragement à votre Membre.",
+        "es": "Cuando 「ときのそら」 está en tu Escenario, envía 1 carta de la parte superior de tu Mazo Cheer a tu Miembro."
       }
     },
     "art2": {
@@ -60307,8 +60307,8 @@
         "zh-TW": "「ときのそら」在自己的舞台上時，將自己吶喊牌組上方的1張牌，發送給自己的成員。",
         "ja": "自分のステージに「ときのそら」がいる場合、自分のエールデッキの上から1枚を、自分のメンバーに送る。",
         "en": "When \"Tokino Sora\" is on your Stage, send the top card of your Cheer Deck to one of your Members.",
-        "fr": "「ときのそら」在自己的舞台上時，將自己吶喊牌組上方的1張牌，發送給自己的成員。",
-        "es": "「ときのそら」在自己的舞台上時，將自己吶喊牌組上方的1張牌，發送給自己的成員。"
+        "fr": "Lorsque 「ときのそら」 est sur votre Scène, envoyez 1 carte du dessus de votre Deck d'encouragement à votre Membre.",
+        "es": "Cuando 「ときのそら」 está en tu Escenario, envía 1 carta de la parte superior de tu Mazo Cheer a tu Miembro."
       }
     },
     "art2": {
@@ -60406,8 +60406,8 @@
       "zh-TW": "這個成員也視為「ときのそら」「AZKi」",
       "ja": "このメンバーは「ときのそら」「AZKi」としても扱う。",
       "en": "This Member is also treated as \"Tokino Sora\" and \"AZKi\".",
-      "fr": "這個成員也視為「ときのそら」「AZKi」",
-      "es": "這個成員也視為「ときのそら」「AZKi」"
+      "fr": "Ce Membre est également considéré comme 「ときのそら」「AZKi」.",
+      "es": "Este Miembro también se considera 「ときのそら」「AZKi」."
     },
     "id": "hSD01-013",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD01/hSD01-013_R.png"
@@ -60448,8 +60448,8 @@
       "zh-TW": "這個成員也視為「ときのそら」「AZKi」",
       "ja": "このメンバーは「ときのそら」「AZKi」としても扱う。",
       "en": "This Member is also treated as \"Tokino Sora\" and \"AZKi\".",
-      "fr": "這個成員也視為「ときのそら」「AZKi」",
-      "es": "這個成員也視為「ときのそら」「AZKi」"
+      "fr": "Ce Membre est également considéré comme 「ときのそら」「AZKi」.",
+      "es": "Este Miembro también se considera 「ときのそら」「AZKi」."
     },
     "id": "hSD01-013",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD01/hSD01-013_P.png"
@@ -60508,8 +60508,8 @@
         "zh-TW": "■與「ときのそら」聯動時，從自己的牌組抽1張牌。\n■與「AZKi」聯動時，將自己吶喊牌組上方的1張牌，發送給自己的中心成員。",
         "ja": "■「ときのそら」とコラボした場合、自分のデッキからカードを1枚引く。\n■「AZKi」とコラボした場合、自分のエールデッキの上から1枚を、自分のセンターメンバーに送る。",
         "en": "■When Collabing with \"Tokino Sora\", draw 1 card from your Deck.\n■When Collabing with \"AZKi\", send the top card of your Cheer Deck to your Center Member.",
-        "fr": "■與「ときのそら」聯動時，從自己的牌組抽1張牌。\n■與「AZKi」聯動時，將自己吶喊牌組上方的1張牌，發送給自己的中心成員。",
-        "es": "■與「ときのそら」聯動時，從自己的牌組抽1張牌。\n■與「AZKi」聯動時，將自己吶喊牌組上方的1張牌，發送給自己的中心成員。"
+        "fr": "■ Lorsque vous faites une Collab avec 「ときのそら」, piochez 1 carte de votre Deck.\n■ Lorsque vous faites une Collab avec 「AZKi」, envoyez 1 carte du dessus de votre Deck d'encouragement à votre Membre Centre.",
+        "es": "■ Cuando Collab con 「ときのそら」, roba 1 carta de tu Mazo.\n■ Cuando Collab con 「AZKi」, envía 1 carta de la parte superior de tu Mazo Cheer a tu Miembro del Centro."
       }
     },
     "effectB": null,
@@ -60757,8 +60757,8 @@
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意數量的「ときのそら」「AZKi」並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「ときのそら」「AZKi」を好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
       "en": "You can only use this if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any number of \"Tokino Sora\" and \"AZKi\" and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: You can only use one per turn.",
-      "fr": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意數量的「ときのそら」「AZKi」並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
-      "es": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意數量的「ときのそら」「AZKi」並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。"
+      "fr": "Vous ne pouvez utiliser ceci que si vous avez 6 cartes ou moins dans votre Main (cette carte non incluse).\n\nRegardez les 4 cartes du dessus de votre Deck. Révélez n'importe quel nombre de 「ときのそら」「AZKi」 et ajoutez-les à votre Main. Remettez le reste au-dessous de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Vous ne pouvez utiliser qu'une seule carte par tour.",
+      "es": "Sin incluir esta carta, solo puedes usar esto si tienes 6 o menos cartas en tu Mano.\n\nMira las 4 cartas superiores de tu Mazo. Revela cualquier número de 「ときのそら」「AZKi」 y añádelas a tu Mano. El resto, ponlas en la parte inferior de tu Mazo en el orden que quieras.\n\nLIMITED: Solo puedes usar 1 por Turno."
     },
     "id": "hSD01-021",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD01/hSD01-021_C.png"
@@ -67219,8 +67219,8 @@
       "zh-TW": "自己舞台上的所有成員都標示#Advent才能使用。\n\n給予對手的中心成員20點特殊傷害。之後，將自己存檔區的1張吶喊卡發送給自己的成員。\n「脱獄を果たした共犯者たち」每個回合只能使用一次。",
       "ja": "自分のステージにいるメンバー全員が#Adventの場合のみ使用できる。\n相手のセンターメンバーに20点特殊ダメージを与える。その後、自分のアーカイブからエールカードを1枚自分のメンバーに送る。\n「脱獄を果たした共犯者たち」は、1ターンに1度しか使用できない。",
       "en": "This can only be used if all Members on your Stage have the #Advent trait.\n\nDeal 20 special damage to the opponent's Center Member. Then, attach 1 Cheer card from your Archive to one of your Members.\n\"Accomplices Who Achieved Escape\" can only be used once per turn.",
-      "fr": "自己舞台上的所有成員都標示#Advent才能使用。\n\n給予對手的中心成員20點特殊傷害。之後，將自己存檔區的1張吶喊卡發送給自己的成員。\n「脱獄を果たした共犯者たち」每個回合只能使用一次。",
-      "es": "自己舞台上的所有成員都標示#Advent才能使用。\n\n給予對手的中心成員20點特殊傷害。之後，將自己存檔區的1張吶喊卡發送給自己的成員。\n「脱獄を果たした共犯者たち」每個回合只能使用一次。"
+      "fr": "Vous ne pouvez utiliser ceci que si tous les Membres sur votre Scène ont #Advent.\n\nInfligez 20 dégâts spéciaux au Membre Centre de votre adversaire. Ensuite, envoyez 1 carte d'encouragement de votre Archive à votre Membre.\n「脱獄を果たした共犯者たち」 ne peut être utilisée qu'une fois par tour.",
+      "es": "Solo puedes usar esto si todos los Miembros en tu Escenario tienen #Advent.\n\nInflige 20 de daño especial al Miembro del Centro del oponente. Después, envía 1 carta Cheer de tu Archivo a tu Miembro.\n「脱獄を果たした共犯者たち」 solo se puede usar una vez por Turno."
     },
     "id": "hSD12-015",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD12/hSD12-015_U.png"
