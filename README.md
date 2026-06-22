@@ -35,12 +35,16 @@ Key properties:
 - **Single source of truth for card colors** lives in `web/utils/colors.js`;
   romaji search aliases for talent names in `web/utils/aliases.js`.
 - **Translations** (ja→zh-TW/en/fr/es, zh→…, en→…) run through Gemini with an
-  hOCG terminology glossary. Results are cached in `translation_cache.json`,
-  persisted via GitHub Actions cache (not git) and seeded from git history on
-  a cold cache.
+  hOCG terminology glossary. Output is checked for leaked source-language text
+  (the ja→zh-TW shared-Han-script "echo") and under-translated strings are
+  retried up a model ladder (flash-lite → flash → pro) rather than cached.
+  Results are cached in `translation_cache.json`, persisted via GitHub Actions
+  cache (not git) and seeded from git history on a cold cache.
 - **Data guard** (`scraper/data_guard.py`) refuses to publish any dataset that
   shrinks below 80% of the published baseline — a source-site redesign fails
-  the run instead of silently shipping a gutted site.
+  the run instead of silently shipping a gutted site. `rules.json` is checked
+  per section (restricted_cards / errata / articles) so one volatile section
+  can't veto the publish.
 
 ## URL structure
 
@@ -67,7 +71,7 @@ a published URL. To intentionally rename a page, edit its registry entry.
 |---|---|
 | Push to `master` | Frontend checks → build SEO/entity pages from committed data → deploy |
 | Weekly cron (Mon 06:00 UTC) or manual dispatch | Restore translation cache → scrape + translate → **data guard** → rebuild SEO pages with fresh data → commit `web/data/` + `sitemap.xml` → deploy |
-| Any job failure | `alert-on-failure` opens or updates a `pipeline-failure` issue |
+| Any job failure | `alert-on-failure` opens or updates a `pipeline-failure` issue; a later successful scrape auto-closes it (`close-issue-on-success`) |
 
 `ci.yml` runs ruff + pytest + frontend checks on every push/PR;
 `guard-google-tags.yml` protects the GA / site-verification tags.
@@ -81,7 +85,7 @@ $env:GEMINI_API_KEY="your-key"       # PowerShell (Linux/Mac: export GEMINI_API_
 uv run python -m scraper.run         # full scrape + translate + guard + indexes
 uv run python -m http.server 8080 --directory web   # serve frontend
 
-uv run pytest                        # 35 tests (parser fixtures, data guard, indexes)
+uv run pytest                        # 63 tests (parsers, data guard, translation, concurrency, indexes)
 uv run ruff check scraper scripts tests
 
 node scripts/build_seo_pages.mjs     # regenerate language/entity pages + sitemap
