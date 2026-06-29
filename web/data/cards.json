@@ -31346,6 +31346,47 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP07/hBP04-083_02_C.png"
   },
   {
+    "image": "cardListImages/hBP04/hBP04-083_P.png",
+    "name": "桃鈴ねね",
+    "type": "成員",
+    "tag": "#JP / #5期生 / #歌 / #絵",
+    "product": "PR卡",
+    "color": "黃",
+    "hp": 90,
+    "bloom": "Debut",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": null,
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_null.png"
+      ],
+      "name": "こんねね～",
+      "damage": 10,
+      "specialAttackImage": null,
+      "effect": {
+        "zh-TW": "自己舞台上的成員在5位以下時，可以從自己的牌組展示1張標示#5期生的Debut成員並放到舞台上。將牌組重新洗牌。",
+        "ja": "自分のステージにいるメンバーが5人以下の場合、自分のデッキから#5期生のDebutメンバーを1枚公開し、ステージに出す。その後、デッキをシャッフルする。",
+        "en": "If you have 5 or fewer Members on your Stage, you may reveal 1 Debut Member with #5期生 from your Deck and place it on the Stage. Shuffle your Deck afterward.",
+        "fr": "Quand le nombre de Membres sur votre Scène est de 5 ou moins, vous pouvez montrer 1 Membre Debut marqué #5期生 de votre Deck et le placer sur la Scène. Mélangez votre Deck.",
+        "es": "Si tienes 5 o menos Miembros en tu Escenario, puedes mostrar 1 Miembro Debut #5期生 de tu Mazo y ponerlo en el Escenario. Baraja tu Mazo."
+      }
+    },
+    "art2": null,
+    "extra": {
+      "zh-TW": "這個成員沒有張數限制",
+      "ja": "このメンバーに枚数制限はない",
+      "en": "This Member has no limit on the number of cards.",
+      "fr": "Ce membre n'a pas de limite de nombre.",
+      "es": "Este Miembro no tiene límite de cantidad."
+    },
+    "id": "hBP04-083",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP04/hBP04-083_P.png"
+  },
+  {
     "image": "cardListImages/hBP04/hBP04-084_C.png",
     "name": "桃鈴ねね",
     "type": "成員",
