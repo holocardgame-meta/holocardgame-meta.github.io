@@ -1175,8 +1175,7 @@ body {
   overflow: hidden;
 }
 .deck-thumb-wrap > img,
-.deck-thumb-wrap > .guide-card-img,
-.deck-thumb-wrap > .guide-card-noimg {
+.deck-thumb-wrap > .guide-card-img {
   width: 100%;
   display: block;
 }

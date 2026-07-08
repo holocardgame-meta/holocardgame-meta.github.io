@@ -67,10 +67,25 @@ function _parsePhases(text) {
   return phases;
 }
 
-function _cardImage(card, cardsMap) {
+const DEAD_IMAGE_HOSTS = ['holocardstrategy.jp'];
+function _isLiveImg(url) {
+  return !!url && !DEAD_IMAGE_HOSTS.some(h => url.includes(h));
+}
+// Resolve a card to a live image URL. Scraped `image` fields point at
+// holocardstrategy.jp (dead), so prefer the official card DB art (github.io)
+// resolved via card_id, and only use the scraped URL when it's still live.
+function _liveCardImg(card, cardsMap) {
   const dbCard = card?.card_id ? cardsMap?.[card.card_id] : null;
-  const src = card?.image || card?.imageUrl || dbCard?.imageUrl || dbCard?.image || '';
+  if (dbCard && _isLiveImg(dbCard.imageUrl)) return dbCard.imageUrl;
+  if (_isLiveImg(card?.image)) return card.image;
+  if (_isLiveImg(card?.imageUrl)) return card.imageUrl;
+  if (dbCard && _isLiveImg(dbCard.image)) return dbCard.image;
+  return null;
+}
+function _cardImage(card, cardsMap) {
+  const src = _liveCardImg(card, cardsMap);
   if (!src) return null;
+  const dbCard = card?.card_id ? cardsMap?.[card.card_id] : null;
   return {
     src,
     alt: card?.name || dbCard?.name || card?.card_id || '',
@@ -211,7 +226,8 @@ function _renderGuidePage(container, { deckInfo, tierNum, recipe, cardsData }) {
     : '';
 
   const vtuber = deckInfo?.vtuber || '';
-  const deckImage = recipe?.deck_image || deckInfo?.image || '';
+  const rawDeckImage = recipe?.deck_image || deckInfo?.image || '';
+  const deckImage = _isLiveImg(rawDeckImage) ? rawDeckImage : '';
   const heroImage = _heroEmblemImage({ recipe, deckInfo, cardsMap });
 
   const heroMeta = [
@@ -255,6 +271,7 @@ function _renderGuidePage(container, { deckInfo, tierNum, recipe, cardsData }) {
       body = `<div class="keycards-grid">${cards.map(c => {
         const role = localized(c.role, '');
         const roleText = typeof role === 'string' ? role : '';
+        const keyImg = _liveCardImg(c, cardsMap);
         const colorDot = c.color
           ? `<span class="cd" style="background:${COLOR_HEX[_normColor(c.color)] || '#666'}"></span>`
           : (() => {
@@ -264,7 +281,7 @@ function _renderGuidePage(container, { deckInfo, tierNum, recipe, cardsData }) {
             })();
         return `
           <article class="keycard clickable-card" data-card-id="${_esc(c.card_id || '')}">
-            ${c.image ? `<img class="keycard-img" src="${safeUrl(c.image)}" alt="${_esc(c.name)}" loading="lazy" decoding="async">` : '<div class="keycard-noimg">🃏</div>'}
+            ${keyImg ? `<img class="keycard-img" src="${safeUrl(keyImg)}" alt="${_esc(c.name)}" loading="lazy" decoding="async">` : '<div class="keycard-noimg">🃏</div>'}
             <div class="keycard-info">
               <div class="keycard-name">${_esc(c.name || '')}</div>
               ${c.card_id ? `<div class="keycard-id">${colorDot}${_esc(c.card_id)}</div>` : ''}

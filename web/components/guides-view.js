@@ -5,6 +5,37 @@ import { COLOR_HEX, normalizeColor as _normalizeColor, colorsFromValue as _color
 const PAGE_SIZE = 50;
 const TIER_LETTER = { 1: 'S', 2: 'A', 3: 'B', 4: 'C' };
 
+const DEAD_IMAGE_HOSTS = ['holocardstrategy.jp'];
+function _isLiveImg(url) {
+  return !!url && !DEAD_IMAGE_HOSTS.some(h => url.includes(h));
+}
+function _cardImg(c, cardsMap) {
+  const db = c.card_id && cardsMap[c.card_id] ? cardsMap[c.card_id] : null;
+  const url = (db && db.imageUrl) || c.image;
+  return _isLiveImg(url) ? url : null;
+}
+function _isOshiCard(c, cardsMap) {
+  const db = c.card_id && cardsMap[c.card_id] ? cardsMap[c.card_id] : null;
+  return !!db && String(db.type || '').includes('主推');
+}
+// Pick a thumbnail that will actually load. holocardstrategy.jp deck screenshots
+// are dead, so prefer a precomputed live `thumb` (build_indexes already picks the
+// oshi card), then the deck's own live image, then the deck's 推し (main
+// character = 大頭) card art, then any live card. Null -> 🃏 placeholder.
+function _liveThumb(deck, cardsMap) {
+  if (_isLiveImg(deck.thumb)) return deck.thumb;
+  if (_isLiveImg(deck.deck_image)) return deck.deck_image;
+  if (_isLiveImg(deck.oshi_image)) return deck.oshi_image;
+  let fallback = null;
+  for (const c of deck.cards || []) {
+    const img = _cardImg(c, cardsMap);
+    if (!img) continue;
+    if (_isOshiCard(c, cardsMap)) return img;
+    if (!fallback) fallback = img;
+  }
+  return fallback;
+}
+
 function _getDeckColors(deck, cardsMap) {
   if (Array.isArray(deck?.colors) && deck.colors.length) {
     return deck.colors.map(_normalizeColor).filter(Boolean);
@@ -201,9 +232,9 @@ export function renderGuidesView(container, allGuides, decksData, cardsData, fil
 function renderGuideCard(deck, cardsMap, index = Infinity) {
   const title = localized(deck.title, deck.deck_id || '');
   const safeTitle = _esc(title);
-  let thumbSrc = deck.deck_image || deck.oshi_image;
+  let thumbSrc = _liveThumb(deck, cardsMap);
   if (index < 4 && window.__LCP_OPTS && window.__LCP_OPTS[index]) thumbSrc = window.__LCP_OPTS[index];
-  const isCardArt = !deck.deck_image && !!deck.oshi_image;
+  const isCardArt = !!thumbSrc && thumbSrc.includes('hololive-cardgame.github.io');
   const imgCls = isCardArt ? 'guide-card-img card-art' : 'guide-card-img';
   const isEager = index < 4;
   const loadAttr = isEager ? '' : ' loading="lazy"';

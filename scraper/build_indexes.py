@@ -62,6 +62,46 @@ def _deck_colors(deck: dict[str, Any], cards_by_id: dict[str, dict[str, Any]]) -
     return sorted(counts, key=lambda color: counts[color], reverse=True)
 
 
+DEAD_IMAGE_HOSTS = ("holocardstrategy.jp",)
+
+
+def _is_live_image(url: str | None) -> bool:
+    """True when the URL is present and not hosted on a known-dead domain."""
+    return bool(url) and not any(host in url for host in DEAD_IMAGE_HOSTS)
+
+
+def _is_oshi_card(db_card: dict[str, Any]) -> bool:
+    """True for 推し (oshi) holomen cards — the only ones with an oshi skill."""
+    return bool(db_card.get("oshiSkill")) or "主推" in str(db_card.get("type", ""))
+
+
+def _guide_thumb(guide: dict[str, Any], cards_by_id: dict[str, dict[str, Any]]) -> str | None:
+    """Pick a thumbnail for a guide card that will actually load.
+
+    Deck screenshots are hotlinked to holocardstrategy.jp (dead), so use the
+    guide's own image only when it's on a live host; otherwise show the deck's
+    推し (oshi / main character) card art — the "大頭" — resolved to the official
+    card DB (github.io), falling back to the first other live card. Returns None
+    when nothing live is available (frontend then shows the 🃏 placeholder).
+    """
+    for key in ("deck_image", "oshi_image"):
+        if _is_live_image(guide.get(key)):
+            return guide[key]
+    fallback = None
+    for card in guide.get("cards") or []:
+        card_id = card.get("card_id")
+        db_card = cards_by_id.get(card_id) if card_id else None
+        resolved = (db_card or {}).get("imageUrl")
+        img = resolved if _is_live_image(resolved) else (card["image"] if _is_live_image(card.get("image")) else None)
+        if not img:
+            continue
+        if db_card and _is_oshi_card(db_card):
+            return img
+        if fallback is None:
+            fallback = img
+    return fallback
+
+
 def _detail_filename(index: int, guide: dict[str, Any]) -> str:
     # No ordering prefix: filenames stay stable when the guide list reorders,
     # so unchanged guides stop churning as renames in git history.
@@ -106,6 +146,7 @@ def build_frontend_indexes(data_dir: Path | str) -> None:
                 "title": guide.get("title"),
                 "deck_image": guide.get("deck_image"),
                 "oshi_image": guide.get("oshi_image"),
+                "thumb": _guide_thumb(guide, cards_by_id),
                 "description": guide.get("description"),
                 "deck_id": guide.get("deck_id"),
                 "date": guide.get("date"),
