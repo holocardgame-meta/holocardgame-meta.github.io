@@ -1161,8 +1161,31 @@ function setupAndroidInstallPrompt() {
   });
 }
 
+// ── Broken-image fallback ────────────────────────────────────────────────
+// Deck/guide/card thumbnails are hotlinked to external hosts that can vanish
+// (holocardstrategy.jp went dead 2026-07). The `error` event doesn't bubble,
+// so we catch it in the capture phase and degrade gracefully: guide thumbnails
+// and key-card images swap to their existing 🃏 placeholder; every other image
+// (hero banner, emblem, oshi spotlight, card grids) hides instead of leaving a
+// broken-image icon on screen.
+function setupImageFallback() {
+  document.addEventListener('error', (e) => {
+    const el = e.target;
+    if (!(el instanceof HTMLImageElement) || el.dataset.imgFallbackDone) return;
+    el.dataset.imgFallbackDone = '1';
+    if (el.classList.contains('guide-card-img')) {
+      el.outerHTML = '<div class="guide-card-noimg">🃏</div>';
+    } else if (el.classList.contains('keycard-img')) {
+      el.outerHTML = '<div class="keycard-noimg">🃏</div>';
+    } else {
+      el.style.display = 'none';
+    }
+  }, true);
+}
+
 // ── Boot ─────────────────────────────────────────────────────────────────
 async function init() {
+  setupImageFallback();
   initI18n();
   applyStaticTranslations();
   renderLangSwitcher();

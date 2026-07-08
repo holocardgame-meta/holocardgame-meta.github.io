@@ -46,8 +46,13 @@ GitHub Pages. No build step, no backend. See README.md for architecture.
 - `scraper/run.py` step order matters; `scraper/data_guard.py` aborts the
   publish if any dataset shrinks below 80% of the `web/data/` baseline
   (`DATA_GUARD_BYPASS=1` to override intentionally).
-- Scrapers fail soft (skip + log) except `fetch_cards`/`scrape_tiers`, which
-  crash the run. Deploy failures auto-file a `pipeline-failure` issue.
+- Scrapers fail soft (skip + log) except `fetch_cards`, which crashes the run.
+  The three holocardstrategy.jp scrapers (`scrape_tiers`, `scrape_all_decks`,
+  `scrape_all_guides`) also fail soft: on a source-loss error `run.py` leaves the
+  staging file absent and `_carry_forward_frozen` restores the last-good
+  `web/data/` copy before the guard — a dead source freezes those datasets
+  instead of crashing or emptying them (that domain went dead 2026-07). Deploy
+  failures auto-file a `pipeline-failure` issue.
 - `web/data/meta.json` `generated_at` = data freshness shown in the footer;
   it comes from `build_indexes.py`, not deploy time.
 

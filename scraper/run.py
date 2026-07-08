@@ -17,6 +17,34 @@ from scraper.scrape_tiers import scrape_tiers
 from scraper.scrape_x import scrape_x_posts
 from scraper.translate import translate_all
 
+# Datasets whose only upstream source is holocardstrategy.jp. That domain went
+# dead (DNS NXDOMAIN) around 2026-07-06, so these three scrapers now fail soft:
+# on a fetch failure we leave the staging file absent and carry the last
+# published copy forward from web/data/ (see _carry_forward_frozen). That keeps
+# the data guard green and the last-good tier/guide data live instead of
+# crashing the whole run at step [2/10].
+SOURCE_LOSS_DATASETS = ["tier_list.json", "decks.json", "all_guides.json"]
+
+
+def _carry_forward_frozen(data_dir: Path, web_data_dir: Path):
+    """Restore datasets whose upstream was unreachable this run.
+
+    Runs after translation and before the data guard: any SOURCE_LOSS_DATASETS
+    file missing from staging (because its scraper failed soft) is copied back
+    from the published web/data/ baseline, so the guard sees no shrink and the
+    frozen, already-translated data republishes unchanged.
+    """
+    for name in SOURCE_LOSS_DATASETS:
+        staging = data_dir / name
+        if staging.exists():
+            continue
+        baseline = web_data_dir / name
+        if baseline.exists():
+            shutil.copy2(baseline, staging)
+            print(f"  [carry-forward] {name}: source unreachable, restored last-good copy from web/data/")
+        else:
+            print(f"  [carry-forward] {name}: source unreachable and no baseline to restore")
+
 
 def _assign_tier_to_guides(data_dir: Path):
     """Cross-reference guide titles against tier list to assign tier levels."""
@@ -198,16 +226,39 @@ def main():
     fetch_cards(data_dir)
 
     print("\n[2/10] Scraping tier list...")
-    scrape_tiers(data_dir)
+    try:
+        scrape_tiers(data_dir)
+    except Exception as exc:
+        print(f"  [warn] tier scrape failed ({exc}); carrying forward last-good tier_list.json")
+        (data_dir / "tier_list.json").unlink(missing_ok=True)
 
     cards_path = data_dir / "cards.json"
 
     print("\n[3/10] Scraping tier-linked deck recipes...")
-    tier_decks = scrape_all_decks(data_dir / "tier_list.json", data_dir, cards_path)
+    tier_decks: list[dict] = []
+    if (data_dir / "tier_list.json").exists():
+        try:
+            tier_decks = scrape_all_decks(data_dir / "tier_list.json", data_dir, cards_path)
+        except Exception as exc:
+            print(f"  [warn] deck-recipe scrape failed ({exc}); carrying forward last-good decks.json")
+            (data_dir / "decks.json").unlink(missing_ok=True)
+    else:
+        print("  tier_list.json absent (source unreachable); skipping deck-recipe scrape")
 
     print("\n[4/10] Scraping ALL deck guides from holocardstrategy...")
     existing_urls = {d["url"] for d in tier_decks if d.get("url")}
-    scrape_all_guides(data_dir, existing_urls, cards_path)
+    try:
+        guides = scrape_all_guides(data_dir, existing_urls, cards_path)
+        if not guides:
+            # Dead source: _discover_all_deck_urls swallows the connection error and
+            # returns nothing, so scrape_all_guides writes an empty list. Drop it so
+            # the guard doesn't flag an "emptied" dataset — carry-forward restores the
+            # last-good guides after translation instead.
+            print("  guide discovery returned nothing (source unreachable); dropping empty all_guides.json")
+            (data_dir / "all_guides.json").unlink(missing_ok=True)
+    except Exception as exc:
+        print(f"  [warn] guide scrape failed ({exc}); carrying forward last-good all_guides.json")
+        (data_dir / "all_guides.json").unlink(missing_ok=True)
 
     print("\n[5/10] Assigning tier levels to guides...")
     _assign_tier_to_guides(data_dir)
@@ -226,6 +277,9 @@ def main():
 
     print("\n[10/10] Translating scraped data (ja -> zh-TW, en, fr)...")
     translate_all(data_dir)
+
+    print("\n[Carry-forward] Restoring datasets whose source was unreachable this run...")
+    _carry_forward_frozen(data_dir, web_data_dir)
 
     print("\n[Guard] Comparing fresh data against published web/data/ baseline...")
     enforce_data_guard(data_dir, web_data_dir)
