@@ -6560,7 +6560,7 @@
     ],
     "key_cards": [
       {
-        "name": "一伊那尓栖",
+        "name": "Inanis",
         "card_id": "hBP08-006",
         "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-006_OSR.png",
         "text": {
@@ -6700,7 +6700,7 @@
     ],
     "key_cards": [
       {
-        "name": "鷹嶺ルイ",
+        "name": "Rui Takane",
         "card_id": "hBP08-005",
         "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-005_OSR.png",
         "text": {
@@ -6712,7 +6712,7 @@
         }
       },
       {
-        "name": "ルイ友",
+        "name": "Rui Friend",
         "card_id": "hBP08-109",
         "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-109_C.png",
         "text": {
@@ -6847,7 +6847,7 @@
         }
       },
       {
-        "name": "音乃瀬奏【1st】",
+        "name": "Otonose Kanade【1st】",
         "card_id": "hBP08-079",
         "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-079_C.png",
         "text": {
@@ -6975,7 +6975,7 @@
     ],
     "key_cards": [
       {
-        "name": "けはい",
+        "name": "Presence",
         "card_id": "hBP08-104",
         "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-104_C.png",
         "text": {
@@ -6987,7 +6987,7 @@
         }
       },
       {
-        "name": "水宮枢【1st】",
+        "name": "Miyamizu Kanata【1st】",
         "card_id": "hBP08-049",
         "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-049_C.png",
         "text": {
@@ -7147,7 +7147,7 @@
         }
       },
       {
-        "name": "思い出のドーナツショップ",
+        "name": "Memory of the Donut Shop",
         "card_id": "hBP08-092",
         "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-092_U.png",
         "text": {
@@ -7270,7 +7270,7 @@
     ],
     "key_cards": [
       {
-        "name": "セシリア・イマーグリーン",
+        "name": "Cecilia Immergreen",
         "card_id": "hBP08-002",
         "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-002_OSR.png",
         "text": {
@@ -7555,7 +7555,7 @@
     ],
     "key_cards": [
       {
-        "name": "桃鈴ねね【2nd】",
+        "name": "Momosuzu Nene【2nd】",
         "card_id": "hBP07-083",
         "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP07/hBP07-083_RR.png",
         "text": {
@@ -7567,7 +7567,7 @@
         }
       },
       {
-        "name": "ねっ子",
+        "name": "Nekko",
         "card_id": "hBP07-110",
         "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP07/hBP07-110_C.png",
         "text": {
@@ -7690,7 +7690,7 @@
     ],
     "key_cards": [
       {
-        "name": "フロンティアスピリット",
+        "name": "Frontier Spirit",
         "card_id": "hBP07-100",
         "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP07/hBP07-100_U.png",
         "text": {
@@ -7825,7 +7825,7 @@
     ],
     "key_cards": [
       {
-        "name": "オーロ・クロニー",
+        "name": "Ouro Kronii",
         "card_id": "hBP07-005",
         "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP07/hBP07-005_OSR.png",
         "text": {
@@ -7837,7 +7837,7 @@
         }
       },
       {
-        "name": "オーロ・クロニー【2nd】",
+        "name": "Ouro Kronii【2nd】",
         "card_id": "hBP07-056",
         "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP07/hBP07-056_RR.png",
         "text": {
@@ -7960,7 +7960,7 @@
     ],
     "key_cards": [
       {
-        "name": "赤井はあと",
+        "name": "Haato Akai",
         "card_id": "hBP07-004",
         "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP07/hBP07-004_OSR.png",
         "text": {
@@ -7972,7 +7972,7 @@
         }
       },
       {
-        "name": "ちゃま旅",
+        "name": "Chama Trip",
         "card_id": "hBP07-096",
         "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP07/hBP07-096_U.png",
         "text": {
@@ -8095,7 +8095,7 @@
     ],
     "key_cards": [
       {
-        "name": "大神ミオ",
+        "name": "Mio Ogami",
         "card_id": "hBP07-003",
         "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP07/hBP07-003_OSR.png",
         "text": {
@@ -8107,7 +8107,7 @@
         }
       },
       {
-        "name": "ビッグゴッドミオーンの占い",
+        "name": "Big God Mioon's Fortune",
         "card_id": "hBP07-098",
         "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP07/hBP07-098_U.png",
         "text": {
@@ -8235,7 +8235,7 @@
     ],
     "key_cards": [
       {
-        "name": "ベスティア・ゼータ",
+        "name": "Vestia Zeta",
         "card_id": "hBP07-002",
         "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP07/hBP07-002_OSR.png",
         "text": {
@@ -8247,7 +8247,7 @@
         }
       },
       {
-        "name": "ベスティア・ゼータ【1st/Buzz】",
+        "name": "Vestia Zeta【1st/Buzz】",
         "card_id": "hBP07-019",
         "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP07/hBP07-019_R.png",
         "text": {
@@ -8370,7 +8370,7 @@
     ],
     "key_cards": [
       {
-        "name": "角巻わため【2nd】",
+        "name": "Tsunomaki Watame【2nd】",
         "card_id": "hBP07-014",
         "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP07/hBP07-014_RR.png",
         "text": {
@@ -8382,7 +8382,7 @@
         }
       },
       {
-        "name": "角巻わため",
+        "name": "Watame Tsunomaki",
         "card_id": "hBP07-001",
         "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP07/hBP07-001_OSR.png",
         "text": {
@@ -8500,7 +8500,7 @@
     ],
     "key_cards": [
       {
-        "name": "猫又おかゆ",
+        "name": "Okayu Nekomatas",
         "card_id": "hBP05-004",
         "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP05/hBP05-004_OSR.png",
         "text": {
@@ -8512,7 +8512,7 @@
         }
       },
       {
-        "name": "猫又おかゆ【2nd】",
+        "name": "Nekomata Okayu【2nd】",
         "card_id": "hBP05-045",
         "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP05/hBP05-045_RR.png",
         "text": {
@@ -8630,7 +8630,7 @@
     ],
     "key_cards": [
       {
-        "name": "ネリッサ・レイヴンクロフトの杖",
+        "name": "Nerissa Ravencroft's Staff",
         "card_id": "hBP05-083",
         "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP05/hBP05-083_U.png",
         "text": {
