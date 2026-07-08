@@ -117,6 +117,54 @@ def _merge_by_deck_id(primary: list[dict], secondary: list[dict]) -> list[dict]:
     return merged
 
 
+_PHASE_MARKER_RE = re.compile(r"(序盤|序章|前期|早期|早盤|中盤|中期戦|中期|終盤|終章|後期|後半)")
+_PHASE_EARLY = ("序盤", "序章", "前期", "早期", "早盤")
+_PHASE_MID = ("中盤", "中期戦", "中期")
+_PHASE_LATE = ("終盤", "終章", "後期", "後半")
+
+
+def _classify_phase(marker: str) -> str | None:
+    if marker in _PHASE_EARLY:
+        return "early"
+    if marker in _PHASE_MID:
+        return "mid"
+    if marker in _PHASE_LATE:
+        return "late"
+    return None
+
+
+def _split_strategy_by_phase(text: str) -> list[str]:
+    """Split a strategy paragraph at its first early/mid/late phase markers.
+
+    Official-deck strategies are one long block; translated whole, the model
+    occasionally echoes the Japanese untranslated. Splitting at phase boundaries
+    keeps each chunk short enough to translate reliably, and mirrors the
+    frontend's phase parser so the rendered phases are unchanged. Returns [text]
+    unchanged when there aren't at least two phase boundaries.
+    """
+    boundaries: list[int] = []
+    seen: set[str] = set()
+    for m in _PHASE_MARKER_RE.finditer(text):
+        phase = _classify_phase(m.group(1))
+        if not phase or phase in seen:
+            continue
+        seen.add(phase)
+        boundaries.append(m.start())
+    if len(boundaries) < 2:
+        return [text]
+    chunks: list[str] = []
+    if boundaries[0] > 0:
+        pre = text[: boundaries[0]].strip()
+        if pre:
+            chunks.append(pre)
+    for i, start in enumerate(boundaries):
+        end = boundaries[i + 1] if i + 1 < len(boundaries) else len(text)
+        chunk = text[start:end].strip()
+        if chunk:
+            chunks.append(chunk)
+    return chunks
+
+
 def _scrape_deck_page(url: str, base_url: str = BASE_URL) -> dict | None:
     """Scrape a single official deck detail page."""
     try:
@@ -183,7 +231,8 @@ def _scrape_deck_page(url: str, base_url: str = BASE_URL) -> dict | None:
         for div in point_box.select(".attention .txt, .txt"):
             txt = div.get_text(strip=True)
             if txt:
-                strategy.append({"text": txt})
+                for chunk in _split_strategy_by_phase(txt):
+                    strategy.append({"text": chunk})
 
     key_cards = []
     for check_box in block.select(".glay-box.check"):

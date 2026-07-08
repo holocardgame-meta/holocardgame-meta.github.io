@@ -103,6 +103,48 @@ def test_scrape_deck_page_uses_given_base_url(monkeypatch):
     assert deck["main_deck"][0]["imageUrl"].startswith("https://hololive-official-cardgame.com/")
 
 
+def test_split_strategy_by_phase():
+    text = "序盤はAです。中盤はBです。終盤はCです。"
+    assert so._split_strategy_by_phase(text) == ["序盤はAです。", "中盤はBです。", "終盤はCです。"]
+
+
+def test_split_strategy_keeps_preamble():
+    assert so._split_strategy_by_phase("まず基本方針。序盤はA。中盤はB。") == [
+        "まず基本方針。", "序盤はA。", "中盤はB。",
+    ]
+
+
+def test_split_strategy_passthrough_without_two_phases():
+    # no markers, or only a single phase marker -> left as one chunk
+    assert so._split_strategy_by_phase("マーカー無しの説明文です。") == ["マーカー無しの説明文です。"]
+    assert so._split_strategy_by_phase("序盤だけの短い文。") == ["序盤だけの短い文。"]
+
+
+JP_STRATEGY_PAGE = """
+<html><body>
+<div class="deck-con">
+  <h1>おすすめデッキ紹介「テスト」</h1>
+  <div class="block">
+    <div class="card-box holomen"><img src="/img/hBP08-003_OSR.png"><p>〈テスト〉</p></div>
+    <div class="card-box list"><div class="card"><img src="/img/hBP08-010_R.png"><span class="num">x4</span></div></div>
+    <div class="glay-box point"><div class="txt">序盤はAをする。中盤はBをする。終盤はCをする。</div></div>
+  </div>
+</div>
+</body></html>
+"""
+
+
+def test_scrape_deck_page_splits_multiphase_strategy(monkeypatch):
+    monkeypatch.setattr(so.httpx, "get", lambda *a, **k: FakeResponse(JP_STRATEGY_PAGE))
+    deck = so._scrape_deck_page(
+        "https://hololive-official-cardgame.com/deck/x/",
+        base_url="https://hololive-official-cardgame.com",
+    )
+    assert [s["text"] for s in deck["strategy"]] == [
+        "序盤はAをする。", "中盤はBをする。", "終盤はCをする。",
+    ]
+
+
 def test_parse_card_id_and_count():
     assert so._parse_card_id_from_src("/img/hBP01-009_RR.png") == "hBP01-009"
     assert so._parse_card_id_from_src("/img/logo.png") == ""

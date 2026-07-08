@@ -102,7 +102,7 @@ const TRANSLATIONS = {
     tournament_oshi: '推し',
     tournament_main_deck: '主牌組',
     tournament_cheer_deck: '應援牌組',
-    tournament_oshi_card: '推しカード',
+    tournament_oshi_card: '推し卡',
     tournament_cards: '張',
     tournament_view_decklog: '在 Deck Log 查看 →',
     tournament_no_decks: '尚無大賽牌組資料。',
