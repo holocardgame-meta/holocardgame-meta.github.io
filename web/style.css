@@ -3930,10 +3930,11 @@ body {
   object-fit: cover;
   border-radius: 12px 12px 0 0;
 }
-/* Oshi card art is a full portrait card scan. The cover is tall enough to show
-   the whole face without cropping it, framed near the top of the card. */
+/* Oshi card art is a full portrait card scan. The tall cover shows the whole
+   face; center the framing on it. A single value can't be perfect for every
+   card's art, but center 18% centers the face on the majority. */
 .guide-card-img.card-art {
-  object-position: center 8%;
+  object-position: center 18%;
 }
 .guide-card-noimg {
   width: 100%;
