@@ -572,14 +572,8 @@ def translate_guides(data_dir: Path):
     print("[translate] all_guides.json done")
 
 
-def translate_official(data_dir: Path):
-    official_path = data_dir / "official_decks.json"
-    if not official_path.exists():
-        print("[translate] official_decks.json not found, skipping")
-        return
-
-    decks = json.loads(official_path.read_text(encoding="utf-8"))
-
+def _translate_official_texts(decks: list[dict], source: str, targets: list[str]):
+    """Translate description/strategy/key_cards text fields into multilang dicts."""
     unique_texts = set()
     for deck in decks:
         if isinstance(deck.get("description"), str) and deck["description"].strip():
@@ -592,21 +586,57 @@ def translate_official(data_dir: Path):
                 unique_texts.add(k["text"])
 
     unique_list = sorted(unique_texts)
-    print(f"  Official decks: {len(unique_list)} unique strings")
-
-    lang_maps = {}
-    for lang in TARGET_LANGS_EN:
-        lang_maps[lang] = _translate_unique_map(unique_list, "en", lang)
+    lang_maps = {lang: _translate_unique_map(unique_list, source, lang) for lang in targets}
 
     for deck in decks:
         if isinstance(deck.get("description"), str) and deck["description"].strip():
-            deck["description"] = _make_multilang_from_maps(deck["description"], "en", lang_maps)
+            deck["description"] = _make_multilang_from_maps(deck["description"], source, lang_maps)
         for s in deck.get("strategy", []):
             if isinstance(s.get("text"), str) and s["text"].strip():
-                s["text"] = _make_multilang_from_maps(s["text"], "en", lang_maps)
+                s["text"] = _make_multilang_from_maps(s["text"], source, lang_maps)
         for k in deck.get("key_cards", []):
             if isinstance(k.get("text"), str) and k["text"].strip():
-                k["text"] = _make_multilang_from_maps(k["text"], "en", lang_maps)
+                k["text"] = _make_multilang_from_maps(k["text"], source, lang_maps)
+
+
+def _render_jp_names_to_en(decks: list[dict]):
+    """Render JP decks' title/oshi into a plain English string.
+
+    Official deck names are shown raw (not localized) and EN-sourced decks carry
+    English names, so translate the JP decks' Japanese title/oshi to English to
+    match — keeps them plain strings, so no schema/frontend change is needed.
+    """
+    unique = set()
+    for deck in decks:
+        for field in ("title", "oshi"):
+            if isinstance(deck.get(field), str) and deck[field].strip():
+                unique.add(deck[field])
+    if not unique:
+        return
+    en_map = _translate_unique_map(sorted(unique), "ja", "en")
+    for deck in decks:
+        for field in ("title", "oshi"):
+            if isinstance(deck.get(field), str) and deck[field].strip():
+                deck[field] = en_map.get(deck[field], deck[field])
+
+
+def translate_official(data_dir: Path):
+    official_path = data_dir / "official_decks.json"
+    if not official_path.exists():
+        print("[translate] official_decks.json not found, skipping")
+        return
+
+    decks = json.loads(official_path.read_text(encoding="utf-8"))
+
+    # EN-sourced decks keep their English names and translate en->others; JP-sourced
+    # decks translate ja->others and get their title/oshi rendered into English.
+    en_decks = [d for d in decks if d.get("source_lang", "en") != "ja"]
+    jp_decks = [d for d in decks if d.get("source_lang") == "ja"]
+    print(f"  Official decks: {len(en_decks)} EN-sourced, {len(jp_decks)} JP-sourced")
+
+    _translate_official_texts(en_decks, "en", TARGET_LANGS_EN)
+    _translate_official_texts(jp_decks, "ja", TARGET_LANGS_JA)
+    _render_jp_names_to_en(jp_decks)
 
     official_path.write_text(json.dumps(decks, ensure_ascii=False, indent=2), encoding="utf-8")
     print("[translate] official_decks.json done")

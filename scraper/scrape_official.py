@@ -11,7 +11,10 @@ from bs4 import BeautifulSoup
 from scraper.concurrency import concurrent_map
 
 BASE_URL = "https://en.hololive-official-cardgame.com"
-LIST_URL = f"{BASE_URL}/deck/recommend/"
+# The JP site runs ~2 booster sets ahead of the EN mirror, so it carries the
+# newest recommended decks (e.g. the 6/18 hBP08 set incl. FUWAMOCO) that EN
+# hasn't localized yet. We crawl both and merge (EN wins overlaps).
+JP_BASE_URL = "https://hololive-official-cardgame.com"
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; HoloCardMeta/1.0)"}
 REQUEST_DELAY = 1.5
 
@@ -27,12 +30,13 @@ def _parse_count(text: str) -> int:
     return int(m.group(1)) if m else 1
 
 
-def _collect_deck_urls() -> list[dict]:
-    """Crawl all paginated list pages, return [{url, date_text, title}]."""
+def _collect_deck_urls(base_url: str = BASE_URL) -> list[dict]:
+    """Crawl all paginated recommend-list pages for one site, return [{url, date_text}]."""
+    list_url = f"{base_url}/deck/recommend/"
     results = []
     page = 1
     while True:
-        url = LIST_URL if page == 1 else f"{LIST_URL}page/{page}/"
+        url = list_url if page == 1 else f"{list_url}page/{page}/"
         try:
             resp = httpx.get(url, timeout=30, follow_redirects=True, headers=HEADERS)
             if resp.status_code != 200:
@@ -54,16 +58,9 @@ def _collect_deck_urls() -> list[dict]:
         for a in links:
             href = a["href"]
             if not href.startswith("http"):
-                href = BASE_URL + href
+                href = base_url + href
             text = a.get_text(" ", strip=True)
-            date_m = re.search(
-                r"((?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\.\s*\d{1,2},\s*\d{4})",
-                text,
-            )
-            results.append({
-                "url": href,
-                "date_text": date_m.group(1) if date_m else "",
-            })
+            results.append({"url": href, "date_text": _extract_date_text(text)})
 
         page += 1
         time.sleep(REQUEST_DELAY)
@@ -83,10 +80,25 @@ _MONTH_MAP = {
     "Sep": "09", "Oct": "10", "Nov": "11", "Dec": "12",
 }
 
+_EN_DATE_RE = re.compile(
+    r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\.\s*\d{1,2},\s*\d{4}"
+)
+_JP_DATE_RE = re.compile(r"\d{4}\.\d{1,2}\.\d{1,2}")
+
+
+def _extract_date_text(text: str) -> str:
+    """Find an EN ('Jun. 18, 2026') or JP ('2026.06.18') date inside list text."""
+    m = _EN_DATE_RE.search(text) or _JP_DATE_RE.search(text)
+    return m.group(0) if m else ""
+
 
 def _parse_date(text: str) -> str:
-    """Convert 'Feb. 27, 2026' to '2026-02-27'."""
-    m = re.match(r"(\w+)\.\s*(\d{1,2}),\s*(\d{4})", text.strip())
+    """Convert 'Feb. 27, 2026' (EN) or '2026.06.18' (JP) to '2026-02-27'."""
+    text = text.strip()
+    jp = re.match(r"(\d{4})\.(\d{1,2})\.(\d{1,2})", text)
+    if jp:
+        return f"{jp.group(1)}-{jp.group(2).zfill(2)}-{jp.group(3).zfill(2)}"
+    m = re.match(r"(\w+)\.\s*(\d{1,2}),\s*(\d{4})", text)
     if not m:
         return ""
     mon = _MONTH_MAP.get(m.group(1), "01")
@@ -94,7 +106,18 @@ def _parse_date(text: str) -> str:
     return f"{m.group(3)}-{mon}-{day}"
 
 
-def _scrape_deck_page(url: str) -> dict | None:
+def _merge_by_deck_id(primary: list[dict], secondary: list[dict]) -> list[dict]:
+    """Merge two deck lists by deck_id: primary wins, secondary's new ids appended."""
+    seen = {d["deck_id"] for d in primary}
+    merged = list(primary)
+    for d in secondary:
+        if d["deck_id"] not in seen:
+            seen.add(d["deck_id"])
+            merged.append(d)
+    return merged
+
+
+def _scrape_deck_page(url: str, base_url: str = BASE_URL) -> dict | None:
     """Scrape a single official deck detail page."""
     try:
         resp = httpx.get(url, timeout=30, follow_redirects=True, headers=HEADERS)
@@ -127,7 +150,7 @@ def _scrape_deck_page(url: str) -> dict | None:
         if img:
             oshi_image = img.get("src", "")
             if not oshi_image.startswith("http"):
-                oshi_image = BASE_URL + oshi_image
+                oshi_image = base_url + oshi_image
             oshi_card_id = _parse_card_id_from_src(oshi_image)
         p = oshi_box.select_one("p")
         if p:
@@ -145,7 +168,7 @@ def _scrape_deck_page(url: str) -> dict | None:
                 continue
             src = img.get("src", "")
             if not src.startswith("http"):
-                src = BASE_URL + src
+                src = base_url + src
             card_id = _parse_card_id_from_src(src)
             count = _parse_count(num_span.get_text()) if num_span else 1
             target.append({
@@ -174,7 +197,7 @@ def _scrape_deck_page(url: str) -> dict | None:
         if card_img:
             img_url = card_img.get("src", "")
             if not img_url.startswith("http"):
-                img_url = BASE_URL + img_url
+                img_url = base_url + img_url
             kid = _parse_card_id_from_src(img_url)
         key_cards.append({"name": name, "card_id": kid, "imageUrl": img_url, "text": txt})
 
@@ -194,29 +217,46 @@ def _scrape_deck_page(url: str) -> dict | None:
     }
 
 
-def scrape_official(output_dir: Path) -> list[dict]:
-    """Scrape all official recommended decks and save to official_decks.json."""
-    output_dir.mkdir(parents=True, exist_ok=True)
-    print("  Collecting deck URLs from listing pages...")
-    entries = _collect_deck_urls()
-    print(f"  Found {len(entries)} deck URLs")
+def _scrape_site(base_url: str, source_lang: str) -> list[dict]:
+    """Collect + scrape every recommended deck for one site, tagged with its language."""
+    print(f"  Collecting deck URLs from {base_url} ...")
+    entries = _collect_deck_urls(base_url)
+    print(f"  Found {len(entries)} deck URLs ({source_lang})")
 
-    print(f"  Scraping {len(entries)} deck pages (concurrent)...")
-    pages = concurrent_map(lambda e: _scrape_deck_page(e["url"]), entries)
+    pages = concurrent_map(lambda e: _scrape_deck_page(e["url"], base_url), entries)
 
-    results = []
+    decks = []
     for entry, deck in zip(entries, pages):
         if not deck:
             continue
         deck["date"] = _parse_date(entry.get("date_text", ""))
         deck["source"] = "official"
+        deck["source_lang"] = source_lang
         slug = entry["url"].rstrip("/").split("/")[-1]
         deck["deck_id"] = f"official-{slug}"
-        results.append(deck)
+        decks.append(deck)
+    return decks
+
+
+def scrape_official(output_dir: Path) -> list[dict]:
+    """Scrape official recommended decks from the EN and JP sites, merged.
+
+    EN is authoritative for overlapping decks (English names, no machine
+    translation); JP contributes only its exclusive newer decks (the sets the
+    EN mirror hasn't localized yet).
+    """
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    en_decks = _scrape_site(BASE_URL, "en")
+    jp_decks = _scrape_site(JP_BASE_URL, "ja")
+    results = _merge_by_deck_id(en_decks, jp_decks)
 
     out_path = output_dir / "official_decks.json"
     out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"  Saved {len(results)} official decks to {out_path}")
+    print(
+        f"  Saved {len(results)} official decks "
+        f"({len(en_decks)} EN + {len(jp_decks)} JP, merged) to {out_path}"
+    )
     return results
 
 
