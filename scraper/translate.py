@@ -135,8 +135,20 @@ _JA_GRAMMAR_RE = re.compile(
 _JA_QUOTE_RE = re.compile(r"[「『][^」』]*[」』]")
 
 
+# Scripts that never occur in valid hOCG output (Hebrew, Arabic, Indic incl.
+# Gujarati, Thai). Their presence means the model hallucinated a name into
+# garbage — e.g. 風真いろは -> 風真 આઈરા哈 when translating around a kana name.
+_GARBLED_SCRIPT_RE = re.compile(r"[֐-߿ऀ-෿฀-๿]")
+
+
+def _has_garbled_script(text: str) -> bool:
+    """True when the text contains a garbled non-target script (hallucinated name)."""
+    return bool(_GARBLED_SCRIPT_RE.search(text))
+
+
 def _looks_untranslated(text: object, target: str) -> bool:
-    """True when a non-Japanese target value still reads as Japanese prose.
+    """True when a non-Japanese target value still reads as Japanese prose, or the
+    model garbled a name into an exotic (non-hOCG) script.
 
     Used both to reject fresh under-translations before caching and to evict
     sticky ones already in the cache. After dropping quoted names, even one
@@ -145,6 +157,8 @@ def _looks_untranslated(text: object, target: str) -> bool:
     """
     if target == "ja" or not isinstance(text, str):
         return False
+    if _has_garbled_script(text):
+        return True
     outside_names = _JA_QUOTE_RE.sub("", text)
     return len(_JA_GRAMMAR_RE.findall(outside_names)) >= 1
 

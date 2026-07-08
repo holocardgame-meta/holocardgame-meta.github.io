@@ -167,6 +167,19 @@ def test_looks_untranslated_ignores_no_inside_kana_names():
     assert translate._looks_untranslated("ジジ一人の効果を使用。", "zh-TW") is True
 
 
+def test_looks_untranslated_flags_garbled_exotic_scripts():
+    """A hallucinated name in an exotic script (Gujarati/Hebrew/Arabic/Thai)
+    never occurs in valid output — treat it as garbled so it's rejected+retried."""
+    assert translate._looks_untranslated("前期請使用「風真 આઈરા哈」佈局。", "zh-TW") is True
+    assert translate._looks_untranslated("前期請使用「風真いろは」佈局。", "zh-TW") is False
+
+
+def test_is_poisoned_entry_evicts_garbled_names():
+    src = "Set up [風真いろは] early."
+    garbled = "前期請使用〈風真 આઈરા哈〉佈局。"
+    assert translate._is_poisoned_entry(translate._cache_key("en", "zh-TW", src), garbled) is True
+
+
 def test_is_poisoned_entry_evicts_undertranslated_target():
     """A zh-TW value that still reads as Japanese prose is poison even though it
     differs from the source (so the exact-match check alone misses it)."""
