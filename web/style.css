@@ -3926,16 +3926,18 @@ body {
 }
 .guide-card-img {
   width: 100%;
-  height: 160px;
+  height: 230px;
   object-fit: cover;
   border-radius: 12px 12px 0 0;
 }
+/* Oshi card art is a full portrait card scan. The cover is tall enough to show
+   the whole face without cropping it, framed near the top of the card. */
 .guide-card-img.card-art {
-  object-position: center 20%;
+  object-position: center 8%;
 }
 .guide-card-noimg {
   width: 100%;
-  height: 160px;
+  height: 230px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4052,7 +4054,7 @@ body {
 
   /* Cards compact */
   .guide-card { min-height: 240px; }
-  .guide-card-img, .guide-card-noimg { height: 140px; }
+  .guide-card-img, .guide-card-noimg { height: 200px; }
   .guide-card-body { padding: 0.6rem; }
   .guide-card-title { font-size: 0.88rem; }
   .guide-card-desc {
