@@ -600,17 +600,21 @@ def _translate_official_texts(decks: list[dict], source: str, targets: list[str]
 
 
 def _render_jp_names_to_en(decks: list[dict]):
-    """Render JP decks' title/oshi into a plain English string.
+    """Render JP decks' title/oshi/key-card names into plain English strings.
 
     Official deck names are shown raw (not localized) and EN-sourced decks carry
-    English names, so translate the JP decks' Japanese title/oshi to English to
-    match — keeps them plain strings, so no schema/frontend change is needed.
+    English names, so translate the JP decks' Japanese title, oshi and key-card
+    names to English to match — keeps them plain strings, so no schema/frontend
+    change is needed.
     """
     unique = set()
     for deck in decks:
         for field in ("title", "oshi"):
             if isinstance(deck.get(field), str) and deck[field].strip():
                 unique.add(deck[field])
+        for k in deck.get("key_cards", []):
+            if isinstance(k.get("name"), str) and k["name"].strip():
+                unique.add(k["name"])
     if not unique:
         return
     en_map = _translate_unique_map(sorted(unique), "ja", "en")
@@ -618,6 +622,9 @@ def _render_jp_names_to_en(decks: list[dict]):
         for field in ("title", "oshi"):
             if isinstance(deck.get(field), str) and deck[field].strip():
                 deck[field] = en_map.get(deck[field], deck[field])
+        for k in deck.get("key_cards", []):
+            if isinstance(k.get("name"), str) and k["name"].strip():
+                k["name"] = en_map.get(k["name"], k["name"])
 
 
 def translate_official(data_dir: Path):

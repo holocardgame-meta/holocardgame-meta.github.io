@@ -19,13 +19,15 @@ def test_translate_official_handles_en_and_jp_sources(tmp_path, monkeypatch):
             "deck_id": "official-hbp06_001", "source_lang": "en",
             "title": "Recommended Deck: Niko", "oshi": "Koganei Niko",
             "description": "An English deck.",
-            "strategy": [{"text": "Attack."}], "key_cards": [{"text": "Key."}],
+            "strategy": [{"text": "Attack."}],
+            "key_cards": [{"name": "Koganei Niko", "text": "Key."}],
         },
         {
             "deck_id": "official-hbp08_003", "source_lang": "ja",
             "title": "おすすめデッキ紹介「FUWAMOCO」", "oshi": "FUWAMOCO",
             "description": "日本語の説明。",
-            "strategy": [{"text": "攻める。"}], "key_cards": [{"text": "鍵。"}],
+            "strategy": [{"text": "攻める。"}],
+            "key_cards": [{"name": "思い出のドーナツショップ", "text": "鍵。"}],
         },
     ]
     (tmp_path / "official_decks.json").write_text(
@@ -51,3 +53,7 @@ def test_translate_official_handles_en_and_jp_sources(tmp_path, monkeypatch):
     assert jp["description"]["zh-TW"] == "日本語の説明。[zh-TW]"
     assert jp["strategy"][0]["text"]["ja"] == "攻める。"
     assert jp["key_cards"][0]["text"]["zh-TW"] == "鍵。[zh-TW]"
+    # JP key-card *names* render to a plain English string (like title/oshi)...
+    assert jp["key_cards"][0]["name"] == "思い出のドーナツショップ[en]"
+    # ...while EN decks keep their already-English key-card names untouched.
+    assert en["key_cards"][0]["name"] == "Koganei Niko"
