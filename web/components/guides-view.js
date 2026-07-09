@@ -232,9 +232,16 @@ export function renderGuidesView(container, allGuides, decksData, cardsData, fil
 function renderGuideCard(deck, cardsMap, index = Infinity) {
   const title = localized(deck.title, deck.deck_id || '');
   const safeTitle = _esc(title);
-  let thumbSrc = _liveThumb(deck, cardsMap);
-  if (index < 4 && window.__LCP_OPTS && window.__LCP_OPTS[index]) thumbSrc = window.__LCP_OPTS[index];
-  const isCardArt = !!thumbSrc && thumbSrc.includes('hololive-cardgame.github.io');
+  // Thumbnail = the deck's card portrait via _liveThumb. The old top-4 LCP webp
+  // override is dropped: once thumbnails became card portraits it served stale,
+  // mismatched deck screenshots for the first cards.
+  const thumbSrc = _liveThumb(deck, cardsMap);
+  // Card portraits — guide/tier resolved cards (github.io) and official oshi
+  // cards (hololive-official-cardgame.com) — get the face-focused crop.
+  const isCardArt = !!thumbSrc && (
+    thumbSrc.includes('hololive-cardgame.github.io') ||
+    thumbSrc.includes('hololive-official-cardgame.com')
+  );
   const imgCls = isCardArt ? 'guide-card-img card-art' : 'guide-card-img';
   const isEager = index < 4;
   const loadAttr = isEager ? '' : ' loading="lazy"';
