@@ -6608,6 +6608,159 @@
     "deck_id": "official-hbp08_006"
   },
   {
+    "title": "Recommended Deck Introduction \"Kanade Otonose\"",
+    "description": "",
+    "url": "https://hololive-official-cardgame.com/deck/hbp08_007/",
+    "oshi": "Kanade Otonose",
+    "oshi_card_id": "hBP08-007",
+    "oshi_image": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-007_OSR.png",
+    "main_deck": [
+      {
+        "card_id": "hBP03-080",
+        "count": 5,
+        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP03-080_C_02.png"
+      },
+      {
+        "card_id": "hBP08-077",
+        "count": 4,
+        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-077_C.png"
+      },
+      {
+        "card_id": "hBP08-078",
+        "count": 3,
+        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-078_U.png"
+      },
+      {
+        "card_id": "hBP03-083",
+        "count": 3,
+        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP03/hBP03-083_R.png"
+      },
+      {
+        "card_id": "hBP08-079",
+        "count": 2,
+        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-079_C.png"
+      },
+      {
+        "card_id": "hBP08-080",
+        "count": 2,
+        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-080_C.png"
+      },
+      {
+        "card_id": "hBP08-081",
+        "count": 4,
+        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-081_R.png"
+      },
+      {
+        "card_id": "hBP08-082",
+        "count": 4,
+        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-082_U.png"
+      },
+      {
+        "card_id": "hBP08-083",
+        "count": 4,
+        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-083_RR.png"
+      },
+      {
+        "card_id": "hSD14-010",
+        "count": 4,
+        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hSD14-010_C_02.png"
+      },
+      {
+        "card_id": "hBP01-104",
+        "count": 4,
+        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP01/hBP01-104_C.png"
+      },
+      {
+        "card_id": "hBP08-091",
+        "count": 3,
+        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-091_U.png"
+      },
+      {
+        "card_id": "hBP01-108",
+        "count": 1,
+        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP01/hBP01-108_U.png"
+      },
+      {
+        "card_id": "hBP08-101",
+        "count": 4,
+        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-101_U.png"
+      },
+      {
+        "card_id": "hBP03-097",
+        "count": 3,
+        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP03/hBP03-097_C.png"
+      }
+    ],
+    "cheer_deck": [
+      {
+        "card_id": "hY06-001",
+        "count": 20,
+        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hSD07/hY06-001_C.png"
+      }
+    ],
+    "main_deck_count": 50,
+    "cheer_deck_count": 20,
+    "strategy": [
+      {
+        "text": {
+          "ja": "序盤はhBP01-104〈ふつうのパソコン〉やhBP08-091〈クリエイターパソコン〉を使ってDebutホロメンをステージに出しましょう。後攻の場合、hBP08-077〈音乃瀬奏〉のコラボエフェクトによって1stホロメンの〈音乃瀬奏〉と〈リコーダー〉を1枚ずつ手札に加えることができるので、次のターン問題なくBloomできるようになります。",
+          "zh-TW": "序盤請透過hBP01-104〈ふつうのパソコン〉或hBP08-091〈クリエイターパソコン〉將Debut成員放置於舞台上吧。若為後攻，則透過hBP08-077〈音乃瀬奏〉的聯動效果，便能各將1張1st成員〈音乃瀬奏〉與〈リコーダー〉加入手牌，因此下回合便能順利進行綻放。",
+          "en": "In the early game, deploy Debut Holomen onto the Stage using hBP01-104 〈Normal Computer〉 or hBP08-091 〈Creator PC〉. If you go second, hBP07-077 〈Otonose Kanade〉's Collab effect allows you to add 1 〈Otonose Kanade〉 and 1 〈Recorder〉 of your 1st Holomen to your Hand, enabling you to Bloom without issue on the next turn.",
+          "fr": "En début de partie, déployons les Holomen Debut sur la Scène avec hBP01-104〈ふつうのパソコン〉 ou hBP08-091〈クリエイターパソコン〉. Si vous jouez en second, l'effet Collab de hBP08-077〈音乃瀬奏〉 vous permet d'ajouter une carte 〈音乃瀬奏〉 et une carte 〈リコーダー〉 de 1er Holomen à votre main, vous permettant de faire un Bloom sans problème au tour suivant.",
+          "es": "Al principio de la partida, usa hBP01-104〈ふつうのパソコン〉o hBP08-091〈クリエイターパソコン〉para poner Holomen Debut en el Escenario. Si vas segundo, con el efecto Collab de hBP08-077〈音乃瀬奏〉, puedes añadir 1〈音乃瀬奏〉y 1〈リコーダー〉de 1st Holomen a tu mano, lo que te permite hacer Bloom sin problemas en el siguiente turno."
+        }
+      },
+      {
+        "text": {
+          "ja": "中盤はDebutホロメンを1stホロメンにBloomさせましょう。1stホロメンや",
+          "zh-TW": "中盤請將Debut成員對1st成員進行綻放吧。1st成員與",
+          "en": "In the mid-game, let's Bloom Debut Holomen to your 1st Holomen.",
+          "fr": "En milieu de partie, faisons un Bloom sur le Holomen Debut vers le 1er Holomen.",
+          "es": "A mitad de partida, hagamos Bloom del Holomen Debut al 1er Holomen."
+        }
+      },
+      {
+        "text": {
+          "ja": "終盤に必要な2ndホロメンが足りない場合は、hBP08-101〈We are ReGLOSS〉を使ってその状況に応じて必要なホロメンを手札に加えましょう。アーカイブからエールを送ることができるホロメンが多く入っているので、早速hBP08-007〈音乃瀬奏〉のSP推しスキルを使って一時的に相手のステージよりエールが多い状況を作るのもおすすめです。終盤は1stホロメンを2ndホロメンにBloomさせましょう。hBP08-083〈音乃瀬奏〉は、自分のステージのエールの数が相手より多ければ多いほどアーツが強力になります。アーカイブにエールがある場合は自身のブルームエフェクトを、まだhBP08-007〈音乃瀬奏〉のSP推しスキルを使っていない場合はSP推しスキルを使ってステージにたくさんのエールを送りましょう。アーツを使った後はhBP08-007〈音乃瀬奏〉の推しスキルを使うことで自分のセンターの〈音乃瀬奏〉と自分の#ReGLOSSを持つバックホロメン1人を交代させることができます。自分の#ReGLOSSを持つ2ndホロメンがいるとHPが+50されるhBP08-079〈音乃瀬奏〉と交代させ、相手のアーツダメージをしっかりと受け止めることで攻守共に万全な状態を維持しましょう。",
+          "zh-TW": "若終盤所需的2nd成員不足，請利用hBP08-101〈We are ReGLOSS〉，根據情況將必要的成員加入手牌吧。牌組中放入了許多能從歸檔區送出吶喊的成員，因此建議立刻使用hBP08-007〈音乃瀬奏〉的SP推技能，暫時製造出比對手舞台更多的吶喊情況。終盤請將1st成員對2nd成員進行綻放吧。hBP08-083〈音乃瀬奏〉，其藝能會隨著我方舞台上的吶喊數量比對手多而變得更強。若歸檔區有吶喊，請使用自身的綻放效果，若尚未使用的話，則使用SP推技能，將大量吶喊送往舞台吧。使用藝能後，透過使用hBP08-007〈音乃瀬奏〉的推技能，便能將我方的中心〈音乃瀬奏〉與我方擁有#ReGLOSS標籤的後方成員1名進行交換。若有我方擁有#ReGLOSS標籤的2nd成員，HP會+50的hBP08-079〈音乃瀬奏〉進行交換，並確實承受對手的藝能傷害，以維持攻守兼備的萬全狀態吧。",
+          "en": "If you lack the necessary 2nd Holomen for the late game, use hBP08-101 〈We are ReGLOSS〉 to add the required Holomen to your Hand depending on the situation. Since many Holomen that can send Cheer from the Archive are included, it is also recommended to temporarily create a situation where you have more Cheer than the opponent's Stage by using hBP07-007 〈Otonose Kanade〉's SP Oshi Skill. In the late game, Bloom your 1st Holomen to your 2nd Holomen. hBP08-083 〈Otonose Kanade〉's Arts become more powerful the more Cheer you have on your Stage compared to the opponent. If you have Cheer in the Archive, use its Bloom effect, and if you haven't used hBP07-007 〈Otonose Kanade〉's SP Oshi Skill yet, use the SP Oshi Skill to send a lot of Cheer to the Stage. After using Arts, use hBP07-007 〈Otonose Kanade〉's Oshi Skill to swap your Center 〈Otonose Kanade〉 with 1 of your Back Holomen with #ReGLOSS. By swapping with hBP08-079 〈Otonose Kanade〉, who gains +50 HP if you have a 2nd Holomen with #ReGLOSS, and firmly receiving the opponent's Arts damage, you can maintain a perfect state in both offense and defense.",
+          "fr": "Si vous manquez de 2nd Holomen nécessaires en fin de partie, utilisez hBP08-101〈We are ReGLOSS〉 pour ajouter les Holomen nécessaires à votre main en fonction de la situation. Comme de nombreux Holomen peuvent envoyer des Encouragements depuis l'Archive, il est également recommandé d'utiliser la compétence SP Oshi de hBP08-007〈音乃瀬奏〉 pour créer temporairement une situation où vous avez plus d'Encouragements que l'adversaire sur la Scène. En fin de partie, faisons un Bloom sur le 1er Holomen vers le 2nd Holomen. hBP08-083〈音乃瀬奏〉 voit ses Arts devenir plus puissants à mesure que le nombre d'Encouragements sur votre Scène dépasse celui de l'adversaire. Si vous avez des Encouragements dans l'Archive, utilisez votre effet Bloom, et si vous n'avez pas encore utilisé la compétence SP Oshi de hBP08-007〈音乃瀬奏〉, utilisez la compétence SP Oshi pour envoyer beaucoup d'Encouragements sur la Scène. Après avoir utilisé les Arts, en utilisant la compétence Oshi de hBP08-007〈音乃瀬奏〉, vous pouvez remplacer votre 〈音乃瀬奏〉 Centre par un de vos Holomen Arrière avec le tag #ReGLOSS. Remplacez-le par hBP08-079〈音乃瀬奏〉, qui vous donne +50 Points de vie si vous avez un 2nd Holomen avec le tag #ReGLOSS, et recevez les dégâts d'Arts de l'adversaire pour maintenir un état parfait en attaque comme en défense.",
+          "es": "Si te faltan 2nd Holomen al final de la partida, usa hBP08-101〈We are ReGLOSS〉para añadir los Holomen necesarios a tu mano según la situación. Como hay muchos Holomen que pueden enviar Cheer desde el Archivo, se recomienda usar la Habilidad SP Oshi de hBP08-007〈音乃瀬奏〉para crear temporalmente una situación con más Cheer que el oponente. Al final de la partida, haz Bloom del 1er Holomen al 2nd Holomen. hBP08-083〈音乃瀬奏〉potencia sus Arts cuanto mayor sea el número de Cheer en tu Escenario en comparación con el oponente. Si tienes Cheer en el Archivo, usa su efecto Bloom, y si aún no has usado la Habilidad SP Oshi de hBP08-007〈音乃瀬奏〉, usa la Habilidad SP Oshi para enviar mucho Cheer al Escenario. Después de usar Arts, usando la Habilidad Oshi de hBP08-007〈音乃瀬奏〉, puedes intercambiar tu〈音乃瀬奏〉del Centro con 1 de tus Holomen de Retaguardia con #ReGLOSS. Cambia con hBP08-079〈音乃瀬奏〉, que te da +50 de Vida si tienes un 2nd Holomen con #ReGLOSS, y absorbe el daño de Arts del oponente para mantener un estado perfecto tanto en ataque como en defensa."
+        }
+      }
+    ],
+    "key_cards": [
+      {
+        "name": "We are ReGLOSS",
+        "card_id": "hBP08-101",
+        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-101_U.png",
+        "text": {
+          "ja": "状況に応じて好きな#ReGLOSSを持つホロメンを手札に加えることができる、このデッキの強力なサポートカードです。自分のステージのホロメンの数が相手より少ない時に発揮する「1枚引いた後に手札1枚をアーカイブする」能力も強力です。",
+          "zh-TW": "這是一張可以根據情況將喜歡的擁有#ReGLOSS的成員加入手牌，這個牌組的強大支援卡。在自己舞台上的成員數量少於對手時發揮的「抽1張牌後將1張手牌存檔」的能力也很強大。",
+          "en": "A powerful Support card for this Deck that allows you to add any #ReGLOSS Holomen to your Hand depending on the situation. Its ability to draw 1 card and then Archive 1 card from your Hand when the number of Holomen on your Stage is less than the opponent's is also powerful.",
+          "fr": "Une carte de Support puissante qui vous permet d'ajouter à votre main un Holomen #ReGLOSS de votre choix en fonction de la situation. Sa capacité à piocher 1 carte puis à en archiver 1 lorsque le nombre de vos Holomen sur la Scène est inférieur à celui de l'adversaire est également puissante.",
+          "es": "Es una formidable carta de soporte para este mazo que te permite añadir a tu mano cualquier Holomen con #ReGLOSS según la situación. Su habilidad \"roba 1 carta y luego archiva 1 carta\" que se activa cuando el número de Holomen en tu escenario es menor que el del oponente también es formidable."
+        }
+      },
+      {
+        "name": "Otonose Kanade【1st】",
+        "card_id": "hBP08-079",
+        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-079_C.png",
+        "text": {
+          "ja": "主にhBP08-083〈音乃瀬奏〉がアーツを使った後、hBP08-007〈音乃瀬奏〉の推しスキルによって交代させたい防御の要となるホロメンです。自分の#ReGLOSSを持つ2ndホロメンがいるとHPが+50され、HP220になります。攻めはhBP08-083〈音乃瀬奏〉、守りはhBP08-079〈音乃瀬奏〉に任せることでより楽しく強力に〈音乃瀬奏〉デッキを遊ぶことができます。",
+          "zh-TW": "這主要是hBP08-083〈音乃瀬奏〉使用藝能後，透過hBP08-007〈音乃瀬奏〉的推技能想要替換上場的防禦核心成員。如果自己有擁有#ReGLOSS的2nd成員，生命值會增加+50，達到220點。將進攻交給hBP08-083〈音乃瀬奏〉，防守交給hBP08-079〈音乃瀬奏〉，可以讓〈音乃瀬奏〉牌組玩起來更有趣、更強大。",
+          "en": "This is a defensive key Holomen that you want to switch out with hBP08-007 \"Kanade Otonose's\" Oshi Skill after hBP08-083 \"Kanade Otonose\" uses Arts. If you have a 2nd Holomen with #ReGLOSS, your HP increases by +50, reaching 220 HP. By entrusting offense to hBP08-083 \"Kanade Otonose\" and defense to hBP08-079 \"Kanade Otonose\", you can enjoy the \"Kanade Otonose\" Deck more enjoyably and powerfully.",
+          "fr": "Principalement un Holomen défensif essentiel à remplacer par la compétence Oshi de Kanade Otonose (hBP08-007) après que Kanade Otonose (hBP08-083) ait utilisé ses Arts. Si vous avez un Holomen de 2ème avec #ReGLOSS, ses PV augmentent de +50, atteignant 220 PV. En confiant l'attaque à Kanade Otonose (hBP08-083) et la défense à Kanade Otonose (hBP08-079), vous pouvez jouer le deck Kanade Otonose (hBP08-083) de manière plus amusante et puissante.",
+          "es": "Es un Holomen defensivo clave que se intercambia con la Habilidad Oshi de hBP08-007 \"Kanade Otonose\" después de que hBP08-083 \"Kanade Otonose\" usa Arts. Si tienes un Holomen de 2.º turno con #ReGLOSS, tu HP aumenta en +50, alcanzando 220 HP. Al dejar el ataque a hBP08-083 \"Kanade Otonose\" y la defensa a hBP08-079 \"Kanade Otonose\", puedes disfrutar del mazo \"Kanade Otonose\" de forma más divertida y potente."
+        }
+      }
+    ],
+    "date": "2026-06-18",
+    "source": "official",
+    "source_lang": "ja",
+    "deck_id": "official-hbp08_007"
+  },
+  {
     "title": "Recommended Deck Introduction \"Rui Takane\"",
     "description": "",
     "url": "https://hololive-official-cardgame.com/deck/hbp08_005/",
@@ -6764,159 +6917,6 @@
     "source": "official",
     "source_lang": "ja",
     "deck_id": "official-hbp08_005"
-  },
-  {
-    "title": "Recommended Deck Introduction \"Kanade Otonose\"",
-    "description": "",
-    "url": "https://hololive-official-cardgame.com/deck/hbp08_007/",
-    "oshi": "Kanade Otonose",
-    "oshi_card_id": "hBP08-007",
-    "oshi_image": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-007_OSR.png",
-    "main_deck": [
-      {
-        "card_id": "hBP03-080",
-        "count": 5,
-        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP03-080_C_02.png"
-      },
-      {
-        "card_id": "hBP08-077",
-        "count": 4,
-        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-077_C.png"
-      },
-      {
-        "card_id": "hBP08-078",
-        "count": 3,
-        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-078_U.png"
-      },
-      {
-        "card_id": "hBP03-083",
-        "count": 3,
-        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP03/hBP03-083_R.png"
-      },
-      {
-        "card_id": "hBP08-079",
-        "count": 2,
-        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-079_C.png"
-      },
-      {
-        "card_id": "hBP08-080",
-        "count": 2,
-        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-080_C.png"
-      },
-      {
-        "card_id": "hBP08-081",
-        "count": 4,
-        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-081_R.png"
-      },
-      {
-        "card_id": "hBP08-082",
-        "count": 4,
-        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-082_U.png"
-      },
-      {
-        "card_id": "hBP08-083",
-        "count": 4,
-        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-083_RR.png"
-      },
-      {
-        "card_id": "hSD14-010",
-        "count": 4,
-        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hSD14-010_C_02.png"
-      },
-      {
-        "card_id": "hBP01-104",
-        "count": 4,
-        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP01/hBP01-104_C.png"
-      },
-      {
-        "card_id": "hBP08-091",
-        "count": 3,
-        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-091_U.png"
-      },
-      {
-        "card_id": "hBP01-108",
-        "count": 1,
-        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP01/hBP01-108_U.png"
-      },
-      {
-        "card_id": "hBP08-101",
-        "count": 4,
-        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-101_U.png"
-      },
-      {
-        "card_id": "hBP03-097",
-        "count": 3,
-        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP03/hBP03-097_C.png"
-      }
-    ],
-    "cheer_deck": [
-      {
-        "card_id": "hY06-001",
-        "count": 20,
-        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hSD07/hY06-001_C.png"
-      }
-    ],
-    "main_deck_count": 50,
-    "cheer_deck_count": 20,
-    "strategy": [
-      {
-        "text": {
-          "ja": "序盤はhBP01-104〈ふつうのパソコン〉やhBP08-091〈クリエイターパソコン〉を使ってDebutホロメンをステージに出しましょう。後攻の場合、hBP08-077〈音乃瀬奏〉のコラボエフェクトによって1stホロメンの〈音乃瀬奏〉と〈リコーダー〉を1枚ずつ手札に加えることができるので、次のターン問題なくBloomできるようになります。",
-          "zh-TW": "序盤請透過hBP01-104〈ふつうのパソコン〉或hBP08-091〈クリエイターパソコン〉將Debut成員放置於舞台上吧。若為後攻，則透過hBP08-077〈音乃瀬奏〉的聯動效果，便能各將1張1st成員〈音乃瀬奏〉與〈リコーダー〉加入手牌，因此下回合便能順利進行綻放。",
-          "en": "In the early game, deploy Debut Holomen onto the Stage using hBP01-104 〈Normal Computer〉 or hBP08-091 〈Creator PC〉. If you go second, hBP07-077 〈Otonose Kanade〉's Collab effect allows you to add 1 〈Otonose Kanade〉 and 1 〈Recorder〉 of your 1st Holomen to your Hand, enabling you to Bloom without issue on the next turn.",
-          "fr": "En début de partie, déployons les Holomen Debut sur la Scène avec hBP01-104〈ふつうのパソコン〉 ou hBP08-091〈クリエイターパソコン〉. Si vous jouez en second, l'effet Collab de hBP08-077〈音乃瀬奏〉 vous permet d'ajouter une carte 〈音乃瀬奏〉 et une carte 〈リコーダー〉 de 1er Holomen à votre main, vous permettant de faire un Bloom sans problème au tour suivant.",
-          "es": "Al principio de la partida, usa hBP01-104〈ふつうのパソコン〉o hBP08-091〈クリエイターパソコン〉para poner Holomen Debut en el Escenario. Si vas segundo, con el efecto Collab de hBP08-077〈音乃瀬奏〉, puedes añadir 1〈音乃瀬奏〉y 1〈リコーダー〉de 1st Holomen a tu mano, lo que te permite hacer Bloom sin problemas en el siguiente turno."
-        }
-      },
-      {
-        "text": {
-          "ja": "中盤はDebutホロメンを1stホロメンにBloomさせましょう。1stホロメンや",
-          "zh-TW": "中盤請將Debut成員對1st成員進行綻放吧。1st成員與",
-          "en": "In the mid-game, let's Bloom Debut Holomen to your 1st Holomen.",
-          "fr": "En milieu de partie, faisons un Bloom sur le Holomen Debut vers le 1er Holomen.",
-          "es": "A mitad de partida, hagamos Bloom del Holomen Debut al 1er Holomen."
-        }
-      },
-      {
-        "text": {
-          "ja": "終盤に必要な2ndホロメンが足りない場合は、hBP08-101〈We are ReGLOSS〉を使ってその状況に応じて必要なホロメンを手札に加えましょう。アーカイブからエールを送ることができるホロメンが多く入っているので、早速hBP08-007〈音乃瀬奏〉のSP推しスキルを使って一時的に相手のステージよりエールが多い状況を作るのもおすすめです。終盤は1stホロメンを2ndホロメンにBloomさせましょう。hBP08-083〈音乃瀬奏〉は、自分のステージのエールの数が相手より多ければ多いほどアーツが強力になります。アーカイブにエールがある場合は自身のブルームエフェクトを、まだhBP08-007〈音乃瀬奏〉のSP推しスキルを使っていない場合はSP推しスキルを使ってステージにたくさんのエールを送りましょう。アーツを使った後はhBP08-007〈音乃瀬奏〉の推しスキルを使うことで自分のセンターの〈音乃瀬奏〉と自分の#ReGLOSSを持つバックホロメン1人を交代させることができます。自分の#ReGLOSSを持つ2ndホロメンがいるとHPが+50されるhBP08-079〈音乃瀬奏〉と交代させ、相手のアーツダメージをしっかりと受け止めることで攻守共に万全な状態を維持しましょう。",
-          "zh-TW": "若終盤所需的2nd成員不足，請利用hBP08-101〈We are ReGLOSS〉，根據情況將必要的成員加入手牌吧。牌組中放入了許多能從歸檔區送出吶喊的成員，因此建議立刻使用hBP08-007〈音乃瀬奏〉的SP推技能，暫時製造出比對手舞台更多的吶喊情況。終盤請將1st成員對2nd成員進行綻放吧。hBP08-083〈音乃瀬奏〉，其藝能會隨著我方舞台上的吶喊數量比對手多而變得更強。若歸檔區有吶喊，請使用自身的綻放效果，若尚未使用的話，則使用SP推技能，將大量吶喊送往舞台吧。使用藝能後，透過使用hBP08-007〈音乃瀬奏〉的推技能，便能將我方的中心〈音乃瀬奏〉與我方擁有#ReGLOSS標籤的後方成員1名進行交換。若有我方擁有#ReGLOSS標籤的2nd成員，HP會+50的hBP08-079〈音乃瀬奏〉進行交換，並確實承受對手的藝能傷害，以維持攻守兼備的萬全狀態吧。",
-          "en": "If you lack the necessary 2nd Holomen for the late game, use hBP08-101 〈We are ReGLOSS〉 to add the required Holomen to your Hand depending on the situation. Since many Holomen that can send Cheer from the Archive are included, it is also recommended to temporarily create a situation where you have more Cheer than the opponent's Stage by using hBP07-007 〈Otonose Kanade〉's SP Oshi Skill. In the late game, Bloom your 1st Holomen to your 2nd Holomen. hBP08-083 〈Otonose Kanade〉's Arts become more powerful the more Cheer you have on your Stage compared to the opponent. If you have Cheer in the Archive, use its Bloom effect, and if you haven't used hBP07-007 〈Otonose Kanade〉's SP Oshi Skill yet, use the SP Oshi Skill to send a lot of Cheer to the Stage. After using Arts, use hBP07-007 〈Otonose Kanade〉's Oshi Skill to swap your Center 〈Otonose Kanade〉 with 1 of your Back Holomen with #ReGLOSS. By swapping with hBP08-079 〈Otonose Kanade〉, who gains +50 HP if you have a 2nd Holomen with #ReGLOSS, and firmly receiving the opponent's Arts damage, you can maintain a perfect state in both offense and defense.",
-          "fr": "Si vous manquez de 2nd Holomen nécessaires en fin de partie, utilisez hBP08-101〈We are ReGLOSS〉 pour ajouter les Holomen nécessaires à votre main en fonction de la situation. Comme de nombreux Holomen peuvent envoyer des Encouragements depuis l'Archive, il est également recommandé d'utiliser la compétence SP Oshi de hBP08-007〈音乃瀬奏〉 pour créer temporairement une situation où vous avez plus d'Encouragements que l'adversaire sur la Scène. En fin de partie, faisons un Bloom sur le 1er Holomen vers le 2nd Holomen. hBP08-083〈音乃瀬奏〉 voit ses Arts devenir plus puissants à mesure que le nombre d'Encouragements sur votre Scène dépasse celui de l'adversaire. Si vous avez des Encouragements dans l'Archive, utilisez votre effet Bloom, et si vous n'avez pas encore utilisé la compétence SP Oshi de hBP08-007〈音乃瀬奏〉, utilisez la compétence SP Oshi pour envoyer beaucoup d'Encouragements sur la Scène. Après avoir utilisé les Arts, en utilisant la compétence Oshi de hBP08-007〈音乃瀬奏〉, vous pouvez remplacer votre 〈音乃瀬奏〉 Centre par un de vos Holomen Arrière avec le tag #ReGLOSS. Remplacez-le par hBP08-079〈音乃瀬奏〉, qui vous donne +50 Points de vie si vous avez un 2nd Holomen avec le tag #ReGLOSS, et recevez les dégâts d'Arts de l'adversaire pour maintenir un état parfait en attaque comme en défense.",
-          "es": "Si te faltan 2nd Holomen al final de la partida, usa hBP08-101〈We are ReGLOSS〉para añadir los Holomen necesarios a tu mano según la situación. Como hay muchos Holomen que pueden enviar Cheer desde el Archivo, se recomienda usar la Habilidad SP Oshi de hBP08-007〈音乃瀬奏〉para crear temporalmente una situación con más Cheer que el oponente. Al final de la partida, haz Bloom del 1er Holomen al 2nd Holomen. hBP08-083〈音乃瀬奏〉potencia sus Arts cuanto mayor sea el número de Cheer en tu Escenario en comparación con el oponente. Si tienes Cheer en el Archivo, usa su efecto Bloom, y si aún no has usado la Habilidad SP Oshi de hBP08-007〈音乃瀬奏〉, usa la Habilidad SP Oshi para enviar mucho Cheer al Escenario. Después de usar Arts, usando la Habilidad Oshi de hBP08-007〈音乃瀬奏〉, puedes intercambiar tu〈音乃瀬奏〉del Centro con 1 de tus Holomen de Retaguardia con #ReGLOSS. Cambia con hBP08-079〈音乃瀬奏〉, que te da +50 de Vida si tienes un 2nd Holomen con #ReGLOSS, y absorbe el daño de Arts del oponente para mantener un estado perfecto tanto en ataque como en defensa."
-        }
-      }
-    ],
-    "key_cards": [
-      {
-        "name": "We are ReGLOSS",
-        "card_id": "hBP08-101",
-        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-101_U.png",
-        "text": {
-          "ja": "状況に応じて好きな#ReGLOSSを持つホロメンを手札に加えることができる、このデッキの強力なサポートカードです。自分のステージのホロメンの数が相手より少ない時に発揮する「1枚引いた後に手札1枚をアーカイブする」能力も強力です。",
-          "zh-TW": "這是一張可以根據情況將喜歡的擁有#ReGLOSS的成員加入手牌，這個牌組的強大支援卡。在自己舞台上的成員數量少於對手時發揮的「抽1張牌後將1張手牌存檔」的能力也很強大。",
-          "en": "A powerful Support card for this Deck that allows you to add any #ReGLOSS Holomen to your Hand depending on the situation. Its ability to draw 1 card and then Archive 1 card from your Hand when the number of Holomen on your Stage is less than the opponent's is also powerful.",
-          "fr": "Une carte de Support puissante qui vous permet d'ajouter à votre main un Holomen #ReGLOSS de votre choix en fonction de la situation. Sa capacité à piocher 1 carte puis à en archiver 1 lorsque le nombre de vos Holomen sur la Scène est inférieur à celui de l'adversaire est également puissante.",
-          "es": "Es una formidable carta de soporte para este mazo que te permite añadir a tu mano cualquier Holomen con #ReGLOSS según la situación. Su habilidad \"roba 1 carta y luego archiva 1 carta\" que se activa cuando el número de Holomen en tu escenario es menor que el del oponente también es formidable."
-        }
-      },
-      {
-        "name": "Otonose Kanade【1st】",
-        "card_id": "hBP08-079",
-        "imageUrl": "https://hololive-official-cardgame.com/wp-content/images/cardlist/hBP08/hBP08-079_C.png",
-        "text": {
-          "ja": "主にhBP08-083〈音乃瀬奏〉がアーツを使った後、hBP08-007〈音乃瀬奏〉の推しスキルによって交代させたい防御の要となるホロメンです。自分の#ReGLOSSを持つ2ndホロメンがいるとHPが+50され、HP220になります。攻めはhBP08-083〈音乃瀬奏〉、守りはhBP08-079〈音乃瀬奏〉に任せることでより楽しく強力に〈音乃瀬奏〉デッキを遊ぶことができます。",
-          "zh-TW": "這主要是hBP08-083〈音乃瀬奏〉使用藝能後，透過hBP08-007〈音乃瀬奏〉的推技能想要替換上場的防禦核心成員。如果自己有擁有#ReGLOSS的2nd成員，生命值會增加+50，達到220點。將進攻交給hBP08-083〈音乃瀬奏〉，防守交給hBP08-079〈音乃瀬奏〉，可以讓〈音乃瀬奏〉牌組玩起來更有趣、更強大。",
-          "en": "This is a defensive key Holomen that you want to switch out with hBP08-007 \"Kanade Otonose's\" Oshi Skill after hBP08-083 \"Kanade Otonose\" uses Arts. If you have a 2nd Holomen with #ReGLOSS, your HP increases by +50, reaching 220 HP. By entrusting offense to hBP08-083 \"Kanade Otonose\" and defense to hBP08-079 \"Kanade Otonose\", you can enjoy the \"Kanade Otonose\" Deck more enjoyably and powerfully.",
-          "fr": "Principalement un Holomen défensif essentiel à remplacer par la compétence Oshi de Kanade Otonose (hBP08-007) après que Kanade Otonose (hBP08-083) ait utilisé ses Arts. Si vous avez un Holomen de 2ème avec #ReGLOSS, ses PV augmentent de +50, atteignant 220 PV. En confiant l'attaque à Kanade Otonose (hBP08-083) et la défense à Kanade Otonose (hBP08-079), vous pouvez jouer le deck Kanade Otonose (hBP08-083) de manière plus amusante et puissante.",
-          "es": "Es un Holomen defensivo clave que se intercambia con la Habilidad Oshi de hBP08-007 \"Kanade Otonose\" después de que hBP08-083 \"Kanade Otonose\" usa Arts. Si tienes un Holomen de 2.º turno con #ReGLOSS, tu HP aumenta en +50, alcanzando 220 HP. Al dejar el ataque a hBP08-083 \"Kanade Otonose\" y la defensa a hBP08-079 \"Kanade Otonose\", puedes disfrutar del mazo \"Kanade Otonose\" de forma más divertida y potente."
-        }
-      }
-    ],
-    "date": "2026-06-18",
-    "source": "official",
-    "source_lang": "ja",
-    "deck_id": "official-hbp08_007"
   },
   {
     "title": "Recommended Deck Introduction \"Suzu Miyamiya\"",
