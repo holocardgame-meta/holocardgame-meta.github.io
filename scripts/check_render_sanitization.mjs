@@ -216,6 +216,27 @@ resetDom();
 
 resetDom();
 {
+  // Scraper-stamped phases: the data-driven render path. `phase` is scraped
+  // data flowing into a class attribute, so a payload there must be
+  // neutralized (deck-view whitelists it), and stamped/unstamped chunk text
+  // must still be escaped.
+  const container = makeElement('deckModalOfficialPhased');
+  const deckId = `official-phased-${ATTR_PAYLOAD}`;
+  renderDeckModal(container, deckId, null, [], [], [{
+    deck_id: deckId,
+    title: TEXT_PAYLOAD,
+    strategy: [
+      { text: { en: TEXT_PAYLOAD } },
+      { text: { en: TEXT_PAYLOAD }, phase: 'early' },
+      { text: { en: TEXT_PAYLOAD }, phase: ATTR_PAYLOAD },
+      { text: { en: TEXT_PAYLOAD }, phase: 'late' },
+    ],
+  }], []);
+  assertSanitized('deck modal (official, stamped phases)', container.innerHTML);
+}
+
+resetDom();
+{
   const container = makeElement('cardDetail');
   const card = {
     id: `card-${ATTR_PAYLOAD}`,

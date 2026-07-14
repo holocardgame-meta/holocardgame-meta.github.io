@@ -1,6 +1,7 @@
 import { t, localized } from '../i18n.js';
 import { escapeHtml as _esc, safeUrl } from '../utils/sanitize.js';
 import { COLOR_HEX, normalizeColor as _normColor, colorsFromValue as _colorsFromValue, glyphFrom as _glyphFrom } from '../utils/colors.js';
+import { parsePhases } from '../utils/phases.js';
 
 function _deckColors(deck, cardsMap) {
   if (Array.isArray(deck?.colors) && deck.colors.length) {
@@ -19,50 +20,41 @@ function _deckColors(deck, cardsMap) {
     .sort((a, b) => counts[b] - counts[a]);
 }
 
-const PHASE_MARKERS = {
-  early: /^(序盤|序章|前期|早期|早盤|Early(?:\s*game)?|En\s+d[ée]but)/i,
-  mid:   /^(中盤|中期(?:戦)?|Mid(?:dle)?(?:\s*game)?|En\s+milieu)/i,
-  late:  /^(終盤|終章|後期|後半|Late(?:\s*game)?|End(?:\s*game)?|En\s+fin)/i,
-};
-const PHASE_PATTERN = /(序盤|序章|前期|早期|早盤|中盤|中期戦|中期|終盤|終章|後期|後半|Early(?:\s*game)?|Mid(?:dle)?(?:\s*game)?|Late(?:\s*game)?|End(?:\s*game)?|En\s+d[ée]but|En\s+milieu|En\s+fin)/gi;
+// Badge labels are i18n keys so every language shows a consistent, correctly
+// translated phase name regardless of how the strategy text words its
+// headings.
+const PHASE_LABEL_KEYS = { early: 'phase_early', mid: 'phase_mid', late: 'phase_late' };
 
-function _classifyPhase(marker) {
-  for (const [phase, re] of Object.entries(PHASE_MARKERS)) {
-    if (re.test(marker)) return phase;
+// Build phase sections from scraper-stamped `phase` fields (authoritative —
+// they survive translation untouched); consecutive same-phase chunks merge
+// into one section. Falls back to parsePhases() text parsing for data scraped
+// before stamping existed.
+function _strategyPhases(strategy) {
+  if (strategy.some(st => st && st.phase)) {
+    const phases = [];
+    for (const st of strategy) {
+      const txt = localized(st.text, '');
+      if (!txt) continue;
+      // Whitelist: `phase` is scraped data and flows into a class attribute,
+      // so anything but the known values degrades to the unbadged 'pre'.
+      const phase = Object.hasOwn(PHASE_LABEL_KEYS, st.phase) ? st.phase : 'pre';
+      const last = phases[phases.length - 1];
+      if (last && last.phase === phase) last.text += '\n\n' + txt;
+      else phases.push({ phase, label: '', text: txt });
+    }
+    return phases;
   }
-  return null;
-}
-
-function _parsePhases(text) {
-  if (!text) return [];
-  const matches = [...text.matchAll(PHASE_PATTERN)];
-  if (matches.length === 0) return [{ phase: 'all', text: text.trim() }];
-
-  // Collect first occurrence of each phase (early/mid/late), in document order
-  const boundaries = [];
-  const seen = new Set();
-  for (const m of matches) {
-    const phase = _classifyPhase(m[1]);
-    if (!phase || seen.has(phase)) continue;
-    seen.add(phase);
-    boundaries.push({ phase, label: m[1], start: m.index });
-  }
-  if (boundaries.length === 0) return [{ phase: 'all', text: text.trim() }];
-
-  // Slice text between phase boundaries; any leading text before the first marker becomes preamble
-  const phases = [];
-  if (boundaries[0].start > 0) {
-    const pre = text.slice(0, boundaries[0].start).trim();
-    if (pre) phases.push({ phase: 'pre', label: '', text: pre });
-  }
-  for (let i = 0; i < boundaries.length; i++) {
-    const start = boundaries[i].start;
-    const end = i < boundaries.length - 1 ? boundaries[i + 1].start : text.length;
-    phases.push({
-      phase: boundaries[i].phase,
-      label: boundaries[i].label,
-      text: text.slice(start, end).trim(),
-    });
+  // Parse on a space-join, not '\n\n': chunk boundaries in pre-stamping data
+  // sit wherever the OLD parser split — sometimes mid-sentence — and a
+  // newline would turn each of those into a segment start, resurrecting the
+  // very false boundaries the parser is meant to ignore. Real headings follow
+  // sentence punctuation in the text itself, so they stay detectable.
+  const chunks = strategy.map(st => localized(st.text, '')).filter(Boolean);
+  const phases = parsePhases(chunks.join(' '));
+  if (!phases.some(p => p.phase !== 'all' && p.phase !== 'pre')) {
+    // No headings found: the single block keeps the '\n\n' chunk joins so
+    // paragraph separation survives (.phase-text renders pre-line).
+    return [{ phase: 'all', label: '', text: chunks.join('\n\n') }];
   }
   return phases;
 }
@@ -489,21 +481,20 @@ function _renderOfficialDeckModal(container, deck) {
     } else if (s.id === 'cheer') {
       body = _gridSection(cheerDeck);
     } else if (s.id === 'strategy') {
-      // Concat all strategy text, then parse phases
-      const fullText = strategy.map(st => localized(st.text, '')).filter(Boolean).join('\n\n');
-      const phases = _parsePhases(fullText);
+      const phases = _strategyPhases(strategy);
       const hasPhases = phases.some(p => p.phase !== 'all' && p.phase !== 'pre');
       if (hasPhases) {
         body = `<div class="phase-flow">${phases.map(p => `
           <div class="phase-step phase-step-${p.phase}">
-            ${p.label ? `<div class="phase-head">
-              <span class="phase-badge">${_esc(p.label)}</span>
+            ${PHASE_LABEL_KEYS[p.phase] ? `<div class="phase-head">
+              <span class="phase-badge">${_esc(t(PHASE_LABEL_KEYS[p.phase]))}</span>
             </div>` : ''}
             <p class="phase-text">${_esc(p.text)}</p>
           </div>
         `).join('')}</div>`;
       } else {
-        // Fallback: single block when no phase markers present
+        // Fallback: single block when no phase headings present
+        const fullText = phases.map(p => p.text).join('\n\n');
         body = `<div class="phase-flow"><div class="phase-step phase-step-all"><p class="phase-text">${_esc(fullText)}</p></div></div>`;
       }
     }

@@ -117,51 +117,88 @@ def _merge_by_deck_id(primary: list[dict], secondary: list[dict]) -> list[dict]:
     return merged
 
 
-_PHASE_MARKER_RE = re.compile(r"(序盤|序章|前期|早期|早盤|中盤|中期戦|中期|終盤|終章|後期|後半)")
-_PHASE_EARLY = ("序盤", "序章", "前期", "早期", "早盤")
-_PHASE_MID = ("中盤", "中期戦", "中期")
-_PHASE_LATE = ("終盤", "終章", "後期", "後半")
+# Phase-heading vocabulary. Source pages are Japanese or English (the EN
+# official site is the primary source), so only those scripts are needed here.
+# A heading only counts at a *segment start* — the start of the text or right
+# after a newline / sentence-ending punctuation — so mid-sentence mentions
+# (「…、終盤に備えましょう。」) and substrings inside words or card names
+# ("Fri-end-ly", "accumu-late") never create boundaries. The frontend fallback
+# parser (web/utils/phases.js) mirrors these semantics for all five languages.
+_PHASE_HEAD_PATTERNS = {
+    "early": (
+        r"(?:ゲーム)?(?:序盤|序章|前期|早期|早盤|初盤|初期|開局)"
+        r"|(?:in|during|at)\s+(?:the\s+)?early(?:[-\s]?game|\s+stages?|\s+turns?)?\b"
+        r"|early[-\s]?game|early\s+on\b"
+    ),
+    "mid": (
+        r"(?:ゲーム)?(?:中盤|中期戦|中期)"
+        r"|(?:in|during|at)\s+(?:the\s+)?mid(?:dle)?(?:[-\s]?game|\s+stages?|\s+turns?)?\b"
+        r"|mid[-\s]?game"
+    ),
+    "late": (
+        r"(?:ゲーム)?(?:終盤|終章|後期|後半|末期|終局)"
+        r"|(?:in|during|at|towards?)\s+(?:the\s+)?late(?:r)?(?:[-\s]?game|\s+stages?|\s+turns?)?\b"
+        r"|late[-\s]?game|end[-\s]?game|endgame\b"
+        r"|(?:in|at|towards?)\s+(?:the\s+)?end\s+of\s+the\s+game"
+    ),
+}
+_PHASE_HEAD_RES = {p: re.compile(rx, re.IGNORECASE) for p, rx in _PHASE_HEAD_PATTERNS.items()}
+# Sentence enders, optionally followed by closing quotes/brackets
+# (`!!". In the late game…`), repeated to cover interleavings like `!!".` —
+# closers alone never start a segment, so opening quotes can't create
+# boundaries. Mirrors SEGMENT_BREAK in web/utils/phases.js.
+_SEGMENT_BREAK_RE = re.compile(r"(?:(?:[。．.!?！？:：]|\n)+[”\"」』)）\]]*)+\s*")
 
 
-def _classify_phase(marker: str) -> str | None:
-    if marker in _PHASE_EARLY:
-        return "early"
-    if marker in _PHASE_MID:
-        return "mid"
-    if marker in _PHASE_LATE:
-        return "late"
-    return None
+def _iter_segment_starts(text: str):
+    """Yield indexes where a sentence/line segment begins."""
+    yield 0
+    for m in _SEGMENT_BREAK_RE.finditer(text):
+        if m.end() < len(text):
+            yield m.end()
 
 
-def _split_strategy_by_phase(text: str) -> list[str]:
-    """Split a strategy paragraph at its first early/mid/late phase markers.
-
-    Official-deck strategies are one long block; translated whole, the model
-    occasionally echoes the Japanese untranslated. Splitting at phase boundaries
-    keeps each chunk short enough to translate reliably, and mirrors the
-    frontend's phase parser so the rendered phases are unchanged. Returns [text]
-    unchanged when there aren't at least two phase boundaries.
-    """
-    boundaries: list[int] = []
+def _find_phase_boundaries(text: str) -> list[tuple[int, str]]:
+    """First segment-anchored heading per phase, in document order."""
+    boundaries: list[tuple[int, str]] = []
     seen: set[str] = set()
-    for m in _PHASE_MARKER_RE.finditer(text):
-        phase = _classify_phase(m.group(1))
-        if not phase or phase in seen:
-            continue
-        seen.add(phase)
-        boundaries.append(m.start())
-    if len(boundaries) < 2:
-        return [text]
-    chunks: list[str] = []
-    if boundaries[0] > 0:
-        pre = text[: boundaries[0]].strip()
+    for pos in _iter_segment_starts(text):
+        if len(seen) == len(_PHASE_HEAD_RES):
+            break
+        for phase, rx in _PHASE_HEAD_RES.items():
+            if phase in seen:
+                continue
+            if rx.match(text, pos):
+                seen.add(phase)
+                boundaries.append((pos, phase))
+                break
+    return boundaries
+
+
+def _split_strategy_by_phase(text: str) -> list[dict]:
+    """Split a strategy paragraph at early/mid/late headings, stamping each
+    chunk's phase.
+
+    The stamped ``phase`` is what the frontend renders badges from — it
+    survives translation untouched, so classification no longer depends on how
+    the translator words the headings. Splitting also keeps each chunk short
+    enough to translate reliably. Text before the first heading becomes an
+    unstamped preamble chunk; text with no headings is returned as one
+    unstamped chunk.
+    """
+    boundaries = _find_phase_boundaries(text)
+    if not boundaries:
+        return [{"text": text}]
+    chunks: list[dict] = []
+    if boundaries[0][0] > 0:
+        pre = text[: boundaries[0][0]].strip()
         if pre:
-            chunks.append(pre)
-    for i, start in enumerate(boundaries):
-        end = boundaries[i + 1] if i + 1 < len(boundaries) else len(text)
+            chunks.append({"text": pre})
+    for i, (start, phase) in enumerate(boundaries):
+        end = boundaries[i + 1][0] if i + 1 < len(boundaries) else len(text)
         chunk = text[start:end].strip()
         if chunk:
-            chunks.append(chunk)
+            chunks.append({"text": chunk, "phase": phase})
     return chunks
 
 
@@ -231,8 +268,7 @@ def _scrape_deck_page(url: str, base_url: str = BASE_URL) -> dict | None:
         for div in point_box.select(".attention .txt, .txt"):
             txt = div.get_text(strip=True)
             if txt:
-                for chunk in _split_strategy_by_phase(txt):
-                    strategy.append({"text": chunk})
+                strategy.extend(_split_strategy_by_phase(txt))
 
     key_cards = []
     for check_box in block.select(".glay-box.check"):

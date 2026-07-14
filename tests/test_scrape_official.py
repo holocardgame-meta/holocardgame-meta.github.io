@@ -105,19 +105,62 @@ def test_scrape_deck_page_uses_given_base_url(monkeypatch):
 
 def test_split_strategy_by_phase():
     text = "序盤はAです。中盤はBです。終盤はCです。"
-    assert so._split_strategy_by_phase(text) == ["序盤はAです。", "中盤はBです。", "終盤はCです。"]
+    assert so._split_strategy_by_phase(text) == [
+        {"text": "序盤はAです。", "phase": "early"},
+        {"text": "中盤はBです。", "phase": "mid"},
+        {"text": "終盤はCです。", "phase": "late"},
+    ]
 
 
 def test_split_strategy_keeps_preamble():
     assert so._split_strategy_by_phase("まず基本方針。序盤はA。中盤はB。") == [
-        "まず基本方針。", "序盤はA。", "中盤はB。",
+        {"text": "まず基本方針。"},
+        {"text": "序盤はA。", "phase": "early"},
+        {"text": "中盤はB。", "phase": "mid"},
     ]
 
 
-def test_split_strategy_passthrough_without_two_phases():
-    # no markers, or only a single phase marker -> left as one chunk
-    assert so._split_strategy_by_phase("マーカー無しの説明文です。") == ["マーカー無しの説明文です。"]
-    assert so._split_strategy_by_phase("序盤だけの短い文。") == ["序盤だけの短い文。"]
+def test_split_strategy_without_markers_is_one_unphased_chunk():
+    assert so._split_strategy_by_phase("マーカー無しの説明文です。") == [
+        {"text": "マーカー無しの説明文です。"},
+    ]
+
+
+def test_split_strategy_stamps_single_phase():
+    # A lone phase heading still gets stamped (previously: passthrough when
+    # fewer than two markers, which left the frontend guessing from text).
+    assert so._split_strategy_by_phase("序盤だけの短い文。") == [
+        {"text": "序盤だけの短い文。", "phase": "early"},
+    ]
+
+
+def test_split_strategy_splits_english_headings():
+    # The EN official site is the primary source; its strategy text must split
+    # too (the old marker regex was Japanese-only, so this never fired).
+    text = "In the early game, do A. In the mid game, do B. In the late game, do C."
+    assert so._split_strategy_by_phase(text) == [
+        {"text": "In the early game, do A.", "phase": "early"},
+        {"text": "In the mid game, do B.", "phase": "mid"},
+        {"text": "In the late game, do C.", "phase": "late"},
+    ]
+
+
+def test_split_strategy_ignores_mid_sentence_mentions():
+    # 「…、終盤に備えましょう。」 mentions 終盤 mid-sentence (after a comma); it
+    # must not steal the boundary from the real 「終盤は…」 heading that follows
+    # (real case: official-hsd11-001).
+    text = "中盤はエールを増やし、終盤に備えましょう。終盤は大ダメージを狙います。"
+    assert so._split_strategy_by_phase(text) == [
+        {"text": "中盤はエールを増やし、終盤に備えましょう。", "phase": "mid"},
+        {"text": "終盤は大ダメージを狙います。", "phase": "late"},
+    ]
+
+
+def test_split_strategy_ignores_substring_false_positives():
+    # "Friendly" contains "end", "accumulate" contains "late" — headings are
+    # only recognized at sentence starts, so neither may split the text.
+    text = "Use [Friendly PC] to accumulate holo Power and extend your board."
+    assert so._split_strategy_by_phase(text) == [{"text": text}]
 
 
 JP_STRATEGY_PAGE = """
@@ -140,8 +183,10 @@ def test_scrape_deck_page_splits_multiphase_strategy(monkeypatch):
         "https://hololive-official-cardgame.com/deck/x/",
         base_url="https://hololive-official-cardgame.com",
     )
-    assert [s["text"] for s in deck["strategy"]] == [
-        "序盤はAをする。", "中盤はBをする。", "終盤はCをする。",
+    assert deck["strategy"] == [
+        {"text": "序盤はAをする。", "phase": "early"},
+        {"text": "中盤はBをする。", "phase": "mid"},
+        {"text": "終盤はCをする。", "phase": "late"},
     ]
 
 
