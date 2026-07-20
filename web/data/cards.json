@@ -9202,11 +9202,11 @@
     "tag": null,
     "product": "補充包「ブルーミングレディアンス (hBP01)」",
     "supportEffect": {
-      "zh-TW": "將holo能量區的1張牌放到存檔區才能使用。\n\n從自己的牌組展示1張與自己的主推相同顏色，Buzz以外的Debut成員或1st成員並加入手牌。將牌組重新洗牌。\n\nLIMITED：每個回合只能使用一張。",
-      "ja": "holoパワーエリアのカードを1枚アーカイブに置くことで使用できる。\n\n自分のデッキから、自分の推しと同じ色で、Buzz以外のDebutメンバーか1stメンバーを1枚公開し、手札に加える。その後、デッキをシャッフルする。\n\nLIMITED：毎ターン1枚しか使用できない。",
-      "en": "You can only use this by sending 1 card from your Holo Power Zone to the Archive.\n\nReveal 1 Debut or 1st Member from your Deck that is the same color as your Oshi and is not Buzz, and add it to your Hand. Shuffle your Deck.\n\nLIMITED: You can only use 1 per turn.",
-      "fr": "Envoyez 1 carte de la zone holo énergie dans l'archive pour pouvoir l'utiliser.\n\nMontrez 1 membre Debut ou 1st de la même couleur que votre Oshi, autre que Buzz, de votre Deck et ajoutez-le à votre main. Mélangez le Deck.\n\nLIMITED : Ne peut être utilisé qu'une fois par tour.",
-      "es": "Envía 1 carta del área de Holo Power al Archivo para poder usar esto.\n\nMuestra 1 carta de tu Mazo que sea del mismo color que tu Oshi, y que sea un miembro Debut o 1st que no sea Buzz, y añádela a tu mano. Baraja tu Mazo.\n\nLIMITED: Solo se puede usar una vez por turno."
+      "zh-TW": "將自己holo能量區的1張牌放到存檔區才能使用。\n\n從自己的牌組展示1張與自己的主推相同顏色，Buzz以外的Debut成員或1st成員並加入手牌。將牌組重新洗牌。\n\nLIMITED：每個回合只能使用一張。",
+      "ja": "自分のホロパワーゾーンのカード1枚をアーカイブに置くことで使用できる。\n\n自分のデッキから、自分の推しと同じ色で、Buzz以外のDebutメンバーまたは1stメンバー1枚を公開し、手札に加える。その後、デッキをシャッフルする。\n\nLIMITED：各ターンに1枚しか使用できない。",
+      "en": "You can only use this by placing 1 card from your Holo Energy Zone into your Archive.\n\nReveal 1 Debut Member or 1st Generation Member from your Deck that is the same color as your Oshi and is not Buzz, and add it to your Hand. Shuffle your Deck.\n\nLIMITED: You can only use one per turn.",
+      "fr": "Utilisez en plaçant 1 carte de votre zone Holo Power dans votre Archive.\n\nMontrez 1 membre Debut ou 1er de votre Deck de la même couleur que votre Oshi, autre que Buzz, et ajoutez-le à votre main. Mélangez votre Deck.\n\nLIMITED : Ne peut être utilisé qu'une fois par tour.\n",
+      "es": "Pon 1 carta de tu Zona de Holo Power en tu Archivo para poder usar esto.\n\nMuestra 1 miembro Debut o 1st de tu Mazo que tenga el mismo color que tu Oshi y que no sea Buzz, y añádelo a tu Mano. Baraja tu Mazo.\n\nLIMITED: Solo puedes usar una por turno."
     },
     "id": "hBP01-103",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP01/hBP01-103_U.png"
@@ -9360,11 +9360,11 @@
       "起始牌組「青 猫又おかゆ (hSD03)」"
     ],
     "supportEffect": {
-      "zh-TW": "將holo能量區的1張牌放到存檔區才能使用。\n\n從自己的吶喊牌組展示1張與自己1位成員相同顏色的吶喊卡，發送給自己的成員。將吶喊牌組重新洗牌。\n\nLIMITED：每個回合只能使用一張。",
-      "ja": "holoパワーエリアのカードを1枚アーカイブに置くことで使用できる。\n\n自分の「エールデッキ」から、自分のメンバー1人と同色の「エール」を1枚公開し、自分のメンバーに送る。その後、「エールデッキ」をシャッフルする。\n\nLIMITED：毎ターン1枚しか使用できない。",
-      "en": "You can only use this by sending 1 card from your Holo Power Zone to the Archive.\n\nReveal 1 Cheer card from your Cheer Deck that is the same color as 1 of your Members and send it to your Member. Shuffle your Cheer Deck.\n\nLIMITED: You can only use 1 per turn.",
-      "fr": "Envoyez 1 carte de la zone holo énergie dans l'archive pour pouvoir l'utiliser.\n\nMontrez 1 carte d'encouragement de votre Deck d'encouragement de la même couleur qu'un de vos membres et envoyez-la à votre membre. Mélangez le Deck d'encouragement.\n\nLIMITED : Ne peut être utilisé qu'une fois par tour.",
-      "es": "Envía 1 carta del área de Holo Power al Archivo para poder usar esto.\n\nMuestra 1 carta de Cheer de tu Mazo Cheer que sea del mismo color que 1 de tus miembros y envíala a uno de tus miembros. Baraja tu Mazo Cheer.\n\nLIMITED: Solo se puede usar una vez por turno."
+      "zh-TW": "將自己holo能量區的1張牌放到存檔區才能使用。\n\n從自己的吶喊牌組展示1張與自己1位成員相同顏色的吶喊卡，發送給自己的成員。將吶喊牌組重新洗牌。\n\nLIMITED：每個回合只能使用一張。",
+      "ja": "自分のホロパワーゾーンのカード1枚をアーカイブに置くことで使用できる。\n\n自分のエールデッキから、自分のメンバー1人と同色のエールカード1枚を公開し、自分のメンバーに送る。その後、エールデッキをシャッフルする。\n\nLIMITED：各ターンに1枚しか使用できない。",
+      "en": "You can only use this by placing 1 card from your Holo Energy Zone into your Archive.\n\nReveal 1 Cheer card from your Cheer Deck that is the same color as 1 of your Members, and send it to your Member. Shuffle your Cheer Deck.\n\nLIMITED: You can only use one per turn.",
+      "fr": "Utilisez en plaçant 1 carte de votre zone Holo Power dans votre Archive.\n\nMontrez 1 carte Cheer de votre Deck d'encouragement de la même couleur qu'un de vos membres, et envoyez-la à ce membre. Mélangez votre Deck d'encouragement.\n\nLIMITED : Ne peut être utilisé qu'une fois par tour.\n",
+      "es": "Pon 1 carta de tu Zona de Holo Power en tu Archivo para poder usar esto.\n\nMuestra 1 carta de Cheer de tu Mazo Cheer que tenga el mismo color que un miembro tuyo y envíala a ese miembro. Baraja tu Mazo Cheer.\n\nLIMITED: Solo puedes usar una por turno."
     },
     "id": "hBP01-105",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP01/hBP01-105_U.png"
@@ -9947,11 +9947,11 @@
       "holoPower": -3,
       "name": "Ahoy!",
       "effect": {
-        "zh-TW": "[每個回合一次]自己這個回合綻放過的1位標示#3期生的成員，使用自己手牌的成員再次進行綻放。",
-        "ja": "[各ターンに1度]このターン中にブルームした自分の#3期生を持つメンバーが、自分の手札のメンバーを使って再度ブルームする。",
-        "en": "[Once per turn] 1 Member of yours that Bloomed this turn with #3期生 Blooms again using a Member from your Hand.",
-        "fr": "[Chaque tour, une fois] 1 de vos membres avec le marqueur #3期生 qui a Bloom ce tour-ci effectue à nouveau un Bloom en utilisant un membre de votre Main.",
-        "es": "[Cada turno una vez] Un miembro tuyo con la marca #3期生 que ha hecho Bloom este turno, usa un miembro de tu Mano para hacer Bloom de nuevo."
+        "zh-TW": "[每個回合一次]使用自己手牌的成員將自己這個回合綻放過的1位標示#3期生的成員再次進行綻放。",
+        "ja": "[各ターンに1度]自分の手札のメンバーを使い、自分のこのターンにブルームした#3期生のメンバー1人を再びブルームする。",
+        "en": "[Once per turn] Use a Member from your Hand to Bloom 1 Member in your Hand with the marker #3rd Generation that was Bloomed this turn.",
+        "fr": "[Chaque tour, une fois] Utilisez un membre de votre main pour faire un Bloom sur un membre que vous avez marqué comme #3ème génération et qui a déjà fait un Bloom ce tour.",
+        "es": "[Cada turno una vez] Usa un miembro de tu Mano para hacer Bloom de nuevo a un miembro tuyo marcado como #3ra Generación que haya sido Bloom este turno."
       }
     },
     "spSkill": {
@@ -9979,11 +9979,11 @@
       "holoPower": -3,
       "name": "Ahoy!",
       "effect": {
-        "zh-TW": "[每個回合一次]自己這個回合綻放過的1位標示#3期生的成員，使用自己手牌的成員再次進行綻放。",
-        "ja": "[各ターンに1度]このターン中にブルームした自分の#3期生を持つメンバーが、自分の手札のメンバーを使って再度ブルームする。",
-        "en": "[Once per turn] 1 Member of yours that Bloomed this turn with #3期生 Blooms again using a Member from your Hand.",
-        "fr": "[Chaque tour, une fois] 1 de vos membres avec le marqueur #3期生 qui a Bloom ce tour-ci effectue à nouveau un Bloom en utilisant un membre de votre Main.",
-        "es": "[Cada turno una vez] Un miembro tuyo con la marca #3期生 que ha hecho Bloom este turno, usa un miembro de tu Mano para hacer Bloom de nuevo."
+        "zh-TW": "[每個回合一次]使用自己手牌的成員將自己這個回合綻放過的1位標示#3期生的成員再次進行綻放。",
+        "ja": "[各ターンに1度]自分の手札のメンバーを使い、自分のこのターンにブルームした#3期生のメンバー1人を再びブルームする。",
+        "en": "[Once per turn] Use a Member from your Hand to Bloom 1 Member in your Hand with the marker #3rd Generation that was Bloomed this turn.",
+        "fr": "[Chaque tour, une fois] Utilisez un membre de votre main pour faire un Bloom sur un membre que vous avez marqué comme #3ème génération et qui a déjà fait un Bloom ce tour.",
+        "es": "[Cada turno una vez] Usa un miembro de tu Mano para hacer Bloom de nuevo a un miembro tuyo marcado como #3ra Generación que haya sido Bloom este turno."
       }
     },
     "spSkill": {
@@ -10011,11 +10011,11 @@
       "holoPower": -3,
       "name": "Ahoy!",
       "effect": {
-        "zh-TW": "[每個回合一次]自己這個回合綻放過的1位標示#3期生的成員，使用自己手牌的成員再次進行綻放。",
-        "ja": "[各ターンに1度]このターン中にブルームした自分の#3期生を持つメンバーが、自分の手札のメンバーを使って再度ブルームする。",
-        "en": "[Once per turn] 1 Member of yours that Bloomed this turn with #3期生 Blooms again using a Member from your Hand.",
-        "fr": "[Chaque tour, une fois] 1 de vos membres avec le marqueur #3期生 qui a Bloom ce tour-ci effectue à nouveau un Bloom en utilisant un membre de votre Main.",
-        "es": "[Cada turno una vez] Un miembro tuyo con la marca #3期生 que ha hecho Bloom este turno, usa un miembro de tu Mano para hacer Bloom de nuevo."
+        "zh-TW": "[每個回合一次]使用自己手牌的成員將自己這個回合綻放過的1位標示#3期生的成員再次進行綻放。",
+        "ja": "[各ターンに1度]自分の手札のメンバーを使い、自分のこのターンにブルームした#3期生のメンバー1人を再びブルームする。",
+        "en": "[Once per turn] Use a Member from your Hand to Bloom 1 Member in your Hand with the marker #3rd Generation that was Bloomed this turn.",
+        "fr": "[Chaque tour, une fois] Utilisez un membre de votre main pour faire un Bloom sur un membre que vous avez marqué comme #3ème génération et qui a déjà fait un Bloom ce tour.",
+        "es": "[Cada turno una vez] Usa un miembro de tu Mano para hacer Bloom de nuevo a un miembro tuyo marcado como #3ra Generación que haya sido Bloom este turno."
       }
     },
     "spSkill": {
@@ -10203,22 +10203,22 @@
       "holoPower": -2,
       "name": "ゾンビ戦術",
       "effect": {
-        "zh-TW": "[每個回合一次]自己1位標示#ID2期生的成員，使用自己存檔區的成員進行綻放。",
-        "ja": "[各ターンに1度]自分の#ID2期生を持つメンバーが、自分のアーカイブのメンバーを使ってブルームする。",
-        "en": "[Once per turn] 1 Member of yours with #ID2期生 Blooms using a Member from your Archive.",
-        "fr": "[Chaque tour, une fois] 1 de vos membres avec le marqueur #ID2期生 effectue un Bloom en utilisant un membre de votre Archive.",
-        "es": "[Cada turno una vez] Un miembro tuyo con la marca #ID2期生 usa un miembro de tu Archivo para hacer Bloom."
+        "zh-TW": "[每個回合一次]使用自己存檔區的成員將自己1位標示#ID2期生的成員進行綻放。",
+        "ja": "[各ターンに1度]自分のアーカイブのメンバーを使い、自分の#ID2期生のメンバー1人をブルームする。",
+        "en": "[Once per turn] Use a Member from your Archive to Bloom 1 Member in your Hand with the marker #ID 2nd Generation.",
+        "fr": "[Chaque tour, une fois] Utilisez un membre de votre Archive pour faire un Bloom sur un membre que vous avez marqué comme #ID 2ème génération.",
+        "es": "[Cada turno una vez] Usa un miembro de tu Archivo para hacer Bloom a un miembro tuyo marcado como #ID 2da Generación."
       }
     },
     "spSkill": {
       "holoPower": -2,
       "name": "蘇るオリー",
       "effect": {
-        "zh-TW": "[每場比賽一次]從自己的牌組抽4張牌後，將2張手牌放到存檔區。之後，自己的1位成員，可以使用自己存檔區的成員進行綻放。",
-        "ja": "[1試合に1回]\n自分のデッキからカードを4枚引いた後、手札を2枚アーカイブに置く。\nその後、自分のメンバー1人が、自分のアーカイブからメンバーを使用してブルームすることができる。",
-        "en": "[Once per game] Draw 4 cards from your Deck, then place 2 cards from your Hand into your Archive. After that, 1 of your Members may Bloom using a Member from your Archive.",
-        "fr": "[Une fois par partie] Piochez 4 cartes de votre Deck, puis placez 2 cartes de votre Main dans votre Archive. Ensuite, l'un de vos membres peut utiliser le Bloom avec un membre de votre Archive.",
-        "es": "[Una vez por partida] Roba 4 cartas de tu Mazo, luego coloca 2 cartas de tu Mano en el Archivo. Después, 1 miembro tuyo puede usar un miembro de tu Archivo para realizar Bloom."
+        "zh-TW": "[每場比賽一次]從自己的牌組抽4張牌後，將2張手牌放到存檔區。之後，可以使用自己存檔區的成員將自己的1位成員進行綻放。",
+        "ja": "[1試合に1度]自分のデッキから4枚引き、その後、手札を2枚アーカイブに置く。その後、自分のアーカイブのメンバーを使い、自分のメンバー1人をブルームできる。",
+        "en": "[Once per game] Draw 4 cards from your Deck, then place 2 cards from your Hand into your Archive. After that, you can use a Member from your Archive to Bloom 1 of your Members.",
+        "fr": "[Une fois par partie] Piochez 4 cartes de votre Deck, puis placez 2 cartes de votre main dans votre Archive. Ensuite, utilisez un membre de votre Archive pour faire un Bloom sur un de vos membres.",
+        "es": "[Una vez por partida] Roba 4 cartas de tu Mazo, luego pon 2 cartas de tu Mano en tu Archivo. Después, puedes usar un miembro de tu Archivo para hacer Bloom a un miembro tuyo."
       }
     },
     "id": "hBP02-006",
@@ -10235,22 +10235,22 @@
       "holoPower": -2,
       "name": "ゾンビ戦術",
       "effect": {
-        "zh-TW": "[每個回合一次]自己1位標示#ID2期生的成員，使用自己存檔區的成員進行綻放。",
-        "ja": "[各ターンに1度]自分の#ID2期生を持つメンバーが、自分のアーカイブのメンバーを使ってブルームする。",
-        "en": "[Once per turn] 1 Member of yours with #ID2期生 Blooms using a Member from your Archive.",
-        "fr": "[Chaque tour, une fois] 1 de vos membres avec le marqueur #ID2期生 effectue un Bloom en utilisant un membre de votre Archive.",
-        "es": "[Cada turno una vez] Un miembro tuyo con la marca #ID2期生 usa un miembro de tu Archivo para hacer Bloom."
+        "zh-TW": "[每個回合一次]使用自己存檔區的成員將自己1位標示#ID2期生的成員進行綻放。",
+        "ja": "[各ターンに1度]自分のアーカイブのメンバーを使い、自分の#ID2期生のメンバー1人をブルームする。",
+        "en": "[Once per turn] Use a Member from your Archive to Bloom 1 Member in your Hand with the marker #ID 2nd Generation.",
+        "fr": "[Chaque tour, une fois] Utilisez un membre de votre Archive pour faire un Bloom sur un membre que vous avez marqué comme #ID 2ème génération.",
+        "es": "[Cada turno una vez] Usa un miembro de tu Archivo para hacer Bloom a un miembro tuyo marcado como #ID 2da Generación."
       }
     },
     "spSkill": {
       "holoPower": -2,
       "name": "蘇るオリー",
       "effect": {
-        "zh-TW": "[每場比賽一次]從自己的牌組抽4張牌後，將2張手牌放到存檔區。之後，自己的1位成員，可以使用自己存檔區的成員進行綻放。",
-        "ja": "[1試合に1回]\n自分のデッキからカードを4枚引いた後、手札を2枚アーカイブに置く。\nその後、自分のメンバー1人が、自分のアーカイブからメンバーを使用してブルームすることができる。",
-        "en": "[Once per game] Draw 4 cards from your Deck, then place 2 cards from your Hand into your Archive. After that, 1 of your Members may Bloom using a Member from your Archive.",
-        "fr": "[Une fois par partie] Piochez 4 cartes de votre Deck, puis placez 2 cartes de votre Main dans votre Archive. Ensuite, l'un de vos membres peut utiliser le Bloom avec un membre de votre Archive.",
-        "es": "[Una vez por partida] Roba 4 cartas de tu Mazo, luego coloca 2 cartas de tu Mano en el Archivo. Después, 1 miembro tuyo puede usar un miembro de tu Archivo para realizar Bloom."
+        "zh-TW": "[每場比賽一次]從自己的牌組抽4張牌後，將2張手牌放到存檔區。之後，可以使用自己存檔區的成員將自己的1位成員進行綻放。",
+        "ja": "[1試合に1度]自分のデッキから4枚引き、その後、手札を2枚アーカイブに置く。その後、自分のアーカイブのメンバーを使い、自分のメンバー1人をブルームできる。",
+        "en": "[Once per game] Draw 4 cards from your Deck, then place 2 cards from your Hand into your Archive. After that, you can use a Member from your Archive to Bloom 1 of your Members.",
+        "fr": "[Une fois par partie] Piochez 4 cartes de votre Deck, puis placez 2 cartes de votre main dans votre Archive. Ensuite, utilisez un membre de votre Archive pour faire un Bloom sur un de vos membres.",
+        "es": "[Una vez por partida] Roba 4 cartas de tu Mazo, luego pon 2 cartas de tu Mano en tu Archivo. Después, puedes usar un miembro de tu Archivo para hacer Bloom a un miembro tuyo."
       }
     },
     "id": "hBP02-006",
@@ -14134,11 +14134,11 @@
     "effectB": {
       "name": "限界化！！",
       "effect": {
-        "zh-TW": "自己1位標示#ID2期生的Debut成員，可以使用自己存檔區的成員進行綻放。「限界化！！」每個回合只能使用一次。",
-        "ja": "自分の#ID2期生のDebutメンバーは、自分のアーカイブからメンバーを選んでブルームできる。「限界化！！」は各ターン1回しか使用できない。\n",
-        "en": "Deal 50 Special Damage to the opponent's Collab Member.",
-        "fr": "1 Membre Debut #ID2期生 peut utiliser le Bloom avec un Membre de votre Archive. \"限界化！！\" ne peut être utilisé qu'une fois par tour.",
-        "es": "1 miembro Debut tuyo con la etiqueta #ID 2nd Gen puede usar Bloom con un miembro de tu Archivo. \"Genkaika!!\" solo puede usarse una vez por turno."
+        "zh-TW": "可以使用自己存檔區的成員將自己1位標示#ID2期生的Debut成員進行綻放。「限界化！！」每個回合只能使用一次。",
+        "ja": "自分のアーカイブのメンバーを使い、自分の#ID2期生のDebutメンバー1人をブルームできる。「限界化！！」は各ターンに1度しか使用できない。",
+        "en": "Use a Member from your Archive to Bloom 1 Debut Member in your Hand with the marker #ID 2nd Generation. \"Kaiken-ka!!\" can only be used once per turn.",
+        "fr": "Utilisez un membre de votre Archive pour faire un Bloom sur un membre Debut que vous avez marqué comme #ID 2ème génération. \"Kaiken-ka!!\" ne peut être utilisé qu'une fois par tour.\n",
+        "es": "Puedes usar un miembro de tu Archivo para hacer Bloom a un miembro Debut tuyo marcado como #ID 2da Generación. \"限界化！！\" solo puede usarse una vez por turno."
       }
     },
     "effectG": null,
@@ -16345,11 +16345,11 @@
     "tag": "#魔法",
     "product": "補充包「クインテットスペクトラム (hBP02)」",
     "supportEffect": {
-      "zh-TW": "將holo能量區的1張牌放到存檔區才能使用。\n\n將自己存檔區的1張紫色吶喊卡發送給自己的「紫咲シオン」。標示#魔法的活動每個回合只能使用一次。",
-      "ja": "holoパワーエリアのカードを1枚アーカイブに置くことで使用できる。\n\n自分のアーカイブから紫色の「エール」を1枚、「紫咲シオン」に送る。#魔法の表記があるアクティブは毎ターン1回しか使用できない。",
-      "en": "You can only use this by sending 1 card from your Holo Power Zone to the Archive.\n\nSend 1 purple Cheer card from your Archive to your \"紫咲シオン\". The Arts with the #魔法 tag can only be used once per turn.",
-      "fr": "Envoyez 1 carte de la zone holo énergie dans l'archive pour pouvoir l'utiliser.\n\nEnvoyez 1 carte d'encouragement violette de votre archive à votre « 紫咲シオン ». Chaque Arts marqué #魔法 ne peut être utilisé qu'une fois par tour.",
-      "es": "Envía 1 carta del área de Holo Power al Archivo para poder usar esto.\n\nEnvía 1 carta de Cheer morada de tu Archivo a tu \"紫咲シオン\". Las actividades con la etiqueta #魔法 solo se pueden usar una vez por turno."
+      "zh-TW": "將自己holo能量區的1張牌放到存檔區才能使用。\n\n將自己存檔區的1張紫色吶喊卡發送給自己的「紫咲シオン」。標示#魔法的活動每個回合只能使用一次。",
+      "ja": "自分のアーカイブのメンバー1枚を自分のホロパワーゾーンに置くことで使用できる。\n\n自分のアーカイブの紫のエールカード1枚を自分の「紫咲シオン」に送る。「魔法」指定のイベントは各ターンに1度しか使用できない。",
+      "en": "You can only use this by placing 1 card from your Holo Energy Zone into your Archive.\n\nSend 1 purple Cheer card from your Archive to your \"Shion Murasaki\". A \"Magic\" marker event can only be used once per turn.",
+      "fr": "Utilisez en plaçant 1 carte de votre zone Holo Power dans votre Archive.\n\nEnvoyez 1 carte Cheer violette de votre Archive à \"Shion Murasaki\". L'événement marqué #Magie ne peut être utilisé qu'une fois par tour.\n",
+      "es": "Pon 1 carta de tu Zona de Holo Power en tu Archivo para poder usar esto.\n\nEnvía 1 carta de Cheer morada de tu Archivo a \"紫咲シオン\" tuyo. La Actividad marcada como #Magia solo puede usarse una vez por turno."
     },
     "id": "hBP02-083",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP02/hBP02-083_U.png"
@@ -23752,11 +23752,11 @@
     "tag": null,
     "product": "補充包「エリートスパーク (hBP03)」",
     "supportEffect": {
-      "zh-TW": "將holo能量區的1張牌放到存檔區才能使用。\n\n從自己的牌組展示1張與自己主推相同顏色的1st成員並加入手牌。將牌組重新洗牌。\n\nLIMITED：每個回合只能使用一張。",
-      "ja": "holoパワーエリアのカードを1枚アーカイブに置くことで使用できる。\n\n自分のデッキから、自分の推しと同じ色の1stメンバーを1枚公開し、手札に加える。その後、デッキをシャッフルする。\n\nLIMITED：毎ターン1枚しか使用できない。",
-      "en": "You can only use this by sending 1 card from your Holo Power Zone to the Archive.\n\nReveal 1 Debut or 1st Member from your Deck that is the same color as your Oshi and add it to your Hand. Shuffle your Deck.\n\nLIMITED: You can only use 1 per turn.",
-      "fr": "Envoyez 1 carte de la zone holo énergie dans l'archive pour pouvoir l'utiliser.\n\nMontrez 1 membre Debut ou 1st de la même couleur que votre Oshi, autre que Buzz, de votre Deck et ajoutez-le à votre main. Mélangez le Deck.\n\nLIMITED : Ne peut être utilisé qu'une fois par tour.",
-      "es": "Envía 1 carta del área de Holo Power al Archivo para poder usar esto.\n\nMuestra 1 carta de tu Mazo que sea del mismo color que tu Oshi, y que sea un miembro Debut o 1st que no sea Buzz, y añádela a tu mano. Baraja tu Mazo.\n\nLIMITED: Solo se puede usar una vez por turno."
+      "zh-TW": "將自己holo能量區的1張牌放到存檔區才能使用。\n\n從自己的牌組展示1張與自己主推相同顏色的1st成員並加入手牌。將牌組重新洗牌。\n\nLIMITED：每個回合只能使用一張。",
+      "ja": "自分のホロパワーゾーンのカード1枚をアーカイブに置くことで使用できる。\n\n自分のデッキから、自分の推しと同じ色の1stメンバー1枚を公開し、手札に加える。その後、デッキをシャッフルする。\n\nLIMITED：各ターンに1枚しか使用できない。",
+      "en": "You can only use this by placing 1 card from your Holo Energy Zone into your Archive.\n\nReveal 1 1st Generation Member from your Deck that is the same color as your Oshi and add it to your Hand. Shuffle your Deck.\n\nLIMITED: You can only use one per turn.",
+      "fr": "Utilisez en plaçant 1 carte de votre zone Holo Power dans votre Archive.\n\nMontrez 1 membre 1st de votre Deck de la même couleur que votre Oshi et ajoutez-le à votre main. Mélangez votre Deck.\n\nLIMITED : Ne peut être utilisé qu'une fois par tour.\n",
+      "es": "Pon 1 carta de tu Zona de Holo Power en tu Archivo para poder usar esto.\n\nMuestra 1 miembro 1st de tu Mazo que tenga el mismo color que tu Oshi y añádelo a tu Mano. Baraja tu Mazo.\n\nLIMITED: Solo puedes usar una por turno."
     },
     "id": "hBP03-084",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP03/hBP03-084_U.png"
@@ -35577,11 +35577,11 @@
     "effectC": {
       "name": "ビジネスフレンド",
       "effect": {
-        "zh-TW": "如果自己的生命值在3以下，自己這個回合綻放過的中心成員「さくらみこ」或「星街すいせい」，可以使用自己手牌的成員再次進行綻放。",
-        "ja": "自分のライフが3以下なら、このターン中にブルームした自分のセンターメンバー「さくらみこ」または「星街すいせい」は、自分の手札のメンバーで再度ブルームできる。",
-        "en": "If your Life is 3 or less, a Center Member \"Sakura Miko\" or \"Suisei Hoshimachi\" of yours that Bloomed this turn can Bloom again using a Member from your Hand.",
-        "fr": "Si vos Points de vie sont inférieurs ou égaux à 3, le membre du Centre \"Sakura Miko\" ou \"Hoshimachi Suisei\" qui a fait Bloom ce tour-ci peut refaire Bloom en utilisant un membre de votre main.",
-        "es": "Si tu Vida está en 3 o menos, los miembros del centro \"さくらみこ\" o \"星街すいせい\" que hayan hecho Bloom este turno, pueden hacer Bloom de nuevo usando un miembro de tu mano."
+        "zh-TW": "如果自己的生命值在3以下，可以使用自己手牌的成員將自己這個回合綻放過的中心成員「さくらみこ」或「星街すいせい」再次進行綻放。",
+        "ja": "自分のライフが3以下の場合、自分の手札のメンバーを使い、自分のこのターンにブルームしたセンターメンバー「さくらみこ」または「星街すいせい」を再びブルームできる。",
+        "en": "If your Life is 3 or less, you can use a Member from your Hand to Bloom your Center Member \"Miko Sakura\" or \"Suisei Hoshimachi\" that was Bloomed this turn again.",
+        "fr": "Si vos Points de vie sont inférieurs ou égaux à 3, utilisez un membre de votre main pour faire un Bloom sur votre membre Centre \"Sakura Miko\" ou \"Hoshimachi Suisei\" qui a déjà fait un Bloom ce tour.\n",
+        "es": "Si tu Vida está en 3 o menos, puedes usar un miembro de tu Mano para hacer Bloom de nuevo a tu miembro de Centro \"さくらみこ\" o \"星街すいせい\" que haya sido Bloom este turno."
       }
     },
     "effectB": null,
@@ -35629,11 +35629,11 @@
     "effectC": {
       "name": "ビジネスフレンド",
       "effect": {
-        "zh-TW": "如果自己的生命值在3以下，自己這個回合綻放過的中心成員「さくらみこ」或「星街すいせい」，可以使用自己手牌的成員再次進行綻放。",
-        "ja": "自分のライフが3以下なら、このターン中にブルームした自分のセンターメンバー「さくらみこ」または「星街すいせい」は、自分の手札のメンバーで再度ブルームできる。",
-        "en": "If your Life is 3 or less, a Center Member \"Sakura Miko\" or \"Suisei Hoshimachi\" of yours that Bloomed this turn can Bloom again using a Member from your Hand.",
-        "fr": "Si vos Points de vie sont inférieurs ou égaux à 3, le membre du Centre \"Sakura Miko\" ou \"Hoshimachi Suisei\" qui a fait Bloom ce tour-ci peut refaire Bloom en utilisant un membre de votre main.",
-        "es": "Si tu Vida está en 3 o menos, los miembros del centro \"さくらみこ\" o \"星街すいせい\" que hayan hecho Bloom este turno, pueden hacer Bloom de nuevo usando un miembro de tu mano."
+        "zh-TW": "如果自己的生命值在3以下，可以使用自己手牌的成員將自己這個回合綻放過的中心成員「さくらみこ」或「星街すいせい」再次進行綻放。",
+        "ja": "自分のライフが3以下の場合、自分の手札のメンバーを使い、自分のこのターンにブルームしたセンターメンバー「さくらみこ」または「星街すいせい」を再びブルームできる。",
+        "en": "If your Life is 3 or less, you can use a Member from your Hand to Bloom your Center Member \"Miko Sakura\" or \"Suisei Hoshimachi\" that was Bloomed this turn again.",
+        "fr": "Si vos Points de vie sont inférieurs ou égaux à 3, utilisez un membre de votre main pour faire un Bloom sur votre membre Centre \"Sakura Miko\" ou \"Hoshimachi Suisei\" qui a déjà fait un Bloom ce tour.\n",
+        "es": "Si tu Vida está en 3 o menos, puedes usar un miembro de tu Mano para hacer Bloom de nuevo a tu miembro de Centro \"さくらみこ\" o \"星街すいせい\" que haya sido Bloom este turno."
       }
     },
     "effectB": null,
@@ -40692,11 +40692,11 @@
     "effectG": {
       "name": "伝えたい想い",
       "effect": {
-        "zh-TW": "這個成員擊倒對手的中心成員時，自己這個回合綻放過的1位「風真いろは」，可以使用自己手牌的成員再次進行綻放。",
-        "ja": "このメンバーが相手のセンターメンバーをダウンさせた場合、このターン自分はブルームした「風真いろは」1人に対し、自分の手札のメンバーで再度ブルームできる。",
-        "en": "When this Member K.O.s an opponent's Center Member, 1 \"風真いろは\" that Bloomed this turn can Bloom again using a Member from your Hand.",
-        "fr": "Quand ce Membre met K.O. un Membre Centre de votre adversaire, durant ce tour, 1 \"風真いろは\" qui a Bloom sur votre Scène peut Bloom à nouveau en utilisant un Membre de votre Main.",
-        "es": "Cuando este Miembro derrota a un Miembro Centro del oponente, 1 \"風真いろは\" que entró en Bloom este turno por tu parte puede usar un Miembro de tu Mano para entrar en Bloom nuevamente."
+        "zh-TW": "這個成員擊倒對手的中心成員時，可以使用自己手牌的成員將自己這個回合綻放過的1位「風真いろは」再次進行綻放。",
+        "ja": "このメンバーが相手のセンターメンバーをダウンさせた時、自分の手札のメンバーを使い、自分のこのターンにブルームした「風真いろは」1人を再びブルームできる。",
+        "en": "When this Member K.O.s the opponent's Center Member, you can use a Member from your Hand to Bloom 1 \"Iroha Kazama\" that was Bloomed this turn again.",
+        "fr": "Lorsque ce membre K.O. le membre Centre de l'adversaire, utilisez un membre de votre main pour faire un Bloom sur un \"Kazama Iroha\" que vous avez fait un Bloom ce tour.\n",
+        "es": "Cuando este miembro derrote a un miembro de Centro del oponente, puedes usar un miembro de tu Mano para hacer Bloom de nuevo a un \"風真いろは\" tuyo que haya sido Bloom este turno."
       }
     },
     "art1": {
@@ -40739,11 +40739,11 @@
     "effectG": {
       "name": "伝えたい想い",
       "effect": {
-        "zh-TW": "這個成員擊倒對手的中心成員時，自己這個回合綻放過的1位「風真いろは」，可以使用自己手牌的成員再次進行綻放。",
-        "ja": "このメンバーが相手のセンターメンバーをダウンさせた場合、このターン自分はブルームした「風真いろは」1人に対し、自分の手札のメンバーで再度ブルームできる。",
-        "en": "When this Member K.O.s an opponent's Center Member, 1 \"風真いろは\" that Bloomed this turn can Bloom again using a Member from your Hand.",
-        "fr": "Quand ce Membre met K.O. un Membre Centre de votre adversaire, durant ce tour, 1 \"風真いろは\" qui a Bloom sur votre Scène peut Bloom à nouveau en utilisant un Membre de votre Main.",
-        "es": "Cuando este Miembro derrota a un Miembro Centro del oponente, 1 \"風真いろは\" que entró en Bloom este turno por tu parte puede usar un Miembro de tu Mano para entrar en Bloom nuevamente."
+        "zh-TW": "這個成員擊倒對手的中心成員時，可以使用自己手牌的成員將自己這個回合綻放過的1位「風真いろは」再次進行綻放。",
+        "ja": "このメンバーが相手のセンターメンバーをダウンさせた時、自分の手札のメンバーを使い、自分のこのターンにブルームした「風真いろは」1人を再びブルームできる。",
+        "en": "When this Member K.O.s the opponent's Center Member, you can use a Member from your Hand to Bloom 1 \"Iroha Kazama\" that was Bloomed this turn again.",
+        "fr": "Lorsque ce membre K.O. le membre Centre de l'adversaire, utilisez un membre de votre main pour faire un Bloom sur un \"Kazama Iroha\" que vous avez fait un Bloom ce tour.\n",
+        "es": "Cuando este miembro derrote a un miembro de Centro del oponente, puedes usar un miembro de tu Mano para hacer Bloom de nuevo a un \"風真いろは\" tuyo que haya sido Bloom este turno."
       }
     },
     "art1": {
@@ -40786,11 +40786,11 @@
     "effectG": {
       "name": "伝えたい想い",
       "effect": {
-        "zh-TW": "這個成員擊倒對手的中心成員時，自己這個回合綻放過的1位「風真いろは」，可以使用自己手牌的成員再次進行綻放。",
-        "ja": "このメンバーが相手のセンターメンバーをダウンさせた場合、このターン自分はブルームした「風真いろは」1人に対し、自分の手札のメンバーで再度ブルームできる。",
-        "en": "When this Member K.O.s an opponent's Center Member, 1 \"風真いろは\" that Bloomed this turn can Bloom again using a Member from your Hand.",
-        "fr": "Quand ce Membre met K.O. un Membre Centre de votre adversaire, durant ce tour, 1 \"風真いろは\" qui a Bloom sur votre Scène peut Bloom à nouveau en utilisant un Membre de votre Main.",
-        "es": "Cuando este Miembro derrota a un Miembro Centro del oponente, 1 \"風真いろは\" que entró en Bloom este turno por tu parte puede usar un Miembro de tu Mano para entrar en Bloom nuevamente."
+        "zh-TW": "這個成員擊倒對手的中心成員時，可以使用自己手牌的成員將自己這個回合綻放過的1位「風真いろは」再次進行綻放。",
+        "ja": "このメンバーが相手のセンターメンバーをダウンさせた時、自分の手札のメンバーを使い、自分のこのターンにブルームした「風真いろは」1人を再びブルームできる。",
+        "en": "When this Member K.O.s the opponent's Center Member, you can use a Member from your Hand to Bloom 1 \"Iroha Kazama\" that was Bloomed this turn again.",
+        "fr": "Lorsque ce membre K.O. le membre Centre de l'adversaire, utilisez un membre de votre main pour faire un Bloom sur un \"Kazama Iroha\" que vous avez fait un Bloom ce tour.\n",
+        "es": "Cuando este miembro derrote a un miembro de Centro del oponente, puedes usar un miembro de tu Mano para hacer Bloom de nuevo a un \"風真いろは\" tuyo que haya sido Bloom este turno."
       }
     },
     "art1": {
@@ -45385,11 +45385,11 @@
     "tag": null,
     "product": "補充包「アヤカシヴァーミリオン (hBP06)」",
     "supportEffect": {
-      "zh-TW": "從自己的牌組抽2張牌。之後，如果自己的生命值在4以下，自己這個回合從Debut綻放為1st的1位成員，可以使用自己手牌的成員再次進行綻放。\n\nLIMITED：每個回合只能使用一張。",
-      "ja": "自分のデッキから2枚ドローする。その後、自分のライフが4以下の場合、このターン中、自分のDebutから1stになったメンバー1人は、自分の手札のメンバーを使い再度ブルームできる。\n\nLIMITED：毎ターン1枚のみ使用可能。",
-      "en": "Draw 2 cards from your Deck. Then, if your Life is 4 or less, 1 member you control who Bloomed from Debut to 1st this turn can use the effect of a member in your hand to Bloom again.\n\nLIMITED: Only 1 can be used per turn.",
-      "fr": "Piochez 2 cartes de votre Deck. Ensuite, si vos Points de vie sont à 4 ou moins, un membre de votre camp qui a Bloom de Debut à 1st durant ce tour peut utiliser une carte de membre de votre Main pour Bloom à nouveau.\n\nLIMITED : Une utilisation par tour.\n",
-      "es": "LIMITED: Solo puede usarse una vez por turno.\nRoba 2 cartas de tu mazo. Después, si tu Vida es 4 o menos, 1 Miembro tuyo que haya pasado de Debut a 1st durante este turno puede usar los Miembros de tu mano para volver a pasar a Bloom."
+      "zh-TW": "從自己的牌組抽2張牌。之後，如果自己的生命值在4以下，可以使用自己手牌的成員將自己這個回合從Debut綻放為1st的1位成員再次進行綻放。\n\nLIMITED：每個回合只能使用一張。",
+      "ja": "自分のデッキから2枚引く。その後、自分のライフが4以下の場合、自分の手札のメンバーを使い、自分のこのターンにDebutから1stにブルームしたメンバー1人を再びブルームできる。\n\nLIMITED：各ターンに1枚しか使用できない。",
+      "en": "Draw 2 cards from your Deck. After that, if your Life is 4 or less, you can use a Member from your Hand to Bloom 1 Member that was Bloomed from Debut to 1st this turn again.\n\nLIMITED: You can only use one per turn.",
+      "fr": "Piochez 2 cartes de votre Deck. Ensuite, si vos Points de vie sont inférieurs ou égaux à 4, utilisez un membre de votre main pour faire un Bloom sur un membre que vous avez fait passer de Debut à 1st ce tour.\n\nLIMITED : Ne peut être utilisé qu'une fois par tour.\n",
+      "es": "Roba 2 cartas de tu Mazo. Después, si tu Vida está en 4 o menos, puedes usar un miembro de tu Mano para hacer Bloom de nuevo a un miembro tuyo que haya pasado de Debut a 1st este turno.\n\nLIMITED: Solo puedes usar una por turno."
     },
     "id": "hBP06-090",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP06/hBP06-090_U.png"
@@ -45401,11 +45401,11 @@
     "tag": null,
     "product": "PR卡",
     "supportEffect": {
-      "zh-TW": "從自己的牌組抽2張牌。之後，如果自己的生命值在4以下，自己這個回合從Debut綻放為1st的1位成員，可以使用自己手牌的成員再次進行綻放。\n\nLIMITED：每個回合只能使用一張。",
-      "ja": "自分のデッキから2枚ドローする。その後、自分のライフが4以下の場合、このターン中、自分のDebutから1stになったメンバー1人は、自分の手札のメンバーを使い再度ブルームできる。\n\nLIMITED：毎ターン1枚のみ使用可能。",
-      "en": "Draw 2 cards from your Deck. Then, if your Life is 4 or less, 1 member you control who Bloomed from Debut to 1st this turn can use the effect of a member in your hand to Bloom again.\n\nLIMITED: Only 1 can be used per turn.",
-      "fr": "Piochez 2 cartes de votre Deck. Ensuite, si vos Points de vie sont à 4 ou moins, un membre de votre camp qui a Bloom de Debut à 1st durant ce tour peut utiliser une carte de membre de votre Main pour Bloom à nouveau.\n\nLIMITED : Une utilisation par tour.\n",
-      "es": "LIMITED: Solo puede usarse una vez por turno.\nRoba 2 cartas de tu mazo. Después, si tu Vida es 4 o menos, 1 Miembro tuyo que haya pasado de Debut a 1st durante este turno puede usar los Miembros de tu mano para volver a pasar a Bloom."
+      "zh-TW": "從自己的牌組抽2張牌。之後，如果自己的生命值在4以下，可以使用自己手牌的成員將自己這個回合從Debut綻放為1st的1位成員再次進行綻放。\n\nLIMITED：每個回合只能使用一張。",
+      "ja": "自分のデッキから2枚引く。その後、自分のライフが4以下の場合、自分の手札のメンバーを使い、自分のこのターンにDebutから1stにブルームしたメンバー1人を再びブルームできる。\n\nLIMITED：各ターンに1枚しか使用できない。",
+      "en": "Draw 2 cards from your Deck. After that, if your Life is 4 or less, you can use a Member from your Hand to Bloom 1 Member that was Bloomed from Debut to 1st this turn again.\n\nLIMITED: You can only use one per turn.",
+      "fr": "Piochez 2 cartes de votre Deck. Ensuite, si vos Points de vie sont inférieurs ou égaux à 4, utilisez un membre de votre main pour faire un Bloom sur un membre que vous avez fait passer de Debut à 1st ce tour.\n\nLIMITED : Ne peut être utilisé qu'une fois par tour.\n",
+      "es": "Roba 2 cartas de tu Mazo. Después, si tu Vida está en 4 o menos, puedes usar un miembro de tu Mano para hacer Bloom de nuevo a un miembro tuyo que haya pasado de Debut a 1st este turno.\n\nLIMITED: Solo puedes usar una por turno."
     },
     "id": "hBP06-090",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP06/hBP06-090_P.png"
@@ -45417,11 +45417,11 @@
     "tag": null,
     "product": "オフィシャルホロカコレクション-2025ライブセット-",
     "supportEffect": {
-      "zh-TW": "從自己的牌組抽2張牌。之後，如果自己的生命值在4以下，自己這個回合從Debut綻放為1st的1位成員，可以使用自己手牌的成員再次進行綻放。\n\nLIMITED：每個回合只能使用一張。",
-      "ja": "自分のデッキから2枚ドローする。その後、自分のライフが4以下の場合、このターン中、自分のDebutから1stになったメンバー1人は、自分の手札のメンバーを使い再度ブルームできる。\n\nLIMITED：毎ターン1枚のみ使用可能。",
-      "en": "Draw 2 cards from your Deck. Then, if your Life is 4 or less, 1 member you control who Bloomed from Debut to 1st this turn can use the effect of a member in your hand to Bloom again.\n\nLIMITED: Only 1 can be used per turn.",
-      "fr": "Piochez 2 cartes de votre Deck. Ensuite, si vos Points de vie sont à 4 ou moins, un membre de votre camp qui a Bloom de Debut à 1st durant ce tour peut utiliser une carte de membre de votre Main pour Bloom à nouveau.\n\nLIMITED : Une utilisation par tour.\n",
-      "es": "LIMITED: Solo puede usarse una vez por turno.\nRoba 2 cartas de tu mazo. Después, si tu Vida es 4 o menos, 1 Miembro tuyo que haya pasado de Debut a 1st durante este turno puede usar los Miembros de tu mano para volver a pasar a Bloom."
+      "zh-TW": "從自己的牌組抽2張牌。之後，如果自己的生命值在4以下，可以使用自己手牌的成員將自己這個回合從Debut綻放為1st的1位成員再次進行綻放。\n\nLIMITED：每個回合只能使用一張。",
+      "ja": "自分のデッキから2枚引く。その後、自分のライフが4以下の場合、自分の手札のメンバーを使い、自分のこのターンにDebutから1stにブルームしたメンバー1人を再びブルームできる。\n\nLIMITED：各ターンに1枚しか使用できない。",
+      "en": "Draw 2 cards from your Deck. After that, if your Life is 4 or less, you can use a Member from your Hand to Bloom 1 Member that was Bloomed from Debut to 1st this turn again.\n\nLIMITED: You can only use one per turn.",
+      "fr": "Piochez 2 cartes de votre Deck. Ensuite, si vos Points de vie sont inférieurs ou égaux à 4, utilisez un membre de votre main pour faire un Bloom sur un membre que vous avez fait passer de Debut à 1st ce tour.\n\nLIMITED : Ne peut être utilisé qu'une fois par tour.\n",
+      "es": "Roba 2 cartas de tu Mazo. Después, si tu Vida está en 4 o menos, puedes usar un miembro de tu Mano para hacer Bloom de nuevo a un miembro tuyo que haya pasado de Debut a 1st este turno.\n\nLIMITED: Solo puedes usar una por turno."
     },
     "id": "hBP06-090",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCO01/hBP06-090_SR.png"
@@ -49393,11 +49393,11 @@
     "effectC": {
       "name": "この日が来た！",
       "effect": {
-        "zh-TW": "如果在自己後攻的第一個回合，自己的中心成員「オーロ・クロニー」，可以使用自己手牌的1st成員進行綻放。這個效果可以在第一個回合進行綻放。",
-        "ja": "自分の後攻1ターン目に、自分のセンターメンバー「オーロ・クロニー」は、自分の手札の1stメンバーを使用してブルームできる。\nこの効果は1ターン目にブルームできる。",
-        "en": "If it is your first turn when going second, your Center Member \"Ouro Kronii\" can perform a Bloom using a Gen 1 Member from your Hand. This effect can be used for Bloom on the first turn.",
-        "fr": "Si lors de votre premier tour en tant que second joueur, votre membre du centre \"Ouro Kronii\" peut utiliser un membre 1st de votre main pour faire un Bloom. Cet effet peut être utilisé lors du premier tour.",
-        "es": "Si es tu primer turno y atacas segundo, tu Miembro Centro \"Ouro Kronii\" puede usar Bloom con un Miembro 1st de tu mano. Este efecto se puede usar en el primer turno."
+        "zh-TW": "如果在自己後攻的第一個回合，可以使用自己手牌的1st成員將自己的中心成員「オーロ・クロニー」進行綻放。這個效果可以在第一個回合進行綻放。",
+        "ja": "自分の後攻1ターン目に限り、自分の手札の1stメンバーを使い、自分のセンターメンバー「オーロ・クロニー」をブルームできる。この効果は1ターン目にブルームできる。",
+        "en": "If it is your Going second's first turn, you can use a 1st Generation Member from your Hand to Bloom your Center Member \"Airo Chroney\". This effect can Bloom on the first turn.",
+        "fr": "Si c'est votre premier tour en tant que joueur commençant en second, utilisez un membre 1st de votre main pour faire un Bloom sur votre membre Centre \"Airo Chroinie\". Cet effet peut être utilisé lors du premier tour pour faire un Bloom.\n",
+        "es": "Si es tu primer turno y atacas en segundo lugar, puedes usar un miembro 1st de tu Mano para hacer Bloom a tu miembro de Centro \"オーロ・クロニー\". Este efecto puede hacer Bloom en el primer turno."
       }
     },
     "effectB": null,
@@ -49725,11 +49725,11 @@
     "effectG": {
       "name": "時界を統べし者",
       "effect": {
-        "zh-TW": "[限定中心位置]自己的表演階段開始時，自己這個成員以外的1位「オーロ・クロニー」，可以使用與這個成員重疊的成員進行綻放。",
-        "ja": "[限定中心位置]自分のパフォーマンスフェイズ開始時、このメンバー以外の自分の「オーロ・クロニー」1人は、このメンバーと重なっているメンバーでブルームできる。",
-        "en": "[Limited Center Position] At the start of your Performance Phase, 1 \"オーロ・クロニー\" other than this Member on your Stage may Bloom using Members overlapped with this Member.",
-        "fr": "[Position Centre UNIQUEMENT] Au début de votre phase de Performance, 1 \"オーロ・クロニー\" autre que ce membre peut effectuer un Bloom en utilisant les membres superposés à ce membre.",
-        "es": "[Solo posición central] Al comienzo de tu Fase de Actuación, 1 \"Kronii Aurora\" en tu lado, que no sea este Miembro, puede usar Bloom con los Miembros superpuestos a este Miembro."
+        "zh-TW": "[限定中心位置]自己的表演階段開始時，可以使用與這個成員重疊的成員將自己這個成員以外的1位「オーロ・クロニー」進行綻放。",
+        "ja": "[センター限定]自分のパフォーマンスフェイズ開始時、このメンバーと重ねているメンバーを使い、このメンバー以外の「オーロ・クロニー」1人をブルームできる。",
+        "en": "[Center Position Only] When your Performance Stage begins, you can use a Member overlapping with this Member to Bloom 1 \"Airo Chroney\" other than this Member.",
+        "fr": "[Emplacement Centre uniquement] Au début de votre phase de performance, utilisez un membre superposé à ce membre pour faire un Bloom sur un \"Airo Chroinie\" autre que ce membre.",
+        "es": "[Posición de Centro Exclusiva] Al comienzo de tu Fase de Actuación, puedes usar un miembro superpuesto a este miembro para hacer Bloom a un \"オーロ・クロニー\" tuyo que no sea este miembro."
       }
     },
     "art1": {
@@ -49773,11 +49773,11 @@
     "effectG": {
       "name": "時界を統べし者",
       "effect": {
-        "zh-TW": "[限定中心位置]自己的表演階段開始時，自己這個成員以外的1位「オーロ・クロニー」，可以使用與這個成員重疊的成員進行綻放。",
-        "ja": "[限定中心位置]自分のパフォーマンスフェイズ開始時、このメンバー以外の自分の「オーロ・クロニー」1人は、このメンバーと重なっているメンバーでブルームできる。",
-        "en": "[Limited Center Position] At the start of your Performance Phase, 1 \"オーロ・クロニー\" other than this Member on your Stage may Bloom using Members overlapped with this Member.",
-        "fr": "[Position Centre UNIQUEMENT] Au début de votre phase de Performance, 1 \"オーロ・クロニー\" autre que ce membre peut effectuer un Bloom en utilisant les membres superposés à ce membre.",
-        "es": "[Solo posición central] Al comienzo de tu Fase de Actuación, 1 \"Kronii Aurora\" en tu lado, que no sea este Miembro, puede usar Bloom con los Miembros superpuestos a este Miembro."
+        "zh-TW": "[限定中心位置]自己的表演階段開始時，可以使用與這個成員重疊的成員將自己這個成員以外的1位「オーロ・クロニー」進行綻放。",
+        "ja": "[センター限定]自分のパフォーマンスフェイズ開始時、このメンバーと重ねているメンバーを使い、このメンバー以外の「オーロ・クロニー」1人をブルームできる。",
+        "en": "[Center Position Only] When your Performance Stage begins, you can use a Member overlapping with this Member to Bloom 1 \"Airo Chroney\" other than this Member.",
+        "fr": "[Emplacement Centre uniquement] Au début de votre phase de performance, utilisez un membre superposé à ce membre pour faire un Bloom sur un \"Airo Chroinie\" autre que ce membre.",
+        "es": "[Posición de Centro Exclusiva] Al comienzo de tu Fase de Actuación, puedes usar un miembro superpuesto a este miembro para hacer Bloom a un \"オーロ・クロニー\" tuyo que no sea este miembro."
       }
     },
     "art1": {
@@ -49821,11 +49821,11 @@
     "effectG": {
       "name": "時界を統べし者",
       "effect": {
-        "zh-TW": "[限定中心位置]自己的表演階段開始時，自己這個成員以外的1位「オーロ・クロニー」，可以使用與這個成員重疊的成員進行綻放。",
-        "ja": "[限定中心位置]自分のパフォーマンスフェイズ開始時、このメンバー以外の自分の「オーロ・クロニー」1人は、このメンバーと重なっているメンバーでブルームできる。",
-        "en": "[Limited Center Position] At the start of your Performance Phase, 1 \"オーロ・クロニー\" other than this Member on your Stage may Bloom using Members overlapped with this Member.",
-        "fr": "[Position Centre UNIQUEMENT] Au début de votre phase de Performance, 1 \"オーロ・クロニー\" autre que ce membre peut effectuer un Bloom en utilisant les membres superposés à ce membre.",
-        "es": "[Solo posición central] Al comienzo de tu Fase de Actuación, 1 \"Kronii Aurora\" en tu lado, que no sea este Miembro, puede usar Bloom con los Miembros superpuestos a este Miembro."
+        "zh-TW": "[限定中心位置]自己的表演階段開始時，可以使用與這個成員重疊的成員將自己這個成員以外的1位「オーロ・クロニー」進行綻放。",
+        "ja": "[センター限定]自分のパフォーマンスフェイズ開始時、このメンバーと重ねているメンバーを使い、このメンバー以外の「オーロ・クロニー」1人をブルームできる。",
+        "en": "[Center Position Only] When your Performance Stage begins, you can use a Member overlapping with this Member to Bloom 1 \"Airo Chroney\" other than this Member.",
+        "fr": "[Emplacement Centre uniquement] Au début de votre phase de performance, utilisez un membre superposé à ce membre pour faire un Bloom sur un \"Airo Chroinie\" autre que ce membre.",
+        "es": "[Posición de Centro Exclusiva] Al comienzo de tu Fase de Actuación, puedes usar un miembro superpuesto a este miembro para hacer Bloom a un \"オーロ・クロニー\" tuyo que no sea este miembro."
       }
     },
     "art1": {
@@ -55931,11 +55931,11 @@
     "effectG": {
       "name": "光、再び灯りて",
       "effect": {
-        "zh-TW": "自己的主要階段，如果自己的存檔區有10張以上的成員，自己的成員，可以使用存檔區的這個成員進行綻放。(這個效果只能在存檔區使用)。",
-        "ja": "自分のメインフェイズ中、自分の墓地にメンバーが１０枚以上ある場合、自分のメンバーは墓地のこのメンバーを使用してブルームできる。（この効果は墓地でのみ使用できる）\n",
-        "en": "During your Main Phase, if you have 10 or more Members in your Archive, you can Bloom using this Member from the Archive. (This effect can only be used from the Archive).",
-        "fr": "Durant votre phase principale, si vous avez 10 membres ou plus dans votre zone d'archive, vos membres peuvent utiliser le Bloom de ce membre depuis la zone d'archive. (Cet effet ne peut être utilisé que depuis la zone d'archive).",
-        "es": "Durante tu Fase Principal, si tienes 10 o más Miembros en tu Archivo, puedes usar este Miembro del Archivo para Bloom en tus Miembros. (Este efecto solo se puede usar desde el Archivo)."
+        "zh-TW": "自己的主要階段，如果自己的存檔區有10張以上的成員，可以使用存檔區的這個成員將自己的成員進行綻放。(這個效果只能在存檔區使用)。",
+        "ja": "自分のメインフェイズに、自分のアーカイブにメンバーが10枚以上ある場合、アーカイブのこのメンバーを使い、自分のメンバーをブルームできる。(この効果はアーカイブでのみ使用できる)",
+        "en": "Your Main Phase, if you have 10 or more Members in your Archive, you can use this Member from your Archive to Bloom your Member. (This effect can only be used from the Archive).",
+        "fr": "Votre phase principale : Si vous avez 10 membres ou plus dans votre Archive, utilisez ce membre de l'Archive pour faire un Bloom sur votre membre. (Cet effet ne peut être utilisé que depuis l'Archive).\n",
+        "es": "Tu Fase Principal, si tienes 10 o más miembros en tu Archivo, puedes usar este miembro del Archivo para hacer Bloom a un miembro tuyo. (Este efecto solo puede usarse desde el Archivo)."
       }
     },
     "art1": {
@@ -55977,11 +55977,11 @@
     "effectG": {
       "name": "光、再び灯りて",
       "effect": {
-        "zh-TW": "自己的主要階段，如果自己的存檔區有10張以上的成員，自己的成員，可以使用存檔區的這個成員進行綻放。(這個效果只能在存檔區使用)。",
-        "ja": "自分のメインフェイズ中、自分の墓地にメンバーが１０枚以上ある場合、自分のメンバーは墓地のこのメンバーを使用してブルームできる。（この効果は墓地でのみ使用できる）\n",
-        "en": "During your Main Phase, if you have 10 or more Members in your Archive, you can Bloom using this Member from the Archive. (This effect can only be used from the Archive).",
-        "fr": "Durant votre phase principale, si vous avez 10 membres ou plus dans votre zone d'archive, vos membres peuvent utiliser le Bloom de ce membre depuis la zone d'archive. (Cet effet ne peut être utilisé que depuis la zone d'archive).",
-        "es": "Durante tu Fase Principal, si tienes 10 o más Miembros en tu Archivo, puedes usar este Miembro del Archivo para Bloom en tus Miembros. (Este efecto solo se puede usar desde el Archivo)."
+        "zh-TW": "自己的主要階段，如果自己的存檔區有10張以上的成員，可以使用存檔區的這個成員將自己的成員進行綻放。(這個效果只能在存檔區使用)。",
+        "ja": "自分のメインフェイズに、自分のアーカイブにメンバーが10枚以上ある場合、アーカイブのこのメンバーを使い、自分のメンバーをブルームできる。(この効果はアーカイブでのみ使用できる)",
+        "en": "Your Main Phase, if you have 10 or more Members in your Archive, you can use this Member from your Archive to Bloom your Member. (This effect can only be used from the Archive).",
+        "fr": "Votre phase principale : Si vous avez 10 membres ou plus dans votre Archive, utilisez ce membre de l'Archive pour faire un Bloom sur votre membre. (Cet effet ne peut être utilisé que depuis l'Archive).\n",
+        "es": "Tu Fase Principal, si tienes 10 o más miembros en tu Archivo, puedes usar este miembro del Archivo para hacer Bloom a un miembro tuyo. (Este efecto solo puede usarse desde el Archivo)."
       }
     },
     "art1": {
@@ -56023,11 +56023,11 @@
     "effectG": {
       "name": "光、再び灯りて",
       "effect": {
-        "zh-TW": "自己的主要階段，如果自己的存檔區有10張以上的成員，自己的成員，可以使用存檔區的這個成員進行綻放。(這個效果只能在存檔區使用)。",
-        "ja": "自分のメインフェイズ中、自分の墓地にメンバーが１０枚以上ある場合、自分のメンバーは墓地のこのメンバーを使用してブルームできる。（この効果は墓地でのみ使用できる）\n",
-        "en": "During your Main Phase, if you have 10 or more Members in your Archive, you can Bloom using this Member from the Archive. (This effect can only be used from the Archive).",
-        "fr": "Durant votre phase principale, si vous avez 10 membres ou plus dans votre zone d'archive, vos membres peuvent utiliser le Bloom de ce membre depuis la zone d'archive. (Cet effet ne peut être utilisé que depuis la zone d'archive).",
-        "es": "Durante tu Fase Principal, si tienes 10 o más Miembros en tu Archivo, puedes usar este Miembro del Archivo para Bloom en tus Miembros. (Este efecto solo se puede usar desde el Archivo)."
+        "zh-TW": "自己的主要階段，如果自己的存檔區有10張以上的成員，可以使用存檔區的這個成員將自己的成員進行綻放。(這個效果只能在存檔區使用)。",
+        "ja": "自分のメインフェイズに、自分のアーカイブにメンバーが10枚以上ある場合、アーカイブのこのメンバーを使い、自分のメンバーをブルームできる。(この効果はアーカイブでのみ使用できる)",
+        "en": "Your Main Phase, if you have 10 or more Members in your Archive, you can use this Member from your Archive to Bloom your Member. (This effect can only be used from the Archive).",
+        "fr": "Votre phase principale : Si vous avez 10 membres ou plus dans votre Archive, utilisez ce membre de l'Archive pour faire un Bloom sur votre membre. (Cet effet ne peut être utilisé que depuis l'Archive).\n",
+        "es": "Tu Fase Principal, si tienes 10 o más miembros en tu Archivo, puedes usar este miembro del Archivo para hacer Bloom a un miembro tuyo. (Este efecto solo puede usarse desde el Archivo)."
       }
     },
     "art1": {
@@ -65414,11 +65414,11 @@
     "effectG": {
       "name": "300馬力だよ！",
       "effect": {
-        "zh-TW": "如果自己的主推為「輪堂千速」，且對手的舞台上有1st成員，這個回合綻放過的這個成員，可以使用自己手牌的2nd成員再次進行綻放。",
-        "ja": "自分の推しが「輪堂千速」で、相手のステージに1stメンバーがいるなら、このターン中にブルームしたこのメンバーは、自分の手札の2ndメンバーで再度ブルームできる。",
-        "en": "If your Oshi is \"Rin Chihaya\", and your opponent has a 1st Member on their Stage, a Member of yours that Bloomed this turn can Bloom again using a 2nd Member from your Hand.",
-        "fr": "Si votre Oshi est \"Rindou Chihaya\", et que l'adversaire a un membre de 1ère génération sur sa Scène, ce membre qui a fait Bloom ce tour-ci peut refaire Bloom en utilisant un membre de 2ème génération de votre main.",
-        "es": "Si tu Oshi es \"Rindou Chihaya\", y tu oponente tiene Miembros 1st en su Escenario, este Miembro que usó Bloom este turno puede usar Bloom de nuevo con un Miembro 2nd de tu mano."
+        "zh-TW": "如果自己的主推為「輪堂千速」，且對手的舞台上有1st成員，可以使用自己手牌的2nd成員將這個回合綻放過的這個成員再次進行綻放。",
+        "ja": "自分の推しが「輪堂千速」で、相手のステージに1stメンバーがいる場合、自分の手札の2ndメンバーを使い、このターンにブルームしたこのメンバーを再びブルームできる。",
+        "en": "If your Oshi is \"Chihaya Kashiwagi\", and the opponent's Stage has a 1st Generation Member, you can use a 2nd Generation Member from your Hand to Bloom this Member that was Bloomed this turn again.",
+        "fr": "Si votre Oshi est \"Rindou Chihaya\" et que l'adversaire a un membre 1st sur son Scène, utilisez un membre 2nd de votre main pour faire un Bloom sur ce membre qui a déjà fait un Bloom ce tour.\n",
+        "es": "Si tu Oshi es \"輪堂千速\" y el oponente tiene un miembro 1st en su Escenario, puedes usar un miembro 2nd de tu Mano para hacer Bloom de nuevo a este miembro que ha sido Bloom este turno."
       }
     },
     "art1": {
