@@ -14,11 +14,12 @@ weekly cron / manual dispatch
         ▼
 scraper/ (Python)
   fetch_cards → scrape_tiers → scrape_decks + scrape_all_guides → scrape_x
-  → scrape_decklog → scrape_official → scrape_rules → translate (Gemini)
-  → data guard → copy to web/data/ → build_indexes (+ meta.json)
+  → scrape_hocg_logs → scrape_decklog → scrape_official → scrape_rules
+  → translate (Gemini) → data guard → copy to web/data/ → build_indexes
         │
         ▼
-web/data/*.json  (committed weekly by CI)
+web/data/*.json + x_posts.json / deck_codes.json / hocg_logs_state.json
+(committed weekly by CI)
         │
         ├── web/ — no-build vanilla-JS SPA (hash router, i18n, PWA + SW)
         └── scripts/build_seo_pages.mjs — language entry pages,

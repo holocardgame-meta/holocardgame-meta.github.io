@@ -1,4 +1,12 @@
-"""Fetch deck lists from Deck Log via the hocg-deck-convert proxy API."""
+"""Fetch deck lists from Deck Log via the hocg-deck-convert proxy API.
+
+Deck Log codes are immutable published snapshots, so card lists never change:
+pass cache_path (the previously published decklog_decks.json) and only codes
+absent from it are fetched; cached entries are reused with their metadata
+(title/oshi/event/placement) refreshed from the deck_codes.json registry.
+A cached-but-failed code stays absent from the output and is fetched again
+on the next run.
+"""
 
 import json
 import sys
@@ -54,7 +62,12 @@ def _build_card_list(raw_cards: list[dict], cards_db: dict) -> list[dict]:
     return results
 
 
-def scrape_decklog(deck_codes_path: Path, cards_path: Path, output_dir: Path) -> list[dict]:
+def scrape_decklog(
+    deck_codes_path: Path,
+    cards_path: Path,
+    output_dir: Path,
+    cache_path: Path | None = None,
+) -> list[dict]:
     if not deck_codes_path.exists():
         print("[decklog] deck_codes.json not found, skipping")
         return []
@@ -67,7 +80,16 @@ def scrape_decklog(deck_codes_path: Path, cards_path: Path, output_dir: Path) ->
         for c in raw_cards:
             cards_db[c["id"]] = c
 
+    cache: dict[str, dict] = {}
+    if cache_path and cache_path.exists():
+        for d in json.loads(cache_path.read_text(encoding="utf-8")):
+            if d.get("deck_code") and d.get("main_deck"):
+                cache[d["deck_code"]] = d
+    if cache:
+        print(f"[decklog] Loaded {len(cache)} previously fetched decks from {cache_path.name}")
+
     results = []
+    reused = 0
     for i, entry in enumerate(codes):
         if entry.get("missing"):
             print(f"  [{i+1}/{len(codes)}] Missing deck placeholder: {entry.get('title', '?')}")
@@ -92,6 +114,18 @@ def scrape_decklog(deck_codes_path: Path, cards_path: Path, output_dir: Path) ->
             continue
 
         code = entry["code"]
+        cached = cache.get(code)
+        if cached:
+            deck = dict(cached)
+            deck["title"] = entry.get("title") or cached.get("title") or code
+            deck["oshi"] = entry.get("oshi") or cached.get("oshi", "")
+            deck["event"] = entry.get("event")
+            deck["event_date"] = entry.get("event_date")
+            deck["placement"] = entry.get("placement")
+            results.append(deck)
+            reused += 1
+            continue
+
         print(f"  [{i+1}/{len(codes)}] Fetching deck code: {code}")
 
         raw = _fetch_deck(code)
@@ -123,7 +157,7 @@ def scrape_decklog(deck_codes_path: Path, cards_path: Path, output_dir: Path) ->
 
     output_path = output_dir / "decklog_decks.json"
     output_path.write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"[decklog] Saved {len(results)} decks to {output_path}")
+    print(f"[decklog] Saved {len(results)} decks to {output_path} ({reused} reused from cache)")
     return results
 
 
@@ -133,4 +167,5 @@ if __name__ == "__main__":
         base / "deck_codes.json",
         base / "data" / "cards.json",
         base / "data",
+        cache_path=base / "web" / "data" / "decklog_decks.json",
     )

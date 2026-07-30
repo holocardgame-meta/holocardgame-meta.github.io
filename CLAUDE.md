@@ -46,6 +46,22 @@ GitHub Pages. No build step, no backend. See README.md for architecture.
 - `scraper/run.py` step order matters; `scraper/data_guard.py` aborts the
   publish if any dataset shrinks below 80% of the `web/data/` baseline
   (`DATA_GUARD_BYPASS=1` to override intentionally).
+- `scrape_x` discovers @hololive_OCG result tweets via official news pages and
+  aggregator blogs (not the timeline), appends new deck codes to root
+  `deck_codes.json` and tweet URLs to `x_posts.json`, and deploy.yml commits
+  both back — these two root files are CI-written as well as hand-curated.
+  Tweet IDs already ingested (`scraped_ids`) or classified irrelevant
+  (`ignored_ids`) are recorded in `x_posts.json` and never re-fetched; failed
+  fetches are unrecorded so they retry next run.
+- `scrape_hocg_logs` walks hocg-logs.holotune.jp/tournaments (HTML pages only
+  — robots.txt disallows /api/ and /mcp — 1s delay), appends new deck codes
+  to `deck_codes.json`, and records scraped tournament ids in root
+  `hocg_logs_state.json` (CI-committed; date floor `BACKFILL_START`
+  2026-06-27). Events are prefixed `ショップ大会 YYYY-MM - ` so the
+  tournament view folds each month's shop events into one parent group.
+- `scrape_decklog` reuses card lists from the published
+  `web/data/decklog_decks.json` (codes are immutable snapshots) and fetches
+  only codes absent from it; metadata is refreshed from `deck_codes.json`.
 - Scrapers fail soft (skip + log) except `fetch_cards`, which crashes the run.
   The three holocardstrategy.jp scrapers (`scrape_tiers`, `scrape_all_decks`,
   `scrape_all_guides`) also fail soft: on a source-loss error `run.py` leaves the
