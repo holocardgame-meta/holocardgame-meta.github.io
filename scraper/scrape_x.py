@@ -3,6 +3,13 @@
 Supports proactive tweet discovery by crawling:
   - Official hololive card game website (news / event reports)
   - Known aggregator blogs that embed @hololive_OCG tweets
+
+Discovered tweet URLs persist in x_posts.json and newly parsed deck codes are
+appended to deck_codes.json (the registry consumed by scrape_decklog); CI
+commits both files back so discoveries survive across runs. Tweet IDs already
+ingested (scraped_ids) or classified as irrelevant (ignored_ids) are recorded
+in x_posts.json and never fetched again; a failed fetch is not recorded, so it
+retries on the next run.
 """
 
 import json
@@ -129,13 +136,14 @@ def discover_tweets(x_posts_path: Path) -> dict:
     """Proactively discover @hololive_OCG tweet IDs from multiple sources.
 
     Returns a dict with 'tournament_posts' and 'usage_rate_posts' URL lists,
-    merged with any existing manual entries from x_posts.json.
+    merged with any existing manual entries from x_posts.json. IDs classified
+    as irrelevant go to 'ignored_ids' so they are never re-classified.
     """
     existing: dict = {"account": TARGET_ACCOUNT, "tournament_posts": [], "usage_rate_posts": []}
     if x_posts_path.exists():
         existing = json.loads(x_posts_path.read_text(encoding="utf-8"))
 
-    known_ids: set[str] = set()
+    known_ids: set[str] = set(existing.get("ignored_ids", []))
     for url in existing.get("tournament_posts", []) + existing.get("usage_rate_posts", []):
         tid = re.search(r"/status/(\d+)", url)
         if tid:
@@ -159,9 +167,11 @@ def discover_tweets(x_posts_path: Path) -> dict:
         print(f"  Classifying {len(new_ids)} new tweet(s)...")
         new_tournament = []
         new_usage = []
+        new_ignored = []
         for tid in sorted(new_ids):
             tweet = _fetch_tweet(tid)
             if not tweet:
+                # Not recorded anywhere: a fetch failure retries next run.
                 continue
             category = _classify_tweet(tweet)
             tweet_url = f"https://x.com/{TARGET_ACCOUNT}/status/{tid}"
@@ -171,15 +181,23 @@ def discover_tweets(x_posts_path: Path) -> dict:
             elif category == "usage_rate":
                 new_usage.append(tweet_url)
                 print(f"    + usage_rate: {tweet_url}")
+            else:
+                new_ignored.append(tid)
             time.sleep(REQUEST_DELAY)
 
-        if new_tournament or new_usage:
+        if new_tournament or new_usage or new_ignored:
             existing["tournament_posts"] = existing.get("tournament_posts", []) + new_tournament
             existing["usage_rate_posts"] = existing.get("usage_rate_posts", []) + new_usage
+            existing["ignored_ids"] = sorted(
+                set(existing.get("ignored_ids", [])) | set(new_ignored)
+            )
             x_posts_path.write_text(
                 json.dumps(existing, ensure_ascii=False, indent=2), encoding="utf-8"
             )
-            print(f"  Updated x_posts.json: +{len(new_tournament)} tournament, +{len(new_usage)} usage rate")
+            print(
+                f"  Updated x_posts.json: +{len(new_tournament)} tournament, "
+                f"+{len(new_usage)} usage rate, +{len(new_ignored)} ignored"
+            )
         return existing
     finally:
         client.close()
@@ -345,8 +363,31 @@ def _build_deck_entries(tweet_url: str, tweet: dict, info: dict) -> list[dict]:
     return entries
 
 
+def _merge_into_deck_codes(deck_codes_path: Path, new_entries: list[dict]) -> int:
+    """Append entries to the deck_codes.json registry (creating it if absent).
+
+    Callers must pre-filter to coded entries not already registered; existing
+    entries — including manually curated ones — are never rewritten.
+    """
+    if not new_entries:
+        return 0
+    deck_codes = []
+    if deck_codes_path.exists():
+        deck_codes = json.loads(deck_codes_path.read_text(encoding="utf-8"))
+    deck_codes.extend(new_entries)
+    deck_codes_path.write_text(
+        json.dumps(deck_codes, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    return len(new_entries)
+
+
 def scrape_x_posts(x_posts_path: Path, deck_codes_path: Path, output_dir: Path) -> list[dict]:
-    """Scrape tournament data from X posts, with proactive tweet discovery."""
+    """Scrape tournament data from X posts, with proactive tweet discovery.
+
+    Newly found deck codes are appended to deck_codes.json so the downstream
+    decklog step fetches them in the same pipeline run. Tweets already ingested
+    (tracked by ID in x_posts.json "scraped_ids") are skipped, not re-fetched.
+    """
     x_posts = discover_tweets(x_posts_path)
 
     urls = x_posts.get("tournament_posts", [])
@@ -354,31 +395,47 @@ def scrape_x_posts(x_posts_path: Path, deck_codes_path: Path, output_dir: Path) 
         print("  No tournament post URLs found")
         return []
 
+    scraped_ids = set(x_posts.get("scraped_ids", []))
+    skipped = 0
+    newly_scraped = 0
+
+    # Deck Log codes are case-insensitive; normalize so a re-tweeted code in a
+    # different case cannot create a duplicate deck page.
     existing_codes = set()
     if deck_codes_path.exists():
         existing = json.loads(deck_codes_path.read_text(encoding="utf-8"))
-        existing_codes = {e["code"] for e in existing if e.get("code")}
+        existing_codes = {e["code"].upper() for e in existing if e.get("code")}
 
     all_entries = []
+    new_entries = []
     for url in urls:
         tweet_id = _extract_tweet_id(url)
         if not tweet_id:
             print(f"  [WARN] Could not extract tweet ID from: {url}")
             continue
 
+        if tweet_id in scraped_ids:
+            skipped += 1
+            continue
+
         print(f"  Fetching tweet {tweet_id}...")
         tweet = _fetch_tweet(tweet_id)
         if not tweet:
+            # Not marked scraped: a fetch failure retries next run.
             continue
+
+        scraped_ids.add(tweet_id)
+        newly_scraped += 1
 
         info = _parse_tournament_info(tweet)
         entries = _build_deck_entries(url, tweet, info)
 
         new_count = 0
         for e in entries:
-            if e.get("code") and e["code"] not in existing_codes:
+            if e.get("code") and e["code"].upper() not in existing_codes:
                 new_count += 1
-                existing_codes.add(e["code"])
+                existing_codes.add(e["code"].upper())
+                new_entries.append(e)
             all_entries.append(e)
 
         is_truncated = info["is_note_tweet"]
@@ -390,6 +447,18 @@ def scrape_x_posts(x_posts_path: Path, deck_codes_path: Path, output_dir: Path) 
             print(f"    {new_count} new deck code(s) found")
 
         time.sleep(REQUEST_DELAY)
+
+    if skipped:
+        print(f"  Skipped {skipped} already-scraped tweet(s)")
+    if newly_scraped:
+        x_posts["scraped_ids"] = sorted(scraped_ids)
+        x_posts_path.write_text(
+            json.dumps(x_posts, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+
+    merged = _merge_into_deck_codes(deck_codes_path, new_entries)
+    if merged:
+        print(f"  Appended {merged} new deck entries to {deck_codes_path.name}")
 
     out_path = output_dir / "x_decks.json"
     out_path.write_text(json.dumps(all_entries, ensure_ascii=False, indent=2), encoding="utf-8")
