@@ -43,6 +43,38 @@ MAX_PAGES = 20
 _DECK_HREF_RE = re.compile(r"^/decks/([A-Za-z0-9]+)$")
 _TOURNAMENT_HREF_RE = re.compile(r"^/tournaments/(\d+)$")
 
+# エクストリーマーカップ25-26 エリア予選 (official schedule 2026-06-27..08-09).
+# hOCG Logs lists these under their venue names with no "Extremer" marker, so
+# match by exact date + venue hint + official organizer and label them as one
+# major-event group instead of burying them in the monthly shop bucket.
+EXTREMER_SERIES = "エクストリーマーカップ25-26 エリア予選"
+EXTREMER_AREA_QUALIFIERS = [
+    ("2026-06-27", "池袋", "関東"),
+    ("2026-07-11", "博多", "九州・沖縄"),
+    ("2026-07-12", "博多", "九州・沖縄"),
+    ("2026-07-18", "仙台", "東北"),
+    ("2026-07-19", "札幌", "北海道"),
+    ("2026-07-25", "レプトン", "中国"),
+    ("2026-07-26", "高松", "四国"),
+    ("2026-08-01", "なんば", "関西"),
+    ("2026-08-02", "金沢", "北陸・信越"),
+    ("2026-08-08", "大須", "東海"),
+    ("2026-08-08", "名古屋", "東海"),
+    ("2026-08-09", "大須", "東海"),
+    ("2026-08-09", "名古屋", "東海"),
+]
+
+
+def _match_official_series(name: str, organizer: str, venue: str, iso_date: str) -> str | None:
+    """Return a major-series event string for known official qualifier stops."""
+    if "公式" not in organizer:
+        return None
+    haystack = f"{name} {organizer} {venue}"
+    for day, hint, area in EXTREMER_AREA_QUALIFIERS:
+        if iso_date == day and hint in haystack:
+            return f"{EXTREMER_SERIES} - {area} / {name}"
+    return None
+
 
 def _ordinal(n: int) -> str:
     if 10 <= n % 100 <= 20:
@@ -124,7 +156,9 @@ def _format_event(name: str, organizer: str, iso_date: str) -> str:
 def _build_deck_entries(row: dict, standings: list[dict]) -> list[dict]:
     """Build deck_codes.json-compatible entries for one tournament."""
     entries = []
-    event = _format_event(row["name"], row.get("organizer", ""), row["date"])
+    event = _match_official_series(
+        row["name"], row.get("organizer", ""), row.get("venue", ""), row["date"]
+    ) or _format_event(row["name"], row.get("organizer", ""), row["date"])
     for s in standings:
         placement = _ordinal(s["rank"]) if s["rank"] else ""
         if s["player"]:
