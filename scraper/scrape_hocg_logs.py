@@ -44,11 +44,13 @@ _DECK_HREF_RE = re.compile(r"^/decks/([A-Za-z0-9]+)$")
 _TOURNAMENT_HREF_RE = re.compile(r"^/tournaments/(\d+)$")
 
 # エクストリーマーカップ25-26 エリア予選 (official schedule 2026-06-27..08-09).
-# hOCG Logs lists these under their venue names with no "Extremer" marker, so
+# hOCG Logs lists these under their venue names with no series marker, so
 # match by exact date + venue hint + official organizer and label them as one
 # major-event group instead of burying them in the monthly shop bucket.
-EXTREMER_SERIES = "エクストリーマーカップ25-26 エリア予選"
-EXTREMER_AREA_QUALIFIERS = [
+# "Exstreamer" (EX + STREAMER) is the official romanization per the logo.
+# The parent is just the series name so the finals later join the same group.
+EXSTREAMER_SERIES = "Exstreamer Cup 25-26"
+EXSTREAMER_AREA_QUALIFIERS = [
     ("2026-06-27", "池袋", "関東"),
     ("2026-07-11", "博多", "九州・沖縄"),
     ("2026-07-12", "博多", "九州・沖縄"),
@@ -70,9 +72,10 @@ def _match_official_series(name: str, organizer: str, venue: str, iso_date: str)
     if "公式" not in organizer:
         return None
     haystack = f"{name} {organizer} {venue}"
-    for day, hint, area in EXTREMER_AREA_QUALIFIERS:
+    for day, hint, area in EXSTREAMER_AREA_QUALIFIERS:
         if iso_date == day and hint in haystack:
-            return f"{EXTREMER_SERIES} - {area} / {name}"
+            stop = name.removeprefix("in ").strip()
+            return f"{EXSTREAMER_SERIES} - エリア予選 {area}（{stop}）"
     return None
 
 

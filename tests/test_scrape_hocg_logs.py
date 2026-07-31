@@ -73,16 +73,14 @@ def test_parse_detail_page():
 def test_match_official_series_labels_extremer_qualifiers():
     from scraper.scrape_hocg_logs import _match_official_series
 
-    # Known stop: official organizer + matching date + venue hint.
+    # Known stop: official organizer + matching date + venue hint. The raw
+    # "in " prefix is stripped for the sub-section label.
     assert _match_official_series(
         "in 池袋・サンシャインシティ 展示ホールD",
         "hololive OFFICIAL CARD GAME公式",
         "豊島区東池袋…",
         "2026-06-27",
-    ) == (
-        "エクストリーマーカップ25-26 エリア予選 - 関東"
-        " / in 池袋・サンシャインシティ 展示ホールD"
-    )
+    ) == "Exstreamer Cup 25-26 - エリア予選 関東（池袋・サンシャインシティ 展示ホールD）"
     # Non-official organizer on the same date/venue → not the series.
     assert _match_official_series(
         "セレクションカップ", "カードラボ池袋店", "豊島区…", "2026-06-27"
