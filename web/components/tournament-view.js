@@ -296,7 +296,6 @@ export function renderTournamentView(container, decklogDecks, cardsData) {
     const group = groups[groupKey];
     const totalDecks = group.events.reduce((sum, [, d]) => sum + d.decks.length, 0);
     const isUpcomingGroup = group.date > today;
-    const isOpen = gi === 0; // first (most recent) group starts open
     const subSectionCount = group.events.length;
     const showInnerHeader = subSectionCount > 1; // single-section groups don't need the redundant inner header
 
@@ -370,7 +369,7 @@ export function renderTournamentView(container, decklogDecks, cardsData) {
     ].filter(Boolean).join('');
 
     html += `
-      <details class="tournament-group${isUpcomingGroup ? ' upcoming-event' : ''}" ${isOpen ? 'open' : ''}>
+      <details class="tournament-group${isUpcomingGroup ? ' upcoming-event' : ''}">
         <summary class="tournament-group-header">
           <span class="tournament-group-name">${_esc(groupKey)}</span>
           ${metaBits ? `<span class="tournament-group-meta">${metaBits}</span>` : ''}
