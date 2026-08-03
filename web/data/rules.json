@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-20",
+  "scraped_at": "2026-08-03",
   "restricted_cards": [
     "hBP01-030",
     "hBP07-101"
@@ -46,10 +46,10 @@
       "slug": "20",
       "title": {
         "ja": "制限カード追加・解除のお知らせ[2026/6/19(金)施行]",
-        "zh-TW": "限制卡追加・解除通知[2026/6/19(五)施行]",
-        "en": "Notice of Addition/Removal of Restricted Cards [Effective Friday, June 19, 2026]",
-        "fr": "Annonce de l'ajout et de la suppression de cartes limitées [Applicable à partir du vendredi 19/06/2026]",
-        "es": "Anuncio de adición/eliminación de cartas restringidas [Aplicado el 19/6/2026 (viernes)]"
+        "zh-TW": "限制卡追加・解除通知\n[2026/6/19(五)施行]",
+        "en": "Notice of Addition/Removal of Restricted Cards [Effective June 19, 2026 (Fri)]",
+        "fr": "Annonce d'ajout et de suppression de cartes limitées\n[Applicable à partir du vendredi 19/06/2026]",
+        "es": "Anuncio de adición y eliminación de cartas restringidas [Aplicado el 19/6/2026 (vie)]"
       },
       "type": "restricted",
       "card_ids": [
