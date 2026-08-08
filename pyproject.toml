@@ -9,7 +9,7 @@ dependencies = [
     "google-genai>=1.70.0",
     "httpx>=0.28.1",
     "lxml>=6.1.0",
-    "pillow>=12.2.0",
+    "pillow>=12.3.0",
 ]
 
 [dependency-groups]
