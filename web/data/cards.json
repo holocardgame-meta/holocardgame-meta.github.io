@@ -5865,11 +5865,11 @@
       "damage": 10,
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "可以將自己舞台上的1張吶喊卡，替換給自己標示#ID的成員。",
-        "ja": "自分のステージ上の「エール」を1枚、自分の#IDのメンバーに置き換えることができる。",
-        "en": "You can substitute 1 Cheer from your Stage with your Member marked #ID.",
-        "fr": "Vous pouvez remplacer 1 carte Encouragement de votre Scène par un de vos Membres marqués #ID.",
-        "es": "Puedes reemplazar 1 carta de Cheer de tu Escenario con 1 Miembro tuyo con la etiqueta #ID."
+        "zh-TW": "可以將自己舞台上的1張吶喊卡，轉移給自己標示#ID的成員。",
+        "ja": "自分のステージ上にあるエールカード1枚を、自分の#IDシンボルのメンバーに移すことができる。",
+        "en": "Move 1 Cheer from your Stage to a Member with #ID.",
+        "fr": "Vous pouvez transférer 1 carte d'encouragement de votre scène à un membre de marque #ID.",
+        "es": "Puedes transferir 1 carta Cheer de tu escenario a un Miembro marcado como #ID tuyo."
       }
     },
     "art2": null,
@@ -5906,11 +5906,11 @@
       "damage": 10,
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "可以將自己舞台上的1張吶喊卡，替換給自己標示#ID的成員。",
-        "ja": "自分のステージ上の「エール」を1枚、自分の#IDのメンバーに置き換えることができる。",
-        "en": "You can substitute 1 Cheer from your Stage with your Member marked #ID.",
-        "fr": "Vous pouvez remplacer 1 carte Encouragement de votre Scène par un de vos Membres marqués #ID.",
-        "es": "Puedes reemplazar 1 carta de Cheer de tu Escenario con 1 Miembro tuyo con la etiqueta #ID."
+        "zh-TW": "可以將自己舞台上的1張吶喊卡，轉移給自己標示#ID的成員。",
+        "ja": "自分のステージ上にあるエールカード1枚を、自分の#IDシンボルのメンバーに移すことができる。",
+        "en": "Move 1 Cheer from your Stage to a Member with #ID.",
+        "fr": "Vous pouvez transférer 1 carte d'encouragement de votre scène à un membre de marque #ID.",
+        "es": "Puedes transferir 1 carta Cheer de tu escenario a un Miembro marcado como #ID tuyo."
       }
     },
     "art2": null,
@@ -8627,11 +8627,11 @@
       "damage": 10,
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "可以將這個成員的1張吶喊卡，替換給自己其他標示#Promise的成員。",
-        "ja": "このメンバーの「エール」を1枚、自分の他の#Promiseのメンバーに置き換えることができる。",
-        "en": "You can substitute 1 Cheer from this Member with another of your Members marked #Promise.",
-        "fr": "Vous pouvez remplacer 1 carte Encouragement de ce Membre par un autre de vos Membres marqués #Promise.",
-        "es": "Puedes poner 1 Cheer de este Miembro en tu Archivo: Reemplaza 1 Cheer de este Miembro con otro Miembro con la etiqueta #Promise en tu lado del Escenario."
+        "zh-TW": "可以將這個成員的1張吶喊卡，轉移給自己其他標示#Promise的成員。",
+        "ja": "このメンバーの持つエールカード1枚を、自分の他の#Promiseシンボルのメンバーに移すことができる。",
+        "en": "Move 1 Cheer from this Member to another Member with #Promise.",
+        "fr": "Vous pouvez transférer 1 carte d'encouragement de ce membre à un autre de vos membres de marque #Promise.",
+        "es": "Puedes transferir 1 carta Cheer de este Miembro a otro Miembro marcado como #Promise tuyo."
       }
     },
     "art2": null,
@@ -8668,11 +8668,11 @@
       "damage": 10,
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "可以將這個成員的1張吶喊卡，替換給自己其他標示#Promise的成員。",
-        "ja": "このメンバーの「エール」を1枚、自分の他の#Promiseのメンバーに置き換えることができる。",
-        "en": "You can substitute 1 Cheer from this Member with another of your Members marked #Promise.",
-        "fr": "Vous pouvez remplacer 1 carte Encouragement de ce Membre par un autre de vos Membres marqués #Promise.",
-        "es": "Puedes poner 1 Cheer de este Miembro en tu Archivo: Reemplaza 1 Cheer de este Miembro con otro Miembro con la etiqueta #Promise en tu lado del Escenario."
+        "zh-TW": "可以將這個成員的1張吶喊卡，轉移給自己其他標示#Promise的成員。",
+        "ja": "このメンバーの持つエールカード1枚を、自分の他の#Promiseシンボルのメンバーに移すことができる。",
+        "en": "Move 1 Cheer from this Member to another Member with #Promise.",
+        "fr": "Vous pouvez transférer 1 carte d'encouragement de ce membre à un autre de vos membres de marque #Promise.",
+        "es": "Puedes transferir 1 carta Cheer de este Miembro a otro Miembro marcado como #Promise tuyo."
       }
     },
     "art2": null,
@@ -8709,11 +8709,11 @@
       "damage": 10,
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "可以將這個成員的1張吶喊卡，替換給自己其他標示#Promise的成員。",
-        "ja": "このメンバーの「エール」を1枚、自分の他の#Promiseのメンバーに置き換えることができる。",
-        "en": "You can substitute 1 Cheer from this Member with another of your Members marked #Promise.",
-        "fr": "Vous pouvez remplacer 1 carte Encouragement de ce Membre par un autre de vos Membres marqués #Promise.",
-        "es": "Puedes poner 1 Cheer de este Miembro en tu Archivo: Reemplaza 1 Cheer de este Miembro con otro Miembro con la etiqueta #Promise en tu lado del Escenario."
+        "zh-TW": "可以將這個成員的1張吶喊卡，轉移給自己其他標示#Promise的成員。",
+        "ja": "このメンバーの持つエールカード1枚を、自分の他の#Promiseシンボルのメンバーに移すことができる。",
+        "en": "Move 1 Cheer from this Member to another Member with #Promise.",
+        "fr": "Vous pouvez transférer 1 carte d'encouragement de ce membre à un autre de vos membres de marque #Promise.",
+        "es": "Puedes transferir 1 carta Cheer de este Miembro a otro Miembro marcado como #Promise tuyo."
       }
     },
     "art2": null,
@@ -9716,11 +9716,11 @@
       "補充包「ディーヴァフィーバー (hBP07)」"
     ],
     "supportEffect": {
-      "zh-TW": "對手回合中，帶有這個粉絲的成員被擊倒時，將這個成員的1張吶喊卡，替換給自己其他的成員。\n\n這個粉絲只能附加給「AZKi」，每位成員可以帶有任意數量的粉絲。",
-      "ja": "相手ターン中、このファンを持つメンバーがダウンさせられた場合、このメンバーの「エール」を1枚、自分の他のメンバーに置き換える。\n\nこのファンは「AZKi」にしか付与できない。メンバーは任意の数のファンを持てる。",
-      "en": "During your opponent's turn, when a Member with this Fan is K.O.'d, swap 1 Cheer card of this Member with another of your Members.\n\nThis Fan can only be attached to \"AZKi\". You can have any number of Fans per Member.",
-      "fr": "Pendant le tour de l'adversaire, lorsqu'un membre portant ce Fan est mis K.O., vous pouvez échanger 1 carte d'encouragement de ce membre avec un autre de vos membres.\n\nCe Fan ne peut être attaché qu'à « AZKi », et chaque membre peut porter un nombre illimité de Fans.",
-      "es": "Durante el turno del oponente, cuando un Miembro con este Fan sea K.O., reemplaza 1 carta Cheer de este Miembro con 1 Miembro tuyo.\n\nEste Fan solo puede adjuntarse a \"AZKi\", y cada Miembro puede tener cualquier cantidad de Fans.\n"
+      "zh-TW": "對手回合中，帶有這個粉絲的成員被擊倒時，將這個成員的1張吶喊卡，轉移給自己其他的成員。\n\n這個粉絲只能附加給「AZKi」，每位成員可以帶有任意數量的粉絲。",
+      "ja": "相手のターン中、このファンを持つメンバーがダウンした時、このメンバーの持つエールカード1枚を、自分の他のメンバーに移す。\n\nこのファンは「AZKi」にのみ付与でき、各メンバーは任意枚数のファンを持つことができる。",
+      "en": "During your opponent's turn, when a Member with this Fan is Downed, move 1 Cheer from that Member to another one of your Members.\n\nThis Fan can only be attached to \"AZKi\". Each Member can have any number of Fans.",
+      "fr": "Durant le tour de l'adversaire, lorsqu'un membre portant ce fan est mis K.O., transférez 1 carte d'encouragement de ce membre à un autre de vos membres.\n\nCe fan ne peut être attaché qu'à \"AZKi\", et chaque membre peut porter un nombre illimité de fans.",
+      "es": "Durante el turno del oponente, cuando un Miembro con este Fan es K.O., transfiere 1 carta Cheer de ese Miembro a otro Miembro tuyo.\n\nEste Fan solo puede ser adjuntado a \"AZKi\", y cada Miembro puede tener cualquier número de Fans."
     },
     "id": "hBP01-124",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP01/hBP01-124_C.png"
@@ -10707,11 +10707,11 @@
     "effectB": {
       "name": "ちょっと動かしますね",
       "effect": {
-        "zh-TW": "可以將自己舞台上的1張吉祥物，替換給自己的成員。",
-        "ja": "自分のステージ上のマスコットを1枚、自分のメンバーに置き換えることができる。",
-        "en": "You can substitute 1 Mascot from your Stage with your Member.",
-        "fr": "Vous pouvez remplacer 1 Mascotte de votre Scène par un de vos Membres.",
-        "es": "Puedes reemplazar 1 Mascota de tu Escenario con 1 Miembro tuyo."
+        "zh-TW": "可以將自己舞台上的1張吉祥物，轉移給自己的成員。",
+        "ja": "自分のステージ上にあるマスコット1体を、自分のメンバーに移すことができる。",
+        "en": "Move 1 Mascot from your Stage to your Member.",
+        "fr": "Vous pouvez transférer 1 mascotte de votre scène à un de vos membres.",
+        "es": "Puedes transferir 1 Mascota de tu escenario a un Miembro tuyo."
       }
     },
     "effectG": null,
@@ -10752,11 +10752,11 @@
     "effectB": {
       "name": "ちょっと動かしますね",
       "effect": {
-        "zh-TW": "可以將自己舞台上的1張吉祥物，替換給自己的成員。",
-        "ja": "自分のステージ上のマスコットを1枚、自分のメンバーに置き換えることができる。",
-        "en": "You can substitute 1 Mascot from your Stage with your Member.",
-        "fr": "Vous pouvez remplacer 1 Mascotte de votre Scène par un de vos Membres.",
-        "es": "Puedes reemplazar 1 Mascota de tu Escenario con 1 Miembro tuyo."
+        "zh-TW": "可以將自己舞台上的1張吉祥物，轉移給自己的成員。",
+        "ja": "自分のステージ上にあるマスコット1体を、自分のメンバーに移すことができる。",
+        "en": "Move 1 Mascot from your Stage to your Member.",
+        "fr": "Vous pouvez transférer 1 mascotte de votre scène à un de vos membres.",
+        "es": "Puedes transferir 1 Mascota de tu escenario a un Miembro tuyo."
       }
     },
     "effectG": null,
@@ -11902,11 +11902,11 @@
       "damage": 10,
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "可以將自己舞台上的1張吶喊卡，替換給自己標示#JP的成員。",
-        "ja": "自分のステージ上の「エール」を1枚、自分の#JPのメンバーに置き換えることができる。",
-        "en": "You can substitute 1 Cheer from your Stage with your Member marked #JP.",
-        "fr": "Vous pouvez remplacer 1 carte Encouragement de votre Scène par un de vos Membres marqués #JP.",
-        "es": "Puedes reemplazar 1 carta de Cheer de tu Escenario con 1 Miembro tuyo con la etiqueta #JP."
+        "zh-TW": "可以將自己舞台上的1張吶喊卡，轉移給自己標示#JP的成員。",
+        "ja": "自分のステージ上にあるエールカード1枚を、自分の#JPシンボルのメンバーに移すことができる。",
+        "en": "Move 1 Cheer from your Stage to a Member with #JP.",
+        "fr": "Vous pouvez transférer 1 carte d'encouragement de votre scène à un membre de marque #JP.",
+        "es": "Puedes transferir 1 carta Cheer de tu escenario a un Miembro marcado como #JP tuyo."
       }
     },
     "art2": null,
@@ -11944,11 +11944,11 @@
       "damage": 10,
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "可以將自己舞台上的1張吶喊卡，替換給自己標示#JP的成員。",
-        "ja": "自分のステージ上の「エール」を1枚、自分の#JPのメンバーに置き換えることができる。",
-        "en": "You can substitute 1 Cheer from your Stage with your Member marked #JP.",
-        "fr": "Vous pouvez remplacer 1 carte Encouragement de votre Scène par un de vos Membres marqués #JP.",
-        "es": "Puedes reemplazar 1 carta de Cheer de tu Escenario con 1 Miembro tuyo con la etiqueta #JP."
+        "zh-TW": "可以將自己舞台上的1張吶喊卡，轉移給自己標示#JP的成員。",
+        "ja": "自分のステージ上にあるエールカード1枚を、自分の#JPシンボルのメンバーに移すことができる。",
+        "en": "Move 1 Cheer from your Stage to a Member with #JP.",
+        "fr": "Vous pouvez transférer 1 carte d'encouragement de votre scène à un membre de marque #JP.",
+        "es": "Puedes transferir 1 carta Cheer de tu escenario a un Miembro marcado como #JP tuyo."
       }
     },
     "art2": null,
@@ -11986,11 +11986,11 @@
       "damage": 10,
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "可以將自己舞台上的1張吶喊卡，替換給自己標示#JP的成員。",
-        "ja": "自分のステージ上の「エール」を1枚、自分の#JPのメンバーに置き換えることができる。",
-        "en": "You can substitute 1 Cheer from your Stage with your Member marked #JP.",
-        "fr": "Vous pouvez remplacer 1 carte Encouragement de votre Scène par un de vos Membres marqués #JP.",
-        "es": "Puedes reemplazar 1 carta de Cheer de tu Escenario con 1 Miembro tuyo con la etiqueta #JP."
+        "zh-TW": "可以將自己舞台上的1張吶喊卡，轉移給自己標示#JP的成員。",
+        "ja": "自分のステージ上にあるエールカード1枚を、自分の#JPシンボルのメンバーに移すことができる。",
+        "en": "Move 1 Cheer from your Stage to a Member with #JP.",
+        "fr": "Vous pouvez transférer 1 carte d'encouragement de votre scène à un membre de marque #JP.",
+        "es": "Puedes transferir 1 carta Cheer de tu escenario a un Miembro marcado como #JP tuyo."
       }
     },
     "art2": null,
@@ -13762,11 +13762,11 @@
       "damage": 30,
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "可以擲1次骰子：5以上時，將對手舞台上的1張吶喊卡，替換給對手的成員。",
-        "ja": "サイコロを1回振る：5以上の場合、相手のステージにいる吶喊カード1枚を、相手のメンバーと入れ替える。",
-        "en": "Can roll the dice once: If 5 or higher, replace 1 Cheer card on your opponent's Stage with one of your opponent's Members.",
-        "fr": "Vous pouvez lancer 1 dé : si le résultat est 5 ou plus, remplacez 1 carte d'encouragement de la scène de l'adversaire par un membre de l'adversaire.",
-        "es": "Puedes lanzar 1 dado: Si el resultado es 5 o más, reemplaza 1 Cheer en el Escenario de tu oponente con un Miembro de tu oponente."
+        "zh-TW": "可以擲1次骰子：5以上時，將對手舞台上的1張吶喊卡，轉移給對手的成員。",
+        "ja": "1回ダイスを振る：5以上の場合、相手のステージ上にあるエールカード1枚を、相手のメンバーに移す。",
+        "en": "Roll 1 die: If 5 or higher, move 1 Cheer from your opponent's Stage to your opponent's Member.",
+        "fr": "Vous pouvez lancer 1 dé : Si le résultat est 5 ou plus, transférez 1 carte d'encouragement de la scène de l'adversaire à un membre de l'adversaire.",
+        "es": "Puedes lanzar 1 dado: Si es 5 o más, transfiere 1 carta Cheer del escenario del oponente a un Miembro del oponente."
       }
     },
     "art2": null,
@@ -13807,11 +13807,11 @@
       "damage": 30,
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "可以擲1次骰子：5以上時，將對手舞台上的1張吶喊卡，替換給對手的成員。",
-        "ja": "サイコロを1回振る：5以上の場合、相手のステージにいる吶喊カード1枚を、相手のメンバーと入れ替える。",
-        "en": "Can roll the dice once: If 5 or higher, replace 1 Cheer card on your opponent's Stage with one of your opponent's Members.",
-        "fr": "Vous pouvez lancer 1 dé : si le résultat est 5 ou plus, remplacez 1 carte d'encouragement de la scène de l'adversaire par un membre de l'adversaire.",
-        "es": "Puedes lanzar 1 dado: Si el resultado es 5 o más, reemplaza 1 Cheer en el Escenario de tu oponente con un Miembro de tu oponente."
+        "zh-TW": "可以擲1次骰子：5以上時，將對手舞台上的1張吶喊卡，轉移給對手的成員。",
+        "ja": "1回ダイスを振る：5以上の場合、相手のステージ上にあるエールカード1枚を、相手のメンバーに移す。",
+        "en": "Roll 1 die: If 5 or higher, move 1 Cheer from your opponent's Stage to your opponent's Member.",
+        "fr": "Vous pouvez lancer 1 dé : Si le résultat est 5 ou plus, transférez 1 carte d'encouragement de la scène de l'adversaire à un membre de l'adversaire.",
+        "es": "Puedes lanzar 1 dado: Si es 5 o más, transfiere 1 carta Cheer del escenario del oponente a un Miembro del oponente."
       }
     },
     "art2": null,
@@ -13836,11 +13836,11 @@
     "effectB": {
       "name": "いたずらの魔法",
       "effect": {
-        "zh-TW": "可以擲1次骰子：4以上時，將對手舞台上的1張吶喊卡，替換給對手的成員。",
-        "ja": "サイコロを1回振る：4以上の場合、相手のステージにいる吶喊カード1枚を、相手のメンバーと入れ替える。",
-        "en": "Can roll the dice once: If 4 or higher, replace 1 Cheer card on your opponent's Stage with one of your opponent's Members.",
-        "fr": "Vous pouvez lancer 1 dé : si le résultat est 4 ou plus, remplacez 1 carte d'encouragement de la scène de l'adversaire par un membre de l'adversaire.",
-        "es": "Puedes lanzar 1 dado: Si el resultado es 4 o más, reemplaza 1 Cheer en el Escenario de tu oponente con un Miembro de tu oponente."
+        "zh-TW": "可以擲1次骰子：4以上時，將對手舞台上的1張吶喊卡，轉移給對手的成員。",
+        "ja": "1回ダイスを振る：4以上の場合、相手のステージ上にあるエールカード1枚を、相手のメンバーに移す。",
+        "en": "Roll 1 die: If 4 or higher, move 1 Cheer from your opponent's Stage to your opponent's Member.",
+        "fr": "Vous pouvez lancer 1 dé : Si le résultat est 4 ou plus, transférez 1 carte d'encouragement de la scène de l'adversaire à un membre de l'adversaire.",
+        "es": "Puedes lanzar 1 dado: Si es 4 o más, transfiere 1 carta Cheer del escenario del oponente a un Miembro del oponente."
       }
     },
     "effectG": null,
@@ -13883,11 +13883,11 @@
     "effectB": {
       "name": "いたずらの魔法",
       "effect": {
-        "zh-TW": "可以擲1次骰子：4以上時，將對手舞台上的1張吶喊卡，替換給對手的成員。",
-        "ja": "サイコロを1回振る：4以上の場合、相手のステージにいる吶喊カード1枚を、相手のメンバーと入れ替える。",
-        "en": "Can roll the dice once: If 4 or higher, replace 1 Cheer card on your opponent's Stage with one of your opponent's Members.",
-        "fr": "Vous pouvez lancer 1 dé : si le résultat est 4 ou plus, remplacez 1 carte d'encouragement de la scène de l'adversaire par un membre de l'adversaire.",
-        "es": "Puedes lanzar 1 dado: Si el resultado es 4 o más, reemplaza 1 Cheer en el Escenario de tu oponente con un Miembro de tu oponente."
+        "zh-TW": "可以擲1次骰子：4以上時，將對手舞台上的1張吶喊卡，轉移給對手的成員。",
+        "ja": "1回ダイスを振る：4以上の場合、相手のステージ上にあるエールカード1枚を、相手のメンバーに移す。",
+        "en": "Roll 1 die: If 4 or higher, move 1 Cheer from your opponent's Stage to your opponent's Member.",
+        "fr": "Vous pouvez lancer 1 dé : Si le résultat est 4 ou plus, transférez 1 carte d'encouragement de la scène de l'adversaire à un membre de l'adversaire.",
+        "es": "Puedes lanzar 1 dado: Si es 4 o más, transfiere 1 carta Cheer del escenario del oponente a un Miembro del oponente."
       }
     },
     "effectG": null,
@@ -13930,11 +13930,11 @@
     "effectB": {
       "name": "いたずらの魔法",
       "effect": {
-        "zh-TW": "可以擲1次骰子：4以上時，將對手舞台上的1張吶喊卡，替換給對手的成員。",
-        "ja": "サイコロを1回振る：4以上の場合、相手のステージにいる吶喊カード1枚を、相手のメンバーと入れ替える。",
-        "en": "Can roll the dice once: If 4 or higher, replace 1 Cheer card on your opponent's Stage with one of your opponent's Members.",
-        "fr": "Vous pouvez lancer 1 dé : si le résultat est 4 ou plus, remplacez 1 carte d'encouragement de la scène de l'adversaire par un membre de l'adversaire.",
-        "es": "Puedes lanzar 1 dado: Si el resultado es 4 o más, reemplaza 1 Cheer en el Escenario de tu oponente con un Miembro de tu oponente."
+        "zh-TW": "可以擲1次骰子：4以上時，將對手舞台上的1張吶喊卡，轉移給對手的成員。",
+        "ja": "1回ダイスを振る：4以上の場合、相手のステージ上にあるエールカード1枚を、相手のメンバーに移す。",
+        "en": "Roll 1 die: If 4 or higher, move 1 Cheer from your opponent's Stage to your opponent's Member.",
+        "fr": "Vous pouvez lancer 1 dé : Si le résultat est 4 ou plus, transférez 1 carte d'encouragement de la scène de l'adversaire à un membre de l'adversaire.",
+        "es": "Puedes lanzar 1 dado: Si es 4 o más, transfiere 1 carta Cheer del escenario del oponente a un Miembro del oponente."
       }
     },
     "effectG": null,
@@ -13977,11 +13977,11 @@
     "effectB": {
       "name": "いたずらの魔法",
       "effect": {
-        "zh-TW": "可以擲1次骰子：4以上時，將對手舞台上的1張吶喊卡，替換給對手的成員。",
-        "ja": "サイコロを1回振る：4以上の場合、相手のステージにいる吶喊カード1枚を、相手のメンバーと入れ替える。",
-        "en": "Can roll the dice once: If 4 or higher, replace 1 Cheer card on your opponent's Stage with one of your opponent's Members.",
-        "fr": "Vous pouvez lancer 1 dé : si le résultat est 4 ou plus, remplacez 1 carte d'encouragement de la scène de l'adversaire par un membre de l'adversaire.",
-        "es": "Puedes lanzar 1 dado: Si el resultado es 4 o más, reemplaza 1 Cheer en el Escenario de tu oponente con un Miembro de tu oponente."
+        "zh-TW": "可以擲1次骰子：4以上時，將對手舞台上的1張吶喊卡，轉移給對手的成員。",
+        "ja": "1回ダイスを振る：4以上の場合、相手のステージ上にあるエールカード1枚を、相手のメンバーに移す。",
+        "en": "Roll 1 die: If 4 or higher, move 1 Cheer from your opponent's Stage to your opponent's Member.",
+        "fr": "Vous pouvez lancer 1 dé : Si le résultat est 4 ou plus, transférez 1 carte d'encouragement de la scène de l'adversaire à un membre de l'adversaire.",
+        "es": "Puedes lanzar 1 dado: Si es 4 o más, transfiere 1 carta Cheer del escenario del oponente a un Miembro del oponente."
       }
     },
     "effectG": null,
@@ -15179,11 +15179,11 @@
       "damage": "60+",
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "自己的存檔區有5張以上標示#Myth的成員時，可以將這個成員的1張吶喊卡，替換給自己其他的成員。有10張以上時，這個藝能傷害+50。",
-        "ja": "自分のアーカイブに#Mythのメンバーが５体以上いる時、このメンバーのエールカード１枚を、自分の他のメンバーに交換できる。10体以上いる時、このアーツのダメージ＋50。",
-        "en": "When you have 5 or more Members with the #Myth trait in your Archive, you may substitute 1 Cheer card of this Member for another Member of yours. When you have 10 or more, this Arts' damage +50.",
-        "fr": "Quand vous avez 5 Membres ou plus avec le tag #Myth dans votre Archive, vous pouvez échanger 1 carte d'encouragement de ce Membre avec un autre de vos Membres. Si vous en avez 10 ou plus, les Dégâts de cette Arts +50.",
-        "es": "Si tienes 5 o más Miembros con la etiqueta #Myth en tu Archivo, puedes reemplazar 1 carta de Cheer de este Miembro con otro de tus Miembros. Si tienes 10 o más, el daño de este Arts +50."
+        "zh-TW": "自己的存檔區有5張以上標示#Myth的成員時，可以將這個成員的1張吶喊卡，轉移給自己其他的成員。有10張以上時，這個藝能傷害+50。",
+        "ja": "自分のアーカイブに#Mythシンボルのメンバーが5枚以上ある場合、このメンバーの持つエールカード1枚を、自分の他のメンバーに移すことができる。10枚以上ある場合、このArtsダメージ+50。",
+        "en": "When there are 5 or more Members with #Myth in your Archive, move 1 Cheer from this Member to another one of your Members. When there are 10 or more, this Arts damage is increased by 50.",
+        "fr": "Si vous avez 5 membres de marque #Myth ou plus dans votre archive, vous pouvez transférer 1 carte d'encouragement de ce membre à un autre de vos membres. Si vous en avez 10 ou plus, les dégâts d'arts +50.",
+        "es": "Si hay 5 o más Miembros marcados como #Myth en tu Archivo, puedes transferir 1 carta Cheer de este Miembro a otro Miembro tuyo. Si hay 10 o más, este daño de Arts +50."
       }
     },
     "art2": null,
@@ -15222,11 +15222,11 @@
       "damage": "60+",
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "自己的存檔區有5張以上標示#Myth的成員時，可以將這個成員的1張吶喊卡，替換給自己其他的成員。有10張以上時，這個藝能傷害+50。",
-        "ja": "自分のアーカイブに#Mythのメンバーが５体以上いる時、このメンバーのエールカード１枚を、自分の他のメンバーに交換できる。10体以上いる時、このアーツのダメージ＋50。",
-        "en": "When you have 5 or more Members with the #Myth trait in your Archive, you may substitute 1 Cheer card of this Member for another Member of yours. When you have 10 or more, this Arts' damage +50.",
-        "fr": "Quand vous avez 5 Membres ou plus avec le tag #Myth dans votre Archive, vous pouvez échanger 1 carte d'encouragement de ce Membre avec un autre de vos Membres. Si vous en avez 10 ou plus, les Dégâts de cette Arts +50.",
-        "es": "Si tienes 5 o más Miembros con la etiqueta #Myth en tu Archivo, puedes reemplazar 1 carta de Cheer de este Miembro con otro de tus Miembros. Si tienes 10 o más, el daño de este Arts +50."
+        "zh-TW": "自己的存檔區有5張以上標示#Myth的成員時，可以將這個成員的1張吶喊卡，轉移給自己其他的成員。有10張以上時，這個藝能傷害+50。",
+        "ja": "自分のアーカイブに#Mythシンボルのメンバーが5枚以上ある場合、このメンバーの持つエールカード1枚を、自分の他のメンバーに移すことができる。10枚以上ある場合、このArtsダメージ+50。",
+        "en": "When there are 5 or more Members with #Myth in your Archive, move 1 Cheer from this Member to another one of your Members. When there are 10 or more, this Arts damage is increased by 50.",
+        "fr": "Si vous avez 5 membres de marque #Myth ou plus dans votre archive, vous pouvez transférer 1 carte d'encouragement de ce membre à un autre de vos membres. Si vous en avez 10 ou plus, les dégâts d'arts +50.",
+        "es": "Si hay 5 o más Miembros marcados como #Myth en tu Archivo, puedes transferir 1 carta Cheer de este Miembro a otro Miembro tuyo. Si hay 10 o más, este daño de Arts +50."
       }
     },
     "art2": null,
@@ -15265,11 +15265,11 @@
       "damage": "60+",
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "自己的存檔區有5張以上標示#Myth的成員時，可以將這個成員的1張吶喊卡，替換給自己其他的成員。有10張以上時，這個藝能傷害+50。",
-        "ja": "自分のアーカイブに#Mythのメンバーが５体以上いる時、このメンバーのエールカード１枚を、自分の他のメンバーに交換できる。10体以上いる時、このアーツのダメージ＋50。",
-        "en": "When you have 5 or more Members with the #Myth trait in your Archive, you may substitute 1 Cheer card of this Member for another Member of yours. When you have 10 or more, this Arts' damage +50.",
-        "fr": "Quand vous avez 5 Membres ou plus avec le tag #Myth dans votre Archive, vous pouvez échanger 1 carte d'encouragement de ce Membre avec un autre de vos Membres. Si vous en avez 10 ou plus, les Dégâts de cette Arts +50.",
-        "es": "Si tienes 5 o más Miembros con la etiqueta #Myth en tu Archivo, puedes reemplazar 1 carta de Cheer de este Miembro con otro de tus Miembros. Si tienes 10 o más, el daño de este Arts +50."
+        "zh-TW": "自己的存檔區有5張以上標示#Myth的成員時，可以將這個成員的1張吶喊卡，轉移給自己其他的成員。有10張以上時，這個藝能傷害+50。",
+        "ja": "自分のアーカイブに#Mythシンボルのメンバーが5枚以上ある場合、このメンバーの持つエールカード1枚を、自分の他のメンバーに移すことができる。10枚以上ある場合、このArtsダメージ+50。",
+        "en": "When there are 5 or more Members with #Myth in your Archive, move 1 Cheer from this Member to another one of your Members. When there are 10 or more, this Arts damage is increased by 50.",
+        "fr": "Si vous avez 5 membres de marque #Myth ou plus dans votre archive, vous pouvez transférer 1 carte d'encouragement de ce membre à un autre de vos membres. Si vous en avez 10 ou plus, les dégâts d'arts +50.",
+        "es": "Si hay 5 o más Miembros marcados como #Myth en tu Archivo, puedes transferir 1 carta Cheer de este Miembro a otro Miembro tuyo. Si hay 10 o más, este daño de Arts +50."
       }
     },
     "art2": null,
@@ -16534,11 +16534,11 @@
     "tag": "#白上'sキャラクター",
     "product": "補充包「クインテットスペクトラム (hBP02)」",
     "supportEffect": {
-      "zh-TW": "帶有這個吉祥物的成員HP+20。\n\n◆附加給「白上フブキ」有追加效果\n帶有這個吉祥物的成員被擊倒時，將這個成員的1張吶喊卡，替換給自己其他的成員。\n\n每位成員只能帶有1張吉祥物。",
-      "ja": "このマスコットを持つメンバーのHP＋２０。\n\n◆「白上フブキ」に付与された場合、追加効果\nこのマスコットを持つメンバーがダウンした時、このメンバーのエールカード１枚を、自分の他のメンバーと入れ替えることができる。\n\nメンバー１人につき、マスコットは１枚までしか持てない。",
-      "en": "Members with this Mascot gain +20 HP.\n\n◆Additional effect for \"Shirakami Fubuki\"\nWhen a Member with this Mascot is Downed, replace 1 Cheer Card of this Member with another one of your Members.\n\nEach Member can only have 1 Mascot.",
-      "fr": "Les Points de vie du membre portant cette Mascotte +20.\n\n◆Effet supplémentaire pour « 白上フブキ »\nLorsqu'un membre portant cette Mascotte est mis K.O., remplacez 1 carte d'encouragement de ce membre par un autre de vos membres.\n\nChaque membre ne peut porter qu'une seule Mascotte.",
-      "es": "El miembro con esta mascota tiene HP+20.\n\n◆Si se aplica a \"白上フブキ\", tiene un efecto adicional:\nCuando el miembro con esta mascota es K.O., reemplaza 1 carta de Cheer de este miembro con otro de tus miembros.\n\nSolo se puede adjuntar 1 mascota por miembro."
+      "zh-TW": "帶有這個吉祥物的成員HP+20。\n\n◆附加給「白上フブキ」有追加效果\n帶有這個吉祥物的成員被擊倒時，將這個成員的1張吶喊卡，轉移給自己其他的成員。\n\n每位成員只能帶有1張吉祥物。",
+      "ja": "このマスコットを持つメンバーのHP+20。\n\n◆「白上フブキ」に付与された場合は追加効果\nこのマスコットを持つメンバーがダウンした時、このメンバーの持つエールカード1枚を、自分の他のメンバーに移す。\n\n各メンバーは1枚のマスコットのみ持つことができる。",
+      "en": "HP of Members with this Mascot is increased by 20.\n\n◆Additional effect when attached to \"FBK Shirakami\"\nWhen a Member with this Mascot is Downed, move 1 Cheer from that Member to another one of your Members.\n\nEach Member can only have 1 Mascot.",
+      "fr": "Les membres portant cette mascotte ont leurs PV +20.\n\n◆Effet supplémentaire lorsqu'attaché à \"Fubuki Shirakami\"\nLorsqu'un membre portant cette mascotte est mis K.O., transférez 1 carte d'encouragement de ce membre à un autre de vos membres.\n\nChaque membre ne peut porter qu'une seule mascotte.",
+      "es": "El HP del Miembro con esta Mascota +20.\n\n◆Efecto adicional si se adjunta a \"Fubuki Shirakami\"\nCuando el Miembro con esta Mascota es K.O., transfiere 1 carta Cheer de ese Miembro a otro Miembro tuyo.\n\nCada Miembro solo puede tener 1 Mascota."
     },
     "id": "hBP02-090",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP02/hBP02-090_C.png"
@@ -17179,11 +17179,11 @@
       "holoPower": -3,
       "name": "ウォウウォウウォウウォウ",
       "effect": {
-        "zh-TW": "[每場比賽一次]自己的黃色成員被擊倒時可以使用：將該成員的1張吶喊卡替換給自己其他的成員，從該成員與所有重疊的成員中選擇1張返回手牌。",
-        "ja": "[1試合に1回]\n自分の黄色のメンバーがダウンした時に使用できる：\nそのメンバーのエールカードを1枚他のメンバーに付け替え、\nそのメンバーと重なっている全てのメンバーの中から1枚を手札に戻す。",
-        "en": "[Once per game] When your yellow Member is K.O.'d, you may use this: Replace 1 Cheer Card of that Member with another of your Members, and return 1 card from that Member and all overlapped Members to your Hand.",
-        "fr": "[Une fois par partie] Utilisable lorsqu'un de vos membres jaunes est mis K.O. : Remplacez 1 carte d'encouragement de ce membre par un autre de vos membres, et renvoyez 1 carte parmi ce membre et tous les membres empilés sur lui dans votre Main.",
-        "es": "[Una vez por partida] Usable cuando un miembro amarillo propio es derrotado: Reemplaza 1 carta de Mazo Cheer de ese miembro con otro miembro tuyo, y devuelve 1 carta de ese miembro y todos los miembros superpuestos a tu Mano."
+        "zh-TW": "[每場比賽一次]自己的黃色成員被擊倒時可以使用：將該成員的1張吶喊卡轉移給自己其他的成員，從該成員與所有重疊的成員中選擇1張返回手牌。",
+        "ja": "[1試合に1回]自分の黄色のメンバーがダウンした時に使用できる：そのメンバーの持つエールカード1枚を、自分の他のメンバーに移し、そのメンバーと重なっているメンバー全ての中から1枚を手札に戻す。",
+        "en": "[Once per game] When your Yellow Member is Downed, you may move 1 Cheer from that Member to another one of your Members, and return 1 card from among that Member and all overlapped Members to your Hand.",
+        "fr": "[Une fois par partie] Lorsqu'un de vos membres jaunes est mis K.O., vous pouvez : Transférez 1 carte d'encouragement de ce membre à un autre de vos membres, et choisissez 1 parmi ce membre et tous les membres superposés pour le retourner dans votre main.",
+        "es": "[Una vez por partida] Cuando un Miembro tuyo amarillo es K.O., puedes: Transfiere 1 carta Cheer de ese Miembro a otro Miembro tuyo, y devuelve 1 carta de entre ese Miembro y todos los Miembros apilados a tu mano."
       }
     },
     "id": "hBP03-006",
@@ -17211,11 +17211,11 @@
       "holoPower": -3,
       "name": "ウォウウォウウォウウォウ",
       "effect": {
-        "zh-TW": "[每場比賽一次]自己的黃色成員被擊倒時可以使用：將該成員的1張吶喊卡替換給自己其他的成員，從該成員與所有重疊的成員中選擇1張返回手牌。",
-        "ja": "[1試合に1回]\n自分の黄色のメンバーがダウンした時に使用できる：\nそのメンバーのエールカードを1枚他のメンバーに付け替え、\nそのメンバーと重なっている全てのメンバーの中から1枚を手札に戻す。",
-        "en": "[Once per game] When your yellow Member is K.O.'d, you may use this: Replace 1 Cheer Card of that Member with another of your Members, and return 1 card from that Member and all overlapped Members to your Hand.",
-        "fr": "[Une fois par partie] Utilisable lorsqu'un de vos membres jaunes est mis K.O. : Remplacez 1 carte d'encouragement de ce membre par un autre de vos membres, et renvoyez 1 carte parmi ce membre et tous les membres empilés sur lui dans votre Main.",
-        "es": "[Una vez por partida] Usable cuando un miembro amarillo propio es derrotado: Reemplaza 1 carta de Mazo Cheer de ese miembro con otro miembro tuyo, y devuelve 1 carta de ese miembro y todos los miembros superpuestos a tu Mano."
+        "zh-TW": "[每場比賽一次]自己的黃色成員被擊倒時可以使用：將該成員的1張吶喊卡轉移給自己其他的成員，從該成員與所有重疊的成員中選擇1張返回手牌。",
+        "ja": "[1試合に1回]自分の黄色のメンバーがダウンした時に使用できる：そのメンバーの持つエールカード1枚を、自分の他のメンバーに移し、そのメンバーと重なっているメンバー全ての中から1枚を手札に戻す。",
+        "en": "[Once per game] When your Yellow Member is Downed, you may move 1 Cheer from that Member to another one of your Members, and return 1 card from among that Member and all overlapped Members to your Hand.",
+        "fr": "[Une fois par partie] Lorsqu'un de vos membres jaunes est mis K.O., vous pouvez : Transférez 1 carte d'encouragement de ce membre à un autre de vos membres, et choisissez 1 parmi ce membre et tous les membres superposés pour le retourner dans votre main.",
+        "es": "[Una vez por partida] Cuando un Miembro tuyo amarillo es K.O., puedes: Transfiere 1 carta Cheer de ese Miembro a otro Miembro tuyo, y devuelve 1 carta de entre ese Miembro y todos los Miembros apilados a tu mano."
       }
     },
     "id": "hBP03-006",
@@ -17243,11 +17243,11 @@
       "holoPower": -3,
       "name": "ウォウウォウウォウウォウ",
       "effect": {
-        "zh-TW": "[每場比賽一次]自己的黃色成員被擊倒時可以使用：將該成員的1張吶喊卡替換給自己其他的成員，從該成員與所有重疊的成員中選擇1張返回手牌。",
-        "ja": "[1試合に1回]\n自分の黄色のメンバーがダウンした時に使用できる：\nそのメンバーのエールカードを1枚他のメンバーに付け替え、\nそのメンバーと重なっている全てのメンバーの中から1枚を手札に戻す。",
-        "en": "[Once per game] When your yellow Member is K.O.'d, you may use this: Replace 1 Cheer Card of that Member with another of your Members, and return 1 card from that Member and all overlapped Members to your Hand.",
-        "fr": "[Une fois par partie] Utilisable lorsqu'un de vos membres jaunes est mis K.O. : Remplacez 1 carte d'encouragement de ce membre par un autre de vos membres, et renvoyez 1 carte parmi ce membre et tous les membres empilés sur lui dans votre Main.",
-        "es": "[Una vez por partida] Usable cuando un miembro amarillo propio es derrotado: Reemplaza 1 carta de Mazo Cheer de ese miembro con otro miembro tuyo, y devuelve 1 carta de ese miembro y todos los miembros superpuestos a tu Mano."
+        "zh-TW": "[每場比賽一次]自己的黃色成員被擊倒時可以使用：將該成員的1張吶喊卡轉移給自己其他的成員，從該成員與所有重疊的成員中選擇1張返回手牌。",
+        "ja": "[1試合に1回]自分の黄色のメンバーがダウンした時に使用できる：そのメンバーの持つエールカード1枚を、自分の他のメンバーに移し、そのメンバーと重なっているメンバー全ての中から1枚を手札に戻す。",
+        "en": "[Once per game] When your Yellow Member is Downed, you may move 1 Cheer from that Member to another one of your Members, and return 1 card from among that Member and all overlapped Members to your Hand.",
+        "fr": "[Une fois par partie] Lorsqu'un de vos membres jaunes est mis K.O., vous pouvez : Transférez 1 carte d'encouragement de ce membre à un autre de vos membres, et choisissez 1 parmi ce membre et tous les membres superposés pour le retourner dans votre main.",
+        "es": "[Una vez por partida] Cuando un Miembro tuyo amarillo es K.O., puedes: Transfiere 1 carta Cheer de ese Miembro a otro Miembro tuyo, y devuelve 1 carta de entre ese Miembro y todos los Miembros apilados a tu mano."
       }
     },
     "id": "hBP03-006",
@@ -20379,11 +20379,11 @@
       "damage": 100,
       "specialAttackImage": "icons/tokkou_50_purple.png",
       "effect": {
-        "zh-TW": "[限定中心位置]自己的主推為「FUWAMOCO」時，可以將這個成員的1張吶喊卡，替換給自己的「モココ・アビスガード」：給予對手的中心成員50點特殊傷害。",
-        "ja": "[限定中心位置]自分の「推し」が「FUWAMOCO」の場合、このメンバーの「エール」カード1枚を、自分の「モココ・アビスガード」と入れ替える：相手のセンターメンバーに50点の特殊ダメージを与える。",
-        "en": "[Limited Center Position] When your Oshi is \"FUWAMOCO\", you may swap 1 Cheer card of this Member with your \"モココ・アビスガード\": Deal 50 special damage to your opponent's Center Member.",
-        "fr": "[Position Centre UNIQUEMENT] Lorsque votre Oshi est \"FUWAMOCO\", vous pouvez remplacer 1 carte d'encouragement de ce membre par votre \"モココ・アビスガード\" : infligez 50 dégâts spéciaux au membre Centre de votre adversaire.",
-        "es": "[Solo posición central] Si tu Oshi es \"FUWAMOCO\", puedes reemplazar 1 carta de Cheer de este Miembro con tu \"Mococo Abyssgard\": Inflige 50 de daño especial al Miembro central del oponente."
+        "zh-TW": "[限定中心位置]自己的主推為「FUWAMOCO」時，可以將這個成員的1張吶喊卡，轉移給自己的「モココ・アビスガード」：給予對手的中心成員50點特殊傷害。",
+        "ja": "[センター限定]自分の推しが「FUWAMOCO」の時、このメンバーの持つエールカード1枚を、自分の「モココ・アビスガード」に移すことができる：相手のセンターメンバーに50ダメージを与える。",
+        "en": "[Center Only] When your Oshi is \"FUWAMOCO\", you may move 1 Cheer from this Member to your \"Mococo Abyssgard\": Deal 50 special damage to your opponent's Center Member.",
+        "fr": "[Position Centre uniquement] Lorsque votre Oshi est \"FUWAMOCO\", vous pouvez transférer 1 carte d'encouragement de ce membre à votre \"Mococo Abyssgard\" : Infligez 50 dégâts spéciaux au membre centre de l'adversaire.",
+        "es": "[Solo posición Central] Cuando tu Oshi es \"FUWAMOCO\", puedes transferir 1 carta Cheer de este Miembro a tu \"Mococo Abyssgard\": Inflige 50 de daño especial al Miembro Central del oponente."
       }
     },
     "extra": null,
@@ -20425,11 +20425,11 @@
       "damage": 100,
       "specialAttackImage": "icons/tokkou_50_purple.png",
       "effect": {
-        "zh-TW": "[限定中心位置]自己的主推為「FUWAMOCO」時，可以將這個成員的1張吶喊卡，替換給自己的「モココ・アビスガード」：給予對手的中心成員50點特殊傷害。",
-        "ja": "[限定中心位置]自分の「推し」が「FUWAMOCO」の場合、このメンバーの「エール」カード1枚を、自分の「モココ・アビスガード」と入れ替える：相手のセンターメンバーに50点の特殊ダメージを与える。",
-        "en": "[Limited Center Position] When your Oshi is \"FUWAMOCO\", you may swap 1 Cheer card of this Member with your \"モココ・アビスガード\": Deal 50 special damage to your opponent's Center Member.",
-        "fr": "[Position Centre UNIQUEMENT] Lorsque votre Oshi est \"FUWAMOCO\", vous pouvez remplacer 1 carte d'encouragement de ce membre par votre \"モココ・アビスガード\" : infligez 50 dégâts spéciaux au membre Centre de votre adversaire.",
-        "es": "[Solo posición central] Si tu Oshi es \"FUWAMOCO\", puedes reemplazar 1 carta de Cheer de este Miembro con tu \"Mococo Abyssgard\": Inflige 50 de daño especial al Miembro central del oponente."
+        "zh-TW": "[限定中心位置]自己的主推為「FUWAMOCO」時，可以將這個成員的1張吶喊卡，轉移給自己的「モココ・アビスガード」：給予對手的中心成員50點特殊傷害。",
+        "ja": "[センター限定]自分の推しが「FUWAMOCO」の時、このメンバーの持つエールカード1枚を、自分の「モココ・アビスガード」に移すことができる：相手のセンターメンバーに50ダメージを与える。",
+        "en": "[Center Only] When your Oshi is \"FUWAMOCO\", you may move 1 Cheer from this Member to your \"Mococo Abyssgard\": Deal 50 special damage to your opponent's Center Member.",
+        "fr": "[Position Centre uniquement] Lorsque votre Oshi est \"FUWAMOCO\", vous pouvez transférer 1 carte d'encouragement de ce membre à votre \"Mococo Abyssgard\" : Infligez 50 dégâts spéciaux au membre centre de l'adversaire.",
+        "es": "[Solo posición Central] Cuando tu Oshi es \"FUWAMOCO\", puedes transferir 1 carta Cheer de este Miembro a tu \"Mococo Abyssgard\": Inflige 50 de daño especial al Miembro Central del oponente."
       }
     },
     "extra": null,
@@ -20471,11 +20471,11 @@
       "damage": 100,
       "specialAttackImage": "icons/tokkou_50_purple.png",
       "effect": {
-        "zh-TW": "[限定中心位置]自己的主推為「FUWAMOCO」時，可以將這個成員的1張吶喊卡，替換給自己的「モココ・アビスガード」：給予對手的中心成員50點特殊傷害。",
-        "ja": "[限定中心位置]自分の「推し」が「FUWAMOCO」の場合、このメンバーの「エール」カード1枚を、自分の「モココ・アビスガード」と入れ替える：相手のセンターメンバーに50点の特殊ダメージを与える。",
-        "en": "[Limited Center Position] When your Oshi is \"FUWAMOCO\", you may swap 1 Cheer card of this Member with your \"モココ・アビスガード\": Deal 50 special damage to your opponent's Center Member.",
-        "fr": "[Position Centre UNIQUEMENT] Lorsque votre Oshi est \"FUWAMOCO\", vous pouvez remplacer 1 carte d'encouragement de ce membre par votre \"モココ・アビスガード\" : infligez 50 dégâts spéciaux au membre Centre de votre adversaire.",
-        "es": "[Solo posición central] Si tu Oshi es \"FUWAMOCO\", puedes reemplazar 1 carta de Cheer de este Miembro con tu \"Mococo Abyssgard\": Inflige 50 de daño especial al Miembro central del oponente."
+        "zh-TW": "[限定中心位置]自己的主推為「FUWAMOCO」時，可以將這個成員的1張吶喊卡，轉移給自己的「モココ・アビスガード」：給予對手的中心成員50點特殊傷害。",
+        "ja": "[センター限定]自分の推しが「FUWAMOCO」の時、このメンバーの持つエールカード1枚を、自分の「モココ・アビスガード」に移すことができる：相手のセンターメンバーに50ダメージを与える。",
+        "en": "[Center Only] When your Oshi is \"FUWAMOCO\", you may move 1 Cheer from this Member to your \"Mococo Abyssgard\": Deal 50 special damage to your opponent's Center Member.",
+        "fr": "[Position Centre uniquement] Lorsque votre Oshi est \"FUWAMOCO\", vous pouvez transférer 1 carte d'encouragement de ce membre à votre \"Mococo Abyssgard\" : Infligez 50 dégâts spéciaux au membre centre de l'adversaire.",
+        "es": "[Solo posición Central] Cuando tu Oshi es \"FUWAMOCO\", puedes transferir 1 carta Cheer de este Miembro a tu \"Mococo Abyssgard\": Inflige 50 de daño especial al Miembro Central del oponente."
       }
     },
     "extra": null,
@@ -20515,11 +20515,11 @@
       "damage": 40,
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "自己的主推為「星街すいせい」時，可以將這個成員的1張藍色吶喊卡，替換給自己的後台成員「星街すいせい」。",
-        "ja": "自分の推しが「星街すいせい」の時、このメンバーの青のエールカード１枚を、自分の後列メンバー「星街すいせい」に交換できる。",
-        "en": "If your Oshi is \"Suisei Hoshimachi\", you may substitute 1 blue Cheer card of this Member for your Back row Member \"Suisei Hoshimachi\".",
-        "fr": "Si votre Oshi est \"星街すいせい\", vous pouvez échanger 1 carte d'encouragement bleue de ce Membre avec votre Membre Arrière \"星街すいせい\".",
-        "es": "Si tu Oshi es \"Suisei Hoshimachi\", puedes reemplazar 1 carta de Cheer azul de este miembro con \"Suisei Hoshimachi\" en tu retaguardia."
+        "zh-TW": "自己的主推為「星街すいせい」時，可以將這個成員的1張藍色吶喊卡，轉移給自己的後台成員「星街すいせい」。",
+        "ja": "自分の推しが「星街すいせい」の時、このメンバーの持つ青のエールカード1枚を、自分のバックヤードメンバー「星街すいせい」に移すことができる。",
+        "en": "When your Oshi is \"Suisei Hoshimachi\", move 1 Blue Cheer from this Member to your Back Member \"Suisei Hoshimachi\".",
+        "fr": "Lorsque votre Oshi est \"Suisei Hoshimachi\", vous pouvez transférer 1 carte d'encouragement bleue de ce membre à votre membre arrière \"Suisei Hoshimachi\".",
+        "es": "Cuando tu Oshi es \"Sui-chan Hoshimachi\", puedes transferir 1 carta Cheer azul de este Miembro a tu Miembro de Retaguardia \"Sui-chan Hoshimachi\"."
       }
     },
     "art2": null,
@@ -20560,11 +20560,11 @@
       "damage": 40,
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "自己的主推為「星街すいせい」時，可以將這個成員的1張藍色吶喊卡，替換給自己的後台成員「星街すいせい」。",
-        "ja": "自分の推しが「星街すいせい」の時、このメンバーの青のエールカード１枚を、自分の後列メンバー「星街すいせい」に交換できる。",
-        "en": "If your Oshi is \"Suisei Hoshimachi\", you may substitute 1 blue Cheer card of this Member for your Back row Member \"Suisei Hoshimachi\".",
-        "fr": "Si votre Oshi est \"星街すいせい\", vous pouvez échanger 1 carte d'encouragement bleue de ce Membre avec votre Membre Arrière \"星街すいせい\".",
-        "es": "Si tu Oshi es \"Suisei Hoshimachi\", puedes reemplazar 1 carta de Cheer azul de este miembro con \"Suisei Hoshimachi\" en tu retaguardia."
+        "zh-TW": "自己的主推為「星街すいせい」時，可以將這個成員的1張藍色吶喊卡，轉移給自己的後台成員「星街すいせい」。",
+        "ja": "自分の推しが「星街すいせい」の時、このメンバーの持つ青のエールカード1枚を、自分のバックヤードメンバー「星街すいせい」に移すことができる。",
+        "en": "When your Oshi is \"Suisei Hoshimachi\", move 1 Blue Cheer from this Member to your Back Member \"Suisei Hoshimachi\".",
+        "fr": "Lorsque votre Oshi est \"Suisei Hoshimachi\", vous pouvez transférer 1 carte d'encouragement bleue de ce membre à votre membre arrière \"Suisei Hoshimachi\".",
+        "es": "Cuando tu Oshi es \"Sui-chan Hoshimachi\", puedes transferir 1 carta Cheer azul de este Miembro a tu Miembro de Retaguardia \"Sui-chan Hoshimachi\"."
       }
     },
     "art2": null,
@@ -20605,11 +20605,11 @@
       "damage": 40,
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "自己的主推為「星街すいせい」時，可以將這個成員的1張藍色吶喊卡，替換給自己的後台成員「星街すいせい」。",
-        "ja": "自分の推しが「星街すいせい」の時、このメンバーの青のエールカード１枚を、自分の後列メンバー「星街すいせい」に交換できる。",
-        "en": "If your Oshi is \"Suisei Hoshimachi\", you may substitute 1 blue Cheer card of this Member for your Back row Member \"Suisei Hoshimachi\".",
-        "fr": "Si votre Oshi est \"星街すいせい\", vous pouvez échanger 1 carte d'encouragement bleue de ce Membre avec votre Membre Arrière \"星街すいせい\".",
-        "es": "Si tu Oshi es \"Suisei Hoshimachi\", puedes reemplazar 1 carta de Cheer azul de este miembro con \"Suisei Hoshimachi\" en tu retaguardia."
+        "zh-TW": "自己的主推為「星街すいせい」時，可以將這個成員的1張藍色吶喊卡，轉移給自己的後台成員「星街すいせい」。",
+        "ja": "自分の推しが「星街すいせい」の時、このメンバーの持つ青のエールカード1枚を、自分のバックヤードメンバー「星街すいせい」に移すことができる。",
+        "en": "When your Oshi is \"Suisei Hoshimachi\", move 1 Blue Cheer from this Member to your Back Member \"Suisei Hoshimachi\".",
+        "fr": "Lorsque votre Oshi est \"Suisei Hoshimachi\", vous pouvez transférer 1 carte d'encouragement bleue de ce membre à votre membre arrière \"Suisei Hoshimachi\".",
+        "es": "Cuando tu Oshi es \"Sui-chan Hoshimachi\", puedes transferir 1 carta Cheer azul de este Miembro a tu Miembro de Retaguardia \"Sui-chan Hoshimachi\"."
       }
     },
     "art2": null,
@@ -20828,11 +20828,11 @@
       "damage": 40,
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "可以將這個成員的1張吶喊卡，替換給自己標示#ReGLOSS的後台成員。",
-        "ja": "このメンバーの「エール」を1枚、自分の#ReGLOSSのバックメンバーに置き換えることができる。",
-        "en": "You can substitute 1 Cheer from this Member with your Back Member marked #ReGLOSS.",
-        "fr": "Vous pouvez remplacer 1 carte Encouragement de ce Membre par un de vos Membres d'Arrière marqués #ReGLOSS.",
-        "es": "Puedes poner 1 Cheer de este Miembro en tu Archivo: Reemplaza 1 Cheer de este Miembro con un Miembro en Retaguardia con la etiqueta #ReGLOSS en tu lado del Escenario."
+        "zh-TW": "可以將這個成員的1張吶喊卡，轉移給自己標示#ReGLOSS的後台成員。",
+        "ja": "このメンバーの持つエールカード1枚を、自分の#ReGLOSSシンボルのバックヤードメンバーに移すことができる。",
+        "en": "Move 1 Cheer from this Member to a Back Member with #ReGLOSS.",
+        "fr": "Vous pouvez transférer 1 carte d'encouragement de ce membre à un membre arrière de marque #ReGLOSS.",
+        "es": "Puedes transferir 1 carta Cheer de este Miembro a un Miembro de Retaguardia tuyo marcado como #ReGLOSS."
       }
     },
     "extra": null,
@@ -22792,11 +22792,11 @@
     "effectG": {
       "name": "まだまだいくよー！",
       "effect": {
-        "zh-TW": "這個成員被擊倒時，可以將這個成員的1張吶喊卡，替換給自己其他的「角巻わため」。",
-        "ja": "このメンバーがダウンした時、このメンバーのエールカード1枚を、自分の他の「角巻わため」と入れ替えることができる。",
-        "en": "When this Member is Downed, you may replace 1 Cheer card of this Member with another \"角巻わため\" of yours.",
-        "fr": "Lorsque ce membre est K.O., vous pouvez remplacer 1 carte d'encouragement de ce membre par un autre de vos \"角巻わため\".",
-        "es": "Cuando este Miembro es K.O., puedes reemplazar 1 carta de Cheer de este Miembro por otro \"角巻わため\" tuyo."
+        "zh-TW": "這個成員被擊倒時，可以將這個成員的1張吶喊卡，轉移給自己其他的「角巻わため」。",
+        "ja": "このメンバーがダウンした時、このメンバーの持つエールカード1枚を、自分の他の「角巻わため」に移すことができる。",
+        "en": "When this Member is Downed, you may move 1 Cheer from this Member to another one of your \"Watame Tsunomaki\".",
+        "fr": "Lorsqu'un membre est mis K.O., vous pouvez transférer 1 carte d'encouragement de ce membre à votre \"Watame Tsunomaki\".",
+        "es": "Cuando este Miembro es K.O., puedes transferir 1 carta Cheer de ese Miembro a otro \"Watame Tsunomaki\" tuyo."
       }
     },
     "art1": {
@@ -22839,11 +22839,11 @@
     "effectG": {
       "name": "まだまだいくよー！",
       "effect": {
-        "zh-TW": "這個成員被擊倒時，可以將這個成員的1張吶喊卡，替換給自己其他的「角巻わため」。",
-        "ja": "このメンバーがダウンした時、このメンバーのエールカード1枚を、自分の他の「角巻わため」と入れ替えることができる。",
-        "en": "When this Member is Downed, you may replace 1 Cheer card of this Member with another \"角巻わため\" of yours.",
-        "fr": "Lorsque ce membre est K.O., vous pouvez remplacer 1 carte d'encouragement de ce membre par un autre de vos \"角巻わため\".",
-        "es": "Cuando este Miembro es K.O., puedes reemplazar 1 carta de Cheer de este Miembro por otro \"角巻わため\" tuyo."
+        "zh-TW": "這個成員被擊倒時，可以將這個成員的1張吶喊卡，轉移給自己其他的「角巻わため」。",
+        "ja": "このメンバーがダウンした時、このメンバーの持つエールカード1枚を、自分の他の「角巻わため」に移すことができる。",
+        "en": "When this Member is Downed, you may move 1 Cheer from this Member to another one of your \"Watame Tsunomaki\".",
+        "fr": "Lorsqu'un membre est mis K.O., vous pouvez transférer 1 carte d'encouragement de ce membre à votre \"Watame Tsunomaki\".",
+        "es": "Cuando este Miembro es K.O., puedes transferir 1 carta Cheer de ese Miembro a otro \"Watame Tsunomaki\" tuyo."
       }
     },
     "art1": {
@@ -22886,11 +22886,11 @@
     "effectG": {
       "name": "まだまだいくよー！",
       "effect": {
-        "zh-TW": "這個成員被擊倒時，可以將這個成員的1張吶喊卡，替換給自己其他的「角巻わため」。",
-        "ja": "このメンバーがダウンした時、このメンバーのエールカード1枚を、自分の他の「角巻わため」と入れ替えることができる。",
-        "en": "When this Member is Downed, you may replace 1 Cheer card of this Member with another \"角巻わため\" of yours.",
-        "fr": "Lorsque ce membre est K.O., vous pouvez remplacer 1 carte d'encouragement de ce membre par un autre de vos \"角巻わため\".",
-        "es": "Cuando este Miembro es K.O., puedes reemplazar 1 carta de Cheer de este Miembro por otro \"角巻わため\" tuyo."
+        "zh-TW": "這個成員被擊倒時，可以將這個成員的1張吶喊卡，轉移給自己其他的「角巻わため」。",
+        "ja": "このメンバーがダウンした時、このメンバーの持つエールカード1枚を、自分の他の「角巻わため」に移すことができる。",
+        "en": "When this Member is Downed, you may move 1 Cheer from this Member to another one of your \"Watame Tsunomaki\".",
+        "fr": "Lorsqu'un membre est mis K.O., vous pouvez transférer 1 carte d'encouragement de ce membre à votre \"Watame Tsunomaki\".",
+        "es": "Cuando este Miembro es K.O., puedes transferir 1 carta Cheer de ese Miembro a otro \"Watame Tsunomaki\" tuyo."
       }
     },
     "art1": {
@@ -22949,11 +22949,11 @@
       "damage": 60,
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "可以將這個成員的1張吶喊卡，替換給自己的「戌神ころね」。",
-        "ja": "このメンバーの「エール」を1枚、自分の「戌神ころね」に置き換えることができる。",
-        "en": "You can substitute 1 Cheer from this Member with your \"Inugami Korone\".",
-        "fr": "Vous pouvez remplacer 1 carte Encouragement de ce Membre par votre \"戌神ころね\".",
-        "es": "Puedes poner 1 Cheer de este Miembro en tu Archivo: Reemplaza 1 Cheer de este Miembro con tu \"戌神ころね\"."
+        "zh-TW": "可以將這個成員的1張吶喊卡，轉移給自己的「戌神ころね」。",
+        "ja": "このメンバーの持つエールカード1枚を、自分の「戌神ころね」に移すことができる。",
+        "en": "Move 1 Cheer from this Member to your \"Korone Inugami\".",
+        "fr": "Vous pouvez transférer 1 carte d'encouragement de ce membre à votre \"Korone Inugami\".",
+        "es": "Puedes transferir 1 carta Cheer de este Miembro a tu \"Korone Inugami\"."
       }
     },
     "extra": {
@@ -23215,11 +23215,11 @@
     "effectB": {
       "name": "マジカルサポート",
       "effect": {
-        "zh-TW": "可以將自己標示#ID1期生的成員的1張吶喊卡，替換給自己其他的成員。",
-        "ja": "自分の#ID1期生のメンバーの「エール」を1枚、自分の他のメンバーに置き換えることができる。",
-        "en": "You can substitute 1 Cheer of a Member marked #ID Generation 1 with another of your Members.",
-        "fr": "Vous pouvez remplacer 1 carte Encouragement d'un Membre marqué #ID1期生 par un autre de vos Membres.",
-        "es": "Puedes reemplazar 1 carta de Cheer de 1 Miembro tuyo con la etiqueta #ID1期生 con otro Miembro tuyo."
+        "zh-TW": "可以將自己標示#ID1期生的成員的1張吶喊卡，轉移給自己其他的成員。",
+        "ja": "自分の#ID1期生シンボルのメンバーの持つエールカード1枚を、自分の他のメンバーに移すことができる。",
+        "en": "Move 1 Cheer from your Member with #ID Generation 1 to another one of your Members.",
+        "fr": "Vous pouvez transférer 1 carte d'encouragement d'un de vos membres de marque #ID 1ère génération à un autre de vos membres.",
+        "es": "Puedes transferir 1 carta Cheer de un Miembro tuyo marcado como #ID de la 1ª generación a otro Miembro tuyo."
       }
     },
     "effectG": null,
@@ -23262,11 +23262,11 @@
     "effectB": {
       "name": "マジカルサポート",
       "effect": {
-        "zh-TW": "可以將自己標示#ID1期生的成員的1張吶喊卡，替換給自己其他的成員。",
-        "ja": "自分の#ID1期生のメンバーの「エール」を1枚、自分の他のメンバーに置き換えることができる。",
-        "en": "You can substitute 1 Cheer of a Member marked #ID Generation 1 with another of your Members.",
-        "fr": "Vous pouvez remplacer 1 carte Encouragement d'un Membre marqué #ID1期生 par un autre de vos Membres.",
-        "es": "Puedes reemplazar 1 carta de Cheer de 1 Miembro tuyo con la etiqueta #ID1期生 con otro Miembro tuyo."
+        "zh-TW": "可以將自己標示#ID1期生的成員的1張吶喊卡，轉移給自己其他的成員。",
+        "ja": "自分の#ID1期生シンボルのメンバーの持つエールカード1枚を、自分の他のメンバーに移すことができる。",
+        "en": "Move 1 Cheer from your Member with #ID Generation 1 to another one of your Members.",
+        "fr": "Vous pouvez transférer 1 carte d'encouragement d'un de vos membres de marque #ID 1ère génération à un autre de vos membres.",
+        "es": "Puedes transferir 1 carta Cheer de un Miembro tuyo marcado como #ID de la 1ª generación a otro Miembro tuyo."
       }
     },
     "effectG": null,
@@ -23309,11 +23309,11 @@
     "effectB": {
       "name": "マジカルサポート",
       "effect": {
-        "zh-TW": "可以將自己標示#ID1期生的成員的1張吶喊卡，替換給自己其他的成員。",
-        "ja": "自分の#ID1期生のメンバーの「エール」を1枚、自分の他のメンバーに置き換えることができる。",
-        "en": "You can substitute 1 Cheer of a Member marked #ID Generation 1 with another of your Members.",
-        "fr": "Vous pouvez remplacer 1 carte Encouragement d'un Membre marqué #ID1期生 par un autre de vos Membres.",
-        "es": "Puedes reemplazar 1 carta de Cheer de 1 Miembro tuyo con la etiqueta #ID1期生 con otro Miembro tuyo."
+        "zh-TW": "可以將自己標示#ID1期生的成員的1張吶喊卡，轉移給自己其他的成員。",
+        "ja": "自分の#ID1期生シンボルのメンバーの持つエールカード1枚を、自分の他のメンバーに移すことができる。",
+        "en": "Move 1 Cheer from your Member with #ID Generation 1 to another one of your Members.",
+        "fr": "Vous pouvez transférer 1 carte d'encouragement d'un de vos membres de marque #ID 1ère génération à un autre de vos membres.",
+        "es": "Puedes transferir 1 carta Cheer de un Miembro tuyo marcado como #ID de la 1ª generación a otro Miembro tuyo."
       }
     },
     "effectG": null,
@@ -23676,11 +23676,11 @@
     "effectB": {
       "name": "ここが私のステージだから！",
       "effect": {
-        "zh-TW": "可以將自己舞台上的1~2張吶喊卡，替換給這個成員。",
-        "ja": "自分のステージ上の「エール」を1～2枚、このメンバーに置き換えることができる。",
-        "en": "You can substitute 1 to 2 Cheers from your Stage with this Member.",
-        "fr": "Vous pouvez remplacer 1 à 2 cartes Encouragement de votre Scène par ce Membre.",
-        "es": "Puedes reemplazar 1-2 cartas de Cheer de tu Escenario con este Miembro."
+        "zh-TW": "可以將自己舞台上的1~2張吶喊卡，轉移給這個成員。",
+        "ja": "自分のステージ上にある1～2枚のエールカードを、このメンバーに移すことができる。",
+        "en": "Move 1 to 2 Cheers from your Stage to this Member.",
+        "fr": "Vous pouvez transférer 1 à 2 cartes d'encouragement de votre scène à ce membre.",
+        "es": "Puedes transferir 1~2 cartas Cheer de tu escenario a este Miembro."
       }
     },
     "effectG": null,
@@ -23851,11 +23851,11 @@
     "tag": null,
     "product": "補充包「エリートスパーク (hBP03)」",
     "supportEffect": {
-      "zh-TW": "將自己舞台上的1張吶喊卡替換給自己的成員。",
-      "ja": "自分のステージの「エール」を1枚、自分のメンバーに置き換える。",
-      "en": "Swap 1 Cheer card on your Stage with your Member.",
-      "fr": "Échangez 1 carte d'encouragement sur votre scène avec votre membre.",
-      "es": "Reemplaza 1 carta Cheer de tu Escenario con un Miembro tuyo."
+      "zh-TW": "將自己舞台上的1張吶喊卡轉移給自己的成員。",
+      "ja": "自分のステージ上にあるエールカード1枚を、自分のメンバーに移す。",
+      "en": "Move 1 Cheer from your Stage to your Member.",
+      "fr": "Transférez 1 carte d'encouragement de votre scène à un de vos membres.",
+      "es": "Transfiere 1 carta Cheer de tu escenario a un Miembro tuyo."
     },
     "id": "hBP03-087",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP03/hBP03-087_C.png"
@@ -24206,11 +24206,11 @@
     "tag": null,
     "product": "補充包「エリートスパーク (hBP03)」",
     "supportEffect": {
-      "zh-TW": "帶有這個吉祥物的成員藝能傷害+10。\n\n◆附加給「アユンダ・リス」有追加效果\n帶有這個吉祥物的成員聯動時，可以將自己舞台上的1張吶喊卡替換給這個成員。\n\n每位成員只能帶有1張吉祥物。",
-      "ja": "このマスコットを持つメンバーのアーツのダメージ＋１０。\n\n◆「アユンダ・リス」に付与された場合、追加効果\nこのマスコットを持つメンバーがコラボした時、自分のステージ上のエールカード１枚をこのメンバーと入れ替えることができる。\n\nメンバー１人につき、マスコットは１枚までしか持てない。",
-      "en": "Members with this Mascot gain +10 Arts damage.\n\n◆Additional effect for \"Ayunda Risu\"\nWhen a Member with this Mascot performs a Collab, you may replace 1 Cheer Card on your Stage with this Member.\n\nEach Member can only have 1 Mascot.",
-      "fr": "Les dégâts d'Arts des membres portant cette Mascotte +10.\n\n◆Effet supplémentaire pour « アユンダ・リス »\nLorsqu'un membre portant cette Mascotte est en Collab, vous pouvez remplacer 1 carte d'encouragement de votre Scène par ce membre.\n\nChaque membre ne peut porter qu'une seule Mascotte.",
-      "es": "El miembro con esta mascota tiene un daño de Arts +10.\n\n◆Si se aplica a \"アユンダ・リス\", tiene un efecto adicional:\nCuando el miembro con esta mascota entra en Collab, puedes reemplazar 1 carta de Cheer de tu Escenario con este miembro.\n\nSolo se puede adjuntar 1 mascota por miembro."
+      "zh-TW": "帶有這個吉祥物的成員藝能傷害+10。\n\n◆附加給「アユンダ・リス」有追加效果\n帶有這個吉祥物的成員聯動時，可以將自己舞台上的1張吶喊卡轉移給這個成員。\n\n每位成員只能帶有1張吉祥物。",
+      "ja": "このマスコットを持つメンバーのArtsダメージ+10。\n\n◆「アユンダ・リス」に付与された場合は追加効果\nこのマスコットを持つメンバーがコラボした時、自分のステージ上にあるエールカード1枚を、このメンバーに移すことができる。\n\n各メンバーは1枚のマスコットのみ持つことができる。",
+      "en": "Arts damage dealt by Members with this Mascot is increased by 10.\n\n◆Additional effect when attached to \"Ayunda Risu\"\nWhen a Member with this Mascot Collabs, you may move 1 Cheer from your Stage to this Member.\n\nEach Member can only have 1 Mascot.",
+      "fr": "Les membres portant cette mascotte ont leurs dégâts d'arts +10.\n\n◆Effet supplémentaire lorsqu'attaché à \"Ayunda Risu\"\nLorsque le membre portant cette mascotte est en Collab, vous pouvez transférer 1 carte d'encouragement de votre scène à ce membre.\n\nChaque membre ne peut porter qu'une seule mascotte.",
+      "es": "El daño de Arts del Miembro con esta Mascota +10.\n\n◆Efecto adicional si se adjunta a \"Ayunda Risu\"\nCuando el Miembro con esta Mascota está en Collab, puedes transferir 1 carta Cheer de tu escenario a este Miembro.\n\nCada Miembro solo puede tener 1 Mascota."
     },
     "id": "hBP03-104",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP03/hBP03-104_C.png"
@@ -24378,11 +24378,11 @@
       "補充包「ディーヴァフィーバー (hBP07)」"
     ],
     "supportEffect": {
-      "zh-TW": "對手回合中，帶有這個粉絲的成員被擊倒時，可以將這個成員的1~2張黃色吶喊卡，替換給自己的1位「角巻わため」。\n\n這個粉絲只能附加給「角巻わため」，每位成員可以帶有任意數量的粉絲。",
-      "ja": "相手ターン中、このファンを持つメンバーがダウンさせられた場合、このメンバーの黄色の「エール」を1～2枚、自分の「角巻わため」に置き換える。\n\nこのファンは「角巻わため」にしか付与できない。メンバーは任意の数のファンを持てる。",
-      "en": "During your opponent's turn, when a Member with this Fan is K.O.'d, swap 1 to 2 yellow Cheer cards of this Member with 1 of your \"角巻わため\".\n\nThis Fan can only be attached to \"角巻わため\". You can have any number of Fans per Member.",
-      "fr": "Pendant le tour de l'adversaire, lorsqu'un membre portant ce Fan est mis K.O., vous pouvez échanger 1 à 2 cartes d'encouragement jaunes de ce membre avec 1 de vos « 角巻わため ».\n\nCe Fan ne peut être attaché qu'à « 角巻わため », et chaque membre peut porter un nombre illimité de Fans.",
-      "es": "Durante el turno del oponente, cuando un Miembro con este Fan sea K.O., reemplaza 1~2 cartas Cheer amarillas de este Miembro con 1 \"角巻わため\" tuyo.\n\nEste Fan solo puede adjuntarse a \"角巻わため\", y cada Miembro puede tener cualquier cantidad de Fans.\n"
+      "zh-TW": "對手回合中，帶有這個粉絲的成員被擊倒時，可以將這個成員的1~2張黃色吶喊卡，轉移給自己的1位「角巻わため」。\n\n這個粉絲只能附加給「角巻わため」，每位成員可以帶有任意數量的粉絲。",
+      "ja": "相手のターン中、このファンを持つメンバーがダウンした時、このメンバーの持つ1～2枚の黄色のエールカードを、自分の「角巻わため」1人に移すことができる。\n\nこのファンは「角巻わため」にのみ付与でき、各メンバーは任意枚数のファンを持つことができる。",
+      "en": "During your opponent's turn, when a Member with this Fan is Downed, you may move 1 to 2 Yellow Cheers from that Member to 1 of your \"Watame Tsunomaki\".\n\nThis Fan can only be attached to \"Watame Tsunomaki\". Each Member can have any number of Fans.",
+      "fr": "Durant le tour de l'adversaire, lorsqu'un membre portant ce fan est mis K.O., vous pouvez transférer 1 à 2 cartes d'encouragement jaunes de ce membre à 1 de vos \"Watame Tsunomaki\".\n\nCe fan ne peut être attaché qu'à \"Watame Tsunomaki\", et chaque membre peut porter un nombre illimité de fans.",
+      "es": "Durante el turno del oponente, cuando un Miembro con este Fan es K.O., puedes transferir 1~2 cartas Cheer amarillas de ese Miembro a 1 \"Watame Tsunomaki\" tuyo.\n\nEste Fan solo puede ser adjuntado a \"Watame Tsunomaki\", y cada Miembro puede tener cualquier número de Fans."
     },
     "id": "hBP03-112",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP03/hBP03-112_U.png"
@@ -24394,11 +24394,11 @@
     "tag": null,
     "product": "PR卡",
     "supportEffect": {
-      "zh-TW": "對手回合中，帶有這個粉絲的成員被擊倒時，可以將這個成員的1~2張黃色吶喊卡，替換給自己的1位「角巻わため」。\n\n這個粉絲只能附加給「角巻わため」，每位成員可以帶有任意數量的粉絲。",
-      "ja": "相手ターン中、このファンを持つメンバーがダウンさせられた場合、このメンバーの黄色の「エール」を1～2枚、自分の「角巻わため」に置き換える。\n\nこのファンは「角巻わため」にしか付与できない。メンバーは任意の数のファンを持てる。",
-      "en": "During your opponent's turn, when a Member with this Fan is K.O.'d, swap 1 to 2 yellow Cheer cards of this Member with 1 of your \"角巻わため\".\n\nThis Fan can only be attached to \"角巻わため\". You can have any number of Fans per Member.",
-      "fr": "Pendant le tour de l'adversaire, lorsqu'un membre portant ce Fan est mis K.O., vous pouvez échanger 1 à 2 cartes d'encouragement jaunes de ce membre avec 1 de vos « 角巻わため ».\n\nCe Fan ne peut être attaché qu'à « 角巻わため », et chaque membre peut porter un nombre illimité de Fans.",
-      "es": "Durante el turno del oponente, cuando un Miembro con este Fan sea K.O., reemplaza 1~2 cartas Cheer amarillas de este Miembro con 1 \"角巻わため\" tuyo.\n\nEste Fan solo puede adjuntarse a \"角巻わため\", y cada Miembro puede tener cualquier cantidad de Fans.\n"
+      "zh-TW": "對手回合中，帶有這個粉絲的成員被擊倒時，可以將這個成員的1~2張黃色吶喊卡，轉移給自己的1位「角巻わため」。\n\n這個粉絲只能附加給「角巻わため」，每位成員可以帶有任意數量的粉絲。",
+      "ja": "相手のターン中、このファンを持つメンバーがダウンした時、このメンバーの持つ1～2枚の黄色のエールカードを、自分の「角巻わため」1人に移すことができる。\n\nこのファンは「角巻わため」にのみ付与でき、各メンバーは任意枚数のファンを持つことができる。",
+      "en": "During your opponent's turn, when a Member with this Fan is Downed, you may move 1 to 2 Yellow Cheers from that Member to 1 of your \"Watame Tsunomaki\".\n\nThis Fan can only be attached to \"Watame Tsunomaki\". Each Member can have any number of Fans.",
+      "fr": "Durant le tour de l'adversaire, lorsqu'un membre portant ce fan est mis K.O., vous pouvez transférer 1 à 2 cartes d'encouragement jaunes de ce membre à 1 de vos \"Watame Tsunomaki\".\n\nCe fan ne peut être attaché qu'à \"Watame Tsunomaki\", et chaque membre peut porter un nombre illimité de fans.",
+      "es": "Durante el turno del oponente, cuando un Miembro con este Fan es K.O., puedes transferir 1~2 cartas Cheer amarillas de ese Miembro a 1 \"Watame Tsunomaki\" tuyo.\n\nEste Fan solo puede ser adjuntado a \"Watame Tsunomaki\", y cada Miembro puede tener cualquier número de Fans."
     },
     "id": "hBP03-112",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP03/hBP03-112_P_02.png"
@@ -26159,11 +26159,11 @@
     "effectG": {
       "name": "ReGLOSSの賑やかし",
       "effect": {
-        "zh-TW": "對手回合中，這個成員被擊倒時，可以將這個成員的1張吶喊卡，替換給自己其他標示#ReGLOSS的成員。",
-        "ja": "相手ターンの間、このメンバーがダウンした時、このメンバーのエールカード１枚を、自分の他の#ReGLOSSのメンバーと入れ替えることができる。",
-        "en": "During your opponent's turn, when this Member is Downed, you may replace 1 Cheer Card of this Member with another one of your Members with #ReGLOSS.",
-        "fr": "Durant le tour de l'adversaire, lorsqu'un membre est mis K.O., remplacez 1 carte d'encouragement de ce membre par un autre membre de votre Oshi marqué #ReGLOSS.",
-        "es": "Durante el turno del oponente, cuando este Miembro sea K.O., reemplaza 1 carta Cheer de este Miembro con 1 Miembro tuyo con la etiqueta #ReGLOSS.\n"
+        "zh-TW": "對手回合中，這個成員被擊倒時，可以將這個成員的1張吶喊卡，轉移給自己其他標示#ReGLOSS的成員。",
+        "ja": "相手のターン中、このメンバーがダウンした時、このメンバーの持つエールカード1枚を、自分の他の#ReGLOSSシンボルのメンバーに移すことができる。",
+        "en": "During your opponent's turn, when this Member is Downed, you may move 1 Cheer from this Member to another Member with #ReGLOSS.",
+        "fr": "Durant le tour de l'adversaire, lorsqu'un membre est mis K.O., vous pouvez transférer 1 carte d'encouragement de ce membre à un autre de vos membres de marque #ReGLOSS.",
+        "es": "Durante el turno del oponente, cuando este Miembro es K.O., puedes transferir 1 carta Cheer de ese Miembro a otro Miembro tuyo marcado como #ReGLOSS."
       }
     },
     "art1": {
@@ -26304,11 +26304,11 @@
       "damage": "140+",
       "specialAttackImage": "icons/tokkou_50_white.png",
       "effect": {
-        "zh-TW": "自己的主推為「儒烏風亭らでん」時，可以將這個成員的2張吶喊卡，替換給自己的2位後台成員，每人各1張：這個藝能傷害+30。",
-        "ja": "自分の推しが「儒烏風亭らでん」の時、このメンバーのエールカード２枚を、自分の後列メンバー２体に１枚ずつ交換できる：このアーツのダメージ＋30。",
-        "en": "If your Oshi is \"Raden Izuyuu Tei\", you may substitute 2 Cheer cards of this Member with 1 Cheer card each for 2 of your Back row Members: This Arts' damage +30.",
-        "fr": "Si votre Oshi est \"儒烏風亭らでん\", vous pouvez échanger 2 cartes d'encouragement de ce Membre contre 2 Membres Arrière, 1 carte chacun : les Dégâts de cette Arts +30.",
-        "es": "Si tu Oshi es \"Raden Juroufuutei\", puedes reemplazar 2 cartas de Cheer de este miembro con 1 carta cada una para 2 miembros en tu retaguardia: el daño de este Arts +30."
+        "zh-TW": "自己的主推為「儒烏風亭らでん」時，可以將這個成員的2張吶喊卡，轉移給自己的2位後台成員，每人各1張：這個藝能傷害+30。",
+        "ja": "自分の推しが「儒烏風亭らでん」の時、このメンバーの持つエールカード2枚を、自分のバックヤードメンバー2人に各1枚移すことができる：このArtsダメージ+30。",
+        "en": "When your Oshi is \"Radenseru\", you may move 2 Cheers from this Member to 2 of your Back Members, 1 Cheer each: This Arts damage is increased by 30.",
+        "fr": "Lorsque votre Oshi est \"Raden Kinugasa\", vous pouvez transférer 2 cartes d'encouragement de ce membre à 2 de vos membres arrière, 1 carte chacune : les dégâts d'arts +30.",
+        "es": "Cuando tu Oshi es \"Raden Izurei\", puedes transferir 2 cartas Cheer de este Miembro a 2 Miembros de Retaguardia tuyos, 1 carta cada uno: Este daño de Arts +30."
       }
     },
     "art2": null,
@@ -26352,11 +26352,11 @@
       "damage": "140+",
       "specialAttackImage": "icons/tokkou_50_white.png",
       "effect": {
-        "zh-TW": "自己的主推為「儒烏風亭らでん」時，可以將這個成員的2張吶喊卡，替換給自己的2位後台成員，每人各1張：這個藝能傷害+30。",
-        "ja": "自分の推しが「儒烏風亭らでん」の時、このメンバーのエールカード２枚を、自分の後列メンバー２体に１枚ずつ交換できる：このアーツのダメージ＋30。",
-        "en": "If your Oshi is \"Raden Izuyuu Tei\", you may substitute 2 Cheer cards of this Member with 1 Cheer card each for 2 of your Back row Members: This Arts' damage +30.",
-        "fr": "Si votre Oshi est \"儒烏風亭らでん\", vous pouvez échanger 2 cartes d'encouragement de ce Membre contre 2 Membres Arrière, 1 carte chacun : les Dégâts de cette Arts +30.",
-        "es": "Si tu Oshi es \"Raden Juroufuutei\", puedes reemplazar 2 cartas de Cheer de este miembro con 1 carta cada una para 2 miembros en tu retaguardia: el daño de este Arts +30."
+        "zh-TW": "自己的主推為「儒烏風亭らでん」時，可以將這個成員的2張吶喊卡，轉移給自己的2位後台成員，每人各1張：這個藝能傷害+30。",
+        "ja": "自分の推しが「儒烏風亭らでん」の時、このメンバーの持つエールカード2枚を、自分のバックヤードメンバー2人に各1枚移すことができる：このArtsダメージ+30。",
+        "en": "When your Oshi is \"Radenseru\", you may move 2 Cheers from this Member to 2 of your Back Members, 1 Cheer each: This Arts damage is increased by 30.",
+        "fr": "Lorsque votre Oshi est \"Raden Kinugasa\", vous pouvez transférer 2 cartes d'encouragement de ce membre à 2 de vos membres arrière, 1 carte chacune : les dégâts d'arts +30.",
+        "es": "Cuando tu Oshi es \"Raden Izurei\", puedes transferir 2 cartas Cheer de este Miembro a 2 Miembros de Retaguardia tuyos, 1 carta cada uno: Este daño de Arts +30."
       }
     },
     "art2": null,
@@ -26400,11 +26400,11 @@
       "damage": "140+",
       "specialAttackImage": "icons/tokkou_50_white.png",
       "effect": {
-        "zh-TW": "自己的主推為「儒烏風亭らでん」時，可以將這個成員的2張吶喊卡，替換給自己的2位後台成員，每人各1張：這個藝能傷害+30。",
-        "ja": "自分の推しが「儒烏風亭らでん」の時、このメンバーのエールカード２枚を、自分の後列メンバー２体に１枚ずつ交換できる：このアーツのダメージ＋30。",
-        "en": "If your Oshi is \"Raden Izuyuu Tei\", you may substitute 2 Cheer cards of this Member with 1 Cheer card each for 2 of your Back row Members: This Arts' damage +30.",
-        "fr": "Si votre Oshi est \"儒烏風亭らでん\", vous pouvez échanger 2 cartes d'encouragement de ce Membre contre 2 Membres Arrière, 1 carte chacun : les Dégâts de cette Arts +30.",
-        "es": "Si tu Oshi es \"Raden Juroufuutei\", puedes reemplazar 2 cartas de Cheer de este miembro con 1 carta cada una para 2 miembros en tu retaguardia: el daño de este Arts +30."
+        "zh-TW": "自己的主推為「儒烏風亭らでん」時，可以將這個成員的2張吶喊卡，轉移給自己的2位後台成員，每人各1張：這個藝能傷害+30。",
+        "ja": "自分の推しが「儒烏風亭らでん」の時、このメンバーの持つエールカード2枚を、自分のバックヤードメンバー2人に各1枚移すことができる：このArtsダメージ+30。",
+        "en": "When your Oshi is \"Radenseru\", you may move 2 Cheers from this Member to 2 of your Back Members, 1 Cheer each: This Arts damage is increased by 30.",
+        "fr": "Lorsque votre Oshi est \"Raden Kinugasa\", vous pouvez transférer 2 cartes d'encouragement de ce membre à 2 de vos membres arrière, 1 carte chacune : les dégâts d'arts +30.",
+        "es": "Cuando tu Oshi es \"Raden Izurei\", puedes transferir 2 cartas Cheer de este Miembro a 2 Miembros de Retaguardia tuyos, 1 carta cada uno: Este daño de Arts +30."
       }
     },
     "art2": null,
@@ -30954,11 +30954,11 @@
     "effectG": {
       "name": "わっしょ～い！",
       "effect": {
-        "zh-TW": "對手回合中，這個成員被擊倒時，可以將這個成員的1張吶喊卡，替換給自己其他的成員。",
-        "ja": "相手ターンの間、このメンバーがダウンした時、このメンバーのエールカード１枚を、自分の他のメンバーと入れ替えることができる。",
-        "en": "During your opponent's turn, when this Member is Downed, you may replace 1 Cheer Card of this Member with another one of your Members.",
-        "fr": "Durant le tour de l'adversaire, lorsqu'un membre est mis K.O., remplacez 1 carte d'encouragement de ce membre par un autre de vos membres.",
-        "es": "Durante el turno del oponente, cuando este Miembro sea K.O., reemplaza 1 carta Cheer de este Miembro con 1 Miembro tuyo.\n"
+        "zh-TW": "對手回合中，這個成員被擊倒時，可以將這個成員的1張吶喊卡，轉移給自己其他的成員。",
+        "ja": "相手のターン中、このメンバーがダウンした時、このメンバーの持つエールカード1枚を、自分の他のメンバーに移すことができる。",
+        "en": "During your opponent's turn, when this Member is Downed, you may move 1 Cheer from this Member to another one of your Members.",
+        "fr": "Durant le tour de l'adversaire, lorsqu'un membre est mis K.O., vous pouvez transférer 1 carte d'encouragement de ce membre à un autre de vos membres.",
+        "es": "Durante el turno del oponente, cuando este Miembro es K.O., puedes transferir 1 carta Cheer de ese Miembro a otro Miembro tuyo."
       }
     },
     "art1": {
@@ -30998,11 +30998,11 @@
     "effectG": {
       "name": "わっしょ～い！",
       "effect": {
-        "zh-TW": "對手回合中，這個成員被擊倒時，可以將這個成員的1張吶喊卡，替換給自己其他的成員。",
-        "ja": "相手ターンの間、このメンバーがダウンした時、このメンバーのエールカード１枚を、自分の他のメンバーと入れ替えることができる。",
-        "en": "During your opponent's turn, when this Member is Downed, you may replace 1 Cheer Card of this Member with another one of your Members.",
-        "fr": "Durant le tour de l'adversaire, lorsqu'un membre est mis K.O., remplacez 1 carte d'encouragement de ce membre par un autre de vos membres.",
-        "es": "Durante el turno del oponente, cuando este Miembro sea K.O., reemplaza 1 carta Cheer de este Miembro con 1 Miembro tuyo.\n"
+        "zh-TW": "對手回合中，這個成員被擊倒時，可以將這個成員的1張吶喊卡，轉移給自己其他的成員。",
+        "ja": "相手のターン中、このメンバーがダウンした時、このメンバーの持つエールカード1枚を、自分の他のメンバーに移すことができる。",
+        "en": "During your opponent's turn, when this Member is Downed, you may move 1 Cheer from this Member to another one of your Members.",
+        "fr": "Durant le tour de l'adversaire, lorsqu'un membre est mis K.O., vous pouvez transférer 1 carte d'encouragement de ce membre à un autre de vos membres.",
+        "es": "Durante el turno del oponente, cuando este Miembro es K.O., puedes transferir 1 carta Cheer de ese Miembro a otro Miembro tuyo."
       }
     },
     "art1": {
@@ -31878,11 +31878,11 @@
     "tag": "#きのこ",
     "product": "補充包「キュリアスユニバース (hBP04)」",
     "supportEffect": {
-      "zh-TW": "選擇自己的1位「儒烏風亭らでん」。可以將自己舞台上的1~2張吶喊卡，替換給該成員。之後，該成員有3張以上的吶喊卡時，這個回合中，該成員的藝能傷害+10。",
-      "ja": "自分の「儒烏風亭らでん」を1人選ぶ。自分のステージ上のエールカードを1～2枚、そのメンバーと入れ替える。その後、そのメンバーがエールカードを3枚以上持っている場合、このターン中、そのメンバーのアーツダメージ+10。",
-      "en": "Choose 1 of your \"儒烏風亭らでん\". You may replace 1 to 2 Cheer cards on your Stage with this Member. After that, if this Member has 3 or more Cheer cards, this Member's Arts Damage +10 during this turn.",
-      "fr": "Choisissez 1 de vos \"儒烏風亭らでん\". Vous pouvez remplacer 1 à 2 cartes d'encouragement sur votre Scène par ce membre. Ensuite, si ce membre possède 3 cartes d'encouragement ou plus, les dégâts d'Arts de ce membre +10 pendant ce tour.",
-      "es": "Selecciona 1 de tus \"儒烏風亭らでん\". Puedes reemplazar 1 o 2 cartas de Cheer en tu Escenario por ese Miembro. Después, si ese Miembro tiene 3 o más cartas de Cheer, durante este Turno, el daño de Arts de ese Miembro +10."
+      "zh-TW": "選擇自己的1位「儒烏風亭らでん」。可以將自己舞台上的1~2張吶喊卡，轉移給該成員。之後，該成員有3張以上的吶喊卡時，這個回合中，該成員的藝能傷害+10。",
+      "ja": "自分の「儒烏風亭らでん」1人を選ぶ。自分のステージ上にある1～2枚のエールカードをそのメンバーに移すことができる。その後、そのメンバーが3枚以上のエールカードを持つ場合、このターン中、そのメンバーのArtsダメージ+10。",
+      "en": "Choose 1 of your \"Radenseru\". You may move 1 to 2 Cheers from your Stage to that Member. If that Member has 3 or more Cheers after this, that Member's Arts damage is increased by 10 during this turn.",
+      "fr": "Choisissez 1 de vos \"Raden Kinugasa\". Vous pouvez transférer 1 à 2 cartes d'encouragement de votre scène à ce membre. Après cela, si ce membre a 3 cartes d'encouragement ou plus, les dégâts d'arts de ce membre +10 durant ce tour.",
+      "es": "Selecciona 1 \"Raden Izurei\" tuyo. Puedes transferir 1~2 cartas Cheer de tu escenario a ese Miembro. Después, si ese Miembro tiene 3 o más cartas Cheer, el daño de Arts de ese Miembro durante este turno +10."
     },
     "id": "hBP04-094",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP04/hBP04-094_U.png"
@@ -32057,11 +32057,11 @@
     "tag": "#こよラボ",
     "product": "補充包「キュリアスユニバース (hBP04)」",
     "supportEffect": {
-      "zh-TW": "這個粉絲從手牌或存檔區附加給成員時，可以將自己舞台上的1張吶喊卡，替換給帶有這個粉絲的成員。\n\n這個粉絲只能附加給「博衣こより」，每位成員可以帶有任意數量的粉絲。",
-      "ja": "このファンがメンバーに手札かアーカイブから付与された時、自分のステージ上のエールカード1枚を、このファンが付与されたメンバーと入れ替えることができる。\nこのファンは「博衣こより」にのみ付与でき、メンバーごとに好きな枚数付与できる。",
-      "en": "When this Fan is attached to a Member from your Hand or Archive, you may replace 1 Cheer card on your Stage with the Member this Fan is attached to.\n\nThis Fan can only be attached to \"Hakui Koyori\", and each Member can have any number of Fans.\n",
-      "fr": "Lorsque ce Fan est attaché à un Membre depuis la main ou l'Archive, vous pouvez remplacer 1 carte d'Encouragement sur votre Scène par le Membre portant ce Fan.\n\nCe Fan ne peut être attaché qu'à \"Hakui Koyori\", et chaque Membre peut porter un nombre illimité de Fans.",
-      "es": "Cuando este Fan se añade a un Miembro desde la Mano o el Archivo, puedes reemplazar 1 carta de Cheer en tu Escenario con el Miembro que lleva este Fan.\n\nEste Fan solo puede añadirse a \"Hakui Koyori\", y cada Miembro puede llevar cualquier número de Fans."
+      "zh-TW": "這個粉絲從手牌或存檔區附加給成員時，可以將自己舞台上的1張吶喊卡，轉移給帶有這個粉絲的成員。\n\n這個粉絲只能附加給「博衣こより」，每位成員可以帶有任意數量的粉絲。",
+      "ja": "このファンが手札かアーカイブからメンバーに付与された時、自分のステージ上にあるエールカード1枚を、このファンを持つメンバーに移すことができる。\n\nこのファンは「博衣こより」にのみ付与でき、各メンバーは任意枚数のファンを持つことができる。",
+      "en": "When this Fan is attached to a Member from your Hand or Archive, you may move 1 Cheer from your Stage to the Member with this Fan.\n\nThis Fan can only be attached to \"Koyori Hakui\". Each Member can have any number of Fans.",
+      "fr": "Lorsque ce fan est attaché à un membre depuis votre main ou votre archive, vous pouvez transférer 1 carte d'encouragement de votre scène au membre portant ce fan.\n\nCe fan ne peut être attaché qu'à \"Koyori Hakui\", et chaque membre peut porter un nombre illimité de fans.",
+      "es": "Cuando este Fan es adjuntado a un Miembro desde tu mano o Archivo, puedes transferir 1 carta Cheer de tu escenario al Miembro con este Fan.\n\nEste Fan solo puede ser adjuntado a \"Koyori Hakui\", y cada Miembro puede tener cualquier número de Fans."
     },
     "id": "hBP04-105",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP04/hBP04-105_U.png"
@@ -32073,11 +32073,11 @@
     "tag": "#こよラボ",
     "product": "補充包「キュリアスユニバース (hBP04)」",
     "supportEffect": {
-      "zh-TW": "這個粉絲從手牌或存檔區附加給成員時，可以將自己舞台上的1張吶喊卡，替換給帶有這個粉絲的成員。\n\n這個粉絲只能附加給「博衣こより」，每位成員可以帶有任意數量的粉絲。",
-      "ja": "このファンがメンバーに手札かアーカイブから付与された時、自分のステージ上のエールカード1枚を、このファンが付与されたメンバーと入れ替えることができる。\nこのファンは「博衣こより」にのみ付与でき、メンバーごとに好きな枚数付与できる。",
-      "en": "When this Fan is attached to a Member from your Hand or Archive, you may replace 1 Cheer card on your Stage with the Member this Fan is attached to.\n\nThis Fan can only be attached to \"Hakui Koyori\", and each Member can have any number of Fans.\n",
-      "fr": "Lorsque ce Fan est attaché à un Membre depuis la main ou l'Archive, vous pouvez remplacer 1 carte d'Encouragement sur votre Scène par le Membre portant ce Fan.\n\nCe Fan ne peut être attaché qu'à \"Hakui Koyori\", et chaque Membre peut porter un nombre illimité de Fans.",
-      "es": "Cuando este Fan se añade a un Miembro desde la Mano o el Archivo, puedes reemplazar 1 carta de Cheer en tu Escenario con el Miembro que lleva este Fan.\n\nEste Fan solo puede añadirse a \"Hakui Koyori\", y cada Miembro puede llevar cualquier número de Fans."
+      "zh-TW": "這個粉絲從手牌或存檔區附加給成員時，可以將自己舞台上的1張吶喊卡，轉移給帶有這個粉絲的成員。\n\n這個粉絲只能附加給「博衣こより」，每位成員可以帶有任意數量的粉絲。",
+      "ja": "このファンが手札かアーカイブからメンバーに付与された時、自分のステージ上にあるエールカード1枚を、このファンを持つメンバーに移すことができる。\n\nこのファンは「博衣こより」にのみ付与でき、各メンバーは任意枚数のファンを持つことができる。",
+      "en": "When this Fan is attached to a Member from your Hand or Archive, you may move 1 Cheer from your Stage to the Member with this Fan.\n\nThis Fan can only be attached to \"Koyori Hakui\". Each Member can have any number of Fans.",
+      "fr": "Lorsque ce fan est attaché à un membre depuis votre main ou votre archive, vous pouvez transférer 1 carte d'encouragement de votre scène au membre portant ce fan.\n\nCe fan ne peut être attaché qu'à \"Koyori Hakui\", et chaque membre peut porter un nombre illimité de fans.",
+      "es": "Cuando este Fan es adjuntado a un Miembro desde tu mano o Archivo, puedes transferir 1 carta Cheer de tu escenario al Miembro con este Fan.\n\nEste Fan solo puede ser adjuntado a \"Koyori Hakui\", y cada Miembro puede tener cualquier número de Fans."
     },
     "id": "hBP04-105",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP04/hBP04-105_S.png"
@@ -32173,11 +32173,11 @@
       "holoPower": -1,
       "name": "IOFORIA~!",
       "effect": {
-        "zh-TW": "[每個回合一次]對手回合中，自己標示#ID1期生的成員受到對手傷害時可以使用：將該成員的1張吶喊卡替換給自己其他標示#ID1期生的成員。",
-        "ja": "[各ターンに1度]相手ターン中、自分の#ID1期生を持つメンバーが相手のダメージを受けた時に使用できる：そのメンバーが受けるダメージを、自分の他の#ID1期生を持つメンバーに移す。",
-        "en": "[Once per turn] During the opponent's turn, when a Member of yours with #ID1期生 takes damage from an opponent, you may replace 1 Cheer card of that Member with a Cheer card of another Member of yours with #ID1期生.",
-        "fr": "[Chaque tour, une fois] Pendant le tour de l'adversaire, quand un de vos membres avec le marqueur #ID1期生 subit des dégâts de l'adversaire, vous pouvez l'utiliser : Remplacez 1 carte d'Encouragement de ce membre par un de vos autres membres avec le marqueur #ID1期生.",
-        "es": "[Cada turno una vez] Durante el turno del oponente, cuando un miembro tuyo con la marca #ID1期生 recibe daño del oponente, puedes reemplazar 1 carta de Cheer de ese miembro con otro miembro tuyo con la marca #ID1期生."
+        "zh-TW": "[每個回合一次]對手回合中，自己標示#ID1期生的成員受到對手傷害時可以使用：將該成員的1張吶喊卡轉移給自己其他標示#ID1期生的成員。",
+        "ja": "[各ターンに1回]相手のターン中、自分の#ID1期生シンボルのメンバーが相手からダメージを受けた時に使用できる：そのメンバーの持つエールカード1枚を、自分の他の#ID1期生シンボルのメンバーに移す。",
+        "en": "[Once per turn] During your opponent's turn, when your Member with #ID Generation 1 takes damage from your opponent, you may move 1 Cheer from that Member to another one of your Members with #ID Generation 1.",
+        "fr": "[Chaque tour une fois] Durant le tour de l'adversaire, lorsqu'un membre de votre marque #ID 1ère génération subit des dégâts de l'adversaire, vous pouvez : Transférez 1 carte d'encouragement de ce membre à un autre de vos membres de marque #ID 1ère génération.",
+        "es": "[Cada turno una vez] Durante el turno del oponente, cuando un Miembro tuyo marcado como #ID de la 1ª generación recibe daño del oponente, puedes: Transfiere 1 carta Cheer de ese Miembro a otro Miembro tuyo marcado como #ID de la 1ª generación."
       }
     },
     "spSkill": {
@@ -32205,11 +32205,11 @@
       "holoPower": -1,
       "name": "IOFORIA~!",
       "effect": {
-        "zh-TW": "[每個回合一次]對手回合中，自己標示#ID1期生的成員受到對手傷害時可以使用：將該成員的1張吶喊卡替換給自己其他標示#ID1期生的成員。",
-        "ja": "[各ターンに1度]相手ターン中、自分の#ID1期生を持つメンバーが相手のダメージを受けた時に使用できる：そのメンバーが受けるダメージを、自分の他の#ID1期生を持つメンバーに移す。",
-        "en": "[Once per turn] During the opponent's turn, when a Member of yours with #ID1期生 takes damage from an opponent, you may replace 1 Cheer card of that Member with a Cheer card of another Member of yours with #ID1期生.",
-        "fr": "[Chaque tour, une fois] Pendant le tour de l'adversaire, quand un de vos membres avec le marqueur #ID1期生 subit des dégâts de l'adversaire, vous pouvez l'utiliser : Remplacez 1 carte d'Encouragement de ce membre par un de vos autres membres avec le marqueur #ID1期生.",
-        "es": "[Cada turno una vez] Durante el turno del oponente, cuando un miembro tuyo con la marca #ID1期生 recibe daño del oponente, puedes reemplazar 1 carta de Cheer de ese miembro con otro miembro tuyo con la marca #ID1期生."
+        "zh-TW": "[每個回合一次]對手回合中，自己標示#ID1期生的成員受到對手傷害時可以使用：將該成員的1張吶喊卡轉移給自己其他標示#ID1期生的成員。",
+        "ja": "[各ターンに1回]相手のターン中、自分の#ID1期生シンボルのメンバーが相手からダメージを受けた時に使用できる：そのメンバーの持つエールカード1枚を、自分の他の#ID1期生シンボルのメンバーに移す。",
+        "en": "[Once per turn] During your opponent's turn, when your Member with #ID Generation 1 takes damage from your opponent, you may move 1 Cheer from that Member to another one of your Members with #ID Generation 1.",
+        "fr": "[Chaque tour une fois] Durant le tour de l'adversaire, lorsqu'un membre de votre marque #ID 1ère génération subit des dégâts de l'adversaire, vous pouvez : Transférez 1 carte d'encouragement de ce membre à un autre de vos membres de marque #ID 1ère génération.",
+        "es": "[Cada turno una vez] Durante el turno del oponente, cuando un Miembro tuyo marcado como #ID de la 1ª generación recibe daño del oponente, puedes: Transfiere 1 carta Cheer de ese Miembro a otro Miembro tuyo marcado como #ID de la 1ª generación."
       }
     },
     "spSkill": {
@@ -32237,11 +32237,11 @@
       "holoPower": -1,
       "name": "IOFORIA~!",
       "effect": {
-        "zh-TW": "[每個回合一次]對手回合中，自己標示#ID1期生的成員受到對手傷害時可以使用：將該成員的1張吶喊卡替換給自己其他標示#ID1期生的成員。",
-        "ja": "[各ターンに1度]相手ターン中、自分の#ID1期生を持つメンバーが相手のダメージを受けた時に使用できる：そのメンバーが受けるダメージを、自分の他の#ID1期生を持つメンバーに移す。",
-        "en": "[Once per turn] During the opponent's turn, when a Member of yours with #ID1期生 takes damage from an opponent, you may replace 1 Cheer card of that Member with a Cheer card of another Member of yours with #ID1期生.",
-        "fr": "[Chaque tour, une fois] Pendant le tour de l'adversaire, quand un de vos membres avec le marqueur #ID1期生 subit des dégâts de l'adversaire, vous pouvez l'utiliser : Remplacez 1 carte d'Encouragement de ce membre par un de vos autres membres avec le marqueur #ID1期生.",
-        "es": "[Cada turno una vez] Durante el turno del oponente, cuando un miembro tuyo con la marca #ID1期生 recibe daño del oponente, puedes reemplazar 1 carta de Cheer de ese miembro con otro miembro tuyo con la marca #ID1期生."
+        "zh-TW": "[每個回合一次]對手回合中，自己標示#ID1期生的成員受到對手傷害時可以使用：將該成員的1張吶喊卡轉移給自己其他標示#ID1期生的成員。",
+        "ja": "[各ターンに1回]相手のターン中、自分の#ID1期生シンボルのメンバーが相手からダメージを受けた時に使用できる：そのメンバーの持つエールカード1枚を、自分の他の#ID1期生シンボルのメンバーに移す。",
+        "en": "[Once per turn] During your opponent's turn, when your Member with #ID Generation 1 takes damage from your opponent, you may move 1 Cheer from that Member to another one of your Members with #ID Generation 1.",
+        "fr": "[Chaque tour une fois] Durant le tour de l'adversaire, lorsqu'un membre de votre marque #ID 1ère génération subit des dégâts de l'adversaire, vous pouvez : Transférez 1 carte d'encouragement de ce membre à un autre de vos membres de marque #ID 1ère génération.",
+        "es": "[Cada turno una vez] Durante el turno del oponente, cuando un Miembro tuyo marcado como #ID de la 1ª generación recibe daño del oponente, puedes: Transfiere 1 carta Cheer de ese Miembro a otro Miembro tuyo marcado como #ID de la 1ª generación."
       }
     },
     "spSkill": {
@@ -32600,11 +32600,11 @@
       "holoPower": -2,
       "name": "みんなで盛り上がろう！",
       "effect": {
-        "zh-TW": "[每場比賽一次]可以將自己舞台上的1~5張吶喊卡替換給自己的1位「不知火フレア」。之後，這個回合中，自己的中心成員每有1張吶喊卡，自己舞台上的所有成員藝能傷害+10。",
-        "ja": "[1試合に1回]\n自分の舞台上のエールカードを1～5枚まで\n自分の「不知火フレア」1人に付け替えることができる。\nその後、このターン中、自分のセンターメンバー1枚につき、\n自分の舞台上の全てのメンバーの\nアーツダメージ＋10。",
-        "en": "[Once per game] You may replace 1 to 5 Cheer Cards on your Stage with 1 of your \"不知火フレア\". After that, during this turn, for each Cheer Card your Center Member has, all Members on your Stage's Arts damage +10.",
-        "fr": "[Une fois par partie] Vous pouvez remplacer 1 à 5 cartes d'encouragement sur votre Scène par votre \"不知火フレア\". Ensuite, durant ce tour, pour chaque carte d'encouragement parmi vos membres au Centre, les Arts de tous les membres sur votre Scène infligent +10 dégâts.",
-        "es": "[Una vez por partida] Puedes reemplazar 1~5 cartas de Mazo Cheer en tu Escenario con 1 \"不知火フレア\" propio. Después, durante este turno, por cada Mazo Cheer que tenga tu miembro de Centro, el daño de Arts de todos los miembros en tu Escenario aumenta en 10."
+        "zh-TW": "[每場比賽一次]可以將自己舞台上的1~5張吶喊卡轉移給自己的1位「不知火フレア」。之後，這個回合中，自己的中心成員每有1張吶喊卡，自己舞台上的所有成員藝能傷害+10。",
+        "ja": "[1試合に1回]自分のステージ上にある1～5枚のエールカードを、自分のメンバー1人に移すことができる。その後、このターン中、自分のセンターメンバーが持つエールカード1枚につき、自分のステージ上にある全てのメンバーのArtsダメージ+10。",
+        "en": "[Once per game] Move 1 to 5 Cheers from your Stage to 1 of your \"Flare Shiranui\". During this turn, your Arts damage dealt by all Members on your Stage is increased by 10 for each Cheer on your Stage.",
+        "fr": "[Une fois par partie] Vous pouvez transférer 1 à 5 cartes d'encouragement de votre scène à 1 de vos \"Flare Shiranui\". Après cela, durant ce tour, pour chaque carte d'encouragement sur les membres de votre centre, les dégâts d'arts de tous vos membres sur la scène +10.",
+        "es": "[Una vez por partida] Puedes transferir 1~5 cartas Cheer de tu escenario a 1 \"Flare Shiranui\" tuyo. Después, durante este turno, por cada carta Cheer en el escenario de tu Miembro Central, el daño de Arts de todos los Miembros en tu escenario +10."
       }
     },
     "id": "hBP05-007",
@@ -32632,11 +32632,11 @@
       "holoPower": -2,
       "name": "みんなで盛り上がろう！",
       "effect": {
-        "zh-TW": "[每場比賽一次]可以將自己舞台上的1~5張吶喊卡替換給自己的1位「不知火フレア」。之後，這個回合中，自己的中心成員每有1張吶喊卡，自己舞台上的所有成員藝能傷害+10。",
-        "ja": "[1試合に1回]\n自分の舞台上のエールカードを1～5枚まで\n自分の「不知火フレア」1人に付け替えることができる。\nその後、このターン中、自分のセンターメンバー1枚につき、\n自分の舞台上の全てのメンバーの\nアーツダメージ＋10。",
-        "en": "[Once per game] You may replace 1 to 5 Cheer Cards on your Stage with 1 of your \"不知火フレア\". After that, during this turn, for each Cheer Card your Center Member has, all Members on your Stage's Arts damage +10.",
-        "fr": "[Une fois par partie] Vous pouvez remplacer 1 à 5 cartes d'encouragement sur votre Scène par votre \"不知火フレア\". Ensuite, durant ce tour, pour chaque carte d'encouragement parmi vos membres au Centre, les Arts de tous les membres sur votre Scène infligent +10 dégâts.",
-        "es": "[Una vez por partida] Puedes reemplazar 1~5 cartas de Mazo Cheer en tu Escenario con 1 \"不知火フレア\" propio. Después, durante este turno, por cada Mazo Cheer que tenga tu miembro de Centro, el daño de Arts de todos los miembros en tu Escenario aumenta en 10."
+        "zh-TW": "[每場比賽一次]可以將自己舞台上的1~5張吶喊卡轉移給自己的1位「不知火フレア」。之後，這個回合中，自己的中心成員每有1張吶喊卡，自己舞台上的所有成員藝能傷害+10。",
+        "ja": "[1試合に1回]自分のステージ上にある1～5枚のエールカードを、自分のメンバー1人に移すことができる。その後、このターン中、自分のセンターメンバーが持つエールカード1枚につき、自分のステージ上にある全てのメンバーのArtsダメージ+10。",
+        "en": "[Once per game] Move 1 to 5 Cheers from your Stage to 1 of your \"Flare Shiranui\". During this turn, your Arts damage dealt by all Members on your Stage is increased by 10 for each Cheer on your Stage.",
+        "fr": "[Une fois par partie] Vous pouvez transférer 1 à 5 cartes d'encouragement de votre scène à 1 de vos \"Flare Shiranui\". Après cela, durant ce tour, pour chaque carte d'encouragement sur les membres de votre centre, les dégâts d'arts de tous vos membres sur la scène +10.",
+        "es": "[Una vez por partida] Puedes transferir 1~5 cartas Cheer de tu escenario a 1 \"Flare Shiranui\" tuyo. Después, durante este turno, por cada carta Cheer en el escenario de tu Miembro Central, el daño de Arts de todos los Miembros en tu escenario +10."
       }
     },
     "id": "hBP05-007",
@@ -35647,11 +35647,11 @@
       "damage": 90,
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "可以將這個成員的1張吶喊卡替換給自己的後台成員。",
-        "ja": "このメンバーの「エール」を1枚、自分のバックメンバーに置き換えることができる。",
-        "en": "You can substitute 1 Cheer from this Member with your Back Member.",
-        "fr": "Vous pouvez remplacer 1 carte Encouragement de ce Membre par un de vos Membres d'Arrière.",
-        "es": "Puedes poner 1 Cheer de este Miembro en tu Archivo: Reemplaza 1 Cheer de este Miembro con un Miembro en Retaguardia en tu lado del Escenario."
+        "zh-TW": "可以將這個成員的1張吶喊卡轉移給自己的後台成員。",
+        "ja": "このメンバーの持つエールカード1枚を、自分のバックヤードメンバーに移すことができる。",
+        "en": "Move 1 Cheer from this Member to your Back Member.",
+        "fr": "Vous pouvez transférer 1 carte d'encouragement de ce membre à un de vos membres arrière.",
+        "es": "Puedes transferir 1 carta Cheer de este Miembro a un Miembro de Retaguardia tuyo."
       }
     },
     "art2": null,
@@ -35699,11 +35699,11 @@
       "damage": 90,
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "可以將這個成員的1張吶喊卡替換給自己的後台成員。",
-        "ja": "このメンバーの「エール」を1枚、自分のバックメンバーに置き換えることができる。",
-        "en": "You can substitute 1 Cheer from this Member with your Back Member.",
-        "fr": "Vous pouvez remplacer 1 carte Encouragement de ce Membre par un de vos Membres d'Arrière.",
-        "es": "Puedes poner 1 Cheer de este Miembro en tu Archivo: Reemplaza 1 Cheer de este Miembro con un Miembro en Retaguardia en tu lado del Escenario."
+        "zh-TW": "可以將這個成員的1張吶喊卡轉移給自己的後台成員。",
+        "ja": "このメンバーの持つエールカード1枚を、自分のバックヤードメンバーに移すことができる。",
+        "en": "Move 1 Cheer from this Member to your Back Member.",
+        "fr": "Vous pouvez transférer 1 carte d'encouragement de ce membre à un de vos membres arrière.",
+        "es": "Puedes transferir 1 carta Cheer de este Miembro a un Miembro de Retaguardia tuyo."
       }
     },
     "art2": null,
@@ -38830,11 +38830,11 @@
     "tag": null,
     "product": "補充包「エンチャントレガリア (hBP05)」",
     "supportEffect": {
-      "zh-TW": "對手回合中，帶有這個粉絲的成員被擊倒時，可以將這個成員的1張吶喊卡替換給自己其他標示#歌的成員。\n\n這個粉絲只能附加給「ネリッサ・レイヴンクロフト」，每位成員可以帶有任意數量的粉絲。",
-      "ja": "相手ターン中、このファンを持つメンバーがダウンさせられた場合、このメンバーの「エール」を1枚、自分の他の#歌の表記があるメンバーに置き換える。\n\nこのファンは「ネリッサ・レイヴンクロフト」にしか付与できない。メンバーは任意の数のファンを持てる。",
-      "en": "During your opponent's turn, when a Member with this Fan is K.O.'d, swap 1 Cheer card of this Member with another of your Members with the #歌 tag.\n\nThis Fan can only be attached to \"ネリッサ・レイヴンクロフト\". You can have any number of Fans per Member.",
-      "fr": "Pendant le tour de l'adversaire, lorsqu'un membre portant ce Fan est mis K.O., vous pouvez échanger 1 carte d'encouragement de ce membre avec un autre de vos membres marqué #歌.\n\nCe Fan ne peut être attaché qu'à « ネリッサ・レイヴンクロフト », et chaque membre peut porter un nombre illimité de Fans.",
-      "es": "Durante el turno del oponente, cuando un Miembro con este Fan sea K.O., reemplaza 1 carta Cheer de este Miembro con 1 Miembro tuyo con la etiqueta #歌.\n\nEste Fan solo puede adjuntarse a \"ネリッサ・レイヴンクロフト\", y cada Miembro puede tener cualquier cantidad de Fans.\n"
+      "zh-TW": "對手回合中，帶有這個粉絲的成員被擊倒時，可以將這個成員的1張吶喊卡轉移給自己其他標示#歌的成員。\n\n這個粉絲只能附加給「ネリッサ・レイヴンクロフト」，每位成員可以帶有任意數量的粉絲。",
+      "ja": "相手のターン中、このファンを持つメンバーがダウンした時、このメンバーの持つエールカード1枚を、自分の他の#歌シンボルのメンバーに移すことができる。\n\nこのファンは「ネリッサ・レイヴンクロフト」にのみ付与でき、各メンバーは任意枚数のファンを持つことができる。",
+      "en": "During your opponent's turn, when a Member with this Fan is Downed, move 1 Cheer from that Member to another Member with #Song.\n\nThis Fan can only be attached to \"Nerissa Ravencroft\". Each Member can have any number of Fans.",
+      "fr": "Durant le tour de l'adversaire, lorsqu'un membre portant ce fan est mis K.O., vous pouvez transférer 1 carte d'encouragement de ce membre à un autre de vos membres de marque #Chant.\n\nCe fan ne peut être attaché qu'à \"Nerissa Ravencroft\", et chaque membre peut porter un nombre illimité de fans.",
+      "es": "Durante el turno del oponente, cuando un Miembro con este Fan es K.O., transfiere 1 carta Cheer de ese Miembro a otro Miembro tuyo marcado como #Song.\n\nEste Fan solo puede ser adjuntado a \"Nerissa Ravencroft\", y cada Miembro puede tener cualquier número de Fans."
     },
     "id": "hBP05-087",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP05/hBP05-087_U.png"
@@ -41004,11 +41004,11 @@
     "effectG": {
       "name": "みんなへ感謝の気持ち",
       "effect": {
-        "zh-TW": "[限定聯動位置]對手回合中，將附加給自己中心成員的「ルーナイト」放到存檔區時，作為代替，可以替換給自己的後台成員「姫森ルーナ」。",
-        "ja": "[限定コラボ位置]相手のターン中、自分のセンターメンバーに付与された「ルーナイト」をアーカイブに置く際、代わりに自分のバックメンバー「姫森ルーナ」に付け替えることができる。",
-        "en": "[Limited Collab Position] During your opponent's turn, when \"ルーナイト\" attached to your Center Member is sent to the Archive, you may instead attach it to your Back Member \"姫森ルーナ\".",
-        "fr": "[Position Collab UNIQUEMENT] Durant le tour de votre adversaire, lorsque vous placez \"ルーナイト\" attaché à votre membre Centre dans votre Archive, vous pouvez à la place le remplacer par votre membre Arrière \"姫森ルーナ\".",
-        "es": "[Solo posición Collab] Durante el turno del oponente, cuando un \"Luna-Knight\" adjuntado a tu Miembro central es puesto en el Archivo, como sustitución, puedes adjuntarlo a tu Miembro de retaguardia \"Luna Himesaki\"."
+        "zh-TW": "[限定聯動位置]對手回合中，將附加給自己中心成員的「ルーナイト」放到存檔區時，作為代替，可以轉移給自己的後台成員「姫森ルーナ」。",
+        "ja": "[コラボ限定]相手のターン中、自分のセンターメンバーに付与されている「ルーナイト」をアーカイブに置く時、その代わりに、自分のバックヤードメンバー「姫森ルーナ」に移すことができる。",
+        "en": "[Collab Only] During your opponent's turn, when \"Luna! Luna!\" attached to your Center Member is moved to Archive, you may move it to your Back Member \"Luna Himezaki\" instead.",
+        "fr": "[Position Collab uniquement] Durant le tour de l'adversaire, lorsque vous placez \"Lounite\" attaché à votre membre centre dans l'archive, en remplacement, vous pouvez le transférer à votre membre arrière \"Luna Himesaki\".",
+        "es": "[Solo posición Collab] Durante el turno del oponente, cuando \"LUNARIGHT\" adjunto a tu Miembro Central es puesto en el Archivo, en su lugar, puedes transferirlo a tu Miembro de Retaguardia \"Luna Hoshimachi\"."
       }
     },
     "art1": {
@@ -41048,11 +41048,11 @@
     "effectG": {
       "name": "みんなへ感謝の気持ち",
       "effect": {
-        "zh-TW": "[限定聯動位置]對手回合中，將附加給自己中心成員的「ルーナイト」放到存檔區時，作為代替，可以替換給自己的後台成員「姫森ルーナ」。",
-        "ja": "[限定コラボ位置]相手のターン中、自分のセンターメンバーに付与された「ルーナイト」をアーカイブに置く際、代わりに自分のバックメンバー「姫森ルーナ」に付け替えることができる。",
-        "en": "[Limited Collab Position] During your opponent's turn, when \"ルーナイト\" attached to your Center Member is sent to the Archive, you may instead attach it to your Back Member \"姫森ルーナ\".",
-        "fr": "[Position Collab UNIQUEMENT] Durant le tour de votre adversaire, lorsque vous placez \"ルーナイト\" attaché à votre membre Centre dans votre Archive, vous pouvez à la place le remplacer par votre membre Arrière \"姫森ルーナ\".",
-        "es": "[Solo posición Collab] Durante el turno del oponente, cuando un \"Luna-Knight\" adjuntado a tu Miembro central es puesto en el Archivo, como sustitución, puedes adjuntarlo a tu Miembro de retaguardia \"Luna Himesaki\"."
+        "zh-TW": "[限定聯動位置]對手回合中，將附加給自己中心成員的「ルーナイト」放到存檔區時，作為代替，可以轉移給自己的後台成員「姫森ルーナ」。",
+        "ja": "[コラボ限定]相手のターン中、自分のセンターメンバーに付与されている「ルーナイト」をアーカイブに置く時、その代わりに、自分のバックヤードメンバー「姫森ルーナ」に移すことができる。",
+        "en": "[Collab Only] During your opponent's turn, when \"Luna! Luna!\" attached to your Center Member is moved to Archive, you may move it to your Back Member \"Luna Himezaki\" instead.",
+        "fr": "[Position Collab uniquement] Durant le tour de l'adversaire, lorsque vous placez \"Lounite\" attaché à votre membre centre dans l'archive, en remplacement, vous pouvez le transférer à votre membre arrière \"Luna Himesaki\".",
+        "es": "[Solo posición Collab] Durante el turno del oponente, cuando \"LUNARIGHT\" adjunto a tu Miembro Central es puesto en el Archivo, en su lugar, puedes transferirlo a tu Miembro de Retaguardia \"Luna Hoshimachi\"."
       }
     },
     "art1": {
@@ -45745,11 +45745,11 @@
     "tag": null,
     "product": "補充包「アヤカシヴァーミリオン (hBP06)」",
     "supportEffect": {
-      "zh-TW": "帶有這個吉祥物的成員HP+20。\n\n◆附加給「夏色まつり」有追加效果\n對手回合中，帶有這個吉祥物的成員被擊倒時，可以將這個成員的1張黃色吶喊卡替換給自己其他的「夏色まつり」。\n\n每位成員只能帶有1張吉祥物。",
-      "ja": "このマスコットを持つメンバーのHP＋２０。\n\n◆「夏色まつり」に付与された場合、追加効果\n相手ターンの間、このマスコットを持つメンバーがダウンした時、このメンバーの黄色いエールカード１枚を、自分の他の「夏色まつり」と入れ替えることができる。\n\nメンバー１人につき、マスコットは１枚までしか持てない。",
-      "en": "Members with this Mascot gain +20 HP.\n\n◆Additional effect for \"Natsuiro Matsuri\"\nDuring your opponent's turn, when a Member with this Mascot is Downed, you may replace 1 Yellow Cheer Card of this Member with another one of your \"Natsuiro Matsuri\".\n\nEach Member can only have 1 Mascot.",
-      "fr": "Les Points de vie du membre portant cette Mascotte +20.\n\n◆Effet supplémentaire pour « 夏色まつり »\nDurant le tour de l'adversaire, lorsqu'un membre portant cette Mascotte est mis K.O., vous pouvez remplacer 1 carte d'encouragement jaune de ce membre par un autre de vos « 夏色まつり ».\n\nChaque membre ne peut porter qu'une seule Mascotte.",
-      "es": "HP de los Miembros con esta Mascota +20.\n\n◆Efecto adicional para \"夏色まつり\"\nDurante el turno del oponente, cuando un Miembro con esta Mascota es K.O., puedes reemplazar 1 carta Cheer amarilla de este Miembro por otro \"夏色まつり\" tuyo.\n\nSolo se puede adjuntar 1 Mascota por Miembro."
+      "zh-TW": "帶有這個吉祥物的成員HP+20。\n\n◆附加給「夏色まつり」有追加效果\n對手回合中，帶有這個吉祥物的成員被擊倒時，可以將這個成員的1張黃色吶喊卡轉移給自己其他的「夏色まつり」。\n\n每位成員只能帶有1張吉祥物。",
+      "ja": "このマスコットを持つメンバーのHP+20。\n\n◆「夏色まつり」に付与された場合は追加効果\n相手のターン中、このマスコットを持つメンバーがダウンした時、このメンバーの持つ黄色のエールカード1枚を、自分の他の「夏色まつり」に移すことができる。\n\n各メンバーは1枚のマスコットのみ持つことができる。",
+      "en": "HP of Members with this Mascot is increased by 20.\n\n◆Additional effect when attached to \"Matsuri Natsuiro\"\nDuring your opponent's turn, when a Member with this Mascot is Downed, you may move 1 Yellow Cheer from that Member to another one of your \"Matsuri Natsuiro\".\n\nEach Member can only have 1 Mascot.",
+      "fr": "Les membres portant cette mascotte ont leurs PV +20.\n\n◆Effet supplémentaire lorsqu'attaché à \"Matsuri Natsuiro\"\nDurant le tour de l'adversaire, lorsqu'un membre portant cette mascotte est mis K.O., vous pouvez transférer 1 carte d'encouragement jaune de ce membre à 1 de vos \"Matsuri Natsuiro\".\n\nChaque membre ne peut porter qu'une seule mascotte.",
+      "es": "El HP del Miembro con esta Mascota +20.\n\n◆Efecto adicional si se adjunta a \"Matsuri Natsuiro\"\nDurante el turno del oponente, cuando el Miembro con esta Mascota es K.O., puedes transferir 1 carta Cheer amarilla de ese Miembro a otro \"Matsuri Natsuiro\" tuyo.\n\nCada Miembro solo puede tener 1 Mascota."
     },
     "id": "hBP06-102",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP06/hBP06-102_C.png"
@@ -49567,11 +49567,11 @@
     "effectC": {
       "name": "TAKE YOUR TIME",
       "effect": {
-        "zh-TW": "可以將自己舞台上的1張吶喊卡替換給自己這個成員以外標示#Promise的成員。",
-        "ja": "自分のステージ上の「エール」を1枚、自分のこのメンバー以外の#Promiseのメンバーに置き換えることができる。",
-        "en": "You can substitute 1 Cheer from your Stage with another Member marked #Promise.",
-        "fr": "Vous pouvez remplacer 1 carte Encouragement de votre Scène par un autre de vos Membres marqués #Promise.",
-        "es": "Puedes reemplazar 1 carta de Cheer de tu Escenario con 1 Miembro tuyo con la etiqueta #Promise que no sea este Miembro."
+        "zh-TW": "可以將自己舞台上的1張吶喊卡轉移給自己這個成員以外標示#Promise的成員。",
+        "ja": "自分のステージ上にあるエールカード1枚を、自分の#Promiseシンボルのこのメンバー以外のメンバーに移すことができる。",
+        "en": "Move 1 Cheer from your Stage to a Member with #Promise other than this Member.",
+        "fr": "Vous pouvez transférer 1 carte d'encouragement de votre scène à un membre de marque #Promise autre que ce membre.",
+        "es": "Puedes transferir 1 carta Cheer de tu escenario a un Miembro marcado como #Promise tuyo, excepto a este Miembro."
       }
     },
     "effectB": null,
@@ -49879,11 +49879,11 @@
       "damage": "80+",
       "specialAttackImage": "icons/tokkou_50_red.png",
       "effect": {
-        "zh-TW": "可以將這個成員的1張吶喊卡替換給自己其他標示#Promise的成員。之後，如果自己的主推為「オーロ・クロニー」，這個藝能傷害+100。",
-        "ja": "このメンバーの「エール」を1枚、自分の他の#Promiseのメンバーに置き換えることができる。その後、自分の推しが「オーロ・クロニー」の場合、このアーツダメージ+100。",
-        "en": "You can substitute 1 Cheer from this Member with another of your Members marked #Promise. Then, if your Oshi is \"Ouro Kronii\", Arts Damage +100.",
-        "fr": "Vous pouvez remplacer 1 carte Encouragement de ce Membre par un autre de vos Membres marqués #Promise. Ensuite, si votre Oshi est \"オーロ・クロニー\", infligez +100 dégâts d'Arts.",
-        "es": "Puedes poner 1 Cheer de este Miembro en tu Archivo: Reemplaza 1 Cheer de este Miembro con otro Miembro con la etiqueta #Promise en tu lado del Escenario. Después, si tu Oshi es \"オーロ・クロニー\", el daño de este Arts +100."
+        "zh-TW": "可以將這個成員的1張吶喊卡轉移給自己其他標示#Promise的成員。之後，如果自己的主推為「オーロ・クロニー」，這個藝能傷害+100。",
+        "ja": "このメンバーの持つエールカード1枚を、自分の他の#Promiseシンボルのメンバーに移すことができる。その後、自分の推しが「オーロ・クロニー」の場合、このArtsダメージ+100。",
+        "en": "Move 1 Cheer from this Member to another Member with #Promise. If your Oshi is \"Kronii Ouro\", this Arts damage is increased by 100.",
+        "fr": "Vous pouvez transférer 1 carte d'encouragement de ce membre à un autre de vos membres de marque #Promise. Après cela, si votre Oshi est \"Ouro Kronii\", les dégâts d'arts +100.",
+        "es": "Puedes transferir 1 carta Cheer de este Miembro a otro Miembro marcado como #Promise tuyo. Después, si tu Oshi es \"Ouro Kronii\", este daño de Arts +100."
       }
     },
     "art2": null,
@@ -49927,11 +49927,11 @@
       "damage": "80+",
       "specialAttackImage": "icons/tokkou_50_red.png",
       "effect": {
-        "zh-TW": "可以將這個成員的1張吶喊卡替換給自己其他標示#Promise的成員。之後，如果自己的主推為「オーロ・クロニー」，這個藝能傷害+100。",
-        "ja": "このメンバーの「エール」を1枚、自分の他の#Promiseのメンバーに置き換えることができる。その後、自分の推しが「オーロ・クロニー」の場合、このアーツダメージ+100。",
-        "en": "You can substitute 1 Cheer from this Member with another of your Members marked #Promise. Then, if your Oshi is \"Ouro Kronii\", Arts Damage +100.",
-        "fr": "Vous pouvez remplacer 1 carte Encouragement de ce Membre par un autre de vos Membres marqués #Promise. Ensuite, si votre Oshi est \"オーロ・クロニー\", infligez +100 dégâts d'Arts.",
-        "es": "Puedes poner 1 Cheer de este Miembro en tu Archivo: Reemplaza 1 Cheer de este Miembro con otro Miembro con la etiqueta #Promise en tu lado del Escenario. Después, si tu Oshi es \"オーロ・クロニー\", el daño de este Arts +100."
+        "zh-TW": "可以將這個成員的1張吶喊卡轉移給自己其他標示#Promise的成員。之後，如果自己的主推為「オーロ・クロニー」，這個藝能傷害+100。",
+        "ja": "このメンバーの持つエールカード1枚を、自分の他の#Promiseシンボルのメンバーに移すことができる。その後、自分の推しが「オーロ・クロニー」の場合、このArtsダメージ+100。",
+        "en": "Move 1 Cheer from this Member to another Member with #Promise. If your Oshi is \"Kronii Ouro\", this Arts damage is increased by 100.",
+        "fr": "Vous pouvez transférer 1 carte d'encouragement de ce membre à un autre de vos membres de marque #Promise. Après cela, si votre Oshi est \"Ouro Kronii\", les dégâts d'arts +100.",
+        "es": "Puedes transferir 1 carta Cheer de este Miembro a otro Miembro marcado como #Promise tuyo. Después, si tu Oshi es \"Ouro Kronii\", este daño de Arts +100."
       }
     },
     "art2": null,
@@ -49975,11 +49975,11 @@
       "damage": "80+",
       "specialAttackImage": "icons/tokkou_50_red.png",
       "effect": {
-        "zh-TW": "可以將這個成員的1張吶喊卡替換給自己其他標示#Promise的成員。之後，如果自己的主推為「オーロ・クロニー」，這個藝能傷害+100。",
-        "ja": "このメンバーの「エール」を1枚、自分の他の#Promiseのメンバーに置き換えることができる。その後、自分の推しが「オーロ・クロニー」の場合、このアーツダメージ+100。",
-        "en": "You can substitute 1 Cheer from this Member with another of your Members marked #Promise. Then, if your Oshi is \"Ouro Kronii\", Arts Damage +100.",
-        "fr": "Vous pouvez remplacer 1 carte Encouragement de ce Membre par un autre de vos Membres marqués #Promise. Ensuite, si votre Oshi est \"オーロ・クロニー\", infligez +100 dégâts d'Arts.",
-        "es": "Puedes poner 1 Cheer de este Miembro en tu Archivo: Reemplaza 1 Cheer de este Miembro con otro Miembro con la etiqueta #Promise en tu lado del Escenario. Después, si tu Oshi es \"オーロ・クロニー\", el daño de este Arts +100."
+        "zh-TW": "可以將這個成員的1張吶喊卡轉移給自己其他標示#Promise的成員。之後，如果自己的主推為「オーロ・クロニー」，這個藝能傷害+100。",
+        "ja": "このメンバーの持つエールカード1枚を、自分の他の#Promiseシンボルのメンバーに移すことができる。その後、自分の推しが「オーロ・クロニー」の場合、このArtsダメージ+100。",
+        "en": "Move 1 Cheer from this Member to another Member with #Promise. If your Oshi is \"Kronii Ouro\", this Arts damage is increased by 100.",
+        "fr": "Vous pouvez transférer 1 carte d'encouragement de ce membre à un autre de vos membres de marque #Promise. Après cela, si votre Oshi est \"Ouro Kronii\", les dégâts d'arts +100.",
+        "es": "Puedes transferir 1 carta Cheer de este Miembro a otro Miembro marcado como #Promise tuyo. Después, si tu Oshi es \"Ouro Kronii\", este daño de Arts +100."
       }
     },
     "art2": null,
@@ -55653,11 +55653,11 @@
       "damage": "90+",
       "specialAttackImage": "icons/tokkou_50_purple.png",
       "effect": {
-        "zh-TW": "這個成員每有1張藍色吶喊卡，這個藝能傷害+20。之後，選擇這個成員任意數量的藍色吶喊卡，替換給自己的1位「フワワ・アビスガード」。",
-        "ja": "このメンバーが青のエールカードを１枚持っているなら、このアーツダメージ＋２０。その後、このメンバーの青のエールカードを好きな枚数選び、自分の「フワワ・アビスガード」１枚と交換する。",
-        "en": "For each blue Cheer card this Member has, this Arts damage +20. After that, choose any number of blue Cheer cards this Member has and replace them with 1 \"FuwaWa Abisugard\" of yours.\n",
-        "fr": "Pour chaque carte Encouragement bleue que ce membre possède, les dégâts d'Arts sont augmentés de 20. Ensuite, choisissez un nombre quelconque de cartes Encouragement bleues de ce membre et remplacez-les par un \"フワワ・アビスガード\" de votre côté.\n",
-        "es": "Por cada carta de Cheer azul que tenga este miembro, este Arts aumenta en 20. Después, selecciona cualquier cantidad de cartas de Cheer azules que tenga este miembro y cámbialas por 1 \"フワワ・アビスガード\" tuyo."
+        "zh-TW": "這個成員每有1張藍色吶喊卡，這個藝能傷害+20。之後，選擇這個成員任意數量的藍色吶喊卡，轉移給自己的1位「フワワ・アビスガード」。",
+        "ja": "このメンバーの持つ青のエールカード1枚につき、このArtsダメージ+20。その後、このメンバーの青のエールカードを任意枚数選び、「フワワ・アビスガード」1人に移す。",
+        "en": "For each Blue Cheer this Member has, this Arts damage is increased by 20. Then, choose any number of Blue Cheers from this Member and move them to 1 of your \"Fuwawa Abyssgard\".",
+        "fr": "Pour chaque carte d'encouragement bleue de ce membre, les dégâts d'arts +20. Après cela, choisissez un nombre quelconque de cartes d'encouragement bleues de ce membre et transférez-les à 1 de vos \"FuwaMoco Abyssgard\".",
+        "es": "Por cada carta Cheer azul de este Miembro, este daño de Arts +20. Después, selecciona cualquier número de cartas Cheer azules de este Miembro y transfiérelas a 1 \"FuwaMoco Abyssgard\" tuyo."
       }
     },
     "art2": null,
@@ -55700,11 +55700,11 @@
       "damage": "90+",
       "specialAttackImage": "icons/tokkou_50_purple.png",
       "effect": {
-        "zh-TW": "這個成員每有1張藍色吶喊卡，這個藝能傷害+20。之後，選擇這個成員任意數量的藍色吶喊卡，替換給自己的1位「フワワ・アビスガード」。",
-        "ja": "このメンバーが青のエールカードを１枚持っているなら、このアーツダメージ＋２０。その後、このメンバーの青のエールカードを好きな枚数選び、自分の「フワワ・アビスガード」１枚と交換する。",
-        "en": "For each blue Cheer card this Member has, this Arts damage +20. After that, choose any number of blue Cheer cards this Member has and replace them with 1 \"FuwaWa Abisugard\" of yours.\n",
-        "fr": "Pour chaque carte Encouragement bleue que ce membre possède, les dégâts d'Arts sont augmentés de 20. Ensuite, choisissez un nombre quelconque de cartes Encouragement bleues de ce membre et remplacez-les par un \"フワワ・アビスガード\" de votre côté.\n",
-        "es": "Por cada carta de Cheer azul que tenga este miembro, este Arts aumenta en 20. Después, selecciona cualquier cantidad de cartas de Cheer azules que tenga este miembro y cámbialas por 1 \"フワワ・アビスガード\" tuyo."
+        "zh-TW": "這個成員每有1張藍色吶喊卡，這個藝能傷害+20。之後，選擇這個成員任意數量的藍色吶喊卡，轉移給自己的1位「フワワ・アビスガード」。",
+        "ja": "このメンバーの持つ青のエールカード1枚につき、このArtsダメージ+20。その後、このメンバーの青のエールカードを任意枚数選び、「フワワ・アビスガード」1人に移す。",
+        "en": "For each Blue Cheer this Member has, this Arts damage is increased by 20. Then, choose any number of Blue Cheers from this Member and move them to 1 of your \"Fuwawa Abyssgard\".",
+        "fr": "Pour chaque carte d'encouragement bleue de ce membre, les dégâts d'arts +20. Après cela, choisissez un nombre quelconque de cartes d'encouragement bleues de ce membre et transférez-les à 1 de vos \"FuwaMoco Abyssgard\".",
+        "es": "Por cada carta Cheer azul de este Miembro, este daño de Arts +20. Después, selecciona cualquier número de cartas Cheer azules de este Miembro y transfiérelas a 1 \"FuwaMoco Abyssgard\" tuyo."
       }
     },
     "art2": null,
@@ -55747,11 +55747,11 @@
       "damage": "90+",
       "specialAttackImage": "icons/tokkou_50_purple.png",
       "effect": {
-        "zh-TW": "這個成員每有1張藍色吶喊卡，這個藝能傷害+20。之後，選擇這個成員任意數量的藍色吶喊卡，替換給自己的1位「フワワ・アビスガード」。",
-        "ja": "このメンバーが青のエールカードを１枚持っているなら、このアーツダメージ＋２０。その後、このメンバーの青のエールカードを好きな枚数選び、自分の「フワワ・アビスガード」１枚と交換する。",
-        "en": "For each blue Cheer card this Member has, this Arts damage +20. After that, choose any number of blue Cheer cards this Member has and replace them with 1 \"FuwaWa Abisugard\" of yours.\n",
-        "fr": "Pour chaque carte Encouragement bleue que ce membre possède, les dégâts d'Arts sont augmentés de 20. Ensuite, choisissez un nombre quelconque de cartes Encouragement bleues de ce membre et remplacez-les par un \"フワワ・アビスガード\" de votre côté.\n",
-        "es": "Por cada carta de Cheer azul que tenga este miembro, este Arts aumenta en 20. Después, selecciona cualquier cantidad de cartas de Cheer azules que tenga este miembro y cámbialas por 1 \"フワワ・アビスガード\" tuyo."
+        "zh-TW": "這個成員每有1張藍色吶喊卡，這個藝能傷害+20。之後，選擇這個成員任意數量的藍色吶喊卡，轉移給自己的1位「フワワ・アビスガード」。",
+        "ja": "このメンバーの持つ青のエールカード1枚につき、このArtsダメージ+20。その後、このメンバーの青のエールカードを任意枚数選び、「フワワ・アビスガード」1人に移す。",
+        "en": "For each Blue Cheer this Member has, this Arts damage is increased by 20. Then, choose any number of Blue Cheers from this Member and move them to 1 of your \"Fuwawa Abyssgard\".",
+        "fr": "Pour chaque carte d'encouragement bleue de ce membre, les dégâts d'arts +20. Après cela, choisissez un nombre quelconque de cartes d'encouragement bleues de ce membre et transférez-les à 1 de vos \"FuwaMoco Abyssgard\".",
+        "es": "Por cada carta Cheer azul de este Miembro, este daño de Arts +20. Después, selecciona cualquier número de cartas Cheer azules de este Miembro y transfiérelas a 1 \"FuwaMoco Abyssgard\" tuyo."
       }
     },
     "art2": null,
@@ -57064,11 +57064,11 @@
     "effectC": {
       "name": "木漏れ日のブランコ",
       "effect": {
-        "zh-TW": "可以選擇自己舞台上任意數量的吶喊卡，替換給自己的1位「モココ・アビスガード」。之後，如果自己舞台上的吶喊卡有8張以上，這個回合中，這個成員的藝能傷害+40。",
-        "ja": "自分のステージ上のエールカードを任意枚数選び、自分の「モココ・アビスガード」1人に付ける。その後、自分のステージ上のエールカードが8枚以上の場合、このターン中、このメンバーのアーツダメージ+40。",
-        "en": "You may choose any number of Cheer cards on your Stage and replace them with 1 of your \"Mokoko Abyssgard\". Then, if you have 8 or more Cheer cards on your Stage, this Member gains +40 Art Damage this turn.",
-        "fr": "Vous pouvez choisir n'importe quel nombre de cartes d'Encouragement sur votre Scène et les échanger contre 1 \"モココ・アビスガード\" que vous contrôlez. Ensuite, si vous avez 8 cartes d'Encouragement ou plus sur votre Scène, les dégâts d'Arts de ce membre +40 durant ce tour.",
-        "es": "Puedes seleccionar cualquier cantidad de cartas Cheer en tu Escenario y reemplazarlas por 1 \"モココ・アビスガード\" tuyo. Después, si tienes 8 o más cartas Cheer en tu Escenario, el daño de Arts de este Miembro durante este turno +40."
+        "zh-TW": "可以選擇自己舞台上任意數量的吶喊卡，轉移給自己的1位「モココ・アビスガード」。之後，如果自己舞台上的吶喊卡有8張以上，這個回合中，這個成員的藝能傷害+40。",
+        "ja": "自分のステージ上にある任意枚数のエールカードを選び、「モココ・アビスガード」1人に移すことができる。その後、自分のステージ上にあるエールカードが8枚以上の場合、このターン中、このメンバーのArtsダメージ+40。",
+        "en": "Choose any number of Cheers on your Stage and move them to 1 of your \"Mococo Abyssgard\". If there are 8 or more Cheers on your Stage after this, this Member's Arts damage is increased by 40 during this turn.",
+        "fr": "Vous pouvez choisir un nombre quelconque de cartes d'encouragement sur votre scène et les transférer à 1 de vos \"Mococo Abyssgard\". Après cela, si vous avez 8 cartes d'encouragement ou plus sur votre scène, les dégâts d'arts de ce membre +40 durant ce tour.",
+        "es": "Puedes seleccionar cualquier número de cartas Cheer en tu escenario y transferirlas a 1 \"Mococo Abyssgard\" tuyo. Después, si hay 8 o más cartas Cheer en tu escenario, el daño de Arts de este Miembro durante este turno +40."
       }
     },
     "effectB": null,
@@ -57108,11 +57108,11 @@
     "effectC": {
       "name": "木漏れ日のブランコ",
       "effect": {
-        "zh-TW": "可以選擇自己舞台上任意數量的吶喊卡，替換給自己的1位「モココ・アビスガード」。之後，如果自己舞台上的吶喊卡有8張以上，這個回合中，這個成員的藝能傷害+40。",
-        "ja": "自分のステージ上のエールカードを任意枚数選び、自分の「モココ・アビスガード」1人に付ける。その後、自分のステージ上のエールカードが8枚以上の場合、このターン中、このメンバーのアーツダメージ+40。",
-        "en": "You may choose any number of Cheer cards on your Stage and replace them with 1 of your \"Mokoko Abyssgard\". Then, if you have 8 or more Cheer cards on your Stage, this Member gains +40 Art Damage this turn.",
-        "fr": "Vous pouvez choisir n'importe quel nombre de cartes d'Encouragement sur votre Scène et les échanger contre 1 \"モココ・アビスガード\" que vous contrôlez. Ensuite, si vous avez 8 cartes d'Encouragement ou plus sur votre Scène, les dégâts d'Arts de ce membre +40 durant ce tour.",
-        "es": "Puedes seleccionar cualquier cantidad de cartas Cheer en tu Escenario y reemplazarlas por 1 \"モココ・アビスガード\" tuyo. Después, si tienes 8 o más cartas Cheer en tu Escenario, el daño de Arts de este Miembro durante este turno +40."
+        "zh-TW": "可以選擇自己舞台上任意數量的吶喊卡，轉移給自己的1位「モココ・アビスガード」。之後，如果自己舞台上的吶喊卡有8張以上，這個回合中，這個成員的藝能傷害+40。",
+        "ja": "自分のステージ上にある任意枚数のエールカードを選び、「モココ・アビスガード」1人に移すことができる。その後、自分のステージ上にあるエールカードが8枚以上の場合、このターン中、このメンバーのArtsダメージ+40。",
+        "en": "Choose any number of Cheers on your Stage and move them to 1 of your \"Mococo Abyssgard\". If there are 8 or more Cheers on your Stage after this, this Member's Arts damage is increased by 40 during this turn.",
+        "fr": "Vous pouvez choisir un nombre quelconque de cartes d'encouragement sur votre scène et les transférer à 1 de vos \"Mococo Abyssgard\". Après cela, si vous avez 8 cartes d'encouragement ou plus sur votre scène, les dégâts d'arts de ce membre +40 durant ce tour.",
+        "es": "Puedes seleccionar cualquier número de cartas Cheer en tu escenario y transferirlas a 1 \"Mococo Abyssgard\" tuyo. Después, si hay 8 o más cartas Cheer en tu escenario, el daño de Arts de este Miembro durante este turno +40."
       }
     },
     "effectB": null,
@@ -57280,11 +57280,11 @@
       "damage": "80+",
       "specialAttackImage": "icons/tokkou_50_white.png",
       "effect": {
-        "zh-TW": "如果自己的「モココ・アビスガード」在這個回合有使用過藝能，這個藝能傷害+50。之後，選擇這個成員任意數量的紅色吶喊卡，替換給自己的1位「モココ・アビスガード」。",
-        "ja": "自分の「モココ・アビスガード」が今ターンにアーツを使用した場合、このアーツダメージ+50。その後、このメンバーの赤のエールカードを任意枚数選び、自分の「モココ・アビスガード」1人に付ける。",
-        "en": "If your \"Mokoko Abyssgard\" used an Art this turn, this Art Damage +50. Then, choose any number of Red Cheer cards equipped by this Member and replace them with 1 of your \"Mokoko Abyssgard\".",
-        "fr": "Si votre \"モココ・アビスガード\" a utilisé un Arts durant ce tour, les dégâts de cet Arts +50. Ensuite, choisissez n'importe quel nombre de cartes d'Encouragement rouges de ce membre et échangez-les contre 1 \"モココ・アビスガード\" que vous contrôlez.",
-        "es": "Si tu \"モココ・アビスガード\" ha usado Arts durante este turno, el daño de Arts +50. Después, selecciona cualquier cantidad de cartas Cheer rojas de este Miembro y reemplázalas por 1 \"モココ・アビスガード\" tuyo."
+        "zh-TW": "如果自己的「モココ・アビスガード」在這個回合有使用過藝能，這個藝能傷害+50。之後，選擇這個成員任意數量的紅色吶喊卡，轉移給自己的1位「モココ・アビスガード」。",
+        "ja": "自分の「モココ・アビスガード」がこのターンにArtsを使用したことがある場合、このArtsダメージ+50。その後、このメンバーの赤のエールカードを任意枚数選び、「モココ・アビスガード」1人に移す。",
+        "en": "If your \"Mococo Abyssgard\" used Arts this turn, this Arts damage is increased by 50. Then, choose any number of Red Cheers from this Member and move them to 1 of your \"Mococo Abyssgard\".",
+        "fr": "Si votre \"Mococo Abyssgard\" a utilisé une capacité d'art durant ce tour, les dégâts d'arts +50. Après cela, choisissez un nombre quelconque de cartes d'encouragement rouges de ce membre et transférez-les à 1 de vos \"Mococo Abyssgard\".",
+        "es": "Si tu \"Mococo Abyssgard\" usó Arts durante este turno, este daño de Arts +50. Después, selecciona cualquier número de cartas Cheer rojas de este Miembro y transfiérelas a 1 \"Mococo Abyssgard\" tuyo."
       }
     },
     "art2": null,
@@ -57327,11 +57327,11 @@
       "damage": "80+",
       "specialAttackImage": "icons/tokkou_50_white.png",
       "effect": {
-        "zh-TW": "如果自己的「モココ・アビスガード」在這個回合有使用過藝能，這個藝能傷害+50。之後，選擇這個成員任意數量的紅色吶喊卡，替換給自己的1位「モココ・アビスガード」。",
-        "ja": "自分の「モココ・アビスガード」が今ターンにアーツを使用した場合、このアーツダメージ+50。その後、このメンバーの赤のエールカードを任意枚数選び、自分の「モココ・アビスガード」1人に付ける。",
-        "en": "If your \"Mokoko Abyssgard\" used an Art this turn, this Art Damage +50. Then, choose any number of Red Cheer cards equipped by this Member and replace them with 1 of your \"Mokoko Abyssgard\".",
-        "fr": "Si votre \"モココ・アビスガード\" a utilisé un Arts durant ce tour, les dégâts de cet Arts +50. Ensuite, choisissez n'importe quel nombre de cartes d'Encouragement rouges de ce membre et échangez-les contre 1 \"モココ・アビスガード\" que vous contrôlez.",
-        "es": "Si tu \"モココ・アビスガード\" ha usado Arts durante este turno, el daño de Arts +50. Después, selecciona cualquier cantidad de cartas Cheer rojas de este Miembro y reemplázalas por 1 \"モココ・アビスガード\" tuyo."
+        "zh-TW": "如果自己的「モココ・アビスガード」在這個回合有使用過藝能，這個藝能傷害+50。之後，選擇這個成員任意數量的紅色吶喊卡，轉移給自己的1位「モココ・アビスガード」。",
+        "ja": "自分の「モココ・アビスガード」がこのターンにArtsを使用したことがある場合、このArtsダメージ+50。その後、このメンバーの赤のエールカードを任意枚数選び、「モココ・アビスガード」1人に移す。",
+        "en": "If your \"Mococo Abyssgard\" used Arts this turn, this Arts damage is increased by 50. Then, choose any number of Red Cheers from this Member and move them to 1 of your \"Mococo Abyssgard\".",
+        "fr": "Si votre \"Mococo Abyssgard\" a utilisé une capacité d'art durant ce tour, les dégâts d'arts +50. Après cela, choisissez un nombre quelconque de cartes d'encouragement rouges de ce membre et transférez-les à 1 de vos \"Mococo Abyssgard\".",
+        "es": "Si tu \"Mococo Abyssgard\" usó Arts durante este turno, este daño de Arts +50. Después, selecciona cualquier número de cartas Cheer rojas de este Miembro y transfiérelas a 1 \"Mococo Abyssgard\" tuyo."
       }
     },
     "art2": null,
@@ -57374,11 +57374,11 @@
       "damage": "80+",
       "specialAttackImage": "icons/tokkou_50_white.png",
       "effect": {
-        "zh-TW": "如果自己的「モココ・アビスガード」在這個回合有使用過藝能，這個藝能傷害+50。之後，選擇這個成員任意數量的紅色吶喊卡，替換給自己的1位「モココ・アビスガード」。",
-        "ja": "自分の「モココ・アビスガード」が今ターンにアーツを使用した場合、このアーツダメージ+50。その後、このメンバーの赤のエールカードを任意枚数選び、自分の「モココ・アビスガード」1人に付ける。",
-        "en": "If your \"Mokoko Abyssgard\" used an Art this turn, this Art Damage +50. Then, choose any number of Red Cheer cards equipped by this Member and replace them with 1 of your \"Mokoko Abyssgard\".",
-        "fr": "Si votre \"モココ・アビスガード\" a utilisé un Arts durant ce tour, les dégâts de cet Arts +50. Ensuite, choisissez n'importe quel nombre de cartes d'Encouragement rouges de ce membre et échangez-les contre 1 \"モココ・アビスガード\" que vous contrôlez.",
-        "es": "Si tu \"モココ・アビスガード\" ha usado Arts durante este turno, el daño de Arts +50. Después, selecciona cualquier cantidad de cartas Cheer rojas de este Miembro y reemplázalas por 1 \"モココ・アビスガード\" tuyo."
+        "zh-TW": "如果自己的「モココ・アビスガード」在這個回合有使用過藝能，這個藝能傷害+50。之後，選擇這個成員任意數量的紅色吶喊卡，轉移給自己的1位「モココ・アビスガード」。",
+        "ja": "自分の「モココ・アビスガード」がこのターンにArtsを使用したことがある場合、このArtsダメージ+50。その後、このメンバーの赤のエールカードを任意枚数選び、「モココ・アビスガード」1人に移す。",
+        "en": "If your \"Mococo Abyssgard\" used Arts this turn, this Arts damage is increased by 50. Then, choose any number of Red Cheers from this Member and move them to 1 of your \"Mococo Abyssgard\".",
+        "fr": "Si votre \"Mococo Abyssgard\" a utilisé une capacité d'art durant ce tour, les dégâts d'arts +50. Après cela, choisissez un nombre quelconque de cartes d'encouragement rouges de ce membre et transférez-les à 1 de vos \"Mococo Abyssgard\".",
+        "es": "Si tu \"Mococo Abyssgard\" usó Arts durante este turno, este daño de Arts +50. Después, selecciona cualquier número de cartas Cheer rojas de este Miembro y transfiérelas a 1 \"Mococo Abyssgard\" tuyo."
       }
     },
     "art2": null,
@@ -57851,11 +57851,11 @@
     "effectB": {
       "name": "ヴァイオレットドミネーション",
       "effect": {
-        "zh-TW": "[限定中心位置]可以將自己的2張手牌放到存檔區：將對手舞台上的1張吶喊卡，替換給對手的成員。",
-        "ja": "[センター限定]自分の手札2枚をアーカイブに置く：相手のステージ上のエールカード1枚を、相手のメンバーに付ける。",
-        "en": "[Center Position Only] You may send 2 cards from your Hand to your Archive: Replace 1 Cheer card on your opponent's Stage with a Member of your opponent.",
-        "fr": "[Position centrale uniquement] Vous pouvez envoyer 2 cartes de votre main dans la zone d'archive : Remplacez 1 carte d'encouragement sur la scène de votre adversaire par un membre de votre adversaire.",
-        "es": "[Solo posición de Centro] Puedes enviar 2 cartas de tu mano a tu Archivo: Reemplaza 1 carta Cheer en el Escenario del oponente con un miembro del oponente."
+        "zh-TW": "[限定中心位置]可以將自己的2張手牌放到存檔區：將對手舞台上的1張吶喊卡，轉移給對手的成員。",
+        "ja": "[センター限定]自分の手札2枚をアーカイブに置く：相手のステージ上にあるエールカード1枚を、相手のメンバーに移す。",
+        "en": "[Center Only] Move 2 cards from your Hand to your Archive: Move 1 Cheer from your opponent's Stage to your opponent's Member.",
+        "fr": "[Position Centre uniquement] Vous pouvez placer 2 cartes de votre main dans votre archive : Transférez 1 carte d'encouragement de la scène de l'adversaire à un membre de l'adversaire.",
+        "es": "[Solo posición Central] Puedes poner 2 cartas de tu mano en tu Archivo: Transfiere 1 carta Cheer del escenario del oponente a un Miembro del oponente."
       }
     },
     "effectG": null,
@@ -57898,11 +57898,11 @@
     "effectB": {
       "name": "ヴァイオレットドミネーション",
       "effect": {
-        "zh-TW": "[限定中心位置]可以將自己的2張手牌放到存檔區：將對手舞台上的1張吶喊卡，替換給對手的成員。",
-        "ja": "[センター限定]自分の手札2枚をアーカイブに置く：相手のステージ上のエールカード1枚を、相手のメンバーに付ける。",
-        "en": "[Center Position Only] You may send 2 cards from your Hand to your Archive: Replace 1 Cheer card on your opponent's Stage with a Member of your opponent.",
-        "fr": "[Position centrale uniquement] Vous pouvez envoyer 2 cartes de votre main dans la zone d'archive : Remplacez 1 carte d'encouragement sur la scène de votre adversaire par un membre de votre adversaire.",
-        "es": "[Solo posición de Centro] Puedes enviar 2 cartas de tu mano a tu Archivo: Reemplaza 1 carta Cheer en el Escenario del oponente con un miembro del oponente."
+        "zh-TW": "[限定中心位置]可以將自己的2張手牌放到存檔區：將對手舞台上的1張吶喊卡，轉移給對手的成員。",
+        "ja": "[センター限定]自分の手札2枚をアーカイブに置く：相手のステージ上にあるエールカード1枚を、相手のメンバーに移す。",
+        "en": "[Center Only] Move 2 cards from your Hand to your Archive: Move 1 Cheer from your opponent's Stage to your opponent's Member.",
+        "fr": "[Position Centre uniquement] Vous pouvez placer 2 cartes de votre main dans votre archive : Transférez 1 carte d'encouragement de la scène de l'adversaire à un membre de l'adversaire.",
+        "es": "[Solo posición Central] Puedes poner 2 cartas de tu mano en tu Archivo: Transfiere 1 carta Cheer del escenario del oponente a un Miembro del oponente."
       }
     },
     "effectG": null,
@@ -57945,11 +57945,11 @@
     "effectB": {
       "name": "ヴァイオレットドミネーション",
       "effect": {
-        "zh-TW": "[限定中心位置]可以將自己的2張手牌放到存檔區：將對手舞台上的1張吶喊卡，替換給對手的成員。",
-        "ja": "[センター限定]自分の手札2枚をアーカイブに置く：相手のステージ上のエールカード1枚を、相手のメンバーに付ける。",
-        "en": "[Center Position Only] You may send 2 cards from your Hand to your Archive: Replace 1 Cheer card on your opponent's Stage with a Member of your opponent.",
-        "fr": "[Position centrale uniquement] Vous pouvez envoyer 2 cartes de votre main dans la zone d'archive : Remplacez 1 carte d'encouragement sur la scène de votre adversaire par un membre de votre adversaire.",
-        "es": "[Solo posición de Centro] Puedes enviar 2 cartas de tu mano a tu Archivo: Reemplaza 1 carta Cheer en el Escenario del oponente con un miembro del oponente."
+        "zh-TW": "[限定中心位置]可以將自己的2張手牌放到存檔區：將對手舞台上的1張吶喊卡，轉移給對手的成員。",
+        "ja": "[センター限定]自分の手札2枚をアーカイブに置く：相手のステージ上にあるエールカード1枚を、相手のメンバーに移す。",
+        "en": "[Center Only] Move 2 cards from your Hand to your Archive: Move 1 Cheer from your opponent's Stage to your opponent's Member.",
+        "fr": "[Position Centre uniquement] Vous pouvez placer 2 cartes de votre main dans votre archive : Transférez 1 carte d'encouragement de la scène de l'adversaire à un membre de l'adversaire.",
+        "es": "[Solo posición Central] Puedes poner 2 cartas de tu mano en tu Archivo: Transfiere 1 carta Cheer del escenario del oponente a un Miembro del oponente."
       }
     },
     "effectG": null,
@@ -59785,11 +59785,11 @@
     "tag": null,
     "product": "補充包「バウンサーバウンド (hBP08)」",
     "supportEffect": {
-      "zh-TW": "對手回合中，帶有這個粉絲的成員被擊倒時，將這個成員的1張吶喊卡，替換給自己其他的成員。\n\n這個粉絲只能附加給「IRyS」，每位成員可以帶有任意數量的粉絲。",
-      "ja": "相手のターン中、このファンを所持しているメンバーがダウンした時、このメンバーのエールカード1枚を、自分の他のメンバーに付け替える。\n\nこのファンは「IRyS」にのみ付けることができ、メンバーは任意の枚数のファンを所持できる。",
-      "en": "During your opponent's turn, when a Member with this Fan is KO'd, replace 1 Cheer card of this Member with another of your Members.\n\nThis Fan can only be attached to \"IRyS\". Each Member can have any number of Fans.\n",
-      "fr": "Pendant le tour de l'adversaire, lorsqu'un membre équipé de ce Fan est mis K.O., remplacez 1 carte d'Encouragement de ce membre par une autre de vos cartes.\n\nCe Fan ne peut être attaché qu'à \"IRyS\", et chaque membre peut être équipé d'un nombre illimité de Fans.",
-      "es": "Durante el turno del oponente, cuando un Miembro con este Fan es Derribado, reemplaza 1 carta de Cheer de este Miembro con otra tuya.\n\nEste Fan solo se puede adjuntar a 'IRyS', y cada Miembro puede tener cualquier cantidad de Fans."
+      "zh-TW": "對手回合中，帶有這個粉絲的成員被擊倒時，將這個成員的1張吶喊卡，轉移給自己其他的成員。\n\n這個粉絲只能附加給「IRyS」，每位成員可以帶有任意數量的粉絲。",
+      "ja": "相手のターン中、このファンを持つメンバーがダウンした時、このメンバーの持つエールカード1枚を、自分の他のメンバーに移す。\n\nこのファンは「IRyS」にのみ付与でき、各メンバーは任意枚数のファンを持つことができる。",
+      "en": "During your opponent's turn, when a Member with this Fan is Downed, move 1 Cheer from that Member to another one of your Members.\n\nThis Fan can only be attached to \"IRyS\". Each Member can have any number of Fans.",
+      "fr": "Durant le tour de l'adversaire, lorsqu'un membre portant ce fan est mis K.O., transférez 1 carte d'encouragement de ce membre à un autre de vos membres.\n\nCe fan ne peut être attaché qu'à \"IRyS\", et chaque membre peut porter un nombre illimité de fans.",
+      "es": "Durante el turno del oponente, cuando un Miembro con este Fan es K.O., transfiere 1 carta Cheer de ese Miembro a otro Miembro tuyo.\n\nEste Fan solo puede ser adjuntado a \"IRyS\", y cada Miembro puede tener cualquier número de Fans."
     },
     "id": "hBP08-106",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP08/hBP08-106_C.png"
@@ -59833,11 +59833,11 @@
     "tag": null,
     "product": "補充包「バウンサーバウンド (hBP08)」",
     "supportEffect": {
-      "zh-TW": "帶有這個粉絲的成員藝能傷害+10。\n\n對手回合中，帶有這個粉絲的成員被擊倒時，將這個成員的1張紅色吶喊卡或紫色吶喊卡替換給自己其他的成員。\n\n這個粉絲只能附加給「鷹嶺ルイ」，每位成員可以帶有任意數量的粉絲。",
-      "ja": "このファンを所持しているメンバーのアーツダメージ＋10。\n\n相手のターン中、このファンを所持しているメンバーがダウンした時、このメンバーの赤のエールカードまたは紫のエールカード1枚を、自分の他のメンバーに付け替える。\n\nこのファンは「鷹嶺ルイ」にのみ付けることができ、メンバーは任意の枚数のファンを所持できる。",
-      "en": "Members with this Fan gain +10 Arts Damage.\n\nDuring your opponent's turn, when a Member with this Fan is KO'd, replace 1 Red or Purple Cheer card of this Member with another of your Members.\n\nThis Fan can only be attached to \"Takanashi Lui\". Each Member can have any number of Fans.",
-      "fr": "Les membres équipés de ce Fan infligent +10 dégâts d'Arts.\n\nPendant le tour de l'adversaire, lorsqu'un membre équipé de ce Fan est mis K.O., remplacez 1 carte d'Encouragement rouge ou violette de ce membre par une autre de vos cartes.\n\nCe Fan ne peut être attaché qu'à \"鷹嶺ルイ\", et chaque membre peut être équipé d'un nombre illimité de Fans.",
-      "es": "El daño de Arts del Miembro con este Fan +10.\n\nDurante el turno del oponente, cuando un Miembro con este Fan es Derribado, reemplaza 1 de tus cartas de Cheer rojas o moradas con otra tuya.\n\nEste Fan solo se puede adjuntar a '鷹嶺ルイ', y cada Miembro puede tener cualquier cantidad de Fans."
+      "zh-TW": "帶有這個粉絲的成員藝能傷害+10。\n\n對手回合中，帶有這個粉絲的成員被擊倒時，將這個成員的1張紅色吶喊卡或紫色吶喊卡轉移給自己其他的成員。\n\n這個粉絲只能附加給「鷹嶺ルイ」，每位成員可以帶有任意數量的粉絲。",
+      "ja": "このファンを持つメンバーのArtsダメージ+10。\n\n相手のターン中、このファンを持つメンバーがダウンした時、このメンバーの持つ赤のエールカードまたは紫のエールカード1枚を、自分の他のメンバーに移す。\n\nこのファンは「鷹嶺ルイ」にのみ付与でき、各メンバーは任意枚数のファンを持つことができる。",
+      "en": "Arts damage dealt by Members with this Fan is increased by 10.\n\nDuring your opponent's turn, when a Member with this Fan is Downed, move 1 Red Cheer or Purple Cheer from that Member to another one of your Members.\n\nThis Fan can only be attached to \"Takanashi Kiara\". Each Member can have any number of Fans.",
+      "fr": "Les membres portant ce fan ont leurs dégâts d'arts +10.\n\nDurant le tour de l'adversaire, lorsqu'un membre portant ce fan est mis K.O., transférez 1 carte d'encouragement rouge ou violette de ce membre à un autre de vos membres.\n\nCe fan ne peut être attaché qu'à \"Rui Takamine\", et chaque membre peut porter un nombre illimité de fans.",
+      "es": "El daño de Arts del Miembro con este Fan +10.\n\nDurante el turno del oponente, cuando el Miembro con este Fan es K.O., transfiere 1 carta Cheer roja o morada de ese Miembro a otro Miembro tuyo.\n\nEste Fan solo puede ser adjuntado a \"Rui Takamine\", y cada Miembro puede tener cualquier número de Fans."
     },
     "id": "hBP08-109",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP08/hBP08-109_C.png"
@@ -59945,11 +59945,11 @@
       "holoPower": -1,
       "name": "リプレイスメント",
       "effect": {
-        "zh-TW": "[每個回合一次]將自己舞台上的1張吶喊卡，替換給自己的成員。",
-        "ja": "[各ターンに1度]自分のステージ上にあるエールカードを1枚、自分のメンバーに付け替える。",
-        "en": "[Once per turn] Replace 1 Cheer card on your Stage with a Member of yours.",
-        "fr": "[Chaque tour, une fois] Remplacez 1 carte d'Encouragement sur votre Scène par un de vos membres.",
-        "es": "[Cada turno una vez] Reemplaza 1 carta de Cheer tuya en el Escenario con un miembro tuyo."
+        "zh-TW": "[每個回合一次]將自己舞台上的1張吶喊卡，轉移給自己的成員。",
+        "ja": "[各ターンに1回]自分のステージ上にあるエールカード1枚を、自分のメンバーに移す。",
+        "en": "[Once per turn] Move 1 Cheer from your Stage to your Member.",
+        "fr": "[Chaque tour une fois] Transférez 1 carte d'encouragement de votre scène à un de vos membres.",
+        "es": "[Cada turno una vez] Transfiere 1 carta Cheer de tu escenario a un Miembro tuyo."
       }
     },
     "spSkill": {
@@ -62120,11 +62120,11 @@
     "effectG": {
       "name": "泥棒建設代表取締役 CEO",
       "effect": {
-        "zh-TW": "[限定中心位置]自己舞台上所有的「鷹嶺ルイ」「大神ミオ」「白上フブキ」「ラプラス・ダークネス」「戌神ころね」藝能傷害+20。",
-        "ja": "[限定中心位置]自分のステージ上の全ての「鷹嶺ルイ」「大神ミオ」「白上フブキ」「ラプラス・ダークネス」「戌神ころね」の「アーツ」ダメージ＋20。",
-        "en": "[Limited Center Position] Arts damage dealt by all \"鷹嶺ルイ\", \"大神ミオ\", \"白上フブキ\", \"ラプラス・ダークネス\", \"戌神ころね\" on your Stage +20.",
-        "fr": "[Position Centre UNIQUEMENT] Les dégâts d'Arts de \"鷹嶺ルイ\", \"大神ミオ\", \"白上フブキ\", \"ラプラス・ダークネス\", \"戌神ころね\" sur votre Scène sont augmentés de 20.",
-        "es": "[Solo posición central] El daño de Arts de todos los \"Rui Takamine\", \"Mio Oogami\", \"Fubuki Shirakami\", \"Laplus Darkness\", \"Korone Inugami\" en tu Escenario aumenta en 20."
+        "zh-TW": "[限定中心位置]自己舞台上所有的「鷹嶺ルイ」、「大神ミオ」、「白上フブキ」、「ラプラス・ダークネス」與「戌神ころね」藝能傷害+20。",
+        "ja": "[センター限定]自分のステージ上にある全ての「鷹嶺ルイ」「大神ミオ」「白上フブキ」「ラプラス・ダークネス」と「戌神ころね」のArtsダメージ+20。",
+        "en": "[Center Only] Arts damage dealt by all \"Takanashi Kiara\", \"Mio Amakusa\", \"Subaru Subaru\", \"La+) Dark\", and \"Korone Inugami\" on your Stage is increased by 20.",
+        "fr": "[Position Centre uniquement] Les dégâts d'arts de tous vos membres \"Rui Takamine\", \"Mio Ookami\", \"Fubuki Shirakami\", \"La+ Darknesss\" et \"Korone Inugami\" sur la scène +20.",
+        "es": "[Solo posición Central] El daño de Arts de todos los \"Rui Takamine\", \"Mio Ookami\", \"Fubuki Shirakami\", \"La+ Darknesss\" y \"Korone Inugami\" en tu escenario +20."
       }
     },
     "art1": {
@@ -63515,11 +63515,11 @@
     "effectC": {
       "name": "クレッシェンドな日々",
       "effect": {
-        "zh-TW": "可以將自己舞台上的1張吶喊卡，替換給自己這個成員以外的成員。",
-        "ja": "自分のステージ上の「エール」を1枚、自分のこのメンバー以外のメンバーに置き換えることができる。",
-        "en": "You can substitute 1 Cheer from your Stage with another Member.",
-        "fr": "Vous pouvez remplacer 1 carte Encouragement de votre Scène par un autre de vos Membres.",
-        "es": "Puedes reemplazar 1 carta de Cheer de tu Escenario con 1 Miembro tuyo que no sea este Miembro."
+        "zh-TW": "可以將自己舞台上的1張吶喊卡，轉移給自己這個成員以外的成員。",
+        "ja": "自分のステージ上にあるエールカード1枚を、このメンバー以外のメンバーに移すことができる。",
+        "en": "Move 1 Cheer from your Stage to a Member other than this Member.",
+        "fr": "Vous pouvez transférer 1 carte d'encouragement de votre scène à un membre autre que ce membre.",
+        "es": "Puedes transferir 1 carta Cheer de tu escenario a un Miembro tuyo, excepto a este Miembro."
       }
     },
     "effectB": null,
@@ -68792,11 +68792,11 @@
     "effectG": {
       "name": "体力作り頑張るぞー！！！！！",
       "effect": {
-        "zh-TW": "對手回合中，這個成員被擊倒時，可以將這個成員的1張吶喊卡替換給自己其他的成員。",
-        "ja": "相手ターン中、このメンバーがダウンした時、このメンバーのエールカードを1枚、自分の他のメンバーと入れ替えることができる。",
-        "en": "When this Member is Downed during your opponent's turn, you may replace 1 Cheer card of this Member with another of your Members.",
-        "fr": "Pendant le tour de l'adversaire, lorsque ce membre est mis K.O., vous pouvez remplacer 1 de ses cartes d'encouragement par un de vos autres membres.",
-        "es": "Durante el turno del oponente, cuando este Miembro sea K.O., reemplaza 1 carta Cheer de este Miembro con 1 Miembro tuyo.\n"
+        "zh-TW": "對手回合中，這個成員被擊倒時，可以將這個成員的1張吶喊卡轉移給自己其他的成員。",
+        "ja": "相手のターン中、このメンバーがダウンした時、このメンバーの持つエールカード1枚を、自分の他のメンバーに移すことができる。",
+        "en": "During your opponent's turn, when this Member is Downed, you may move 1 Cheer from this Member to another one of your Members.",
+        "fr": "Durant le tour de l'adversaire, lorsqu'un membre est mis K.O., vous pouvez transférer 1 carte d'encouragement de ce membre à un autre de vos membres.",
+        "es": "Durante el turno del oponente, cuando este Miembro es K.O., puedes transferir 1 carta Cheer de ese Miembro a otro Miembro tuyo."
       }
     },
     "art1": {
