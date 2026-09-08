@@ -39,8 +39,12 @@ Key properties:
   hOCG terminology glossary. Output is checked for leaked source-language text
   (the ja→zh-TW shared-Han-script "echo") and under-translated strings are
   retried up a model ladder (flash-lite → flash → pro) rather than cached.
-  Results are cached in `translation_cache.json`, persisted via GitHub Actions
-  cache (not git) and seeded from git history on a cold cache.
+  Results are cached in `translation_cache.json`, written after every batch
+  and persisted via GitHub Actions cache plus a durable copy at
+  `refs/translation-cache/latest` (a non-branch ref); a cold cache seeds from
+  that ref, then from git history. The step has a wall-clock budget
+  (`TRANSLATE_BUDGET_SECONDS`, 25 min in CI): leftovers ship as source text
+  and roll to the next run instead of the job timing out.
 - **Data guard** (`scraper/data_guard.py`) refuses to publish any dataset that
   shrinks below 80% of the published baseline — a source-site redesign fails
   the run instead of silently shipping a gutted site. `rules.json` is checked
@@ -103,8 +107,9 @@ pages and run all four frontend check scripts on every commit.
   → re-run with `DATA_GUARD_BYPASS=1`.
 - **Pipeline failing?** Check the auto-filed `pipeline-failure` issue for the
   run link; the stale-but-complete site stays live until a run succeeds.
-- **Cold translation cache?** The deploy workflow self-seeds from the last
-  committed copy in git history; nothing to do.
+- **Cold translation cache?** The deploy workflow self-seeds from
+  `refs/translation-cache/latest` (published by every scrape run), falling
+  back to git history; nothing to do.
 - **Changed any precached asset?** Bump `CACHE_NAME` in `web/sw.js`.
 - **Analytics/consent:** GA4 runs in *advanced consent mode* — gtag.js always
   loads lazily, but only cookieless anonymous pings are sent until the visitor

@@ -10,7 +10,9 @@ from pathlib import Path
 from google import genai
 from google.genai import types
 
-sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+# line_buffering: CI pipes stdout, and block buffering hid where the weekly run
+# spent its time (the last 20 minutes of a killed run printed nothing).
+sys.stdout.reconfigure(encoding="utf-8", errors="replace", line_buffering=True)
 
 GEMINI_MODEL = "gemini-2.5-flash-lite"
 # Escalation ladder for items the cheap model echoes back untranslated (the
@@ -22,6 +24,20 @@ ESCALATION_MODELS = [STRONG_MODEL, STRONGEST_MODEL]
 BATCH_SIZE = 80
 REQUEST_DELAY = 5.0
 MAX_RETRIES = 8
+# Per-request timeout for Gemini calls (ms). Without it a stalled connection
+# can hang the weekly run until the job-level timeout kills it.
+REQUEST_TIMEOUT_MS = 120_000
+# Longest single wait on a 429; the API's "retry in Ns" hint is honoured up to
+# this cap.
+MAX_RATE_LIMIT_WAIT = 90.0
+# Items the strongest (slowest, most rate-limited) tier attempts per language
+# pair per run; anything beyond is left uncached for the next run.
+MAX_STRONGEST_ITEMS = 40
+# Wall-clock budget for the whole translation step (seconds). When it runs
+# out, remaining strings fall back to their source text (uncached) and the
+# next run continues — a partially translated dataset ships instead of a
+# killed job that ships nothing. 0 disables the budget.
+TRANSLATE_BUDGET_SECONDS = float(os.environ.get("TRANSLATE_BUDGET_SECONDS", str(20 * 60)))
 
 TARGET_LANGS_JA = ["zh-TW", "en", "fr", "es"]
 TARGET_LANGS_ZH = ["ja", "en", "fr", "es"]
@@ -96,6 +112,21 @@ RULES:
 _cache: dict[str, str] = {}
 _cache_path: Path | None = None
 _cache_dirty = False
+# time.monotonic() value after which no more Gemini calls are made; set by
+# translate_all() from TRANSLATE_BUDGET_SECONDS. None = no budget.
+_deadline: float | None = None
+
+
+def _budget_left() -> float:
+    """Seconds left in the translation budget (infinite when none is set)."""
+    if _deadline is None:
+        return float("inf")
+    return _deadline - time.monotonic()
+
+
+def _over_budget() -> bool:
+    return _budget_left() <= 0
+
 _client: genai.Client | None = None
 
 
@@ -109,7 +140,10 @@ def _get_client() -> genai.Client:
             "GEMINI_API_KEY or GOOGLE_API_KEY environment variable not set. "
             "Get a free key at https://aistudio.google.com/apikey"
         )
-    _client = genai.Client(api_key=api_key)
+    _client = genai.Client(
+        api_key=api_key,
+        http_options=types.HttpOptions(timeout=REQUEST_TIMEOUT_MS),
+    )
     return _client
 
 
@@ -208,10 +242,18 @@ def _load_cache(base_dir: Path):
         print("[cache] No cache file found, starting fresh")
 
 
-def _save_cache():
+def _save_cache(quiet: bool = False):
+    """Write the cache to disk if anything changed since the last write.
+
+    Called after every translated batch (quiet) as well as after each dataset,
+    so a run killed by the job timeout keeps the translations it paid for.
+    """
+    global _cache_dirty
     if _cache_path and _cache_dirty:
         _cache_path.write_text(json.dumps(_cache, ensure_ascii=False, indent=2), encoding="utf-8")
-        print(f"[cache] Saved {len(_cache)} translations to cache")
+        _cache_dirty = False
+        if not quiet:
+            print(f"[cache] Saved {len(_cache)} translations to cache")
 
 
 def _cache_key(source: str, target: str, text: str) -> str:
@@ -265,6 +307,9 @@ def _translate_batch_gemini(
 
     mismatch_retries = 0
     for attempt in range(MAX_RETRIES):
+        if _over_budget():
+            print("    [budget] Translation time budget exhausted; giving up on this batch")
+            return [None] * len(texts)
         try:
             response = client.models.generate_content(
                 model=model_id,
@@ -293,16 +338,24 @@ def _translate_batch_gemini(
             print(f"    [warn] API error (attempt {attempt + 1}): {err_str[:200]}")
             if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str:
                 m = re.search(r"retry in (\d+(?:\.\d+)?)s", err_str, re.IGNORECASE)
-                wait = float(m.group(1)) + 5 if m else 60.0
+                wait = min(float(m.group(1)) + 5 if m else 60.0, MAX_RATE_LIMIT_WAIT)
+                if wait > _budget_left():
+                    print("    [budget] Not enough time budget left to wait out the rate limit; giving up on this batch")
+                    return [None] * len(texts)
                 print(f"    [rate-limit] Waiting {wait:.0f}s before retry...")
                 time.sleep(wait)
                 continue
 
         wait = min(REQUEST_DELAY * (2 ** attempt), 30)
+        if wait > _budget_left():
+            print("    [budget] Translation time budget exhausted; giving up on this batch")
+            return [None] * len(texts)
         time.sleep(wait)
 
-    # Recovery path: try splitting to find which sub-batch is causing the misalignment.
-    if not _no_split and len(texts) > 1:
+    # Recovery path: try splitting to find which sub-batch is causing the
+    # misalignment — unless the time budget is gone, in which case the halves
+    # would only be given up one by one.
+    if not _no_split and len(texts) > 1 and not _over_budget():
         mid = len(texts) // 2
         print(f"    [split] Recovering by splitting batch {len(texts)} -> {mid} + {len(texts) - mid}")
         left = _translate_batch_gemini(texts[:mid], source, target, _no_split=(mid == 1), model=model)
@@ -339,6 +392,12 @@ def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> 
 
     failed_items: list[str] = []
     for batch_start in range(0, len(to_translate), BATCH_SIZE):
+        if _over_budget():
+            skipped = to_translate[batch_start:]
+            print(f"    [budget] Time budget exhausted; {len(skipped)} {source}->{target} items left for the next run")
+            for text in skipped:
+                mapping[text] = text
+            break
         batch = to_translate[batch_start:batch_start + BATCH_SIZE]
         batch_num = batch_start // BATCH_SIZE + 1
         total_batches = (len(to_translate) + BATCH_SIZE - 1) // BATCH_SIZE
@@ -357,6 +416,9 @@ def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> 
             mapping[text] = result
             _cache[_cache_key(source, target, text)] = result
             _cache_dirty = True
+        # Persist after every batch: a run killed by the job timeout keeps
+        # what it translated instead of redoing it next week.
+        _save_cache(quiet=True)
         if batch_failed:
             print(f"    [warn] {batch_failed} items not translated by {GEMINI_MODEL}; will escalate")
 
@@ -372,9 +434,22 @@ def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> 
     for esc_model in ESCALATION_MODELS:
         if not remaining:
             break
+        if _over_budget():
+            print(f"    [budget] Time budget exhausted; {len(remaining)} items skip escalation until the next run")
+            break
+        # The strongest tier is slow and tightly rate-limited: cap what it sees
+        # per pair per run so one bad week cannot eat the whole budget.
+        deferred: list[str] = []
+        if esc_model == STRONGEST_MODEL and len(remaining) > MAX_STRONGEST_ITEMS:
+            deferred = remaining[MAX_STRONGEST_ITEMS:]
+            remaining = remaining[:MAX_STRONGEST_ITEMS]
+            print(f"    {source}->{target}: deferring {len(deferred)} items past the {esc_model} cap to the next run")
         print(f"    {source}->{target}: escalating {len(remaining)} items to {esc_model}")
         next_remaining: list[str] = []
         for esc_start in range(0, len(remaining), BATCH_SIZE):
+            if _over_budget():
+                next_remaining.extend(remaining[esc_start:])
+                break
             esc_batch = remaining[esc_start:esc_start + BATCH_SIZE]
             results = _translate_batch_gemini(esc_batch, source, target, model=esc_model)
             for text, result in zip(esc_batch, results):
@@ -384,9 +459,10 @@ def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> 
                 mapping[text] = result
                 _cache[_cache_key(source, target, text)] = result
                 _cache_dirty = True
+            _save_cache(quiet=True)
             if esc_start + BATCH_SIZE < len(remaining):
                 time.sleep(REQUEST_DELAY)
-        remaining = next_remaining
+        remaining = next_remaining + deferred
 
     for text in remaining:
         mapping[text] = text  # still untranslated at the top tier -> source, uncached
@@ -700,8 +776,14 @@ def translate_rules(data_dir: Path):
 
 
 def translate_all(data_dir: Path):
+    global _deadline
     base_dir = data_dir.parent
     _load_cache(base_dir)
+    if TRANSLATE_BUDGET_SECONDS > 0:
+        _deadline = time.monotonic() + TRANSLATE_BUDGET_SECONDS
+        print(f"[translate] Time budget: {TRANSLATE_BUDGET_SECONDS / 60:.0f} min; leftovers roll to the next run")
+    else:
+        _deadline = None
 
     print("[translate] Translating tier_list.json...")
     translate_tier_list(data_dir)
@@ -722,7 +804,10 @@ def translate_all(data_dir: Path):
     translate_rules(data_dir)
 
     _save_cache()
-    print("[translate] All translations complete")
+    if _over_budget():
+        print("[translate] Stopped at the time budget; untranslated leftovers show source text until the next run")
+    else:
+        print("[translate] All translations complete")
 
 
 if __name__ == "__main__":

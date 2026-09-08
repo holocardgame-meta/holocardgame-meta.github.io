@@ -22,7 +22,7 @@ env:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -70,11 +70,22 @@ jobs:
           restore-keys: |
             translation-cache-
 
-      - name: Seed translation cache from git history (cold-cache fallback)
+      - name: Seed translation cache (cold-cache fallback)
         if: github.event_name != 'push'
         run: |
           if [ ! -f translation_cache.json ]; then
-            # Cold cache: deepen the shallow clone so history lookups work.
+            # Cold cache (Actions caches expire after 7 idle days, which a
+            # delayed weekly cron can exceed): prefer the copy every scrape run
+            # publishes to refs/translation-cache/latest — at most a week old.
+            if git fetch --quiet origin refs/translation-cache/latest 2>/dev/null \
+               && git show FETCH_HEAD:translation_cache.json > translation_cache.json 2>/dev/null; then
+              echo "Seeded translation cache from refs/translation-cache/latest"
+            else
+              rm -f translation_cache.json
+            fi
+          fi
+          if [ ! -f translation_cache.json ]; then
+            # Last resort: deepen the shallow clone so history lookups work.
             git fetch --unshallow --quiet 2>/dev/null || true
             # Most recent commit touching the file is its removal commit, so
             # fall back to that commit's parent where the file still existed.
@@ -94,6 +105,11 @@ jobs:
         id: scrape
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # Unbuffered output so the log shows where a slow run spends its time.
+          PYTHONUNBUFFERED: '1'
+          # Translation stops making API calls after this many seconds and
+          # leaves the rest for the next run (the job timeout is 60 min).
+          TRANSLATE_BUDGET_SECONDS: '1500'
         run: uv run python -m scraper.run
 
       - name: Save translation cache
@@ -102,6 +118,20 @@ jobs:
         with:
           path: translation_cache.json
           key: translation-cache-${{ github.run_id }}
+
+      # Durable copy that outlives the 7-day Actions cache expiry: one
+      # parentless commit force-pushed to a non-branch ref (no workflow
+      # triggers, no history growth). The seed step reads it on a cold cache.
+      - name: Publish translation cache to refs/translation-cache/latest
+        if: always() && github.event_name != 'push' && hashFiles('translation_cache.json') != ''
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          blob=$(git hash-object -w translation_cache.json)
+          tree=$(printf '100644 blob %s\ttranslation_cache.json\n' "$blob" | git mktree)
+          commit=$(git commit-tree "$tree" -m "translation cache from run ${{ github.run_id }}")
+          git push --force --quiet origin "$commit:refs/translation-cache/latest"
+          echo "Published translation cache ($(wc -c < translation_cache.json) bytes) as $commit"
 
       - name: Check scraper output
         if: github.event_name != 'push'

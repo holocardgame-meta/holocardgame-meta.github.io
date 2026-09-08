@@ -269,3 +269,95 @@ def test_unique_map_escalates_to_strongest_model_when_flash_fails(monkeypatch):
 
     assert mapping["甲"] == good
     assert translate._cache.get(_cache_key("ja", "zh-TW", "甲")) == good
+
+
+def test_unique_map_stops_calling_api_when_budget_exhausted(monkeypatch):
+    """Once the time budget is gone, remaining strings fall back to source text
+    (uncached) without any further API call, so the run finishes instead of
+    being killed by the job timeout."""
+    calls: list[list[str]] = []
+
+    def fake_batch(batch, s, t, _no_split=False, model=None):
+        calls.append(list(batch))
+        return [f"{x}-en" for x in batch]
+
+    monkeypatch.setattr(translate, "_translate_batch_gemini", fake_batch)
+    monkeypatch.setattr(translate.time, "sleep", lambda *_: None)
+    monkeypatch.setattr(translate, "_deadline", translate.time.monotonic() - 1)
+    translate._cache.clear()
+
+    mapping = translate._translate_unique_map(["甲", "乙"], "ja", "en")
+
+    assert calls == []
+    assert mapping == {"甲": "甲", "乙": "乙"}
+    assert _cache_key("ja", "en", "甲") not in translate._cache
+
+
+def test_unique_map_persists_cache_after_every_batch(monkeypatch):
+    """Progress is written to disk per batch, not only per dataset, so a run
+    killed mid-file keeps the translations it already paid for."""
+    saves: list[bool] = []
+
+    monkeypatch.setattr(translate, "_save_cache", lambda quiet=False: saves.append(quiet))
+    monkeypatch.setattr(
+        translate,
+        "_translate_batch_gemini",
+        lambda batch, s, t, _no_split=False, model=None: [f"{x}-en" for x in batch],
+    )
+    monkeypatch.setattr(translate.time, "sleep", lambda *_: None)
+    monkeypatch.setattr(translate, "BATCH_SIZE", 1)
+    translate._cache.clear()
+
+    translate._translate_unique_map(["甲", "乙", "丙"], "ja", "en")
+
+    assert saves == [True, True, True]
+
+
+def test_unique_map_caps_items_sent_to_strongest_model(monkeypatch):
+    """Only MAX_STRONGEST_ITEMS reach the slow, rate-limited top tier per pair
+    per run; the rest stay uncached for the next run."""
+    bad = "・相手のホロメンをアーカイブするように動かす。"
+    good = "・讓對手的成員進入存檔區。"
+    strongest_batches: list[list[str]] = []
+
+    def fake_batch(batch, s, t, _no_split=False, model=None):
+        if model == translate.STRONGEST_MODEL:
+            strongest_batches.append(list(batch))
+            return [good for _ in batch]
+        return [bad for _ in batch]
+
+    monkeypatch.setattr(translate, "_translate_batch_gemini", fake_batch)
+    monkeypatch.setattr(translate.time, "sleep", lambda *_: None)
+    monkeypatch.setattr(translate, "MAX_STRONGEST_ITEMS", 2)
+    translate._cache.clear()
+
+    items = ["甲", "乙", "丙", "丁", "戊"]
+    mapping = translate._translate_unique_map(items, "ja", "zh-TW")
+
+    assert sum(len(b) for b in strongest_batches) == 2
+    assert sum(1 for x in items if mapping[x] == good) == 2
+    for x in items:
+        if mapping[x] == good:
+            assert translate._cache.get(_cache_key("ja", "zh-TW", x)) == good
+        else:
+            assert mapping[x] == x
+            assert _cache_key("ja", "zh-TW", x) not in translate._cache
+
+
+def test_translate_batch_gives_up_immediately_when_over_budget(monkeypatch):
+    """With the budget exhausted the batch call makes no request and never
+    sleeps, so the retry/split ladder cannot stall a run past the job timeout."""
+    class _Client:
+        class models:
+            @staticmethod
+            def generate_content(**kwargs):
+                raise AssertionError("no API call expected once the budget is gone")
+
+    def _no_sleep(*_):
+        raise AssertionError("no sleep expected once the budget is gone")
+
+    monkeypatch.setattr(translate, "_get_client", lambda: _Client())
+    monkeypatch.setattr(translate.time, "sleep", _no_sleep)
+    monkeypatch.setattr(translate, "_deadline", translate.time.monotonic() - 1)
+
+    assert translate._translate_batch_gemini(["甲", "乙"], "ja", "en") == [None, None]

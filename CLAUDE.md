@@ -38,7 +38,8 @@ GitHub Pages. No build step, no backend. See README.md for architecture.
 ## Generated / never commit
 
 - `web/deck/` (entity pages + the `/deck/` index — rebuilt in CI before every deploy)
-- `translation_cache.json` (GitHub Actions cache; git-history seed fallback)
+- `translation_cache.json` (GitHub Actions cache; durable copy at
+  `refs/translation-cache/latest`; git-history seed as last resort)
 - `data/` (scraper staging dir; `web/data/` is the published copy)
 
 ## Pipeline behavior
@@ -71,6 +72,11 @@ GitHub Pages. No build step, no backend. See README.md for architecture.
   failures auto-file a `pipeline-failure` issue.
 - `web/data/meta.json` `generated_at` = data freshness shown in the footer;
   it comes from `build_indexes.py`, not deploy time.
+- `translate.py` runs under a wall-clock budget (`TRANSLATE_BUDGET_SECONDS`,
+  1500 s in CI; job timeout 60 min): past it, strings fall back to source
+  text uncached and the next run continues. The cache is written after every
+  batch, the strongest model sees at most `MAX_STRONGEST_ITEMS` per pair per
+  run, and 429 waits are capped — keep those when touching the ladder.
 
 ## Analytics / consent
 
