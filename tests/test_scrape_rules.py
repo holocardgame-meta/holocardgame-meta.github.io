@@ -1,5 +1,6 @@
 """Parsing tests for the rules / errata scraper."""
 
+from scraper import scrape_rules
 from scraper.scrape_rules import (
     _build_errata_map,
     _classify_article,
@@ -86,3 +87,21 @@ def test_build_errata_map_keeps_first_entry_per_card():
     assert errata["hBP01-001"]["url"] == "u1"
     assert errata["hBP01-002"]["url"] == "u2"
     assert "hBP01-003" not in errata
+
+
+def test_collect_rule_urls_is_none_when_listing_unreachable(monkeypatch):
+    """A failed listing fetch (site down / 5xx) is reported as None, distinct
+    from a reachable page that lists no rule articles ([])."""
+    monkeypatch.setattr(scrape_rules, "_fetch", lambda url: None)
+    assert scrape_rules._collect_rule_urls() is None
+
+
+def test_scrape_rules_leaves_no_file_when_listing_unreachable(tmp_path, monkeypatch):
+    """With the listing unreachable the scraper writes nothing, so run.py
+    carries the last-good rules.json forward instead of publishing an emptied
+    file that trips the data guard (the 2026-09-08 502 outage)."""
+    monkeypatch.setattr(scrape_rules, "_fetch", lambda url: None)
+    out = tmp_path / "data"
+
+    assert scrape_rules.scrape_rules(out, None) == {}
+    assert not (out / "rules.json").exists()

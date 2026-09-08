@@ -24,7 +24,7 @@ from scraper.translate import translate_all
 # published copy forward from web/data/ (see _carry_forward_frozen). That keeps
 # the data guard green and the last-good tier/guide data live instead of
 # crashing the whole run at step [2/10].
-SOURCE_LOSS_DATASETS = ["tier_list.json", "decks.json", "all_guides.json"]
+SOURCE_LOSS_DATASETS = ["tier_list.json", "decks.json", "all_guides.json", "rules.json"]
 
 
 def _carry_forward_frozen(data_dir: Path, web_data_dir: Path):

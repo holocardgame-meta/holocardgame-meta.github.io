@@ -361,3 +361,23 @@ def test_translate_batch_gives_up_immediately_when_over_budget(monkeypatch):
     monkeypatch.setattr(translate, "_deadline", translate.time.monotonic() - 1)
 
     assert translate._translate_batch_gemini(["甲", "乙"], "ja", "en") == [None, None]
+
+
+def test_translate_batch_splits_immediately_on_request_timeout(monkeypatch):
+    """A 504 / DEADLINE_EXCEEDED is not retried at the same size (each retry
+    cost ~2 min in CI); the batch is split and each half is tried once."""
+    sizes: list[int] = []
+
+    class _Client:
+        class models:
+            @staticmethod
+            def generate_content(**kwargs):
+                sizes.append(kwargs["contents"].count("\n["))
+                raise RuntimeError("504 DEADLINE_EXCEEDED. The request timed out")
+
+    monkeypatch.setattr(translate, "_get_client", lambda: _Client())
+    monkeypatch.setattr(translate.time, "sleep", lambda *_: None)
+    monkeypatch.setattr(translate, "_deadline", None)
+
+    assert translate._translate_batch_gemini(["甲", "乙"], "ja", "en") == [None, None]
+    assert sizes == [2, 1, 1]

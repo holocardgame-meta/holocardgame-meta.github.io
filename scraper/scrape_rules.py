@@ -37,11 +37,16 @@ def _fetch(url: str) -> str | None:
     return None
 
 
-def _collect_rule_urls() -> list[dict]:
-    """Crawl the rule listing page and extract article links with dates."""
+def _collect_rule_urls() -> list[dict] | None:
+    """Crawl the rule listing page and extract article links with dates.
+
+    Returns None when the listing page itself could not be fetched (site down,
+    5xx), as opposed to [] for a page that parsed but lists no rule articles —
+    only the former means "source unreachable".
+    """
     html = _fetch(RULE_LIST_URL)
     if not html:
-        return []
+        return None
 
     soup = BeautifulSoup(html, "lxml")
     results = []
@@ -194,6 +199,13 @@ def scrape_rules(output_dir: Path, baseline_dir: Path | None = None) -> dict:
 
     print("  Collecting rule article URLs...")
     entries = _collect_rule_urls()
+    if entries is None:
+        # Leave rules.json absent: run.py carries the last-good web/data/ copy
+        # forward after translation, instead of publishing an emptied file
+        # that trips the data guard (the official site returned 502s on
+        # 2026-09-08 and cost a whole weekly run).
+        print("  Rule listing unreachable; leaving rules.json absent so the last-good copy is carried forward")
+        return {}
     print(f"  Found {len(entries)} rule articles")
 
     articles = []

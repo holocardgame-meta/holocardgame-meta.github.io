@@ -22,6 +22,9 @@ STRONG_MODEL = "gemini-2.5-flash"
 STRONGEST_MODEL = "gemini-2.5-pro"
 ESCALATION_MODELS = [STRONG_MODEL, STRONGEST_MODEL]
 BATCH_SIZE = 80
+# Escalation tiers are slower per item; 80-item batches on gemini-2.5-flash
+# regularly ran past the 2-minute request timeout (504) in CI.
+ESCALATION_BATCH_SIZE = 20
 REQUEST_DELAY = 5.0
 MAX_RETRIES = 8
 # Per-request timeout for Gemini calls (ms). Without it a stalled connection
@@ -336,6 +339,12 @@ def _translate_batch_gemini(
         except Exception as e:
             err_str = str(e)
             print(f"    [warn] API error (attempt {attempt + 1}): {err_str[:200]}")
+            if "504" in err_str or "DEADLINE_EXCEEDED" in err_str:
+                # The request itself timed out; retrying the same size just
+                # burns ~2 min per attempt. Fall through to the split path and
+                # try smaller halves instead.
+                print("    [timeout] Request timed out; splitting the batch instead of retrying")
+                break
             if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str:
                 m = re.search(r"retry in (\d+(?:\.\d+)?)s", err_str, re.IGNORECASE)
                 wait = min(float(m.group(1)) + 5 if m else 60.0, MAX_RATE_LIMIT_WAIT)
@@ -446,11 +455,11 @@ def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> 
             print(f"    {source}->{target}: deferring {len(deferred)} items past the {esc_model} cap to the next run")
         print(f"    {source}->{target}: escalating {len(remaining)} items to {esc_model}")
         next_remaining: list[str] = []
-        for esc_start in range(0, len(remaining), BATCH_SIZE):
+        for esc_start in range(0, len(remaining), ESCALATION_BATCH_SIZE):
             if _over_budget():
                 next_remaining.extend(remaining[esc_start:])
                 break
-            esc_batch = remaining[esc_start:esc_start + BATCH_SIZE]
+            esc_batch = remaining[esc_start:esc_start + ESCALATION_BATCH_SIZE]
             results = _translate_batch_gemini(esc_batch, source, target, model=esc_model)
             for text, result in zip(esc_batch, results):
                 if result is None or _looks_untranslated(result, target):
@@ -460,7 +469,7 @@ def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> 
                 _cache[_cache_key(source, target, text)] = result
                 _cache_dirty = True
             _save_cache(quiet=True)
-            if esc_start + BATCH_SIZE < len(remaining):
+            if esc_start + ESCALATION_BATCH_SIZE < len(remaining):
                 time.sleep(REQUEST_DELAY)
         remaining = next_remaining + deferred
 

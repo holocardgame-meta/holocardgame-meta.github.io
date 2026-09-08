@@ -68,7 +68,9 @@ GitHub Pages. No build step, no backend. See README.md for architecture.
   `scrape_all_guides`) also fail soft: on a source-loss error `run.py` leaves the
   staging file absent and `_carry_forward_frozen` restores the last-good
   `web/data/` copy before the guard — a dead source freezes those datasets
-  instead of crashing or emptying them (that domain went dead 2026-07). Deploy
+  instead of crashing or emptying them (that domain went dead 2026-07); `scrape_rules` leaves `rules.json` absent
+  when the official news listing is unreachable (5xx), so it carries forward
+  the same way. Deploy
   failures auto-file a `pipeline-failure` issue.
 - `web/data/meta.json` `generated_at` = data freshness shown in the footer;
   it comes from `build_indexes.py`, not deploy time.
@@ -76,7 +78,9 @@ GitHub Pages. No build step, no backend. See README.md for architecture.
   1500 s in CI; job timeout 60 min): past it, strings fall back to source
   text uncached and the next run continues. The cache is written after every
   batch, the strongest model sees at most `MAX_STRONGEST_ITEMS` per pair per
-  run, and 429 waits are capped — keep those when touching the ladder.
+  run, escalation batches are `ESCALATION_BATCH_SIZE` items, a 504 splits the
+  batch instead of retrying, and 429 waits are capped — keep those when
+  touching the ladder.
 
 ## Analytics / consent
 
