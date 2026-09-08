@@ -60,9 +60,8 @@ function getGaPageLocation(viewName) {
 function trackGaEvent(eventName, params = {}, options = {}) {
   const gtag = getGtag(options);
   gtag('event', eventName, {
-    app_name: 'HOLOCARD META',
     view_name: currentView,
-    language: getLang(),
+    site_language: getLang(),
     ...params,
   });
 }
@@ -71,16 +70,25 @@ function trackGaPageView(viewName, options = {}) {
   trackGaEvent('page_view', {
     page_title: GA_PAGE_TITLES[viewName] || `HOLOCARD META - ${viewName}`,
     page_location: getGaPageLocation(viewName),
-    page_path: `/${viewName}`,
     view_name: viewName,
   }, options);
 }
 
-function trackFilterChange(filterType, filterValue, isActive) {
+// ui_location = which control the visitor used ('sidebar' chips/buttons vs the
+// 'active_filter_bar' pills under the topbar); filter_type = which filter set.
+function trackFilterChange(filterType, filterValue, isActive, uiLocation) {
   trackGaEvent('filter_change', {
     filter_type: filterType,
     filter_value: filterValue,
     filter_state: isActive ? 'add' : 'remove',
+    ui_location: uiLocation,
+  });
+}
+
+function trackFilterClear(filterType, uiLocation) {
+  trackGaEvent('filter_clear', {
+    filter_type: filterType,
+    ui_location: uiLocation,
   });
 }
 
@@ -395,7 +403,7 @@ function setupFilters() {
       const nextActive = !filters.colors.has(v);
       if (nextActive) filters.colors.add(v);
       else filters.colors.delete(v);
-      trackFilterChange('color', v, nextActive);
+      trackFilterChange('color', v, nextActive, 'sidebar');
       applyFilterUI();
       render();
     });
@@ -407,7 +415,7 @@ function setupFilters() {
       const nextActive = !filters.tiers.has(v);
       if (nextActive) filters.tiers.add(v);
       else filters.tiers.delete(v);
-      trackFilterChange('tier', v, nextActive);
+      trackFilterChange('tier', v, nextActive, 'sidebar');
       applyFilterUI();
       render();
     });
@@ -419,7 +427,7 @@ function setupFilters() {
       const nextActive = !filters.types.has(v);
       if (nextActive) filters.types.add(v);
       else filters.types.delete(v);
-      trackFilterChange('type', v, nextActive);
+      trackFilterChange('type', v, nextActive, 'sidebar');
       applyFilterUI();
       render();
     });
@@ -429,21 +437,21 @@ function setupFilters() {
   document.getElementById('colorFilterClear')?.addEventListener('click', (e) => {
     e.stopPropagation();
     filters.colors.clear();
-    trackGaEvent('filter_clear', { filter_type: 'color' });
+    trackFilterClear('color', 'sidebar');
     applyFilterUI();
     render();
   });
   document.getElementById('tierFilterClear')?.addEventListener('click', (e) => {
     e.stopPropagation();
     filters.tiers.clear();
-    trackGaEvent('filter_clear', { filter_type: 'tier' });
+    trackFilterClear('tier', 'sidebar');
     applyFilterUI();
     render();
   });
   document.getElementById('typeFilterClear')?.addEventListener('click', (e) => {
     e.stopPropagation();
     filters.types.clear();
-    trackGaEvent('filter_clear', { filter_type: 'type' });
+    trackFilterClear('type', 'sidebar');
     applyFilterUI();
     render();
   });
@@ -452,7 +460,7 @@ function setupFilters() {
     filters.colors.clear();
     filters.tiers.clear();
     filters.types.clear();
-    trackGaEvent('filter_clear', { filter_type: 'all' });
+    trackFilterClear('all', 'sidebar');
     applyFilterUI();
     render();
   });
@@ -537,7 +545,7 @@ function updateActiveFilterBar() {
       const val = p.dataset.value;
       const set = kind === 'color' ? filters.colors : kind === 'tier' ? filters.tiers : filters.types;
       set.delete(val);
-      trackFilterChange(kind, val, false);
+      trackFilterChange(kind, val, false, 'active_filter_bar');
       applyFilterUI();
       render();
     });
@@ -546,7 +554,7 @@ function updateActiveFilterBar() {
     filters.colors.clear();
     filters.tiers.clear();
     filters.types.clear();
-    trackGaEvent('filter_clear', { filter_type: 'all_active_bar' });
+    trackFilterClear('all', 'active_filter_bar');
     applyFilterUI();
     render();
   });
@@ -563,10 +571,7 @@ function setupTopbarSearch() {
       const v = topSearch.value.trim();
       filters.search = v;
       if (v.length >= 2) {
-        trackGaEvent('search', {
-          search_term: v,
-          search_context: currentView,
-        });
+        trackGaEvent('search', { search_term: v });
       }
 
       if (currentView === 'guides') {
@@ -674,10 +679,8 @@ function setupLangSwitcher() {
       renderLangSwitcher();
       updateNavCounts();
       if (selectedLanguage !== previousLanguage) {
-        trackGaEvent('language_change', {
-          previous_language: previousLanguage,
-          selected_language: selectedLanguage,
-        });
+        // The common `site_language` param already carries the newly selected language.
+        trackGaEvent('language_change', { previous_language: previousLanguage });
       }
       render();
       closePop();
@@ -742,11 +745,25 @@ async function _staticShareUrl() {
   return slug ? new URL(`deck/${slug}/`, document.baseURI).href : null;
 }
 
+// What the share button refers to: the open card, else the open deck / guide /
+// tournament deck, else the current view.
+function _sharedContentParams() {
+  if (_openCard) return { content_type: 'card', content_id: _openCard };
+  if (_openDeck?.type === 'tdeck') {
+    return { content_type: 'tournament_deck', content_id: _openDeck.id, content_source: 'decklog' };
+  }
+  if (_openDeck) {
+    const { source, contentType } = _classifyDeck(_openDeck.id);
+    return { content_type: contentType, content_id: _openDeck.id, content_source: source };
+  }
+  return { content_type: 'view', content_id: currentView };
+}
+
 async function shareCurrentRoute() {
   const url = (await _staticShareUrl()) || window.location.href;
   trackGaEvent('share', {
     method: navigator.share ? 'web_share' : 'clipboard',
-    content_id: window.location.hash.slice(1) || currentView,
+    ..._sharedContentParams(),
   });
   if (navigator.share) {
     try { await navigator.share({ title: document.title, url }); } catch {}
@@ -760,17 +777,24 @@ async function shareCurrentRoute() {
   }
 }
 
-async function openDeckById(deckId) {
-  await Promise.all([ensureCardIndex(), ensureGuideDetail(deckId)]);
-  const src = officialDecks?.some(d => d.deck_id === deckId) ? 'official'
+// A deck id lives in exactly one dataset; that dataset decides both the GA
+// content_source (official / tier / guide) and content_type (deck vs guide).
+function _classifyDeck(deckId) {
+  const source = officialDecks?.some(d => d.deck_id === deckId) ? 'official'
     : decksData?.some(d => d.deck_id === deckId) ? 'tier'
     : 'guide';
-  const openEventName = src === 'guide' ? 'guide_open' : 'deck_open';
+  return { source, contentType: source === 'guide' ? 'guide' : 'deck' };
+}
+
+async function openDeckById(deckId) {
+  await Promise.all([ensureCardIndex(), ensureGuideDetail(deckId)]);
+  const { source, contentType } = _classifyDeck(deckId);
+  const openEventName = contentType === 'guide' ? 'guide_open' : 'deck_open';
   trackGaEvent(openEventName, {
     event_role: 'key_event_candidate',
-    content_type: src === 'guide' ? 'guide' : 'deck',
-    item_id: deckId,
-    content_source: src,
+    content_type: contentType,
+    content_id: deckId,
+    content_source: source,
   });
   renderDeckModal(document.getElementById('deckModalBody'), deckId, tierData, decksData, allGuides, officialDecks, cardIndexData);
   _openModalEl(document.getElementById('deckModal'));
@@ -781,7 +805,7 @@ async function openTournamentDeckById(decklogId) {
   await Promise.all([ensureDecklog(), ensureCardIndex()]);
   trackContentOpen('deck_open', {
     content_type: 'tournament_deck',
-    item_id: decklogId,
+    content_id: decklogId,
     content_source: 'decklog',
   });
   renderTournamentDeckModal(document.getElementById('deckModalBody'), decklogId, decklogDecks, cardIndexData);
@@ -792,6 +816,7 @@ async function openTournamentDeckById(decklogId) {
 async function openCardById(cardId) {
   await ensureCards();
   const card = cardsData.find(c => c.id === cardId);
+  if (card) trackGaEvent('card_open', { content_type: 'card', content_id: cardId });
   renderCardDetail(document.getElementById('cardModalBody'), card, cardsData, rulesData);
   _openModalEl(document.getElementById('cardModal'));
   _openCard = cardId;
@@ -828,8 +853,8 @@ function setupModals() {
         if (cardsData.some(c => c.id === cardId)) {
           trackGaEvent('select_content', {
             content_type: 'card',
-            item_id: cardId,
-            source: 'inline_card',
+            content_id: cardId,
+            ui_location: 'inline_card',
           });
           navigateHash(_hashFor('card', cardId));
           return;
@@ -843,7 +868,9 @@ function setupModals() {
       if (!decklogId) return;
       trackGaEvent('select_content', {
         content_type: 'tournament_deck',
-        item_id: decklogId,
+        content_id: decklogId,
+        content_source: 'decklog',
+        ui_location: 'tournament_list',
       });
       navigateHash(_hashFor('tdeck', decklogId));
       return;
@@ -852,11 +879,12 @@ function setupModals() {
     const deckCard = e.target.closest('.deck-card');
     if (deckCard) {
       const deckId = deckCard.dataset.deckId;
-      const deckSource = deckCard.dataset.source || 'deck';
+      const { source, contentType } = _classifyDeck(deckId);
       trackGaEvent('select_content', {
-        content_type: 'deck_guide',
-        item_id: deckId,
-        content_source: deckSource,
+        content_type: contentType,
+        content_id: deckId,
+        content_source: source,
+        ui_location: 'guide_list',
       });
       navigateHash(_hashFor('deck', deckId));
       return;
@@ -867,8 +895,8 @@ function setupModals() {
       const cardId = galleryCard.dataset.cardId;
       trackGaEvent('select_content', {
         content_type: 'card',
-        item_id: cardId,
-        source: 'card_gallery',
+        content_id: cardId,
+        ui_location: 'card_gallery',
       });
       navigateHash(_hashFor('card', cardId));
       return;
@@ -920,14 +948,14 @@ function trackKeyOutboundLink(link, url) {
   if (linkType === 'decklog') {
     trackGaEvent('decklog_click', {
       event_role: 'key_event_candidate',
-      item_id: link.dataset.gaItemId || '',
+      content_id: link.dataset.gaItemId || '',
       link_domain: url.hostname,
       link_url: url.href,
     });
   } else if (linkType === 'source_guide') {
     trackGaEvent('source_guide_click', {
       event_role: 'key_event_candidate',
-      item_id: link.dataset.gaItemId || '',
+      content_id: link.dataset.gaItemId || '',
       link_domain: url.hostname,
       link_url: url.href,
     });
@@ -949,7 +977,7 @@ function setupOutboundTracking() {
     }
     if (url.origin === window.location.origin) return;
 
-    trackGaEvent('click_outbound', {
+    trackGaEvent('outbound_click', {
       link_domain: url.hostname,
       link_url: url.href,
     });
@@ -975,9 +1003,10 @@ function setupConsentBanner() {
   const declineBtn = document.getElementById('consentDecline');
   if (!banner || !acceptBtn || !declineBtn) return;
 
-  const showBanner = () => {
+  const showBanner = (trigger) => {
     banner.hidden = false;
     requestAnimationFrame(() => banner.classList.add('is-visible'));
+    trackGaEvent('consent_prompt', { prompt_action: 'show', prompt_trigger: trigger }, { load: false });
   };
   const hideBanner = () => {
     banner.classList.remove('is-visible');
@@ -990,15 +1019,15 @@ function setupConsentBanner() {
     document.dispatchEvent(new CustomEvent('holo-consent-decided'));
     if (value === 'granted' && typeof window.holocardConsentGranted === 'function') {
       window.holocardConsentGranted();
-      trackGaEvent('consent_update', { consent_state: 'granted' }, { load: false });
     }
+    trackGaEvent('consent_update', { consent_state: value }, { load: false });
   };
 
   acceptBtn.addEventListener('click', () => choose('granted'));
   declineBtn.addEventListener('click', () => choose('denied'));
-  document.getElementById('consentSettings')?.addEventListener('click', showBanner);
+  document.getElementById('consentSettings')?.addEventListener('click', () => showBanner('settings'));
 
-  if (!getStoredConsent()) showBanner();
+  if (!getStoredConsent()) showBanner('auto');
 }
 
 function setupIosInstallPrompt() {
@@ -1054,7 +1083,7 @@ function setupIosInstallPrompt() {
       platform,
       install_method: 'manual_instructions',
     });
-    hidePrompt(30, 'dismiss');
+    hidePrompt(30, 'acknowledged');
   });
 }
 
@@ -1087,14 +1116,17 @@ function setupAndroidInstallPrompt() {
     } catch {}
   };
 
+  const trackPromptAction = (action) => {
+    trackGaEvent('pwa_install_prompt', { platform: 'android_chrome', prompt_action: action });
+  };
+
+  // action is omitted when the prompt closes for a reason already tracked by
+  // its own event (pwa_installed).
   const hidePrompt = (days, action) => {
     prompt.classList.remove('is-visible');
     window.setTimeout(() => { prompt.hidden = true; }, 180);
     if (days > 0) setDismissedUntil(days);
-    trackGaEvent('pwa_install_prompt', {
-      platform: 'android_chrome',
-      prompt_action: action,
-    });
+    if (action) trackPromptAction(action);
   };
 
   window.addEventListener('beforeinstallprompt', (event) => {
@@ -1105,10 +1137,7 @@ function setupAndroidInstallPrompt() {
         if (!deferredPrompt || window.matchMedia('(display-mode: standalone)').matches) return;
         prompt.hidden = false;
         requestAnimationFrame(() => prompt.classList.add('is-visible'));
-        trackGaEvent('pwa_install_prompt', {
-          platform: 'android_chrome',
-          prompt_action: 'show',
-        });
+        trackPromptAction('show');
       }, 1800);
     });
   });
@@ -1119,7 +1148,7 @@ function setupAndroidInstallPrompt() {
       event_role: 'key_event_candidate',
       platform: 'android_chrome',
     });
-    hidePrompt(365, 'installed');
+    hidePrompt(365);
   });
 
   laterBtn.addEventListener('click', () => hidePrompt(7, 'later'));
@@ -1129,10 +1158,7 @@ function setupAndroidInstallPrompt() {
       return;
     }
 
-    trackGaEvent('pwa_install_prompt', {
-      platform: 'android_chrome',
-      prompt_action: 'install_click',
-    });
+    trackPromptAction('install_click');
     prompt.classList.remove('is-visible');
 
     const installPrompt = deferredPrompt;
@@ -1154,10 +1180,7 @@ function setupAndroidInstallPrompt() {
         install_method: 'browser_prompt',
       });
     }
-    trackGaEvent('pwa_install_prompt', {
-      platform: 'android_chrome',
-      prompt_action: outcome,
-    });
+    trackPromptAction(outcome === 'accepted' ? 'browser_prompt_accepted' : 'browser_prompt_dismissed');
   });
 }
 

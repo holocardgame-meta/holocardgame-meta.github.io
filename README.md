@@ -109,6 +109,9 @@ pages and run all four frontend check scripts on every commit.
 - **Analytics/consent:** GA4 runs in *advanced consent mode* — gtag.js always
   loads lazily, but only cookieless anonymous pings are sent until the visitor
   accepts the banner. Choice is stored in `localStorage('holo-consent')`.
+  Every event and parameter is listed in `docs/analytics-events.md` — update
+  it when adding or renaming one (`scripts/check_key_ga_events.mjs` fails if
+  an event is missing from the doc).
 
 ## Data sources
 

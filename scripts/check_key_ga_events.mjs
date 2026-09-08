@@ -44,6 +44,18 @@ if (!hook.includes('node scripts/check_key_ga_events.mjs')) {
   failures.push('Pre-commit hook must run key GA event contract check.');
 }
 
+// Every event name web/app.js emits must be documented in docs/analytics-events.md.
+const eventsDoc = fs.readFileSync('docs/analytics-events.md', 'utf8');
+const emittedEvents = new Set(requiredEvents);
+for (const match of app.matchAll(/track(?:GaEvent|ContentOpen)\('([a-z_]+)'/g)) {
+  emittedEvents.add(match[1]);
+}
+for (const eventName of emittedEvents) {
+  if (!eventsDoc.includes(`\`${eventName}\``)) {
+    failures.push(`Event ${eventName} is emitted by web/app.js but missing from docs/analytics-events.md`);
+  }
+}
+
 if (failures.length) {
   console.error('GA key event contract failed:');
   for (const failure of failures) console.error(`- ${failure}`);
