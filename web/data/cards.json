@@ -84716,8 +84716,8 @@
       "name": "いっちにー、さんしー",
       "effect": {
         "zh-TW": "選擇自己的中心成員。這個回合中，該成員的藝能傷害+10。",
-        "ja": "自分のセンターメンバーを1人選ぶ。このターン中、そのメンバーのアーツダメージ+10。\n",
-        "en": "Choose one of your Center Holomen. During this turn, that Holomen's Arts damage +10.",
+        "ja": "自分のセンターホロメンを選ぶ。このターンの間、選んだホロメンのアーツ+10。",
+        "en": "Choose your Center Member. During this turn, that Member's Arts damage +10.",
         "fr": "Choisissez votre membre au Centre. Ce tour-ci, les Arts de ce membre +10 dégâts.",
         "es": "Selecciona tu Miembro del Centro. Durante este turno, el daño de Arts de ese Miembro +10."
       }
@@ -84793,8 +84793,8 @@
       "name": "Message for You -フブキ-",
       "effect": {
         "zh-TW": "選擇自己的中心成員。這個回合中，該成員的藝能傷害+10。",
-        "ja": "自分のセンターメンバーを1人選ぶ。このターン中、そのメンバーのアーツダメージ+10。\n",
-        "en": "Choose one of your Center Holomen. During this turn, that Holomen's Arts damage +10.",
+        "ja": "自分のセンターホロメンを選ぶ。このターンの間、選んだホロメンのアーツ+10。",
+        "en": "Choose your Center Member. During this turn, that Member's Arts damage +10.",
         "fr": "Choisissez votre membre au Centre. Ce tour-ci, les Arts de ce membre +10 dégâts.",
         "es": "Selecciona tu Miembro del Centro. Durante este turno, el daño de Arts de ese Miembro +10."
       }
