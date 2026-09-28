@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://holocardgame-meta.github.io/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://holocardgame-meta.github.io/zh-TW/"/>
@@ -15,7 +15,7 @@
   </url>
   <url>
     <loc>https://holocardgame-meta.github.io/zh-TW/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://holocardgame-meta.github.io/zh-TW/"/>
@@ -27,7 +27,7 @@
   </url>
   <url>
     <loc>https://holocardgame-meta.github.io/ja/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://holocardgame-meta.github.io/zh-TW/"/>
@@ -39,7 +39,7 @@
   </url>
   <url>
     <loc>https://holocardgame-meta.github.io/en/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://holocardgame-meta.github.io/zh-TW/"/>
@@ -51,7 +51,7 @@
   </url>
   <url>
     <loc>https://holocardgame-meta.github.io/fr/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://holocardgame-meta.github.io/zh-TW/"/>
@@ -63,7 +63,7 @@
   </url>
   <url>
     <loc>https://holocardgame-meta.github.io/es/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://holocardgame-meta.github.io/zh-TW/"/>
@@ -75,9 +75,27 @@
   </url>
   <url>
     <loc>https://holocardgame-meta.github.io/deck/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://holocardgame-meta.github.io/deck/recommended-deck-introduction-hakui-koyori/</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://holocardgame-meta.github.io/deck/recommended-deck-introduction-houshou-marine/</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://holocardgame-meta.github.io/deck/recommended-deck-introduction-tokino-sora/</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://holocardgame-meta.github.io/deck/recommended-deck-koganei-niko/</loc>
@@ -236,7 +254,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://holocardgame-meta.github.io/deck/recommended-deck-himemori-luna/</loc>
+    <loc>https://holocardgame-meta.github.io/deck/recommended-deck-tokoyami-towa/</loc>
     <lastmod>2025-12-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -255,12 +273,6 @@
   </url>
   <url>
     <loc>https://holocardgame-meta.github.io/deck/recommended-deck-fuwamoco/</loc>
-    <lastmod>2025-12-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://holocardgame-meta.github.io/deck/recommended-deck-tokoyami-towa/</loc>
     <lastmod>2025-12-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -410,24 +422,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://holocardgame-meta.github.io/deck/recommended-deck-introduction-tokino-sora/</loc>
-    <lastmod>2026-08-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://holocardgame-meta.github.io/deck/recommended-deck-introduction-houshou-marine/</loc>
-    <lastmod>2026-08-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://holocardgame-meta.github.io/deck/recommended-deck-introduction-hakui-koyori/</loc>
-    <lastmod>2026-08-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://holocardgame-meta.github.io/deck/recommended-deck-introduction-inanis/</loc>
     <lastmod>2026-06-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -520,6 +514,12 @@
   <url>
     <loc>https://holocardgame-meta.github.io/deck/recommended-deck-introduction-nerissa/</loc>
     <lastmod>2025-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://holocardgame-meta.github.io/deck/recommended-deck-himemori-luna/</loc>
+    <lastmod>2025-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
