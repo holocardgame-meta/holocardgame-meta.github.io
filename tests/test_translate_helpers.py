@@ -234,6 +234,36 @@ def test_refresh_waits_when_budget_is_low(monkeypatch):
     assert calls == []
 
 
+def test_refresh_redoes_entries_under_an_older_verified_prefix(monkeypatch):
+    """Bumping VERIFIED_KEY_PREFIX (a prompt change) makes every older entry
+    stale; the retranslation retires all of them."""
+    assert translate.VERIFIED_KEY_PREFIX not in translate.STALE_KEY_PREFIXES
+    calls: list = []
+    monkeypatch.setattr(translate, "_translate_batch_gemini", _recording_batch(calls))
+    monkeypatch.setattr(translate.time, "sleep", lambda *_: None)
+    translate._cache.clear()
+    translate._cache["gemini-v2|zh-TW|en|甲"] = "v2 text"
+    translate._cache[_cache_key("zh-TW", "en", "甲")] = "legacy text"
+
+    mapping = translate._translate_unique_map(["甲"], "zh-TW", "en")
+
+    assert mapping == {"甲": "甲-new"}
+    assert calls == [["甲"]]
+    assert translate._cache == {translate._verified_key("zh-TW", "en", "甲"): "甲-new"}
+
+
+def test_stale_entry_shown_is_the_newest_older_one(monkeypatch):
+    calls: list = []
+    monkeypatch.setattr(translate, "_translate_batch_gemini", _recording_batch(calls))
+    monkeypatch.setattr(translate, "_deadline", translate.time.monotonic() + 60)  # no refresh
+    translate._cache.clear()
+    translate._cache["gemini-v2|zh-TW|ja|甲"] = "v2 text"
+    translate._cache[_cache_key("zh-TW", "ja", "甲")] = "legacy text"
+
+    assert translate._translate_unique_map(["甲"], "zh-TW", "ja") == {"甲": "v2 text"}
+    assert calls == []
+
+
 def test_refresh_skips_verified_entries_and_other_pairs(monkeypatch):
     calls: list = []
     monkeypatch.setattr(translate, "_translate_batch_gemini", _recording_batch(calls))
@@ -516,6 +546,18 @@ def test_load_known_tags_without_cards_file(tmp_path, monkeypatch):
     monkeypatch.setattr(translate, "_known_tags", ["#stale"])
     translate._load_known_tags(tmp_path)
     assert translate._known_tags == []
+
+
+def test_looks_untranslated_ignores_names_in_latin_quotes():
+    """en/fr/es keep names in Latin quotes, where 「」 stripping doesn't reach;
+    the の in 石の斧 or より in 博衣こより is not grammar."""
+    assert translate._looks_untranslated('Reveal 1 "石の斧" from your Deck.', "en") is False
+    assert translate._looks_untranslated("All your “博衣こより” get Arts +30.", "en") is False
+    assert translate._looks_untranslated("Révélez 1 « 石の斧 » de votre Deck.", "fr") is False
+    # Japanese prose outside the quotes is still caught.
+    assert translate._looks_untranslated('"石の斧"を手札に加える。', "en") is True
+    # Chinese output: a quoted space-free run can be a whole untranslated clause.
+    assert translate._looks_untranslated('使用"相手のホロメンをアーカイブする"效果。', "zh-TW") is True
 
 
 def test_looks_untranslated_flags_garbled_exotic_scripts():

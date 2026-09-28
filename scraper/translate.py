@@ -42,8 +42,12 @@ MAX_STRONGEST_ITEMS = 40
 # neighbouring card's text with the same numbers, which the number check can't
 # see. Each run retranslates up to MAX_REFRESH_ITEMS of them per pair (the old
 # translation keeps showing until a new one passes) and re-caches the result
-# under _verified_key; new translations for these pairs go there directly.
+# under VERIFIED_KEY_PREFIX; new translations for these pairs go there directly.
+# Bump the prefix to redo them all after a prompt change — entries under an
+# older one count as stale. v3: glossary terms keep their capitalization.
 REFRESH_PAIRS = {("zh-TW", "ja"), ("zh-TW", "en")}
+VERIFIED_KEY_PREFIX = "gemini-v3"
+STALE_KEY_PREFIXES = ("gemini-v2", "gemini")  # newest first
 MAX_REFRESH_ITEMS = 500
 # Refresh only while this much budget is left, so it never starves new strings.
 REFRESH_MIN_BUDGET_SECONDS = 600.0
@@ -112,7 +116,7 @@ You are a professional translator for the hololive OFFICIAL CARD GAME (ホロカ
 
 RULES:
 1. Translate from {source_lang} to {target_lang}.
-2. You MUST use the official card game terminology from the glossary below. Never use literal translations for game terms.
+2. You MUST use the official card game terminology from the glossary below, capitalized exactly as listed there (e.g. "Member", "Cheer", "Center" — never "member", "cheer", "center"). Never use literal translations for game terms.
 3. Keep VTuber names in their original form (e.g. 大神ミオ, 兎田ぺこら, Amelia Watson).
 4. Keep card IDs (e.g. hBP07-003) unchanged.
 5. Keep numbers, symbols, and formatting (like ・, └, ＋, ＋20) unchanged.
@@ -185,6 +189,11 @@ _JA_GRAMMAR_RE = re.compile(
 # can carry a stray grammar char (「ふつうのパソコン」). Strip quoted spans first so
 # a name's の doesn't read as a Japanese sentence.
 _JA_QUOTE_RE = re.compile(r"[「『][^」』]*[」』]")
+# In en/fr/es output a kept name sits in Latin quotes instead ("石の斧",
+# « 博衣こより »). Only space-free spans count, and only for those targets: in
+# Chinese output a quoted run without spaces can be a whole untranslated clause.
+_LATIN_QUOTED_NAME_RE = re.compile(r'["“«]\s?[^\s"“”«»]+\s?["”»]')
+_LATIN_TARGETS = {"en", "fr", "es"}
 # Card tags (#ラミィのお酒, #秘密結社holoX) are kept verbatim like names but are
 # not quoted, and #ラミィのお酒 carries a grammatical-looking の. Filled from the
 # cards' tag field by translate_all(), longest first.
@@ -229,6 +238,8 @@ def _looks_untranslated(text: object, target: str) -> bool:
     if _has_garbled_script(text):
         return True
     outside_names = _JA_QUOTE_RE.sub("", text)
+    if target in _LATIN_TARGETS:
+        outside_names = _LATIN_QUOTED_NAME_RE.sub("", outside_names)
     for tag in _known_tags:
         outside_names = outside_names.replace(tag, "")
     return len(_JA_GRAMMAR_RE.findall(outside_names)) >= 1
@@ -355,16 +366,26 @@ def _cache_key(source: str, target: str, text: str) -> str:
 
 
 def _verified_key(source: str, target: str, text: str) -> str:
-    """Cache key for a REFRESH_PAIRS translation made from an id-tagged batch."""
-    return f"gemini-v2|{source}|{target}|{text}"
+    """Cache key for a REFRESH_PAIRS translation made with the current prompt."""
+    return f"{VERIFIED_KEY_PREFIX}|{source}|{target}|{text}"
+
+
+def _stale_key(source: str, target: str, text: str) -> str | None:
+    """The newest cached key for this text under an older prefix, if any."""
+    for prefix in STALE_KEY_PREFIXES:
+        key = f"{prefix}|{source}|{target}|{text}"
+        if key in _cache:
+            return key
+    return None
 
 
 def _store(source: str, target: str, text: str, result: str):
-    """Cache a fresh translation; a refresh pair also retires the old entry."""
+    """Cache a fresh translation; a refresh pair also retires its stale entries."""
     global _cache_dirty
     if (source, target) in REFRESH_PAIRS:
         _cache[_verified_key(source, target, text)] = result
-        _cache.pop(_cache_key(source, target, text), None)
+        for prefix in STALE_KEY_PREFIXES:
+            _cache.pop(f"{prefix}|{source}|{target}|{text}", None)
     else:
         _cache[_cache_key(source, target, text)] = result
     _cache_dirty = True
@@ -549,22 +570,24 @@ def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> 
     to_translate: list[str] = []
     overridden = 0
     refresh = (source, target) in REFRESH_PAIRS
-    stale: list[str] = []  # refresh-pair entries cached before id-tagging
+    stale: list[str] = []  # refresh-pair entries cached under an older prefix
 
     for text in unique_texts:
         if not text or not text.strip():
             mapping[text] = text
             continue
         key = _cache_key(source, target, text)
+        old_key = _stale_key(source, target, text) if refresh else None
         if key in _overrides:
             mapping[text] = _overrides[key]
             overridden += 1
         elif refresh and _verified_key(source, target, text) in _cache:
             mapping[text] = _cache[_verified_key(source, target, text)]
+        elif old_key:
+            mapping[text] = _cache[old_key]
+            stale.append(text)
         elif key in _cache:
             mapping[text] = _cache[key]
-            if refresh:
-                stale.append(text)
         else:
             to_translate.append(text)
 
@@ -577,7 +600,7 @@ def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> 
     # failed retranslation never shows source text in their place.
     if stale and _budget_left() >= REFRESH_MIN_BUDGET_SECONDS:
         refreshing = stale[:MAX_REFRESH_ITEMS]
-        print(f"    {source}->{target}: refreshing {len(refreshing)} of {len(stale)} pre-id-tag translations")
+        print(f"    {source}->{target}: refreshing {len(refreshing)} of {len(stale)} translations cached before {VERIFIED_KEY_PREFIX}")
         to_translate += refreshing
 
     if not to_translate:
