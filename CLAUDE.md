@@ -81,6 +81,11 @@ GitHub Pages. No build step, no backend. See README.md for architecture.
   run, escalation batches are `ESCALATION_BATCH_SIZE` items, a 504 splits the
   batch instead of retrying, and 429 waits are capped — keep those when
   touching the ladder.
+- Wrong card translation? Add it to root `translation_overrides.json`
+  (hand-curated, `{source_lang: {source_text: {lang: text, "cards": [ids]}}}`),
+  never to `web/data/` — the weekly run rebuilds that. Overrides beat the cache
+  and Gemini and are never cached; a test checks every zh-TW key is current
+  card text in `web/data/cards.json`.
 
 ## Analytics / consent
 

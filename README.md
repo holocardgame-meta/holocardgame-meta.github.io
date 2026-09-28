@@ -44,7 +44,10 @@ Key properties:
   `refs/translation-cache/latest` (a non-branch ref); a cold cache seeds from
   that ref, then from git history. The step has a wall-clock budget
   (`TRANSLATE_BUDGET_SECONDS`, 25 min in CI): leftovers ship as source text
-  and roll to the next run instead of the job timing out.
+  and roll to the next run instead of the job timing out. Hand-verified
+  corrections (e.g. official card text) go in `translation_overrides.json`
+  and take precedence over the cache — `web/data/` is regenerated weekly, so
+  edits there don't stick.
 - **Data guard** (`scraper/data_guard.py`) refuses to publish any dataset that
   shrinks below 80% of the published baseline — a source-site redesign fails
   the run instead of silently shipping a gutted site. `rules.json` is checked

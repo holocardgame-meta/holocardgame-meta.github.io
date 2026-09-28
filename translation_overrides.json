@@ -1,0 +1,9 @@
+{
+  "zh-TW": {
+    "選擇自己的中心成員。這個回合中，該成員的藝能傷害+10。": {
+      "cards": ["hSD14-005", "hSD14-007"],
+      "ja": "自分のセンターホロメンを選ぶ。このターンの間、選んだホロメンのアーツ+10。",
+      "en": "Choose your Center Member. During this turn, that Member's Arts damage +10."
+    }
+  }
+}

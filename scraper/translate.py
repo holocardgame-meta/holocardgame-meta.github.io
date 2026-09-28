@@ -117,6 +117,10 @@ RULES:
 _cache: dict[str, str] = {}
 _cache_path: Path | None = None
 _cache_dirty = False
+# Hand-verified translations (e.g. official card text) from the repo root,
+# keyed like the cache. They win over the cache and Gemini and are never cached.
+OVERRIDES_FILENAME = "translation_overrides.json"
+_overrides: dict[str, str] = {}
 # time.monotonic() value after which no more Gemini calls are made; set by
 # translate_all() from TRANSLATE_BUDGET_SECONDS. None = no budget.
 _deadline: float | None = None
@@ -341,6 +345,30 @@ def _cache_key(source: str, target: str, text: str) -> str:
     return f"gemini|{source}|{target}|{text}"
 
 
+def _load_overrides(base_dir: Path):
+    """Load hand-verified translations from base_dir/translation_overrides.json.
+
+    Shape: {source_lang: {source_text: {target_lang: translation}}}. Keys that
+    aren't a language (the "cards" note listing which cards share the text)
+    are ignored here; tests/test_translate_helpers.py validates the file.
+    """
+    global _overrides
+    _overrides = {}
+    path = base_dir / OVERRIDES_FILENAME
+    if not path.exists():
+        return
+    for source, entries in json.loads(path.read_text(encoding="utf-8")).items():
+        if source not in LANG_NAMES or not isinstance(entries, dict):
+            continue
+        for text, targets in entries.items():
+            if not isinstance(targets, dict):
+                continue
+            for target, value in targets.items():
+                if target in LANG_NAMES and target != source and isinstance(value, str) and value.strip():
+                    _overrides[_cache_key(source, target, text)] = value
+    print(f"[overrides] Loaded {len(_overrides)} hand-verified translations")
+
+
 def _build_system_prompt(source: str, target: str) -> str:
     return SYSTEM_PROMPT_TEMPLATE.format(
         source_lang=LANG_NAMES.get(source, source),
@@ -495,19 +523,24 @@ def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> 
     global _cache_dirty
     mapping: dict[str, str] = {}
     to_translate: list[str] = []
+    overridden = 0
 
     for text in unique_texts:
         if not text or not text.strip():
             mapping[text] = text
             continue
         key = _cache_key(source, target, text)
-        if key in _cache:
+        if key in _overrides:
+            mapping[text] = _overrides[key]
+            overridden += 1
+        elif key in _cache:
             mapping[text] = _cache[key]
         else:
             to_translate.append(text)
 
-    cached = len(unique_texts) - len(to_translate)
-    print(f"    {source}->{target}: {cached} cached, {len(to_translate)} new")
+    cached = len(unique_texts) - len(to_translate) - overridden
+    note = f", {overridden} overridden" if overridden else ""
+    print(f"    {source}->{target}: {cached} cached, {len(to_translate)} new{note}")
 
     if not to_translate:
         return mapping
@@ -902,6 +935,7 @@ def translate_all(data_dir: Path):
     base_dir = data_dir.parent
     # Before the cache load: its eviction pass already needs the tags.
     _load_known_tags(data_dir)
+    _load_overrides(base_dir)
     _load_cache(base_dir)
     if TRANSLATE_BUDGET_SECONDS > 0:
         _deadline = time.monotonic() + TRANSLATE_BUDGET_SECONDS

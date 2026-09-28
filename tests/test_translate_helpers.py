@@ -1,6 +1,7 @@
 """Tests for pure helpers in the translation pipeline."""
 
 import json
+from pathlib import Path
 
 from scraper import translate
 from scraper.translate import (
@@ -166,6 +167,94 @@ def test_unique_map_escalates_card_effect_with_changed_numbers(monkeypatch):
 
     assert mapping[HSD14_SRC] == HSD14_GOOD_JA
     assert translate._cache.get(_cache_key("zh-TW", "ja", HSD14_SRC)) == HSD14_GOOD_JA
+
+
+REPO_ROOT = Path(__file__).resolve().parents[1]
+# Non-language keys allowed in an override entry.
+OVERRIDE_NOTE_KEYS = {"cards"}
+
+
+def test_load_overrides_flattens_file_and_ignores_notes(tmp_path, monkeypatch):
+    monkeypatch.setattr(translate, "_overrides", {})
+    overrides = {
+        "zh-TW": {
+            HSD14_SRC: {"cards": ["hSD14-005"], "ja": HSD14_GOOD_JA, "en": "", "jp": "typo", "zh-TW": "same"},
+        },
+        "xx": {"甲": {"en": "A"}},
+    }
+    (tmp_path / "translation_overrides.json").write_text(json.dumps(overrides, ensure_ascii=False), encoding="utf-8")
+
+    translate._load_overrides(tmp_path)
+
+    assert translate._overrides == {_cache_key("zh-TW", "ja", HSD14_SRC): HSD14_GOOD_JA}
+
+
+def test_load_overrides_without_file(tmp_path, monkeypatch):
+    monkeypatch.setattr(translate, "_overrides", {"stale": "x"})
+    translate._load_overrides(tmp_path)
+    assert translate._overrides == {}
+
+
+def test_unique_map_prefers_override_over_cache_and_api(monkeypatch):
+    """An override wins over a cached translation, costs no API call and is
+    never written to the cache."""
+    calls: list[list[str]] = []
+
+    def fake_batch(batch, s, t, _no_split=False, model=None):
+        calls.append(list(batch))
+        return [f"{x}-ja" for x in batch]
+
+    monkeypatch.setattr(translate, "_translate_batch_gemini", fake_batch)
+    monkeypatch.setattr(translate.time, "sleep", lambda *_: None)
+    monkeypatch.setattr(translate, "_overrides", {_cache_key("zh-TW", "ja", HSD14_SRC): HSD14_GOOD_JA})
+    translate._cache.clear()
+    translate._cache[_cache_key("zh-TW", "ja", HSD14_SRC)] = "machine translation"
+
+    mapping = translate._translate_unique_map([HSD14_SRC, "乙"], "zh-TW", "ja")
+
+    assert mapping == {HSD14_SRC: HSD14_GOOD_JA, "乙": "乙-ja"}
+    assert calls == [["乙"]]
+    assert translate._cache[_cache_key("zh-TW", "ja", HSD14_SRC)] == "machine translation"
+
+
+def test_translation_overrides_file_is_valid(monkeypatch):
+    """The committed overrides must all apply: a typo in the source text or a
+    wrong language code would otherwise be ignored without a trace. zh-TW keys
+    must be current card effect text, and the "cards" note must be true."""
+    data = json.loads((REPO_ROOT / translate.OVERRIDES_FILENAME).read_text(encoding="utf-8"))
+    cards = json.loads((REPO_ROOT / "web" / "data" / "cards.json").read_text(encoding="utf-8"))
+    monkeypatch.setattr(translate, "_known_tags", [])
+    translate._load_known_tags(REPO_ROOT / "web" / "data")
+
+    owners: dict[str, set[str]] = {}
+
+    def collect(card_id, obj):
+        if isinstance(obj, dict):
+            if isinstance(obj.get("zh-TW"), str):
+                owners.setdefault(obj["zh-TW"], set()).add(card_id)
+            for v in obj.values():
+                collect(card_id, v)
+        elif isinstance(obj, list):
+            for v in obj:
+                collect(card_id, v)
+
+    for card in cards:
+        collect(card.get("id"), card)
+
+    for source, entries in data.items():
+        assert source in translate.LANG_NAMES, source
+        for text, targets in entries.items():
+            langs = set(targets) - OVERRIDE_NOTE_KEYS
+            assert langs, text
+            assert langs <= set(translate.LANG_NAMES) - {source}, (text, langs)
+            for lang in langs:
+                value = targets[lang]
+                assert isinstance(value, str) and value.strip(), (text, lang)
+                assert not translate._numbers_mismatch(source, text, value), (text, lang)
+                assert not translate._looks_untranslated(value, lang), (text, lang)
+            if source == "zh-TW":
+                assert text in owners, f"not a current card effect: {text}"
+                assert set(targets.get("cards", [])) <= owners[text], (text, targets.get("cards"))
 
 
 def test_cache_key_is_stable_and_distinct():
