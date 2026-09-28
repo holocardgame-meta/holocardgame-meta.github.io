@@ -4,25 +4,168 @@ import json
 
 from scraper import translate
 from scraper.translate import (
+    _align_by_id,
     _cache_key,
     _make_multilang_from_maps,
     _make_multilang_list_from_maps,
-    _unwrap_result,
 )
 
-
-def test_unwrap_result_passes_strings_through():
-    assert _unwrap_result("hello", "en") == "hello"
-
-
-def test_unwrap_result_extracts_known_dict_keys():
-    assert _unwrap_result({"text": "hi"}, "en") == "hi"
-    assert _unwrap_result({"en": "hi"}, "en") == "hi"
-    assert _unwrap_result({"translation": "hi"}, "en") == "hi"
+# hSD14-005 / hSD14-007 shared effect, and the misaligned translation (really
+# hSD17-009's "+20" effect) that was cached for it.
+HSD14_SRC = "選擇自己的中心成員。這個回合中，該成員的藝能傷害+10。"
+HSD14_BAD_JA = "このターン中、このメンバーのカードのダメージ+20。"
+HSD14_GOOD_JA = "自分のセンターホロメンを選ぶ。このターンの間、選んだホロメンのアーツ+10。"
 
 
-def test_unwrap_result_falls_back_to_last_string_value():
-    assert _unwrap_result({"foo": 1, "bar": "baz"}, "en") == "baz"
+def _client_returning(payload: str, captured: dict | None = None):
+    """A fake genai client whose generate_content returns `payload` as text."""
+
+    class _Models:
+        def generate_content(self, **kwargs):
+            if captured is not None:
+                captured.update(kwargs)
+
+            class _R:
+                text = payload
+
+            return _R()
+
+    class _Client:
+        models = _Models()
+
+    return _Client()
+
+
+def test_align_by_id_orders_results_by_id():
+    results = [{"id": 2, "text": "B"}, {"id": 1, "text": "A"}]
+    assert _align_by_id(results, 2) == ["A", "B"]
+
+
+def test_align_by_id_rejects_split_item_that_keeps_the_count():
+    """The failure that shifted card translations: one item split across two
+    entries and another dropped — the count still matches, the ids don't."""
+    results = [{"id": 1, "text": "A"}, {"id": 2, "text": "B first half"}, {"id": 2, "text": "B second half"}]
+    assert _align_by_id(results, 3) is None
+
+
+def test_align_by_id_rejects_untagged_or_malformed_results():
+    assert _align_by_id(["A", "B"], 2) is None  # bare strings prove only the count
+    assert _align_by_id([{"id": 1, "text": "A"}], 2) is None
+    assert _align_by_id([{"id": 1, "text": "A"}, {"id": 3, "text": "C"}], 2) is None
+    assert _align_by_id([{"id": "1", "text": "A"}], 1) is None
+    assert _align_by_id([{"id": 1}], 1) is None
+    assert _align_by_id({"id": 1, "text": "A"}, 1) is None
+
+
+def test_translate_batch_requests_id_tagged_schema_and_reorders(monkeypatch):
+    captured: dict = {}
+    payload = '[{"id": 2, "text": "B"}, {"id": 1, "text": "[1] A"}]'
+    monkeypatch.setattr(translate, "_get_client", lambda: _client_returning(payload, captured))
+
+    assert translate._translate_batch_gemini(["甲", "乙"], "ja", "en") == ["A", "B"]
+    assert captured["config"].response_schema is translate._BATCH_RESPONSE_SCHEMA
+
+
+def test_translate_batch_splits_when_ids_do_not_line_up(monkeypatch):
+    """A response whose ids don't cover every item is never accepted, even when
+    its length matches; the batch is split and retried instead."""
+    calls: list[str] = []
+
+    class _Models:
+        def generate_content(self, **kwargs):
+            calls.append(kwargs["contents"])
+
+            class _R:
+                # Two items asked for → a duplicated id; one item → a clean answer.
+                text = (
+                    '[{"id": 1, "text": "X"}, {"id": 1, "text": "Y"}]'
+                    if kwargs["contents"].count("\n[") == 2
+                    else '[{"id": 1, "text": "OK"}]'
+                )
+
+            return _R()
+
+    class _Client:
+        models = _Models()
+
+    monkeypatch.setattr(translate, "_get_client", lambda: _Client())
+    monkeypatch.setattr(translate.time, "sleep", lambda *_: None)
+    monkeypatch.setattr(translate, "_deadline", None)
+
+    assert translate._translate_batch_gemini(["甲", "乙"], "ja", "en") == ["OK", "OK"]
+    assert len(calls) == 3 + 2  # three mismatched tries, then one per half
+
+
+def test_strip_batch_marker():
+    assert translate._strip_batch_marker("可以將…返回手牌。", "[75] Return 1 card.") == "Return 1 card."
+    assert translate._strip_batch_marker("可以將…返回手牌。", "Return 1 card.") == "Return 1 card."
+    # A source that itself starts with a marker keeps it.
+    assert translate._strip_batch_marker("[1] 甲", "[1] A") == "[1] A"
+
+
+def test_numbers_mismatch_flags_card_effect_with_changed_numbers():
+    assert translate._numbers_mismatch("zh-TW", HSD14_SRC, HSD14_BAD_JA) is True
+    assert translate._numbers_mismatch("zh-TW", HSD14_SRC, HSD14_GOOD_JA) is False
+    assert translate._numbers_mismatch(
+        "zh-TW", "給予對手的中心成員30點特殊傷害。", "Deal 20 Special Damage to the opponent's Center Member."
+    ) is True
+
+
+def test_numbers_mismatch_ignores_card_ids_small_counts_and_fullwidth():
+    src = "從自己的牌組展示1張hBP07-003並加入手牌。HP+20。"
+    assert translate._numbers_mismatch("zh-TW", src, "Reveal a hBP07-003 from your Deck. HP+20.") is False
+    assert translate._numbers_mismatch("zh-TW", src, "デッキからBP07-003を公開する。HP＋２０。") is False
+
+
+def test_numbers_mismatch_only_checks_card_effect_source():
+    """Free-text datasets (ja/en sources) paraphrase numbers; never checked."""
+    assert translate._numbers_mismatch("ja", "・80点から3枚", "Up to 3 cards") is False
+    assert translate._numbers_mismatch("en", "Deal 30 damage", "20ダメージ") is False
+
+
+def test_is_poisoned_entry_evicts_misaligned_card_effect():
+    assert translate._is_poisoned_entry(_cache_key("zh-TW", "ja", HSD14_SRC), HSD14_BAD_JA) is True
+    assert translate._is_poisoned_entry(_cache_key("zh-TW", "ja", HSD14_SRC), HSD14_GOOD_JA) is False
+
+
+def test_load_cache_strips_markers_before_evicting(tmp_path, monkeypatch):
+    """An echoed "[43] " marker is stripped, not mistaken for a changed number;
+    a misaligned card effect is evicted so the run retranslates it."""
+    monkeypatch.setattr(translate, "_cache", {})
+    monkeypatch.setattr(translate, "_cache_path", None)
+    monkeypatch.setattr(translate, "_cache_dirty", False)
+
+    marked_src = "給予對手的聯動成員40點特殊傷害。"
+    cache = {
+        _cache_key("zh-TW", "en", marked_src): "[43] Deal 40 Special Damage to the opponent's Collab Member.",
+        _cache_key("zh-TW", "ja", HSD14_SRC): HSD14_BAD_JA,
+    }
+    (tmp_path / "translation_cache.json").write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
+
+    translate._load_cache(tmp_path)
+
+    assert translate._cache[_cache_key("zh-TW", "en", marked_src)] == (
+        "Deal 40 Special Damage to the opponent's Collab Member."
+    )
+    assert _cache_key("zh-TW", "ja", HSD14_SRC) not in translate._cache
+    assert translate._cache_dirty is True
+
+
+def test_unique_map_escalates_card_effect_with_changed_numbers(monkeypatch):
+    """A card effect whose numbers changed is not cached; the stronger model's
+    faithful translation is."""
+
+    def fake_batch(batch, s, t, _no_split=False, model=None):
+        return [HSD14_GOOD_JA if model == translate.STRONG_MODEL else HSD14_BAD_JA for _ in batch]
+
+    monkeypatch.setattr(translate, "_translate_batch_gemini", fake_batch)
+    monkeypatch.setattr(translate.time, "sleep", lambda *_: None)
+    translate._cache.clear()
+
+    mapping = translate._translate_unique_map([HSD14_SRC], "zh-TW", "ja")
+
+    assert mapping[HSD14_SRC] == HSD14_GOOD_JA
+    assert translate._cache.get(_cache_key("zh-TW", "ja", HSD14_SRC)) == HSD14_GOOD_JA
 
 
 def test_cache_key_is_stable_and_distinct():
@@ -213,22 +356,11 @@ def test_unique_map_does_not_cache_undertranslated(monkeypatch):
 
 def test_translate_batch_passes_model_through(monkeypatch):
     """The model is selectable so callers can escalate to a stronger one."""
-    captured = {}
-
-    class _Models:
-        def generate_content(self, **kwargs):
-            captured["model"] = kwargs.get("model")
-
-            class _R:
-                text = '["X"]'
-
-            return _R()
-
-    class _Client:
-        models = _Models()
-
-    monkeypatch.setattr(translate, "_get_client", lambda: _Client())
-    translate._translate_batch_gemini(["甲"], "ja", "en", model="gemini-2.5-flash")
+    captured: dict = {}
+    monkeypatch.setattr(
+        translate, "_get_client", lambda: _client_returning('[{"id": 1, "text": "X"}]', captured)
+    )
+    assert translate._translate_batch_gemini(["甲"], "ja", "en", model="gemini-2.5-flash") == ["X"]
     assert captured["model"] == "gemini-2.5-flash"
 
 

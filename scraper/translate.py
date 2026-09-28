@@ -5,6 +5,8 @@ import os
 import re
 import sys
 import time
+import unicodedata
+from collections import Counter
 from pathlib import Path
 
 from google import genai
@@ -106,7 +108,7 @@ RULES:
 4. Keep card IDs (e.g. hBP07-003) unchanged.
 5. Keep numbers, symbols, and formatting (like ・, └, ＋, ＋20) unchanged.
 6. Preserve line breaks (\\n) exactly as in the original.
-7. Return ONLY a JSON array of translated strings, no other text.
+7. Return ONLY a JSON array with exactly one object per input item: {{"id": <the item's [number]>, "text": "<its translation>"}}. An item's whole translation, every paragraph of it, goes in that one object — never split an item across objects or merge items.
 8. Translate EVERY word into {target_lang}. The output must contain NO leftover Japanese hiragana or katakana, except proper names kept per rule 3. Japanese and Chinese share kanji — never pass Japanese text through untranslated just because it looks similar.
 
 {glossary}
@@ -200,8 +202,49 @@ def _looks_untranslated(text: object, target: str) -> bool:
     return len(_JA_GRAMMAR_RE.findall(outside_names)) >= 1
 
 
+# Card effects are the only zh-TW-sourced strings, and they are precise game
+# text: every damage/HP value must survive translation. Free-text datasets
+# (guides, deck write-ups) paraphrase and reformat card IDs, so they are not
+# number-checked.
+NUMBER_CHECKED_SOURCES = {"zh-TW"}
+_CARD_ID_RE = re.compile(r"[A-Za-z]{1,5}\d{2}-\d{3}")
+_NUMBER_RE = re.compile(r"\d+")
+# The prompt numbers items "[1] ...", and the model sometimes echoes that
+# marker into the translation ("[43] Return 1 ...").
+_BATCH_MARKER_RE = re.compile(r"^\s*\[\d+\]\s*")
+
+
+def _significant_numbers(text: str) -> Counter:
+    """Numbers >= 10 in the text (card IDs dropped, fullwidth digits folded).
+
+    Small counts (1張, 1st/2nd) are often reworded in translation ("a Debut
+    member"); damage and HP values are what a misaligned batch visibly breaks.
+    """
+    text = _CARD_ID_RE.sub("", unicodedata.normalize("NFKC", text))
+    return Counter(n for n in _NUMBER_RE.findall(text) if int(n) >= 10)
+
+
+def _numbers_mismatch(source: str, text: str, result: object) -> bool:
+    """True when a card-effect translation lost, added or changed a number.
+
+    Catches the misaligned-batch failure: the model returned the right number
+    of items but one item's translation landed on another source string (for
+    months hSD14-005 "+10" showed hSD17-009's "+20" in ja and en).
+    """
+    if source not in NUMBER_CHECKED_SOURCES or not isinstance(result, str):
+        return False
+    return _significant_numbers(text) != _significant_numbers(result)
+
+
+def _strip_batch_marker(text: str, result: str) -> str:
+    """Drop a "[N] " batch marker the model echoed into a translation."""
+    if _BATCH_MARKER_RE.match(text):
+        return result
+    return _BATCH_MARKER_RE.sub("", result, count=1)
+
+
 def _is_poisoned_entry(key: str, value) -> bool:
-    """True when a cache entry should be evicted and retranslated, covering two
+    """True when a cache entry should be evicted and retranslated, covering three
     failure modes:
 
     1. Give-up fallback cached by older code: the "translation" is the verbatim
@@ -211,14 +254,16 @@ def _is_poisoned_entry(key: str, value) -> bool:
     2. Under-translation: a non-ja target whose value still reads as Japanese
        prose. It differs from the source (so the exact-match check below misses
        it) yet shows Japanese in the UI — the ja->zh-TW shared-script failure.
+    3. Misaligned card effect: the numbers differ from the zh-TW source, i.e.
+       another string's translation was cached under this key.
     """
     if not isinstance(value, str):
         return True
     parts = key.split("|", 3)
     if len(parts) != 4:
         return False
-    target, text = parts[2], parts[3]
-    if _looks_untranslated(value, target):
+    source, target, text = parts[1], parts[2], parts[3]
+    if _looks_untranslated(value, target) or _numbers_mismatch(source, text, value):
         return True
     if value != text or len(text) <= 20:
         return False
@@ -230,6 +275,20 @@ def _load_cache(base_dir: Path):
     _cache_path = base_dir / "translation_cache.json"
     if _cache_path.exists():
         _cache = json.loads(_cache_path.read_text(encoding="utf-8"))
+        # Strip echoed "[N]" markers before the poison check, so a marker's
+        # number can't read as a changed card-effect number. The translation
+        # behind the marker is kept.
+        unmarked = 0
+        for k, v in _cache.items():
+            parts = k.split("|", 3)
+            if isinstance(v, str) and len(parts) == 4:
+                clean = _strip_batch_marker(parts[3], v)
+                if clean != v:
+                    _cache[k] = clean
+                    unmarked += 1
+        if unmarked:
+            _cache_dirty = True
+            print(f"[cache] Stripped echoed [N] batch markers from {unmarked} translations")
         # Evict poison on every load (not just once): the deploy workflow
         # reseeds the cache from git history on a cold Actions cache, so old
         # poisoned copies can resurface at any time.
@@ -238,7 +297,7 @@ def _load_cache(base_dir: Path):
             del _cache[k]
         if poisoned:
             _cache_dirty = True
-            print(f"[cache] Evicted {len(poisoned)} untranslated give-up entries; this run retranslates them")
+            print(f"[cache] Evicted {len(poisoned)} untranslated or misaligned entries; this run retranslates them")
         print(f"[cache] Loaded {len(_cache)} cached translations")
     else:
         _cache = {}
@@ -271,18 +330,41 @@ def _build_system_prompt(source: str, target: str) -> str:
     )
 
 
-def _unwrap_result(item, target: str) -> str:
-    """Extract plain text from LLM results that may be dicts instead of strings."""
-    if isinstance(item, str):
-        return item
-    if isinstance(item, dict):
-        for key in ["text", target, "en", "translation", "translated"]:
-            if key in item and isinstance(item[key], str):
-                return item[key]
-        vals = [v for v in item.values() if isinstance(v, str)]
-        if vals:
-            return vals[-1]
-    return str(item)
+# Each translation comes back tagged with the id of the "[N]" item it belongs to.
+_BATCH_RESPONSE_SCHEMA = types.Schema(
+    type=types.Type.ARRAY,
+    items=types.Schema(
+        type=types.Type.OBJECT,
+        properties={
+            "id": types.Schema(type=types.Type.INTEGER),
+            "text": types.Schema(type=types.Type.STRING),
+        },
+        required=["id", "text"],
+        property_ordering=["id", "text"],
+    ),
+)
+
+
+def _align_by_id(results: object, n: int) -> list[str] | None:
+    """Order an id-tagged batch response by id; None unless ids are exactly 1..n.
+
+    A bare list of strings only proves the count: when the model split one item
+    across two entries and dropped another, the length still matched and every
+    translation after the split was cached under the wrong source string.
+    """
+    if not isinstance(results, list) or len(results) != n:
+        return None
+    by_id: dict[int, str] = {}
+    for r in results:
+        if not isinstance(r, dict):
+            return None
+        rid, text = r.get("id"), r.get("text")
+        if not isinstance(rid, int) or not isinstance(text, str) or rid in by_id:
+            return None
+        by_id[rid] = text
+    if set(by_id) != set(range(1, n + 1)):
+        return None
+    return [by_id[i] for i in range(1, n + 1)]
 
 
 def _translate_batch_gemini(
@@ -290,7 +372,7 @@ def _translate_batch_gemini(
 ) -> list[str | None]:
     """Translate a batch of texts using a single Gemini API call.
 
-    On persistent batch-size mismatch we split the batch in half rather than
+    On a persistent mismatch (wrong item count or ids) we split the batch in half rather than
     positionally padding — padding shifts all items after the gap by one and
     silently corrupts translations (e.g. card[N] gets card[N+1]'s text and
     the last card gets its source-language text as a fallback).
@@ -321,14 +403,16 @@ def _translate_batch_gemini(
                     system_instruction=system_prompt,
                     temperature=0.1,
                     response_mime_type="application/json",
+                    response_schema=_BATCH_RESPONSE_SCHEMA,
                 ),
             )
             raw = (response.text or "").strip()
             results = json.loads(raw)
-            if isinstance(results, list) and len(results) == len(texts):
-                return [_unwrap_result(r, target) for r in results]
+            aligned = _align_by_id(results, len(texts))
+            if aligned is not None:
+                return [_strip_batch_marker(t, r) for t, r in zip(texts, aligned)]
             got = len(results) if isinstance(results, list) else 0
-            print(f"    [warn] Batch size mismatch: expected {len(texts)}, got {got}")
+            print(f"    [warn] Batch mismatch: expected ids 1..{len(texts)}, got {got} items")
             mismatch_retries += 1
             if mismatch_retries >= 3:
                 break  # exit retry loop, fall through to split/give-up
@@ -378,6 +462,16 @@ def _translate_batch_gemini(
     return [None] * len(texts)
 
 
+def _unusable(result: str | None, text: str, source: str, target: str) -> bool:
+    """True when a batch result must not be cached: a give-up, an
+    under-translation, or a card effect whose numbers changed."""
+    return (
+        result is None
+        or _looks_untranslated(result, target)
+        or _numbers_mismatch(source, text, result)
+    )
+
+
 def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> dict[str, str]:
     global _cache_dirty
     mapping: dict[str, str] = {}
@@ -416,9 +510,9 @@ def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> 
 
         batch_failed = 0
         for text, result in zip(batch, results):
-            # A give-up (None) or still-Japanese result is deferred to the
-            # escalation pass below rather than cached as-is.
-            if result is None or _looks_untranslated(result, target):
+            # A give-up (None), still-Japanese or number-changed result is
+            # deferred to the escalation pass below rather than cached as-is.
+            if _unusable(result, text, source, target):
                 failed_items.append(text)
                 batch_failed += 1
                 continue
@@ -462,7 +556,7 @@ def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> 
             esc_batch = remaining[esc_start:esc_start + ESCALATION_BATCH_SIZE]
             results = _translate_batch_gemini(esc_batch, source, target, model=esc_model)
             for text, result in zip(esc_batch, results):
-                if result is None or _looks_untranslated(result, target):
+                if _unusable(result, text, source, target):
                     next_remaining.append(text)
                     continue
                 mapping[text] = result
