@@ -3050,7 +3050,7 @@
       "effect": {
         "zh-TW": "給予對手的中心成員30點特殊傷害(即使擊倒對手的成員，也不會減少對手的生命值)。",
         "ja": "相手のセンターメンバーに30点特殊ダメージを与える（相手のメンバーをダウンさせても、相手のライフは減らない）。\n",
-        "en": "Deal 20 Special Damage to the opponent's Center Member.",
+        "en": "Deal 30 Special Damage to an opponent's Center Holomen (Opponent's Life is not reduced even if an opponent's Holomen is Down).",
         "fr": "Infligez 30 dégâts spéciaux au Membre au Centre de l'adversaire (Même si vous mettez K.O. un Membre de l'adversaire, cela ne réduit pas les Points de vie de l'adversaire).",
         "es": "Inflige 30 de daño especial al miembro central del oponente (incluso si el miembro del oponente es K.O., la Vida del oponente no disminuirá)."
       }
@@ -3089,7 +3089,7 @@
       "effect": {
         "zh-TW": "給予對手的中心成員30點特殊傷害(即使擊倒對手的成員，也不會減少對手的生命值)。",
         "ja": "相手のセンターメンバーに30点特殊ダメージを与える（相手のメンバーをダウンさせても、相手のライフは減らない）。\n",
-        "en": "Deal 20 Special Damage to the opponent's Center Member.",
+        "en": "Deal 30 Special Damage to an opponent's Center Holomen (Opponent's Life is not reduced even if an opponent's Holomen is Down).",
         "fr": "Infligez 30 dégâts spéciaux au Membre au Centre de l'adversaire (Même si vous mettez K.O. un Membre de l'adversaire, cela ne réduit pas les Points de vie de l'adversaire).",
         "es": "Inflige 30 de daño especial al miembro central del oponente (incluso si el miembro del oponente es K.O., la Vida del oponente no disminuirá)."
       }
@@ -3128,7 +3128,7 @@
       "effect": {
         "zh-TW": "給予對手的中心成員30點特殊傷害(即使擊倒對手的成員，也不會減少對手的生命值)。",
         "ja": "相手のセンターメンバーに30点特殊ダメージを与える（相手のメンバーをダウンさせても、相手のライフは減らない）。\n",
-        "en": "Deal 20 Special Damage to the opponent's Center Member.",
+        "en": "Deal 30 Special Damage to an opponent's Center Holomen (Opponent's Life is not reduced even if an opponent's Holomen is Down).",
         "fr": "Infligez 30 dégâts spéciaux au Membre au Centre de l'adversaire (Même si vous mettez K.O. un Membre de l'adversaire, cela ne réduit pas les Points de vie de l'adversaire).",
         "es": "Inflige 30 de daño especial al miembro central del oponente (incluso si el miembro del oponente es K.O., la Vida del oponente no disminuirá)."
       }
@@ -3167,7 +3167,7 @@
       "effect": {
         "zh-TW": "給予對手的中心成員50點特殊傷害。",
         "ja": "相手のセンターメンバーに50点特殊ダメージを与える。\n",
-        "en": "Deal 30 Special Damage to the opponent's Center Member (even if you K.O. the opponent's Member, their Life does not decrease).",
+        "en": "Deal 50 Special Damage to an opponent's Center Holomen.",
         "fr": "Infligez 50 dégâts spéciaux au Membre au Centre de l'adversaire.",
         "es": "Inflige 50 de daño especial al miembro central del oponente."
       }
@@ -3186,7 +3186,7 @@
       "effect": {
         "zh-TW": "使用這個藝能擊倒對手的成員時，如果傷害超過該成員剩餘HP的50以上，對手的生命值-1。",
         "ja": "このアーツで相手のメンバーをダウンさせた場合、ダメージがそのメンバーの残りHPの50以上超えた場合、相手のライフを-1する。",
-        "en": "[43] When this Arts K.O.s an opponent's Member, if the damage exceeds the remaining HP by 50 or more, opponent's Life -1.",
+        "en": "When this Arts K.O.s an opponent's Member, if the damage exceeds the remaining HP by 50 or more, opponent's Life -1.",
         "fr": "Lorsque vous mettez K.O. un membre de l'adversaire avec cet Arts, si les dégâts dépassent de 50 ou plus les Points de vie restants de ce membre, les Points de vie de l'adversaire -1.",
         "es": "Cuando usas este Arts para K.O. al Miembro de tu oponente, si el daño excede el 50% de la Vida restante de ese Miembro, la Vida de tu oponente es -1."
       }
@@ -3214,7 +3214,7 @@
       "effect": {
         "zh-TW": "給予對手的中心成員50點特殊傷害。",
         "ja": "相手のセンターメンバーに50点特殊ダメージを与える。\n",
-        "en": "Deal 30 Special Damage to the opponent's Center Member (even if you K.O. the opponent's Member, their Life does not decrease).",
+        "en": "Deal 50 Special Damage to an opponent's Center Holomen.",
         "fr": "Infligez 50 dégâts spéciaux au Membre au Centre de l'adversaire.",
         "es": "Inflige 50 de daño especial al miembro central del oponente."
       }
@@ -3233,7 +3233,7 @@
       "effect": {
         "zh-TW": "使用這個藝能擊倒對手的成員時，如果傷害超過該成員剩餘HP的50以上，對手的生命值-1。",
         "ja": "このアーツで相手のメンバーをダウンさせた場合、ダメージがそのメンバーの残りHPの50以上超えた場合、相手のライフを-1する。",
-        "en": "[43] When this Arts K.O.s an opponent's Member, if the damage exceeds the remaining HP by 50 or more, opponent's Life -1.",
+        "en": "When this Arts K.O.s an opponent's Member, if the damage exceeds the remaining HP by 50 or more, opponent's Life -1.",
         "fr": "Lorsque vous mettez K.O. un membre de l'adversaire avec cet Arts, si les dégâts dépassent de 50 ou plus les Points de vie restants de ce membre, les Points de vie de l'adversaire -1.",
         "es": "Cuando usas este Arts para K.O. al Miembro de tu oponente, si el daño excede el 50% de la Vida restante de ese Miembro, la Vida de tu oponente es -1."
       }
@@ -6745,7 +6745,7 @@
       "effect": {
         "zh-TW": "「アイラニ・イオフィフティーン」以外標示#ID的成員在自己的舞台上時，這個藝能傷害+50。",
         "ja": "自分のステージに「#ID」を持つ「アイラニ・イオフィフティーン」以外のメンバーがいる場合、このアーツのダメージ+50。",
-        "en": "[4] If a Member with #ID other than \"アイラニ・イオフィフティーン\" is on your Stage, this Arts' damage +50.",
+        "en": "If a Member with #ID other than \"アイラニ・イオフィフティーン\" is on your Stage, this Arts' damage +50.",
         "fr": "Si un membre marqué #ID (sauf \"アイラニ・イオフィフティーン\") est sur votre Scène, les dégâts de cet Arts sont augmentés de 50.",
         "es": "Mientras un Miembro con la etiqueta #ID (excepto \"アイラニ・イオフィフティーン\") esté en tu Escenario, este Arts inflige +50 de daño."
       }
@@ -6791,7 +6791,7 @@
       "effect": {
         "zh-TW": "「アイラニ・イオフィフティーン」以外標示#ID的成員在自己的舞台上時，這個藝能傷害+50。",
         "ja": "自分のステージに「#ID」を持つ「アイラニ・イオフィフティーン」以外のメンバーがいる場合、このアーツのダメージ+50。",
-        "en": "[4] If a Member with #ID other than \"アイラニ・イオフィフティーン\" is on your Stage, this Arts' damage +50.",
+        "en": "If a Member with #ID other than \"アイラニ・イオフィフティーン\" is on your Stage, this Arts' damage +50.",
         "fr": "Si un membre marqué #ID (sauf \"アイラニ・イオフィフティーン\") est sur votre Scène, les dégâts de cet Arts sont augmentés de 50.",
         "es": "Mientras un Miembro con la etiqueta #ID (excepto \"アイラニ・イオフィフティーン\") esté en tu Escenario, este Arts inflige +50 de daño."
       }
@@ -6837,7 +6837,7 @@
       "effect": {
         "zh-TW": "「アイラニ・イオフィフティーン」以外標示#ID的成員在自己的舞台上時，這個藝能傷害+50。",
         "ja": "自分のステージに「#ID」を持つ「アイラニ・イオフィフティーン」以外のメンバーがいる場合、このアーツのダメージ+50。",
-        "en": "[4] If a Member with #ID other than \"アイラニ・イオフィフティーン\" is on your Stage, this Arts' damage +50.",
+        "en": "If a Member with #ID other than \"アイラニ・イオフィフティーン\" is on your Stage, this Arts' damage +50.",
         "fr": "Si un membre marqué #ID (sauf \"アイラニ・イオフィフティーン\") est sur votre Scène, les dégâts de cet Arts sont augmentés de 50.",
         "es": "Mientras un Miembro con la etiqueta #ID (excepto \"アイラニ・イオフィフティーン\") esté en tu Escenario, este Arts inflige +50 de daño."
       }
@@ -6883,7 +6883,7 @@
       "effect": {
         "zh-TW": "「アイラニ・イオフィフティーン」以外標示#ID的成員在自己的舞台上時，這個藝能傷害+50。",
         "ja": "自分のステージに「#ID」を持つ「アイラニ・イオフィフティーン」以外のメンバーがいる場合、このアーツのダメージ+50。",
-        "en": "[4] If a Member with #ID other than \"アイラニ・イオフィフティーン\" is on your Stage, this Arts' damage +50.",
+        "en": "If a Member with #ID other than \"アイラニ・イオフィフティーン\" is on your Stage, this Arts' damage +50.",
         "fr": "Si un membre marqué #ID (sauf \"アイラニ・イオフィフティーン\") est sur votre Scène, les dégâts de cet Arts sont augmentés de 50.",
         "es": "Mientras un Miembro con la etiqueta #ID (excepto \"アイラニ・イオフィフティーン\") esté en tu Escenario, este Arts inflige +50 de daño."
       }
@@ -7015,7 +7015,7 @@
       "effect": {
         "zh-TW": "給予對手的聯動成員10點特殊傷害。",
         "ja": "相手のコラボメンバーに10点特殊ダメージを与える。\n",
-        "en": "Deal 40 Special Damage to the opponent's Center Member and Collab Member.",
+        "en": "Deal 10 Special Damage to an opponent's Collab Holomen.",
         "fr": "Infligez 10 dégâts spéciaux au Membre Collab.",
         "es": "Inflige 10 de daño especial al miembro Collab del oponente."
       }
@@ -7032,7 +7032,7 @@
       "effect": {
         "zh-TW": "給予對手的聯動成員10點特殊傷害。",
         "ja": "相手のコラボメンバーに10点特殊ダメージを与える。\n",
-        "en": "Deal 40 Special Damage to the opponent's Center Member and Collab Member.",
+        "en": "Deal 10 Special Damage to an opponent's Collab Holomen.",
         "fr": "Infligez 10 dégâts spéciaux au Membre Collab.",
         "es": "Inflige 10 de daño especial al miembro Collab del oponente."
       }
@@ -7295,7 +7295,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區1~2張標示#秘密結社holoX的成員返回手牌。",
         "ja": "自分のアーカイブから「#秘密結社holoX」を持つメンバーを1～2枚選び、手札に加える。",
-        "en": "[61] Return 1 or 2 Members with #秘密結社holoX from your Archive to your Hand.",
+        "en": "Return 1 or 2 Members with #秘密結社holoX from your Archive to your Hand.",
         "fr": "Vous pouvez retourner 1 ou 2 membres marqués #秘密結社holoX de votre Archive dans votre Main.",
         "es": "Puedes devolver 1-2 Miembros con la etiqueta #秘密結社 holoX de tu Archivo a tu Mano."
       }
@@ -7342,7 +7342,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區1~2張標示#秘密結社holoX的成員返回手牌。",
         "ja": "自分のアーカイブから「#秘密結社holoX」を持つメンバーを1～2枚選び、手札に加える。",
-        "en": "[61] Return 1 or 2 Members with #秘密結社holoX from your Archive to your Hand.",
+        "en": "Return 1 or 2 Members with #秘密結社holoX from your Archive to your Hand.",
         "fr": "Vous pouvez retourner 1 ou 2 membres marqués #秘密結社holoX de votre Archive dans votre Main.",
         "es": "Puedes devolver 1-2 Miembros con la etiqueta #秘密結社 holoX de tu Archivo a tu Mano."
       }
@@ -7389,7 +7389,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區1~2張標示#秘密結社holoX的成員返回手牌。",
         "ja": "自分のアーカイブから「#秘密結社holoX」を持つメンバーを1～2枚選び、手札に加える。",
-        "en": "[61] Return 1 or 2 Members with #秘密結社holoX from your Archive to your Hand.",
+        "en": "Return 1 or 2 Members with #秘密結社holoX from your Archive to your Hand.",
         "fr": "Vous pouvez retourner 1 ou 2 membres marqués #秘密結社holoX de votre Archive dans votre Main.",
         "es": "Puedes devolver 1-2 Miembros con la etiqueta #秘密結社 holoX de tu Archivo a tu Mano."
       }
@@ -7436,7 +7436,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區1~2張標示#秘密結社holoX的成員返回手牌。",
         "ja": "自分のアーカイブから「#秘密結社holoX」を持つメンバーを1～2枚選び、手札に加える。",
-        "en": "[61] Return 1 or 2 Members with #秘密結社holoX from your Archive to your Hand.",
+        "en": "Return 1 or 2 Members with #秘密結社holoX from your Archive to your Hand.",
         "fr": "Vous pouvez retourner 1 ou 2 membres marqués #秘密結社holoX de votre Archive dans votre Main.",
         "es": "Puedes devolver 1-2 Miembros con la etiqueta #秘密結社 holoX de tu Archivo a tu Mano."
       }
@@ -7760,7 +7760,7 @@
       "effect": {
         "zh-TW": "可以將1張與這個成員重疊的成員放到存檔區：給予對手的聯動成員40點特殊傷害。",
         "ja": "このメンバーと重ねていたメンバー1枚をアーカイブに置くことができる：相手のコラボメンバーに40点特殊ダメージを与える。",
-        "en": "[49] You can send 1 Member overlapped with this Member to the Archive: Deal 40 special damage to the opponent's Collab Member.",
+        "en": "You can send 1 Member overlapped with this Member to the Archive: Deal 40 special damage to the opponent's Collab Member.",
         "fr": "Vous pouvez envoyer 1 membre superposé à ce membre à l'Archive : infligez 40 points de dégâts spéciaux au membre Collab de l'adversaire.",
         "es": "Puedes poner 1 Miembro apilado con este Miembro en tu Archivo: Inflige 40 de daño especial al Miembro Collab de tu oponente."
       }
@@ -7804,7 +7804,7 @@
       "effect": {
         "zh-TW": "可以將1張與這個成員重疊的成員放到存檔區：給予對手的聯動成員40點特殊傷害。",
         "ja": "このメンバーと重ねていたメンバー1枚をアーカイブに置くことができる：相手のコラボメンバーに40点特殊ダメージを与える。",
-        "en": "[49] You can send 1 Member overlapped with this Member to the Archive: Deal 40 special damage to the opponent's Collab Member.",
+        "en": "You can send 1 Member overlapped with this Member to the Archive: Deal 40 special damage to the opponent's Collab Member.",
         "fr": "Vous pouvez envoyer 1 membre superposé à ce membre à l'Archive : infligez 40 points de dégâts spéciaux au membre Collab de l'adversaire.",
         "es": "Puedes poner 1 Miembro apilado con este Miembro en tu Archivo: Inflige 40 de daño especial al Miembro Collab de tu oponente."
       }
@@ -8417,7 +8417,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區的1張「座員」返回手牌。",
         "ja": "自分のアーカイブから「座員」1枚を選び、手札に加える。",
-        "en": "[75] Return 1 \"座員\" from your Archive to your Hand.",
+        "en": "Return 1 \"座員\" from your Archive to your Hand.",
         "fr": "Vous pouvez retourner 1 \"座員\" de votre Archive dans votre Main.",
         "es": "Puedes devolver 1 \"座員\" de tu Archivo a tu mano."
       }
@@ -8434,7 +8434,7 @@
       "effect": {
         "zh-TW": "自己所有的成員每帶有1張粉絲，這個藝能傷害+20。",
         "ja": "自分の全てのメンバーがファンを１枚持つたび、このアーツのダメージ＋20。",
-        "en": "For each Fan your Members have, this Arts' damage +2.",
+        "en": "This Arts damage +20 for each Fan attached to your Holomen.",
         "fr": "Pour chaque Fan que possède chacun de vos Membres, les Dégâts de cette Arts +20.",
         "es": "Por cada Fan que tenga cada uno de tus miembros, el daño de este Arts +20."
       }
@@ -8468,7 +8468,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區的1張「座員」返回手牌。",
         "ja": "自分のアーカイブから「座員」1枚を選び、手札に加える。",
-        "en": "[75] Return 1 \"座員\" from your Archive to your Hand.",
+        "en": "Return 1 \"座員\" from your Archive to your Hand.",
         "fr": "Vous pouvez retourner 1 \"座員\" de votre Archive dans votre Main.",
         "es": "Puedes devolver 1 \"座員\" de tu Archivo a tu mano."
       }
@@ -8485,7 +8485,7 @@
       "effect": {
         "zh-TW": "自己所有的成員每帶有1張粉絲，這個藝能傷害+20。",
         "ja": "自分の全てのメンバーがファンを１枚持つたび、このアーツのダメージ＋20。",
-        "en": "For each Fan your Members have, this Arts' damage +2.",
+        "en": "This Arts damage +20 for each Fan attached to your Holomen.",
         "fr": "Pour chaque Fan que possède chacun de vos Membres, les Dégâts de cette Arts +20.",
         "es": "Por cada Fan que tenga cada uno de tus miembros, el daño de este Arts +20."
       }
@@ -10951,7 +10951,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區的1~3張吶喊卡返回吶喊牌組。將吶喊牌組重新洗牌。",
         "ja": "自分のアーカイブから1～3枚のエールカードを選び、エールデッキに戻す。その後、エールデッキをシャッフルする。",
-        "en": "[68] Return 1 to 3 Cheer cards from your Archive to your Cheer Deck. Shuffle your Cheer Deck.",
+        "en": "Return 1 to 3 Cheer cards from your Archive to your Cheer Deck. Shuffle your Cheer Deck.",
         "fr": "Vous pouvez retourner 1 à 3 cartes d'Encouragement de votre Archive dans votre Deck d'encouragement. Mélangez votre Deck d'encouragement.",
         "es": "Puedes devolver 1-3 cartas de Cheer de tu Archivo a tu Mazo Cheer. Baraja tu Mazo Cheer."
       }
@@ -11032,7 +11032,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#歌的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#歌」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[38] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #歌 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #歌 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #歌, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #歌 y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -11048,7 +11048,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#歌的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#歌」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[38] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #歌 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #歌 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #歌, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #歌 y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -11317,7 +11317,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意數量的「兎田ぺこら」「ムーナ・ホシノヴァ」並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「兎田ぺこら」「ムーナ・ホシノヴァ」を好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[15] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any number of \"兎田ぺこら\" and \"ムーナ・ホシノヴァ\" and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any number of \"兎田ぺこら\" and \"ムーナ・ホシノヴァ\" and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel nombre de \"兎田ぺこら\", \"ムーナ・ホシノヴァ\", puis ajoutez-les à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier cantidad de \"兎田ぺこら\" y \"ムーナ・ホシノヴァ\" y añádelos a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -11349,7 +11349,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#ID3期生的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#ID3期生」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[31] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #ID3期生 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #ID3期生 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #ID3期生, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #ID3期生 y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -11381,7 +11381,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#Promise的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#Promise」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[33] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #Promise and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #Promise and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #Promise, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #Promise y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -11397,7 +11397,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#Promise的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#Promise」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[33] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #Promise and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #Promise and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #Promise, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #Promise y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -11620,7 +11620,7 @@
     "supportEffect": {
       "zh-TW": "■帶有這個粉絲的成員使用藝能時，這個粉絲也視為紅色吶喊卡。\n■帶有這個粉絲的成員受到的傷害+10。\n\n這個粉絲只能附加給「尾丸ポルカ」，每位成員可以帶有任意數量的粉絲。",
       "ja": "■この「ファン」を持つメンバーが「アーツ」を使用した際、この「ファン」も赤の「エール」カードとして扱う。\n■この「ファン」を持つメンバーが受けるダメージ＋10。\n\nこの「ファン」は「尾丸ポルカ」にのみ付与でき、1人のメンバーにつき任意の枚数付与できる。",
-      "en": "[Limited Fan]\n■When a Member with this Fan uses Arts, this Fan is also treated as a red Cheer card.\n■When a Member with this Fan is defeated, your opponent may draw 1 card from their Deck.\n\nThis Fan can only be attached to \"尾丸ポルカ\". Each Member can have any number of Fans.",
+      "en": "■When a Holomen with this Fan is using an Arts, this Fan is also treated as a Red Cheer card.\n■Damage taken by a Holomen with this Fan +10.\n\nThis Fan can only be attached to \"Omaru Polka\". Any number of Fans can be attached to each Holomen.",
       "fr": "■ Lorsque le membre portant ce Fan utilise un Art, ce Fan est également considéré comme une carte d'encouragement rouge.\n■ Les dégâts subis par le membre portant ce Fan sont augmentés de 10.\n\nCe Fan ne peut être attaché qu'à \"尾丸ポルカ\", et chaque membre peut porter un nombre illimité de Fans.",
       "es": "■ Cuando un Miembro con este Fan usa un Arts, este Fan también se considera una carta Cheer roja.\n■ El daño recibido por un Miembro con este Fan es +10.\n\nEste Fan solo puede ser adjuntado a \"尾丸ポルカ\". Cada Miembro puede tener cualquier cantidad de Fans adjuntados."
     },
@@ -11636,7 +11636,7 @@
     "supportEffect": {
       "zh-TW": "■帶有這個粉絲的成員使用藝能時，這個粉絲也視為紅色吶喊卡。\n■帶有這個粉絲的成員受到的傷害+10。\n\n這個粉絲只能附加給「尾丸ポルカ」，每位成員可以帶有任意數量的粉絲。",
       "ja": "■この「ファン」を持つメンバーが「アーツ」を使用した際、この「ファン」も赤の「エール」カードとして扱う。\n■この「ファン」を持つメンバーが受けるダメージ＋10。\n\nこの「ファン」は「尾丸ポルカ」にのみ付与でき、1人のメンバーにつき任意の枚数付与できる。",
-      "en": "[Limited Fan]\n■When a Member with this Fan uses Arts, this Fan is also treated as a red Cheer card.\n■When a Member with this Fan is defeated, your opponent may draw 1 card from their Deck.\n\nThis Fan can only be attached to \"尾丸ポルカ\". Each Member can have any number of Fans.",
+      "en": "■When a Holomen with this Fan is using an Arts, this Fan is also treated as a Red Cheer card.\n■Damage taken by a Holomen with this Fan +10.\n\nThis Fan can only be attached to \"Omaru Polka\". Any number of Fans can be attached to each Holomen.",
       "fr": "■ Lorsque le membre portant ce Fan utilise un Art, ce Fan est également considéré comme une carte d'encouragement rouge.\n■ Les dégâts subis par le membre portant ce Fan sont augmentés de 10.\n\nCe Fan ne peut être attaché qu'à \"尾丸ポルカ\", et chaque membre peut porter un nombre illimité de Fans.",
       "es": "■ Cuando un Miembro con este Fan usa un Arts, este Fan también se considera una carta Cheer roja.\n■ El daño recibido por un Miembro con este Fan es +10.\n\nEste Fan solo puede ser adjuntado a \"尾丸ポルカ\". Cada Miembro puede tener cualquier cantidad de Fans adjuntados."
     },
@@ -15221,7 +15221,7 @@
       "effect": {
         "zh-TW": "給予對手的聯動成員20點特殊傷害。",
         "ja": "相手のコラボメンバーに20点特殊ダメージを与える。\n",
-        "en": "Deal 10 Special Damage to the opponent's Collab Member.",
+        "en": "Deal 20 Special Damage to an opponent's Collab Holomen.",
         "fr": "Infligez 20 dégâts spéciaux au Membre Collab.",
         "es": "Inflige 20 de daño especial al miembro Collab del oponente."
       }
@@ -15260,7 +15260,7 @@
       "effect": {
         "zh-TW": "給予對手的聯動成員20點特殊傷害。",
         "ja": "相手のコラボメンバーに20点特殊ダメージを与える。\n",
-        "en": "Deal 10 Special Damage to the opponent's Collab Member.",
+        "en": "Deal 20 Special Damage to an opponent's Collab Holomen.",
         "fr": "Infligez 20 dégâts spéciaux au Membre Collab.",
         "es": "Inflige 20 de daño especial al miembro Collab del oponente."
       }
@@ -15379,7 +15379,7 @@
       "effect": {
         "zh-TW": "給予對手的聯動成員20點特殊傷害。",
         "ja": "相手のコラボメンバーに20点特殊ダメージを与える。\n",
-        "en": "Deal 10 Special Damage to the opponent's Collab Member.",
+        "en": "Deal 20 Special Damage to an opponent's Collab Holomen.",
         "fr": "Infligez 20 dégâts spéciaux au Membre Collab.",
         "es": "Inflige 20 de daño especial al miembro Collab del oponente."
       }
@@ -15417,7 +15417,7 @@
       "effect": {
         "zh-TW": "給予對手的聯動成員20點特殊傷害。",
         "ja": "相手のコラボメンバーに20点特殊ダメージを与える。\n",
-        "en": "Deal 10 Special Damage to the opponent's Collab Member.",
+        "en": "Deal 20 Special Damage to an opponent's Collab Holomen.",
         "fr": "Infligez 20 dégâts spéciaux au Membre Collab.",
         "es": "Inflige 20 de daño especial al miembro Collab del oponente."
       }
@@ -18352,7 +18352,7 @@
       "effect": {
         "zh-TW": "自己1位標示#Myth的成員HP回復20點。",
         "ja": "自分の#MythのメンバーのHPを20回復する。\n",
-        "en": "1 Debut Member marked as #ID2期生 from your side can Bloom using a Member from your Archive. You can only use 1 \"限界化！！\" effect per turn.\n",
+        "en": "Heal 20 Life Points for 1 of your Holomen with the #Myth marker.",
         "fr": "1 Membre #Myth voit ses HP restaurés de 20 points.",
         "es": "1 miembro tuyo con la etiqueta #Myth recupera 20 de Vida."
       }
@@ -19474,7 +19474,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#絵的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#絵」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[40] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #絵 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #絵 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #絵, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #絵 y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -19567,7 +19567,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意數量的「天音かなた」「AZKi」「沙花叉クロヱ」並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「天音かなた」「AZKi」「沙花叉クロヱ」を好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[17] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any number of \"天音かなた\", \"AZKi\", and \"沙花叉クロヱ\" and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any number of \"天音かなた\", \"AZKi\", and \"沙花叉クロヱ\" and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel nombre de \"天音かなた\", \"AZKi\", \"沙花叉クロヱ\", puis ajoutez-les à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier cantidad de \"天音かなた\", \"AZKi\", \"沙花叉クロヱ\" y añádelos a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -19621,7 +19621,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#秘密結社holoX的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#秘密結社holoX」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[39] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #秘密結社holoX and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #秘密結社holoX and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #秘密結社holoX, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #秘密結社holoX y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -19637,7 +19637,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#秘密結社holoX的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#秘密結社holoX」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[39] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #秘密結社holoX and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #秘密結社holoX and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #秘密結社holoX, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #秘密結社holoX y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -19653,7 +19653,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#ID2期生的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#ID2期生」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[30] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #ID2期生 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #ID2期生 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #ID2期生, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #ID2期生 y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -19669,7 +19669,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#ゲーマーズ的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#ゲーマーズ」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[36] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #ゲーマーズ and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #ゲーマーズ and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #ゲーマーズ, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #ゲーマーズ y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -19775,7 +19775,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#3期生的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#3期生」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[24] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #3期生 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #3期生 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #3期生, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #3期生 y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -19791,7 +19791,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#3期生的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#3期生」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[24] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #3期生 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #3期生 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #3期生, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #3期生 y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -21059,7 +21059,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區的1張「ルーナイト」附加給自己的「姫森ルーナ」。",
         "ja": "自分のアーカイブから「ルーナイト」1枚を選び、自分の「姫森ルーナ」に付与することができる。",
-        "en": "[72] You can attach 1 \"ルーナイト\" from your Archive to your \"姫森ルーナ\".",
+        "en": "You can attach 1 \"ルーナイト\" from your Archive to your \"姫森ルーナ\".",
         "fr": "Vous pouvez superposer 1 \"ルーナイト\" de votre Archive à votre \"姫森ルーナ\".",
         "es": "Puedes adjuntar 1 \"ルーナイト\" de tu Archivo a tu \"姫森ルーナ\"."
       }
@@ -21103,7 +21103,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區的1張「ルーナイト」附加給自己的「姫森ルーナ」。",
         "ja": "自分のアーカイブから「ルーナイト」1枚を選び、自分の「姫森ルーナ」に付与することができる。",
-        "en": "[72] You can attach 1 \"ルーナイト\" from your Archive to your \"姫森ルーナ\".",
+        "en": "You can attach 1 \"ルーナイト\" from your Archive to your \"姫森ルーナ\".",
         "fr": "Vous pouvez superposer 1 \"ルーナイト\" de votre Archive à votre \"姫森ルーナ\".",
         "es": "Puedes adjuntar 1 \"ルーナイト\" de tu Archivo a tu \"姫森ルーナ\"."
       }
@@ -23133,7 +23133,7 @@
       "effect": {
         "zh-TW": "給予對手的中心成員10點特殊傷害。如果該成員帶有道具時，則給予30點特殊傷害。",
         "ja": "相手のセンターメンバーに10点特殊ダメージを与える。そのメンバーが道具を持っている場合、30点特殊ダメージを与える。\n",
-        "en": "Deal 10 Special Damage to the opponent's Center Member. If it is your first turn going second, deal 20 Special Damage instead.",
+        "en": "Deal 10 Special Damage to an opponent's Center Holomen. If that Holomen has an Item attached, deal 30 Special Damage.",
         "fr": "Infligez 10 dégâts spéciaux au Membre au Centre de l'adversaire. Si ce Membre a un objet, infligez 30 dégâts spéciaux.",
         "es": "Inflige 10 de daño especial al miembro central del oponente. Si ese miembro tiene un Objeto adjuntado, inflige 30 de daño especial."
       }
@@ -23172,7 +23172,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區1張Buzz以外標示#1期生的1st成員或2nd成員返回手牌。",
         "ja": "自分のアーカイブから「#1期生」を持つBuzz以外の1stメンバーまたは2ndメンバー1枚を選び、手札に加える。",
-        "en": "[63] Return 1 1st or 2nd Member with #1期生, excluding Buzz, from your Archive to your Hand.",
+        "en": "Return 1 1st or 2nd Member with #1期生, excluding Buzz, from your Archive to your Hand.",
         "fr": "Vous pouvez retourner 1 membre 1st ou 2nd marqué #1期生 (sauf Buzz) de votre Archive dans votre Main.",
         "es": "Puedes devolver 1 Miembro de 1st o 2nd (que no sea Buzz) con la etiqueta #1期生 de tu Archivo a tu Mano."
       }
@@ -23224,7 +23224,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區1張Buzz以外標示#1期生的1st成員或2nd成員返回手牌。",
         "ja": "自分のアーカイブから「#1期生」を持つBuzz以外の1stメンバーまたは2ndメンバー1枚を選び、手札に加える。",
-        "en": "[63] Return 1 1st or 2nd Member with #1期生, excluding Buzz, from your Archive to your Hand.",
+        "en": "Return 1 1st or 2nd Member with #1期生, excluding Buzz, from your Archive to your Hand.",
         "fr": "Vous pouvez retourner 1 membre 1st ou 2nd marqué #1期生 (sauf Buzz) de votre Archive dans votre Main.",
         "es": "Puedes devolver 1 Miembro de 1st o 2nd (que no sea Buzz) con la etiqueta #1期生 de tu Archivo a tu Mano."
       }
@@ -23276,7 +23276,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區1張Buzz以外標示#1期生的1st成員或2nd成員返回手牌。",
         "ja": "自分のアーカイブから「#1期生」を持つBuzz以外の1stメンバーまたは2ndメンバー1枚を選び、手札に加える。",
-        "en": "[63] Return 1 1st or 2nd Member with #1期生, excluding Buzz, from your Archive to your Hand.",
+        "en": "Return 1 1st or 2nd Member with #1期生, excluding Buzz, from your Archive to your Hand.",
         "fr": "Vous pouvez retourner 1 membre 1st ou 2nd marqué #1期生 (sauf Buzz) de votre Archive dans votre Main.",
         "es": "Puedes devolver 1 Miembro de 1st o 2nd (que no sea Buzz) con la etiqueta #1期生 de tu Archivo a tu Mano."
       }
@@ -23328,7 +23328,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區1張Buzz以外標示#1期生的1st成員或2nd成員返回手牌。",
         "ja": "自分のアーカイブから「#1期生」を持つBuzz以外の1stメンバーまたは2ndメンバー1枚を選び、手札に加える。",
-        "en": "[63] Return 1 1st or 2nd Member with #1期生, excluding Buzz, from your Archive to your Hand.",
+        "en": "Return 1 1st or 2nd Member with #1期生, excluding Buzz, from your Archive to your Hand.",
         "fr": "Vous pouvez retourner 1 membre 1st ou 2nd marqué #1期生 (sauf Buzz) de votre Archive dans votre Main.",
         "es": "Puedes devolver 1 Miembro de 1st o 2nd (que no sea Buzz) con la etiqueta #1期生 de tu Archivo a tu Mano."
       }
@@ -23380,7 +23380,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區1張Buzz以外標示#1期生的1st成員或2nd成員返回手牌。",
         "ja": "自分のアーカイブから「#1期生」を持つBuzz以外の1stメンバーまたは2ndメンバー1枚を選び、手札に加える。",
-        "en": "[63] Return 1 1st or 2nd Member with #1期生, excluding Buzz, from your Archive to your Hand.",
+        "en": "Return 1 1st or 2nd Member with #1期生, excluding Buzz, from your Archive to your Hand.",
         "fr": "Vous pouvez retourner 1 membre 1st ou 2nd marqué #1期生 (sauf Buzz) de votre Archive dans votre Main.",
         "es": "Puedes devolver 1 Miembro de 1st o 2nd (que no sea Buzz) con la etiqueta #1期生 de tu Archivo a tu Mano."
       }
@@ -23432,7 +23432,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區1張Buzz以外標示#1期生的1st成員或2nd成員返回手牌。",
         "ja": "自分のアーカイブから「#1期生」を持つBuzz以外の1stメンバーまたは2ndメンバー1枚を選び、手札に加える。",
-        "en": "[63] Return 1 1st or 2nd Member with #1期生, excluding Buzz, from your Archive to your Hand.",
+        "en": "Return 1 1st or 2nd Member with #1期生, excluding Buzz, from your Archive to your Hand.",
         "fr": "Vous pouvez retourner 1 membre 1st ou 2nd marqué #1期生 (sauf Buzz) de votre Archive dans votre Main.",
         "es": "Puedes devolver 1 Miembro de 1st o 2nd (que no sea Buzz) con la etiqueta #1期生 de tu Archivo a tu Mano."
       }
@@ -24124,7 +24124,7 @@
       "effect": {
         "zh-TW": "「モココ・アビスガード」在自己的舞台上時，給予對手的中心成員或1位後台成員20點特殊傷害。即使擊倒對手的成員，也不會減少對手的生命值。",
         "ja": "自分のステージに「モココ・アビスガード」がいる場合、相手のセンターメンバーまたは後方メンバー1人に20点特殊ダメージを与える。相手メンバーをダウンさせても、相手のライフを減らすことはできない。",
-        "en": "[6] If \"モココ・アビスガード\" is on your Stage, deal 20 special damage to the opponent's Center Member or 1 Back Member. Even if this K.O.s an opponent's Member, it does not reduce the opponent's Life.",
+        "en": "If \"モココ・アビスガード\" is on your Stage, deal 20 special damage to the opponent's Center Member or 1 Back Member. Even if this K.O.s an opponent's Member, it does not reduce the opponent's Life.",
         "fr": "Si \"モココ・アビスガード\" est sur votre Scène, infligez 20 points de dégâts spéciaux au membre Centre de l'adversaire ou à 1 membre en Arrière. Même si vous mettez K.O. un membre de l'adversaire, les Points de vie de l'adversaire ne diminuent pas.",
         "es": "Mientras \"モココ・アビスガード\" esté en tu Escenario, inflige 20 de daño especial al Miembro Centro o a 1 Miembro en la retaguardia de tu oponente. Incluso si K.O. al Miembro del oponente, la Vida del oponente no se reduce."
       }
@@ -25359,7 +25359,7 @@
       "effect": {
         "zh-TW": "給予對手的中心成員或聯動成員20點特殊傷害。",
         "ja": "相手のセンターメンバーまたはコラボメンバーに20点特殊ダメージを与える。\n",
-        "en": "Deal 10 Special Damage to the opponent's Center Member or 1 Back Member.",
+        "en": "Deal 20 Special Damage to an opponent's Center Holomen or Collab Holomen.",
         "fr": "Infligez 20 dégâts spéciaux au Membre au Centre de l'adversaire ou au Membre Collab.",
         "es": "Inflige 20 de daño especial al miembro central o Collab del oponente."
       }
@@ -25403,7 +25403,7 @@
       "effect": {
         "zh-TW": "給予對手的中心成員或聯動成員20點特殊傷害。",
         "ja": "相手のセンターメンバーまたはコラボメンバーに20点特殊ダメージを与える。\n",
-        "en": "Deal 10 Special Damage to the opponent's Center Member or 1 Back Member.",
+        "en": "Deal 20 Special Damage to an opponent's Center Holomen or Collab Holomen.",
         "fr": "Infligez 20 dégâts spéciaux au Membre au Centre de l'adversaire ou au Membre Collab.",
         "es": "Inflige 20 de daño especial al miembro central o Collab del oponente."
       }
@@ -25588,7 +25588,7 @@
       "effect": {
         "zh-TW": "給予對手的中心成員或聯動成員30點特殊傷害。",
         "ja": "相手のセンターメンバーまたはコラボメンバーに30点特殊ダメージを与える。\n",
-        "en": "Deal 20 Special Damage to the opponent's Center Member or Collab Member. Even if you K.O. the opponent's Member, their Life does not decrease. You can only use 1 \"#魔法\" effect per turn.\n",
+        "en": "Deal 30 Special Damage to an opponent's Center Holomen or Collab Holomen.",
         "fr": "Infligez 30 dégâts spéciaux au Membre au Centre de l'adversaire ou au Membre Collab.",
         "es": "Inflige 30 de daño especial al miembro central o Collab del oponente."
       }
@@ -25640,7 +25640,7 @@
       "effect": {
         "zh-TW": "給予對手的中心成員或聯動成員30點特殊傷害。",
         "ja": "相手のセンターメンバーまたはコラボメンバーに30点特殊ダメージを与える。\n",
-        "en": "Deal 20 Special Damage to the opponent's Center Member or Collab Member. Even if you K.O. the opponent's Member, their Life does not decrease. You can only use 1 \"#魔法\" effect per turn.\n",
+        "en": "Deal 30 Special Damage to an opponent's Center Holomen or Collab Holomen.",
         "fr": "Infligez 30 dégâts spéciaux au Membre au Centre de l'adversaire ou au Membre Collab.",
         "es": "Inflige 30 de daño especial al miembro central o Collab del oponente."
       }
@@ -25692,7 +25692,7 @@
       "effect": {
         "zh-TW": "給予對手的中心成員或聯動成員30點特殊傷害。",
         "ja": "相手のセンターメンバーまたはコラボメンバーに30点特殊ダメージを与える。\n",
-        "en": "Deal 20 Special Damage to the opponent's Center Member or Collab Member. Even if you K.O. the opponent's Member, their Life does not decrease. You can only use 1 \"#魔法\" effect per turn.\n",
+        "en": "Deal 30 Special Damage to an opponent's Center Holomen or Collab Holomen.",
         "fr": "Infligez 30 dégâts spéciaux au Membre au Centre de l'adversaire ou au Membre Collab.",
         "es": "Inflige 30 de daño especial al miembro central o Collab del oponente."
       }
@@ -27132,7 +27132,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區的1張「わためいと」返回手牌。",
         "ja": "自分のアーカイブから「わためいと」1枚を選び、手札に加える。",
-        "en": "[70] Return 1 \"わためいと\" from your Archive to your Hand.",
+        "en": "Return 1 \"わためいと\" from your Archive to your Hand.",
         "fr": "Vous pouvez retourner 1 \"わためいと\" de votre Archive dans votre Main.",
         "es": "Puedes devolver 1 \"わためいと\" de tu Archivo a tu mano."
       }
@@ -27149,7 +27149,7 @@
       "effect": {
         "zh-TW": "可以和對手猜拳，直到分出勝負為止：自己獲勝時，這個回合中，這個成員對紅色成員造成的傷害+30。",
         "ja": "相手とじゃんけんを、勝負がつくまで行う。自分が勝った場合、このターン中、このメンバーが赤のメンバーに与えるダメージ+30。",
-        "en": "[47] You can play Rock-Paper-Scissors with the opponent until a winner is decided: If you win, this Member's damage +30 against Red Members during this turn.",
+        "en": "You can play Rock-Paper-Scissors with the opponent until a winner is decided: If you win, this Member's damage +30 against Red Members during this turn.",
         "fr": "Vous pouvez jouer à pierre-papier-ciseaux avec l'adversaire jusqu'à ce qu'un gagnant soit déterminé : Si vous gagnez, les dégâts infligés par ce membre aux membres Rouges pendant ce tour sont augmentés de 30.",
         "es": "Puedes jugar a piedra, papel o tijera con tu oponente hasta que haya un ganador: Si ganas, durante este turno, este Miembro inflige +30 de daño a Miembros rojos."
       }
@@ -27178,7 +27178,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區的1張「わためいと」返回手牌。",
         "ja": "自分のアーカイブから「わためいと」1枚を選び、手札に加える。",
-        "en": "[70] Return 1 \"わためいと\" from your Archive to your Hand.",
+        "en": "Return 1 \"わためいと\" from your Archive to your Hand.",
         "fr": "Vous pouvez retourner 1 \"わためいと\" de votre Archive dans votre Main.",
         "es": "Puedes devolver 1 \"わためいと\" de tu Archivo a tu mano."
       }
@@ -27195,7 +27195,7 @@
       "effect": {
         "zh-TW": "可以和對手猜拳，直到分出勝負為止：自己獲勝時，這個回合中，這個成員對紅色成員造成的傷害+30。",
         "ja": "相手とじゃんけんを、勝負がつくまで行う。自分が勝った場合、このターン中、このメンバーが赤のメンバーに与えるダメージ+30。",
-        "en": "[47] You can play Rock-Paper-Scissors with the opponent until a winner is decided: If you win, this Member's damage +30 against Red Members during this turn.",
+        "en": "You can play Rock-Paper-Scissors with the opponent until a winner is decided: If you win, this Member's damage +30 against Red Members during this turn.",
         "fr": "Vous pouvez jouer à pierre-papier-ciseaux avec l'adversaire jusqu'à ce qu'un gagnant soit déterminé : Si vous gagnez, les dégâts infligés par ce membre aux membres Rouges pendant ce tour sont augmentés de 30.",
         "es": "Puedes jugar a piedra, papel o tijera con tu oponente hasta que haya un ganador: Si ganas, durante este turno, este Miembro inflige +30 de daño a Miembros rojos."
       }
@@ -28400,7 +28400,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#ID1期生的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#ID1期生」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[29] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #ID1期生 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #ID1期生 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #ID1期生, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #ID1期生 y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -28416,7 +28416,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#0期生的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#0期生」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[21] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #0期生 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #0期生 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #0期生, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #0期生 y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -28432,7 +28432,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#0期生的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#0期生」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[21] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #0期生 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #0期生 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #0期生, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #0期生 y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -28448,7 +28448,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#4期生的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#4期生」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[25] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #4期生 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #4期生 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #4期生, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #4期生 y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -28464,7 +28464,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#4期生的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#4期生」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[25] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #4期生 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #4期生 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #4期生, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #4期生 y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -28480,7 +28480,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#シューター的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#シューター」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[37] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #シューター and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #シューター and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #シューター, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #シューター y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -28496,7 +28496,7 @@
     "supportEffect": {
       "zh-TW": "◆附加給Debut成員或Spot成員有追加效果\n■帶有這個道具的成員HP+30。\n■帶有這個道具的成員不會受到對手的特殊傷害。\n\n每位成員只能帶有1張道具。",
       "ja": "◆DebutメンバーまたはSpotメンバーに付与した場合、追加効果を得る。\n■このカードを持つメンバーのHPを+30する。\n■このカードを持つメンバーは、相手の特殊ダメージを受けない。\n\nメンバー1人につき、カードは1枚のみ持つことができる。",
-      "en": "[1] ◆Grants an additional effect if attached to a Debut or Spot Member.\n■HP of the Member with this Item +30.\n■The Member with this Item takes no special damage from the opponent.\n\nA Member can only have 1 Item attached.",
+      "en": "◆Grants an additional effect if attached to a Debut or Spot Member.\n■HP of the Member with this Item +30.\n■The Member with this Item takes no special damage from the opponent.\n\nA Member can only have 1 Item attached.",
       "fr": "◆Effet supplémentaire pour les membres Debut ou Spot.\n■Le membre portant cet accessoire voit ses Points de vie augmentés de 30.\n■Le membre portant cet accessoire ne subit pas de dégâts spéciaux de la part de l'adversaire.\n\nChaque membre ne peut porter qu'un seul accessoire.",
       "es": "◆ Efecto adicional si se adjunta a un Miembro Debut o Spot\n■ La Vida de un Miembro con este Objeto es +30.\n■ Un Miembro con este Objeto no recibe daño especial de tu oponente.\n\nCada Miembro solo puede tener 1 Objeto adjuntado."
     },
@@ -30251,7 +30251,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區1~2張標示#白上'sキャラクター的牌返回手牌。",
         "ja": "自分のアーカイブから「#白上'sキャラクター」を持つカードを1～2枚選び、手札に加える。",
-        "en": "[60] Return 1 or 2 cards with #白上'sキャラクター from your Archive to your Hand.",
+        "en": "Return 1 or 2 cards with #白上'sキャラクター from your Archive to your Hand.",
         "fr": "Vous pouvez retourner 1 ou 2 cartes marquées #白上'sキャラクター de votre Archive dans votre Main.",
         "es": "Puedes devolver 1-2 cartas con la etiqueta #白上'sキャラクター de tu Archivo a tu Mano."
       }
@@ -30269,7 +30269,7 @@
       "effect": {
         "zh-TW": "「白上フブキ」以外標示#ゲーマーズ的成員在自己的舞台上時，這個藝能傷害+50。",
         "ja": "自分のステージに「#ゲーマーズ」を持つ「白上フブキ」以外のメンバーがいる場合、このアーツのダメージ+50。",
-        "en": "[9] If a Member with #ゲーマーズ other than \"白上フブキ\" is on your Stage, this Arts' damage +50.",
+        "en": "If a Member with #ゲーマーズ other than \"白上フブキ\" is on your Stage, this Arts' damage +50.",
         "fr": "Si un membre marqué #ゲーマーズ (sauf \"白上フブキ\") est sur votre Scène, les dégâts de cet Arts sont augmentés de 50.",
         "es": "Mientras un Miembro con la etiqueta #ゲーマーズ (excepto \"白上フブキ\") esté en tu Escenario, este Arts inflige +50 de daño."
       }
@@ -30298,7 +30298,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區1~2張標示#白上'sキャラクター的牌返回手牌。",
         "ja": "自分のアーカイブから「#白上'sキャラクター」を持つカードを1～2枚選び、手札に加える。",
-        "en": "[60] Return 1 or 2 cards with #白上'sキャラクター from your Archive to your Hand.",
+        "en": "Return 1 or 2 cards with #白上'sキャラクター from your Archive to your Hand.",
         "fr": "Vous pouvez retourner 1 ou 2 cartes marquées #白上'sキャラクター de votre Archive dans votre Main.",
         "es": "Puedes devolver 1-2 cartas con la etiqueta #白上'sキャラクター de tu Archivo a tu Mano."
       }
@@ -30316,7 +30316,7 @@
       "effect": {
         "zh-TW": "「白上フブキ」以外標示#ゲーマーズ的成員在自己的舞台上時，這個藝能傷害+50。",
         "ja": "自分のステージに「#ゲーマーズ」を持つ「白上フブキ」以外のメンバーがいる場合、このアーツのダメージ+50。",
-        "en": "[9] If a Member with #ゲーマーズ other than \"白上フブキ\" is on your Stage, this Arts' damage +50.",
+        "en": "If a Member with #ゲーマーズ other than \"白上フブキ\" is on your Stage, this Arts' damage +50.",
         "fr": "Si un membre marqué #ゲーマーズ (sauf \"白上フブキ\") est sur votre Scène, les dégâts de cet Arts sont augmentés de 50.",
         "es": "Mientras un Miembro con la etiqueta #ゲーマーズ (excepto \"白上フブキ\") esté en tu Escenario, este Arts inflige +50 de daño."
       }
@@ -31083,7 +31083,7 @@
       "effect": {
         "zh-TW": "「大神ミオ」以外標示#ゲーマーズ的成員在自己的舞台上時，這個藝能傷害+50。",
         "ja": "自分のステージに「#ゲーマーズ」を持つ「大神ミオ」以外のメンバーがいる場合、このアーツのダメージ+50。",
-        "en": "[7] If a Member with #ゲーマーズ other than \"大神ミオ\" is on your Stage, this Arts' damage +50.",
+        "en": "If a Member with #ゲーマーズ other than \"大神ミオ\" is on your Stage, this Arts' damage +50.",
         "fr": "Si un membre marqué #ゲーマーズ (sauf \"大神ミオ\") est sur votre Scène, les dégâts de cet Arts sont augmentés de 50.",
         "es": "Mientras un Miembro con la etiqueta #ゲーマーズ (excepto \"大神ミオ\") esté en tu Escenario, este Arts inflige +50 de daño."
       }
@@ -31130,7 +31130,7 @@
       "effect": {
         "zh-TW": "「大神ミオ」以外標示#ゲーマーズ的成員在自己的舞台上時，這個藝能傷害+50。",
         "ja": "自分のステージに「#ゲーマーズ」を持つ「大神ミオ」以外のメンバーがいる場合、このアーツのダメージ+50。",
-        "en": "[7] If a Member with #ゲーマーズ other than \"大神ミオ\" is on your Stage, this Arts' damage +50.",
+        "en": "If a Member with #ゲーマーズ other than \"大神ミオ\" is on your Stage, this Arts' damage +50.",
         "fr": "Si un membre marqué #ゲーマーズ (sauf \"大神ミオ\") est sur votre Scène, les dégâts de cet Arts sont augmentés de 50.",
         "es": "Mientras un Miembro con la etiqueta #ゲーマーズ (excepto \"大神ミオ\") esté en tu Escenario, este Arts inflige +50 de daño."
       }
@@ -31582,7 +31582,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區的1張「限界飯」返回手牌。",
         "ja": "自分のアーカイブから「限界飯」1枚を選び、手札に加える。",
-        "en": "[78] Return 1 \"限界飯\" from your Archive to your Hand.",
+        "en": "Return 1 \"限界飯\" from your Archive to your Hand.",
         "fr": "Vous pouvez retourner 1 \"限界飯\" de votre Archive dans votre Main.",
         "es": "Puedes devolver 1 \"限界飯\" de tu Archivo a tu mano."
       }
@@ -31599,7 +31599,7 @@
       "effect": {
         "zh-TW": "給予對手的聯動成員20點特殊傷害。",
         "ja": "相手のコラボメンバーに20点特殊ダメージを与える。\n",
-        "en": "Deal 10 Special Damage to the opponent's Collab Member.",
+        "en": "Deal 20 Special Damage to an opponent's Collab Holomen.",
         "fr": "Infligez 20 dégâts spéciaux au Membre Collab.",
         "es": "Inflige 20 de daño especial al miembro Collab del oponente."
       }
@@ -31627,7 +31627,7 @@
       "effect": {
         "zh-TW": "給予對手的聯動成員20點特殊傷害。",
         "ja": "相手のコラボメンバーに20点特殊ダメージを与える。\n",
-        "en": "Deal 10 Special Damage to the opponent's Collab Member.",
+        "en": "Deal 20 Special Damage to an opponent's Collab Holomen.",
         "fr": "Infligez 20 dégâts spéciaux au Membre Collab.",
         "es": "Inflige 20 de daño especial al miembro Collab del oponente."
       }
@@ -31671,7 +31671,7 @@
       "effect": {
         "zh-TW": "給予對手的聯動成員20點特殊傷害。",
         "ja": "相手のコラボメンバーに20点特殊ダメージを与える。\n",
-        "en": "Deal 10 Special Damage to the opponent's Collab Member.",
+        "en": "Deal 20 Special Damage to an opponent's Collab Holomen.",
         "fr": "Infligez 20 dégâts spéciaux au Membre Collab.",
         "es": "Inflige 20 de daño especial al miembro Collab del oponente."
       }
@@ -31734,7 +31734,7 @@
       "effect": {
         "zh-TW": "給予對手的中心成員50點特殊傷害。之後，這個回合自己有使用過「限界飯」時，給予對手的中心成員或聯動成員30點特殊傷害。",
         "ja": "相手のセンターメンバーに50点特殊ダメージを与える。その後、このターンに自分が「限界飯」を使用していた場合、相手のセンターメンバーまたはコラボメンバーに30点特殊ダメージを与える。\n",
-        "en": "Deal 50 Special Damage to the opponent's Center Member.",
+        "en": "Deal 50 Special Damage to an opponent's Center Holomen. Then, if you have used \"Genkai Meshi\" this turn, deal 30 Special Damage to an opponent's Center Holomen or Collab Holomen.",
         "fr": "Infligez 50 dégâts spéciaux au Membre au Centre de l'adversaire. Ensuite, si vous avez utilisé \"限界飯\" ce tour-ci, infligez 30 dégâts spéciaux au Membre au Centre de l'adversaire ou au Membre Collab.",
         "es": "Inflige 50 de daño especial al miembro central del oponente. Después de eso, si usaste \"Genkai Meshi\" en este turno, inflige 30 de daño especial al miembro central o Collab del oponente."
       }
@@ -31781,7 +31781,7 @@
       "effect": {
         "zh-TW": "給予對手的中心成員50點特殊傷害。之後，這個回合自己有使用過「限界飯」時，給予對手的中心成員或聯動成員30點特殊傷害。",
         "ja": "相手のセンターメンバーに50点特殊ダメージを与える。その後、このターンに自分が「限界飯」を使用していた場合、相手のセンターメンバーまたはコラボメンバーに30点特殊ダメージを与える。\n",
-        "en": "Deal 50 Special Damage to the opponent's Center Member.",
+        "en": "Deal 50 Special Damage to an opponent's Center Holomen. Then, if you have used \"Genkai Meshi\" this turn, deal 30 Special Damage to an opponent's Center Holomen or Collab Holomen.",
         "fr": "Infligez 50 dégâts spéciaux au Membre au Centre de l'adversaire. Ensuite, si vous avez utilisé \"限界飯\" ce tour-ci, infligez 30 dégâts spéciaux au Membre au Centre de l'adversaire ou au Membre Collab.",
         "es": "Inflige 50 de daño especial al miembro central del oponente. Después de eso, si usaste \"Genkai Meshi\" en este turno, inflige 30 de daño especial al miembro central o Collab del oponente."
       }
@@ -31828,7 +31828,7 @@
       "effect": {
         "zh-TW": "給予對手的中心成員50點特殊傷害。之後，這個回合自己有使用過「限界飯」時，給予對手的中心成員或聯動成員30點特殊傷害。",
         "ja": "相手のセンターメンバーに50点特殊ダメージを与える。その後、このターンに自分が「限界飯」を使用していた場合、相手のセンターメンバーまたはコラボメンバーに30点特殊ダメージを与える。\n",
-        "en": "Deal 50 Special Damage to the opponent's Center Member.",
+        "en": "Deal 50 Special Damage to an opponent's Center Holomen. Then, if you have used \"Genkai Meshi\" this turn, deal 30 Special Damage to an opponent's Center Holomen or Collab Holomen.",
         "fr": "Infligez 50 dégâts spéciaux au Membre au Centre de l'adversaire. Ensuite, si vous avez utilisé \"限界飯\" ce tour-ci, infligez 30 dégâts spéciaux au Membre au Centre de l'adversaire ou au Membre Collab.",
         "es": "Inflige 50 de daño especial al miembro central del oponente. Después de eso, si usaste \"Genkai Meshi\" en este turno, inflige 30 de daño especial al miembro central o Collab del oponente."
       }
@@ -34055,7 +34055,7 @@
       "effect": {
         "zh-TW": "可以將對手存檔區的1張吶喊卡發送給對手的中心成員。",
         "ja": "相手のアーカイブからエールカード1枚を選び、相手のセンターメンバーに送ることができる。",
-        "en": "[50] You can send 1 Cheer card from the opponent's Archive to the opponent's Center Member.",
+        "en": "You can send 1 Cheer card from the opponent's Archive to the opponent's Center Member.",
         "fr": "Vous pouvez envoyer 1 carte d'Encouragement de l'Archive de l'adversaire au membre Centre de l'adversaire.",
         "es": "Puedes enviar 1 carta Cheer del Archivo de tu oponente al Miembro Centro de tu oponente."
       }
@@ -34107,7 +34107,7 @@
       "effect": {
         "zh-TW": "可以將對手存檔區的1張吶喊卡發送給對手的中心成員。",
         "ja": "相手のアーカイブからエールカード1枚を選び、相手のセンターメンバーに送ることができる。",
-        "en": "[50] You can send 1 Cheer card from the opponent's Archive to the opponent's Center Member.",
+        "en": "You can send 1 Cheer card from the opponent's Archive to the opponent's Center Member.",
         "fr": "Vous pouvez envoyer 1 carte d'Encouragement de l'Archive de l'adversaire au membre Centre de l'adversaire.",
         "es": "Puedes enviar 1 carta Cheer del Archivo de tu oponente al Miembro Centro de tu oponente."
       }
@@ -34159,7 +34159,7 @@
       "effect": {
         "zh-TW": "使用自己的SP主推技能「蘇るオリー」綻放時，自己的1位「クレイジー・オリー」HP完全回復。",
         "ja": "自分のSPスキル「蘇るオリー」でブルームした時、自分の「クレイジー・オリー」1体のHPを全回復する。",
-        "en": "[41] When Bloom with your SP Oshi Skill \"蘇るオリー\" occurs, fully restore the HP of 1 of your \"クレイジー・オリー\".",
+        "en": "When Bloom with your SP Oshi Skill \"蘇るオリー\" occurs, fully restore the HP of 1 of your \"クレイジー・オリー\".",
         "fr": "Lorsque votre Compétence Oshi \"蘇るオリー\" est Bloom, les Points de vie de 1 de vos \"クレイジー・オリー\" sont complètement restaurés.",
         "es": "Cuando usas tu Habilidad SP Oshi \"蘇るオリー\" para Bloom, la Vida de tu \"クレイジー・オリー\" en la 1ª posición se recupera completamente."
       }
@@ -34205,7 +34205,7 @@
       "effect": {
         "zh-TW": "使用自己的SP主推技能「蘇るオリー」綻放時，自己的1位「クレイジー・オリー」HP完全回復。",
         "ja": "自分のSPスキル「蘇るオリー」でブルームした時、自分の「クレイジー・オリー」1体のHPを全回復する。",
-        "en": "[41] When Bloom with your SP Oshi Skill \"蘇るオリー\" occurs, fully restore the HP of 1 of your \"クレイジー・オリー\".",
+        "en": "When Bloom with your SP Oshi Skill \"蘇るオリー\" occurs, fully restore the HP of 1 of your \"クレイジー・オリー\".",
         "fr": "Lorsque votre Compétence Oshi \"蘇るオリー\" est Bloom, les Points de vie de 1 de vos \"クレイジー・オリー\" sont complètement restaurés.",
         "es": "Cuando usas tu Habilidad SP Oshi \"蘇るオリー\" para Bloom, la Vida de tu \"クレイジー・オリー\" en la 1ª posición se recupera completamente."
       }
@@ -35812,7 +35812,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區的1張「古代武器」附加給自己的「アーニャ・メルフィッサ」。",
         "ja": "自分のアーカイブから「古代武器」1枚を選び、自分の「アーニャ・メルフィッサ」に付与することができる。",
-        "en": "[74] You can attach 1 \"古代武器\" from your Archive to your \"アーニャ・メルフィッサ\".",
+        "en": "You can attach 1 \"古代武器\" from your Archive to your \"アーニャ・メルフィッサ\".",
         "fr": "Vous pouvez superposer 1 \"古代武器\" de votre Archive à votre \"アーニャ・メルフィッサ\".",
         "es": "Puedes adjuntar 1 \"古代武器\" de tu Archivo a tu \"アーニャ・メルフィッサ\"."
       }
@@ -37066,7 +37066,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示1張成員與1張道具、吉祥物或粉絲並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中からメンバー1枚と、アイテム・マスコット・ファン1枚を選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[12] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal 1 Member and 1 Item, Mascot, or Fan and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal 1 Member and 1 Item, Mascot, or Fan and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez 1 membre et 1 accessoire, mascotte ou fan, puis ajoutez-les à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra 1 Miembro y 1 Objeto, Mascota o Fan y añádelos a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -37114,7 +37114,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#5期生的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#5期生」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[26] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #5期生 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #5期生 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #5期生, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #5期生 y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -37130,7 +37130,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#2期生的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#2期生」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[23] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #2期生 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #2期生 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #2期生, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #2期生 y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -37181,7 +37181,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#Advent的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#Advent」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[27] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #Advent and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #Advent and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #Advent, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #Advent y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -37260,7 +37260,7 @@
     "product": "補充包「キュリアスユニバース (hBP04)」",
     "supportEffect": {
       "zh-TW": "帶有這個吉祥物的成員藝能傷害+10。\n\n◆附加給「雪花ラミィ」有追加效果\n帶有這個吉祥物的成員HP+20。\n\n每位成員只能帶有1張吉祥物。",
-      "ja": "このマスコットを持つメンバーのHP＋２０。\n\n◆「雪花ラミィ」に付与された場合、追加効果\nこのマスコットを持つメンバーのHP＋２０。\n\nメンバー１人につき、マスコットは１枚までしか持てない。",
+      "ja": "このマスコットを持つメンバーのアーツダメージ+10。\n\n◆「雪花ラミィ」に付与された場合、追加効果\nこのマスコットを持つメンバーのHP+20。\n\n各メンバーはマスコットを1枚しか持てない。\n",
       "en": "Members with this Mascot gain +10 Arts damage.\n\n◆Additional effect for \"Yukimi Lamy\"\nMembers with this Mascot gain +20 HP.\n\nEach Member can only have 1 Mascot.",
       "fr": "Les dégâts d'Arts des membres portant cette Mascotte +10.\n\n◆Effet supplémentaire pour « 雪花ラミィ »\nLes Points de vie des membres portant cette Mascotte +20.\n\nChaque membre ne peut porter qu'une seule Mascotte.",
       "es": "El miembro con esta mascota tiene un daño de Arts +10.\n\n◆Si se aplica a \"雪花ラミィ\", tiene un efecto adicional:\nEl miembro con esta mascota tiene HP+20.\n\nSolo se puede adjuntar 1 mascota por miembro."
@@ -38974,7 +38974,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區的1張「ルーナイト」附加給這個成員。",
         "ja": "自分のアーカイブから「ルーナイト」1枚を選び、このメンバーに付与することができる。",
-        "en": "[73] You can attach 1 \"ルーナイト\" from your Archive to this Member.",
+        "en": "You can attach 1 \"ルーナイト\" from your Archive to this Member.",
         "fr": "Vous pouvez superposer 1 \"ルーナイト\" de votre Archive à ce membre.",
         "es": "Puedes adjuntar 1 \"ルーナイト\" de tu Archivo a este Miembro."
       }
@@ -39033,7 +39033,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區的1張「ルーナイト」附加給這個成員。",
         "ja": "自分のアーカイブから「ルーナイト」1枚を選び、このメンバーに付与することができる。",
-        "en": "[73] You can attach 1 \"ルーナイト\" from your Archive to this Member.",
+        "en": "You can attach 1 \"ルーナイト\" from your Archive to this Member.",
         "fr": "Vous pouvez superposer 1 \"ルーナイト\" de votre Archive à ce membre.",
         "es": "Puedes adjuntar 1 \"ルーナイト\" de tu Archivo a este Miembro."
       }
@@ -39108,7 +39108,7 @@
       "effect": {
         "zh-TW": "使用這個藝能擊倒對手的成員時，從自己的牌組展示1張標示#ID3期生的1st成員並加入手牌。將牌組重新洗牌。",
         "ja": "このアーツで相手のメンバーをダウンさせた場合、自分のデッキから「#ID3期生」を持つ1stメンバーを1枚選び、手札に加える。その後、デッキをシャッフルする。",
-        "en": "[44] When this Arts K.O.s an opponent's Member, reveal 1 1st Member with #ID3期生 from your Deck and add it to your Hand. Shuffle your Deck.",
+        "en": "When this Arts K.O.s an opponent's Member, reveal 1 1st Member with #ID3期生 from your Deck and add it to your Hand. Shuffle your Deck.",
         "fr": "Lorsque vous mettez K.O. un membre de l'adversaire avec cet Arts, montrez 1 membre 1st marqué #ID3期生 de votre Deck et ajoutez-le à votre Main. Mélangez votre Deck.",
         "es": "Cuando usas este Arts para K.O. al Miembro de tu oponente, muestra 1 Miembro de 1st con la etiqueta #ID3期生 de tu Mazo y añádelo a tu Mano. Baraja tu Mazo."
       }
@@ -39160,7 +39160,7 @@
       "effect": {
         "zh-TW": "使用這個藝能擊倒對手的成員時，從自己的牌組展示1張標示#ID3期生的1st成員並加入手牌。將牌組重新洗牌。",
         "ja": "このアーツで相手のメンバーをダウンさせた場合、自分のデッキから「#ID3期生」を持つ1stメンバーを1枚選び、手札に加える。その後、デッキをシャッフルする。",
-        "en": "[44] When this Arts K.O.s an opponent's Member, reveal 1 1st Member with #ID3期生 from your Deck and add it to your Hand. Shuffle your Deck.",
+        "en": "When this Arts K.O.s an opponent's Member, reveal 1 1st Member with #ID3期生 from your Deck and add it to your Hand. Shuffle your Deck.",
         "fr": "Lorsque vous mettez K.O. un membre de l'adversaire avec cet Arts, montrez 1 membre 1st marqué #ID3期生 de votre Deck et ajoutez-le à votre Main. Mélangez votre Deck.",
         "es": "Cuando usas este Arts para K.O. al Miembro de tu oponente, muestra 1 Miembro de 1st con la etiqueta #ID3期生 de tu Mazo y añádelo a tu Mano. Baraja tu Mazo."
       }
@@ -39727,7 +39727,7 @@
       "effect": {
         "zh-TW": "使用這個藝能擊倒對手的成員時，從自己的牌組抽1張牌。之後，如果自己的主推為「アキ・ローゼンタール」，自己所有的成員HP回復20點。",
         "ja": "このアーツで相手のメンバーをダウンさせた場合、自分のデッキからカードを1枚引く。その後、自分の推しが「アキ・ローゼンタール」の場合、自分の全てのメンバーのHPを20回復する。",
-        "en": "[45] When this Arts K.O.s an opponent's Member, draw 1 card from your Deck. Then, if your Oshi is \"アキ・ローゼンタール\", restore 20 HP to all of your Members.",
+        "en": "When this Arts K.O.s an opponent's Member, draw 1 card from your Deck. Then, if your Oshi is \"アキ・ローゼンタール\", restore 20 HP to all of your Members.",
         "fr": "Lorsque vous mettez K.O. un membre de l'adversaire avec cet Arts, piochez 1 carte de votre Deck. Ensuite, si votre Oshi est \"アキ・ローゼンタール\", les Points de vie de tous vos membres sont restaurés de 20.",
         "es": "Cuando usas este Arts para K.O. al Miembro de tu oponente, roba 1 carta de tu Mazo. Luego, si tu Oshi es \"アキ・ローゼンタール\", la Vida de todos tus Miembros se recupera 20 puntos."
       }
@@ -39774,7 +39774,7 @@
       "effect": {
         "zh-TW": "使用這個藝能擊倒對手的成員時，從自己的牌組抽1張牌。之後，如果自己的主推為「アキ・ローゼンタール」，自己所有的成員HP回復20點。",
         "ja": "このアーツで相手のメンバーをダウンさせた場合、自分のデッキからカードを1枚引く。その後、自分の推しが「アキ・ローゼンタール」の場合、自分の全てのメンバーのHPを20回復する。",
-        "en": "[45] When this Arts K.O.s an opponent's Member, draw 1 card from your Deck. Then, if your Oshi is \"アキ・ローゼンタール\", restore 20 HP to all of your Members.",
+        "en": "When this Arts K.O.s an opponent's Member, draw 1 card from your Deck. Then, if your Oshi is \"アキ・ローゼンタール\", restore 20 HP to all of your Members.",
         "fr": "Lorsque vous mettez K.O. un membre de l'adversaire avec cet Arts, piochez 1 carte de votre Deck. Ensuite, si votre Oshi est \"アキ・ローゼンタール\", les Points de vie de tous vos membres sont restaurés de 20.",
         "es": "Cuando usas este Arts para K.O. al Miembro de tu oponente, roba 1 carta de tu Mazo. Luego, si tu Oshi es \"アキ・ローゼンタール\", la Vida de todos tus Miembros se recupera 20 puntos."
       }
@@ -39821,7 +39821,7 @@
       "effect": {
         "zh-TW": "使用這個藝能擊倒對手的成員時，從自己的牌組抽1張牌。之後，如果自己的主推為「アキ・ローゼンタール」，自己所有的成員HP回復20點。",
         "ja": "このアーツで相手のメンバーをダウンさせた場合、自分のデッキからカードを1枚引く。その後、自分の推しが「アキ・ローゼンタール」の場合、自分の全てのメンバーのHPを20回復する。",
-        "en": "[45] When this Arts K.O.s an opponent's Member, draw 1 card from your Deck. Then, if your Oshi is \"アキ・ローゼンタール\", restore 20 HP to all of your Members.",
+        "en": "When this Arts K.O.s an opponent's Member, draw 1 card from your Deck. Then, if your Oshi is \"アキ・ローゼンタール\", restore 20 HP to all of your Members.",
         "fr": "Lorsque vous mettez K.O. un membre de l'adversaire avec cet Arts, piochez 1 carte de votre Deck. Ensuite, si votre Oshi est \"アキ・ローゼンタール\", les Points de vie de tous vos membres sont restaurés de 20.",
         "es": "Cuando usas este Arts para K.O. al Miembro de tu oponente, roba 1 carta de tu Mazo. Luego, si tu Oshi es \"アキ・ローゼンタール\", la Vida de todos tus Miembros se recupera 20 puntos."
       }
@@ -39866,7 +39866,7 @@
       "effect": {
         "zh-TW": "可以將自己「獅白ぼたん」的1張吶喊卡放到存檔區：給予對手的中心成員30點特殊傷害。",
         "ja": "自分の「獅白ぼたん」のエールカード1枚をアーカイブに置くことができる：相手のセンターメンバーに30点特殊ダメージを与える。",
-        "en": "[53] You can send 1 of your \"獅白ぼたん\" Cheer cards to the Archive: Deal 30 special damage to the opponent's Center Member.",
+        "en": "You can send 1 of your \"獅白ぼたん\" Cheer cards to the Archive: Deal 30 special damage to the opponent's Center Member.",
         "fr": "Vous pouvez envoyer 1 carte d'Encouragement de votre \"獅白ぼたん\" à l'Archive : infligez 30 points de dégâts spéciaux au membre Centre de l'adversaire.",
         "es": "Puedes poner 1 carta Cheer tuya de \"獅白ぼたん\" en tu Archivo: Inflige 30 de daño especial al Miembro Centro de tu oponente."
       }
@@ -39917,7 +39917,7 @@
       "effect": {
         "zh-TW": "可以將自己「獅白ぼたん」的1張吶喊卡放到存檔區：給予對手的中心成員30點特殊傷害。",
         "ja": "自分の「獅白ぼたん」のエールカード1枚をアーカイブに置くことができる：相手のセンターメンバーに30点特殊ダメージを与える。",
-        "en": "[53] You can send 1 of your \"獅白ぼたん\" Cheer cards to the Archive: Deal 30 special damage to the opponent's Center Member.",
+        "en": "You can send 1 of your \"獅白ぼたん\" Cheer cards to the Archive: Deal 30 special damage to the opponent's Center Member.",
         "fr": "Vous pouvez envoyer 1 carte d'Encouragement de votre \"獅白ぼたん\" à l'Archive : infligez 30 points de dégâts spéciaux au membre Centre de l'adversaire.",
         "es": "Puedes poner 1 carta Cheer tuya de \"獅白ぼたん\" en tu Archivo: Inflige 30 de daño especial al Miembro Centro de tu oponente."
       }
@@ -40177,7 +40177,7 @@
       "effect": {
         "zh-TW": "給予對手的聯動成員20點特殊傷害。",
         "ja": "相手のコラボメンバーに20点特殊ダメージを与える。\n",
-        "en": "Deal 10 Special Damage to the opponent's Collab Member.",
+        "en": "Deal 20 Special Damage to an opponent's Collab Holomen.",
         "fr": "Infligez 20 dégâts spéciaux au Membre Collab.",
         "es": "Inflige 20 de daño especial al miembro Collab del oponente."
       }
@@ -41312,7 +41312,7 @@
       "effect": {
         "zh-TW": "給予對手的中心成員與1位後台成員10點特殊傷害。「お弁当タイム…？」每個回合只能使用一次。",
         "ja": "相手のセンターメンバーとリアメンバー1人に10点特殊ダメージを与える。「お弁当タイム…？」は各ターン1回しか使用できない。\n",
-        "en": "Deal 30 Special Damage to the opponent's Center Member or Collab Member. After that, the opponent draws 1 card from their Deck.",
+        "en": "Deal 10 Special Damage to an opponent's Center Holomen and 1 Back row Holomen.\n\"Obento Time...?\" can only be used once per turn.",
         "fr": "Infligez 10 dégâts spéciaux au Membre au Centre de l'adversaire et à 1 Membre à l'Arrière. \"お弁当タイム…？\" ne peut être utilisé qu'une fois par tour.",
         "es": "Inflige 10 de daño especial al miembro central y a 1 miembro en la retaguardia del oponente. \"Obento Time...?\" solo puede usarse una vez por turno."
       }
@@ -41357,7 +41357,7 @@
       "effect": {
         "zh-TW": "給予對手的中心成員與1位後台成員10點特殊傷害。「お弁当タイム…？」每個回合只能使用一次。",
         "ja": "相手のセンターメンバーとリアメンバー1人に10点特殊ダメージを与える。「お弁当タイム…？」は各ターン1回しか使用できない。\n",
-        "en": "Deal 30 Special Damage to the opponent's Center Member or Collab Member. After that, the opponent draws 1 card from their Deck.",
+        "en": "Deal 10 Special Damage to an opponent's Center Holomen and 1 Back row Holomen.\n\"Obento Time...?\" can only be used once per turn.",
         "fr": "Infligez 10 dégâts spéciaux au Membre au Centre de l'adversaire et à 1 Membre à l'Arrière. \"お弁当タイム…？\" ne peut être utilisé qu'une fois par tour.",
         "es": "Inflige 10 de daño especial al miembro central y a 1 miembro en la retaguardia del oponente. \"Obento Time...?\" solo puede usarse una vez por turno."
       }
@@ -41402,7 +41402,7 @@
       "effect": {
         "zh-TW": "給予對手的中心成員與1位後台成員10點特殊傷害。「お弁当タイム…？」每個回合只能使用一次。",
         "ja": "相手のセンターメンバーとリアメンバー1人に10点特殊ダメージを与える。「お弁当タイム…？」は各ターン1回しか使用できない。\n",
-        "en": "Deal 30 Special Damage to the opponent's Center Member or Collab Member. After that, the opponent draws 1 card from their Deck.",
+        "en": "Deal 10 Special Damage to an opponent's Center Holomen and 1 Back row Holomen.\n\"Obento Time...?\" can only be used once per turn.",
         "fr": "Infligez 10 dégâts spéciaux au Membre au Centre de l'adversaire et à 1 Membre à l'Arrière. \"お弁当タイム…？\" ne peut être utilisé qu'une fois par tour.",
         "es": "Inflige 10 de daño especial al miembro central y a 1 miembro en la retaguardia del oponente. \"Obento Time...?\" solo puede usarse una vez por turno."
       }
@@ -41853,8 +41853,8 @@
       "effect": {
         "zh-TW": "給予對手的2位後台成員10點特殊傷害。",
         "ja": "相手のリアメンバー2人に10点特殊ダメージを与える。\n",
-        "en": "Deal 30 Special Damage to 1 of the opponent's Members.",
-        "fr": "Infligez 20 dégâts spéciaux à 2 Membres à l'Arrière de l'adversaire.",
+        "en": "Deal 10 Special Damage to 2 opponent's Back row Holomen.",
+        "fr": "Inflige 10 points de dégâts spéciaux à 2 membres en arrière-plan de l'adversaire.",
         "es": "Inflige 10 de daño especial a 2 miembros en la retaguardia del oponente."
       }
     },
@@ -41871,8 +41871,8 @@
       "effect": {
         "zh-TW": "給予對手的2位後台成員10點特殊傷害。",
         "ja": "相手のリアメンバー2人に10点特殊ダメージを与える。\n",
-        "en": "Deal 30 Special Damage to 1 of the opponent's Members.",
-        "fr": "Infligez 20 dégâts spéciaux à 2 Membres à l'Arrière de l'adversaire.",
+        "en": "Deal 10 Special Damage to 2 opponent's Back row Holomen.",
+        "fr": "Inflige 10 points de dégâts spéciaux à 2 membres en arrière-plan de l'adversaire.",
         "es": "Inflige 10 de daño especial a 2 miembros en la retaguardia del oponente."
       }
     },
@@ -41898,8 +41898,8 @@
       "effect": {
         "zh-TW": "給予對手的2位後台成員10點特殊傷害。",
         "ja": "相手のリアメンバー2人に10点特殊ダメージを与える。\n",
-        "en": "Deal 30 Special Damage to 1 of the opponent's Members.",
-        "fr": "Infligez 20 dégâts spéciaux à 2 Membres à l'Arrière de l'adversaire.",
+        "en": "Deal 10 Special Damage to 2 opponent's Back row Holomen.",
+        "fr": "Inflige 10 points de dégâts spéciaux à 2 membres en arrière-plan de l'adversaire.",
         "es": "Inflige 10 de daño especial a 2 miembros en la retaguardia del oponente."
       }
     },
@@ -41916,8 +41916,8 @@
       "effect": {
         "zh-TW": "給予對手的2位後台成員10點特殊傷害。",
         "ja": "相手のリアメンバー2人に10点特殊ダメージを与える。\n",
-        "en": "Deal 30 Special Damage to 1 of the opponent's Members.",
-        "fr": "Infligez 20 dégâts spéciaux à 2 Membres à l'Arrière de l'adversaire.",
+        "en": "Deal 10 Special Damage to 2 opponent's Back row Holomen.",
+        "fr": "Inflige 10 points de dégâts spéciaux à 2 membres en arrière-plan de l'adversaire.",
         "es": "Inflige 10 de daño especial a 2 miembros en la retaguardia del oponente."
       }
     },
@@ -43607,7 +43607,7 @@
       "effect": {
         "zh-TW": "可以將自己吶喊牌組上方的1張牌發送給這個成員。",
         "ja": "自分のエールデッキの上から1枚のカードをこのメンバーに送ることができる。",
-        "en": "[59] You can send 1 card from the top of your Cheer Deck to this Member.",
+        "en": "You can send 1 card from the top of your Cheer Deck to this Member.",
         "fr": "Vous pouvez envoyer 1 carte du dessus de votre Deck d'encouragement à ce membre.",
         "es": "Puedes enviar la carta superior de tu Mazo Cheer a este Miembro."
       }
@@ -43652,7 +43652,7 @@
       "effect": {
         "zh-TW": "可以將自己吶喊牌組上方的1張牌發送給這個成員。",
         "ja": "自分のエールデッキの上から1枚のカードをこのメンバーに送ることができる。",
-        "en": "[59] You can send 1 card from the top of your Cheer Deck to this Member.",
+        "en": "You can send 1 card from the top of your Cheer Deck to this Member.",
         "fr": "Vous pouvez envoyer 1 carte du dessus de votre Deck d'encouragement à ce membre.",
         "es": "Puedes enviar la carta superior de tu Mazo Cheer a este Miembro."
       }
@@ -44267,7 +44267,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意數量的「白上フブキ」「不知火フレア」「角巻わため」「尾丸ポルカ」並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「白上フブキ」「不知火フレア」「角巻わため」「尾丸ポルカ」を好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[19] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any number of \"白上フブキ\", \"不知火フレア\", \"角巻わため\", and \"尾丸ポルカ\" and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any number of \"白上フブキ\", \"不知火フレア\", \"角巻わため\", and \"尾丸ポルカ\" and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel nombre de \"白上フブキ\", \"不知火フレア\", \"角巻わため\", \"尾丸ポルカ\", puis ajoutez-les à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier cantidad de \"白上フブキ\", \"不知火フレア\", \"角巻わため\", \"尾丸ポルカ\" y añádelos a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -44283,7 +44283,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#お酒的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#お酒」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[35] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #お酒 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #お酒 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #お酒, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #お酒 y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -46139,7 +46139,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區1張標示#こよラボ的支援卡放回牌組下方：這個藝能傷害+40。",
         "ja": "自分のアーカイブから「#こよラボ」を持つサポートカード1枚を選び、デッキの下に戻す：このアーツのダメージ+40。",
-        "en": "[65] Place 1 Support card with #こよラボ from your Archive on the bottom of your Deck: This Arts' damage +40.",
+        "en": "Place 1 Support card with #こよラボ from your Archive on the bottom of your Deck: This Arts' damage +40.",
         "fr": "Vous pouvez retourner 1 carte Support marquée #こよラボ de votre Archive en bas de votre Deck : les dégâts de cet Arts sont augmentés de 40.",
         "es": "Puedes devolver 1 carta de Soporte con la etiqueta #こよラボ de tu Archivo al fondo de tu Mazo. El daño de este Arts +40."
       }
@@ -46185,7 +46185,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區1張標示#こよラボ的支援卡放回牌組下方：這個藝能傷害+40。",
         "ja": "自分のアーカイブから「#こよラボ」を持つサポートカード1枚を選び、デッキの下に戻す：このアーツのダメージ+40。",
-        "en": "[65] Place 1 Support card with #こよラボ from your Archive on the bottom of your Deck: This Arts' damage +40.",
+        "en": "Place 1 Support card with #こよラボ from your Archive on the bottom of your Deck: This Arts' damage +40.",
         "fr": "Vous pouvez retourner 1 carte Support marquée #こよラボ de votre Archive en bas de votre Deck : les dégâts de cet Arts sont augmentés de 40.",
         "es": "Puedes devolver 1 carta de Soporte con la etiqueta #こよラボ de tu Archivo al fondo de tu Mazo. El daño de este Arts +40."
       }
@@ -46735,7 +46735,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區的1張「ルーナイト」附加給自己的「姫森ルーナ」。",
         "ja": "自分のアーカイブから「ルーナイト」1枚を選び、自分の「姫森ルーナ」に付与することができる。",
-        "en": "[72] You can attach 1 \"ルーナイト\" from your Archive to your \"姫森ルーナ\".",
+        "en": "You can attach 1 \"ルーナイト\" from your Archive to your \"姫森ルーナ\".",
         "fr": "Vous pouvez superposer 1 \"ルーナイト\" de votre Archive à votre \"姫森ルーナ\".",
         "es": "Puedes adjuntar 1 \"ルーナイト\" de tu Archivo a tu \"姫森ルーナ\"."
       }
@@ -46779,7 +46779,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區的1張「ルーナイト」附加給自己的「姫森ルーナ」。",
         "ja": "自分のアーカイブから「ルーナイト」1枚を選び、自分の「姫森ルーナ」に付与することができる。",
-        "en": "[72] You can attach 1 \"ルーナイト\" from your Archive to your \"姫森ルーナ\".",
+        "en": "You can attach 1 \"ルーナイト\" from your Archive to your \"姫森ルーナ\".",
         "fr": "Vous pouvez superposer 1 \"ルーナイト\" de votre Archive à votre \"姫森ルーナ\".",
         "es": "Puedes adjuntar 1 \"ルーナイト\" de tu Archivo a tu \"姫森ルーナ\"."
       }
@@ -47277,7 +47277,7 @@
       "effect": {
         "zh-TW": "可以將自己吶喊牌組上方的1張牌放到存檔區：從自己的牌組抽1張牌。",
         "ja": "自分のエールデッキの上から1枚のカードをアーカイブに置くことができる：自分のデッキからカードを1枚引く。",
-        "en": "[55] You can send 1 card from the top of your Cheer Deck to the Archive: Draw 1 card from your Deck.",
+        "en": "You can send 1 card from the top of your Cheer Deck to the Archive: Draw 1 card from your Deck.",
         "fr": "Vous pouvez envoyer 1 carte du dessus de votre Deck d'encouragement à l'Archive : piochez 1 carte de votre Deck.",
         "es": "Puedes poner la carta superior de tu Mazo Cheer en tu Archivo: Roba 1 carta de tu Mazo."
       }
@@ -47322,7 +47322,7 @@
       "effect": {
         "zh-TW": "可以將自己吶喊牌組上方的1張牌放到存檔區：給予對手的中心成員或聯動成員30點特殊傷害。",
         "ja": "自分のエールデッキの上から1枚のカードをアーカイブに置くことができる：相手のセンターメンバーまたはコラボメンバーに30点特殊ダメージを与える。",
-        "en": "[57] You can send 1 card from the top of your Cheer Deck to the Archive: Deal 30 special damage to the opponent's Center Member or Collab Member.",
+        "en": "You can send 1 card from the top of your Cheer Deck to the Archive: Deal 30 special damage to the opponent's Center Member or Collab Member.",
         "fr": "Vous pouvez envoyer 1 carte du dessus de votre Deck d'encouragement à l'Archive : infligez 30 points de dégâts spéciaux au membre Centre ou au membre Collab de l'adversaire.",
         "es": "Puedes poner la carta superior de tu Mazo Cheer en tu Archivo: Inflige 30 de daño especial al Miembro Centro o Miembro Collab de tu oponente."
       }
@@ -47349,7 +47349,7 @@
       "effect": {
         "zh-TW": "可以將自己吶喊牌組上方的1張牌放到存檔區：將自己存檔區的1張「百鬼あやめ」返回手牌。",
         "ja": "自分のエールデッキの上から1枚のカードをアーカイブに置くことができる：自分のアーカイブから「百鬼あやめ」1枚を選び、手札に加える。",
-        "en": "[54] You can send 1 card from the top of your Cheer Deck to the Archive: Return 1 \"百鬼あやめ\" from your Archive to your Hand.",
+        "en": "You can send 1 card from the top of your Cheer Deck to the Archive: Return 1 \"百鬼あやめ\" from your Archive to your Hand.",
         "fr": "Vous pouvez envoyer 1 carte du dessus de votre Deck d'encouragement à l'Archive : retournez 1 \"百鬼あやめ\" de votre Archive dans votre Main.",
         "es": "Puedes poner la carta superior de tu Mazo Cheer en tu Archivo: Devuelve 1 \"百鬼あやめ\" de tu Archivo a tu Mano."
       }
@@ -47366,7 +47366,7 @@
       "effect": {
         "zh-TW": "可以將自己吶喊牌組上方的1張牌放到存檔區：給予對手的中心成員或聯動成員20點特殊傷害。",
         "ja": "自分のエールデッキの上から1枚のカードをアーカイブに置くことができる：相手のセンターメンバーまたはコラボメンバーに20点特殊ダメージを与える。",
-        "en": "[56] You can send 1 card from the top of your Cheer Deck to the Archive: Deal 20 special damage to the opponent's Center Member or Collab Member.",
+        "en": "You can send 1 card from the top of your Cheer Deck to the Archive: Deal 20 special damage to the opponent's Center Member or Collab Member.",
         "fr": "Vous pouvez envoyer 1 carte du dessus de votre Deck d'encouragement à l'Archive : infligez 20 points de dégâts spéciaux au membre Centre ou au membre Collab de l'adversaire.",
         "es": "Puedes poner la carta superior de tu Mazo Cheer en tu Archivo: Inflige 20 de daño especial al Miembro Centro o Miembro Collab de tu oponente."
       }
@@ -47393,7 +47393,7 @@
       "effect": {
         "zh-TW": "可以將自己吶喊牌組上方的1張牌放到存檔區：將自己存檔區的1張「百鬼あやめ」返回手牌。",
         "ja": "自分のエールデッキの上から1枚のカードをアーカイブに置くことができる：自分のアーカイブから「百鬼あやめ」1枚を選び、手札に加える。",
-        "en": "[54] You can send 1 card from the top of your Cheer Deck to the Archive: Return 1 \"百鬼あやめ\" from your Archive to your Hand.",
+        "en": "You can send 1 card from the top of your Cheer Deck to the Archive: Return 1 \"百鬼あやめ\" from your Archive to your Hand.",
         "fr": "Vous pouvez envoyer 1 carte du dessus de votre Deck d'encouragement à l'Archive : retournez 1 \"百鬼あやめ\" de votre Archive dans votre Main.",
         "es": "Puedes poner la carta superior de tu Mazo Cheer en tu Archivo: Devuelve 1 \"百鬼あやめ\" de tu Archivo a tu Mano."
       }
@@ -47410,7 +47410,7 @@
       "effect": {
         "zh-TW": "可以將自己吶喊牌組上方的1張牌放到存檔區：給予對手的中心成員或聯動成員20點特殊傷害。",
         "ja": "自分のエールデッキの上から1枚のカードをアーカイブに置くことができる：相手のセンターメンバーまたはコラボメンバーに20点特殊ダメージを与える。",
-        "en": "[56] You can send 1 card from the top of your Cheer Deck to the Archive: Deal 20 special damage to the opponent's Center Member or Collab Member.",
+        "en": "You can send 1 card from the top of your Cheer Deck to the Archive: Deal 20 special damage to the opponent's Center Member or Collab Member.",
         "fr": "Vous pouvez envoyer 1 carte du dessus de votre Deck d'encouragement à l'Archive : infligez 20 points de dégâts spéciaux au membre Centre ou au membre Collab de l'adversaire.",
         "es": "Puedes poner la carta superior de tu Mazo Cheer en tu Archivo: Inflige 20 de daño especial al Miembro Centro o Miembro Collab de tu oponente."
       }
@@ -51285,7 +51285,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#1期生的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#1期生」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[22] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #1期生 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #1期生 and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #1期生, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #1期生 y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -53803,7 +53803,7 @@
       "effect": {
         "zh-TW": "可以將自己holo能量區上方的2張牌放到存檔區：從自己的牌組抽2張牌。",
         "ja": "自分のホロパワーエリアの上から2枚のカードをアーカイブに置くことができる：自分のデッキからカードを2枚引く。",
-        "en": "[51] You can send 2 cards from the top of your Holo Power Zone to the Archive: Draw 2 cards from your Deck.",
+        "en": "You can send 2 cards from the top of your Holo Power Zone to the Archive: Draw 2 cards from your Deck.",
         "fr": "Vous pouvez envoyer 2 cartes du dessus de votre zone Holo Power à l'Archive : piochez 2 cartes de votre Deck.",
         "es": "Puedes poner 2 cartas superiores de tu Zona de Holo Power en tu Archivo: Roba 2 cartas de tu Mazo."
       }
@@ -53855,7 +53855,7 @@
       "effect": {
         "zh-TW": "可以將自己holo能量區上方的2張牌放到存檔區：從自己的牌組抽2張牌。",
         "ja": "自分のホロパワーエリアの上から2枚のカードをアーカイブに置くことができる：自分のデッキからカードを2枚引く。",
-        "en": "[51] You can send 2 cards from the top of your Holo Power Zone to the Archive: Draw 2 cards from your Deck.",
+        "en": "You can send 2 cards from the top of your Holo Power Zone to the Archive: Draw 2 cards from your Deck.",
         "fr": "Vous pouvez envoyer 2 cartes du dessus de votre zone Holo Power à l'Archive : piochez 2 cartes de votre Deck.",
         "es": "Puedes poner 2 cartas superiores de tu Zona de Holo Power en tu Archivo: Roba 2 cartas de tu Mazo."
       }
@@ -54388,7 +54388,7 @@
       "effect": {
         "zh-TW": "給予對手的中心成員20點特殊傷害。",
         "ja": "相手のセンターメンバーに20点特殊ダメージを与える。\n",
-        "en": "Deal 10 Special Damage to the opponent's Center Member. If that Member has an Item attached, deal 30 Special Damage instead.",
+        "en": "Deal 20 Special Damage to an opponent's Center Holomen.",
         "fr": "Infligez 20 dégâts spéciaux au Membre au Centre de l'adversaire.",
         "es": "Inflige 20 de daño especial al miembro central del oponente."
       }
@@ -54492,7 +54492,7 @@
       "effect": {
         "zh-TW": "給予對手的聯動成員50點特殊傷害。",
         "ja": "相手のコラボメンバーに50点特殊ダメージを与える。\n",
-        "en": "Deal 20 Special Damage to the opponent's Collab Member.",
+        "en": "Deal 50 Special Damage to an opponent's Collab Holomen.",
         "fr": "Infligez 50 dégâts spéciaux au Membre Collab.",
         "es": "Inflige 50 de daño especial al miembro Collab del oponente."
       }
@@ -54547,7 +54547,7 @@
       "effect": {
         "zh-TW": "給予對手的中心成員與聯動成員40點特殊傷害。",
         "ja": "相手のセンターメンバーとコラボメンバーに40点特殊ダメージを与える。\n",
-        "en": "Deal 10 Special Damage to the opponent's Center Member and Collab Member.",
+        "en": "Deal 40 Special Damage to an opponent's Center Holomen and Collab Holomen.",
         "fr": "Infligez 40 dégâts spéciaux au Membre au Centre de l'adversaire et au Membre Collab.",
         "es": "Inflige 40 de daño especial al miembro central y Collab del oponente."
       }
@@ -54600,7 +54600,7 @@
       "effect": {
         "zh-TW": "給予對手的中心成員與聯動成員40點特殊傷害。",
         "ja": "相手のセンターメンバーとコラボメンバーに40点特殊ダメージを与える。\n",
-        "en": "Deal 10 Special Damage to the opponent's Center Member and Collab Member.",
+        "en": "Deal 40 Special Damage to an opponent's Center Holomen and Collab Holomen.",
         "fr": "Infligez 40 dégâts spéciaux au Membre au Centre de l'adversaire et au Membre Collab.",
         "es": "Inflige 40 de daño especial al miembro central y Collab del oponente."
       }
@@ -54653,7 +54653,7 @@
       "effect": {
         "zh-TW": "給予對手的中心成員與聯動成員40點特殊傷害。",
         "ja": "相手のセンターメンバーとコラボメンバーに40点特殊ダメージを与える。\n",
-        "en": "Deal 10 Special Damage to the opponent's Center Member and Collab Member.",
+        "en": "Deal 40 Special Damage to an opponent's Center Holomen and Collab Holomen.",
         "fr": "Infligez 40 dégâts spéciaux au Membre au Centre de l'adversaire et au Membre Collab.",
         "es": "Inflige 40 de daño especial al miembro central y Collab del oponente."
       }
@@ -55487,7 +55487,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區的1張吉祥物附加給這個成員。",
         "ja": "自分のアーカイブからマスコット1枚を選び、このメンバーに付与することができる。",
-        "en": "[80] You can attach 1 Mascot from your Archive to this Member.",
+        "en": "You can attach 1 Mascot from your Archive to this Member.",
         "fr": "Vous pouvez superposer 1 mascotte de votre Archive à ce membre.",
         "es": "Puedes adjuntar 1 Mascota de tu Archivo a este Miembro."
       }
@@ -55504,7 +55504,7 @@
       "effect": {
         "zh-TW": "「オーロ・クロニー」以外，如果標示#Promise的成員在自己的舞台上，這個藝能傷害+10。",
         "ja": "自分のステージに「#Promise」を持つ「オーロ・クロニー」以外のメンバーがいる場合、このアーツのダメージ+10。",
-        "en": "[5] If a Member with #Promise other than \"オーロ・クロニー\" is on your Stage, this Arts' damage +10.",
+        "en": "If a Member with #Promise other than \"オーロ・クロニー\" is on your Stage, this Arts' damage +10.",
         "fr": "Si un membre marqué #Promise (sauf \"オーロ・クロニー\") est sur votre Scène, les dégâts de cet Arts sont augmentés de 10.",
         "es": "Mientras un Miembro con la etiqueta #Promise (excepto \"オーロ・クロニー\") esté en tu Escenario, este Arts inflige +10 de daño."
       }
@@ -64279,7 +64279,7 @@
       "specialAttackImage": null,
       "effect": {
         "zh-TW": "對手的舞台上每有1位與其主推不同顏色的成員，自己1位標示#Myth的成員HP回復10點。",
-        "ja": "相手のステージに、自分の推しと異なる色のメンバーが1人いるごとに、自分の#Mythを持つメンバー1人のHPを20回復する。",
+        "ja": "相手のステージにいる、自分の推しではない色のメンバー1人につき、自分の#Mythのメンバー1人のHPを10回復する。\n",
         "en": "For each of your opponent's Members whose Oshi is a different color than theirs, restore 1 of your Members marked with #Myth's HP by 10.",
         "fr": "Pour chaque membre sur le terrain de l'adversaire dont la couleur est différente de celle de son Oshi, 1 de vos membres marqués #Myth regagne 10 points de vie.\n",
         "es": "Por cada miembro del oponente que sea de un color diferente a su Oshi en el Escenario del oponente, 1 miembro tuyo con la etiqueta #Myth recupera 10 puntos de Vida."
@@ -64324,7 +64324,7 @@
       "specialAttackImage": null,
       "effect": {
         "zh-TW": "對手的舞台上每有1位與其主推不同顏色的成員，自己1位標示#Myth的成員HP回復10點。",
-        "ja": "相手のステージに、自分の推しと異なる色のメンバーが1人いるごとに、自分の#Mythを持つメンバー1人のHPを20回復する。",
+        "ja": "相手のステージにいる、自分の推しではない色のメンバー1人につき、自分の#Mythのメンバー1人のHPを10回復する。\n",
         "en": "For each of your opponent's Members whose Oshi is a different color than theirs, restore 1 of your Members marked with #Myth's HP by 10.",
         "fr": "Pour chaque membre sur le terrain de l'adversaire dont la couleur est différente de celle de son Oshi, 1 de vos membres marqués #Myth regagne 10 points de vie.\n",
         "es": "Por cada miembro del oponente que sea de un color diferente a su Oshi en el Escenario del oponente, 1 miembro tuyo con la etiqueta #Myth recupera 10 puntos de Vida."
@@ -66755,7 +66755,7 @@
       "effect": {
         "zh-TW": "如果在自己後攻的第一個回合，下個對手回合中，1st成員對自己所有的「大空スバル」造成的藝能傷害-100。",
         "ja": "自分が後攻の最初のターンだった場合、次の相手のターン中、1stメンバーが自分の全ての「大空スバル」に与える芸ダメージ-100。",
-        "en": "If it is your first turn when going second, during the next opponent's turn, all of your \"Oozora Subaru\" that are 1st Members take -10 Arts damage.",
+        "en": "If it is your first turn going second, during the next opponent's turn, Arts damage dealt by the 1st Holomen to all of your \"Oozora Subaru\" -100.",
         "fr": "Si c'est votre premier tour en tant que second joueur, pendant le prochain tour de l'adversaire, les dégâts d'arts infligés par les membres 1st à tous vos \"Oozora Subaru\" -100.",
         "es": "Si es tu primer turno y juegas en segundo lugar, durante el siguiente turno del oponente, el daño de Arts infligido por miembros 1st a todos tus \"大空スバル\" -100.\n"
       }
@@ -75487,7 +75487,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#ReGLOSS的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#ReGLOSS」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[34] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #ReGLOSS and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #ReGLOSS and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #ReGLOSS, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #ReGLOSS y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -75503,7 +75503,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#ReGLOSS的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#ReGLOSS」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[34] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #ReGLOSS and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #ReGLOSS and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #ReGLOSS, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #ReGLOSS y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -75793,7 +75793,7 @@
       "effect": {
         "zh-TW": "「AZKi」在自己的舞台上時，這個藝能傷害+50。",
         "ja": "自分のステージに「AZKi」がいる場合、このアーツのダメージ+50。",
-        "en": "[2] If \"AZKi\" is on your Stage, this Arts' damage +50.",
+        "en": "If \"AZKi\" is on your Stage, this Arts' damage +50.",
         "fr": "Si \"AZKi\" est sur votre Scène, les dégâts de cet Arts sont augmentés de 50.",
         "es": "Mientras \"AZKi\" esté en tu Escenario, este Arts inflige +50 de daño."
       }
@@ -75846,7 +75846,7 @@
       "effect": {
         "zh-TW": "「AZKi」在自己的舞台上時，這個藝能傷害+50。",
         "ja": "自分のステージに「AZKi」がいる場合、このアーツのダメージ+50。",
-        "en": "[2] If \"AZKi\" is on your Stage, this Arts' damage +50.",
+        "en": "If \"AZKi\" is on your Stage, this Arts' damage +50.",
         "fr": "Si \"AZKi\" est sur votre Scène, les dégâts de cet Arts sont augmentés de 50.",
         "es": "Mientras \"AZKi\" esté en tu Escenario, este Arts inflige +50 de daño."
       }
@@ -76090,7 +76090,7 @@
       "effect": {
         "zh-TW": "「ときのそら」在自己的舞台上時，將自己吶喊牌組上方的1張牌，發送給自己的成員。",
         "ja": "自分のステージに「ときのそら」がいる場合、自分のエールデッキの上から1枚を、自分のメンバーに送る。",
-        "en": "[3] If \"ときのそら\" is on your Stage, send 1 card from the top of your Cheer Deck to your Member.",
+        "en": "If \"ときのそら\" is on your Stage, send 1 card from the top of your Cheer Deck to your Member.",
         "fr": "Si \"ときのそら\" est sur votre Scène, envoyez 1 carte du dessus de votre Deck d'encouragement à un de vos membres.",
         "es": "Mientras \"ときのそら\" esté en tu Escenario, envía la carta superior de tu Mazo Cheer a tu Miembro Centro."
       }
@@ -76142,7 +76142,7 @@
       "effect": {
         "zh-TW": "「ときのそら」在自己的舞台上時，將自己吶喊牌組上方的1張牌，發送給自己的成員。",
         "ja": "自分のステージに「ときのそら」がいる場合、自分のエールデッキの上から1枚を、自分のメンバーに送る。",
-        "en": "[3] If \"ときのそら\" is on your Stage, send 1 card from the top of your Cheer Deck to your Member.",
+        "en": "If \"ときのそら\" is on your Stage, send 1 card from the top of your Cheer Deck to your Member.",
         "fr": "Si \"ときのそら\" est sur votre Scène, envoyez 1 carte du dessus de votre Deck d'encouragement à un de vos membres.",
         "es": "Mientras \"ときのそら\" esté en tu Escenario, envía la carta superior de tu Mazo Cheer a tu Miembro Centro."
       }
@@ -76461,7 +76461,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在1張以上才能使用。\n\n將自己所有手牌放回牌組重新洗牌。從自己的牌組抽5張牌。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が1枚以上ある場合にしか使用できない。\n\n自分の手札を全てデッキに戻し、シャッフルする。その後、自分のデッキから5枚引く。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[11] Usable if you have 1 or more cards in your Hand, not including this card.\n\nShuffle all cards in your Hand into your Deck. Draw 5 cards from your Deck.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 1 or more cards in your Hand, not including this card.\n\nShuffle all cards in your Hand into your Deck. Draw 5 cards from your Deck.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 1 carte ou plus dans votre Main (sans compter cette carte).\n\nRemettez toutes vos cartes en Main dans votre Deck et mélangez. Piochez 5 cartes de votre Deck.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 1 o más cartas en tu Mano, sin incluir esta carta.\n\nBaraja todas las cartas de tu Mano en tu Mazo. Roba 5 cartas de tu Mazo.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -76477,7 +76477,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在1張以上才能使用。\n\n將自己所有手牌放回牌組重新洗牌。從自己的牌組抽5張牌。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が1枚以上ある場合にしか使用できない。\n\n自分の手札を全てデッキに戻し、シャッフルする。その後、自分のデッキから5枚引く。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[11] Usable if you have 1 or more cards in your Hand, not including this card.\n\nShuffle all cards in your Hand into your Deck. Draw 5 cards from your Deck.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 1 or more cards in your Hand, not including this card.\n\nShuffle all cards in your Hand into your Deck. Draw 5 cards from your Deck.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 1 carte ou plus dans votre Main (sans compter cette carte).\n\nRemettez toutes vos cartes en Main dans votre Deck et mélangez. Piochez 5 cartes de votre Deck.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 1 o más cartas en tu Mano, sin incluir esta carta.\n\nBaraja todas las cartas de tu Mano en tu Mazo. Roba 5 cartas de tu Mazo.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -76593,7 +76593,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意數量的「ときのそら」「AZKi」並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「ときのそら」「AZKi」を好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[13] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any number of \"ときのそら\" and \"AZKi\" and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any number of \"ときのそら\" and \"AZKi\" and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel nombre de \"ときのそら\" et \"AZKi\", puis ajoutez-les à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier cantidad de \"ときのそら\" y \"AZKi\" y añádelos a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -76746,7 +76746,7 @@
       "effect": {
         "zh-TW": "給予對手的聯動成員10點特殊傷害。",
         "ja": "相手のコラボメンバーに10点特殊ダメージを与える。\n",
-        "en": "Deal 40 Special Damage to the opponent's Center Member and Collab Member.",
+        "en": "Deal 10 Special Damage to an opponent's Collab Holomen.",
         "fr": "Infligez 10 dégâts spéciaux au Membre Collab.",
         "es": "Inflige 10 de daño especial al miembro Collab del oponente."
       }
@@ -77300,7 +77300,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區的1張吉祥物返回手牌。",
         "ja": "自分のアーカイブからマスコット1枚を選び、手札に加える。",
-        "en": "[79] Return 1 Mascot from your Archive to your Hand.",
+        "en": "Return 1 Mascot from your Archive to your Hand.",
         "fr": "Vous pouvez retourner 1 mascotte de votre Archive dans votre Main.",
         "es": "Puedes devolver 1 Mascota de tu Archivo a tu mano."
       }
@@ -77380,7 +77380,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意數量的「白上フブキ」「大神ミオ」「百鬼あやめ」並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「白上フブキ」「大神ミオ」「百鬼あやめ」を好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[20] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any number of \"白上フブキ\", \"大神ミオ\", and \"百鬼あやめ\" and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any number of \"白上フブキ\", \"大神ミオ\", and \"百鬼あやめ\" and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel nombre de \"白上フブキ\", \"大神ミオ\", \"百鬼あやめ\", puis ajoutez-les à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier cantidad de \"白上フブキ\", \"大神ミオ\", \"百鬼あやめ\" y añádelos a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -78152,7 +78152,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意數量的「猫又おかゆ」「鷹嶺ルイ」「大神ミオ」「白上フブキ」「ラプラス・ダークネス」「戌神ころね」並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「猫又おかゆ」「鷹嶺ルイ」「大神ミオ」「白上フブキ」「ラプラス・ダークネス」「戌神ころね」を好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[18] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any number of \"猫又おかゆ\", \"鷹嶺ルイ\", \"大神ミオ\", \"白上フブキ\", \"ラプラス・ダークネス\", and \"戌神ころね\" and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any number of \"猫又おかゆ\", \"鷹嶺ルイ\", \"大神ミオ\", \"白上フブキ\", \"ラプラス・ダークネス\", and \"戌神ころね\" and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel nombre de \"猫又おかゆ\", \"鷹嶺ルイ\", \"大神ミオ\", \"白上フブキ\", \"ラプラス・ダークネス\", \"戌神ころね\", puis ajoutez-les à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier cantidad de \"猫又おかゆ\", \"鷹嶺ルイ\", \"大神ミオ\", \"白上フブキ\", \"ラプラス・ダークネス\", \"戌神ころね\" y añádelos a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -78494,7 +78494,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區1張LIMITED以外的活動返回手牌。",
         "ja": "自分のアーカイブからLIMITED以外のイベントカード1枚を選び、手札に加える。",
-        "en": "[64] Return 1 Event card, excluding LIMITED, from your Archive to your Hand.",
+        "en": "Return 1 Event card, excluding LIMITED, from your Archive to your Hand.",
         "fr": "Vous pouvez retourner 1 événement (sauf LIMITED) de votre Archive dans votre Main.",
         "es": "Puedes devolver 1 carta de Actividad de tu Archivo que no sea LIMITED a tu mano."
       }
@@ -78539,7 +78539,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區1張LIMITED以外的活動返回手牌。",
         "ja": "自分のアーカイブからLIMITED以外のイベントカード1枚を選び、手札に加える。",
-        "en": "[64] Return 1 Event card, excluding LIMITED, from your Archive to your Hand.",
+        "en": "Return 1 Event card, excluding LIMITED, from your Archive to your Hand.",
         "fr": "Vous pouvez retourner 1 événement (sauf LIMITED) de votre Archive dans votre Main.",
         "es": "Puedes devolver 1 carta de Actividad de tu Archivo que no sea LIMITED a tu mano."
       }
@@ -78584,7 +78584,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區1張LIMITED以外的活動返回手牌。",
         "ja": "自分のアーカイブからLIMITED以外のイベントカード1枚を選び、手札に加える。",
-        "en": "[64] Return 1 Event card, excluding LIMITED, from your Archive to your Hand.",
+        "en": "Return 1 Event card, excluding LIMITED, from your Archive to your Hand.",
         "fr": "Vous pouvez retourner 1 événement (sauf LIMITED) de votre Archive dans votre Main.",
         "es": "Puedes devolver 1 carta de Actividad de tu Archivo que no sea LIMITED a tu mano."
       }
@@ -78648,7 +78648,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區1張標示#食べ物的活動返回手牌：這個藝能傷害+20。",
         "ja": "自分のアーカイブから「#食べ物」を持つイベントカード1枚を選び、手札に加える：このアーツのダメージ+20。",
-        "en": "[67] Return 1 Event card with #食べ物 from your Archive to your Hand: This Arts' damage +20.",
+        "en": "Return 1 Event card with #食べ物 from your Archive to your Hand: This Arts' damage +20.",
         "fr": "Vous pouvez retourner 1 événement marqué #食べ物 de votre Archive dans votre Main : les dégâts de cet Arts sont augmentés de 20.",
         "es": "Puedes devolver 1 carta de Actividad con la etiqueta #食べ物 de tu Archivo a tu mano. El daño de este Arts +20."
       }
@@ -78853,7 +78853,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意數量的「大空スバル」「癒月ちょこ」「姫森ルーナ」並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「大空スバル」「癒月ちょこ」「姫森ルーナ」を好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[16] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any number of \"大空スバル\", \"癒月ちょこ\", and \"姫森ルーナ\" and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any number of \"大空スバル\", \"癒月ちょこ\", and \"姫森ルーナ\" and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel nombre de \"大空スバル\", \"癒月ちょこ\", \"姫森ルーナ\", puis ajoutez-les à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier cantidad de \"大空スバル\", \"癒月ちょこ\", \"姫森ルーナ\" y añádelos a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -79373,7 +79373,7 @@
       "effect": {
         "zh-TW": "「轟はじめ」以外標示#ReGLOSS的成員在自己的舞台上時，這個藝能傷害+30。",
         "ja": "自分のステージに「#ReGLOSS」を持つ「轟はじめ」以外のメンバーがいる場合、このアーツのダメージ+30。",
-        "en": "[10] If a Member with #ReGLOSS other than \"轟はじめ\" is on your Stage, this Arts' damage +30.",
+        "en": "If a Member with #ReGLOSS other than \"轟はじめ\" is on your Stage, this Arts' damage +30.",
         "fr": "Si un membre marqué #ReGLOSS (sauf \"轟はじめ\") est sur votre Scène, les dégâts de cet Arts sont augmentés de 30.",
         "es": "Mientras un Miembro con la etiqueta #ReGLOSS (excepto \"轟はじめ\") esté en tu Escenario, este Arts inflige +30 de daño."
       }
@@ -79420,7 +79420,7 @@
       "effect": {
         "zh-TW": "「轟はじめ」以外標示#ReGLOSS的成員在自己的舞台上時，這個藝能傷害+30。",
         "ja": "自分のステージに「#ReGLOSS」を持つ「轟はじめ」以外のメンバーがいる場合、このアーツのダメージ+30。",
-        "en": "[10] If a Member with #ReGLOSS other than \"轟はじめ\" is on your Stage, this Arts' damage +30.",
+        "en": "If a Member with #ReGLOSS other than \"轟はじめ\" is on your Stage, this Arts' damage +30.",
         "fr": "Si un membre marqué #ReGLOSS (sauf \"轟はじめ\") est sur votre Scène, les dégâts de cet Arts sont augmentés de 30.",
         "es": "Mientras un Miembro con la etiqueta #ReGLOSS (excepto \"轟はじめ\") esté en tu Escenario, este Arts inflige +30 de daño."
       }
@@ -79520,7 +79520,7 @@
       "effect": {
         "zh-TW": "給予對手的中心成員或1位後台成員10點特殊傷害。",
         "ja": "相手のセンターメンバーまたはリアメンバー1人に10点特殊ダメージを与える。\n",
-        "en": "Deal 50 Special Damage to the opponent's Center Member. After that, if you have used \"限界飯\" this turn, deal 30 Special Damage to the opponent's Center Member or Collab Member.",
+        "en": "Deal 10 Special Damage to an opponent's Center Holomen or 1 Back row Holomen.",
         "fr": "Infligez 10 dégâts spéciaux au Membre au Centre de l'adversaire ou à 1 Membre à l'Arrière.",
         "es": "Inflige 10 de daño especial al miembro central o a 1 miembro en la retaguardia del oponente."
       }
@@ -79587,7 +79587,7 @@
     "product": "起始牌組「白 轟はじめ (hSD05)」",
     "supportEffect": {
       "zh-TW": "帶有這個吉祥物的成員藝能傷害+10。\n\n◆附加給「轟はじめ」有追加效果\n帶有這個吉祥物的成員HP+20。\n\n每位成員只能帶有1張吉祥物。",
-      "ja": "このマスコットを持つメンバーのHP＋２０。\n\n◆「轟はじめ」に付与された場合、追加効果\nこのマスコットを持つメンバーのHP＋２０。\n\nメンバー１人につき、マスコットは１枚までしか持てない。",
+      "ja": "このマスコットを持つメンバーの、アーツダメージ+10。\n\n◆「轟はじめ」に付与された場合、追加効果\nこのマスコットを持つメンバーのHP+20。\n\n各メンバーはマスコットを1枚しか持てない。\n",
       "en": "Members with this Mascot gain +10 Arts damage.\n\n◆Additional effect for \"Todoroki Hajime\"\nMembers with this Mascot gain +20 HP.\n\nEach Member can only have 1 Mascot.",
       "fr": "Les dégâts d'Arts des membres portant cette Mascotte +10.\n\n◆Effet supplémentaire pour « 轟はじめ »\nLes Points de vie des membres portant cette Mascotte +20.\n\nChaque membre ne peut porter qu'une seule Mascotte.",
       "es": "El miembro con esta mascota tiene un daño de Arts +10.\n\n◆Si se aplica a \"轟はじめ\", tiene un efecto adicional:\nEl miembro con esta mascota tiene HP+20.\n\nSolo se puede adjuntar 1 mascota por miembro."
@@ -79955,7 +79955,7 @@
       "effect": {
         "zh-TW": "自己1位標示#秘密結社holoX的成員HP回復30點。",
         "ja": "自分の#秘密結社holoXのメンバーのHPを30回復する。\n",
-        "en": "1 Member marked as #Myth from your side recovers 20 HP.",
+        "en": "Heal 30 Life Points for all of your Holomen with the #Secret Society holoX marker.",
         "fr": "1 Membre #秘密結社 holoX voit ses HP restaurés de 30 points.",
         "es": "1 miembro tuyo con la etiqueta #Secret Society holox recupera 30 de Vida."
       }
@@ -80002,7 +80002,7 @@
       "effect": {
         "zh-TW": "自己1位標示#秘密結社holoX的成員HP回復30點。",
         "ja": "自分の#秘密結社holoXのメンバーのHPを30回復する。\n",
-        "en": "1 Member marked as #Myth from your side recovers 20 HP.",
+        "en": "Heal 30 Life Points for all of your Holomen with the #Secret Society holoX marker.",
         "fr": "1 Membre #秘密結社 holoX voit ses HP restaurés de 30 points.",
         "es": "1 miembro tuyo con la etiqueta #Secret Society holox recupera 30 de Vida."
       }
@@ -80093,7 +80093,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區1張標示#秘密結社holoX的Debut成員返回手牌。",
         "ja": "自分のアーカイブから「#秘密結社holoX」を持つDebutメンバー1枚を選び、手札に加える。",
-        "en": "[66] Return 1 Debut Member with #秘密結社holoX from your Archive to your Hand.",
+        "en": "Return 1 Debut Member with #秘密結社holoX from your Archive to your Hand.",
         "fr": "Vous pouvez retourner 1 membre Debut marqué #秘密結社holoX de votre Archive dans votre Main.",
         "es": "Puedes devolver 1 carta de Miembro Debut con la etiqueta #秘密結社holoX de tu Archivo a tu mano."
       }
@@ -80642,7 +80642,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區的1張「エルフレンド」附加給這個成員。",
         "ja": "自分のアーカイブから「エルフレンド」1枚を選び、このメンバーに付与することができる。",
-        "en": "[71] You can attach 1 \"エルフレンド\" from your Archive to this Member.",
+        "en": "You can attach 1 \"エルフレンド\" from your Archive to this Member.",
         "fr": "Vous pouvez superposer 1 \"エルフレンド\" de votre Archive à ce membre.",
         "es": "Puedes adjuntar 1 \"エルフレンド\" de tu Archivo a este Miembro."
       }
@@ -80911,7 +80911,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意數量的「不知火フレア」「尾丸ポルカ」「さくらみこ」「星街すいせい」「白銀ノエル」並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「不知火フレア」「尾丸ポルカ」「さくらみこ」「星街すいせい」「白銀ノエル」を好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[14] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any number of \"不知火フレア\", \"尾丸ポルカ\", \"さくらみこ\", \"星街すいせい\", and \"白銀ノエル\" and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any number of \"不知火フレア\", \"尾丸ポルカ\", \"さくらみこ\", \"星街すいせい\", and \"白銀ノエル\" and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel nombre de \"不知火フレア\", \"尾丸ポルカ\", \"さくらみこ\", \"星街すいせい\", \"白銀ノエル\", puis ajoutez-les à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier cantidad de \"不知火フレア\", \"尾丸ポルカ\", \"さくらみこ\", \"星街すいせい\", \"白銀ノエル\" y añádelos a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -81087,7 +81087,7 @@
       "specialAttackImage": "icons/tokkou_50_red.png",
       "effect": {
         "zh-TW": "[每個回合一次]使用這個藝能擊倒對手的中心成員時，給予對手的1位2nd成員40點特殊傷害。",
-        "ja": "[各ターンに1度]このアーツで相手のセンターメンバーをダウンさせた時、相手の2ndメンバー1人に20点特殊ダメージを与える。",
+        "ja": "[各ターン1回]このアーツを使用し相手のセンターのメンバーをダウンした時、相手の2ndのメンバー1人に40ダメージを与える。",
         "en": "[Once per turn] When you K.O. an opponent's Center Member with this Arts, deal 40 Special Damage to 1 of your opponent's 2nd Members.",
         "fr": "[Chaque tour, une fois] Quand vous utilisez cet Arts pour K.O. un membre Centre de l'adversaire, infligez 40 dégâts spéciaux à 1 membre 2nd de l'adversaire.",
         "es": "[Cada turno una vez] Cuando usas este Arts para K.O. al miembro del Centro del oponente, inflige 40 de daño especial a 1 miembro de 2nd del oponente."
@@ -81134,7 +81134,7 @@
       "specialAttackImage": "icons/tokkou_50_red.png",
       "effect": {
         "zh-TW": "[每個回合一次]使用這個藝能擊倒對手的中心成員時，給予對手的1位2nd成員40點特殊傷害。",
-        "ja": "[各ターンに1度]このアーツで相手のセンターメンバーをダウンさせた時、相手の2ndメンバー1人に20点特殊ダメージを与える。",
+        "ja": "[各ターン1回]このアーツを使用し相手のセンターのメンバーをダウンした時、相手の2ndのメンバー1人に40ダメージを与える。",
         "en": "[Once per turn] When you K.O. an opponent's Center Member with this Arts, deal 40 Special Damage to 1 of your opponent's 2nd Members.",
         "fr": "[Chaque tour, une fois] Quand vous utilisez cet Arts pour K.O. un membre Centre de l'adversaire, infligez 40 dégâts spéciaux à 1 membre 2nd de l'adversaire.",
         "es": "[Cada turno una vez] Cuando usas este Arts para K.O. al miembro del Centro del oponente, inflige 40 de daño especial a 1 miembro de 2nd del oponente."
@@ -81200,7 +81200,7 @@
       "effect": {
         "zh-TW": "給予對手的中心成員10點特殊傷害。如果在自己後攻的第一個回合，則給予20點特殊傷害。",
         "ja": "相手のセンターメンバーに10点特殊ダメージを与える。もし自分の後攻1ターン目なら、20点特殊ダメージを与える。\n",
-        "en": "Deal 10 Special Damage to the opponent's Center Member. After that, if your Oshi is \"Tokoyami Towa\", you can place 1 Item of the opponent's Center Member or Collab Member into your Archive.",
+        "en": "Deal 10 Special Damage to an opponent's Center Holomen. If it is your first turn going second, deal 20 Special Damage.",
         "fr": "Infligez 10 dégâts spéciaux au Membre au Centre de l'adversaire. Si c'est votre premier tour en tant que second joueur, infligez 20 dégâts spéciaux.",
         "es": "Inflige 10 de daño especial al miembro central del oponente. Si es tu primer turno yendo segundo, inflige 20 de daño especial."
       }
@@ -81553,7 +81553,7 @@
       "effect": {
         "zh-TW": "「宝鐘マリン」以外，如果標示#3期生的成員在自己的舞台上，從自己的牌組抽1張牌。",
         "ja": "自分のステージに「#3期生」を持つ「宝鐘マリン」以外のメンバーがいる場合、自分のデッキからカードを1枚引く。",
-        "en": "[8] If a Member with #3期生 other than \"宝鐘マリン\" is on your Stage, draw 1 card from your Deck.",
+        "en": "If a Member with #3期生 other than \"宝鐘マリン\" is on your Stage, draw 1 card from your Deck.",
         "fr": "Si un membre marqué #3期生 (sauf \"宝鐘マリン\") est sur votre Scène, piochez 1 carte de votre Deck.",
         "es": "Mientras un Miembro de la #3ª Generación (excepto \"宝鐘マリン\") esté en tu Escenario, roba 1 carta de tu Mazo."
       }
@@ -81605,7 +81605,7 @@
       "effect": {
         "zh-TW": "「宝鐘マリン」以外，如果標示#3期生的成員在自己的舞台上，從自己的牌組抽1張牌。",
         "ja": "自分のステージに「#3期生」を持つ「宝鐘マリン」以外のメンバーがいる場合、自分のデッキからカードを1枚引く。",
-        "en": "[8] If a Member with #3期生 other than \"宝鐘マリン\" is on your Stage, draw 1 card from your Deck.",
+        "en": "If a Member with #3期生 other than \"宝鐘マリン\" is on your Stage, draw 1 card from your Deck.",
         "fr": "Si un membre marqué #3期生 (sauf \"宝鐘マリン\") est sur votre Scène, piochez 1 carte de votre Deck.",
         "es": "Mientras un Miembro de la #3ª Generación (excepto \"宝鐘マリン\") esté en tu Escenario, roba 1 carta de tu Mazo."
       }
@@ -81950,7 +81950,7 @@
       "effect": {
         "zh-TW": "可以將自己存檔區1~3張標示#FLOW GLOW的成員依照喜歡的順序放回牌組下方。如果將3張成員放回牌組，可以將自己吶喊牌組上方的1張牌發送給自己的成員。",
         "ja": "自分のアーカイブから「#FLOW GLOW」を持つメンバーを1～3枚選び、好きな順番でデッキの下に戻す。3枚戻した場合、自分のエールデッキの上から1枚のカードを自分のメンバーに送ることができる。",
-        "en": "[62] Place 1 to 3 Members with #FLOW GLOW from your Archive on the bottom of your Deck in any order. If you place 3 Members on your Deck, send 1 card from the top of your Cheer Deck to your Member.",
+        "en": "Place 1 to 3 Members with #FLOW GLOW from your Archive on the bottom of your Deck in any order. If you place 3 Members on your Deck, send 1 card from the top of your Cheer Deck to your Member.",
         "fr": "Vous pouvez retourner 1 à 3 membres marqués #FLOW GLOW de votre Archive en bas de votre Deck dans l'ordre de votre choix. Si vous retournez 3 membres dans votre Deck, vous pouvez envoyer 1 carte du dessus de votre Deck d'encouragement à un de vos membres.",
         "es": "Puedes poner 1-3 Miembros con la etiqueta #FLOW GLOW de tu Archivo en la parte inferior de tu Mazo en el orden que prefieras. Si pones 3 Miembros en tu Mazo, puedes enviar la carta superior de tu Mazo Cheer a tu Miembro.\n"
       }
@@ -82021,7 +82021,7 @@
       "effect": {
         "zh-TW": "使用這個藝能擊倒對手的中心成員時，如果傷害超過該成員剩餘的HP，每超過30點傷害，將自己吶喊牌組上方的1張牌發送給自己的1位後台成員。",
         "ja": "このアーツで相手のセンターメンバーをダウンさせた場合、ダメージがそのメンバーの残りHPを超えた場合、超えた30点につき1枚、自分のエールデッキの上から1枚を自分の後方メンバーに送る。",
-        "en": "[42] When this Arts K.O.s an opponent's Center Member, if the damage exceeds the remaining HP of that Member, send 1 card from the top of your Cheer Deck to 1 of your Members for every 30 damage that exceeded.",
+        "en": "When this Arts K.O.s an opponent's Center Member, if the damage exceeds the remaining HP of that Member, send 1 card from the top of your Cheer Deck to 1 of your Members for every 30 damage that exceeded.",
         "fr": "Lorsque vous mettez K.O. le membre Centre de l'adversaire avec cet Arts, si les dégâts dépassent les Points de vie restants de ce membre, envoyez 1 carte du dessus de votre Deck d'encouragement à 1 de vos membres pour chaque 30 points de dégâts excédentaires.",
         "es": "Cuando usas este Arts para K.O. al Miembro Centro de tu oponente, si el daño excede la Vida restante de ese Miembro, envía la carta superior de tu Mazo Cheer a 1 Miembro en tu retaguardia por cada 30 de daño excedente."
       }
@@ -82074,7 +82074,7 @@
       "effect": {
         "zh-TW": "使用這個藝能擊倒對手的中心成員時，如果傷害超過該成員剩餘的HP，每超過30點傷害，將自己吶喊牌組上方的1張牌發送給自己的1位後台成員。",
         "ja": "このアーツで相手のセンターメンバーをダウンさせた場合、ダメージがそのメンバーの残りHPを超えた場合、超えた30点につき1枚、自分のエールデッキの上から1枚を自分の後方メンバーに送る。",
-        "en": "[42] When this Arts K.O.s an opponent's Center Member, if the damage exceeds the remaining HP of that Member, send 1 card from the top of your Cheer Deck to 1 of your Members for every 30 damage that exceeded.",
+        "en": "When this Arts K.O.s an opponent's Center Member, if the damage exceeds the remaining HP of that Member, send 1 card from the top of your Cheer Deck to 1 of your Members for every 30 damage that exceeded.",
         "fr": "Lorsque vous mettez K.O. le membre Centre de l'adversaire avec cet Arts, si les dégâts dépassent les Points de vie restants de ce membre, envoyez 1 carte du dessus de votre Deck d'encouragement à 1 de vos membres pour chaque 30 points de dégâts excédentaires.",
         "es": "Cuando usas este Arts para K.O. al Miembro Centro de tu oponente, si el daño excede la Vida restante de ese Miembro, envía la carta superior de tu Mazo Cheer a 1 Miembro en tu retaguardia por cada 30 de daño excedente."
       }
@@ -82209,7 +82209,7 @@
       "effect": {
         "zh-TW": "依照對手的手牌張數，查看自己牌組上方的牌。將其中的1張牌加入手牌。其餘放回牌組重新洗牌。",
         "ja": "相手の手札の枚数に応じて、自分のデッキの上からカードを見る。その中から1枚を自分の手札に加える。残りはデッキに戻しシャッフルする。",
-        "en": "[46] Look at cards from the top of your Deck based on the number of cards in the opponent's Hand. Add 1 of them to your Hand. Shuffle the rest into your Deck.",
+        "en": "Look at cards from the top of your Deck based on the number of cards in the opponent's Hand. Add 1 of them to your Hand. Shuffle the rest into your Deck.",
         "fr": "Regardez les cartes du dessus de votre Deck en fonction du nombre de cartes dans la Main de l'adversaire. Ajoutez 1 de ces cartes à votre Main. Remettez le reste dans votre Deck et mélangez.",
         "es": "Mira cartas de tu Mazo según la cantidad de cartas en la Mano de tu oponente. Añade 1 de ellas a tu Mano. Pon el resto en tu Mazo y baraja."
       }
@@ -82255,7 +82255,7 @@
       "effect": {
         "zh-TW": "依照對手的手牌張數，查看自己牌組上方的牌。將其中的1張牌加入手牌。其餘放回牌組重新洗牌。",
         "ja": "相手の手札の枚数に応じて、自分のデッキの上からカードを見る。その中から1枚を自分の手札に加える。残りはデッキに戻しシャッフルする。",
-        "en": "[46] Look at cards from the top of your Deck based on the number of cards in the opponent's Hand. Add 1 of them to your Hand. Shuffle the rest into your Deck.",
+        "en": "Look at cards from the top of your Deck based on the number of cards in the opponent's Hand. Add 1 of them to your Hand. Shuffle the rest into your Deck.",
         "fr": "Regardez les cartes du dessus de votre Deck en fonction du nombre de cartes dans la Main de l'adversaire. Ajoutez 1 de ces cartes à votre Main. Remettez le reste dans votre Deck et mélangez.",
         "es": "Mira cartas de tu Mazo según la cantidad de cartas en la Mano de tu oponente. Añade 1 de ellas a tu Mano. Pon el resto en tu Mazo y baraja."
       }
@@ -82415,7 +82415,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#FLOW GLOW的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#FLOW GLOW」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[28] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #FLOW GLOW and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #FLOW GLOW and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #FLOW GLOW, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #FLOW GLOW y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -82431,7 +82431,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#FLOW GLOW的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#FLOW GLOW」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[28] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #FLOW GLOW and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #FLOW GLOW and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #FLOW GLOW, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #FLOW GLOW y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -82636,7 +82636,7 @@
       "effect": {
         "zh-TW": "可以將自己吶喊牌組上方的1張牌發送給自己的「虎金妃笑虎」。",
         "ja": "自分のエールデッキの上から1枚のカードを自分の「虎金妃笑虎」に送ることができる。",
-        "en": "[58] You can send 1 card from the top of your Cheer Deck to your \"虎金妃笑虎\".",
+        "en": "You can send 1 card from the top of your Cheer Deck to your \"虎金妃笑虎\".",
         "fr": "Vous pouvez envoyer 1 carte du dessus de votre Deck d'encouragement à votre \"虎金妃笑虎\".",
         "es": "Puedes enviar la carta superior de tu Mazo Cheer a tu \"虎金妃笑虎\"."
       }
@@ -84260,7 +84260,7 @@
       "effect": {
         "zh-TW": "可以將1張與這個成員重疊的Debut成員放到存檔區：給予對手的聯動成員20點特殊傷害。",
         "ja": "このメンバーと重ねていたDebutメンバー1枚をアーカイブに置くことができる：相手のコラボメンバーに20点特殊ダメージを与える。",
-        "en": "[48] You can send 1 Debut Member overlapped with this Member to the Archive: Deal 20 special damage to the opponent's Collab Member.",
+        "en": "You can send 1 Debut Member overlapped with this Member to the Archive: Deal 20 special damage to the opponent's Collab Member.",
         "fr": "Vous pouvez envoyer 1 membre Debut superposé à ce membre à l'Archive : infligez 20 points de dégâts spéciaux au membre Collab de l'adversaire.",
         "es": "Puedes poner 1 Miembro Debut apilado con este Miembro en tu Archivo: Inflige 20 de daño especial al Miembro Collab de tu oponente."
       }
@@ -84532,7 +84532,7 @@
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#Justice的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
       "ja": "このカード以外に、自分の手札が6枚以下の場合にしか使用できない。\n\n自分のデッキの上から4枚を見る。その中から「#Justice」を持つメンバーを好きな枚数選び、手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。",
-      "en": "[32] Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #Justice and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
+      "en": "Usable if you have 6 or fewer cards in your Hand, not including this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member with #Justice and add them to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: Usable once per turn.",
       "fr": "Utilisable uniquement si vous avez 6 cartes ou moins dans votre Main (sans compter cette carte).\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel membre marqué #Justice, puis ajoutez-le à votre Main. Remettez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Utilisable une fois par tour.",
       "es": "Solo puedes usar esta carta si tienes 6 o menos cartas en tu Mano, sin incluir esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #Justice y añádelo a tu Mano. Pon el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo puedes usar una por turno."
     },
@@ -84716,8 +84716,8 @@
       "name": "いっちにー、さんしー",
       "effect": {
         "zh-TW": "選擇自己的中心成員。這個回合中，該成員的藝能傷害+10。",
-        "ja": "自分のセンターホロメンを選ぶ。このターンの間、選んだホロメンのアーツ+10。",
-        "en": "Choose your Center Member. During this turn, that Member's Arts damage +10.",
+        "ja": "自分のセンターメンバーを1人選ぶ。このターン中、そのメンバーのアーツダメージ+10。\n",
+        "en": "Choose one of your Center Holomen. During this turn, that Holomen's Arts damage +10.",
         "fr": "Choisissez votre membre au Centre. Ce tour-ci, les Arts de ce membre +10 dégâts.",
         "es": "Selecciona tu Miembro del Centro. Durante este turno, el daño de Arts de ese Miembro +10."
       }
@@ -84793,8 +84793,8 @@
       "name": "Message for You -フブキ-",
       "effect": {
         "zh-TW": "選擇自己的中心成員。這個回合中，該成員的藝能傷害+10。",
-        "ja": "このターン中、このメンバーのカードのダメージ+20。",
-        "en": "This turn, this Member's Arts damage +20.",
+        "ja": "自分のセンターメンバーを1人選ぶ。このターン中、そのメンバーのアーツダメージ+10。\n",
+        "en": "Choose one of your Center Holomen. During this turn, that Holomen's Arts damage +10.",
         "fr": "Choisissez votre membre au Centre. Ce tour-ci, les Arts de ce membre +10 dégâts.",
         "es": "Selecciona tu Miembro del Centro. Durante este turno, el daño de Arts de ese Miembro +10."
       }
@@ -85232,8 +85232,8 @@
       "name": "薄明",
       "effect": {
         "zh-TW": "這個成員擊倒對手的成員時，這個成員HP回復20點。",
-        "ja": "このターン中、自分のステージに「35P」が1枚あるごとに、このメンバーのカードのダメージ+10。",
-        "en": "This turn, for each \"35P\" on your Stage, this Member's Arts damage +10.",
+        "ja": "このメンバーが相手のメンバーをダウンさせた場合、このメンバーのHPを20回復する。\n",
+        "en": "When this Holomen Downs an opponent's Holomen, this Holomen recovers 20 Life Points.",
         "fr": "Lorsque ce membre met K.O. un membre adverse, les Points de vie de ce membre sont restaurés de 20 points.",
         "es": "Cuando este Miembro derrota a un Miembro del oponente, la Vida de este Miembro se recupera 20 puntos."
       }
@@ -85308,8 +85308,8 @@
     "product": "起始牌組「ライブスタートデッキ 儒烏風亭らでん (hSD15)」",
     "supportEffect": {
       "zh-TW": "選擇自己舞台上的1位「儒烏風亭らでん」。這個回合中，該成員的藝能傷害+10。如果該成員有3張以上的吶喊卡，則該成員的藝能傷害+20。",
-      "ja": "このメンバーが相手のメンバーをダウンさせた時、このメンバーのHPを20回復する。",
-      "en": "When this Member Downs an opponent's Member, this Member's HP recovers by 20.",
+      "ja": "自分のステージから「儒烏風亭らでん」を1人選ぶ。このターン中、そのメンバーのアーツダメージ+10。そのメンバーがエールカードを3枚以上持っている場合、そのメンバーのアーツダメージ+20。\n",
+      "en": "Choose 1 \"Urufu-tei Raden\" on your Stage. During this turn, that Holomen's Arts damage +10. If that Holomen has 3 or more Cheer cards, that Holomen's Arts damage +20.",
       "fr": "Choisissez 1 \"儒烏風亭らでん\" sur votre Scène. Ce tour-ci, les Arts de ce membre +10 dégâts. Si ce membre possède 3 cartes d'encouragement ou plus, alors les Arts de ce membre +20 dégâts.",
       "es": "Selecciona 1 \"Uruu Futei Raden\" en tu Escenario. Durante este turno, el daño de Arts de ese Miembro +10. Si ese Miembro tiene 3 o más cartas de Cheer, el daño de Arts de ese Miembro +20."
     },
@@ -85578,8 +85578,8 @@
       "name": "待ってたにぇ",
       "effect": {
         "zh-TW": "擲1次骰子。如果為3或5，將自己存檔區的1張「35P」返回手牌。",
-        "ja": "「白上フブキ」に付ける場合、追加効果：このメンバーが相手のメンバーをダウンさせた時、自分のエールデッキの上からカードを1枚、自分のメンバーに送る。",
-        "en": "◆When attached to \"Shirakami Fubuki\", additional effect:\nWhen this Member Downs an opponent's Member, send 1 card from the top of your Cheer Deck to your Member.",
+        "ja": "ダイスを1回振る。3か5が出た場合、自分のアーカイブから「35P」を1枚手札に戻す。\n",
+        "en": "Roll 1 die. If it is 3 or 5, return 1 \"35P\" from your Archive to your Hand.",
         "fr": "◆Effet supplémentaire si attaché à \"白上フブキ\"\nLorsque ce membre met K.O. un membre adverse, envoyez la carte du dessus de votre Deck d'encouragement à un de vos membres.\n\nChaque membre ne peut posséder qu'une seule mascotte.\nLancez 1 dé. Si le résultat est 3 ou 5, renvoyez 1 \"35P\" de votre zone d'archive dans votre main.",
         "es": "Lanza 1 dado. Si sale 3 o 5, devuelve 1 carta \"35P\" de tu archivo a tu mano."
       }
@@ -85618,8 +85618,8 @@
       "name": "35P、ありがとうだよー！",
       "effect": {
         "zh-TW": "這個回合中，自己的舞台上每有1張「35P」，這個成員的藝能傷害+10。",
-        "ja": "相手のDebut以外のリアメンバー1枚に20点特殊ダメージを与える。「ステラ」は各ターン1回しか使用できない。",
-        "en": "Deal 20 special damage to 1 of your opponent's Back Row Members other than Debut. \"Stella\" can only be used once per turn.",
+        "ja": "このターン中、自分のステージにいる「35P」1枚につき、このメンバーのアーツダメージ+10。\n",
+        "en": "During this turn, this Holomen's Arts damage +10 for each \"35P\" on your Stage.",
         "fr": "Ce tour-ci, pour chaque \"35P\" sur votre Scène, les Arts de ce membre +10 dégâts.",
         "es": "Durante este turno, por cada 1 \"35P\" en tu Escenario, el daño de Arts de este Miembro +10."
       }
@@ -85943,8 +85943,8 @@
       "name": "踊ったもん勝ち！",
       "effect": {
         "zh-TW": "這個回合中，這個成員的藝能傷害+20。",
-        "ja": "自分のメンバーのHPを30回復する。",
-        "en": "Your Member's HP recovers by 30.",
+        "ja": "このターン中、このメンバーのアーツダメージ+20。\n",
+        "en": "During this turn, this Holomen's Arts damage +20.",
         "fr": "Ce tour-ci, les Arts de ce membre +20 dégâts.",
         "es": "Durante este turno, el daño de Arts de este Miembro aumenta en 20."
       }
@@ -85975,8 +85975,8 @@
     "product": "起始牌組「ライブスタートデッキ 星街すいせい (hSD17)」",
     "supportEffect": {
       "zh-TW": "給予對手Debut以外的1位後台成員20點特殊傷害。「ステラ」每個回合只能使用一次。",
-      "ja": "ダイスを1回振る。3か5の場合、自分のアーカイブから「35P」を1枚手札に戻す。",
-      "en": "Roll 1 die. If it is 3 or 5, return 1 \"35P\" from your Archive to your Hand.",
+      "ja": "相手のDebut以外のバックメンバー1人に20点の特殊ダメージを与える。「ステラ」は各ターンに1度しか使用できない。\n",
+      "en": "Deal 20 Special Damage to 1 opponent's Back row Holomen other than Debut.\n\"Stella\" can only be used once per turn.",
       "fr": "Infligez 20 dégâts spéciaux à 1 membre de l'arrière-garde de votre adversaire autre que Debut. \"ステラ\" ne peut être utilisé qu'une fois par tour.",
       "es": "Inflige 20 de daño especial a 1 miembro en la retaguardia del oponente que no sea Debut. \"Stella\" solo puede usarse una vez por turno."
     },
@@ -86652,8 +86652,8 @@
     "product": "起始牌組「ライブスタートデッキ 大空スバル (hSD19)」",
     "supportEffect": {
       "zh-TW": "自己的成員HP回復30點。",
-      "ja": "ダイスを1回振る。3か5の場合、自分のデッキからカードを1枚引く。",
-      "en": "Roll 1 die. If it is 3 or 5, draw 1 card from your Deck.",
+      "ja": "自分のメンバーのHPを30回復する。\n",
+      "en": "Heal 30 Life Points for your Holomen.",
       "fr": "Les Points de vie de vos membres sont restaurés de 30 points.",
       "es": "Restaura 30 puntos de Vida a tus Miembros."
     },
