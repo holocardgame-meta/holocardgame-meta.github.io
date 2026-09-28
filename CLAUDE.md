@@ -80,7 +80,10 @@ GitHub Pages. No build step, no backend. See README.md for architecture.
   batch, the strongest model sees at most `MAX_STRONGEST_ITEMS` per pair per
   run, escalation batches are `ESCALATION_BATCH_SIZE` items, a 504 splits the
   batch instead of retrying, and 429 waits are capped — keep those when
-  touching the ladder.
+  touching the ladder. Card zh-TW→ja/en entries cached before batches were
+  id-tagged are retranslated `MAX_REFRESH_ITEMS` per pair per run (old text
+  shows until a new one passes) and re-keyed `gemini-v2|…`; once none are left
+  the refresh is a no-op.
 - Wrong card translation? Add it to root `translation_overrides.json`
   (hand-curated, `{source_lang: {source_text: {lang: text, "cards": [ids]}}}`),
   never to `web/data/` — the weekly run rebuilds that. Overrides beat the cache

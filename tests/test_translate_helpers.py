@@ -166,7 +166,87 @@ def test_unique_map_escalates_card_effect_with_changed_numbers(monkeypatch):
     mapping = translate._translate_unique_map([HSD14_SRC], "zh-TW", "ja")
 
     assert mapping[HSD14_SRC] == HSD14_GOOD_JA
-    assert translate._cache.get(_cache_key("zh-TW", "ja", HSD14_SRC)) == HSD14_GOOD_JA
+    assert translate._cache.get(translate._verified_key("zh-TW", "ja", HSD14_SRC)) == HSD14_GOOD_JA
+
+
+def _recording_batch(calls: list, result=lambda x: f"{x}-new"):
+    def fake_batch(batch, s, t, _no_split=False, model=None):
+        calls.append(list(batch))
+        return [result(x) for x in batch]
+
+    return fake_batch
+
+
+def test_refresh_retranslates_pre_id_tag_card_entry_and_rekeys_it(monkeypatch):
+    calls: list = []
+    monkeypatch.setattr(translate, "_translate_batch_gemini", _recording_batch(calls))
+    monkeypatch.setattr(translate.time, "sleep", lambda *_: None)
+    translate._cache.clear()
+    translate._cache[_cache_key("zh-TW", "ja", "甲")] = "old"
+
+    mapping = translate._translate_unique_map(["甲"], "zh-TW", "ja")
+
+    assert mapping == {"甲": "甲-new"}
+    assert translate._cache[translate._verified_key("zh-TW", "ja", "甲")] == "甲-new"
+    assert _cache_key("zh-TW", "ja", "甲") not in translate._cache
+
+
+def test_refresh_keeps_old_translation_when_retranslation_fails(monkeypatch):
+    """A refresh that fails on every model must not fall back to source text:
+    the old translation stays shown and cached for the next run's retry."""
+    calls: list = []
+    monkeypatch.setattr(translate, "_translate_batch_gemini", _recording_batch(calls, lambda x: None))
+    monkeypatch.setattr(translate.time, "sleep", lambda *_: None)
+    translate._cache.clear()
+    translate._cache[_cache_key("zh-TW", "en", "甲")] = "old"
+
+    mapping = translate._translate_unique_map(["甲"], "zh-TW", "en")
+
+    assert mapping == {"甲": "old"}
+    assert translate._cache[_cache_key("zh-TW", "en", "甲")] == "old"
+    assert translate._verified_key("zh-TW", "en", "甲") not in translate._cache
+
+
+def test_refresh_is_capped_and_new_strings_go_first(monkeypatch):
+    calls: list = []
+    monkeypatch.setattr(translate, "_translate_batch_gemini", _recording_batch(calls))
+    monkeypatch.setattr(translate.time, "sleep", lambda *_: None)
+    monkeypatch.setattr(translate, "MAX_REFRESH_ITEMS", 1)
+    translate._cache.clear()
+    translate._cache[_cache_key("zh-TW", "ja", "甲")] = "old-甲"
+    translate._cache[_cache_key("zh-TW", "ja", "乙")] = "old-乙"
+
+    mapping = translate._translate_unique_map(["甲", "乙", "丙"], "zh-TW", "ja")
+
+    assert calls == [["丙", "甲"]]  # the new string, then one refresh
+    assert mapping == {"甲": "甲-new", "乙": "old-乙", "丙": "丙-new"}
+    assert translate._cache[translate._verified_key("zh-TW", "ja", "丙")] == "丙-new"
+
+
+def test_refresh_waits_when_budget_is_low(monkeypatch):
+    calls: list = []
+    monkeypatch.setattr(translate, "_translate_batch_gemini", _recording_batch(calls))
+    monkeypatch.setattr(translate, "_deadline", translate.time.monotonic() + 60)
+    translate._cache.clear()
+    translate._cache[_cache_key("zh-TW", "ja", "甲")] = "old"
+
+    assert translate._translate_unique_map(["甲"], "zh-TW", "ja") == {"甲": "old"}
+    assert calls == []
+
+
+def test_refresh_skips_verified_entries_and_other_pairs(monkeypatch):
+    calls: list = []
+    monkeypatch.setattr(translate, "_translate_batch_gemini", _recording_batch(calls))
+    translate._cache.clear()
+    translate._cache[translate._verified_key("zh-TW", "ja", "甲")] = "verified"
+    translate._cache[_cache_key("zh-TW", "ja", "甲")] = "old"  # superseded
+    translate._cache[_cache_key("zh-TW", "fr", "甲")] = "ancien"
+    translate._cache[_cache_key("ja", "en", "こんにちは")] = "Hello"
+
+    assert translate._translate_unique_map(["甲"], "zh-TW", "ja") == {"甲": "verified"}
+    assert translate._translate_unique_map(["甲"], "zh-TW", "fr") == {"甲": "ancien"}
+    assert translate._translate_unique_map(["こんにちは"], "ja", "en") == {"こんにちは": "Hello"}
+    assert calls == []
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]

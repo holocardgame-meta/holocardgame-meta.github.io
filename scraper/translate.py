@@ -38,6 +38,15 @@ MAX_RATE_LIMIT_WAIT = 90.0
 # Items the strongest (slowest, most rate-limited) tier attempts per language
 # pair per run; anything beyond is left uncached for the next run.
 MAX_STRONGEST_ITEMS = 40
+# Card translations cached before batch responses were id-tagged can carry a
+# neighbouring card's text with the same numbers, which the number check can't
+# see. Each run retranslates up to MAX_REFRESH_ITEMS of them per pair (the old
+# translation keeps showing until a new one passes) and re-caches the result
+# under _verified_key; new translations for these pairs go there directly.
+REFRESH_PAIRS = {("zh-TW", "ja"), ("zh-TW", "en")}
+MAX_REFRESH_ITEMS = 500
+# Refresh only while this much budget is left, so it never starves new strings.
+REFRESH_MIN_BUDGET_SECONDS = 600.0
 # Wall-clock budget for the whole translation step (seconds). When it runs
 # out, remaining strings fall back to their source text (uncached) and the
 # next run continues — a partially translated dataset ships instead of a
@@ -66,7 +75,7 @@ hololive OFFICIAL CARD GAME (ホロカ / hOCG) official terminology:
 | エールデッキ | 吶喊牌組 | Cheer Deck | Deck d'encouragement | Mazo Cheer |
 | ブルーム | 綻放 | Bloom | Bloom | Bloom |
 | アーツ | 藝能 | Arts | Arts | Arts |
-| ホロメン / メンバー | 成員 | Holomen / Member | Membre | Holomen / Miembro |
+| ホロメン / メンバー | 成員 | Member | Membre | Holomen / Miembro |
 | コラボ | 聯動 | Collab | Collab | Collab |
 | ダウン | 擊倒 | Down | K.O. | K.O. |
 | 推し / 推しホロメン | 推 / 主推 | Oshi | Oshi | Oshi |
@@ -345,6 +354,22 @@ def _cache_key(source: str, target: str, text: str) -> str:
     return f"gemini|{source}|{target}|{text}"
 
 
+def _verified_key(source: str, target: str, text: str) -> str:
+    """Cache key for a REFRESH_PAIRS translation made from an id-tagged batch."""
+    return f"gemini-v2|{source}|{target}|{text}"
+
+
+def _store(source: str, target: str, text: str, result: str):
+    """Cache a fresh translation; a refresh pair also retires the old entry."""
+    global _cache_dirty
+    if (source, target) in REFRESH_PAIRS:
+        _cache[_verified_key(source, target, text)] = result
+        _cache.pop(_cache_key(source, target, text), None)
+    else:
+        _cache[_cache_key(source, target, text)] = result
+    _cache_dirty = True
+
+
 def _load_overrides(base_dir: Path):
     """Load hand-verified translations from base_dir/translation_overrides.json.
 
@@ -520,10 +545,11 @@ def _unusable(result: str | None, text: str, source: str, target: str) -> bool:
 
 
 def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> dict[str, str]:
-    global _cache_dirty
     mapping: dict[str, str] = {}
     to_translate: list[str] = []
     overridden = 0
+    refresh = (source, target) in REFRESH_PAIRS
+    stale: list[str] = []  # refresh-pair entries cached before id-tagging
 
     for text in unique_texts:
         if not text or not text.strip():
@@ -533,14 +559,26 @@ def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> 
         if key in _overrides:
             mapping[text] = _overrides[key]
             overridden += 1
+        elif refresh and _verified_key(source, target, text) in _cache:
+            mapping[text] = _cache[_verified_key(source, target, text)]
         elif key in _cache:
             mapping[text] = _cache[key]
+            if refresh:
+                stale.append(text)
         else:
             to_translate.append(text)
 
     cached = len(unique_texts) - len(to_translate) - overridden
     note = f", {overridden} overridden" if overridden else ""
     print(f"    {source}->{target}: {cached} cached, {len(to_translate)} new{note}")
+
+    # New strings go first; refreshed ones keep their mapping (the old
+    # translation) unless a new one passes, so running out of budget or a
+    # failed retranslation never shows source text in their place.
+    if stale and _budget_left() >= REFRESH_MIN_BUDGET_SECONDS:
+        refreshing = stale[:MAX_REFRESH_ITEMS]
+        print(f"    {source}->{target}: refreshing {len(refreshing)} of {len(stale)} pre-id-tag translations")
+        to_translate += refreshing
 
     if not to_translate:
         return mapping
@@ -551,7 +589,7 @@ def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> 
             skipped = to_translate[batch_start:]
             print(f"    [budget] Time budget exhausted; {len(skipped)} {source}->{target} items left for the next run")
             for text in skipped:
-                mapping[text] = text
+                mapping.setdefault(text, text)
             break
         batch = to_translate[batch_start:batch_start + BATCH_SIZE]
         batch_num = batch_start // BATCH_SIZE + 1
@@ -569,8 +607,7 @@ def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> 
                 batch_failed += 1
                 continue
             mapping[text] = result
-            _cache[_cache_key(source, target, text)] = result
-            _cache_dirty = True
+            _store(source, target, text, result)
         # Persist after every batch: a run killed by the job timeout keeps
         # what it translated instead of redoing it next week.
         _save_cache(quiet=True)
@@ -612,17 +649,21 @@ def _translate_unique_map(unique_texts: list[str], source: str, target: str) -> 
                     next_remaining.append(text)
                     continue
                 mapping[text] = result
-                _cache[_cache_key(source, target, text)] = result
-                _cache_dirty = True
+                _store(source, target, text, result)
             _save_cache(quiet=True)
             if esc_start + ESCALATION_BATCH_SIZE < len(remaining):
                 time.sleep(REQUEST_DELAY)
         remaining = next_remaining + deferred
 
-    for text in remaining:
-        mapping[text] = text  # still untranslated at the top tier -> source, uncached
-    if remaining:
-        print(f"    [warn] {len(remaining)} items still untranslated after escalation; next run retries")
+    # Still failing at the top tier: new strings show source text, refreshed
+    # ones keep their old translation; neither is cached, so the next run retries.
+    untranslated = [text for text in remaining if text not in mapping]
+    for text in untranslated:
+        mapping[text] = text
+    if untranslated:
+        print(f"    [warn] {len(untranslated)} items still untranslated after escalation; next run retries")
+    if len(remaining) > len(untranslated):
+        print(f"    [warn] {len(remaining) - len(untranslated)} refreshes kept their old translation; next run retries")
 
     return mapping
 
