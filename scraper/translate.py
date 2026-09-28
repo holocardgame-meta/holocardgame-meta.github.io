@@ -172,6 +172,22 @@ _JA_GRAMMAR_RE = re.compile(
 # can carry a stray grammar char (「ふつうのパソコン」). Strip quoted spans first so
 # a name's の doesn't read as a Japanese sentence.
 _JA_QUOTE_RE = re.compile(r"[「『][^」』]*[」』]")
+# Card tags (#ラミィのお酒, #秘密結社holoX) are kept verbatim like names but are
+# not quoted, and #ラミィのお酒 carries a grammatical-looking の. Filled from the
+# cards' tag field by translate_all(), longest first.
+_known_tags: list[str] = []
+
+
+def _load_known_tags(data_dir: Path):
+    """Collect the card tags from data_dir/cards.json (empty when it's missing)."""
+    global _known_tags
+    cards_path = data_dir / "cards.json"
+    tags: set[str] = set()
+    if cards_path.exists():
+        for card in json.loads(cards_path.read_text(encoding="utf-8")):
+            if isinstance(card.get("tag"), str):
+                tags.update(t.strip() for t in card["tag"].split("/") if t.strip().startswith("#"))
+    _known_tags = sorted(tags, key=len, reverse=True)
 
 
 # Scripts that never occur in valid hOCG output (Hebrew, Arabic, Indic incl.
@@ -190,15 +206,18 @@ def _looks_untranslated(text: object, target: str) -> bool:
     model garbled a name into an exotic (non-hOCG) script.
 
     Used both to reject fresh under-translations before caching and to evict
-    sticky ones already in the cache. After dropping quoted names, even one
-    grammar marker means Japanese: correct Chinese/English output has none,
-    while short Japanese titles ("...のデッキレシピと回し方") have at least one.
+    sticky ones already in the cache. After dropping quoted names and card
+    tags, even one grammar marker means Japanese: correct Chinese/English
+    output has none, while short Japanese titles ("...のデッキレシピと回し方")
+    have at least one.
     """
     if target == "ja" or not isinstance(text, str):
         return False
     if _has_garbled_script(text):
         return True
     outside_names = _JA_QUOTE_RE.sub("", text)
+    for tag in _known_tags:
+        outside_names = outside_names.replace(tag, "")
     return len(_JA_GRAMMAR_RE.findall(outside_names)) >= 1
 
 
@@ -881,6 +900,8 @@ def translate_rules(data_dir: Path):
 def translate_all(data_dir: Path):
     global _deadline
     base_dir = data_dir.parent
+    # Before the cache load: its eviction pass already needs the tags.
+    _load_known_tags(data_dir)
     _load_cache(base_dir)
     if TRANSLATE_BUDGET_SECONDS > 0:
         _deadline = time.monotonic() + TRANSLATE_BUDGET_SECONDS

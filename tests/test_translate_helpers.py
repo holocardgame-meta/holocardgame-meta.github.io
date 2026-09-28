@@ -310,6 +310,45 @@ def test_looks_untranslated_ignores_no_inside_kana_names():
     assert translate._looks_untranslated("ジジ一人の効果を使用。", "zh-TW") is True
 
 
+def test_looks_untranslated_ignores_known_card_tags(monkeypatch):
+    """A card tag kept verbatim (#ラミィのお酒, whose の is not grammar) must not
+    read as leftover Japanese — it kept every es translation of the Lamy cards
+    from being cached. Japanese around the tag is still caught."""
+    monkeypatch.setattr(translate, "_known_tags", ["#ラミィのお酒", "#きのこ"])
+    es = "Muestra 1 carta de Soporte con #ラミィのお酒 de tu Mazo y agrégala a tu mano."
+    assert translate._looks_untranslated(es, "es") is False
+    assert translate._looks_untranslated("展示1張標示#ラミィのお酒的支援卡。", "zh-TW") is False
+    assert translate._looks_untranslated("#きのこを持つイベントを公開する。", "en") is True
+
+
+def test_looks_untranslated_without_known_tags_still_flags_tag_no(monkeypatch):
+    monkeypatch.setattr(translate, "_known_tags", [])
+    es = "Muestra 1 carta de Soporte con #ラミィのお酒 de tu Mazo."
+    assert translate._looks_untranslated(es, "es") is True
+
+
+def test_load_known_tags_reads_card_tag_field(tmp_path, monkeypatch):
+    monkeypatch.setattr(translate, "_known_tags", [])
+    cards = [
+        {"id": "a", "tag": "#JP / #1期生 / #ゲーマーズ"},
+        {"id": "b", "tag": "#ラミィのお酒"},
+        {"id": "c", "tag": None},
+        {"id": "d"},
+    ]
+    (tmp_path / "cards.json").write_text(json.dumps(cards, ensure_ascii=False), encoding="utf-8")
+
+    translate._load_known_tags(tmp_path)
+
+    assert set(translate._known_tags) == {"#JP", "#1期生", "#ゲーマーズ", "#ラミィのお酒"}
+    assert len(translate._known_tags[0]) >= len(translate._known_tags[-1])  # longest first
+
+
+def test_load_known_tags_without_cards_file(tmp_path, monkeypatch):
+    monkeypatch.setattr(translate, "_known_tags", ["#stale"])
+    translate._load_known_tags(tmp_path)
+    assert translate._known_tags == []
+
+
 def test_looks_untranslated_flags_garbled_exotic_scripts():
     """A hallucinated name in an exotic script (Gujarati/Hebrew/Arabic/Thai)
     never occurs in valid output — treat it as garbled so it's rejected+retried."""
