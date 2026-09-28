@@ -66629,7 +66629,7 @@
         "ja": "[各ターンに1回]自分のデッキから「ラミィのお酒」と書かれたサポートカードを1～2枚公開し手札に加える。デッキをシャッフルする。",
         "en": "[Once per turn] Show 1-2 Support cards with #Lamy's Alcohol from your Deck and add them to your Hand. Shuffle your Deck.",
         "fr": "[Chaque tour, une fois] Montrez 1 à 2 cartes de support marquées #Lamy's Sake de votre deck et ajoutez-les à votre main. Mélangez votre deck.",
-        "es": "[每個回合一次]從自己的牌組展示1~2張標示#ラミィのお酒的支援卡並加入手牌。將牌組重新洗牌。"
+        "es": "[Cada turno una vez] Muestra 1-2 cartas de Soporte con la etiqueta #ラミィのお酒 de tu mazo y añádelas a tu mano. Baraja tu mazo.\n"
       }
     },
     "spSkill": null,
@@ -66655,7 +66655,7 @@
         "ja": "[各ターンに1回]自分のデッキから「ラミィのお酒」と書かれたサポートカードを1～2枚公開し手札に加える。デッキをシャッフルする。",
         "en": "[Once per turn] Show 1-2 Support cards with #Lamy's Alcohol from your Deck and add them to your Hand. Shuffle your Deck.",
         "fr": "[Chaque tour, une fois] Montrez 1 à 2 cartes de support marquées #Lamy's Sake de votre deck et ajoutez-les à votre main. Mélangez votre deck.",
-        "es": "[每個回合一次]從自己的牌組展示1~2張標示#ラミィのお酒的支援卡並加入手牌。將牌組重新洗牌。"
+        "es": "[Cada turno una vez] Muestra 1-2 cartas de Soporte con la etiqueta #ラミィのお酒 de tu mazo y añádelas a tu mano. Baraja tu mazo.\n"
       }
     },
     "spSkill": null,
@@ -71797,7 +71797,7 @@
         "ja": "自分が後攻の最初のターンだった場合、自分のデッキからカードを3枚引く。手札を1枚アーカイブに置く。アーカイブに置いたカードが「ラミィのお酒」と書かれていない場合、さらに自分の手札を1枚アーカイブに置く。",
         "en": "If it is your first turn when going second, draw 3 cards from your Deck, and place 1 card from your Hand into your Archive. If the card placed into your Archive is not marked #Lammy's Sake, place another card from your Hand into your Archive.",
         "fr": "Si c'est votre premier tour en tant que second joueur, piochez 3 cartes de votre deck, envoyez 1 carte de votre main dans la zone d'archive. Si la carte envoyée dans la zone d'archive n'est pas marquée #Lamy's Sake, envoyez une autre carte de votre main dans la zone d'archive.",
-        "es": "如果在自己後攻的第一個回合，從自己的牌組抽3張牌，將1張手牌放到存檔區。如果放到存檔區的牌沒有標示#ラミィのお酒，再將自己的1張手牌放到存檔區。"
+        "es": "Si es tu primer turno y juegas en segundo lugar, roba 3 cartas de tu mazo y pon 1 carta de tu mano en tu Archivo. Si la carta puesta en tu Archivo no tiene la etiqueta #ラミィのお酒, pon 1 carta adicional de tu mano en tu Archivo.\n"
       }
     },
     "effectB": null,
@@ -71836,7 +71836,7 @@
         "ja": "自分のデッキの上から5枚のカードを確認する。その中から「#ラミィのお酒」のサポートカードを1枚公開し、手札に加える。残りのカードはお好きな順番でデッキの下に戻す。",
         "en": "Look at the top 5 cards of your Deck. Reveal 1 Support card with #Lamy's Alcohol and add it to your Hand. Place the rest on the bottom of your Deck in any order.",
         "fr": "Regardez les 5 cartes du dessus de votre Deck. Montrez 1 carte de Support marquée #Ramy's Alcohol et ajoutez-la à votre Main. Placez le reste en bas de votre Deck dans l'ordre de votre choix.",
-        "es": "查看自己牌組上方的5張牌。展示1張標示#ラミィのお酒的支援卡並加入手牌。其餘依照喜歡的順序放回牌組下方。"
+        "es": "Mira las 5 cartas superiores de tu mazo. Muestra 1 carta de Soporte con la etiqueta #ラミィのお酒 y añádela a tu mano. Coloca el resto en la parte inferior de tu mazo en el orden que prefieras.\n"
       }
     },
     "effectG": null,
@@ -71920,7 +71920,7 @@
         "ja": "自分のアーカイブに「ラミィのお酒」と書かれたサポートカードが1枚以下の場合、このメンバーの芸に必要な無色タオルカードの枚数+1。",
         "en": "If you have 1 or fewer Support cards marked #Lammy's Sake in your Archive, the colorless Cheer card cost required for this Member's Arts is +1.",
         "fr": "Si le nombre de cartes de support marquées #Lamy's Sake dans votre zone d'archive est inférieur ou égal à 1, le nombre de cartes d'encouragement incolores nécessaires pour les arts de ce membre +1.",
-        "es": "如果自己的存檔區中標示#ラミィのお酒的支援卡在1張以下，這個成員藝能需要的無色吶喊卡數量+1。"
+        "es": "Si tienes 1 o menos cartas de Soporte con la etiqueta #ラミィのお酒 en tu Archivo, la cantidad de cartas Cheer incoloras necesarias para esta Habilidad de Miembro aumenta en 1.\n"
       }
     },
     "art1": {
@@ -71965,7 +71965,7 @@
         "ja": "自分のアーカイブに「ラミィのお酒」と書かれたサポートカードが1枚以下の場合、このメンバーの芸に必要な無色タオルカードの枚数+1。",
         "en": "If you have 1 or fewer Support cards marked #Lammy's Sake in your Archive, the colorless Cheer card cost required for this Member's Arts is +1.",
         "fr": "Si le nombre de cartes de support marquées #Lamy's Sake dans votre zone d'archive est inférieur ou égal à 1, le nombre de cartes d'encouragement incolores nécessaires pour les arts de ce membre +1.",
-        "es": "如果自己的存檔區中標示#ラミィのお酒的支援卡在1張以下，這個成員藝能需要的無色吶喊卡數量+1。"
+        "es": "Si tienes 1 o menos cartas de Soporte con la etiqueta #ラミィのお酒 en tu Archivo, la cantidad de cartas Cheer incoloras necesarias para esta Habilidad de Miembro aumenta en 1.\n"
       }
     },
     "art1": {
@@ -72010,7 +72010,7 @@
         "ja": "自分のアーカイブに「ラミィのお酒」と書かれたサポートカードが1枚以下の場合、このメンバーの芸に必要な無色タオルカードの枚数+1。",
         "en": "If you have 1 or fewer Support cards marked #Lammy's Sake in your Archive, the colorless Cheer card cost required for this Member's Arts is +1.",
         "fr": "Si le nombre de cartes de support marquées #Lamy's Sake dans votre zone d'archive est inférieur ou égal à 1, le nombre de cartes d'encouragement incolores nécessaires pour les arts de ce membre +1.",
-        "es": "如果自己的存檔區中標示#ラミィのお酒的支援卡在1張以下，這個成員藝能需要的無色吶喊卡數量+1。"
+        "es": "Si tienes 1 o menos cartas de Soporte con la etiqueta #ラミィのお酒 en tu Archivo, la cantidad de cartas Cheer incoloras necesarias para esta Habilidad de Miembro aumenta en 1.\n"
       }
     },
     "art1": {
@@ -72055,7 +72055,7 @@
         "ja": "自分のアーカイブに「ラミィのお酒」と書かれたサポートカードがある場合、自分のタオルデッキの上から1枚のカードを自分の「雪花ラミィ」に送る。",
         "en": "If you have a Support card marked #Lammy's Sake in your Archive, send 1 card from the top of your Cheer Deck to your \"Yukihana Lamy\".",
         "fr": "Si votre zone d'archive contient des cartes de support marquées #Lamy's Sake, envoyez la carte du dessus de votre deck d'encouragement à votre \"Yukihana Lamy\".",
-        "es": "如果自己的存檔區有標示#ラミィのお酒的支援卡，將自己吶喊牌組上方的1張牌發送給自己的「雪花ラミィ」。"
+        "es": "Si tienes cartas de Soporte con la etiqueta #ラミィのお酒 en tu Archivo, envía la carta superior de tu Mazo Cheer a tu \"雪花ラミィ\".\n"
       }
     },
     "effectG": null,
@@ -72097,7 +72097,7 @@
         "ja": "自分のアーカイブに「ラミィのお酒」と書かれたサポートカードが4枚以下の場合、このメンバーの芸に必要な無色タオルカードの枚数+2。",
         "en": "If you have 4 or fewer Support cards marked #Lammy's Sake in your Archive, the colorless Cheer card cost required for this Member's Arts is +2.",
         "fr": "Si le nombre de cartes de support marquées #Lamy's Sake dans votre zone d'archive est inférieur ou égal à 4, le nombre de cartes d'encouragement incolores nécessaires pour les arts de ce membre +2.",
-        "es": "如果自己的存檔區中標示#ラミィのお酒的支援卡在4張以下，這個成員藝能需要的無色吶喊卡數量+2。"
+        "es": "Si tienes 4 o menos cartas de Soporte con la etiqueta #ラミィのお酒 en tu Archivo, la cantidad de cartas Cheer incoloras necesarias para esta Habilidad de Miembro aumenta en 2.\n"
       }
     },
     "art1": {
@@ -72142,7 +72142,7 @@
         "ja": "自分のアーカイブに「ラミィのお酒」と書かれたサポートカードが4枚以下の場合、このメンバーの芸に必要な無色タオルカードの枚数+2。",
         "en": "If you have 4 or fewer Support cards marked #Lammy's Sake in your Archive, the colorless Cheer card cost required for this Member's Arts is +2.",
         "fr": "Si le nombre de cartes de support marquées #Lamy's Sake dans votre zone d'archive est inférieur ou égal à 4, le nombre de cartes d'encouragement incolores nécessaires pour les arts de ce membre +2.",
-        "es": "如果自己的存檔區中標示#ラミィのお酒的支援卡在4張以下，這個成員藝能需要的無色吶喊卡數量+2。"
+        "es": "Si tienes 4 o menos cartas de Soporte con la etiqueta #ラミィのお酒 en tu Archivo, la cantidad de cartas Cheer incoloras necesarias para esta Habilidad de Miembro aumenta en 2.\n"
       }
     },
     "art1": {
@@ -72187,7 +72187,7 @@
         "ja": "自分のアーカイブに「ラミィのお酒」と書かれたサポートカードが4枚以下の場合、このメンバーの芸に必要な無色タオルカードの枚数+2。",
         "en": "If you have 4 or fewer Support cards marked #Lammy's Sake in your Archive, the colorless Cheer card cost required for this Member's Arts is +2.",
         "fr": "Si le nombre de cartes de support marquées #Lamy's Sake dans votre zone d'archive est inférieur ou égal à 4, le nombre de cartes d'encouragement incolores nécessaires pour les arts de ce membre +2.",
-        "es": "如果自己的存檔區中標示#ラミィのお酒的支援卡在4張以下，這個成員藝能需要的無色吶喊卡數量+2。"
+        "es": "Si tienes 4 o menos cartas de Soporte con la etiqueta #ラミィのお酒 en tu Archivo, la cantidad de cartas Cheer incoloras necesarias para esta Habilidad de Miembro aumenta en 2.\n"
       }
     },
     "art1": {
