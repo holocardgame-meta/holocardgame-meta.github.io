@@ -1,1 +1,7 @@
 .githooks/* text eol=lf
+# scripts/build_seo_pages.mjs (run by the pre-commit hook) rebuilds these with
+# LF from the web/index.html template. Keep their checkout LF as well, or a
+# Windows (core.autocrlf) rebuild leaves EOL-only modifications after each commit.
+web/index.html text eol=lf
+web/*/index.html text eol=lf
+web/sitemap.xml text eol=lf
