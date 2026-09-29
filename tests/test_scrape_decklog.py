@@ -97,3 +97,26 @@ def test_without_cache_every_code_is_fetched(tmp_path, monkeypatch):
     _, fetched_codes = _run(tmp_path, monkeypatch, with_cache=False)
 
     assert fetched_codes == ["AAA11", "BBB22"]
+
+
+def test_missing_registry_oshi_falls_back_to_the_decks_oshi_card(tmp_path, monkeypatch):
+    """Official event reports list codes without an oshi; the fetched deck's
+    oshi card names it — but never an unknown card's id."""
+    codes_path = tmp_path / "deck_codes.json"
+    codes_path.write_text(json.dumps([
+        {"code": "CCC33", "title": "", "oshi": "", "event": "WGP", "event_date": "2026-05-10", "placement": "1st"},
+        {"code": "DDD44", "title": "", "oshi": "", "event": "WGP", "event_date": "2026-05-10", "placement": "2nd"},
+    ]), encoding="utf-8")
+    cards_path = tmp_path / "cards.json"
+    cards_path.write_text(json.dumps([{"id": "hBP01-006", "name": "小鳥遊キアラ"}], ensure_ascii=False), encoding="utf-8")
+    oshi_by_code = {"CCC33": "hBP01-006", "DDD44": "hBP99-001"}
+
+    def fake_fetch(code):
+        return {**RAW_FETCHED, "p_list": [{"card_number": oshi_by_code[code], "num": 1}]}
+
+    monkeypatch.setattr(mod, "_fetch_deck", fake_fetch)
+    monkeypatch.setattr(mod.time, "sleep", lambda s: None)
+
+    results = mod.scrape_decklog(codes_path, cards_path, tmp_path)
+
+    assert [d["oshi"] for d in results] == ["小鳥遊キアラ", ""]

@@ -54,6 +54,16 @@ GitHub Pages. No build step, no backend. See README.md for architecture.
   Tweet IDs already ingested (`scraped_ids`) or classified irrelevant
   (`ignored_ids`) are recorded in `x_posts.json` and never re-fetched; failed
   fetches are unrecorded so they retry next run.
+- `scrape_event_reports` re-reads the official /cat_news/event/ report posts
+  each run and appends their winners' Deck Log codes (event/placement shaped
+  like the curated WGP entries) to `deck_codes.json`, skipping codes already
+  there. Reports carry no oshi, so `scrape_decklog` falls back to the deck's
+  oshi card.
+- `scrape_x` and `scrape_hocg_logs` write `data/source_health.json`; a stale
+  source (discovery/listing returns nothing, or its newest item is older than
+  `X_STALE_DAYS` / `HOCG_STALE_DAYS`) becomes a run warning and one
+  `source-stale` issue, edited in place each run, commented on when another
+  source goes stale, closed when all are fresh.
 - `scrape_hocg_logs` walks hocg-logs.holotune.jp/tournaments (HTML pages only
   — robots.txt disallows /api/ and /mcp — 1s delay), appends new deck codes
   to `deck_codes.json`, and records scraped tournament ids in root

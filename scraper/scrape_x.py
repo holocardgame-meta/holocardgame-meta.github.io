@@ -10,12 +10,18 @@ commits both files back so discoveries survive across runs. Tweet IDs already
 ingested (scraped_ids) or classified as irrelevant (ignored_ids) are recorded
 in x_posts.json and never fetched again; a failed fetch is not recorded, so it
 retries on the next run.
+
+Each run also writes data/source_health.json: when discovery returns nothing
+or the newest known tweet is too old, deploy.yml flags the run and files a
+`source-stale` issue, since "No new tweet IDs discovered" otherwise reads the
+same for a quiet week and a dead source.
 """
 
 import json
 import re
 import sys
 import time
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 import httpx
@@ -40,6 +46,12 @@ AGGREGATOR_URLS = [
     "https://vanholo.doorblog.jp/",
     "https://www.torecataru.com/?p=441",
 ]
+
+# Discovery counts as stale when no source returns any @hololive_OCG tweet ID
+# (fetch or page-layout failure) or the newest tweet known is older than this.
+X_STALE_DAYS = 60
+# X snowflake IDs carry their creation time: (id >> 22) ms after this epoch.
+_TWITTER_EPOCH_MS = 1288834974657
 
 TARGET_ACCOUNT = "hololive_OCG"
 TWEET_URL_RE = re.compile(
@@ -132,12 +144,13 @@ def _classify_tweet(tweet: dict) -> str | None:
     return None
 
 
-def discover_tweets(x_posts_path: Path) -> dict:
+def discover_tweets(x_posts_path: Path, stats: dict | None = None) -> dict:
     """Proactively discover @hololive_OCG tweet IDs from multiple sources.
 
     Returns a dict with 'tournament_posts' and 'usage_rate_posts' URL lists,
     merged with any existing manual entries from x_posts.json. IDs classified
-    as irrelevant go to 'ignored_ids' so they are never re-classified.
+    as irrelevant go to 'ignored_ids' so they are never re-classified. When
+    `stats` is given, stats["found"] is set to how many IDs the sources returned.
     """
     existing: dict = {"account": TARGET_ACCOUNT, "tournament_posts": [], "usage_rate_posts": []}
     if x_posts_path.exists():
@@ -158,6 +171,8 @@ def discover_tweets(x_posts_path: Path) -> dict:
         print("  Discovering tweets from aggregator blogs...")
         agg_ids = _discover_from_aggregators(client)
         print(f"    Found {len(agg_ids)} tweet ID(s) from aggregators")
+        if stats is not None:
+            stats["found"] = len(official_ids | agg_ids)
 
         new_ids = (official_ids | agg_ids) - known_ids
         if not new_ids:
@@ -206,6 +221,53 @@ def discover_tweets(x_posts_path: Path) -> dict:
 def _extract_tweet_id(url: str) -> str | None:
     m = re.search(r"/status/(\d+)", url)
     return m.group(1) if m else None
+
+
+def _tweet_date(tweet_id: str) -> date:
+    ms = (int(tweet_id) >> 22) + _TWITTER_EPOCH_MS
+    return datetime.fromtimestamp(ms / 1000, tz=timezone.utc).date()
+
+
+def discovery_health(x_posts: dict, found: int, today: date | None = None) -> dict:
+    """Judge whether tweet discovery still surfaces anything.
+
+    `found` is how many IDs the discovery sources returned this run; the
+    newest known tweet is taken from every ID x_posts.json records (ingested,
+    ignored or listed), so a hand-added tweet counts as fresh too.
+    """
+    today = today or datetime.now(timezone.utc).date()
+    ids = set(x_posts.get("scraped_ids", [])) | set(x_posts.get("ignored_ids", []))
+    for url in x_posts.get("tournament_posts", []) + x_posts.get("usage_rate_posts", []):
+        tid = _extract_tweet_id(url)
+        if tid:
+            ids.add(tid)
+    newest = max((_tweet_date(t) for t in ids if t.isdigit()), default=None)
+
+    problems = []
+    if found == 0:
+        problems.append("no discovery source returned any @hololive_OCG tweet ID (fetch or page-layout failure)")
+    if newest is None:
+        problems.append("x_posts.json records no tweet at all")
+    elif (today - newest).days > X_STALE_DAYS:
+        problems.append(
+            f"newest known @hololive_OCG tweet is from {newest} "
+            f"({(today - newest).days} days ago, limit {X_STALE_DAYS})"
+        )
+    return {
+        "stale": bool(problems),
+        "problems": problems,
+        "newest_tweet": newest.isoformat() if newest else None,
+        "found": found,
+    }
+
+
+def _write_source_health(output_dir: Path, source: str, health: dict):
+    """Record one source's health in output_dir/source_health.json (read by deploy.yml)."""
+    output_dir.mkdir(parents=True, exist_ok=True)
+    path = output_dir / "source_health.json"
+    report = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+    report[source] = health
+    path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def _fetch_tweet(tweet_id: str) -> dict | None:
@@ -388,7 +450,12 @@ def scrape_x_posts(x_posts_path: Path, deck_codes_path: Path, output_dir: Path) 
     decklog step fetches them in the same pipeline run. Tweets already ingested
     (tracked by ID in x_posts.json "scraped_ids") are skipped, not re-fetched.
     """
-    x_posts = discover_tweets(x_posts_path)
+    stats: dict = {}
+    x_posts = discover_tweets(x_posts_path, stats=stats)
+    health = discovery_health(x_posts, stats.get("found", 0))
+    _write_source_health(output_dir, "x", health)
+    for problem in health["problems"]:
+        print(f"  [warn] X discovery looks stale: {problem}")
 
     urls = x_posts.get("tournament_posts", [])
     if not urls:

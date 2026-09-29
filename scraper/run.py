@@ -11,11 +11,12 @@ from scraper.data_guard import enforce as enforce_data_guard
 from scraper.fetch_cards import fetch_cards
 from scraper.scrape_decklog import scrape_decklog
 from scraper.scrape_decks import scrape_all_decks, scrape_all_guides
+from scraper.scrape_event_reports import scrape_event_reports
 from scraper.scrape_hocg_logs import scrape_hocg_logs
 from scraper.scrape_official import scrape_official
 from scraper.scrape_rules import scrape_rules
 from scraper.scrape_tiers import scrape_tiers
-from scraper.scrape_x import scrape_x_posts
+from scraper.scrape_x import _write_source_health, scrape_x_posts
 from scraper.translate import translate_all
 
 # Datasets whose only upstream source is holocardstrategy.jp. That domain went
@@ -223,10 +224,10 @@ def main():
     print("Holo Card Meta Scraper")
     print("=" * 50)
 
-    print("\n[1/11] Fetching cards database...")
+    print("\n[1/12] Fetching cards database...")
     fetch_cards(data_dir)
 
-    print("\n[2/11] Scraping tier list...")
+    print("\n[2/12] Scraping tier list...")
     try:
         scrape_tiers(data_dir)
     except Exception as exc:
@@ -235,7 +236,7 @@ def main():
 
     cards_path = data_dir / "cards.json"
 
-    print("\n[3/11] Scraping tier-linked deck recipes...")
+    print("\n[3/12] Scraping tier-linked deck recipes...")
     tier_decks: list[dict] = []
     if (data_dir / "tier_list.json").exists():
         try:
@@ -246,7 +247,7 @@ def main():
     else:
         print("  tier_list.json absent (source unreachable); skipping deck-recipe scrape")
 
-    print("\n[4/11] Scraping ALL deck guides from holocardstrategy...")
+    print("\n[4/12] Scraping ALL deck guides from holocardstrategy...")
     existing_urls = {d["url"] for d in tier_decks if d.get("url")}
     try:
         guides = scrape_all_guides(data_dir, existing_urls, cards_path)
@@ -261,19 +262,26 @@ def main():
         print(f"  [warn] guide scrape failed ({exc}); carrying forward last-good all_guides.json")
         (data_dir / "all_guides.json").unlink(missing_ok=True)
 
-    print("\n[5/11] Assigning tier levels to guides...")
+    print("\n[5/12] Assigning tier levels to guides...")
     _assign_tier_to_guides(data_dir)
 
-    print("\n[6/11] Discovering & scraping X posts for tournament results...")
+    print("\n[6/12] Discovering & scraping X posts for tournament results...")
     scrape_x_posts(base / "x_posts.json", base / "deck_codes.json", data_dir)
 
-    print("\n[7/11] Scraping hOCG Logs shop-tournament results...")
+    print("\n[7/12] Scraping official event reports for winning decks...")
+    try:
+        scrape_event_reports(base / "deck_codes.json", data_dir)
+    except Exception as exc:
+        print(f"  [warn] event-report scrape failed ({exc}); registry keeps existing entries")
+
+    print("\n[8/12] Scraping hOCG Logs shop-tournament results...")
     try:
         scrape_hocg_logs(base / "hocg_logs_state.json", base / "deck_codes.json", data_dir)
     except Exception as exc:
         print(f"  [warn] hOCG Logs scrape failed ({exc}); registry keeps existing entries")
+        _write_source_health(data_dir, "hocg_logs", {"stale": True, "problems": [f"scrape crashed: {exc}"]})
 
-    print("\n[8/11] Fetching Deck Log decks...")
+    print("\n[9/12] Fetching Deck Log decks...")
     scrape_decklog(
         base / "deck_codes.json",
         data_dir / "cards.json",
@@ -281,13 +289,13 @@ def main():
         cache_path=web_data_dir / "decklog_decks.json",
     )
 
-    print("\n[9/11] Scraping official recommended decks...")
+    print("\n[10/12] Scraping official recommended decks...")
     scrape_official(data_dir)
 
-    print("\n[10/11] Scraping official rule updates...")
+    print("\n[11/12] Scraping official rule updates...")
     scrape_rules(data_dir, web_data_dir)
 
-    print("\n[11/11] Translating scraped data (ja -> zh-TW, en, fr)...")
+    print("\n[12/12] Translating scraped data (ja -> zh-TW, en, fr)...")
     translate_all(data_dir)
 
     print("\n[Carry-forward] Restoring datasets whose source was unreachable this run...")

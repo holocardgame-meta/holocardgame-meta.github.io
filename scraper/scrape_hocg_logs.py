@@ -23,7 +23,7 @@ from pathlib import Path
 import httpx
 from bs4 import BeautifulSoup
 
-from scraper.scrape_x import _merge_into_deck_codes, _safe_get
+from scraper.scrape_x import _merge_into_deck_codes, _safe_get, _write_source_health
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
@@ -39,6 +39,13 @@ BACKFILL_START = "2026-06-27"
 # that hOCG Logs publishes late are still picked up.
 RECENT_WINDOW_DAYS = 28
 MAX_PAGES = 20
+# Health (data/source_health.json, read by deploy.yml): a blocked fetch or a
+# layout change otherwise just reads as "0 new entries". Stale when list page 1
+# can't be read or parsed, when its newest tournament is older than
+# HOCG_STALE_DAYS, or when at least DETAIL_PARSE_MIN standings pages were
+# fetched this run and none parsed.
+HOCG_STALE_DAYS = 14
+DETAIL_PARSE_MIN = 5
 
 _DECK_HREF_RE = re.compile(r"^/decks/([A-Za-z0-9]+)$")
 _TOURNAMENT_HREF_RE = re.compile(r"^/tournaments/(\d+)$")
@@ -181,6 +188,33 @@ def _build_deck_entries(row: dict, standings: list[dict]) -> list[dict]:
     return entries
 
 
+def listing_health(
+    first_page_rows: list[dict], details_fetched: int, details_parsed: int, today: date
+) -> dict:
+    """Judge whether the hOCG Logs listing and standings pages still parse."""
+    problems = []
+    newest = max((r["date"] for r in first_page_rows), default=None)
+    if newest is None:
+        problems.append("tournament list page 1 unreachable or parsed no rows (blocked or layout change)")
+    else:
+        age = (today - date.fromisoformat(newest)).days
+        if age > HOCG_STALE_DAYS:
+            problems.append(
+                f"newest listed tournament is from {newest} ({age} days ago, limit {HOCG_STALE_DAYS})"
+            )
+    if details_fetched >= DETAIL_PARSE_MIN and details_parsed == 0:
+        problems.append(
+            f"none of {details_fetched} tournament pages fetched had a parsable standings table (layout change?)"
+        )
+    return {
+        "stale": bool(problems),
+        "problems": problems,
+        "newest_listed": newest,
+        "details_fetched": details_fetched,
+        "details_parsed": details_parsed,
+    }
+
+
 def scrape_hocg_logs(
     state_path: Path,
     deck_codes_path: Path,
@@ -203,6 +237,8 @@ def scrape_hocg_logs(
 
     new_entries: list[dict] = []
     newly_scraped: list[str] = []
+    first_page_rows: list[dict] = []
+    details_fetched = details_parsed = 0
     client = httpx.Client()
     try:
         for page in range(1, MAX_PAGES + 1):
@@ -212,6 +248,8 @@ def scrape_hocg_logs(
             rows = _parse_list_page(html)
             if not rows:
                 break
+            if page == 1:
+                first_page_rows = rows
 
             fresh = [
                 r for r in rows
@@ -222,11 +260,13 @@ def scrape_hocg_logs(
                 detail_html = _safe_get(client, f"{BASE_URL}/tournaments/{row['id']}")
                 if not detail_html:
                     continue
+                details_fetched += 1
                 standings = _parse_detail_page(detail_html)
                 if not standings:
                     # Results not published yet — leave unscraped and retry.
                     print(f"  [{row['date']}] {row['name']}: no standings yet, will retry")
                     continue
+                details_parsed += 1
 
                 scraped_ids.add(row["id"])
                 newly_scraped.append(row["id"])
@@ -250,6 +290,11 @@ def scrape_hocg_logs(
             time.sleep(REQUEST_DELAY)
     finally:
         client.close()
+
+    health = listing_health(first_page_rows, details_fetched, details_parsed, today)
+    _write_source_health(output_dir, "hocg_logs", health)
+    for problem in health["problems"]:
+        print(f"  [warn] hOCG Logs looks stale: {problem}")
 
     if newly_scraped:
         state["scraped_tournament_ids"] = sorted(scraped_ids)

@@ -199,3 +199,38 @@ def test_scrape_retries_tournament_with_no_standings(tmp_path, monkeypatch):
     assert entries == []
     assert registry == []
     assert state == {}
+
+
+def _rows(*dates):
+    return [{"id": str(i), "date": d} for i, d in enumerate(dates)]
+
+
+def test_listing_health_ok_when_recent_tournaments_parse():
+    health = mod.listing_health(_rows("2026-09-28", "2026-09-27"), 6, 4, date(2026, 9, 29))
+    assert health["stale"] is False
+    assert health["newest_listed"] == "2026-09-28"
+
+
+def test_listing_health_flags_unreadable_list_page():
+    health = mod.listing_health([], 0, 0, date(2026, 9, 29))
+    assert health["stale"] is True
+    assert "page 1" in health["problems"][0]
+
+
+def test_listing_health_flags_a_listing_that_stopped_updating():
+    health = mod.listing_health(_rows("2026-09-01"), 0, 0, date(2026, 9, 29))
+    assert "28 days ago" in health["problems"][0]
+
+
+def test_listing_health_flags_standings_that_never_parse():
+    """Unpublished results are normal for a few pages, not for a whole run."""
+    today = date(2026, 9, 29)
+    assert mod.listing_health(_rows("2026-09-28"), mod.DETAIL_PARSE_MIN - 1, 0, today)["stale"] is False
+    assert mod.listing_health(_rows("2026-09-28"), mod.DETAIL_PARSE_MIN, 0, today)["stale"] is True
+
+
+def test_scrape_writes_source_health(tmp_path, monkeypatch):
+    _run(tmp_path, monkeypatch)
+    report = json.loads((tmp_path / "source_health.json").read_text(encoding="utf-8"))
+    assert report["hocg_logs"]["stale"] is False
+    assert report["hocg_logs"]["newest_listed"] == "2026-07-29"

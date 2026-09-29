@@ -14,7 +14,7 @@ weekly cron / manual dispatch
         ▼
 scraper/ (Python)
   fetch_cards → scrape_tiers → scrape_decks + scrape_all_guides → scrape_x
-  → scrape_hocg_logs → scrape_decklog → scrape_official → scrape_rules
+  → scrape_event_reports → scrape_hocg_logs → scrape_decklog → scrape_official → scrape_rules
   → translate (Gemini) → data guard → copy to web/data/ → build_indexes
         │
         ▼
@@ -73,13 +73,14 @@ a published URL. To intentionally rename a page, edit its registry entry.
 
 ## CI/CD
 
-`deploy.yml` has three paths:
+`deploy.yml` has four paths:
 
 | Trigger | Behavior |
 |---|---|
 | Push to `master` | Frontend checks → build SEO/entity pages from committed data → deploy |
 | Weekly cron (Mon 06:00 UTC) or manual dispatch | Restore translation cache → scrape + translate → **data guard** → rebuild SEO pages with fresh data → commit `web/data/` + `sitemap.xml` → deploy |
 | Any job failure | `alert-on-failure` opens or updates a `pipeline-failure` issue; a later successful scrape auto-closes it (`close-issue-on-success`) |
+| A scraper source goes stale (per `data/source_health.json`) | `source-health` opens or updates a `source-stale` issue; it auto-closes once every source is fresh |
 
 `ci.yml` runs ruff + pytest + frontend checks on every push/PR;
 `guard-google-tags.yml` protects the GA / site-verification tags.

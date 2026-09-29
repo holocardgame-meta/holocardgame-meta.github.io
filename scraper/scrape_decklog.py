@@ -140,7 +140,10 @@ def scrape_decklog(
             "deck_id": f"decklog-{code}",
             "deck_code": code,
             "title": entry.get("title") or raw.get("title", code),
-            "oshi": entry.get("oshi", ""),
+            # Official event reports give no oshi; the deck's oshi card does
+            # (when cards.json knows it — an unknown card's "name" is its id).
+            "oshi": entry.get("oshi")
+            or next((c["name"] for c in oshi_list if c["name"] != c["card_id"]), ""),
             "source": "decklog",
             "event": entry.get("event"),
             "event_date": entry.get("event_date"),

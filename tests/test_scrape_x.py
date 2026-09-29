@@ -1,6 +1,7 @@
 """Parsing tests for tournament-result tweet extraction."""
 
 import json
+from datetime import date
 
 from scraper import scrape_x
 from scraper.scrape_x import (
@@ -92,7 +93,7 @@ def _run_scrape_x_posts(
     monkeypatch.setattr(
         scrape_x,
         "discover_tweets",
-        lambda path: json.loads(x_posts_path.read_text(encoding="utf-8")),
+        lambda path, stats=None: json.loads(x_posts_path.read_text(encoding="utf-8")),
     )
     monkeypatch.setattr(scrape_x, "_fetch_tweet", fetch_tweet or (lambda tid: TRIO_TWEET))
     monkeypatch.setattr(scrape_x.time, "sleep", lambda s: None)
@@ -157,6 +158,58 @@ def test_scrape_x_posts_fetch_failure_is_retried_next_run(tmp_path, monkeypatch)
     assert entries == []
     assert registry == []
     assert "scraped_ids" not in x_after
+
+
+# Tweet IDs whose snowflake timestamps fall on these UTC dates.
+TWEET_2026_04_04 = "2040217784939446272"
+TWEET_2026_09_01 = "2094575964779446272"
+TODAY = date(2026, 9, 29)
+
+
+def test_tweet_date_decodes_snowflake():
+    assert scrape_x._tweet_date(TWEET_2026_04_04) == date(2026, 4, 4)
+
+
+def test_discovery_health_ok_with_a_recent_tweet():
+    x_posts = {"tournament_posts": [f"https://x.com/hololive_OCG/status/{TWEET_2026_09_01}"]}
+    health = scrape_x.discovery_health(x_posts, found=12, today=TODAY)
+    assert health == {"stale": False, "problems": [], "newest_tweet": "2026-09-01", "found": 12}
+
+
+def test_discovery_health_flags_old_newest_tweet():
+    """The real failure: sources keep returning the same old IDs, so every run
+    says "No new tweet IDs discovered" while nothing new has come in for months."""
+    x_posts = {"scraped_ids": [TWEET_2026_04_04], "ignored_ids": []}
+    health = scrape_x.discovery_health(x_posts, found=12, today=TODAY)
+    assert health["stale"] is True
+    assert health["newest_tweet"] == "2026-04-04"
+    assert "178 days ago" in health["problems"][0]
+
+
+def test_discovery_health_flags_sources_returning_nothing():
+    x_posts = {"ignored_ids": [TWEET_2026_09_01]}
+    health = scrape_x.discovery_health(x_posts, found=0, today=TODAY)
+    assert health["stale"] is True
+    assert "no discovery source" in health["problems"][0]
+
+
+def test_scrape_x_posts_writes_source_health(tmp_path, monkeypatch):
+    _run_scrape_x_posts(tmp_path, monkeypatch, [])
+    report = json.loads((tmp_path / "source_health.json").read_text(encoding="utf-8"))
+    assert set(report) == {"x"}
+    assert report["x"]["stale"] is True  # the stub discovery returns no IDs
+
+
+def test_discover_tweets_reports_found_count(tmp_path, monkeypatch):
+    x_posts_path = tmp_path / "x_posts.json"
+    x_posts_path.write_text(json.dumps({"ignored_ids": ["1", "2"]}), encoding="utf-8")
+    monkeypatch.setattr(scrape_x, "_discover_from_official", lambda client: {"1"})
+    monkeypatch.setattr(scrape_x, "_discover_from_aggregators", lambda client: {"1", "2"})
+
+    stats: dict = {}
+    scrape_x.discover_tweets(x_posts_path, stats=stats)
+
+    assert stats == {"found": 2}
 
 
 def test_discover_tweets_records_and_skips_ignored_ids(tmp_path, monkeypatch):

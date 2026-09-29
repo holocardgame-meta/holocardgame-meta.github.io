@@ -26,6 +26,9 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    outputs:
+      health_checked: ${{ steps.health.outputs.checked }}
+      stale_sources: ${{ steps.health.outputs.report }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -111,6 +114,29 @@ jobs:
           # leaves the rest for the next run (the job timeout is 60 min).
           TRANSLATE_BUDGET_SECONDS: '1500'
         run: uv run python -m scraper.run
+
+      # scrape_x writes data/source_health.json. A stale source becomes a
+      # warning on this run and a `source-stale` issue (source-health job):
+      # the pipeline still succeeds, so it would otherwise go unnoticed.
+      - name: Check source health
+        if: always() && github.event_name != 'push' && hashFiles('data/source_health.json') != ''
+        id: health
+        run: |
+          python3 - <<'PY'
+          import json, os
+          report = json.load(open("data/source_health.json", encoding="utf-8"))
+          lines = [
+              f"- **{name}**: " + "; ".join(h["problems"])
+              for name, h in report.items() if h.get("stale")
+          ]
+          for line in lines:
+              print(f"::warning title=Stale data source::{line[2:]}")
+          if not lines:
+              print("All checked sources are fresh.")
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
+              out.write("checked=true\n")
+              out.write("report<<HEALTH_EOF\n" + "\n".join(lines) + "\nHEALTH_EOF\n")
+          PY
 
       - name: Save translation cache
         if: always() && github.event_name != 'push'
@@ -286,5 +312,94 @@ jobs:
                 issue_number: issue.number,
                 state: 'closed',
                 state_reason: 'completed',
+              });
+            }
+
+  source-health:
+    needs: build-and-deploy
+    # Whenever the scraper wrote a health report, even if a later step (e.g.
+    # the Pages deploy) failed; push deploys never scrape, so never report.
+    if: ${{ always() && needs.build-and-deploy.outputs.health_checked == 'true' }}
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Open, update or close the source-stale issue
+        uses: actions/github-script@v7
+        env:
+          REPORT: ${{ needs.build-and-deploy.outputs.stale_sources }}
+        with:
+          script: |
+            const label = 'source-stale';
+            const report = (process.env.REPORT || '').trim();
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const open = await github.rest.issues.listForRepo({
+              ...context.repo,
+              state: 'open',
+              labels: label,
+            });
+            if (!report) {
+              for (const issue of open.data) {
+                await github.rest.issues.createComment({
+                  ...context.repo,
+                  issue_number: issue.number,
+                  body: `✅ Sources are fresh again as of ${runUrl}`,
+                });
+                await github.rest.issues.update({
+                  ...context.repo,
+                  issue_number: issue.number,
+                  state: 'closed',
+                  state_reason: 'completed',
+                });
+              }
+              return;
+            }
+            const staleNames = [...report.matchAll(/^- \*\*(.+?)\*\*/gm)].map((m) => m[1]);
+            const marker = `<!-- stale-sources: ${staleNames.join(',')} -->`;
+            const body = [
+              'A scraper data source stopped producing new data. The pipeline still succeeds, so this would otherwise go unnoticed.',
+              '',
+              report,
+              '',
+              `- Last checked: ${runUrl} (${new Date().toISOString()})`,
+              '- Details: `data/source_health.json` in that run (written by `scraper/scrape_x.py` and `scraper/scrape_hocg_logs.py`).',
+              '',
+              'Updated on every Scrape & Deploy run; closes itself once every source is fresh again.',
+              marker,
+            ].join('\n');
+            try {
+              await github.rest.issues.createLabel({
+                ...context.repo,
+                name: label,
+                color: 'fbca04',
+                description: 'A scraper source stopped producing new data',
+              });
+            } catch (e) { /* label already exists */ }
+            // Edit the open issue in place so a long-dead source doesn't
+            // notify on every weekly run; comment only when a source goes
+            // stale that the issue didn't already list.
+            if (open.data.length) {
+              const issue = open.data[0];
+              const prev = /<!-- stale-sources: (.*?) -->/.exec(issue.body || '');
+              const known = new Set(prev ? prev[1].split(',').filter(Boolean) : []);
+              const added = staleNames.filter((name) => !known.has(name));
+              await github.rest.issues.update({
+                ...context.repo,
+                issue_number: issue.number,
+                body,
+              });
+              if (added.length) {
+                await github.rest.issues.createComment({
+                  ...context.repo,
+                  issue_number: issue.number,
+                  body: `⚠️ Newly stale: ${added.map((n) => `**${n}**`).join(', ')} — ${runUrl}`,
+                });
+              }
+            } else {
+              await github.rest.issues.create({
+                ...context.repo,
+                title: 'Scraper data source stale',
+                body,
+                labels: [label],
               });
             }
