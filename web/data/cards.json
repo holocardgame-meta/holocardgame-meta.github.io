@@ -5709,11 +5709,11 @@
     "effectB": {
       "name": "開拓者のみんながいたから",
       "effect": {
-        "zh-TW": "可以將自己舞台上的1~3張吶喊卡，分配給自己的成員。",
-        "ja": "自分ステージ上のエールを1～3枚、自分のメンバーに分配することができる。\n",
-        "en": "Can distribute 1 to 3 Cheers from your Stage to your Members.",
-        "fr": "Vous pouvez assigner 1 à 3 cartes Encouragement de votre Scène à vos Membres.",
-        "es": "Puedes distribuir 1-3 cartas de Cheer de tu Escenario a tus Miembros."
+        "zh-TW": "可以選擇自己舞台上的1~3張吶喊卡，分配給自己的成員。",
+        "ja": "自分のステージにいるエールカードを1～3枚選び、自分のメンバーに分配する。\n",
+        "en": "You can choose 1 to 3 Cheer cards on your Stage and assign them to your Members.",
+        "fr": "Vous pouvez choisir 1 à 3 cartes Encouragement sur votre Scène et les attribuer à vos Membres.",
+        "es": "Puedes seleccionar 1~3 cartas Cheer de tu Escenario y asignarlas a tus Miembros."
       }
     },
     "effectG": null,
@@ -31332,11 +31332,11 @@
     "effectB": {
       "name": "こんな旋律思いついたの",
       "effect": {
-        "zh-TW": "可以將自己舞台上的1~2張吶喊卡，分配給自己的成員。",
-        "ja": "自分ステージ上のエールを1～2枚、自分のメンバーに分配することができる。\n",
-        "en": "Can distribute 1 to 2 Cheers from your Stage to your Members.",
-        "fr": "Vous pouvez assigner 1 à 2 cartes Encouragement de votre Scène à vos Membres.",
-        "es": "Puedes distribuir 1-2 cartas de Cheer de tu Escenario a tus Miembros."
+        "zh-TW": "可以選擇自己舞台上的1~2張吶喊卡，分配給自己的成員。",
+        "ja": "自分のステージにいるエールカードを1～2枚選び、自分のメンバーに分配する。\n",
+        "en": "You can choose 1 to 2 Cheer cards on your Stage and assign them to your Members.",
+        "fr": "Vous pouvez choisir 1 à 2 cartes Encouragement sur votre Scène et les attribuer à vos Membres.",
+        "es": "Puedes seleccionar 1~2 cartas Cheer de tu Escenario y asignarlas a tus Miembros."
       }
     },
     "effectG": null,
@@ -40635,11 +40635,11 @@
       "damage": 50,
       "specialAttackImage": "icons/tokkou_50_purple.png",
       "effect": {
-        "zh-TW": "如果這個成員有紅色吶喊卡與藍色吶喊卡，可以將自己存檔區的2張吶喊卡發送給這個成員。如果只有1種顏色的吶喊卡，可以將自己存檔區的1張吶喊卡發送給這個成員。",
-        "ja": "このメンバーに赤のエールカードと青のエールカードがある場合、自分のアーカイブからエールカード２枚をこのメンバーに送ることができる。どちらか１色のエールカードしかない場合、自分のアーカイブからエールカード１枚をこのメンバーに送ることができる。\n",
-        "en": "If this Member has red Cheer cards and blue Cheer cards, you may send 2 Cheer cards from your Archive to this Member. If you only have Cheer cards of one color, you may send 1 Cheer card from your Archive to this Member.",
-        "fr": "Si ce membre a une carte d'encouragement rouge et une carte d'encouragement bleue, vous pouvez envoyer 2 cartes d'encouragement de votre archive à ce membre. Si vous n'avez qu'une seule couleur de carte d'encouragement, vous pouvez envoyer 1 carte d'encouragement de votre archive à ce membre.",
-        "es": "Si este miembro tiene cartas de Cheer rojas y azules, puedes enviar 2 cartas de Cheer de tu Archivo a este miembro. Si solo hay un color de cartas de Cheer, puedes enviar 1 carta de Cheer de tu Archivo a este miembro."
+        "zh-TW": "如果這個成員有紅色吶喊卡與藍色吶喊卡，可以將自己存檔區的2張吶喊卡發送給這個成員。如果只有其中1種顏色的吶喊卡，可以將自己存檔區的1張吶喊卡發送給這個成員。",
+        "ja": "このメンバーが赤のエールカードと青のエールカードを持っている場合、自分のアーカイブから2枚のエールカードをこのメンバーに送ることができる。どちらか1色のエールカードしか持っていない場合、自分のアーカイブから1枚のエールカードをこのメンバーに送ることができる。\n",
+        "en": "If this Member has a red Cheer card and a blue Cheer card, you can send 2 Cheer cards from your Archive to this Member. If this Member only has one color of Cheer card, you can send 1 Cheer card from your Archive to this Member.",
+        "fr": "Si ce Membre possède une carte Encouragement rouge et une carte Encouragement bleue, vous pouvez envoyer 2 cartes Encouragement de votre Archive à ce Membre. Si ce Membre ne possède qu'un seul type de carte Encouragement, vous pouvez envoyer 1 carte Encouragement de votre Archive à ce Membre.",
+        "es": "Si este Miembro tiene una carta Cheer roja y una carta Cheer azul, puedes enviar 2 cartas Cheer de tu Archivo a este Miembro. Si solo tiene 1 tipo de color de carta Cheer, puedes enviar 1 carta Cheer de tu Archivo a este Miembro."
       }
     },
     "art2": {
@@ -40688,11 +40688,11 @@
       "damage": 50,
       "specialAttackImage": "icons/tokkou_50_purple.png",
       "effect": {
-        "zh-TW": "如果這個成員有紅色吶喊卡與藍色吶喊卡，可以將自己存檔區的2張吶喊卡發送給這個成員。如果只有1種顏色的吶喊卡，可以將自己存檔區的1張吶喊卡發送給這個成員。",
-        "ja": "このメンバーに赤のエールカードと青のエールカードがある場合、自分のアーカイブからエールカード２枚をこのメンバーに送ることができる。どちらか１色のエールカードしかない場合、自分のアーカイブからエールカード１枚をこのメンバーに送ることができる。\n",
-        "en": "If this Member has red Cheer cards and blue Cheer cards, you may send 2 Cheer cards from your Archive to this Member. If you only have Cheer cards of one color, you may send 1 Cheer card from your Archive to this Member.",
-        "fr": "Si ce membre a une carte d'encouragement rouge et une carte d'encouragement bleue, vous pouvez envoyer 2 cartes d'encouragement de votre archive à ce membre. Si vous n'avez qu'une seule couleur de carte d'encouragement, vous pouvez envoyer 1 carte d'encouragement de votre archive à ce membre.",
-        "es": "Si este miembro tiene cartas de Cheer rojas y azules, puedes enviar 2 cartas de Cheer de tu Archivo a este miembro. Si solo hay un color de cartas de Cheer, puedes enviar 1 carta de Cheer de tu Archivo a este miembro."
+        "zh-TW": "如果這個成員有紅色吶喊卡與藍色吶喊卡，可以將自己存檔區的2張吶喊卡發送給這個成員。如果只有其中1種顏色的吶喊卡，可以將自己存檔區的1張吶喊卡發送給這個成員。",
+        "ja": "このメンバーが赤のエールカードと青のエールカードを持っている場合、自分のアーカイブから2枚のエールカードをこのメンバーに送ることができる。どちらか1色のエールカードしか持っていない場合、自分のアーカイブから1枚のエールカードをこのメンバーに送ることができる。\n",
+        "en": "If this Member has a red Cheer card and a blue Cheer card, you can send 2 Cheer cards from your Archive to this Member. If this Member only has one color of Cheer card, you can send 1 Cheer card from your Archive to this Member.",
+        "fr": "Si ce Membre possède une carte Encouragement rouge et une carte Encouragement bleue, vous pouvez envoyer 2 cartes Encouragement de votre Archive à ce Membre. Si ce Membre ne possède qu'un seul type de carte Encouragement, vous pouvez envoyer 1 carte Encouragement de votre Archive à ce Membre.",
+        "es": "Si este Miembro tiene una carta Cheer roja y una carta Cheer azul, puedes enviar 2 cartas Cheer de tu Archivo a este Miembro. Si solo tiene 1 tipo de color de carta Cheer, puedes enviar 1 carta Cheer de tu Archivo a este Miembro."
       }
     },
     "art2": {
@@ -40741,11 +40741,11 @@
       "damage": 50,
       "specialAttackImage": "icons/tokkou_50_purple.png",
       "effect": {
-        "zh-TW": "如果這個成員有紅色吶喊卡與藍色吶喊卡，可以將自己存檔區的2張吶喊卡發送給這個成員。如果只有1種顏色的吶喊卡，可以將自己存檔區的1張吶喊卡發送給這個成員。",
-        "ja": "このメンバーに赤のエールカードと青のエールカードがある場合、自分のアーカイブからエールカード２枚をこのメンバーに送ることができる。どちらか１色のエールカードしかない場合、自分のアーカイブからエールカード１枚をこのメンバーに送ることができる。\n",
-        "en": "If this Member has red Cheer cards and blue Cheer cards, you may send 2 Cheer cards from your Archive to this Member. If you only have Cheer cards of one color, you may send 1 Cheer card from your Archive to this Member.",
-        "fr": "Si ce membre a une carte d'encouragement rouge et une carte d'encouragement bleue, vous pouvez envoyer 2 cartes d'encouragement de votre archive à ce membre. Si vous n'avez qu'une seule couleur de carte d'encouragement, vous pouvez envoyer 1 carte d'encouragement de votre archive à ce membre.",
-        "es": "Si este miembro tiene cartas de Cheer rojas y azules, puedes enviar 2 cartas de Cheer de tu Archivo a este miembro. Si solo hay un color de cartas de Cheer, puedes enviar 1 carta de Cheer de tu Archivo a este miembro."
+        "zh-TW": "如果這個成員有紅色吶喊卡與藍色吶喊卡，可以將自己存檔區的2張吶喊卡發送給這個成員。如果只有其中1種顏色的吶喊卡，可以將自己存檔區的1張吶喊卡發送給這個成員。",
+        "ja": "このメンバーが赤のエールカードと青のエールカードを持っている場合、自分のアーカイブから2枚のエールカードをこのメンバーに送ることができる。どちらか1色のエールカードしか持っていない場合、自分のアーカイブから1枚のエールカードをこのメンバーに送ることができる。\n",
+        "en": "If this Member has a red Cheer card and a blue Cheer card, you can send 2 Cheer cards from your Archive to this Member. If this Member only has one color of Cheer card, you can send 1 Cheer card from your Archive to this Member.",
+        "fr": "Si ce Membre possède une carte Encouragement rouge et une carte Encouragement bleue, vous pouvez envoyer 2 cartes Encouragement de votre Archive à ce Membre. Si ce Membre ne possède qu'un seul type de carte Encouragement, vous pouvez envoyer 1 carte Encouragement de votre Archive à ce Membre.",
+        "es": "Si este Miembro tiene una carta Cheer roja y una carta Cheer azul, puedes enviar 2 cartas Cheer de tu Archivo a este Miembro. Si solo tiene 1 tipo de color de carta Cheer, puedes enviar 1 carta Cheer de tu Archivo a este Miembro."
       }
     },
     "art2": {
@@ -40794,11 +40794,11 @@
       "damage": 50,
       "specialAttackImage": "icons/tokkou_50_purple.png",
       "effect": {
-        "zh-TW": "如果這個成員有紅色吶喊卡與藍色吶喊卡，可以將自己存檔區的2張吶喊卡發送給這個成員。如果只有1種顏色的吶喊卡，可以將自己存檔區的1張吶喊卡發送給這個成員。",
-        "ja": "このメンバーに赤のエールカードと青のエールカードがある場合、自分のアーカイブからエールカード２枚をこのメンバーに送ることができる。どちらか１色のエールカードしかない場合、自分のアーカイブからエールカード１枚をこのメンバーに送ることができる。\n",
-        "en": "If this Member has red Cheer cards and blue Cheer cards, you may send 2 Cheer cards from your Archive to this Member. If you only have Cheer cards of one color, you may send 1 Cheer card from your Archive to this Member.",
-        "fr": "Si ce membre a une carte d'encouragement rouge et une carte d'encouragement bleue, vous pouvez envoyer 2 cartes d'encouragement de votre archive à ce membre. Si vous n'avez qu'une seule couleur de carte d'encouragement, vous pouvez envoyer 1 carte d'encouragement de votre archive à ce membre.",
-        "es": "Si este miembro tiene cartas de Cheer rojas y azules, puedes enviar 2 cartas de Cheer de tu Archivo a este miembro. Si solo hay un color de cartas de Cheer, puedes enviar 1 carta de Cheer de tu Archivo a este miembro."
+        "zh-TW": "如果這個成員有紅色吶喊卡與藍色吶喊卡，可以將自己存檔區的2張吶喊卡發送給這個成員。如果只有其中1種顏色的吶喊卡，可以將自己存檔區的1張吶喊卡發送給這個成員。",
+        "ja": "このメンバーが赤のエールカードと青のエールカードを持っている場合、自分のアーカイブから2枚のエールカードをこのメンバーに送ることができる。どちらか1色のエールカードしか持っていない場合、自分のアーカイブから1枚のエールカードをこのメンバーに送ることができる。\n",
+        "en": "If this Member has a red Cheer card and a blue Cheer card, you can send 2 Cheer cards from your Archive to this Member. If this Member only has one color of Cheer card, you can send 1 Cheer card from your Archive to this Member.",
+        "fr": "Si ce Membre possède une carte Encouragement rouge et une carte Encouragement bleue, vous pouvez envoyer 2 cartes Encouragement de votre Archive à ce Membre. Si ce Membre ne possède qu'un seul type de carte Encouragement, vous pouvez envoyer 1 carte Encouragement de votre Archive à ce Membre.",
+        "es": "Si este Miembro tiene una carta Cheer roja y una carta Cheer azul, puedes enviar 2 cartas Cheer de tu Archivo a este Miembro. Si solo tiene 1 tipo de color de carta Cheer, puedes enviar 1 carta Cheer de tu Archivo a este Miembro."
       }
     },
     "art2": {
