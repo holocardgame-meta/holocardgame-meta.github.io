@@ -8502,6 +8502,57 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP01/hBP01-071_UR.png"
   },
   {
+    "image": "cardListImages/hCO03/hBP01-071_SR.png",
+    "name": "尾丸ポルカ",
+    "type": "成員",
+    "tag": "#JP / #5期生 / #ケモミミ",
+    "product": "エクストリーマーカップ25-26 Final オフィシャルホロカコレクションB",
+    "color": "紅",
+    "hp": 240,
+    "bloom": "1st Buzz",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": {
+      "name": "ポルカイリュージョン",
+      "effect": {
+        "zh-TW": "可以將自己存檔區的1張「座員」返回手牌。",
+        "ja": "自分のアーカイブから「座員」1枚を手札に加える。\n",
+        "en": "Return 1 \"Theater Member\" from your Archive to your Hand.",
+        "fr": "Vous pouvez retourner 1 \"座員\" de votre Archive dans votre Main.",
+        "es": "Puedes devolver 1 \"座員\" de tu Archivo a tu mano."
+      }
+    },
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_red.png",
+        "icons/arts_null.png"
+      ],
+      "name": "ポルカサーカス",
+      "damage": "50+",
+      "specialAttackImage": null,
+      "effect": {
+        "zh-TW": "自己所有的成員每帶有1張粉絲，這個藝能傷害+20。",
+        "ja": "自分のメンバー全員につき、ファンを１枚持っている場合、この艺能ダメージ＋２０。",
+        "en": "For each Fan your Members have, this Arts damage +20.",
+        "fr": "Pour chaque Fan que possède chacun de vos Membres, les Dégâts de cette Arts +20.",
+        "es": "Por cada Fan que tenga cada uno de tus miembros, el daño de este Arts +20."
+      }
+    },
+    "art2": null,
+    "extra": {
+      "zh-TW": "這個成員被擊倒時，自己的生命值-2",
+      "ja": "このメンバーがダウンした時、自分のライフ-2。\n",
+      "en": "When this Member is defeated, your Life -2.",
+      "fr": "Lorsque ce membre est K.O., vos Points de vie -2.",
+      "es": "Cuando este Miembro es K.O., la Vida de tu oponente -2."
+    },
+    "id": "hBP01-071",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCO03/hBP01-071_SR.png"
+  },
+  {
     "image": "cardListImages/hBP01/hBP01-072_C.png",
     "name": "ハコス・ベールズ",
     "type": "成員",
@@ -12671,6 +12722,44 @@
     "extra": null,
     "id": "hBP02-011",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP02/hBP02-011_P_03.png"
+  },
+  {
+    "image": "cardListImages/hCO02/hBP02-011_SR_03.png",
+    "name": "白上フブキ",
+    "type": "成員",
+    "tag": "#JP / #1期生 / #ゲーマーズ / #ケモミミ / #絵",
+    "product": "エクストリーマーカップ25-26 Final オフィシャルホロカコレクションA",
+    "color": "白",
+    "hp": 120,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": {
+      "name": "白上から目をそらしちゃ",
+      "effect": {
+        "zh-TW": "從自己的牌組展示1張標示#白上'sキャラクター的牌並加入手牌。將牌組重新洗牌。",
+        "ja": "自分のデッキから#白上'sキャラクター を1枚公開し、手札に加える。その後、デッキをシャッフルする。",
+        "en": "Reveal 1 Card marked #Shirakami's Character from your Deck and add it to your Hand. Shuffle your Deck.",
+        "fr": "Montrez une carte marquée #Shirakami's Character de votre Deck et ajoutez-la à votre Main. Mélangez votre Deck.\n",
+        "es": "LIMITED: Solo puede usarse una vez por turno.\nMuestra 1 carta de la #白上'sキャラクター de tu mazo y añádela a tu mano. Baraja tu mazo."
+      }
+    },
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_null.png"
+      ],
+      "name": "ダメですよっ！",
+      "damage": 40,
+      "specialAttackImage": null,
+      "effect": null
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP02-011",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCO02/hBP02-011_SR_03.png"
   },
   {
     "image": "cardListImages/hBP02/hBP02-012_R.png",
@@ -21478,6 +21567,41 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP03/hBP03-016_C.png"
   },
   {
+    "image": "cardListImages/hBP03/hBP03-016_P_02.png",
+    "name": "獅白ぼたん",
+    "type": "成員",
+    "tag": "#JP / #5期生 / #ケモミミ / #シューター",
+    "product": "PR卡",
+    "color": "綠",
+    "hp": 100,
+    "bloom": "Debut",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": null,
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_null.png"
+      ],
+      "name": "ららーいおん♪",
+      "damage": 30,
+      "specialAttackImage": null,
+      "effect": null
+    },
+    "art2": null,
+    "extra": {
+      "zh-TW": "這個成員沒有張數限制",
+      "ja": "このメンバーに枚数制限はない。\n",
+      "en": "There is no limit to the number of this Member.",
+      "fr": "Ce membre n'a pas de limite de nombre.",
+      "es": "Este Miembro no tiene límite de cantidad."
+    },
+    "id": "hBP03-016",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP03/hBP03-016_P_02.png"
+  },
+  {
     "image": "cardListImages/hBP03/hBP03-017_U.png",
     "name": "獅白ぼたん",
     "type": "成員",
@@ -21751,6 +21875,45 @@
     "extra": null,
     "id": "hBP03-020",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP03/hBP03-020_P.png"
+  },
+  {
+    "image": "cardListImages/hBP03/hBP03-020_P_02.png",
+    "name": "獅白ぼたん",
+    "type": "成員",
+    "tag": "#JP / #5期生 / #ケモミミ / #シューター",
+    "product": "PR卡",
+    "color": "綠",
+    "hp": 110,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": {
+      "name": "SSSSR",
+      "effect": {
+        "zh-TW": "將自己吶喊牌組上方的1張牌，發送給自己的後台成員「獅白ぼたん」。",
+        "ja": "自分のチアデッキの上から1枚を、自分の後方メンバー「獅白ぼたん」に送る。\n",
+        "en": "Send 1 card from the top of your Cheer Deck to your Back Member \"Shishiro Botan\".",
+        "fr": "Envoyez la carte du dessus de votre Deck d'encouragement à votre membre de l'arrière-plan « 獅白ぼたん ».",
+        "es": "Envía 1 carta de la parte superior de tu Mazo Cheer a tu miembro en la Retaguardia \"獅白ぼたん\"."
+      }
+    },
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_green.png",
+        "icons/arts_null.png"
+      ],
+      "name": "ショッピングカートで来た",
+      "damage": 50,
+      "specialAttackImage": null,
+      "effect": null
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP03-020",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP03/hBP03-020_P_02.png"
   },
   {
     "image": "cardListImages/hBP03/hBP03-021_RR.png",
@@ -27240,11 +27403,11 @@
       "damage": "80+",
       "specialAttackImage": "icons/tokkou_50_blue.png",
       "effect": {
-        "zh-TW": "[限定中心位置]這個成員有6張以上的吶喊卡時，這個回合中，這個成員與自己的聯動成員藝能傷害+100。",
-        "ja": "[限定中心位置]このメンバーに6枚以上のエールカードがある場合、このターン中、このメンバーと自分のコラボメンバーのArtsダメージ+100。\n",
-        "en": "[Limited Center Position] If you have 6 or more Cheer cards, during this turn, Arts damage dealt by this Member and your Collab Members is +100.",
-        "fr": "[Position Centre UNIQUEMENT] Si ce membre possède 6 cartes d'encouragement ou plus, durant ce tour, les dégâts d'Arts de ce membre et de vos membres Collab sont augmentés de 100.",
-        "es": "[Solo posición central] Si este Miembro tiene 6 o más cartas de Cheer, durante este turno, el daño de Arts de este Miembro y tus Miembros Collab aumenta en 100."
+        "zh-TW": "[限定中心位置]這個成員的吶喊卡有6張以上時，這個回合中，這個成員與自己的聯動成員藝能傷害+100。",
+        "ja": "[センター限定]このメンバーのエールカードが６枚以上ある場合、このターン中、このメンバーと自分のコラボメンバーの芸能ダメージ＋１００。",
+        "en": "[Center Position Exclusive] If you have 6 or more Cheer cards of this Member, Arts damage dealt by this Member and your Collab Members this turn is increased by 100.",
+        "fr": "[Position Centre Exclusive] Si vous avez 6 cartes d'encouragement ou plus de ce Membre, les dégâts d'Arts de ce Membre et de vos Membres en Collab augmentent de 100 pendant ce tour.",
+        "es": "[Solo posición Centro] Cuando hay 6 o más cartas Cheer de este Miembro, el daño de Arts de este Miembro y tus Miembros Collab aumenta en 100 durante este turno."
       }
     },
     "art2": null,
@@ -27287,11 +27450,11 @@
       "damage": "80+",
       "specialAttackImage": "icons/tokkou_50_blue.png",
       "effect": {
-        "zh-TW": "[限定中心位置]這個成員有6張以上的吶喊卡時，這個回合中，這個成員與自己的聯動成員藝能傷害+100。",
-        "ja": "[限定中心位置]このメンバーに6枚以上のエールカードがある場合、このターン中、このメンバーと自分のコラボメンバーのArtsダメージ+100。\n",
-        "en": "[Limited Center Position] If you have 6 or more Cheer cards, during this turn, Arts damage dealt by this Member and your Collab Members is +100.",
-        "fr": "[Position Centre UNIQUEMENT] Si ce membre possède 6 cartes d'encouragement ou plus, durant ce tour, les dégâts d'Arts de ce membre et de vos membres Collab sont augmentés de 100.",
-        "es": "[Solo posición central] Si este Miembro tiene 6 o más cartas de Cheer, durante este turno, el daño de Arts de este Miembro y tus Miembros Collab aumenta en 100."
+        "zh-TW": "[限定中心位置]這個成員的吶喊卡有6張以上時，這個回合中，這個成員與自己的聯動成員藝能傷害+100。",
+        "ja": "[センター限定]このメンバーのエールカードが６枚以上ある場合、このターン中、このメンバーと自分のコラボメンバーの芸能ダメージ＋１００。",
+        "en": "[Center Position Exclusive] If you have 6 or more Cheer cards of this Member, Arts damage dealt by this Member and your Collab Members this turn is increased by 100.",
+        "fr": "[Position Centre Exclusive] Si vous avez 6 cartes d'encouragement ou plus de ce Membre, les dégâts d'Arts de ce Membre et de vos Membres en Collab augmentent de 100 pendant ce tour.",
+        "es": "[Solo posición Centro] Cuando hay 6 o más cartas Cheer de este Miembro, el daño de Arts de este Miembro y tus Miembros Collab aumenta en 100 durante este turno."
       }
     },
     "art2": null,
@@ -27334,11 +27497,11 @@
       "damage": "80+",
       "specialAttackImage": "icons/tokkou_50_blue.png",
       "effect": {
-        "zh-TW": "[限定中心位置]這個成員有6張以上的吶喊卡時，這個回合中，這個成員與自己的聯動成員藝能傷害+100。",
-        "ja": "[限定中心位置]このメンバーに6枚以上のエールカードがある場合、このターン中、このメンバーと自分のコラボメンバーのArtsダメージ+100。\n",
-        "en": "[Limited Center Position] If you have 6 or more Cheer cards, during this turn, Arts damage dealt by this Member and your Collab Members is +100.",
-        "fr": "[Position Centre UNIQUEMENT] Si ce membre possède 6 cartes d'encouragement ou plus, durant ce tour, les dégâts d'Arts de ce membre et de vos membres Collab sont augmentés de 100.",
-        "es": "[Solo posición central] Si este Miembro tiene 6 o más cartas de Cheer, durante este turno, el daño de Arts de este Miembro y tus Miembros Collab aumenta en 100."
+        "zh-TW": "[限定中心位置]這個成員的吶喊卡有6張以上時，這個回合中，這個成員與自己的聯動成員藝能傷害+100。",
+        "ja": "[センター限定]このメンバーのエールカードが６枚以上ある場合、このターン中、このメンバーと自分のコラボメンバーの芸能ダメージ＋１００。",
+        "en": "[Center Position Exclusive] If you have 6 or more Cheer cards of this Member, Arts damage dealt by this Member and your Collab Members this turn is increased by 100.",
+        "fr": "[Position Centre Exclusive] Si vous avez 6 cartes d'encouragement ou plus de ce Membre, les dégâts d'Arts de ce Membre et de vos Membres en Collab augmentent de 100 pendant ce tour.",
+        "es": "[Solo posición Centro] Cuando hay 6 o más cartas Cheer de este Miembro, el daño de Arts de este Miembro y tus Miembros Collab aumenta en 100 durante este turno."
       }
     },
     "art2": null,
@@ -27804,11 +27967,11 @@
       "damage": "50+",
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "這個成員有3張以上的吶喊卡時，這個藝能傷害+30。",
-        "ja": "このメンバーにエールカードが3枚以上ある場合、このアーツダメージ+30。\n",
-        "en": "If this Member has 3 or more Cheer Cards, this Arts deals 30 additional damage.",
-        "fr": "Quand ce Membre a 3 Encouragements ou plus, les dégâts de cette Arts +30.",
-        "es": "Si este Miembro tiene 3 o más cartas de Cheer, el daño de Arts de este Miembro +30."
+        "zh-TW": "這個成員的吶喊卡有3張以上時，這個藝能傷害+30。",
+        "ja": "このメンバーのエールカードが３枚以上ある場合、この芸能ダメージ＋３０。",
+        "en": "When you have 3 or more Cheer cards of this Member, this Arts damage is increased by 30.",
+        "fr": "Lorsque vous avez 3 cartes d'encouragement ou plus de ce Membre, les dégâts d'Arts augmentent de 30.",
+        "es": "Cuando hay 3 o más cartas Cheer de este Miembro, el daño de este Arts aumenta en 30."
       }
     },
     "art2": null,
@@ -27856,11 +28019,11 @@
       "damage": "50+",
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "這個成員有3張以上的吶喊卡時，這個藝能傷害+30。",
-        "ja": "このメンバーにエールカードが3枚以上ある場合、このアーツダメージ+30。\n",
-        "en": "If this Member has 3 or more Cheer Cards, this Arts deals 30 additional damage.",
-        "fr": "Quand ce Membre a 3 Encouragements ou plus, les dégâts de cette Arts +30.",
-        "es": "Si este Miembro tiene 3 o más cartas de Cheer, el daño de Arts de este Miembro +30."
+        "zh-TW": "這個成員的吶喊卡有3張以上時，這個藝能傷害+30。",
+        "ja": "このメンバーのエールカードが３枚以上ある場合、この芸能ダメージ＋３０。",
+        "en": "When you have 3 or more Cheer cards of this Member, this Arts damage is increased by 30.",
+        "fr": "Lorsque vous avez 3 cartes d'encouragement ou plus de ce Membre, les dégâts d'Arts augmentent de 30.",
+        "es": "Cuando hay 3 o más cartas Cheer de este Miembro, el daño de este Arts aumenta en 30."
       }
     },
     "art2": null,
@@ -27908,11 +28071,11 @@
       "damage": "50+",
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "這個成員有3張以上的吶喊卡時，這個藝能傷害+30。",
-        "ja": "このメンバーにエールカードが3枚以上ある場合、このアーツダメージ+30。\n",
-        "en": "If this Member has 3 or more Cheer Cards, this Arts deals 30 additional damage.",
-        "fr": "Quand ce Membre a 3 Encouragements ou plus, les dégâts de cette Arts +30.",
-        "es": "Si este Miembro tiene 3 o más cartas de Cheer, el daño de Arts de este Miembro +30."
+        "zh-TW": "這個成員的吶喊卡有3張以上時，這個藝能傷害+30。",
+        "ja": "このメンバーのエールカードが３枚以上ある場合、この芸能ダメージ＋３０。",
+        "en": "When you have 3 or more Cheer cards of this Member, this Arts damage is increased by 30.",
+        "fr": "Lorsque vous avez 3 cartes d'encouragement ou plus de ce Membre, les dégâts d'Arts augmentent de 30.",
+        "es": "Cuando hay 3 o más cartas Cheer de este Miembro, el daño de este Arts aumenta en 30."
       }
     },
     "art2": null,
@@ -29998,6 +30161,50 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP04/hBP04-012_P.png"
   },
   {
+    "image": "cardListImages/hCO03/hBP04-012_SR_03.png",
+    "name": "博衣こより",
+    "type": "成員",
+    "tag": "#JP / #秘密結社holoX / #ケモミミ",
+    "product": "エクストリーマーカップ25-26 Final オフィシャルホロカコレクションB",
+    "color": "白",
+    "hp": 140,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": {
+      "name": "はい！ はい！ はい！ はい！",
+      "effect": {
+        "zh-TW": "從自己的牌組展示1張標示#こよラボ的支援卡並加入手牌。將牌組重新洗牌。",
+        "ja": "自分のデッキから#こよラボ のサポートを1枚公開し、手札に加える。その後、デッキをシャッフルする。",
+        "en": "Reveal 1 Support marked #Koyolabo from your Deck and add it to your Hand. Shuffle your Deck.",
+        "fr": "Montrez une carte Support marquée #Koyolabo de votre Deck et ajoutez-la à votre Main. Mélangez votre Deck.\n",
+        "es": "LIMITED: Solo puede usarse una vez por turno.\nMuestra 1 Soporte de la #こよラボ de tu mazo y añádela a tu mano. Baraja tu mazo."
+      }
+    },
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_white.png"
+      ],
+      "name": "助手くんとこよはずっと一緒だよ！",
+      "damage": 30,
+      "specialAttackImage": null,
+      "effect": {
+        "zh-TW": "這個成員帶有「こよりの助手くん」時，從自己的牌組抽1張牌。",
+        "ja": "このメンバーが「こよりの助手くん」を持っている場合、自分のデッキからカードを1枚引く。",
+        "en": "When this Member has \"こよりの助手くん\", draw 1 card from your Deck.",
+        "fr": "Lorsque ce membre a \"Koyori's Assistant\", piochez 1 carte de votre Deck.",
+        "es": "Cuando este Miembro tiene 「こよりの助手くん」, roba 1 carta de tu Mazo."
+      }
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP04-012",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCO03/hBP04-012_SR_03.png"
+  },
+  {
     "image": "cardListImages/hBP04/hBP04-013_RR.png",
     "name": "博衣こより",
     "type": "成員",
@@ -31608,6 +31815,51 @@
     "extra": null,
     "id": "hBP04-035",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP04/hBP04-035_U.png"
+  },
+  {
+    "image": "cardListImages/hCO03/hBP04-035_SR.png",
+    "name": "一条莉々華",
+    "type": "成員",
+    "tag": "#DEV_IS / #ReGLOSS / #料理 / #語学",
+    "product": "エクストリーマーカップ25-26 Final オフィシャルホロカコレクションB",
+    "color": "紅",
+    "hp": 130,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": {
+      "name": "限界飯料理人",
+      "effect": {
+        "zh-TW": "可以將自己存檔區的1張「限界飯」返回手牌。",
+        "ja": "自分アーカイブの「限界飯」を1枚、手札に戻すことができる。\n",
+        "en": "Can return 1 \"Limit Break Meal\" from your Archive to your Hand.",
+        "fr": "Vous pouvez retourner 1 \"限界飯\" de votre Archive dans votre Main.",
+        "es": "Puedes devolver 1 \"限界飯\" de tu Archivo a tu mano."
+      }
+    },
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_red.png",
+        "icons/arts_red.png"
+      ],
+      "name": "社長パンチ",
+      "damage": 50,
+      "specialAttackImage": null,
+      "effect": {
+        "zh-TW": "給予對手的聯動成員20點特殊傷害。",
+        "ja": "相手のコラボメンバー１人に２０点のSPスキルダメージを与える。",
+        "en": "Deal 20 SP damage to your opponent's Collab Member.",
+        "fr": "Infligez 20 dégâts spéciaux au Membre Collab.",
+        "es": "Inflige 20 de daño especial al miembro Collab del oponente."
+      }
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP04-035",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCO03/hBP04-035_SR.png"
   },
   {
     "image": "cardListImages/hBP04/hBP04-036_R.png",
@@ -33543,6 +33795,39 @@
     },
     "id": "hBP04-054",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP07/hBP04-054_HR.png"
+  },
+  {
+    "image": "cardListImages/hBP04/hBP04-054_P_02.png",
+    "name": "ラプラス・ダークネス",
+    "type": "成員",
+    "tag": "#JP / #秘密結社holoX / #シューター",
+    "product": "PR卡",
+    "color": "紫",
+    "hp": 100,
+    "bloom": "Debut",
+    "batonImage": [],
+    "effectC": null,
+    "effectB": null,
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_null.png"
+      ],
+      "name": "貴様ら、刮目せよ！！",
+      "damage": 30,
+      "specialAttackImage": null,
+      "effect": null
+    },
+    "art2": null,
+    "extra": {
+      "zh-TW": "這個成員沒有張數限制",
+      "ja": "このメンバーに枚数制限はない。\n",
+      "en": "There is no limit to the number of this Member.",
+      "fr": "Ce membre n'a pas de limite de nombre.",
+      "es": "Este Miembro no tiene límite de cantidad."
+    },
+    "id": "hBP04-054",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP04/hBP04-054_P_02.png"
   },
   {
     "image": "cardListImages/hBP04/hBP04-055_U.png",
@@ -37144,11 +37429,11 @@
     "tag": "#きのこ",
     "product": "補充包「キュリアスユニバース (hBP04)」",
     "supportEffect": {
-      "zh-TW": "選擇自己的1位「儒烏風亭らでん」。可以將自己舞台上的1~2張吶喊卡，轉移給該成員。之後，該成員有3張以上的吶喊卡時，這個回合中，該成員的藝能傷害+10。",
-      "ja": "自分の「儒烏風亭らでん」1人を選ぶ。自分のステージのエールカードを1～2枚、そのメンバーに移すことができる。その後、そのメンバーにエールカードが3枚以上ある場合、このターン中、そのメンバーのアーツダメージ+10。\n",
-      "en": "Choose 1 of your \"Uruu Futei Raden\". You may transfer 1-2 Cheer Cards from your Stage to that Member. Then, if that Member has 3 or more Cheer Cards, during this turn, this Member's Arts deals 10 additional damage.",
-      "fr": "Choisissez 1 \"儒烏風亭らでん\" de votre côté. Vous pouvez transférer 1 ou 2 cartes d'Encouragement de votre Scène à ce membre. Ensuite, si ce membre possède 3 cartes d'Encouragement ou plus, ses dégâts d'Arts gagnent +10 ce tour-ci.",
-      "es": "Selecciona 1 \"儒烏風亭らでん\" tuyo. Puedes transferir 1~2 cartas Cheer de tu escenario a ese miembro. Después, si ese miembro tiene 3 o más cartas Cheer, el daño de Arts de ese miembro obtiene +10 durante este turno."
+      "zh-TW": "選擇自己的1位「儒烏風亭らでん」。可以將自己舞台上的1~2張吶喊卡，轉移給該成員。之後，該成員的吶喊卡有3張以上時，這個回合中，該成員的藝能傷害+10。",
+      "ja": "自分のステージにいる「儒烏風亭らでん」を１人選択する。自分のステージ上のエールカードを１～２枚、そのメンバーに移動させることができる。その後、そのメンバーのエールカードが３枚以上ある場合、このターン中、そのメンバーの芸能ダメージ＋１０。",
+      "en": "Choose 1 of your \"Urufuu Tei Raden\". You may transfer 1-2 Cheer cards from your Stage to that Member. Then, if that Member has 3 or more Cheer cards, that Member gains 10 Arts damage this turn.",
+      "fr": "Choisissez 1 de vos \"Uruha Rushia\". Vous pouvez transférer 1 à 2 cartes d'encouragement de votre Scène à ce Membre. Ensuite, si vous avez 3 cartes d'encouragement ou plus de ce Membre, les dégâts d'Arts de ce Membre augmentent de 10 pendant ce tour.",
+      "es": "Selecciona 1 de tus \"儒烏風亭らでん\". Puedes transferir 1-2 cartas Cheer de tu Escenario a dicho Miembro. Después, si hay 3 o más cartas Cheer de dicho Miembro, el daño de Arts de dicho Miembro aumenta en 10 durante este turno."
     },
     "id": "hBP04-094",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP04/hBP04-094_U.png"
@@ -37307,11 +37592,11 @@
     "tag": null,
     "product": "補充包「キュリアスユニバース (hBP04)」",
     "supportEffect": {
-      "zh-TW": "帶有這個吉祥物的成員HP+20。\n\n◆附加給「大空スバル」有追加效果\n雙方舞台上的吶喊卡總和在10張以上的期間，帶有這個吉祥物的成員藝能傷害+20。\n\n每位成員只能帶有1張吉祥物。",
-      "ja": "このマスコットを持つメンバーのHP+20。\n\n◆「大空スバル」に付けた場合、追加の効果\nお互いのステージ上のエールカードの合計が１０枚以上である間、このマスコットを持つメンバーのアーツダメージ+20。\n\n各メンバーはマスコットを１枚しか持てない。",
-      "en": "The Member with this Mascot gains +20 HP.\n\n◆Additional effect when attached to \"Oozora Subaru\"\nWhile the total number of Cheer cards on both Stages is 10 or more, the Member with this Mascot's Arts damage +20.\n\nEach Member can only have 1 Mascot attached.\n",
-      "fr": "Les Points de vie du membre portant cette Mascotte +20.\n\n◆Effet supplémentaire pour « 大空スバル »\nDurant la période où le total des cartes d'encouragement sur la Scène des deux joueurs est de 10 ou plus, les dégâts d'Arts des membres portant cette Mascotte +20.\n\nChaque membre ne peut porter qu'une seule Mascotte.",
-      "es": "HP de los Miembros con esta Mascota +20.\n\n◆Efecto adicional para \"大空スバル\"\nMientras la suma total de cartas Cheer en el Escenario de ambos jugadores sea 10 o más, el daño de Arts de los Miembros con esta Mascota +20.\n\nSolo se puede adjuntar 1 Mascota por Miembro."
+      "zh-TW": "帶有這個吉祥物的成員HP+20。\n\n◆附加給「大空スバル」有追加效果\n雙方舞台上的吶喊卡合計有10張以上的期間，帶有這個吉祥物的成員藝能傷害+20。\n\n每位成員只能帶有1張吉祥物。",
+      "ja": "このマスコットを帯びているメンバーのHP＋２０。\n\n◆「大空スバル」に付与された場合、追加効果\nお互いのステージの合計エールカードが１０枚以上ある間、このマスコットを帯びているメンバーの芸能ダメージ＋２０。\n\n各メンバーはマスコットを１枚までしか帯びることができない。",
+      "en": "Members with this Mascot gain 20 HP.\n\n◆Additional effect for \"Oozora Subaru\" when attached:\nWhile the total number of Cheer cards on both players' Stages is 10 or more, Members with this Mascot gain 20 Arts damage.\n\nEach Member can only have 1 Mascot.",
+      "fr": "Les Membres accompagnés de cette Mascotte gagnent 20 points de vie.\n\n◆Effet supplémentaire pour \"Oozora Subaru\" :\nPendant que les cartes d'encouragement sur les Scènes des deux joueurs totalisent 10 ou plus, les dégâts d'Arts des Membres accompagnés de cette Mascotte augmentent de 20.\n\nChaque Membre ne peut être accompagné que d'une seule Mascotte.",
+      "es": "Los Miembros con esta Mascota ganan 20 HP.\n\n◆ Efecto adicional para \"大空スバル\" si se le adjunta\nMientras haya 10 o más cartas Cheer en total en los Escenarios de ambos jugadores, el daño de Arts de los Miembros con esta Mascota aumenta en 20.\n\nCada Miembro solo puede tener 1 Mascota."
     },
     "id": "hBP04-104",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP04/hBP04-104_C.png"
@@ -38629,11 +38914,11 @@
     "effectG": {
       "name": "最強女神",
       "effect": {
-        "zh-TW": "這個成員使用了藝能時，如果該藝能擲骰子的點數總和為奇數，從自己的牌組抽1張牌。如果為偶數，從自己的牌組抽2張牌。",
-        "ja": "このメンバーがアーツを使用した時、そのアーツのダイスの合計値が奇数だった場合、自分のデッキからカードを1枚引く。偶数だった場合、自分のデッキからカードを2枚引く。",
-        "en": "When this Member uses Arts, if the total result of the dice rolled for that Arts is odd, draw 1 card from your Deck. If it is even, draw 2 cards from your Deck.",
-        "fr": "Quand ce Membre utilise une Arts, si la somme des points des dés lancés par cette Arts est impaire, piochez 1 carte de votre Deck. Si elle est paire, piochez 2 cartes de votre Deck.",
-        "es": "Cuando este Miembro usa Arts, si la suma de los puntos de los dados lanzados por esos Arts es impar, roba 1 carta de tu Mazo. Si es par, roba 2 cartas de tu Mazo."
+        "zh-TW": "這個成員使用了藝能時，如果該藝能擲骰子的點數合計為奇數，從自己的牌組抽1張牌。如果為偶數，從自己的牌組抽2張牌。",
+        "ja": "このメンバーが芸能を使用した時、その芸能のダイス合計が奇数だった場合、自分のデッキから１枚ドローする。偶数だった場合、自分のデッキから２枚ドローする。",
+        "en": "When this Member uses an Arts, if the total dice roll for that Arts is odd, draw 1 card from your Deck. If it is even, draw 2 cards from your Deck.",
+        "fr": "Lorsque ce Membre utilise un Art, si la somme des points des dés lancés pour cet Art est impaire, piochez 1 carte de votre Deck. Si elle est paire, piochez 2 cartes de votre Deck.",
+        "es": "Cuando este Miembro usa un Arts, si la suma de los puntos de los dados de dicho Arts es impar, roba 1 carta de tu Mazo. Si es par, roba 2 cartas de tu Mazo."
       }
     },
     "art1": {
@@ -38677,11 +38962,11 @@
     "effectG": {
       "name": "最強女神",
       "effect": {
-        "zh-TW": "這個成員使用了藝能時，如果該藝能擲骰子的點數總和為奇數，從自己的牌組抽1張牌。如果為偶數，從自己的牌組抽2張牌。",
-        "ja": "このメンバーがアーツを使用した時、そのアーツのダイスの合計値が奇数だった場合、自分のデッキからカードを1枚引く。偶数だった場合、自分のデッキからカードを2枚引く。",
-        "en": "When this Member uses Arts, if the total result of the dice rolled for that Arts is odd, draw 1 card from your Deck. If it is even, draw 2 cards from your Deck.",
-        "fr": "Quand ce Membre utilise une Arts, si la somme des points des dés lancés par cette Arts est impaire, piochez 1 carte de votre Deck. Si elle est paire, piochez 2 cartes de votre Deck.",
-        "es": "Cuando este Miembro usa Arts, si la suma de los puntos de los dados lanzados por esos Arts es impar, roba 1 carta de tu Mazo. Si es par, roba 2 cartas de tu Mazo."
+        "zh-TW": "這個成員使用了藝能時，如果該藝能擲骰子的點數合計為奇數，從自己的牌組抽1張牌。如果為偶數，從自己的牌組抽2張牌。",
+        "ja": "このメンバーが芸能を使用した時、その芸能のダイス合計が奇数だった場合、自分のデッキから１枚ドローする。偶数だった場合、自分のデッキから２枚ドローする。",
+        "en": "When this Member uses an Arts, if the total dice roll for that Arts is odd, draw 1 card from your Deck. If it is even, draw 2 cards from your Deck.",
+        "fr": "Lorsque ce Membre utilise un Art, si la somme des points des dés lancés pour cet Art est impaire, piochez 1 carte de votre Deck. Si elle est paire, piochez 2 cartes de votre Deck.",
+        "es": "Cuando este Miembro usa un Arts, si la suma de los puntos de los dados de dicho Arts es impar, roba 1 carta de tu Mazo. Si es par, roba 2 cartas de tu Mazo."
       }
     },
     "art1": {
@@ -38725,11 +39010,11 @@
     "effectG": {
       "name": "最強女神",
       "effect": {
-        "zh-TW": "這個成員使用了藝能時，如果該藝能擲骰子的點數總和為奇數，從自己的牌組抽1張牌。如果為偶數，從自己的牌組抽2張牌。",
-        "ja": "このメンバーがアーツを使用した時、そのアーツのダイスの合計値が奇数だった場合、自分のデッキからカードを1枚引く。偶数だった場合、自分のデッキからカードを2枚引く。",
-        "en": "When this Member uses Arts, if the total result of the dice rolled for that Arts is odd, draw 1 card from your Deck. If it is even, draw 2 cards from your Deck.",
-        "fr": "Quand ce Membre utilise une Arts, si la somme des points des dés lancés par cette Arts est impaire, piochez 1 carte de votre Deck. Si elle est paire, piochez 2 cartes de votre Deck.",
-        "es": "Cuando este Miembro usa Arts, si la suma de los puntos de los dados lanzados por esos Arts es impar, roba 1 carta de tu Mazo. Si es par, roba 2 cartas de tu Mazo."
+        "zh-TW": "這個成員使用了藝能時，如果該藝能擲骰子的點數合計為奇數，從自己的牌組抽1張牌。如果為偶數，從自己的牌組抽2張牌。",
+        "ja": "このメンバーが芸能を使用した時、その芸能のダイス合計が奇数だった場合、自分のデッキから１枚ドローする。偶数だった場合、自分のデッキから２枚ドローする。",
+        "en": "When this Member uses an Arts, if the total dice roll for that Arts is odd, draw 1 card from your Deck. If it is even, draw 2 cards from your Deck.",
+        "fr": "Lorsque ce Membre utilise un Art, si la somme des points des dés lancés pour cet Art est impaire, piochez 1 carte de votre Deck. Si elle est paire, piochez 2 cartes de votre Deck.",
+        "es": "Cuando este Miembro usa un Arts, si la suma de los puntos de los dados de dicho Arts es impar, roba 1 carta de tu Mazo. Si es par, roba 2 cartas de tu Mazo."
       }
     },
     "art1": {
@@ -38773,11 +39058,11 @@
     "effectG": {
       "name": "最強女神",
       "effect": {
-        "zh-TW": "這個成員使用了藝能時，如果該藝能擲骰子的點數總和為奇數，從自己的牌組抽1張牌。如果為偶數，從自己的牌組抽2張牌。",
-        "ja": "このメンバーがアーツを使用した時、そのアーツのダイスの合計値が奇数だった場合、自分のデッキからカードを1枚引く。偶数だった場合、自分のデッキからカードを2枚引く。",
-        "en": "When this Member uses Arts, if the total result of the dice rolled for that Arts is odd, draw 1 card from your Deck. If it is even, draw 2 cards from your Deck.",
-        "fr": "Quand ce Membre utilise une Arts, si la somme des points des dés lancés par cette Arts est impaire, piochez 1 carte de votre Deck. Si elle est paire, piochez 2 cartes de votre Deck.",
-        "es": "Cuando este Miembro usa Arts, si la suma de los puntos de los dados lanzados por esos Arts es impar, roba 1 carta de tu Mazo. Si es par, roba 2 cartas de tu Mazo."
+        "zh-TW": "這個成員使用了藝能時，如果該藝能擲骰子的點數合計為奇數，從自己的牌組抽1張牌。如果為偶數，從自己的牌組抽2張牌。",
+        "ja": "このメンバーが芸能を使用した時、その芸能のダイス合計が奇数だった場合、自分のデッキから１枚ドローする。偶数だった場合、自分のデッキから２枚ドローする。",
+        "en": "When this Member uses an Arts, if the total dice roll for that Arts is odd, draw 1 card from your Deck. If it is even, draw 2 cards from your Deck.",
+        "fr": "Lorsque ce Membre utilise un Art, si la somme des points des dés lancés pour cet Art est impaire, piochez 1 carte de votre Deck. Si elle est paire, piochez 2 cartes de votre Deck.",
+        "es": "Cuando este Miembro usa un Arts, si la suma de los puntos de los dados de dicho Arts es impar, roba 1 carta de tu Mazo. Si es par, roba 2 cartas de tu Mazo."
       }
     },
     "art1": {
@@ -38821,11 +39106,11 @@
     "effectG": {
       "name": "最強女神",
       "effect": {
-        "zh-TW": "這個成員使用了藝能時，如果該藝能擲骰子的點數總和為奇數，從自己的牌組抽1張牌。如果為偶數，從自己的牌組抽2張牌。",
-        "ja": "このメンバーがアーツを使用した時、そのアーツのダイスの合計値が奇数だった場合、自分のデッキからカードを1枚引く。偶数だった場合、自分のデッキからカードを2枚引く。",
-        "en": "When this Member uses Arts, if the total result of the dice rolled for that Arts is odd, draw 1 card from your Deck. If it is even, draw 2 cards from your Deck.",
-        "fr": "Quand ce Membre utilise une Arts, si la somme des points des dés lancés par cette Arts est impaire, piochez 1 carte de votre Deck. Si elle est paire, piochez 2 cartes de votre Deck.",
-        "es": "Cuando este Miembro usa Arts, si la suma de los puntos de los dados lanzados por esos Arts es impar, roba 1 carta de tu Mazo. Si es par, roba 2 cartas de tu Mazo."
+        "zh-TW": "這個成員使用了藝能時，如果該藝能擲骰子的點數合計為奇數，從自己的牌組抽1張牌。如果為偶數，從自己的牌組抽2張牌。",
+        "ja": "このメンバーが芸能を使用した時、その芸能のダイス合計が奇数だった場合、自分のデッキから１枚ドローする。偶数だった場合、自分のデッキから２枚ドローする。",
+        "en": "When this Member uses an Arts, if the total dice roll for that Arts is odd, draw 1 card from your Deck. If it is even, draw 2 cards from your Deck.",
+        "fr": "Lorsque ce Membre utilise un Art, si la somme des points des dés lancés pour cet Art est impaire, piochez 1 carte de votre Deck. Si elle est paire, piochez 2 cartes de votre Deck.",
+        "es": "Cuando este Miembro usa un Arts, si la suma de los puntos de los dados de dicho Arts es impar, roba 1 carta de tu Mazo. Si es par, roba 2 cartas de tu Mazo."
       }
     },
     "art1": {
@@ -38869,11 +39154,11 @@
     "effectG": {
       "name": "最強女神",
       "effect": {
-        "zh-TW": "這個成員使用了藝能時，如果該藝能擲骰子的點數總和為奇數，從自己的牌組抽1張牌。如果為偶數，從自己的牌組抽2張牌。",
-        "ja": "このメンバーがアーツを使用した時、そのアーツのダイスの合計値が奇数だった場合、自分のデッキからカードを1枚引く。偶数だった場合、自分のデッキからカードを2枚引く。",
-        "en": "When this Member uses Arts, if the total result of the dice rolled for that Arts is odd, draw 1 card from your Deck. If it is even, draw 2 cards from your Deck.",
-        "fr": "Quand ce Membre utilise une Arts, si la somme des points des dés lancés par cette Arts est impaire, piochez 1 carte de votre Deck. Si elle est paire, piochez 2 cartes de votre Deck.",
-        "es": "Cuando este Miembro usa Arts, si la suma de los puntos de los dados lanzados por esos Arts es impar, roba 1 carta de tu Mazo. Si es par, roba 2 cartas de tu Mazo."
+        "zh-TW": "這個成員使用了藝能時，如果該藝能擲骰子的點數合計為奇數，從自己的牌組抽1張牌。如果為偶數，從自己的牌組抽2張牌。",
+        "ja": "このメンバーが芸能を使用した時、その芸能のダイス合計が奇数だった場合、自分のデッキから１枚ドローする。偶数だった場合、自分のデッキから２枚ドローする。",
+        "en": "When this Member uses an Arts, if the total dice roll for that Arts is odd, draw 1 card from your Deck. If it is even, draw 2 cards from your Deck.",
+        "fr": "Lorsque ce Membre utilise un Art, si la somme des points des dés lancés pour cet Art est impaire, piochez 1 carte de votre Deck. Si elle est paire, piochez 2 cartes de votre Deck.",
+        "es": "Cuando este Miembro usa un Arts, si la suma de los puntos de los dados de dicho Arts es impar, roba 1 carta de tu Mazo. Si es par, roba 2 cartas de tu Mazo."
       }
     },
     "art1": {
@@ -38917,11 +39202,11 @@
     "effectG": {
       "name": "最強女神",
       "effect": {
-        "zh-TW": "這個成員使用了藝能時，如果該藝能擲骰子的點數總和為奇數，從自己的牌組抽1張牌。如果為偶數，從自己的牌組抽2張牌。",
-        "ja": "このメンバーがアーツを使用した時、そのアーツのダイスの合計値が奇数だった場合、自分のデッキからカードを1枚引く。偶数だった場合、自分のデッキからカードを2枚引く。",
-        "en": "When this Member uses Arts, if the total result of the dice rolled for that Arts is odd, draw 1 card from your Deck. If it is even, draw 2 cards from your Deck.",
-        "fr": "Quand ce Membre utilise une Arts, si la somme des points des dés lancés par cette Arts est impaire, piochez 1 carte de votre Deck. Si elle est paire, piochez 2 cartes de votre Deck.",
-        "es": "Cuando este Miembro usa Arts, si la suma de los puntos de los dados lanzados por esos Arts es impar, roba 1 carta de tu Mazo. Si es par, roba 2 cartas de tu Mazo."
+        "zh-TW": "這個成員使用了藝能時，如果該藝能擲骰子的點數合計為奇數，從自己的牌組抽1張牌。如果為偶數，從自己的牌組抽2張牌。",
+        "ja": "このメンバーが芸能を使用した時、その芸能のダイス合計が奇数だった場合、自分のデッキから１枚ドローする。偶数だった場合、自分のデッキから２枚ドローする。",
+        "en": "When this Member uses an Arts, if the total dice roll for that Arts is odd, draw 1 card from your Deck. If it is even, draw 2 cards from your Deck.",
+        "fr": "Lorsque ce Membre utilise un Art, si la somme des points des dés lancés pour cet Art est impaire, piochez 1 carte de votre Deck. Si elle est paire, piochez 2 cartes de votre Deck.",
+        "es": "Cuando este Miembro usa un Arts, si la suma de los puntos de los dados de dicho Arts es impar, roba 1 carta de tu Mazo. Si es par, roba 2 cartas de tu Mazo."
       }
     },
     "art1": {
@@ -41950,11 +42235,11 @@
       "damage": 60,
       "specialAttackImage": "icons/tokkou_50_white.png",
       "effect": {
-        "zh-TW": "如果對手所有後台成員的HP總和減少80以上，可以將自己存檔區的1張藍色吶喊卡發送給自己的「こぼ・かなえる」。",
-        "ja": "相手の全てのメンバーのHPの合計が80以上減少した場合、自分のアーカイブから青のエールカード1枚を自分の「こぼ・かなえる」に送る。\n",
-        "en": "If the total HP of all your opponent's Back row Members has decreased by 80 or more, you may send 1 blue Cheer card from your Archive to your \"こぼ・かなえる\".",
-        "fr": "Si la somme des Points de vie de tous les membres de l'Arrière de l'adversaire a diminué de 80 ou plus, vous pouvez envoyer 1 carte d'Encouragement bleue de votre Archive à votre \"Koboro Kaneru\".",
-        "es": "Si la Vida total de todos los Miembros de la Retaguardia de tu oponente se ha reducido en 80 o más, puedes enviar 1 carta Cheer azul de tu Archivo a tu \"Koboro Kanaeru\"."
+        "zh-TW": "如果對手所有後台成員的HP合計減少80以上，可以將自己存檔區的1張藍色吶喊卡發送給自己的「こぼ・かなえる」。",
+        "ja": "相手の全てのバックメンバーのHP合計が８０以上減少した場合、自分のアーカイブからエールカード１枚を自分の「こぼ・かなえる」に送る。",
+        "en": "If the total HP of all opponent's Back Stage Members is reduced by 80 or more, you may send 1 blue Cheer card from your Archive to your \"Cobalt Blue Ayunda\".",
+        "fr": "Si les points de vie totaux de tous les Membres en Arrière-plan de votre adversaire sont réduits de 80 ou plus, vous pouvez envoyer 1 carte d'encouragement bleue de votre Archive à votre \"Koboro Kaneru\".",
+        "es": "Si el total de Vida de todos los Miembros de Retaguardia de tu oponente se reduce en 80 o más, puedes enviar 1 carta Cheer azul de tu Archivo a tu \"こぼ・かなえる\"."
       }
     },
     "art2": {
@@ -42003,11 +42288,11 @@
       "damage": 60,
       "specialAttackImage": "icons/tokkou_50_white.png",
       "effect": {
-        "zh-TW": "如果對手所有後台成員的HP總和減少80以上，可以將自己存檔區的1張藍色吶喊卡發送給自己的「こぼ・かなえる」。",
-        "ja": "相手の全てのメンバーのHPの合計が80以上減少した場合、自分のアーカイブから青のエールカード1枚を自分の「こぼ・かなえる」に送る。\n",
-        "en": "If the total HP of all your opponent's Back row Members has decreased by 80 or more, you may send 1 blue Cheer card from your Archive to your \"こぼ・かなえる\".",
-        "fr": "Si la somme des Points de vie de tous les membres de l'Arrière de l'adversaire a diminué de 80 ou plus, vous pouvez envoyer 1 carte d'Encouragement bleue de votre Archive à votre \"Koboro Kaneru\".",
-        "es": "Si la Vida total de todos los Miembros de la Retaguardia de tu oponente se ha reducido en 80 o más, puedes enviar 1 carta Cheer azul de tu Archivo a tu \"Koboro Kanaeru\"."
+        "zh-TW": "如果對手所有後台成員的HP合計減少80以上，可以將自己存檔區的1張藍色吶喊卡發送給自己的「こぼ・かなえる」。",
+        "ja": "相手の全てのバックメンバーのHP合計が８０以上減少した場合、自分のアーカイブからエールカード１枚を自分の「こぼ・かなえる」に送る。",
+        "en": "If the total HP of all opponent's Back Stage Members is reduced by 80 or more, you may send 1 blue Cheer card from your Archive to your \"Cobalt Blue Ayunda\".",
+        "fr": "Si les points de vie totaux de tous les Membres en Arrière-plan de votre adversaire sont réduits de 80 ou plus, vous pouvez envoyer 1 carte d'encouragement bleue de votre Archive à votre \"Koboro Kaneru\".",
+        "es": "Si el total de Vida de todos los Miembros de Retaguardia de tu oponente se reduce en 80 o más, puedes enviar 1 carta Cheer azul de tu Archivo a tu \"こぼ・かなえる\"."
       }
     },
     "art2": {
@@ -42056,11 +42341,11 @@
       "damage": 60,
       "specialAttackImage": "icons/tokkou_50_white.png",
       "effect": {
-        "zh-TW": "如果對手所有後台成員的HP總和減少80以上，可以將自己存檔區的1張藍色吶喊卡發送給自己的「こぼ・かなえる」。",
-        "ja": "相手の全てのメンバーのHPの合計が80以上減少した場合、自分のアーカイブから青のエールカード1枚を自分の「こぼ・かなえる」に送る。\n",
-        "en": "If the total HP of all your opponent's Back row Members has decreased by 80 or more, you may send 1 blue Cheer card from your Archive to your \"こぼ・かなえる\".",
-        "fr": "Si la somme des Points de vie de tous les membres de l'Arrière de l'adversaire a diminué de 80 ou plus, vous pouvez envoyer 1 carte d'Encouragement bleue de votre Archive à votre \"Koboro Kaneru\".",
-        "es": "Si la Vida total de todos los Miembros de la Retaguardia de tu oponente se ha reducido en 80 o más, puedes enviar 1 carta Cheer azul de tu Archivo a tu \"Koboro Kanaeru\"."
+        "zh-TW": "如果對手所有後台成員的HP合計減少80以上，可以將自己存檔區的1張藍色吶喊卡發送給自己的「こぼ・かなえる」。",
+        "ja": "相手の全てのバックメンバーのHP合計が８０以上減少した場合、自分のアーカイブからエールカード１枚を自分の「こぼ・かなえる」に送る。",
+        "en": "If the total HP of all opponent's Back Stage Members is reduced by 80 or more, you may send 1 blue Cheer card from your Archive to your \"Cobalt Blue Ayunda\".",
+        "fr": "Si les points de vie totaux de tous les Membres en Arrière-plan de votre adversaire sont réduits de 80 ou plus, vous pouvez envoyer 1 carte d'encouragement bleue de votre Archive à votre \"Koboro Kaneru\".",
+        "es": "Si el total de Vida de todos los Miembros de Retaguardia de tu oponente se reduce en 80 o más, puedes enviar 1 carta Cheer azul de tu Archivo a tu \"こぼ・かなえる\"."
       }
     },
     "art2": {
@@ -43705,11 +43990,11 @@
       "damage": "100+",
       "specialAttackImage": "icons/tokkou_50_blue.png",
       "effect": {
-        "zh-TW": "如果自己的主推為「白上フブキ」或主推的顏色為黃色，且自己舞台上的道具、吉祥物與粉絲總和在4張以上，這個藝能傷害+100。",
-        "ja": "自分の推しホロメンが「白上フブキ」または推しホロメンの色が黄色で、自分のステージにいる「道具」「マスコット」「ファン」の合計が4枚以上ある場合、この「アーツ」のダメージ+100。",
-        "en": "If your Oshi is \"白上フブキ\" or your Oshi's color is yellow, and you have 4 or more Items, Mascots, and Fans combined on your Stage, your Arts damage +100.",
-        "fr": "Si votre Oshi est \"Shirakami Fubuki\" ou si la couleur de votre Oshi est jaune, et que le total des objets, mascottes et fans sur votre Scène est de 4 ou plus, les dégâts de cet Arts +100.",
-        "es": "Si tu Oshi es \"Shirakami Fubuki\" o el color de tu Oshi es amarillo, y tienes 4 o más Objetos, Mascotas y Fans en tu Escenario en total, el daño de este Arts +100."
+        "zh-TW": "如果自己的主推為「白上フブキ」或主推的顏色為黃色，且自己舞台上的道具、吉祥物與粉絲合計有4張以上，這個藝能傷害+100。",
+        "ja": "自分の推しが「白上フブキ」または推しの色が黄色で、自分のステージの道具、マスコット、ファンを合計４枚以上ある場合、この芸能ダメージ＋１００。",
+        "en": "If your Oshi is \"Shirakami Fubuki\" or your Oshi's color is yellow, and you have 4 or more Mascots, Props, and Fans combined on your Stage, this Arts damage is increased by 100.",
+        "fr": "Si votre Oshi est \"Shirakami Fubuki\" ou si la couleur de votre Oshi est jaune, et que vous avez 4 objets, Mascottes et Fans au total sur votre Scène, les dégâts d'Arts augmentent de 100.",
+        "es": "Si tu Oshi es \"白上フブキ\" o el color de tu Oshi es amarillo, y hay 4 o más objetos, mascotas y fans en total en tu Escenario, el daño de este Arts aumenta en 100."
       }
     },
     "extra": null,
@@ -43759,11 +44044,11 @@
       "damage": "100+",
       "specialAttackImage": "icons/tokkou_50_blue.png",
       "effect": {
-        "zh-TW": "如果自己的主推為「白上フブキ」或主推的顏色為黃色，且自己舞台上的道具、吉祥物與粉絲總和在4張以上，這個藝能傷害+100。",
-        "ja": "自分の推しホロメンが「白上フブキ」または推しホロメンの色が黄色で、自分のステージにいる「道具」「マスコット」「ファン」の合計が4枚以上ある場合、この「アーツ」のダメージ+100。",
-        "en": "If your Oshi is \"白上フブキ\" or your Oshi's color is yellow, and you have 4 or more Items, Mascots, and Fans combined on your Stage, your Arts damage +100.",
-        "fr": "Si votre Oshi est \"Shirakami Fubuki\" ou si la couleur de votre Oshi est jaune, et que le total des objets, mascottes et fans sur votre Scène est de 4 ou plus, les dégâts de cet Arts +100.",
-        "es": "Si tu Oshi es \"Shirakami Fubuki\" o el color de tu Oshi es amarillo, y tienes 4 o más Objetos, Mascotas y Fans en tu Escenario en total, el daño de este Arts +100."
+        "zh-TW": "如果自己的主推為「白上フブキ」或主推的顏色為黃色，且自己舞台上的道具、吉祥物與粉絲合計有4張以上，這個藝能傷害+100。",
+        "ja": "自分の推しが「白上フブキ」または推しの色が黄色で、自分のステージの道具、マスコット、ファンを合計４枚以上ある場合、この芸能ダメージ＋１００。",
+        "en": "If your Oshi is \"Shirakami Fubuki\" or your Oshi's color is yellow, and you have 4 or more Mascots, Props, and Fans combined on your Stage, this Arts damage is increased by 100.",
+        "fr": "Si votre Oshi est \"Shirakami Fubuki\" ou si la couleur de votre Oshi est jaune, et que vous avez 4 objets, Mascottes et Fans au total sur votre Scène, les dégâts d'Arts augmentent de 100.",
+        "es": "Si tu Oshi es \"白上フブキ\" o el color de tu Oshi es amarillo, y hay 4 o más objetos, mascotas y fans en total en tu Escenario, el daño de este Arts aumenta en 100."
       }
     },
     "extra": null,
@@ -43813,11 +44098,11 @@
       "damage": "100+",
       "specialAttackImage": "icons/tokkou_50_blue.png",
       "effect": {
-        "zh-TW": "如果自己的主推為「白上フブキ」或主推的顏色為黃色，且自己舞台上的道具、吉祥物與粉絲總和在4張以上，這個藝能傷害+100。",
-        "ja": "自分の推しホロメンが「白上フブキ」または推しホロメンの色が黄色で、自分のステージにいる「道具」「マスコット」「ファン」の合計が4枚以上ある場合、この「アーツ」のダメージ+100。",
-        "en": "If your Oshi is \"白上フブキ\" or your Oshi's color is yellow, and you have 4 or more Items, Mascots, and Fans combined on your Stage, your Arts damage +100.",
-        "fr": "Si votre Oshi est \"Shirakami Fubuki\" ou si la couleur de votre Oshi est jaune, et que le total des objets, mascottes et fans sur votre Scène est de 4 ou plus, les dégâts de cet Arts +100.",
-        "es": "Si tu Oshi es \"Shirakami Fubuki\" o el color de tu Oshi es amarillo, y tienes 4 o más Objetos, Mascotas y Fans en tu Escenario en total, el daño de este Arts +100."
+        "zh-TW": "如果自己的主推為「白上フブキ」或主推的顏色為黃色，且自己舞台上的道具、吉祥物與粉絲合計有4張以上，這個藝能傷害+100。",
+        "ja": "自分の推しが「白上フブキ」または推しの色が黄色で、自分のステージの道具、マスコット、ファンを合計４枚以上ある場合、この芸能ダメージ＋１００。",
+        "en": "If your Oshi is \"Shirakami Fubuki\" or your Oshi's color is yellow, and you have 4 or more Mascots, Props, and Fans combined on your Stage, this Arts damage is increased by 100.",
+        "fr": "Si votre Oshi est \"Shirakami Fubuki\" ou si la couleur de votre Oshi est jaune, et que vous avez 4 objets, Mascottes et Fans au total sur votre Scène, les dégâts d'Arts augmentent de 100.",
+        "es": "Si tu Oshi es \"白上フブキ\" o el color de tu Oshi es amarillo, y hay 4 o más objetos, mascotas y fans en total en tu Escenario, el daño de este Arts aumenta en 100."
       }
     },
     "extra": null,
@@ -43939,11 +44224,11 @@
       "damage": "50+",
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "[限定中心位置]如果這個成員有4張以上的吶喊卡，這個回合中，這個成員與自己的聯動成員藝能傷害+50。",
-        "ja": "[センター限定]このメンバーにチアーカードが4枚以上ある場合、このターン中、このメンバーと自分のコラボメンバーのアーツダメージ+50。",
-        "en": "[Center Only] If this Member has 4 or more Cheer cards, during this turn, the Arts damage of this Member and your Collab Member +50.\n",
-        "fr": "[Position Centre UNIQUEMENT] Si ce membre possède 4 cartes d'encouragement ou plus, durant ce tour, les dégâts d'Arts de ce membre et de vos membres Collab sont augmentés de 50.",
-        "es": "[Solo posición central] Si este Miembro tiene 4 o más cartas de Cheer, durante este turno, el daño de Arts de este Miembro y tus Miembros Collab aumenta en 50."
+        "zh-TW": "[限定中心位置]如果這個成員的吶喊卡有4張以上，這個回合中，這個成員與自己的聯動成員藝能傷害+50。",
+        "ja": "[センター限定]このメンバーのエールカードが４枚以上ある場合、このターン中、このメンバーと自分のコラボメンバーの芸能ダメージ＋５０。",
+        "en": "[Center Position Exclusive] If you have 4 or more Cheer cards of this Member, Arts damage dealt by this Member and your Collab Members this turn is increased by 50.",
+        "fr": "[Position Centre Exclusive] Si vous avez 4 cartes d'encouragement ou plus de ce Membre, les dégâts d'Arts de ce Membre et de vos Membres en Collab augmentent de 50 pendant ce tour.",
+        "es": "[Solo posición Centro] Si hay 4 o más cartas Cheer de este Miembro, el daño de Arts de este Miembro y tus Miembros Collab aumenta en 50 durante este turno."
       }
     },
     "art2": {
@@ -43998,11 +44283,11 @@
       "damage": "50+",
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "[限定中心位置]如果這個成員有4張以上的吶喊卡，這個回合中，這個成員與自己的聯動成員藝能傷害+50。",
-        "ja": "[センター限定]このメンバーにチアーカードが4枚以上ある場合、このターン中、このメンバーと自分のコラボメンバーのアーツダメージ+50。",
-        "en": "[Center Only] If this Member has 4 or more Cheer cards, during this turn, the Arts damage of this Member and your Collab Member +50.\n",
-        "fr": "[Position Centre UNIQUEMENT] Si ce membre possède 4 cartes d'encouragement ou plus, durant ce tour, les dégâts d'Arts de ce membre et de vos membres Collab sont augmentés de 50.",
-        "es": "[Solo posición central] Si este Miembro tiene 4 o más cartas de Cheer, durante este turno, el daño de Arts de este Miembro y tus Miembros Collab aumenta en 50."
+        "zh-TW": "[限定中心位置]如果這個成員的吶喊卡有4張以上，這個回合中，這個成員與自己的聯動成員藝能傷害+50。",
+        "ja": "[センター限定]このメンバーのエールカードが４枚以上ある場合、このターン中、このメンバーと自分のコラボメンバーの芸能ダメージ＋５０。",
+        "en": "[Center Position Exclusive] If you have 4 or more Cheer cards of this Member, Arts damage dealt by this Member and your Collab Members this turn is increased by 50.",
+        "fr": "[Position Centre Exclusive] Si vous avez 4 cartes d'encouragement ou plus de ce Membre, les dégâts d'Arts de ce Membre et de vos Membres en Collab augmentent de 50 pendant ce tour.",
+        "es": "[Solo posición Centro] Si hay 4 o más cartas Cheer de este Miembro, el daño de Arts de este Miembro y tus Miembros Collab aumenta en 50 durante este turno."
       }
     },
     "art2": {
@@ -44206,6 +44491,22 @@
     },
     "id": "hBP05-074",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP05/hBP05-074_P_02.png"
+  },
+  {
+    "image": "cardListImages/hBP05/hBP05-074_P_03.png",
+    "name": "フレンドリーパソコン",
+    "type": "支援・物品",
+    "tag": null,
+    "product": "PR卡",
+    "supportEffect": {
+      "zh-TW": "從自己的牌組展示1~2張特殊規則為「這個成員沒有張數限制」的Debut成員，放到舞台上。將牌組重新洗牌。如果將2張Debut成員放到舞台上，再將自己的1張手牌放回牌組下方。",
+      "ja": "自分のデッキから「このメンバーは枚数制限なし」という特殊ルールを持つDebutメンバーを1～2枚公開し、ステージに出す。その後、デッキをシャッフルする。Debutメンバーを2枚ステージに出した場合、自分の手札1枚をデッキの下に戻す。",
+      "en": "Reveal 1 to 2 Debut Members from your Deck that have the special rule \"There is no limit to the number of this Member\" and put them onto the Stage. Shuffle your Deck. If you put 2 Debut Members onto the Stage, place 1 card from your Hand at the bottom of your Deck.",
+      "fr": "Montrez 1 à 2 membres Debut avec la règle spéciale \"Aucune limite de nombre pour ce membre\" de votre Deck et placez-les sur la Scène. Mélangez votre Deck. Si vous placez 2 membres Debut sur la Scène, renvoyez une carte de votre Main au bas de votre Deck.\n",
+      "es": "Muestra 1~2 miembros Debut con la regla especial \"No hay límite de cantidad para este miembro\" de tu Mazo y ponlos en el Escenario. Baraja tu Mazo. Si pones 2 miembros Debut en el Escenario, pon 1 carta de tu Mano debajo de tu Mazo."
+    },
+    "id": "hBP05-074",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP05/hBP05-074_P_03.png"
   },
   {
     "image": "cardListImages/hBP05/hBP05-075_C.png",
@@ -44441,11 +44742,11 @@
     "tag": null,
     "product": "補充包「エンチャントレガリア (hBP05)」",
     "supportEffect": {
-      "zh-TW": "帶有這個道具的成員藝能傷害+10。\n\n◆附加給1st以上的「白銀ノエル」有追加效果\n帶有這個道具的成員有3張以上的吶喊卡時，這個成員的藝能傷害+20。\n\n每位成員只能帶有1張道具。",
-      "ja": "この道具を装備しているメンバーの「アーツ」ダメージ＋10。\n\n◆1st以上に装備している「白銀ノエル」への追加効果\nこの道具を装備しているメンバーのエールカードが3枚以上ある場合、このメンバーの「アーツ」ダメージ＋20。\n\nメンバーは道具を1枚しか装備できない。",
-      "en": "Members with this item attached have their Arts damage +10.\n\n◆Additional effect for 1st or higher \"Noel Noelle\"\nIf a Member with this item attached has 3 or more Cheer cards, this Member's Arts damage +20.",
-      "fr": "Les Arts du membre avec cet objet infligent +10 dégâts.\n\n◆Effet supplémentaire si attaché à \"Shirogane Noel\" de 1st ou plus\nSi le membre avec cet objet a 3 cartes d'encouragement ou plus, les Arts de ce membre infligent +20 dégâts.\n\nChaque membre ne peut être équipé que d'un seul objet.",
-      "es": "Los miembros con este Objeto tienen un daño de Arts +10.\n\n◆Si se aplica a \"白銀ノエル\" de 1st o superior, tiene un efecto adicional:\nSi el miembro con este Objeto tiene 3 o más cartas de Cheer, el daño de Arts de este miembro aumenta en 20.\n\nSolo se puede adjuntar 1 Objeto por miembro."
+      "zh-TW": "帶有這個道具的成員藝能傷害+10。\n\n◆附加給1st以上的「白銀ノエル」有追加效果\n帶有這個道具的成員的吶喊卡有3張以上時，這個成員的藝能傷害+20。\n\n每位成員只能帶有1張道具。",
+      "ja": "この道具を帯びているメンバーの芸能ダメージ＋１０。\n\n◆1st以上の「白銀ノエル」に付与された場合、追加効果\nこの道具を帯びているメンバーのエールカードが３枚以上ある場合、このメンバーの芸能ダメージ＋２０。\n\n各メンバーは道具を１枚までしか帯びることができない。",
+      "en": "Members with this Prop gain 10 Arts damage.\n\n◆Additional effect for \"Shirakami Fubuki\" of 1st Generation or higher when attached:\nWhen you have 3 or more Cheer cards of this Member, this Member's Arts damage is increased by 20.\n\nEach Member can only have 1 Prop.",
+      "fr": "Les Membres accompagnés de cet Objet gagnent 10 dégâts d'Arts.\n\n◆Effet supplémentaire pour \"Shirogane Noel\" de 1ère Génération ou plus :\nLorsque vous avez 3 cartes d'encouragement ou plus de ce Membre, les dégâts d'Arts de ce Membre augmentent de 20.\n\nChaque Membre ne peut être accompagné que d'un seul Objet.",
+      "es": "Los Miembros con este Objeto ganan 10 de daño de Arts.\n\n◆ Efecto adicional para \"白銀ノエル\" de 1st o superior si se le adjunta\nCuando hay 3 o más cartas Cheer del Miembro con este Objeto, el daño de Arts de este Miembro aumenta en 20.\n\nCada Miembro solo puede tener 1 Objeto."
     },
     "id": "hBP05-081",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP05/hBP05-081_U.png"
@@ -44991,11 +45292,11 @@
       "holoPower": -2,
       "name": "双月の斉唱",
       "effect": {
-        "zh-TW": "[每場比賽一次]如果雙方舞台上的吶喊卡總和在6張以上，從自己的吶喊牌組展示1~3張吶喊卡，分配給自己標示#ID1期生的成員。將吶喊牌組重新洗牌。",
-        "ja": "[1試合に1回]お互いのステージ上のエールカードの合計が6枚以上だった場合、自分のエールデッキからエールカードを1～3枚公開し、「#1期生」のメンバーに配布する。その後、エールデッキをシャッフルする。",
-        "en": "[Once per game] If the total number of Cheer cards on both players' Stages is 6 or more, reveal 1 to 3 Cheer cards from your Cheer Deck and assign them to Members you control with the #ID Gen 1 Trait. Shuffle your Cheer Deck.\n",
-        "fr": "[Une fois par partie] Si le nombre total de cartes d'encouragement sur la Scène des deux joueurs est de 6 ou plus, montrez 1 à 3 cartes d'encouragement de votre Deck d'encouragement et distribuez-les à vos membres marqués #ID1期生. Mélangez votre Deck d'encouragement.",
-        "es": "[Una vez por partida] Si la suma total de cartas de Mazo Cheer en el Escenario de ambos jugadores es 6 o más, muestra 1~3 cartas de Mazo Cheer de tu Mazo Cheer y asígnalas a los miembros propios marcados con #ID de la 1ª generación. Baraja tu Mazo Cheer."
+        "zh-TW": "[每場比賽一次]如果雙方舞台上的吶喊卡合計有6張以上，從自己的吶喊牌組展示1~3張吶喊卡，分配給自己標示#ID1期生的成員。將吶喊牌組重新洗牌。",
+        "ja": "[１試合に１度]お互いのステージの合計エールカードが６枚以上ある場合、自分のエールデッキからエールカードを１～３枚見せ、自分の#ID1期生と表示されているメンバーに送る。エールデッキをシャッフルする。",
+        "en": "[Once per game] If you have a total of 6 or more Cheer cards on both players' Stages, reveal 1-3 Cheer cards from your Cheer Deck and assign them to your Member marked with #ID1st Generation. Shuffle your Cheer Deck.",
+        "fr": "[Une fois par partie] Si vous avez 6 cartes d'encouragement ou plus au total sur les Scènes des deux joueurs, montrez 1 à 3 cartes d'encouragement de votre Deck d'encouragement et distribuez-les aux Membres que vous avez marqués comme #ID 1ère Génération. Mélangez votre Deck d'encouragement.",
+        "es": "[Una vez por partida] Si hay 6 o más cartas Cheer en total en los Escenarios de ambos jugadores, muestra 1-3 cartas Cheer de tu Mazo Cheer y asígnalas a tu Miembro marcado como #ID1期生. Baraja tu Mazo Cheer."
       }
     },
     "id": "hBP06-006",
@@ -45023,11 +45324,11 @@
       "holoPower": -2,
       "name": "双月の斉唱",
       "effect": {
-        "zh-TW": "[每場比賽一次]如果雙方舞台上的吶喊卡總和在6張以上，從自己的吶喊牌組展示1~3張吶喊卡，分配給自己標示#ID1期生的成員。將吶喊牌組重新洗牌。",
-        "ja": "[1試合に1回]お互いのステージ上のエールカードの合計が6枚以上だった場合、自分のエールデッキからエールカードを1～3枚公開し、「#1期生」のメンバーに配布する。その後、エールデッキをシャッフルする。",
-        "en": "[Once per game] If the total number of Cheer cards on both players' Stages is 6 or more, reveal 1 to 3 Cheer cards from your Cheer Deck and assign them to Members you control with the #ID Gen 1 Trait. Shuffle your Cheer Deck.\n",
-        "fr": "[Une fois par partie] Si le nombre total de cartes d'encouragement sur la Scène des deux joueurs est de 6 ou plus, montrez 1 à 3 cartes d'encouragement de votre Deck d'encouragement et distribuez-les à vos membres marqués #ID1期生. Mélangez votre Deck d'encouragement.",
-        "es": "[Una vez por partida] Si la suma total de cartas de Mazo Cheer en el Escenario de ambos jugadores es 6 o más, muestra 1~3 cartas de Mazo Cheer de tu Mazo Cheer y asígnalas a los miembros propios marcados con #ID de la 1ª generación. Baraja tu Mazo Cheer."
+        "zh-TW": "[每場比賽一次]如果雙方舞台上的吶喊卡合計有6張以上，從自己的吶喊牌組展示1~3張吶喊卡，分配給自己標示#ID1期生的成員。將吶喊牌組重新洗牌。",
+        "ja": "[１試合に１度]お互いのステージの合計エールカードが６枚以上ある場合、自分のエールデッキからエールカードを１～３枚見せ、自分の#ID1期生と表示されているメンバーに送る。エールデッキをシャッフルする。",
+        "en": "[Once per game] If you have a total of 6 or more Cheer cards on both players' Stages, reveal 1-3 Cheer cards from your Cheer Deck and assign them to your Member marked with #ID1st Generation. Shuffle your Cheer Deck.",
+        "fr": "[Une fois par partie] Si vous avez 6 cartes d'encouragement ou plus au total sur les Scènes des deux joueurs, montrez 1 à 3 cartes d'encouragement de votre Deck d'encouragement et distribuez-les aux Membres que vous avez marqués comme #ID 1ère Génération. Mélangez votre Deck d'encouragement.",
+        "es": "[Una vez por partida] Si hay 6 o más cartas Cheer en total en los Escenarios de ambos jugadores, muestra 1-3 cartas Cheer de tu Mazo Cheer y asígnalas a tu Miembro marcado como #ID1期生. Baraja tu Mazo Cheer."
       }
     },
     "id": "hBP06-006",
@@ -45678,11 +45979,11 @@
     "effectC": {
       "name": "一緒に共闘しよ",
       "effect": {
-        "zh-TW": "如果在自己後攻的第一個回合，從自己的牌組展示1張標示#FLOW GLOW且有聯動效果的成員並加入手牌。將牌組重新洗牌。",
-        "ja": "自分が後攻の1ターン目に、自分のデッキから「#FLOW GLOW」のコラボ効果を持つメンバー1枚を公開し、手札に加える。その後、デッキをシャッフルする。\n",
-        "en": "If it is your first turn going second, reveal 1 Member with #FLOW GLOW and a Collab effect from your Deck and add it to your Hand. Shuffle your Deck.",
-        "fr": "Si lors de votre premier tour en tant que second joueur, montrez 1 membre marqué #FLOW GLOW avec un effet Collab de votre deck et ajoutez-le à votre main. Mélangez votre deck.",
-        "es": "Si es tu primer turno y atacas segundo, muestra 1 Miembro marcado como #FLOW GLOW con efecto Collab de tu mazo y añádelo a tu mano. Baraja tu mazo."
+        "zh-TW": "如果在自己後攻的第一個回合，從自己的牌組展示1張標示#FLOW GLOW且持有聯動效果的成員並加入手牌。將牌組重新洗牌。",
+        "ja": "自分の後攻１ターン目に、自分のデッキから#FLOW GLOWと表示され、コラボ効果を持つメンバーを１枚見せ、手札に加える。デッキをシャッフルする。",
+        "en": "If it is your first turn going second, reveal 1 Member marked with #FLOW GLOW that has a Collab effect from your Deck and add it to your Hand. Shuffle your Deck.",
+        "fr": "Si c'est votre premier tour en tant que joueur suivant, montrez 1 Membre marqué #FLOW GLOW possédant un effet de Collab de votre Deck et ajoutez-le à votre Main. Mélangez votre Deck.",
+        "es": "Si es tu primer turno y juegas en segundo lugar, muestra 1 Miembro marcado como #FLOW GLOW con efecto Collab de tu Mazo y añádelo a tu Mano. Baraja tu Mazo."
       }
     },
     "effectB": null,
@@ -45914,6 +46215,50 @@
     "extra": null,
     "id": "hBP06-019",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP06/hBP06-019_SR.png"
+  },
+  {
+    "image": "cardListImages/hCO02/hBP06-019_SR.png",
+    "name": "響咲リオナ",
+    "type": "成員",
+    "tag": "#DEV_IS / #FLOW GLOW",
+    "product": "エクストリーマーカップ25-26 Final オフィシャルホロカコレクションA",
+    "color": "白",
+    "hp": 150,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": {
+      "name": "ストイック負けず嫌い王",
+      "effect": {
+        "zh-TW": "如果自己的主推為「響咲リオナ」，可以將自己牌組上方的1張牌放到存檔區：從自己的牌組抽1張牌。",
+        "ja": "自分の推しホロメンが「響咲リオナ」の場合、自分のデッキの上からカードを1枚アーカイブに置く：自分のデッキからカードを1枚引く。",
+        "en": "If your Oshi is \"響咲リオナ\", you may place the top card of your Deck into your Archive: Draw 1 card from your Deck.",
+        "fr": "Si votre Oshi est \"Hibi Saki Riona\", placez 1 carte du dessus de votre Deck dans votre Archive : piochez 1 carte de votre Deck.",
+        "es": "Si tu Oshi es \"Hibiki Saki Riona\", puedes poner la carta superior de tu mazo en el Archivo: Roba 1 carta de tu mazo."
+      }
+    },
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_white.png"
+      ],
+      "name": "意外と熱血タイプ？",
+      "damage": 40,
+      "specialAttackImage": null,
+      "effect": {
+        "zh-TW": "將自己牌組上方的1張牌放到存檔區。",
+        "ja": "自分のデッキの上から1枚をアーカイブに置く。\n",
+        "en": "Place 1 card from the top of your Deck into the Archive.",
+        "fr": "Envoyez la carte du dessus de votre Deck dans l'archive.",
+        "es": "Envía 1 carta superior de tu Mazo a tu Archivo."
+      }
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP06-019",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCO02/hBP06-019_SR.png"
   },
   {
     "image": "cardListImages/hBP06/hBP06-020_RR.png",
@@ -46825,11 +47170,11 @@
       "damage": "160+",
       "specialAttackImage": "icons/tokkou_50_blue.png",
       "effect": {
-        "zh-TW": "如果這個成員帶有2張以上的「ルーナイト」，這個藝能傷害+50。",
-        "ja": "このメンバーに「ルーナイト」が２枚以上付いている場合、このアーツダメージ＋５０。\n",
-        "en": "If this Member has 2 or more \"Lounite\" attached, this Arts' damage +50.",
-        "fr": "Si ce membre a 2 cartes « ルーナイト » ou plus, les dégâts de cet Arts +50.",
-        "es": "Si este miembro tiene 2 o más \"ルーナイト\", el daño de este Arts +50."
+        "zh-TW": "如果這個成員帶有的「ルーナイト」在2張以上，這個藝能傷害+50。",
+        "ja": "このメンバーが帯びている「ルーナイト」が２枚以上ある場合、この芸能ダメージ＋５０。",
+        "en": "If you have 2 or more \"Luna-light\" attached to this Member, this Arts damage is increased by 50.",
+        "fr": "Si vous avez 2 \"Luna Knights\" ou plus accompagnant ce Membre, les dégâts d'Arts augmentent de 50.",
+        "es": "Si \"ルーナイト\" que este Miembro tiene es de 2 o más, el daño de este Arts aumenta en 50."
       }
     },
     "art2": null,
@@ -46873,11 +47218,11 @@
       "damage": "160+",
       "specialAttackImage": "icons/tokkou_50_blue.png",
       "effect": {
-        "zh-TW": "如果這個成員帶有2張以上的「ルーナイト」，這個藝能傷害+50。",
-        "ja": "このメンバーに「ルーナイト」が２枚以上付いている場合、このアーツダメージ＋５０。\n",
-        "en": "If this Member has 2 or more \"Lounite\" attached, this Arts' damage +50.",
-        "fr": "Si ce membre a 2 cartes « ルーナイト » ou plus, les dégâts de cet Arts +50.",
-        "es": "Si este miembro tiene 2 o más \"ルーナイト\", el daño de este Arts +50."
+        "zh-TW": "如果這個成員帶有的「ルーナイト」在2張以上，這個藝能傷害+50。",
+        "ja": "このメンバーが帯びている「ルーナイト」が２枚以上ある場合、この芸能ダメージ＋５０。",
+        "en": "If you have 2 or more \"Luna-light\" attached to this Member, this Arts damage is increased by 50.",
+        "fr": "Si vous avez 2 \"Luna Knights\" ou plus accompagnant ce Membre, les dégâts d'Arts augmentent de 50.",
+        "es": "Si \"ルーナイト\" que este Miembro tiene es de 2 o más, el daño de este Arts aumenta en 50."
       }
     },
     "art2": null,
@@ -46921,11 +47266,11 @@
       "damage": "160+",
       "specialAttackImage": "icons/tokkou_50_blue.png",
       "effect": {
-        "zh-TW": "如果這個成員帶有2張以上的「ルーナイト」，這個藝能傷害+50。",
-        "ja": "このメンバーに「ルーナイト」が２枚以上付いている場合、このアーツダメージ＋５０。\n",
-        "en": "If this Member has 2 or more \"Lounite\" attached, this Arts' damage +50.",
-        "fr": "Si ce membre a 2 cartes « ルーナイト » ou plus, les dégâts de cet Arts +50.",
-        "es": "Si este miembro tiene 2 o más \"ルーナイト\", el daño de este Arts +50."
+        "zh-TW": "如果這個成員帶有的「ルーナイト」在2張以上，這個藝能傷害+50。",
+        "ja": "このメンバーが帯びている「ルーナイト」が２枚以上ある場合、この芸能ダメージ＋５０。",
+        "en": "If you have 2 or more \"Luna-light\" attached to this Member, this Arts damage is increased by 50.",
+        "fr": "Si vous avez 2 \"Luna Knights\" ou plus accompagnant ce Membre, les dégâts d'Arts augmentent de 50.",
+        "es": "Si \"ルーナイト\" que este Miembro tiene es de 2 o más, el daño de este Arts aumenta en 50."
       }
     },
     "art2": null,
@@ -48140,11 +48485,11 @@
     "effectC": {
       "name": "家にあるもの限界飯",
       "effect": {
-        "zh-TW": "如果自己的主推為「一条莉々華」，且自己的存檔區有2張以上的「限界飯」，從自己的牌組抽2張牌。",
-        "ja": "自分の推しホロメンが「一条莉々華」で、自分のアーカイブに「限界飯」が2枚以上ある場合、自分のデッキからカードを2枚引く。",
-        "en": "If your Oshi is \"一条莉々華\" and you have 2 or more \"限界飯\" in your Archive, draw 2 cards from your Deck.",
-        "fr": "Si votre Oshi est \"Ichijou Ririka\", et que votre Archive contient 2 \"Genkai Meshi\" ou plus, piochez 2 cartes de votre Deck.",
-        "es": "Si tu Oshi es \"Ichijou Ririka\", y tienes 2 o más \"Genkai Meshi\" en tu Archivo, roba 2 cartas de tu mazo."
+        "zh-TW": "如果自己的主推為「一条莉々華」，且自己存檔區的「限界飯」有2張以上，從自己的牌組抽2張牌。",
+        "ja": "自分の推しが「一条莉々華」で、自分のアーカイブの「限界飯」が２枚以上ある場合、自分のデッキから２枚ドローする。",
+        "en": "If your Oshi is \"Ichijou Ririka\" and you have 2 or more \"Genkai Meshi\" in your Archive, draw 2 cards from your Deck.",
+        "fr": "Si votre Oshi est \"Ichijou Ririka\" et que vous avez 2 \"Genkai Meshi\" ou plus dans votre Archive, piochez 2 cartes de votre Deck.",
+        "es": "Si tu Oshi es \"一条莉々華\" y hay 2 o más \"限界飯\" en tu Archivo, roba 2 cartas de tu Mazo."
       }
     },
     "effectB": null,
@@ -48185,11 +48530,11 @@
     "effectC": {
       "name": "家にあるもの限界飯",
       "effect": {
-        "zh-TW": "如果自己的主推為「一条莉々華」，且自己的存檔區有2張以上的「限界飯」，從自己的牌組抽2張牌。",
-        "ja": "自分の推しホロメンが「一条莉々華」で、自分のアーカイブに「限界飯」が2枚以上ある場合、自分のデッキからカードを2枚引く。",
-        "en": "If your Oshi is \"一条莉々華\" and you have 2 or more \"限界飯\" in your Archive, draw 2 cards from your Deck.",
-        "fr": "Si votre Oshi est \"Ichijou Ririka\", et que votre Archive contient 2 \"Genkai Meshi\" ou plus, piochez 2 cartes de votre Deck.",
-        "es": "Si tu Oshi es \"Ichijou Ririka\", y tienes 2 o más \"Genkai Meshi\" en tu Archivo, roba 2 cartas de tu mazo."
+        "zh-TW": "如果自己的主推為「一条莉々華」，且自己存檔區的「限界飯」有2張以上，從自己的牌組抽2張牌。",
+        "ja": "自分の推しが「一条莉々華」で、自分のアーカイブの「限界飯」が２枚以上ある場合、自分のデッキから２枚ドローする。",
+        "en": "If your Oshi is \"Ichijou Ririka\" and you have 2 or more \"Genkai Meshi\" in your Archive, draw 2 cards from your Deck.",
+        "fr": "Si votre Oshi est \"Ichijou Ririka\" et que vous avez 2 \"Genkai Meshi\" ou plus dans votre Archive, piochez 2 cartes de votre Deck.",
+        "es": "Si tu Oshi es \"一条莉々華\" y hay 2 o más \"限界飯\" en tu Archivo, roba 2 cartas de tu Mazo."
       }
     },
     "effectB": null,
@@ -48410,11 +48755,11 @@
       "damage": "20+",
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "如果自己的主推為「ムーナ・ホシノヴァ」，且這個成員有4張以上的吶喊卡，這個藝能傷害+60。",
-        "ja": "自分の推しホロメンが「ムーナ・ホシノヴァ」で、このメンバーが持つ「エール」カードが4枚以上の場合、この「アーツ」のダメージ+60。",
-        "en": "If your Oshi is \"ムーナ・ホシノヴァ\" and this Member has 4 or more Cheer cards, your Arts damage +60.",
-        "fr": "Si votre Oshi est \"Moona Hoshinova\", et que ce membre a 4 cartes d'Encouragement ou plus, les dégâts de cet Arts +60.",
-        "es": "Si tu Oshi es \"Moona Hoshinova\", el daño de este Arts +60 si este Miembro tiene 4 o más cartas Cheer."
+        "zh-TW": "如果自己的主推為「ムーナ・ホシノヴァ」，且這個成員的吶喊卡有4張以上，這個藝能傷害+60。",
+        "ja": "自分の推しが「ムーナ・ホシノヴァ」で、このメンバーのエールカードが４枚以上ある場合、この芸能ダメージ＋６０。",
+        "en": "If your Oshi is \"Moona Hoshinova\" and you have 4 or more Cheer cards of this Member, this Arts damage is increased by 60.",
+        "fr": "Si votre Oshi est \"Moona Hoshinova\" et que vous avez 4 cartes d'encouragement ou plus de ce Membre, les dégâts d'Arts augmentent de 60.",
+        "es": "Si tu Oshi es \"ムーナ・ホシノヴァ\" y hay 4 o más cartas Cheer de este Miembro, el daño de este Arts aumenta en 60."
       }
     },
     "art2": null,
@@ -48462,11 +48807,11 @@
       "damage": "20+",
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "如果自己的主推為「ムーナ・ホシノヴァ」，且這個成員有4張以上的吶喊卡，這個藝能傷害+60。",
-        "ja": "自分の推しホロメンが「ムーナ・ホシノヴァ」で、このメンバーが持つ「エール」カードが4枚以上の場合、この「アーツ」のダメージ+60。",
-        "en": "If your Oshi is \"ムーナ・ホシノヴァ\" and this Member has 4 or more Cheer cards, your Arts damage +60.",
-        "fr": "Si votre Oshi est \"Moona Hoshinova\", et que ce membre a 4 cartes d'Encouragement ou plus, les dégâts de cet Arts +60.",
-        "es": "Si tu Oshi es \"Moona Hoshinova\", el daño de este Arts +60 si este Miembro tiene 4 o más cartas Cheer."
+        "zh-TW": "如果自己的主推為「ムーナ・ホシノヴァ」，且這個成員的吶喊卡有4張以上，這個藝能傷害+60。",
+        "ja": "自分の推しが「ムーナ・ホシノヴァ」で、このメンバーのエールカードが４枚以上ある場合、この芸能ダメージ＋６０。",
+        "en": "If your Oshi is \"Moona Hoshinova\" and you have 4 or more Cheer cards of this Member, this Arts damage is increased by 60.",
+        "fr": "Si votre Oshi est \"Moona Hoshinova\" et que vous avez 4 cartes d'encouragement ou plus de ce Membre, les dégâts d'Arts augmentent de 60.",
+        "es": "Si tu Oshi es \"ムーナ・ホシノヴァ\" y hay 4 o más cartas Cheer de este Miembro, el daño de este Arts aumenta en 60."
       }
     },
     "art2": null,
@@ -48514,11 +48859,11 @@
       "damage": 90,
       "specialAttackImage": "icons/tokkou_50_white.png",
       "effect": {
-        "zh-TW": "如果這個成員有4張以上的吶喊卡，給予對手的中心成員或聯動成員90點特殊傷害。",
-        "ja": "このメンバーにエールカードが４枚以上ある場合、相手のセンターメンバーかコラボメンバーに９０点の特殊ダメージを与える。\n",
-        "en": "If this Member has 4 or more Cheer cards, deal 90 special damage to your opponent's Center Member or Collab Member.",
-        "fr": "Si ce membre a 4 cartes d'encouragement ou plus, infligez 90 dégâts spéciaux au membre du Centre ou au membre Collab de l'adversaire.",
-        "es": "Si este miembro tiene 4 o más cartas de Cheer, inflige 90 de daño especial a los miembros del centro o Collab de tu oponente."
+        "zh-TW": "如果這個成員的吶喊卡有4張以上，給予對手的中心成員或聯動成員90點特殊傷害。",
+        "ja": "このメンバーのエールカードが４枚以上ある場合、相手のセンターメンバーまたはコラボメンバーに９０点の特殊ダメージを与える。",
+        "en": "If you have 4 or more Cheer cards of this Member, deal 90 Special damage to the opponent's Center Member or Collab Member.",
+        "fr": "Si vous avez 4 cartes d'encouragement ou plus de ce Membre, infligez 90 dégâts spéciaux au Membre Centre ou en Collab de votre adversaire.",
+        "es": "Si hay 4 o más cartas Cheer de este Miembro, inflige 90 de daño especial al Miembro Centro o Miembro Collab de tu oponente."
       }
     },
     "art2": null,
@@ -48560,11 +48905,11 @@
       "damage": 90,
       "specialAttackImage": "icons/tokkou_50_white.png",
       "effect": {
-        "zh-TW": "如果這個成員有4張以上的吶喊卡，給予對手的中心成員或聯動成員90點特殊傷害。",
-        "ja": "このメンバーにエールカードが４枚以上ある場合、相手のセンターメンバーかコラボメンバーに９０点の特殊ダメージを与える。\n",
-        "en": "If this Member has 4 or more Cheer cards, deal 90 special damage to your opponent's Center Member or Collab Member.",
-        "fr": "Si ce membre a 4 cartes d'encouragement ou plus, infligez 90 dégâts spéciaux au membre du Centre ou au membre Collab de l'adversaire.",
-        "es": "Si este miembro tiene 4 o más cartas de Cheer, inflige 90 de daño especial a los miembros del centro o Collab de tu oponente."
+        "zh-TW": "如果這個成員的吶喊卡有4張以上，給予對手的中心成員或聯動成員90點特殊傷害。",
+        "ja": "このメンバーのエールカードが４枚以上ある場合、相手のセンターメンバーまたはコラボメンバーに９０点の特殊ダメージを与える。",
+        "en": "If you have 4 or more Cheer cards of this Member, deal 90 Special damage to the opponent's Center Member or Collab Member.",
+        "fr": "Si vous avez 4 cartes d'encouragement ou plus de ce Membre, infligez 90 dégâts spéciaux au Membre Centre ou en Collab de votre adversaire.",
+        "es": "Si hay 4 o más cartas Cheer de este Miembro, inflige 90 de daño especial al Miembro Centro o Miembro Collab de tu oponente."
       }
     },
     "art2": null,
@@ -48606,11 +48951,11 @@
       "damage": 90,
       "specialAttackImage": "icons/tokkou_50_white.png",
       "effect": {
-        "zh-TW": "如果這個成員有4張以上的吶喊卡，給予對手的中心成員或聯動成員90點特殊傷害。",
-        "ja": "このメンバーにエールカードが４枚以上ある場合、相手のセンターメンバーかコラボメンバーに９０点の特殊ダメージを与える。\n",
-        "en": "If this Member has 4 or more Cheer cards, deal 90 special damage to your opponent's Center Member or Collab Member.",
-        "fr": "Si ce membre a 4 cartes d'encouragement ou plus, infligez 90 dégâts spéciaux au membre du Centre ou au membre Collab de l'adversaire.",
-        "es": "Si este miembro tiene 4 o más cartas de Cheer, inflige 90 de daño especial a los miembros del centro o Collab de tu oponente."
+        "zh-TW": "如果這個成員的吶喊卡有4張以上，給予對手的中心成員或聯動成員90點特殊傷害。",
+        "ja": "このメンバーのエールカードが４枚以上ある場合、相手のセンターメンバーまたはコラボメンバーに９０点の特殊ダメージを与える。",
+        "en": "If you have 4 or more Cheer cards of this Member, deal 90 Special damage to the opponent's Center Member or Collab Member.",
+        "fr": "Si vous avez 4 cartes d'encouragement ou plus de ce Membre, infligez 90 dégâts spéciaux au Membre Centre ou en Collab de votre adversaire.",
+        "es": "Si hay 4 o más cartas Cheer de este Miembro, inflige 90 de daño especial al Miembro Centro o Miembro Collab de tu oponente."
       }
     },
     "art2": null,
@@ -48635,11 +48980,11 @@
     "effectB": {
       "name": "有言実行！！",
       "effect": {
-        "zh-TW": "如果這個成員帶有「雪民」，給予對手的中心成員20點特殊傷害。之後，從自己的牌組抽1張牌。如果這個成員帶有3張以上的「雪民」，則從自己的牌組抽2張牌。",
-        "ja": "このメンバーに「雪民」が付いている場合、相手のセンターメンバーに２０点の特殊ダメージを与える。その後、自分のデッキからカードを１枚引く。このメンバーに「雪民」が３枚以上付いている場合、デッキからカードを２枚引く。\n",
-        "en": "If this Member has \"Yukimin\" attached, deal 20 special damage to your opponent's Center Member. Then, draw 1 card from your Deck. If this Member has 3 or more \"Yukimin\" attached, draw 2 cards from your Deck.",
-        "fr": "Si ce membre a « 雪民 », infligez 20 dégâts spéciaux au membre du Centre de l'adversaire. Ensuite, piochez 1 carte de votre Deck. Si ce membre a 3 cartes « 雪民 » ou plus, piochez 2 cartes de votre Deck.",
-        "es": "Si este miembro tiene \"雪民\", inflige 20 de daño especial al miembro del centro de tu oponente. Luego, roba 1 carta de tu Mazo. Si este miembro tiene 3 o más \"雪民\", roba 2 cartas de tu Mazo."
+        "zh-TW": "如果這個成員帶有「雪民」，給予對手的中心成員20點特殊傷害。之後，從自己的牌組抽1張牌。如果這個成員帶有的「雪民」在3張以上，則從自己的牌組抽2張牌。",
+        "ja": "このメンバーが「雪民」を帯びている場合、相手のセンターメンバーに２０点の特殊ダメージを与える。その後、自分のデッキから１枚ドローする。このメンバーが帯びている「雪民」が３枚以上ある場合、自分のデッキから２枚ドローする。",
+        "en": "If this Member has \"Yukimin\", deal 20 Special damage to the opponent's Center Member. Then, draw 1 card from your Deck. If you have 3 or more \"Yukimin\" attached to this Member, draw 2 cards from your Deck.",
+        "fr": "Si ce Membre est accompagné de \"Yukimin\", infligez 20 dégâts spéciaux au Membre Centre de votre adversaire. Ensuite, piochez 1 carte de votre Deck. Si vous avez 3 \"Yukimin\" ou plus accompagnant ce Membre, piochez 2 cartes de votre Deck.",
+        "es": "Si este Miembro tiene \"雪民\", inflige 20 de daño especial al Miembro Centro de tu oponente. Después, roba 1 carta de tu Mazo. Si \"雪民\" que este Miembro tiene es de 3 o más, roba 2 cartas de tu Mazo."
       }
     },
     "effectG": null,
@@ -48682,11 +49027,11 @@
     "effectB": {
       "name": "有言実行！！",
       "effect": {
-        "zh-TW": "如果這個成員帶有「雪民」，給予對手的中心成員20點特殊傷害。之後，從自己的牌組抽1張牌。如果這個成員帶有3張以上的「雪民」，則從自己的牌組抽2張牌。",
-        "ja": "このメンバーに「雪民」が付いている場合、相手のセンターメンバーに２０点の特殊ダメージを与える。その後、自分のデッキからカードを１枚引く。このメンバーに「雪民」が３枚以上付いている場合、デッキからカードを２枚引く。\n",
-        "en": "If this Member has \"Yukimin\" attached, deal 20 special damage to your opponent's Center Member. Then, draw 1 card from your Deck. If this Member has 3 or more \"Yukimin\" attached, draw 2 cards from your Deck.",
-        "fr": "Si ce membre a « 雪民 », infligez 20 dégâts spéciaux au membre du Centre de l'adversaire. Ensuite, piochez 1 carte de votre Deck. Si ce membre a 3 cartes « 雪民 » ou plus, piochez 2 cartes de votre Deck.",
-        "es": "Si este miembro tiene \"雪民\", inflige 20 de daño especial al miembro del centro de tu oponente. Luego, roba 1 carta de tu Mazo. Si este miembro tiene 3 o más \"雪民\", roba 2 cartas de tu Mazo."
+        "zh-TW": "如果這個成員帶有「雪民」，給予對手的中心成員20點特殊傷害。之後，從自己的牌組抽1張牌。如果這個成員帶有的「雪民」在3張以上，則從自己的牌組抽2張牌。",
+        "ja": "このメンバーが「雪民」を帯びている場合、相手のセンターメンバーに２０点の特殊ダメージを与える。その後、自分のデッキから１枚ドローする。このメンバーが帯びている「雪民」が３枚以上ある場合、自分のデッキから２枚ドローする。",
+        "en": "If this Member has \"Yukimin\", deal 20 Special damage to the opponent's Center Member. Then, draw 1 card from your Deck. If you have 3 or more \"Yukimin\" attached to this Member, draw 2 cards from your Deck.",
+        "fr": "Si ce Membre est accompagné de \"Yukimin\", infligez 20 dégâts spéciaux au Membre Centre de votre adversaire. Ensuite, piochez 1 carte de votre Deck. Si vous avez 3 \"Yukimin\" ou plus accompagnant ce Membre, piochez 2 cartes de votre Deck.",
+        "es": "Si este Miembro tiene \"雪民\", inflige 20 de daño especial al Miembro Centro de tu oponente. Después, roba 1 carta de tu Mazo. Si \"雪民\" que este Miembro tiene es de 3 o más, roba 2 cartas de tu Mazo."
       }
     },
     "effectG": null,
@@ -49139,6 +49484,46 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP06/hBP06-059_SR.png"
   },
   {
+    "image": "cardListImages/hCO03/hBP06-059_SR.png",
+    "name": "森カリオペ",
+    "type": "成員",
+    "tag": "#EN / #Myth / #歌",
+    "product": "エクストリーマーカップ25-26 Final オフィシャルホロカコレクションB",
+    "color": "藍",
+    "hp": 160,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": {
+      "name": "お泊りパーリナイ!",
+      "effect": {
+        "zh-TW": "如果自己的舞台上有3位以上標示#EN的成員，從自己的吶喊牌組展示1張藍色吶喊卡或紫色吶喊卡，發送給自己的成員。將吶喊牌組重新洗牌。",
+        "ja": "自分のステージに「EN」を持つメンバーが３人以上いる場合、自分のエールデッキから青のエールカードか紫のエールカードを１枚見せ、自分のメンバーに送る。エールデッキをシャッフルする。\n",
+        "en": "If you have 3 or more Members with #EN on your Stage, reveal 1 blue Cheer card or purple Cheer card from your Cheer Deck and send it to your Member. Shuffle your Cheer Deck.",
+        "fr": "Si 3 membres ou plus de #EN sont sur votre Scène, montrez 1 carte d'Encouragement bleue ou violette de votre Deck d'encouragement et envoyez-la à votre membre. Mélangez votre Deck d'encouragement.",
+        "es": "Si hay 3 o más miembros con la etiqueta #EN en tu Escenario, muestra 1 carta de Cheer azul o morada de tu Mazo Cheer y envíala a uno de tus miembros. Baraja tu Mazo Cheer."
+      }
+    },
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_null.png",
+        "icons/arts_null.png",
+        "icons/arts_null.png"
+      ],
+      "name": "まどろみの中で",
+      "damage": 80,
+      "specialAttackImage": null,
+      "effect": null
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP06-059",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCO03/hBP06-059_SR.png"
+  },
+  {
     "image": "cardListImages/hBP06/hBP06-060_RR.png",
     "name": "森カリオペ",
     "type": "成員",
@@ -49180,11 +49565,11 @@
       "damage": "200+",
       "specialAttackImage": "icons/tokkou_50_red.png",
       "effect": {
-        "zh-TW": "這個回合中，自己舞台上1位標示#Myth的成員藝能傷害+20。之後，如果自己的主推為「森カリオペ」，且自己的存檔區有8張以上的成員，可以從自己的牌組抽1張牌。",
-        "ja": "このターン中、自分のステージにいる#Mythの表記があるメンバー1体のアーツダメージ+20。さらに、自分の推しが「森カリオペ」で、自分のアーカイブに8枚以上のメンバーがいる場合、自分のデッキからカードを1枚引くことができる。",
-        "en": "During this turn, 1 Member with #Myth on your Stage's Arts damage +20. Then, if your Oshi is \"森カリオペ\", and you have 8 or more cards in your Archive, draw 1 card from your Deck.",
-        "fr": "Durant ce tour, les dégâts d'Arts d'un Membre marqué #Myth sur votre Scène +20. Ensuite, si votre Oshi est \"森カリオペ\" et que vous avez 8 Membres ou plus dans votre Archive, piochez 1 carte de votre Deck.",
-        "es": "Durante este turno, el daño de Arts de 1 Miembro #Myth en tu Escenario +20. Luego, si tu Oshi es \"森カリオペ\" y tienes 8 o más Miembros en tu Archivo, roba 1 carta de tu Mazo."
+        "zh-TW": "這個回合中，自己舞台上1位標示#Myth的成員藝能傷害+20。之後，如果自己的主推為「森カリオペ」，且自己存檔區的成員有8張以上，可以從自己的牌組抽1張牌。",
+        "ja": "このターン中、自分のステージにいる#Mythと表示されているメンバー１人の芸能ダメージ＋２０。その後、自分の推しが「森カリオペ」で、自分のアーカイブのメンバーが８枚以上ある場合、自分のデッキから１枚ドローできる。",
+        "en": "Arts damage dealt by 1 #Myth Member on your Stage is increased by 20 this turn. Then, if your Oshi is \"Mori Calliope\" and you have 8 or more Members in your Archive, you may draw 1 card from your Deck.",
+        "fr": "Pendant ce tour, les dégâts d'Arts d'un Membre marqué #Myth sur votre Scène augmentent de 20. Ensuite, si votre Oshi est \"Mori Calliope\" et que vous avez 8 Membres ou plus dans votre Archive, vous pouvez piocher 1 carte de votre Deck.",
+        "es": "El daño de Arts de 1 Miembro marcado como #Myth en tu Escenario aumenta en 20 durante este turno. Después, si tu Oshi es \"森カリオペ\" y hay 8 o más Miembros en tu Archivo, puedes robar 1 carta de tu Mazo."
       }
     },
     "extra": null,
@@ -49233,11 +49618,11 @@
       "damage": "200+",
       "specialAttackImage": "icons/tokkou_50_red.png",
       "effect": {
-        "zh-TW": "這個回合中，自己舞台上1位標示#Myth的成員藝能傷害+20。之後，如果自己的主推為「森カリオペ」，且自己的存檔區有8張以上的成員，可以從自己的牌組抽1張牌。",
-        "ja": "このターン中、自分のステージにいる#Mythの表記があるメンバー1体のアーツダメージ+20。さらに、自分の推しが「森カリオペ」で、自分のアーカイブに8枚以上のメンバーがいる場合、自分のデッキからカードを1枚引くことができる。",
-        "en": "During this turn, 1 Member with #Myth on your Stage's Arts damage +20. Then, if your Oshi is \"森カリオペ\", and you have 8 or more cards in your Archive, draw 1 card from your Deck.",
-        "fr": "Durant ce tour, les dégâts d'Arts d'un Membre marqué #Myth sur votre Scène +20. Ensuite, si votre Oshi est \"森カリオペ\" et que vous avez 8 Membres ou plus dans votre Archive, piochez 1 carte de votre Deck.",
-        "es": "Durante este turno, el daño de Arts de 1 Miembro #Myth en tu Escenario +20. Luego, si tu Oshi es \"森カリオペ\" y tienes 8 o más Miembros en tu Archivo, roba 1 carta de tu Mazo."
+        "zh-TW": "這個回合中，自己舞台上1位標示#Myth的成員藝能傷害+20。之後，如果自己的主推為「森カリオペ」，且自己存檔區的成員有8張以上，可以從自己的牌組抽1張牌。",
+        "ja": "このターン中、自分のステージにいる#Mythと表示されているメンバー１人の芸能ダメージ＋２０。その後、自分の推しが「森カリオペ」で、自分のアーカイブのメンバーが８枚以上ある場合、自分のデッキから１枚ドローできる。",
+        "en": "Arts damage dealt by 1 #Myth Member on your Stage is increased by 20 this turn. Then, if your Oshi is \"Mori Calliope\" and you have 8 or more Members in your Archive, you may draw 1 card from your Deck.",
+        "fr": "Pendant ce tour, les dégâts d'Arts d'un Membre marqué #Myth sur votre Scène augmentent de 20. Ensuite, si votre Oshi est \"Mori Calliope\" et que vous avez 8 Membres ou plus dans votre Archive, vous pouvez piocher 1 carte de votre Deck.",
+        "es": "El daño de Arts de 1 Miembro marcado como #Myth en tu Escenario aumenta en 20 durante este turno. Después, si tu Oshi es \"森カリオペ\" y hay 8 o más Miembros en tu Archivo, puedes robar 1 carta de tu Mazo."
       }
     },
     "extra": null,
@@ -49286,11 +49671,11 @@
       "damage": "200+",
       "specialAttackImage": "icons/tokkou_50_red.png",
       "effect": {
-        "zh-TW": "這個回合中，自己舞台上1位標示#Myth的成員藝能傷害+20。之後，如果自己的主推為「森カリオペ」，且自己的存檔區有8張以上的成員，可以從自己的牌組抽1張牌。",
-        "ja": "このターン中、自分のステージにいる#Mythの表記があるメンバー1体のアーツダメージ+20。さらに、自分の推しが「森カリオペ」で、自分のアーカイブに8枚以上のメンバーがいる場合、自分のデッキからカードを1枚引くことができる。",
-        "en": "During this turn, 1 Member with #Myth on your Stage's Arts damage +20. Then, if your Oshi is \"森カリオペ\", and you have 8 or more cards in your Archive, draw 1 card from your Deck.",
-        "fr": "Durant ce tour, les dégâts d'Arts d'un Membre marqué #Myth sur votre Scène +20. Ensuite, si votre Oshi est \"森カリオペ\" et que vous avez 8 Membres ou plus dans votre Archive, piochez 1 carte de votre Deck.",
-        "es": "Durante este turno, el daño de Arts de 1 Miembro #Myth en tu Escenario +20. Luego, si tu Oshi es \"森カリオペ\" y tienes 8 o más Miembros en tu Archivo, roba 1 carta de tu Mazo."
+        "zh-TW": "這個回合中，自己舞台上1位標示#Myth的成員藝能傷害+20。之後，如果自己的主推為「森カリオペ」，且自己存檔區的成員有8張以上，可以從自己的牌組抽1張牌。",
+        "ja": "このターン中、自分のステージにいる#Mythと表示されているメンバー１人の芸能ダメージ＋２０。その後、自分の推しが「森カリオペ」で、自分のアーカイブのメンバーが８枚以上ある場合、自分のデッキから１枚ドローできる。",
+        "en": "Arts damage dealt by 1 #Myth Member on your Stage is increased by 20 this turn. Then, if your Oshi is \"Mori Calliope\" and you have 8 or more Members in your Archive, you may draw 1 card from your Deck.",
+        "fr": "Pendant ce tour, les dégâts d'Arts d'un Membre marqué #Myth sur votre Scène augmentent de 20. Ensuite, si votre Oshi est \"Mori Calliope\" et que vous avez 8 Membres ou plus dans votre Archive, vous pouvez piocher 1 carte de votre Deck.",
+        "es": "El daño de Arts de 1 Miembro marcado como #Myth en tu Escenario aumenta en 20 durante este turno. Después, si tu Oshi es \"森カリオペ\" y hay 8 o más Miembros en tu Archivo, puedes robar 1 carta de tu Mazo."
       }
     },
     "extra": null,
@@ -49593,11 +49978,11 @@
       "damage": 160,
       "specialAttackImage": "icons/tokkou_50_yellow.png",
       "effect": {
-        "zh-TW": "如果這個成員帶有3張以上的「ろぼさー」，給予對手的中心成員或聯動成員70點特殊傷害。",
-        "ja": "このメンバーに「ろぼさー」が３枚以上付いている場合、相手のセンターメンバーかコラボメンバーに７０点の特殊ダメージを与える。\n",
-        "en": "If this Member has 3 or more \"Robo-sa\" attached, deal 70 special damage to your opponent's Center Member or Collab Member.",
-        "fr": "Si ce membre a 3 cartes « ろぼさー » ou plus, infligez 70 dégâts spéciaux au membre du Centre ou au membre Collab de l'adversaire.",
-        "es": "Si este miembro tiene 3 o más \"ろぼさー\", inflige 70 de daño especial a los miembros del centro o Collab de tu oponente."
+        "zh-TW": "如果這個成員帶有的「ろぼさー」在3張以上，給予對手的中心成員或聯動成員70點特殊傷害。",
+        "ja": "このメンバーが帯びている「ろぼさー」が３枚以上ある場合、相手のセンターメンバーまたはコラボメンバーに７０点の特殊ダメージを与える。",
+        "en": "If you have 3 or more \"Robosa\" attached to this Member, deal 70 Special damage to the opponent's Center Member or Collab Member.",
+        "fr": "Si vous avez 3 \"Robosa\" ou plus accompagnant ce Membre, infligez 70 dégâts spéciaux au Membre Centre ou en Collab de votre adversaire.",
+        "es": "Si \"ろぼさー\" que este Miembro tiene es de 3 o más, inflige 70 de daño especial al Miembro Centro o Miembro Collab de tu oponente."
       }
     },
     "art2": null,
@@ -49640,11 +50025,11 @@
       "damage": 160,
       "specialAttackImage": "icons/tokkou_50_yellow.png",
       "effect": {
-        "zh-TW": "如果這個成員帶有3張以上的「ろぼさー」，給予對手的中心成員或聯動成員70點特殊傷害。",
-        "ja": "このメンバーに「ろぼさー」が３枚以上付いている場合、相手のセンターメンバーかコラボメンバーに７０点の特殊ダメージを与える。\n",
-        "en": "If this Member has 3 or more \"Robo-sa\" attached, deal 70 special damage to your opponent's Center Member or Collab Member.",
-        "fr": "Si ce membre a 3 cartes « ろぼさー » ou plus, infligez 70 dégâts spéciaux au membre du Centre ou au membre Collab de l'adversaire.",
-        "es": "Si este miembro tiene 3 o más \"ろぼさー\", inflige 70 de daño especial a los miembros del centro o Collab de tu oponente."
+        "zh-TW": "如果這個成員帶有的「ろぼさー」在3張以上，給予對手的中心成員或聯動成員70點特殊傷害。",
+        "ja": "このメンバーが帯びている「ろぼさー」が３枚以上ある場合、相手のセンターメンバーまたはコラボメンバーに７０点の特殊ダメージを与える。",
+        "en": "If you have 3 or more \"Robosa\" attached to this Member, deal 70 Special damage to the opponent's Center Member or Collab Member.",
+        "fr": "Si vous avez 3 \"Robosa\" ou plus accompagnant ce Membre, infligez 70 dégâts spéciaux au Membre Centre ou en Collab de votre adversaire.",
+        "es": "Si \"ろぼさー\" que este Miembro tiene es de 3 o más, inflige 70 de daño especial al Miembro Centro o Miembro Collab de tu oponente."
       }
     },
     "art2": null,
@@ -49687,11 +50072,11 @@
       "damage": 160,
       "specialAttackImage": "icons/tokkou_50_yellow.png",
       "effect": {
-        "zh-TW": "如果這個成員帶有3張以上的「ろぼさー」，給予對手的中心成員或聯動成員70點特殊傷害。",
-        "ja": "このメンバーに「ろぼさー」が３枚以上付いている場合、相手のセンターメンバーかコラボメンバーに７０点の特殊ダメージを与える。\n",
-        "en": "If this Member has 3 or more \"Robo-sa\" attached, deal 70 special damage to your opponent's Center Member or Collab Member.",
-        "fr": "Si ce membre a 3 cartes « ろぼさー » ou plus, infligez 70 dégâts spéciaux au membre du Centre ou au membre Collab de l'adversaire.",
-        "es": "Si este miembro tiene 3 o más \"ろぼさー\", inflige 70 de daño especial a los miembros del centro o Collab de tu oponente."
+        "zh-TW": "如果這個成員帶有的「ろぼさー」在3張以上，給予對手的中心成員或聯動成員70點特殊傷害。",
+        "ja": "このメンバーが帯びている「ろぼさー」が３枚以上ある場合、相手のセンターメンバーまたはコラボメンバーに７０点の特殊ダメージを与える。",
+        "en": "If you have 3 or more \"Robosa\" attached to this Member, deal 70 Special damage to the opponent's Center Member or Collab Member.",
+        "fr": "Si vous avez 3 \"Robosa\" ou plus accompagnant ce Membre, infligez 70 dégâts spéciaux au Membre Centre ou en Collab de votre adversaire.",
+        "es": "Si \"ろぼさー\" que este Miembro tiene es de 3 o más, inflige 70 de daño especial al Miembro Centro o Miembro Collab de tu oponente."
       }
     },
     "art2": null,
@@ -52289,11 +52674,11 @@
       "damage": 70,
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "如果這個成員有2張以上的白色吶喊卡，這個藝能需要的無色吶喊卡數量-1。",
-        "ja": "このメンバーに白のエールカードが２枚以上ある場合、このアーツに必要な無色エールカードの枚数－１。\n",
-        "en": "If this Member has 2 or more white Cheer cards, the number of colorless Cheer cards required for this Arts -1.",
-        "fr": "Si ce membre a 2 cartes d'encouragement blanches ou plus, le nombre de cartes d'encouragement incolores nécessaires pour cet Arts -1.",
-        "es": "Si este miembro tiene 2 o más cartas de Cheer blancas, la cantidad de cartas de Cheer incoloras necesarias para este Arts -1."
+        "zh-TW": "如果這個成員的白色吶喊卡有2張以上，這個藝能需要的無色吶喊卡數量-1。",
+        "ja": "このメンバーの白のエールカードが２枚以上ある場合、この芸能に必要な無色のエールカードの枚数－１。",
+        "en": "If you have 2 or more white Cheer cards of this Member, the number of colorless Cheer cards required for this Arts is reduced by 1.",
+        "fr": "Si vous avez 2 cartes d'encouragement blanches ou plus de ce Membre, le nombre de cartes d'encouragement incolores nécessaires pour cet Art est réduit de 1.",
+        "es": "Si hay 2 o más cartas Cheer blancas de este Miembro, la cantidad de cartas Cheer incoloras necesarias para este Arts se reduce en 1."
       }
     },
     "art2": null,
@@ -52405,11 +52790,11 @@
     "effectC": {
       "name": "はばないすでーい！！！",
       "effect": {
-        "zh-TW": "這個回合中，自己舞台上所有的「角巻わため」藝能傷害+20。之後，如果自己的中心成員有6張以上的吶喊卡，從自己的牌組抽2張牌。",
-        "ja": "このターン中、自分のステージにいる全ての「角巻わため」のアーツダメージ+20。その後、自分のセンターメンバーのエールカードが6枚以上ある場合、自分のデッキからカードを2枚引く。",
-        "en": "During this turn, all \"角巻わため\" on your Stage's Arts damage +20. Then, if your Center Member has 6 or more Cheer cards, draw 2 cards from your Deck.",
-        "fr": "Durant ce tour, tous les Arts de vos \"角巻わため\" sur la Scène infligent +20 dégâts. Ensuite, si votre membre Centre a 6 cartes d'Encouragement ou plus, piochez 2 cartes de votre Deck.",
-        "es": "Durante este turno, el daño de Arts de todos los \"角巻わため\" en tu Escenario +20. Luego, si tu Miembro del Centro tiene 6 o más cartas de Cheer, roba 2 cartas de tu Mazo."
+        "zh-TW": "這個回合中，自己舞台上所有的「角巻わため」藝能傷害+20。之後，如果自己中心成員的吶喊卡有6張以上，從自己的牌組抽2張牌。",
+        "ja": "このターン中、自分のステージにいる全ての「角巻わため」の芸能ダメージ＋２０。その後、自分のセンターメンバーのエールカードが６枚以上ある場合、自分のデッキから２枚ドローする。",
+        "en": "All \"Tsunomaki Watame\" on your Stage gain 20 Arts damage this turn. Then, if your Center Member has 6 or more Cheer cards, draw 2 cards from your Deck.",
+        "fr": "Pendant ce tour, les dégâts d'Arts de tous vos \"Tsunomaki Watame\" sur votre Scène augmentent de 20. Ensuite, si vous avez 6 cartes d'encouragement ou plus pour votre Membre Centre, piochez 2 cartes de votre Deck.",
+        "es": "El daño de Arts de todos los \"角巻わため\" en tu Escenario aumenta en 20 durante este turno. Después, si hay 6 o más cartas Cheer en tu Miembro Centro, roba 2 cartas de tu Mazo."
       }
     },
     "effectB": null,
@@ -56129,11 +56514,11 @@
       "damage": 50,
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "自己的存檔區有4張以上的支援卡才能使用這個藝能。",
-        "ja": "自分のアーカイブに4枚以上のサポートカードがある場合のみ使用できるこのArts。",
-        "en": "Usable only if you have 4 or more Support Cards in your Archive.\n",
-        "fr": "Utilisable uniquement si vous avez 4 cartes de Support ou plus dans votre Archive.",
-        "es": "Solo puedes usar este Arts si tienes 4 o más cartas de Soporte en tu Archivo."
+        "zh-TW": "自己存檔區的支援卡有4張以上才能使用這個藝能。",
+        "ja": "自分のアーカイブのサポートカードが４枚以上ある場合、この芸能を使用できる。",
+        "en": "You can only use this Arts if you have 4 or more Support cards in your Archive.",
+        "fr": "Vous ne pouvez utiliser cet Art que si vous avez 4 Supports ou plus dans votre Archive.",
+        "es": "Solo puedes usar este Arts si hay 4 o más cartas de Soporte en tu Archivo."
       }
     },
     "extra": null,
@@ -56261,11 +56646,11 @@
       "damage": "60+",
       "specialAttackImage": "icons/tokkou_50_red.png",
       "effect": {
-        "zh-TW": "將自己存檔區的1張吶喊卡發送給自己標示#Advent的成員。之後，如果自己的主推為「シオリ・ノヴェラ」，且這個成員有4張以上的吶喊卡，這個藝能傷害+100。",
-        "ja": "自分のアーカイブからチアカードを1枚、#Adventを持つ自分のメンバーに送る。その後、自分の推しが「シオリ・ノヴェラ」で、このメンバーがチアカードを4枚以上持っている場合、このアーツのダメージ+100。\n",
-        "en": "Send 1 Cheer card from your Archive to your Member marked #Advent. Then, if your Oshi is \"Shiori Novella\" and this Member has 4 or more Cheer cards, this Arts damage +100.",
-        "fr": "Envoyez 1 carte d'encouragement de votre archive à votre membre marqué #Advent. Ensuite, si votre Oshi est « シオリ・ノヴェラ » et que ce membre a 4 cartes d'encouragement ou plus, les dégâts de cet Arts +100.",
-        "es": "Envía 1 carta Cheer de tu Archivo a un Miembro tuyo con la etiqueta #Advent. Después, si tu Oshi es \"シオリ・ノヴェラ\" y este Miembro tiene 4 o más cartas Cheer, el daño de este Arts +100."
+        "zh-TW": "將自己存檔區的1張吶喊卡發送給自己標示#Advent的成員。之後，如果自己的主推為「シオリ・ノヴェラ」，且這個成員的吶喊卡有4張以上，這個藝能傷害+100。",
+        "ja": "自分のアーカイブからエールカード１枚を自分の#Adventと表示されているメンバーに送る。その後、自分の推しが「シオリ・ノヴェラ」で、このメンバーのエールカードが４枚以上ある場合、この芸能ダメージ＋１００。",
+        "en": "Send 1 Cheer card from your Archive to your Member marked with #Advent. Then, if your Oshi is \"Shiori Novella\" and you have 4 or more Cheer cards of this Member, this Arts damage is increased by 100.",
+        "fr": "Envoyez 1 carte d'encouragement de votre Archive au Membre que vous avez marqué comme #Advent. Ensuite, si votre Oshi est \"Shiori Novella\" et que vous avez 4 cartes d'encouragement ou plus de ce Membre, les dégâts d'Arts augmentent de 100.",
+        "es": "Envía 1 carta Cheer de tu Archivo a tu Miembro marcado como #Advent. Después, si tu Oshi es \"シオリ・ノヴェラ\" y hay 4 o más cartas Cheer de este Miembro, el daño de este Arts aumenta en 100."
       }
     },
     "art2": null,
@@ -56306,11 +56691,11 @@
       "damage": "60+",
       "specialAttackImage": "icons/tokkou_50_red.png",
       "effect": {
-        "zh-TW": "將自己存檔區的1張吶喊卡發送給自己標示#Advent的成員。之後，如果自己的主推為「シオリ・ノヴェラ」，且這個成員有4張以上的吶喊卡，這個藝能傷害+100。",
-        "ja": "自分のアーカイブからチアカードを1枚、#Adventを持つ自分のメンバーに送る。その後、自分の推しが「シオリ・ノヴェラ」で、このメンバーがチアカードを4枚以上持っている場合、このアーツのダメージ+100。\n",
-        "en": "Send 1 Cheer card from your Archive to your Member marked #Advent. Then, if your Oshi is \"Shiori Novella\" and this Member has 4 or more Cheer cards, this Arts damage +100.",
-        "fr": "Envoyez 1 carte d'encouragement de votre archive à votre membre marqué #Advent. Ensuite, si votre Oshi est « シオリ・ノヴェラ » et que ce membre a 4 cartes d'encouragement ou plus, les dégâts de cet Arts +100.",
-        "es": "Envía 1 carta Cheer de tu Archivo a un Miembro tuyo con la etiqueta #Advent. Después, si tu Oshi es \"シオリ・ノヴェラ\" y este Miembro tiene 4 o más cartas Cheer, el daño de este Arts +100."
+        "zh-TW": "將自己存檔區的1張吶喊卡發送給自己標示#Advent的成員。之後，如果自己的主推為「シオリ・ノヴェラ」，且這個成員的吶喊卡有4張以上，這個藝能傷害+100。",
+        "ja": "自分のアーカイブからエールカード１枚を自分の#Adventと表示されているメンバーに送る。その後、自分の推しが「シオリ・ノヴェラ」で、このメンバーのエールカードが４枚以上ある場合、この芸能ダメージ＋１００。",
+        "en": "Send 1 Cheer card from your Archive to your Member marked with #Advent. Then, if your Oshi is \"Shiori Novella\" and you have 4 or more Cheer cards of this Member, this Arts damage is increased by 100.",
+        "fr": "Envoyez 1 carte d'encouragement de votre Archive au Membre que vous avez marqué comme #Advent. Ensuite, si votre Oshi est \"Shiori Novella\" et que vous avez 4 cartes d'encouragement ou plus de ce Membre, les dégâts d'Arts augmentent de 100.",
+        "es": "Envía 1 carta Cheer de tu Archivo a tu Miembro marcado como #Advent. Después, si tu Oshi es \"シオリ・ノヴェラ\" y hay 4 o más cartas Cheer de este Miembro, el daño de este Arts aumenta en 100."
       }
     },
     "art2": null,
@@ -56351,11 +56736,11 @@
       "damage": "60+",
       "specialAttackImage": "icons/tokkou_50_red.png",
       "effect": {
-        "zh-TW": "將自己存檔區的1張吶喊卡發送給自己標示#Advent的成員。之後，如果自己的主推為「シオリ・ノヴェラ」，且這個成員有4張以上的吶喊卡，這個藝能傷害+100。",
-        "ja": "自分のアーカイブからチアカードを1枚、#Adventを持つ自分のメンバーに送る。その後、自分の推しが「シオリ・ノヴェラ」で、このメンバーがチアカードを4枚以上持っている場合、このアーツのダメージ+100。\n",
-        "en": "Send 1 Cheer card from your Archive to your Member marked #Advent. Then, if your Oshi is \"Shiori Novella\" and this Member has 4 or more Cheer cards, this Arts damage +100.",
-        "fr": "Envoyez 1 carte d'encouragement de votre archive à votre membre marqué #Advent. Ensuite, si votre Oshi est « シオリ・ノヴェラ » et que ce membre a 4 cartes d'encouragement ou plus, les dégâts de cet Arts +100.",
-        "es": "Envía 1 carta Cheer de tu Archivo a un Miembro tuyo con la etiqueta #Advent. Después, si tu Oshi es \"シオリ・ノヴェラ\" y este Miembro tiene 4 o más cartas Cheer, el daño de este Arts +100."
+        "zh-TW": "將自己存檔區的1張吶喊卡發送給自己標示#Advent的成員。之後，如果自己的主推為「シオリ・ノヴェラ」，且這個成員的吶喊卡有4張以上，這個藝能傷害+100。",
+        "ja": "自分のアーカイブからエールカード１枚を自分の#Adventと表示されているメンバーに送る。その後、自分の推しが「シオリ・ノヴェラ」で、このメンバーのエールカードが４枚以上ある場合、この芸能ダメージ＋１００。",
+        "en": "Send 1 Cheer card from your Archive to your Member marked with #Advent. Then, if your Oshi is \"Shiori Novella\" and you have 4 or more Cheer cards of this Member, this Arts damage is increased by 100.",
+        "fr": "Envoyez 1 carte d'encouragement de votre Archive au Membre que vous avez marqué comme #Advent. Ensuite, si votre Oshi est \"Shiori Novella\" et que vous avez 4 cartes d'encouragement ou plus de ce Membre, les dégâts d'Arts augmentent de 100.",
+        "es": "Envía 1 carta Cheer de tu Archivo a tu Miembro marcado como #Advent. Después, si tu Oshi es \"シオリ・ノヴェラ\" y hay 4 o más cartas Cheer de este Miembro, el daño de este Arts aumenta en 100."
       }
     },
     "art2": null,
@@ -57227,6 +57612,45 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP07/hBP07-072_U.png"
   },
   {
+    "image": "cardListImages/hCO03/hBP07-072_SR.png",
+    "name": "ラプラス・ダークネス",
+    "type": "成員",
+    "tag": "#JP / #秘密結社holoX / #シューター",
+    "product": "エクストリーマーカップ25-26 Final オフィシャルホロカコレクションB",
+    "color": "紫",
+    "hp": 150,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": {
+      "name": "Secret Love -La+-",
+      "effect": {
+        "zh-TW": "選擇自己舞台上1位標示#秘密結社holoX的成員，擲3次骰子。這個回合中，因這個效果每出現1次奇數，剛才選擇的成員藝能傷害+10。",
+        "ja": "自分のステージの#秘密結社holoXのメンバー1人を選び、ダイスを3回振る。このターン中、この効果で奇数が1回出るごとに、先ほど選んだメンバーのアーツダメージ+10。\n",
+        "en": "Choose 1 Member you control designated as #Secret Society hololive DEV_IS. Roll the dice 3 times. During this turn, for each odd result that occurs due to this effect, the chosen Member's Arts deals 10 additional damage.\n",
+        "fr": "Choisissez 1 de vos membres marqué #秘密結社holoX sur votre Scène et lancez 3 dés. Pendant ce tour, pour chaque résultat impair obtenu avec cet effet, les dégâts d'Arts du membre choisi précédemment +10.",
+        "es": "Selecciona 1 Miembro con la etiqueta #Secret_Society_holoX en tu Escenario y lanza 3 dados. Durante este turno, por cada número impar que salga como resultado de este efecto, el daño de Arts del Miembro seleccionado anteriormente +10."
+      }
+    },
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_purple.png",
+        "icons/arts_null.png"
+      ],
+      "name": "吾輩との秘密だぞ",
+      "damage": 60,
+      "specialAttackImage": null,
+      "effect": null
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP07-072",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCO03/hBP07-072_SR.png"
+  },
+  {
     "image": "cardListImages/hBP07/hBP07-073_R.png",
     "name": "ラプラス・ダークネス",
     "type": "成員",
@@ -57315,6 +57739,51 @@
     "extra": null,
     "id": "hBP07-073",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP07/hBP07-073_SR.png"
+  },
+  {
+    "image": "cardListImages/hBP07/hBP07-073_P.png",
+    "name": "ラプラス・ダークネス",
+    "type": "成員",
+    "tag": "#JP / #秘密結社holoX / #シューター / #歌",
+    "product": "PR卡",
+    "color": "紫",
+    "hp": 170,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": {
+      "name": "ライブだー！！！！！！！！！",
+      "effect": {
+        "zh-TW": "這個回合中，這個成員的藝能需要的無色吶喊卡數量-2。",
+        "ja": "このターン中、このメンバーのアーツに必要な無色エールカードの枚数-2。",
+        "en": "During this turn, the colorless Cheer card cost required for this Member's Arts is reduced by 2.",
+        "fr": "Durant ce tour, le coût en cartes d'Encouragement incolores pour les Arts de ce Membre est réduit de 2.",
+        "es": "Durante este turno, la cantidad de cartas de Cheer incoloras necesarias para los Arts de este Miembro se reduce en 2."
+      }
+    },
+    "effectB": null,
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_null.png",
+        "icons/arts_null.png"
+      ],
+      "name": "吾輩の歌聴いてくれる奴いるううう！？！？",
+      "damage": 30,
+      "specialAttackImage": null,
+      "effect": {
+        "zh-TW": "從自己的牌組展示1張「ラプラス・ダークネス」並加入手牌。將牌組重新洗牌。",
+        "ja": "自分のデッキから「ラプラス・ダークネス」を公開し、手札に加える。その後、デッキをシャッフルする。",
+        "en": "Reveal \"Laplus Darkness\" from your Deck and add it to your Hand. Shuffle your Deck.",
+        "fr": "Montrez \"Laplus Darkness\" de votre Deck et ajoutez-la à votre Main. Mélangez votre Deck.\n",
+        "es": "Muestra 1 carta de \"ラプラス・ダークネス\" de tu mazo y añádela a tu mano. Baraja tu mazo."
+      }
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP07-073",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP07/hBP07-073_P.png"
   },
   {
     "image": "cardListImages/hBP07/hBP07-074_RR.png",
@@ -57490,11 +57959,11 @@
       "damage": "70+",
       "specialAttackImage": "icons/tokkou_50_blue.png",
       "effect": {
-        "zh-TW": "如果這個成員有3張以上的吶喊卡，雙方的存檔區每有1張吶喊卡，這個藝能傷害+10。",
-        "ja": "このメンバーにエールカードが３枚以上ある場合、双方のアーカイブにあるエールカード１枚につき、このアーツダメージ＋１０。\n",
-        "en": "If this Member has 3 or more Cheer cards, this Arts' damage +10 for each Cheer card in both players' Archives.",
-        "fr": "Si ce membre a 3 cartes d'encouragement ou plus, pour chaque carte d'encouragement dans l'archive de chaque joueur, les dégâts de cet Arts +10.",
-        "es": "Si este miembro tiene 3 o más cartas de Cheer, por cada carta de Cheer en el Archivo de ambos jugadores, el daño de este Arts +10."
+        "zh-TW": "如果這個成員的吶喊卡有3張以上，雙方的存檔區每有1張吶喊卡，這個藝能傷害+10。",
+        "ja": "このメンバーのエールカードが３枚以上ある場合、お互いのアーカイブの各エールカードにつき、この芸能ダメージ＋１０。",
+        "en": "If you have 3 or more Cheer cards of this Member, this Arts damage is increased by 10 for each Cheer card in both players' Archives.",
+        "fr": "Si vous avez 3 cartes d'encouragement ou plus de ce Membre, pour chaque carte d'encouragement dans les Archives des deux joueurs, les dégâts d'Arts augmentent de 10.",
+        "es": "Si hay 3 o más cartas Cheer de este Miembro, por cada carta Cheer en el Archivo de ambos jugadores, el daño de este Arts aumenta en 10."
       }
     },
     "art2": null,
@@ -57535,11 +58004,11 @@
       "damage": "70+",
       "specialAttackImage": "icons/tokkou_50_blue.png",
       "effect": {
-        "zh-TW": "如果這個成員有3張以上的吶喊卡，雙方的存檔區每有1張吶喊卡，這個藝能傷害+10。",
-        "ja": "このメンバーにエールカードが３枚以上ある場合、双方のアーカイブにあるエールカード１枚につき、このアーツダメージ＋１０。\n",
-        "en": "If this Member has 3 or more Cheer cards, this Arts' damage +10 for each Cheer card in both players' Archives.",
-        "fr": "Si ce membre a 3 cartes d'encouragement ou plus, pour chaque carte d'encouragement dans l'archive de chaque joueur, les dégâts de cet Arts +10.",
-        "es": "Si este miembro tiene 3 o más cartas de Cheer, por cada carta de Cheer en el Archivo de ambos jugadores, el daño de este Arts +10."
+        "zh-TW": "如果這個成員的吶喊卡有3張以上，雙方的存檔區每有1張吶喊卡，這個藝能傷害+10。",
+        "ja": "このメンバーのエールカードが３枚以上ある場合、お互いのアーカイブの各エールカードにつき、この芸能ダメージ＋１０。",
+        "en": "If you have 3 or more Cheer cards of this Member, this Arts damage is increased by 10 for each Cheer card in both players' Archives.",
+        "fr": "Si vous avez 3 cartes d'encouragement ou plus de ce Membre, pour chaque carte d'encouragement dans les Archives des deux joueurs, les dégâts d'Arts augmentent de 10.",
+        "es": "Si hay 3 o más cartas Cheer de este Miembro, por cada carta Cheer en el Archivo de ambos jugadores, el daño de este Arts aumenta en 10."
       }
     },
     "art2": null,
@@ -60135,11 +60604,11 @@
       "damage": 30,
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "如果自己的舞台上有3位以上的「ときのそら」，從自己的牌組抽1張牌。",
-        "ja": "「ときのそら」が３人以上自分のステージにいる場合、自分のデッキからカードを１枚引く。\n",
+        "zh-TW": "如果自己舞台上的「ときのそら」有3位以上，從自己的牌組抽1張牌。",
+        "ja": "自分のステージに「ときのそら」が３人以上いる場合、自分のデッキから１枚ドローする。",
         "en": "If you have 3 or more \"Tokino Sora\" on your Stage, draw 1 card from your Deck.",
-        "fr": "Si vous avez 3 \"ときのそら\" ou plus sur votre scène, piochez 1 carte de votre deck.",
-        "es": "Si tienes 3 o más \"ときのそら\" en tu Escenario, roba 1 carta de tu Mazo.\n"
+        "fr": "Si vous avez 3 \"Tokino Sora\" ou plus sur votre Scène, piochez 1 carte de votre Deck.",
+        "es": "Si hay 3 o más \"ときのそら\" en tu Escenario, roba 1 carta de tu Mazo."
       }
     },
     "art2": {
@@ -61540,11 +62009,11 @@
       "damage": 30,
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "如果這個成員有2張以上的藍色吶喊卡，將自己吶喊牌組上方的1張牌發送給自己的「フワワ・アビスガード」。",
-        "ja": "このメンバーに青のエールカードが２枚以上ある場合、自分のエールデッキの上から１枚を自分の「フワワ・アビスガード」に送る。\n",
-        "en": "If this Member has 2 or more blue Cheer cards, send 1 card from the top of your Cheer Deck to your \"FuwaWa Abyssgard\".",
-        "fr": "Si ce membre a 2 cartes d'encouragement bleues ou plus, envoyez la carte du dessus de votre deck d'encouragement à votre \"フワワ・アビスガード\".",
-        "es": "Si este miembro tiene 2 o más cartas de Cheer azules, envía 1 carta de la parte superior de tu Mazo Cheer a tu \"フワワ・アビスガード\".\n"
+        "zh-TW": "如果這個成員的藍色吶喊卡有2張以上，將自己吶喊牌組上方的1張牌發送給自己的「フワワ・アビスガード」。",
+        "ja": "このメンバーの青のエールカードが２枚以上ある場合、自分のエールデッキの上から１枚を自分の「フワワ・アビスガード」に送る。",
+        "en": "If you have 2 or more blue Cheer cards of this Member, send the top card of your Cheer Deck to your \"FuwaWa Abyssgard\".",
+        "fr": "Si vous avez 2 cartes d'encouragement bleues ou plus de ce Membre, envoyez 1 carte du dessus de votre Deck d'encouragement à votre \"Fuwawa Abyssgard\".",
+        "es": "Si hay 2 o más cartas Cheer azules de este Miembro, envía la carta superior de tu Mazo Cheer a tu \"フワワ・アビスガード\"."
       }
     },
     "art2": null,
@@ -61585,11 +62054,11 @@
       "damage": 30,
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "如果這個成員有2張以上的藍色吶喊卡，將自己吶喊牌組上方的1張牌發送給自己的「フワワ・アビスガード」。",
-        "ja": "このメンバーに青のエールカードが２枚以上ある場合、自分のエールデッキの上から１枚を自分の「フワワ・アビスガード」に送る。\n",
-        "en": "If this Member has 2 or more blue Cheer cards, send 1 card from the top of your Cheer Deck to your \"FuwaWa Abyssgard\".",
-        "fr": "Si ce membre a 2 cartes d'encouragement bleues ou plus, envoyez la carte du dessus de votre deck d'encouragement à votre \"フワワ・アビスガード\".",
-        "es": "Si este miembro tiene 2 o más cartas de Cheer azules, envía 1 carta de la parte superior de tu Mazo Cheer a tu \"フワワ・アビスガード\".\n"
+        "zh-TW": "如果這個成員的藍色吶喊卡有2張以上，將自己吶喊牌組上方的1張牌發送給自己的「フワワ・アビスガード」。",
+        "ja": "このメンバーの青のエールカードが２枚以上ある場合、自分のエールデッキの上から１枚を自分の「フワワ・アビスガード」に送る。",
+        "en": "If you have 2 or more blue Cheer cards of this Member, send the top card of your Cheer Deck to your \"FuwaWa Abyssgard\".",
+        "fr": "Si vous avez 2 cartes d'encouragement bleues ou plus de ce Membre, envoyez 1 carte du dessus de votre Deck d'encouragement à votre \"Fuwawa Abyssgard\".",
+        "es": "Si hay 2 o más cartas Cheer azules de este Miembro, envía la carta superior de tu Mazo Cheer a tu \"フワワ・アビスガード\"."
       }
     },
     "art2": null,
@@ -61694,11 +62163,11 @@
     "effectB": {
       "name": "深淵からの信頼",
       "effect": {
-        "zh-TW": "如果自己的舞台上有6張以上的藍色吶喊卡，將自己1位休息狀態的「フワワ・アビスガード」改為活動狀態。",
-        "ja": "自分のステージに青のエールカードが６枚以上ある場合、自分のレスト状態の「フワワ・アビスガード」１人をアクティブ状態にする。\n",
-        "en": "If you have 6 or more blue Cheer cards on your Stage, change 1 of your \"FuwaWa Abyssgard\" in a resting state to an active state.",
-        "fr": "Si vous avez 6 cartes d'encouragement bleues ou plus sur votre scène, mettez 1 de vos \"フワワ・アビスガード\" en état de repos en état d'activité.",
-        "es": "Si tienes 6 o más cartas de Cheer azules en tu Escenario, cambia 1 \"フワワ・アビスガード\" en estado de Descanso en tu Escenario a estado de Activo.\n"
+        "zh-TW": "如果自己舞台上的藍色吶喊卡有6張以上，將自己1位休息狀態的「フワワ・アビスガード」改為活動狀態。",
+        "ja": "自分のステージの青のエールカードが６枚以上ある場合、自分の１人休息状態の「フワワ・アビスガード」を活動状態にする。",
+        "en": "If you have 6 or more blue Cheer cards on your Stage, change 1 \"FuwaWa Abyssgard\" in your Rest state to Active state.",
+        "fr": "Si vous avez 6 cartes d'encouragement bleues ou plus sur votre Scène, mettez 1 de vos \"Fuwawa Abyssgard\" au repos en état actif.",
+        "es": "Si hay 6 o más cartas Cheer azules en tu Escenario, cambia 1 \"フワワ・アビスガード\" en tu estado de descanso a estado activo."
       }
     },
     "effectG": null,
@@ -61741,11 +62210,11 @@
     "effectB": {
       "name": "深淵からの信頼",
       "effect": {
-        "zh-TW": "如果自己的舞台上有6張以上的藍色吶喊卡，將自己1位休息狀態的「フワワ・アビスガード」改為活動狀態。",
-        "ja": "自分のステージに青のエールカードが６枚以上ある場合、自分のレスト状態の「フワワ・アビスガード」１人をアクティブ状態にする。\n",
-        "en": "If you have 6 or more blue Cheer cards on your Stage, change 1 of your \"FuwaWa Abyssgard\" in a resting state to an active state.",
-        "fr": "Si vous avez 6 cartes d'encouragement bleues ou plus sur votre scène, mettez 1 de vos \"フワワ・アビスガード\" en état de repos en état d'activité.",
-        "es": "Si tienes 6 o más cartas de Cheer azules en tu Escenario, cambia 1 \"フワワ・アビスガード\" en estado de Descanso en tu Escenario a estado de Activo.\n"
+        "zh-TW": "如果自己舞台上的藍色吶喊卡有6張以上，將自己1位休息狀態的「フワワ・アビスガード」改為活動狀態。",
+        "ja": "自分のステージの青のエールカードが６枚以上ある場合、自分の１人休息状態の「フワワ・アビスガード」を活動状態にする。",
+        "en": "If you have 6 or more blue Cheer cards on your Stage, change 1 \"FuwaWa Abyssgard\" in your Rest state to Active state.",
+        "fr": "Si vous avez 6 cartes d'encouragement bleues ou plus sur votre Scène, mettez 1 de vos \"Fuwawa Abyssgard\" au repos en état actif.",
+        "es": "Si hay 6 o más cartas Cheer azules en tu Escenario, cambia 1 \"フワワ・アビスガード\" en tu estado de descanso a estado activo."
       }
     },
     "effectG": null,
@@ -61788,11 +62257,11 @@
     "effectB": {
       "name": "深淵からの信頼",
       "effect": {
-        "zh-TW": "如果自己的舞台上有6張以上的藍色吶喊卡，將自己1位休息狀態的「フワワ・アビスガード」改為活動狀態。",
-        "ja": "自分のステージに青のエールカードが６枚以上ある場合、自分のレスト状態の「フワワ・アビスガード」１人をアクティブ状態にする。\n",
-        "en": "If you have 6 or more blue Cheer cards on your Stage, change 1 of your \"FuwaWa Abyssgard\" in a resting state to an active state.",
-        "fr": "Si vous avez 6 cartes d'encouragement bleues ou plus sur votre scène, mettez 1 de vos \"フワワ・アビスガード\" en état de repos en état d'activité.",
-        "es": "Si tienes 6 o más cartas de Cheer azules en tu Escenario, cambia 1 \"フワワ・アビスガード\" en estado de Descanso en tu Escenario a estado de Activo.\n"
+        "zh-TW": "如果自己舞台上的藍色吶喊卡有6張以上，將自己1位休息狀態的「フワワ・アビスガード」改為活動狀態。",
+        "ja": "自分のステージの青のエールカードが６枚以上ある場合、自分の１人休息状態の「フワワ・アビスガード」を活動状態にする。",
+        "en": "If you have 6 or more blue Cheer cards on your Stage, change 1 \"FuwaWa Abyssgard\" in your Rest state to Active state.",
+        "fr": "Si vous avez 6 cartes d'encouragement bleues ou plus sur votre Scène, mettez 1 de vos \"Fuwawa Abyssgard\" au repos en état actif.",
+        "es": "Si hay 6 o más cartas Cheer azules en tu Escenario, cambia 1 \"フワワ・アビスガード\" en tu estado de descanso a estado activo."
       }
     },
     "effectG": null,
@@ -62064,11 +62533,11 @@
     "effectC": {
       "name": "火ノ鳥剣舞",
       "effect": {
-        "zh-TW": "如果自己的存檔區有10張以上的成員，這個回合中，這個成員藝能需要的紅色吶喊卡數量-2。",
-        "ja": "自分のアーカイブにあるメンバーが10枚以上の場合、このターンの間、このメンバーの「アーツ」に必要な赤色の「エール」カードの枚数-2。",
-        "en": "If you have 10 or more Members in your Archive, the number of red Cheer cards required for this Member's Arts is reduced by 2 during this turn.",
-        "fr": "Si vous avez 10 membres ou plus dans votre archive, pendant ce tour, le nombre de cartes d'encouragement rouges nécessaires pour cet Arts est réduit de 2.",
-        "es": "Si tienes 10 o más miembros en tu Archivo, durante este turno, la cantidad de cartas de Cheer rojas necesarias para los Arts de este miembro -2.\n"
+        "zh-TW": "如果自己存檔區的成員有10張以上，這個回合中，這個成員藝能需要的紅色吶喊卡數量-2。",
+        "ja": "自分のアーカイブのメンバーが１０枚以上ある場合、このターン中、このメンバーの芸能に必要な赤のエールカードの枚数－２。",
+        "en": "If you have 10 or more Members in your Archive, the number of red Cheer cards required for this Member's Arts this turn is reduced by 2.",
+        "fr": "Si vous avez 10 Membres ou plus dans votre Archive, le nombre de cartes d'encouragement rouges nécessaires pour les Arts de ce Membre est réduit de 2 pendant ce tour.",
+        "es": "Si hay 10 o más Miembros en tu Archivo, la cantidad de cartas Cheer rojas necesarias para el Arts de este Miembro se reduce en 2 durante este turno."
       }
     },
     "effectB": null,
@@ -62116,11 +62585,11 @@
     "effectC": {
       "name": "火ノ鳥剣舞",
       "effect": {
-        "zh-TW": "如果自己的存檔區有10張以上的成員，這個回合中，這個成員藝能需要的紅色吶喊卡數量-2。",
-        "ja": "自分のアーカイブにあるメンバーが10枚以上の場合、このターンの間、このメンバーの「アーツ」に必要な赤色の「エール」カードの枚数-2。",
-        "en": "If you have 10 or more Members in your Archive, the number of red Cheer cards required for this Member's Arts is reduced by 2 during this turn.",
-        "fr": "Si vous avez 10 membres ou plus dans votre archive, pendant ce tour, le nombre de cartes d'encouragement rouges nécessaires pour cet Arts est réduit de 2.",
-        "es": "Si tienes 10 o más miembros en tu Archivo, durante este turno, la cantidad de cartas de Cheer rojas necesarias para los Arts de este miembro -2.\n"
+        "zh-TW": "如果自己存檔區的成員有10張以上，這個回合中，這個成員藝能需要的紅色吶喊卡數量-2。",
+        "ja": "自分のアーカイブのメンバーが１０枚以上ある場合、このターン中、このメンバーの芸能に必要な赤のエールカードの枚数－２。",
+        "en": "If you have 10 or more Members in your Archive, the number of red Cheer cards required for this Member's Arts this turn is reduced by 2.",
+        "fr": "Si vous avez 10 Membres ou plus dans votre Archive, le nombre de cartes d'encouragement rouges nécessaires pour les Arts de ce Membre est réduit de 2 pendant ce tour.",
+        "es": "Si hay 10 o más Miembros en tu Archivo, la cantidad de cartas Cheer rojas necesarias para el Arts de este Miembro se reduce en 2 durante este turno."
       }
     },
     "effectB": null,
@@ -62170,11 +62639,11 @@
     "effectG": {
       "name": "光、再び灯りて",
       "effect": {
-        "zh-TW": "自己的主要階段，如果自己的存檔區有10張以上的成員，可以使用存檔區的這個成員將自己的成員進行綻放。(這個效果只能在存檔區使用)。",
-        "ja": "自分のメインフェイズ中、自分のアーカイブにホロメンが10枚以上ある場合、アーカイブのこのホロメンを使用して自分のホロメンをブルームさせることができる。(この効果はアーカイブでのみ使用できる)",
-        "en": "During your Main Phase, if you have 10 or more Members in your Archive, you may Bloom your Member using this card from your Archive. (This effect can only be used from the Archive).\n",
-        "fr": "Pendant votre Phase Principale, si vous avez 10 membres ou plus dans votre Archive, vous pouvez utiliser ce membre de votre Archive pour faire passer un de vos membres à Bloom. (Cet effet ne peut être utilisé que depuis l'Archive).",
-        "es": "Durante tu fase principal, si tienes 10 o más miembros en tu zona de Archivo, puedes hacer que tu miembro estalle usando este miembro de tu zona de Archivo. (Este efecto solo se puede usar desde la zona de Archivo).\n"
+        "zh-TW": "自己的主要階段，如果自己存檔區的成員有10張以上，可以使用存檔區的這個成員將自己的成員進行綻放。(這個效果只能在存檔區使用)。",
+        "ja": "自分のメインフェイズ中、自分のアーカイブのメンバーが１０枚以上ある場合、アーカイブのこのメンバーを使用して自分のメンバーをブルームさせることができる。（この効果はアーカイブからしか使用できない）",
+        "en": "During your Main Phase, if you have 10 or more Members in your Archive, you can use this Member from your Archive to Bloom your Member. (This effect can only be used from the Archive).",
+        "fr": "Pendant votre Phase Principale, si vous avez 10 Membres ou plus dans votre Archive, vous pouvez utiliser ce Membre de votre Archive pour effectuer un Bloom sur vos Membres. (Cet effet ne peut être utilisé que depuis l'Archive).",
+        "es": "Durante tu Fase Principal, si hay 10 o más Miembros en tu Archivo, puedes usar este Miembro de tu Archivo para hacer Bloom a tus Miembros. (Solo puedes usar este efecto desde el Archivo)."
       }
     },
     "art1": {
@@ -62216,11 +62685,11 @@
     "effectG": {
       "name": "光、再び灯りて",
       "effect": {
-        "zh-TW": "自己的主要階段，如果自己的存檔區有10張以上的成員，可以使用存檔區的這個成員將自己的成員進行綻放。(這個效果只能在存檔區使用)。",
-        "ja": "自分のメインフェイズ中、自分のアーカイブにホロメンが10枚以上ある場合、アーカイブのこのホロメンを使用して自分のホロメンをブルームさせることができる。(この効果はアーカイブでのみ使用できる)",
-        "en": "During your Main Phase, if you have 10 or more Members in your Archive, you may Bloom your Member using this card from your Archive. (This effect can only be used from the Archive).\n",
-        "fr": "Pendant votre Phase Principale, si vous avez 10 membres ou plus dans votre Archive, vous pouvez utiliser ce membre de votre Archive pour faire passer un de vos membres à Bloom. (Cet effet ne peut être utilisé que depuis l'Archive).",
-        "es": "Durante tu fase principal, si tienes 10 o más miembros en tu zona de Archivo, puedes hacer que tu miembro estalle usando este miembro de tu zona de Archivo. (Este efecto solo se puede usar desde la zona de Archivo).\n"
+        "zh-TW": "自己的主要階段，如果自己存檔區的成員有10張以上，可以使用存檔區的這個成員將自己的成員進行綻放。(這個效果只能在存檔區使用)。",
+        "ja": "自分のメインフェイズ中、自分のアーカイブのメンバーが１０枚以上ある場合、アーカイブのこのメンバーを使用して自分のメンバーをブルームさせることができる。（この効果はアーカイブからしか使用できない）",
+        "en": "During your Main Phase, if you have 10 or more Members in your Archive, you can use this Member from your Archive to Bloom your Member. (This effect can only be used from the Archive).",
+        "fr": "Pendant votre Phase Principale, si vous avez 10 Membres ou plus dans votre Archive, vous pouvez utiliser ce Membre de votre Archive pour effectuer un Bloom sur vos Membres. (Cet effet ne peut être utilisé que depuis l'Archive).",
+        "es": "Durante tu Fase Principal, si hay 10 o más Miembros en tu Archivo, puedes usar este Miembro de tu Archivo para hacer Bloom a tus Miembros. (Solo puedes usar este efecto desde el Archivo)."
       }
     },
     "art1": {
@@ -62262,11 +62731,11 @@
     "effectG": {
       "name": "光、再び灯りて",
       "effect": {
-        "zh-TW": "自己的主要階段，如果自己的存檔區有10張以上的成員，可以使用存檔區的這個成員將自己的成員進行綻放。(這個效果只能在存檔區使用)。",
-        "ja": "自分のメインフェイズ中、自分のアーカイブにホロメンが10枚以上ある場合、アーカイブのこのホロメンを使用して自分のホロメンをブルームさせることができる。(この効果はアーカイブでのみ使用できる)",
-        "en": "During your Main Phase, if you have 10 or more Members in your Archive, you may Bloom your Member using this card from your Archive. (This effect can only be used from the Archive).\n",
-        "fr": "Pendant votre Phase Principale, si vous avez 10 membres ou plus dans votre Archive, vous pouvez utiliser ce membre de votre Archive pour faire passer un de vos membres à Bloom. (Cet effet ne peut être utilisé que depuis l'Archive).",
-        "es": "Durante tu fase principal, si tienes 10 o más miembros en tu zona de Archivo, puedes hacer que tu miembro estalle usando este miembro de tu zona de Archivo. (Este efecto solo se puede usar desde la zona de Archivo).\n"
+        "zh-TW": "自己的主要階段，如果自己存檔區的成員有10張以上，可以使用存檔區的這個成員將自己的成員進行綻放。(這個效果只能在存檔區使用)。",
+        "ja": "自分のメインフェイズ中、自分のアーカイブのメンバーが１０枚以上ある場合、アーカイブのこのメンバーを使用して自分のメンバーをブルームさせることができる。（この効果はアーカイブからしか使用できない）",
+        "en": "During your Main Phase, if you have 10 or more Members in your Archive, you can use this Member from your Archive to Bloom your Member. (This effect can only be used from the Archive).",
+        "fr": "Pendant votre Phase Principale, si vous avez 10 Membres ou plus dans votre Archive, vous pouvez utiliser ce Membre de votre Archive pour effectuer un Bloom sur vos Membres. (Cet effet ne peut être utilisé que depuis l'Archive).",
+        "es": "Durante tu Fase Principal, si hay 10 o más Miembros en tu Archivo, puedes usar este Miembro de tu Archivo para hacer Bloom a tus Miembros. (Solo puedes usar este efecto desde el Archivo)."
       }
     },
     "art1": {
@@ -63413,11 +63882,11 @@
     "effectG": {
       "name": "深淵からの愛情",
       "effect": {
-        "zh-TW": "如果自己的舞台上有6張以上的紅色吶喊卡，這個成員的藝能可以選擇對手Debut以外的後台成員為對象。",
-        "ja": "自分のステージに赤のエールカードが６枚以上ある場合、このメンバーのアーツは、相手のDebut以外のバックメンバーを対象に選ぶことができる。\n",
-        "en": "If you have 6 or more red Cheer cards on your Stage, this Member's Arts may target an opponent's Back Member other than Debut.",
-        "fr": "Si vous avez 6 cartes d'encouragement rouges ou plus sur votre scène, l'Arts de ce membre peut cibler un membre en arrière-plan de l'adversaire autre qu'un Debut.",
-        "es": "Si tienes 6 o más cartas de Cheer rojas en tu Escenario, los Arts de este miembro pueden tener como objetivo a los miembros de Retaguardia del oponente que no sean Debut.\n"
+        "zh-TW": "如果自己舞台上的紅色吶喊卡有6張以上，這個成員的藝能可以選擇對手Debut以外的後台成員為對象。",
+        "ja": "自分のステージの赤のエールカードが６枚以上ある場合、このメンバーの芸能は相手のDebut以外のバックメンバーを対象に選ぶことができる。",
+        "en": "If you have 6 or more red Cheer cards on your Stage, this Member's Arts can target an opponent's Back Stage Member other than Debut.",
+        "fr": "Si vous avez 6 cartes d'encouragement rouges ou plus sur votre Scène, les Arts de ce Membre peuvent cibler les Membres en Arrière-plan de votre adversaire, à l'exception de ceux de Debut.",
+        "es": "Si hay 6 o más cartas Cheer rojas en tu Escenario, el Arts de este Miembro puede tener como objetivo a Miembros de Retaguardia del oponente que no sean Debut."
       }
     },
     "art1": {
@@ -63460,11 +63929,11 @@
     "effectG": {
       "name": "深淵からの愛情",
       "effect": {
-        "zh-TW": "如果自己的舞台上有6張以上的紅色吶喊卡，這個成員的藝能可以選擇對手Debut以外的後台成員為對象。",
-        "ja": "自分のステージに赤のエールカードが６枚以上ある場合、このメンバーのアーツは、相手のDebut以外のバックメンバーを対象に選ぶことができる。\n",
-        "en": "If you have 6 or more red Cheer cards on your Stage, this Member's Arts may target an opponent's Back Member other than Debut.",
-        "fr": "Si vous avez 6 cartes d'encouragement rouges ou plus sur votre scène, l'Arts de ce membre peut cibler un membre en arrière-plan de l'adversaire autre qu'un Debut.",
-        "es": "Si tienes 6 o más cartas de Cheer rojas en tu Escenario, los Arts de este miembro pueden tener como objetivo a los miembros de Retaguardia del oponente que no sean Debut.\n"
+        "zh-TW": "如果自己舞台上的紅色吶喊卡有6張以上，這個成員的藝能可以選擇對手Debut以外的後台成員為對象。",
+        "ja": "自分のステージの赤のエールカードが６枚以上ある場合、このメンバーの芸能は相手のDebut以外のバックメンバーを対象に選ぶことができる。",
+        "en": "If you have 6 or more red Cheer cards on your Stage, this Member's Arts can target an opponent's Back Stage Member other than Debut.",
+        "fr": "Si vous avez 6 cartes d'encouragement rouges ou plus sur votre Scène, les Arts de ce Membre peuvent cibler les Membres en Arrière-plan de votre adversaire, à l'exception de ceux de Debut.",
+        "es": "Si hay 6 o más cartas Cheer rojas en tu Escenario, el Arts de este Miembro puede tener como objetivo a Miembros de Retaguardia del oponente que no sean Debut."
       }
     },
     "art1": {
@@ -63507,11 +63976,11 @@
     "effectG": {
       "name": "深淵からの愛情",
       "effect": {
-        "zh-TW": "如果自己的舞台上有6張以上的紅色吶喊卡，這個成員的藝能可以選擇對手Debut以外的後台成員為對象。",
-        "ja": "自分のステージに赤のエールカードが６枚以上ある場合、このメンバーのアーツは、相手のDebut以外のバックメンバーを対象に選ぶことができる。\n",
-        "en": "If you have 6 or more red Cheer cards on your Stage, this Member's Arts may target an opponent's Back Member other than Debut.",
-        "fr": "Si vous avez 6 cartes d'encouragement rouges ou plus sur votre scène, l'Arts de ce membre peut cibler un membre en arrière-plan de l'adversaire autre qu'un Debut.",
-        "es": "Si tienes 6 o más cartas de Cheer rojas en tu Escenario, los Arts de este miembro pueden tener como objetivo a los miembros de Retaguardia del oponente que no sean Debut.\n"
+        "zh-TW": "如果自己舞台上的紅色吶喊卡有6張以上，這個成員的藝能可以選擇對手Debut以外的後台成員為對象。",
+        "ja": "自分のステージの赤のエールカードが６枚以上ある場合、このメンバーの芸能は相手のDebut以外のバックメンバーを対象に選ぶことができる。",
+        "en": "If you have 6 or more red Cheer cards on your Stage, this Member's Arts can target an opponent's Back Stage Member other than Debut.",
+        "fr": "Si vous avez 6 cartes d'encouragement rouges ou plus sur votre Scène, les Arts de ce Membre peuvent cibler les Membres en Arrière-plan de votre adversaire, à l'exception de ceux de Debut.",
+        "es": "Si hay 6 o más cartas Cheer rojas en tu Escenario, el Arts de este Miembro puede tener como objetivo a Miembros de Retaguardia del oponente que no sean Debut."
       }
     },
     "art1": {
@@ -64373,6 +64842,45 @@
     "extra": null,
     "id": "hBP08-071",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP08/hBP08-071_C.png"
+  },
+  {
+    "image": "cardListImages/hCO03/hBP08-071_SR.png",
+    "name": "一伊那尓栖",
+    "type": "成員",
+    "tag": "#EN / #Myth / #絵 / #海",
+    "product": "エクストリーマーカップ25-26 Final オフィシャルホロカコレクションB",
+    "color": "紫",
+    "hp": 150,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": {
+      "name": "TOMORROW!?",
+      "effect": {
+        "zh-TW": "給予對手1位與其主推不同顏色的成員20點特殊傷害。",
+        "ja": "相手の、自分の推しと違う色のメンバー１人に２０点のSPスキルダメージを与える。",
+        "en": "Deal 20 SP damage to 1 Member on your opponent's side with a different color than their Oshi.",
+        "fr": "Infligez 20 dégâts spéciaux à 1 membre adverse dont la couleur est différente de celle de son Oshi.",
+        "es": "Inflige 20 de daño especial a 1 miembro del oponente que sea de un color diferente a su Oshi.\n"
+      }
+    },
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_null.png",
+        "icons/arts_null.png"
+      ],
+      "name": "Bonk!",
+      "damage": 50,
+      "specialAttackImage": null,
+      "effect": null
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP08-071",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCO03/hBP08-071_SR.png"
   },
   {
     "image": "cardListImages/hBP08/hBP08-072_R.png",
@@ -65940,11 +66448,11 @@
     "tag": null,
     "product": "補充包「バウンサーバウンド (hBP08)」",
     "supportEffect": {
-      "zh-TW": "自己的主推為「一条莉々華」才能使用。\n\n從自己的牌組展示1張「一条莉々華」與1張「限界飯」並加入手牌。將牌組重新洗牌。之後，如果自己的存檔區有3張以上的「限界飯」，這個回合中，自己舞台上所有的「一条莉々華」藝能傷害+50。\n\nLIMITED：每個回合只能使用一張。",
-      "ja": "自分の推しが「一条莉々華」の場合のみ使用できる。\n\n自分のデッキから「一条莉々華」と「限界飯」を1枚ずつ公開し、手札に加える。その後、デッキをシャッフルする。その後、自分のアーカイブに「限界飯」が3枚以上ある場合、このターン中、自分のステージ上の全ての「一条莉々華」のArtsダメージ＋50。\n\nLIMITED：1ターンに1枚しか使用できない。",
-      "en": "Usable only if your Oshi is \"Ichijou Ririka\".\n\nReveal 1 \"Ichijou Ririka\" and 1 \"Genkai Meshi\" from your Deck and add them to your Hand. Shuffle your Deck. Then, if you have 3 or more \"Genkai Meshi\" in your Archive, all \"Ichijou Ririka\" on your Stage gain +50 Arts Damage this turn.\n\nLIMITED: Usable only once per turn.\n",
-      "fr": "Utilisable uniquement si votre Oshi est \"一条莉々華\".\n\nRévélez 1 \"一条莉々華\" et 1 \"限界飯\" de votre Deck et ajoutez-les à votre Main. Mélangez votre Deck. Ensuite, si vous avez 3 \"限界飯\" ou plus dans votre Archive, les Arts de tous les \"一条莉々華\" sur votre Scène infligent +50 dégâts ce tour-ci.\n\nLIMITED : Une seule fois par tour.",
-      "es": "Solo se puede usar si tu Oshi es \"Ichijou Rikka\".\n\nMuestra 1 \"Ichijou Rikka\" y 1 \"Genkai Meshi\" de tu mazo y añádelos a tu mano. Baraja tu mazo. Después, si tienes 3 o más \"Genkai Meshi\" en tu zona de Archivo, durante este turno, todas las \"Ichijou Rikka\" en tu Escenario reciben +50 de daño de Arts.\n\nLIMITED: Solo se puede usar una vez por turno."
+      "zh-TW": "自己的主推為「一条莉々華」才能使用。\n\n從自己的牌組展示1張「一条莉々華」與1張「限界飯」並加入手牌。將牌組重新洗牌。之後，如果自己存檔區的「限界飯」有3張以上，這個回合中，自己舞台上所有的「一条莉々華」藝能傷害+50。\n\nLIMITED：每個回合只能使用一張。",
+      "ja": "自分の推しが「一条莉々華」である場合のみ使用できる。\n\n自分のデッキから「一条莉々華」と「限界飯」を１枚ずつ見せ、手札に加える。デッキをシャッフルする。その後、自分のアーカイブの「限界飯」が３枚以上ある場合、このターン中、自分のステージにいる全ての「一条莉々華」の芸能ダメージ＋５０。\n\nLIMITED：１ターンに１枚しか使用できない。",
+      "en": "You can only use this if your Oshi is \"Ichijou Ririka\".\nReveal 1 \"Ichijou Ririka\" and 1 \"Genkai Meshi\" from your Deck and add them to your Hand. Shuffle your Deck. Then, if you have 3 or more \"Genkai Meshi\" in your Archive, all \"Ichijou Ririka\" on your Stage gain 50 Arts damage this turn.\n\nLIMITED: You can only use one of this per turn.",
+      "fr": "Vous ne pouvez utiliser ceci que si votre Oshi est \"Ichijou Ririka\".\n\nMontrez 1 \"Ichijou Ririka\" et 1 \"Genkai Meshi\" de votre Deck et ajoutez-les à votre Main. Mélangez votre Deck. Ensuite, si vous avez 3 \"Genkai Meshi\" ou plus dans votre Archive, les dégâts d'Arts de tous vos \"Ichijou Ririka\" sur votre Scène augmentent de 50 pendant ce tour.\n\nLIMITED : Vous ne pouvez utiliser qu'une seule fois par tour.",
+      "es": "Solo puedes usar esto si tu Oshi es \"一条莉々華\".\n\nMuestra 1 \"一条莉々華\" y 1 \"限界飯\" de tu Mazo y añádelos a tu Mano. Baraja tu Mazo. Después, si hay 3 o más \"限界飯\" en tu Archivo, el daño de Arts de todos los \"一条莉々華\" en tu Escenario aumenta en 50 durante este turno.\n\nLIMITED: Solo puedes usar una vez por turno."
     },
     "id": "hBP08-096",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP08/hBP08-096_U.png"
@@ -66226,6 +66734,110 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP09/hBP09-001_OUR.png"
   },
   {
+    "image": "cardListImages/hBP09/hBP09-001_P_02.png",
+    "name": "大空スバル",
+    "type": "主推",
+    "product": "PR卡",
+    "color": "白",
+    "life": 5,
+    "stageSkill": {
+      "name": "秩序を守る署長",
+      "effect": "自己所有的「大空スバル」藝能需要的白色吶喊卡數量-1。"
+    },
+    "oshiSkill": {
+      "holoPower": -2,
+      "name": "大空警察出動！",
+      "effect": {
+        "zh-TW": "[每個回合一次]選擇對手舞台上的1位成員。從自己的牌組將1張與剛才選擇的成員相同綻放等級的「大空スバル」放到舞台上。將牌組重新洗牌。",
+        "ja": "[各ターンに1回]相手のステージ上のメンバーを1人選択する。自分のデッキから、先ほど選択したメンバーと同じブルームレベルの「大空スバル」を1枚ステージ上に出す。その後、デッキをシャッフルする。",
+        "en": "[Once per turn] Select 1 Member on your opponent's Stage. Place 1 \"Oozora Subaru\" with the same Bloom Level as the Member just selected from your Deck onto the Stage. Shuffle your Deck. \n",
+        "fr": "[Chaque tour, une fois] Choisissez 1 membre sur la scène de l'adversaire. Placez 1 \"Oozora Subaru\" de votre deck avec le même niveau de Bloom que le membre choisi précédemment sur la scène. Mélangez votre deck.",
+        "es": "[Cada turno una vez] Elige 1 miembro en el Escenario del oponente. Envía 1 \"大空スバル\" con el mismo nivel de Bloom que el miembro elegido al Escenario desde tu Mazo. Baraja tu Mazo."
+      }
+    },
+    "spSkill": null,
+    "id": "hBP09-001",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP09/hBP09-001_P_02.png"
+  },
+  {
+    "image": "cardListImages/hBP09/hBP09-001_P_03.png",
+    "name": "大空スバル",
+    "type": "主推",
+    "product": "PR卡",
+    "color": "白",
+    "life": 5,
+    "stageSkill": {
+      "name": "秩序を守る署長",
+      "effect": "自己所有的「大空スバル」藝能需要的白色吶喊卡數量-1。"
+    },
+    "oshiSkill": {
+      "holoPower": -2,
+      "name": "大空警察出動！",
+      "effect": {
+        "zh-TW": "[每個回合一次]選擇對手舞台上的1位成員。從自己的牌組將1張與剛才選擇的成員相同綻放等級的「大空スバル」放到舞台上。將牌組重新洗牌。",
+        "ja": "[各ターンに1回]相手のステージ上のメンバーを1人選択する。自分のデッキから、先ほど選択したメンバーと同じブルームレベルの「大空スバル」を1枚ステージ上に出す。その後、デッキをシャッフルする。",
+        "en": "[Once per turn] Select 1 Member on your opponent's Stage. Place 1 \"Oozora Subaru\" with the same Bloom Level as the Member just selected from your Deck onto the Stage. Shuffle your Deck. \n",
+        "fr": "[Chaque tour, une fois] Choisissez 1 membre sur la scène de l'adversaire. Placez 1 \"Oozora Subaru\" de votre deck avec le même niveau de Bloom que le membre choisi précédemment sur la scène. Mélangez votre deck.",
+        "es": "[Cada turno una vez] Elige 1 miembro en el Escenario del oponente. Envía 1 \"大空スバル\" con el mismo nivel de Bloom que el miembro elegido al Escenario desde tu Mazo. Baraja tu Mazo."
+      }
+    },
+    "spSkill": null,
+    "id": "hBP09-001",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP09/hBP09-001_P_03.png"
+  },
+  {
+    "image": "cardListImages/hBP09/hBP09-001_P_04.png",
+    "name": "大空スバル",
+    "type": "主推",
+    "product": "PR卡",
+    "color": "白",
+    "life": 5,
+    "stageSkill": {
+      "name": "秩序を守る署長",
+      "effect": "自己所有的「大空スバル」藝能需要的白色吶喊卡數量-1。"
+    },
+    "oshiSkill": {
+      "holoPower": -2,
+      "name": "大空警察出動！",
+      "effect": {
+        "zh-TW": "[每個回合一次]選擇對手舞台上的1位成員。從自己的牌組將1張與剛才選擇的成員相同綻放等級的「大空スバル」放到舞台上。將牌組重新洗牌。",
+        "ja": "[各ターンに1回]相手のステージ上のメンバーを1人選択する。自分のデッキから、先ほど選択したメンバーと同じブルームレベルの「大空スバル」を1枚ステージ上に出す。その後、デッキをシャッフルする。",
+        "en": "[Once per turn] Select 1 Member on your opponent's Stage. Place 1 \"Oozora Subaru\" with the same Bloom Level as the Member just selected from your Deck onto the Stage. Shuffle your Deck. \n",
+        "fr": "[Chaque tour, une fois] Choisissez 1 membre sur la scène de l'adversaire. Placez 1 \"Oozora Subaru\" de votre deck avec le même niveau de Bloom que le membre choisi précédemment sur la scène. Mélangez votre deck.",
+        "es": "[Cada turno una vez] Elige 1 miembro en el Escenario del oponente. Envía 1 \"大空スバル\" con el mismo nivel de Bloom que el miembro elegido al Escenario desde tu Mazo. Baraja tu Mazo."
+      }
+    },
+    "spSkill": null,
+    "id": "hBP09-001",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP09/hBP09-001_P_04.png"
+  },
+  {
+    "image": "cardListImages/hBP09/hBP09-001_P_05.png",
+    "name": "大空スバル",
+    "type": "主推",
+    "product": "PR卡",
+    "color": "白",
+    "life": 5,
+    "stageSkill": {
+      "name": "秩序を守る署長",
+      "effect": "自己所有的「大空スバル」藝能需要的白色吶喊卡數量-1。"
+    },
+    "oshiSkill": {
+      "holoPower": -2,
+      "name": "大空警察出動！",
+      "effect": {
+        "zh-TW": "[每個回合一次]選擇對手舞台上的1位成員。從自己的牌組將1張與剛才選擇的成員相同綻放等級的「大空スバル」放到舞台上。將牌組重新洗牌。",
+        "ja": "[各ターンに1回]相手のステージ上のメンバーを1人選択する。自分のデッキから、先ほど選択したメンバーと同じブルームレベルの「大空スバル」を1枚ステージ上に出す。その後、デッキをシャッフルする。",
+        "en": "[Once per turn] Select 1 Member on your opponent's Stage. Place 1 \"Oozora Subaru\" with the same Bloom Level as the Member just selected from your Deck onto the Stage. Shuffle your Deck. \n",
+        "fr": "[Chaque tour, une fois] Choisissez 1 membre sur la scène de l'adversaire. Placez 1 \"Oozora Subaru\" de votre deck avec le même niveau de Bloom que le membre choisi précédemment sur la scène. Mélangez votre deck.",
+        "es": "[Cada turno una vez] Elige 1 miembro en el Escenario del oponente. Envía 1 \"大空スバル\" con el mismo nivel de Bloom que el miembro elegido al Escenario desde tu Mazo. Baraja tu Mazo."
+      }
+    },
+    "spSkill": null,
+    "id": "hBP09-001",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP09/hBP09-001_P_05.png"
+  },
+  {
     "image": "cardListImages/hBP09/hBP09-002_OSR.png",
     "name": "轟はじめ",
     "type": "主推",
@@ -66318,11 +66930,11 @@
       "holoPower": -2,
       "name": "あふれる牛丼愛",
       "effect": {
-        "zh-TW": "[每個回合一次]將自己存檔區的1張吶喊卡發送給自己的「白銀ノエル」。如果自己的存檔區有3張以上的「牛丼」，則將自己存檔區的1~2張吶喊卡分配給自己的「白銀ノエル」。",
-        "ja": "[各ターンに1回]\n自分のアーカイブからエールカードを1枚、「白銀ノエル」に送る。自分のアーカイブに「牛丼」が3枚以上ある場合、自分のアーカイブからエールカードを1～2枚「白銀ノエル」に割り振る。",
-        "en": "[Once per turn] Send 1 Cheer Card from your Archive to your \"白銀ノエル\". If you have 3 or more \"牛丼\" in your Archive, distribute 1-2 Cheer Cards from your Archive to your \"白銀ノエル\".",
-        "fr": "[Chaque tour, une fois] Envoyez 1 carte d'encouragement de votre zone d'archive à votre \"Shirogane Noel\". Si votre zone d'archive contient 3 \"Gyudon\" ou plus, envoyez 1 à 2 cartes d'encouragement de votre zone d'archive à votre \"Shirogane Noel\".",
-        "es": "[Cada turno una vez] Envía 1 carta de Cheer de tu Archivo a tu \"白銀ノエル\". Si tu Archivo tiene 3 o más \"牛丼\", envía 1 o 2 cartas de Cheer de tu Archivo a tu \"白銀ノエル\"."
+        "zh-TW": "[每個回合一次]將自己存檔區的1張吶喊卡發送給自己的「白銀ノエル」。如果自己存檔區的「牛丼」有3張以上，則將自己存檔區的1~2張吶喊卡分配給自己的「白銀ノエル」。",
+        "ja": "[毎ターン１回]自分のアーカイブからエールカード１枚を自分の「白銀ノエル」に送る。自分のアーカイブの「牛丼」が３枚以上ある場合、自分のアーカイブからエールカード１～２枚を自分の「白銀ノエル」に送る。",
+        "en": "[Once per turn] Send 1 Cheer card from your Archive to your \"Shirakami Fubuki\". If you have 3 or more \"Gyudon\" in your Archive, send 1-2 Cheer cards from your Archive to your \"Shirakami Fubuki\".",
+        "fr": "[Une fois par tour] Envoyez 1 carte d'encouragement de votre Archive à votre \"Shirogane Noel\". Si vous avez 3 cartes ou plus de \"Gyudon\" dans votre Archive, distribuez 1 à 2 cartes d'encouragement de votre Archive à votre \"Shirogane Noel\".",
+        "es": "[Cada turno una vez] Envía 1 carta Cheer de tu Archivo a tu \"白銀ノエル\". Si \"牛丼\" en tu Archivo es de 3 o más, asigna 1-2 cartas Cheer de tu Archivo a tu \"白銀ノエル\"."
       }
     },
     "spSkill": null,
@@ -66344,11 +66956,11 @@
       "holoPower": -2,
       "name": "あふれる牛丼愛",
       "effect": {
-        "zh-TW": "[每個回合一次]將自己存檔區的1張吶喊卡發送給自己的「白銀ノエル」。如果自己的存檔區有3張以上的「牛丼」，則將自己存檔區的1~2張吶喊卡分配給自己的「白銀ノエル」。",
-        "ja": "[各ターンに1回]\n自分のアーカイブからエールカードを1枚、「白銀ノエル」に送る。自分のアーカイブに「牛丼」が3枚以上ある場合、自分のアーカイブからエールカードを1～2枚「白銀ノエル」に割り振る。",
-        "en": "[Once per turn] Send 1 Cheer Card from your Archive to your \"白銀ノエル\". If you have 3 or more \"牛丼\" in your Archive, distribute 1-2 Cheer Cards from your Archive to your \"白銀ノエル\".",
-        "fr": "[Chaque tour, une fois] Envoyez 1 carte d'encouragement de votre zone d'archive à votre \"Shirogane Noel\". Si votre zone d'archive contient 3 \"Gyudon\" ou plus, envoyez 1 à 2 cartes d'encouragement de votre zone d'archive à votre \"Shirogane Noel\".",
-        "es": "[Cada turno una vez] Envía 1 carta de Cheer de tu Archivo a tu \"白銀ノエル\". Si tu Archivo tiene 3 o más \"牛丼\", envía 1 o 2 cartas de Cheer de tu Archivo a tu \"白銀ノエル\"."
+        "zh-TW": "[每個回合一次]將自己存檔區的1張吶喊卡發送給自己的「白銀ノエル」。如果自己存檔區的「牛丼」有3張以上，則將自己存檔區的1~2張吶喊卡分配給自己的「白銀ノエル」。",
+        "ja": "[毎ターン１回]自分のアーカイブからエールカード１枚を自分の「白銀ノエル」に送る。自分のアーカイブの「牛丼」が３枚以上ある場合、自分のアーカイブからエールカード１～２枚を自分の「白銀ノエル」に送る。",
+        "en": "[Once per turn] Send 1 Cheer card from your Archive to your \"Shirakami Fubuki\". If you have 3 or more \"Gyudon\" in your Archive, send 1-2 Cheer cards from your Archive to your \"Shirakami Fubuki\".",
+        "fr": "[Une fois par tour] Envoyez 1 carte d'encouragement de votre Archive à votre \"Shirogane Noel\". Si vous avez 3 cartes ou plus de \"Gyudon\" dans votre Archive, distribuez 1 à 2 cartes d'encouragement de votre Archive à votre \"Shirogane Noel\".",
+        "es": "[Cada turno una vez] Envía 1 carta Cheer de tu Archivo a tu \"白銀ノエル\". Si \"牛丼\" en tu Archivo es de 3 o más, asigna 1-2 cartas Cheer de tu Archivo a tu \"白銀ノエル\"."
       }
     },
     "spSkill": null,
@@ -66370,11 +66982,11 @@
       "holoPower": -2,
       "name": "あふれる牛丼愛",
       "effect": {
-        "zh-TW": "[每個回合一次]將自己存檔區的1張吶喊卡發送給自己的「白銀ノエル」。如果自己的存檔區有3張以上的「牛丼」，則將自己存檔區的1~2張吶喊卡分配給自己的「白銀ノエル」。",
-        "ja": "[各ターンに1回]\n自分のアーカイブからエールカードを1枚、「白銀ノエル」に送る。自分のアーカイブに「牛丼」が3枚以上ある場合、自分のアーカイブからエールカードを1～2枚「白銀ノエル」に割り振る。",
-        "en": "[Once per turn] Send 1 Cheer Card from your Archive to your \"白銀ノエル\". If you have 3 or more \"牛丼\" in your Archive, distribute 1-2 Cheer Cards from your Archive to your \"白銀ノエル\".",
-        "fr": "[Chaque tour, une fois] Envoyez 1 carte d'encouragement de votre zone d'archive à votre \"Shirogane Noel\". Si votre zone d'archive contient 3 \"Gyudon\" ou plus, envoyez 1 à 2 cartes d'encouragement de votre zone d'archive à votre \"Shirogane Noel\".",
-        "es": "[Cada turno una vez] Envía 1 carta de Cheer de tu Archivo a tu \"白銀ノエル\". Si tu Archivo tiene 3 o más \"牛丼\", envía 1 o 2 cartas de Cheer de tu Archivo a tu \"白銀ノエル\"."
+        "zh-TW": "[每個回合一次]將自己存檔區的1張吶喊卡發送給自己的「白銀ノエル」。如果自己存檔區的「牛丼」有3張以上，則將自己存檔區的1~2張吶喊卡分配給自己的「白銀ノエル」。",
+        "ja": "[毎ターン１回]自分のアーカイブからエールカード１枚を自分の「白銀ノエル」に送る。自分のアーカイブの「牛丼」が３枚以上ある場合、自分のアーカイブからエールカード１～２枚を自分の「白銀ノエル」に送る。",
+        "en": "[Once per turn] Send 1 Cheer card from your Archive to your \"Shirakami Fubuki\". If you have 3 or more \"Gyudon\" in your Archive, send 1-2 Cheer cards from your Archive to your \"Shirakami Fubuki\".",
+        "fr": "[Une fois par tour] Envoyez 1 carte d'encouragement de votre Archive à votre \"Shirogane Noel\". Si vous avez 3 cartes ou plus de \"Gyudon\" dans votre Archive, distribuez 1 à 2 cartes d'encouragement de votre Archive à votre \"Shirogane Noel\".",
+        "es": "[Cada turno una vez] Envía 1 carta Cheer de tu Archivo a tu \"白銀ノエル\". Si \"牛丼\" en tu Archivo es de 3 o más, asigna 1-2 cartas Cheer de tu Archivo a tu \"白銀ノエル\"."
       }
     },
     "spSkill": null,
@@ -67005,6 +67617,52 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP09/hBP09-012_SR.png"
   },
   {
+    "image": "cardListImages/hCO02/hBP09-012_SR.png",
+    "name": "大空スバル",
+    "type": "成員",
+    "tag": "#JP / #2期生 / #トリ",
+    "product": "エクストリーマーカップ25-26 Final オフィシャルホロカコレクションA",
+    "color": "白",
+    "hp": 160,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": {
+      "name": "BIG3懇親会 side S",
+      "effect": {
+        "zh-TW": "如果自己的主推為「大空スバル」，且對手的holo能量有2張以上，將自己牌組上方的1張牌放到holo能量區。「BIG3懇親会 side S」每個回合只能使用一次。",
+        "ja": "自分の推しホロメンが「大空スバル」で、相手のホロエネルギーが2枚以上ある場合、自分のデッキの上からカードを1枚ホロエネルギー置き場に置く。「BIG3懇親会 side S」はこのカードの効果以外では使用できない。\nLIMITED：このカードは各ターンに1枚しか使用できない。",
+        "en": "If your Oshi is \"大空スバル\" and your opponent has 2 or more Holo Energy, place the top card of your Deck into your Holo Energy Zone. \"BIG3懇親会 side S\" can only be used once per turn.",
+        "fr": "Si votre Oshi est \"Oozora Subaru\", et que l'adversaire a 2 holo énergies ou plus, envoyez la carte du dessus de votre deck dans la zone d'énergie holo. \"BIG3 Kenshinkai side S\" ne peut être utilisé qu'une fois par tour.",
+        "es": "Si tu Oshi es \"大空スバル\" y el Holo Power del oponente tiene 2 o más cartas, envía la carta superior de tu Mazo a la zona de Holo Power. \"BIG3懇親会 side S\" solo se puede usar una vez por partida.\n"
+      }
+    },
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_white.png",
+        "icons/arts_white.png",
+        "icons/arts_null.png"
+      ],
+      "name": "もつのおかわりください",
+      "damage": "80+",
+      "specialAttackImage": null,
+      "effect": {
+        "zh-TW": "如果自己的成員在之前對手回合中被擊倒，這個藝能傷害+50。",
+        "ja": "自分のメンバーが前の相手ターン中にダウンした場合、この「アーツ」のダメージ+50。",
+        "en": "If your Member was Downed during the opponent's last turn, your Arts damage +50.",
+        "fr": "Si un de vos membres a été mis K.O. pendant le tour précédent de l'adversaire, les dégâts d'arts +50.",
+        "es": "Si un miembro tuyo fue K.O. durante el turno anterior del oponente, el daño de Arts +50.\n"
+      }
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP09-012",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCO02/hBP09-012_SR.png"
+  },
+  {
     "image": "cardListImages/hBP09/hBP09-013_U.png",
     "name": "大空スバル",
     "type": "成員",
@@ -67202,11 +67860,11 @@
     "effectG": {
       "name": "たゆまぬダンストレーニング",
       "effect": {
-        "zh-TW": "如果自己的舞台上有3位以上的成員，這個成員交棒需要的無色吶喊卡數量-1。",
-        "ja": "自分のステージにメンバーが３人以上いる場合、このメンバーのバトンに必要な無色エールカードの枚数－１。\n",
-        "en": "If you have 3 or more Members on your Stage, the number of colorless Cheer cards required for this Member's handover -1.",
-        "fr": "Si vous avez 3 membres ou plus sur votre Scène, le nombre de cartes d'Encouragement incolores nécessaires pour le relais de ce membre diminue de 1.",
-        "es": "Si hay 3 o más miembros en tu Escenario, la cantidad de cartas Cheer incoloras necesarias para el traspaso de este miembro -1."
+        "zh-TW": "如果自己舞台上的成員有3位以上，這個成員交棒需要的無色吶喊卡數量-1。",
+        "ja": "自分のステージのメンバーが３人以上いる場合、このメンバーの交代に必要な無色のエールカードの枚数－１。",
+        "en": "If you have 3 or more Members on your Stage, the number of colorless Cheer cards required for this Member's Handover is reduced by 1.",
+        "fr": "Si vous avez 3 Membres ou plus sur votre Scène, le nombre de cartes d'encouragement incolores nécessaires pour le relais de ce Membre est réduit de 1.",
+        "es": "Si hay 3 o más Miembros en tu Escenario, la cantidad de cartas Cheer incoloras necesarias para el relevo de este Miembro se reduce en 1."
       }
     },
     "art1": {
@@ -68486,11 +69144,11 @@
     "effectC": {
       "name": "ミオしゃの行く道",
       "effect": {
-        "zh-TW": "可以將自己存檔區的吉祥物與粉絲總和2張依照喜歡的順序放回牌組上方：自己的1位成員HP回復100點。",
-        "ja": "自分アーカイブのマスコットとファンを合計2枚、好きな順番でデッキの一番上に置くことができる。自分のメンバー1人のHPを100回復する。\n",
-        "en": "Can return 2 Mascots and Fans from your Archive to the top of your Deck in any order: Restore 100 HP to 1 of your Members.",
-        "fr": "[Vous pouvez remettre 2 mascottes et fans de votre zone d'archive dans le dessus de votre deck, dans l'ordre de votre choix] Votre membre récupère 100 HP.",
-        "es": "Puedes devolver 2 Mascotas y Fans de tu Archivo al tope de tu Mazo en el orden que prefieras: 1 miembro tuyo recupera 100 HP.\n"
+        "zh-TW": "可以將自己存檔區的吉祥物與粉絲合計2張依照喜歡的順序放回牌組上方：自己的1位成員HP回復100點。",
+        "ja": "自分のアーカイブのマスコットとファンを合計２枚、好きな順番でデッキの上に戻すことができる：自分のメンバー１人のHPを１００回復する。",
+        "en": "You may place up to 2 Mascots and Fans from your Archive on top of your Deck in any order: Restore 100 HP to your Member in 1st position.",
+        "fr": "Vous pouvez placer 2 cartes au total, Mascottes et Fans, de votre Archive sur le dessus de votre Deck dans l'ordre de votre choix : 1 de vos Membres récupère 100 points de vie.",
+        "es": "Puedes devolver 2 cartas en total de Mascotas y Fans de tu Archivo a la parte superior de tu Mazo en el orden que prefieras: la Vida de 1 de tus Miembros se recupera 100 puntos."
       }
     },
     "effectB": null,
@@ -68533,11 +69191,11 @@
     "effectC": {
       "name": "ミオしゃの行く道",
       "effect": {
-        "zh-TW": "可以將自己存檔區的吉祥物與粉絲總和2張依照喜歡的順序放回牌組上方：自己的1位成員HP回復100點。",
-        "ja": "自分アーカイブのマスコットとファンを合計2枚、好きな順番でデッキの一番上に置くことができる。自分のメンバー1人のHPを100回復する。\n",
-        "en": "Can return 2 Mascots and Fans from your Archive to the top of your Deck in any order: Restore 100 HP to 1 of your Members.",
-        "fr": "[Vous pouvez remettre 2 mascottes et fans de votre zone d'archive dans le dessus de votre deck, dans l'ordre de votre choix] Votre membre récupère 100 HP.",
-        "es": "Puedes devolver 2 Mascotas y Fans de tu Archivo al tope de tu Mazo en el orden que prefieras: 1 miembro tuyo recupera 100 HP.\n"
+        "zh-TW": "可以將自己存檔區的吉祥物與粉絲合計2張依照喜歡的順序放回牌組上方：自己的1位成員HP回復100點。",
+        "ja": "自分のアーカイブのマスコットとファンを合計２枚、好きな順番でデッキの上に戻すことができる：自分のメンバー１人のHPを１００回復する。",
+        "en": "You may place up to 2 Mascots and Fans from your Archive on top of your Deck in any order: Restore 100 HP to your Member in 1st position.",
+        "fr": "Vous pouvez placer 2 cartes au total, Mascottes et Fans, de votre Archive sur le dessus de votre Deck dans l'ordre de votre choix : 1 de vos Membres récupère 100 points de vie.",
+        "es": "Puedes devolver 2 cartas en total de Mascotas y Fans de tu Archivo a la parte superior de tu Mazo en el orden que prefieras: la Vida de 1 de tus Miembros se recupera 100 puntos."
       }
     },
     "effectB": null,
@@ -71562,6 +72220,50 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP09/hBP09-075_SR.png"
   },
   {
+    "image": "cardListImages/hCO02/hBP09-075_SR.png",
+    "name": "ネリッサ・レイヴンクロフト",
+    "type": "成員",
+    "tag": "#EN / #Advent / #歌 / #トリ",
+    "product": "エクストリーマーカップ25-26 Final オフィシャルホロカコレクションA",
+    "color": "紫",
+    "hp": 140,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": null,
+    "effectG": {
+      "name": "魔人のオフモード",
+      "effect": {
+        "zh-TW": "[限定中心位置]使用了自己的主推技能時，這個回合中，自己的聯動成員「ネリッサ・レイヴンクロフト」藝能需要的紫色吶喊卡數量-1。",
+        "ja": "[センター限定]自分の推しスキルを使用した際、このターン中、自分のコラボメンバー「ネリッサ・レイヴンクロフト」のアーツに必要な紫色のチアーカードの枚数-1。",
+        "en": "[Center Only] When you use your Oshi Skill, during this turn, the number of purple Cheer cards required for your Collab Member \"Nerissa Ravencroft\" Arts -1.\n",
+        "fr": "[Position centrale uniquement] Lorsque vous utilisez votre compétence Oshi, pendant ce tour, le nombre de cartes d'encouragement violettes nécessaires pour les arts de votre membre collab \"Nerissa Ravencroft\" -1.",
+        "es": "[Solo posición central] Cuando uses tu Habilidad Oshi, las cartas de Cheer moradas necesarias para los Arts de tu miembro Collab \"ネリッサ・レイヴンクロフト\" -1 este turno."
+      }
+    },
+    "art1": {
+      "image": [
+        "icons/arts_purple.png"
+      ],
+      "name": "安らぎの歌",
+      "damage": 40,
+      "specialAttackImage": null,
+      "effect": {
+        "zh-TW": "如果自己的主推為「ネリッサ・レイヴンクロフト」，從自己的牌組抽1張牌，將自己的1張手牌放到holo能量區。",
+        "ja": "自分の推しホロメンが「ネリッサ・レイヴンクロフト」の場合、自分のデッキからカードを1枚引く。その後、自分の手札を1枚ホロエネルギー置き場に置く。",
+        "en": "If your Oshi is \"ネリッサ・レイヴンクロフト\", draw 1 card from your Deck, and place 1 card from your Hand into your Holo Energy Zone.",
+        "fr": "Si votre Oshi est \"Nerissa Ravencroft\", piochez 1 carte de votre Deck et placez 1 carte de votre main dans votre zone Holo Power.",
+        "es": "Si tu Oshi es \"Nerissa Ravencroft\", roba 1 carta de tu mazo y pon 1 carta de tu mano en la Zona Holo Power."
+      }
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP09-075",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCO02/hBP09-075_SR.png"
+  },
+  {
     "image": "cardListImages/hBP09/hBP09-076_RR.png",
     "name": "ネリッサ・レイヴンクロフト",
     "type": "成員",
@@ -72288,6 +72990,45 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP09/hBP09-085_U.png"
   },
   {
+    "image": "cardListImages/hCO02/hBP09-085_SR.png",
+    "name": "夏色まつり",
+    "type": "成員",
+    "tag": "#JP / #1期生 / #シューター",
+    "product": "エクストリーマーカップ25-26 Final オフィシャルホロカコレクションA",
+    "color": "黃",
+    "hp": 140,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": {
+      "name": "授業中にこっそり……",
+      "effect": {
+        "zh-TW": "如果自己的主推為「夏色まつり」，可以將自己存檔區1張標示LIMITED的支援卡放回牌組下方：選擇自己舞台上的1位「夏色まつり」。這個回合中，該成員的藝能傷害+30。",
+        "ja": "自分の推しホロメンが「夏色まつり」の場合、自分のアーカイブからLIMITEDの「サポート」カードを1枚デッキの下に戻す：自分のステージにいる「夏色まつり」を1人選び、このターンの間、そのメンバーの「アーツ」のダメージ+30。",
+        "en": "If your Oshi is \"夏色まつり\", you may place 1 LIMITED Support card from your Archive to the bottom of your Deck: Choose 1 \"夏色まつり\" on your Stage. During this turn, that Member's Arts damage +30.",
+        "fr": "Si votre Oshi est \"Natsuiro Matsuri\", vous pouvez retourner 1 carte de support LIMITED de votre zone d'archive dans le dessous de votre deck : Choisissez 1 \"Natsuiro Matsuri\" sur votre scène. Pendant ce tour, les dégâts d'arts de ce membre +30.",
+        "es": "Si tu Oshi es \"夏色まつり\", puedes devolver 1 carta de Soporte LIMITED de tu Archivo al fondo de tu Mazo: Elige 1 \"夏色まつり\" en tu Escenario. El daño de Arts de ese miembro +30 este turno.\n"
+      }
+    },
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_yellow.png",
+        "icons/arts_null.png"
+      ],
+      "name": "かわいく描けたから見てよ～",
+      "damage": 50,
+      "specialAttackImage": null,
+      "effect": null
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP09-085",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCO02/hBP09-085_SR.png"
+  },
+  {
     "image": "cardListImages/hBP09/hBP09-086_R.png",
     "name": "夏色まつり",
     "type": "成員",
@@ -72687,11 +73428,11 @@
     "tag": null,
     "product": "補充包「ボリュームヴォルテックス (hBP09)」",
     "supportEffect": {
-      "zh-TW": "將自己的1張holo能量放到存檔區才能使用。\n\n從自己的牌組展示1張與自己主推相同卡名且有聯動效果的成員並加入手牌。將牌組重新洗牌。",
-      "ja": "自分のホロエネルギーを1枚、アーカイブに置くことで使用できる。\n\n自分のデッキから、自分の推しと同じカード名の、コラボ効果を持つメンバーを1枚公開し、手札に加える。デッキをシャッフルする。\n",
-      "en": "You may place 1 of your Holo Energy into the Archive to use this. Reveal 1 Member with the same name as your Oshi and with a Collab effect from your Deck, and add it to your Hand. Shuffle your Deck. LIMITED: This can only be used once per turn.",
-      "fr": "LIMITED : Vous ne pouvez utiliser qu'une carte par tour.\nPour utiliser cette carte, placez 1 Holo Power de votre Archive dans la zone d'Archive. Montrez 1 membre de votre Deck qui a le même nom que votre Oshi et qui a un effet de Collab, et ajoutez-le à votre Main. Mélangez votre Deck.",
-      "es": "Solo puedes usar esto si colocas 1 Holo Power de tu Archivo en la Zona de Holo Power.\n\nMuestra 1 miembro con el mismo nombre que tu Oshi y con un efecto Collab de tu mazo y añádelo a tu mano. Baraja tu mazo.\n"
+      "zh-TW": "將自己的1張holo能量放到存檔區才能使用。\n\n從自己的牌組展示1張與自己主推相同卡名且持有聯動效果的成員並加入手牌。將牌組重新洗牌。",
+      "ja": "自分のホロパワー１をアーカイブに置くことで使用できる。\n自分のデッキから自分の推しと同じカード名で、コラボ効果を持つメンバーを１枚見せ、手札に加える。デッキをシャッフルする。",
+      "en": "You can only use this by placing 1 of your Holo Energy into your Archive.\nReveal 1 Member with the same name as your Oshi and a Collab effect from your Deck and add it to your Hand. Shuffle your Deck.",
+      "fr": "Vous ne pouvez utiliser cet effet qu'en plaçant 1 de vos Holo Power dans votre Archive.\nMontrez 1 Membre avec le même nom que votre Oshi et possédant un effet de Collab de votre Deck et ajoutez-le à votre Main. Mélangez votre Deck.",
+      "es": "Solo puedes usar este efecto si pones 1 de tu holo energía en tu Archivo.\n\nMuestra 1 Miembro con el mismo nombre que tu Oshi y con efecto Collab de tu Mazo y añádelo a tu Mano. Baraja tu Mazo."
     },
     "id": "hBP09-090",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP09/hBP09-090_C.png"
@@ -72783,11 +73524,11 @@
     "tag": "#ラミィのお酒",
     "product": "補充包「ボリュームヴォルテックス (hBP09)」",
     "supportEffect": {
-      "zh-TW": "自己的主推為「雪花ラミィ」才能使用。\n\n選擇對手的中心成員或聯動成員。給予該成員10點特殊傷害。如果自己的存檔區有2張以上的「君に乾杯」，則給予該成員40點特殊傷害。\n\n「君に乾杯」每個回合只能使用一次。",
-      "ja": "自分の推しが「雪花ラミィ」の場合のみ使用できる。\n\n相手のセンターホロメンかコラボホロメンを選択する。そのメンバーに10点特殊ダメージを与える。自分のアーカイブに「君に乾杯」が2枚以上ある場合、そのメンバーに40点特殊ダメージを与える。\n\n「君に乾杯」は1ターンに1度しか使用できない。",
-      "en": "Usable only if your Oshi is \"Yukihana Lamy\".\n\nChoose your opponent's Center Member or Collab Member. Inflict 10 Special Damage to that Member. If you have 2 or more \"Kimi ni Kanpai\" in your Archive, inflict 40 Special Damage to that Member.\n\n\"Kimi ni Kanpai\" can only be used once per turn.\n",
-      "fr": "\"Kimini Kanpai\" ne peut être utilisée qu'une fois par tour.\nVous ne pouvez utiliser cette carte que si votre Oshi est \"Yukihana Lamy\".\nChoisissez le membre Centre ou le membre Collab de l'adversaire. Infligez 10 dégâts spéciaux à ce membre. Si vous avez 2 cartes ou plus de \"Kimini Kanpai\" dans votre Archive, infligez 40 dégâts spéciaux à ce membre.",
-      "es": "Solo puedes usar esto si tu Oshi es \"雪花ラミィ\".\n\nSelecciona el miembro Central o Collab del oponente. Inflige 10 de daño especial a ese miembro. Si hay 2 o más \"君に乾杯\" en tu Archivo, inflige 40 de daño especial a ese miembro.\n\n\"君に乾杯\" solo se puede usar una vez por turno.\n"
+      "zh-TW": "自己的主推為「雪花ラミィ」才能使用。\n\n選擇對手的中心成員或聯動成員。給予該成員10點特殊傷害。如果自己存檔區的「君に乾杯」有2張以上，則給予該成員40點特殊傷害。\n\n「君に乾杯」每個回合只能使用一次。",
+      "ja": "自分の推しが「雪花ラミィ」である場合のみ使用できる。\n\n相手のセンターメンバーまたはコラボメンバーを１人選択する。そのメンバーに１０点の特殊ダメージを与える。自分のアーカイブの「君に乾杯」が２枚以上ある場合、そのメンバーに４０点の特殊ダメージを与える。\n\n「君に乾杯」は１ターンに１度しか使用できない。",
+      "en": "You can only use this if your Oshi is \"Yuki Hanami Lamy\".\nChoose an opponent's Center Member or Collab Member. Deal 10 Special damage to that Member. If you have 2 or more \"Kimi ni Kanpai\" in your Archive, deal 40 Special damage to that Member.\n\n\"Kimi ni Kanpai\" can only be used once per turn.",
+      "fr": "Vous ne pouvez utiliser ceci que si votre Oshi est \"Yuki Kamy\" (Yukihana Lamy).\n\nChoisissez un Membre Centre ou un Membre en Collab de votre adversaire. Infligez 10 dégâts spéciaux à ce Membre. Si vous avez 2 \"Kimi ni Kanpai\" ou plus dans votre Archive, infligez 40 dégâts spéciaux à ce Membre.\n\n\"Kimi ni Kanpai\" ne peut être utilisé qu'une fois par tour.",
+      "es": "Solo puedes usar esto si tu Oshi es \"雪花ラミィ\".\n\nSelecciona 1 Miembro Centro o Miembro Collab de tu oponente. Inflige 10 de daño especial a dicho Miembro. Si hay 2 o más \"君に乾杯\" en tu Archivo, inflige 40 de daño especial a dicho Miembro.\n\n\"君に乾杯\" solo puede usarse una vez por turno."
     },
     "id": "hBP09-095",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP09/hBP09-095_C.png"
@@ -74029,11 +74770,11 @@
     "effectC": {
       "name": "船長と海に行きたいって～？",
       "effect": {
-        "zh-TW": "如果在自己後攻的第一個回合，從自己的牌組展示1張有綻放效果的「宝鐘マリン」並加入手牌。將牌組重新洗牌。",
-        "ja": "自分が後攻の1ターン目に、自分のデッキからブルーム効果を持つ「宝鐘マリン」1枚を公開し、手札に加える。その後、デッキをシャッフルする。\n",
-        "en": "If it is your first turn going second, reveal 1 \"宝鐘マリン\" with a Bloom effect from your Deck and add it to your Hand. Shuffle your Deck.",
-        "fr": "Si c'est votre premier tour en étant le second joueur, montrez 1 \"宝鐘マリン\" avec un effet de Bloom de votre deck et ajoutez-la à votre main. Mélangez votre deck.",
-        "es": "Si es tu primer turno con el Segundo Jugador, muestra 1 \"宝鐘マリン\" con efecto Bloom de tu Mazo y añádela a tu Mano. Baraja tu Mazo.\n"
+        "zh-TW": "如果在自己後攻的第一個回合，從自己的牌組展示1張持有綻放效果的「宝鐘マリン」並加入手牌。將牌組重新洗牌。",
+        "ja": "自分の後攻１ターン目に、自分のデッキからブルーム効果を持つ「宝鐘マリン」を１枚見せ、手札に加える。デッキをシャッフルする。",
+        "en": "If it is your first turn going second, reveal 1 \"Houshou Marine\" with a Bloom effect from your Deck and add it to your Hand. Shuffle your Deck.",
+        "fr": "Si c'est votre premier tour en tant que joueur suivant, montrez 1 \"Houshou Marine\" possédant un effet Bloom de votre Deck et ajoutez-la à votre Main. Mélangez votre Deck.",
+        "es": "Si es tu primer turno y juegas en segundo lugar, muestra 1 \"宝鐘マリン\" con efecto Bloom de tu Mazo y añádelo a tu Mano. Baraja tu Mazo."
       }
     },
     "effectB": null,
@@ -74067,11 +74808,11 @@
     "effectC": {
       "name": "船長と海に行きたいって～？",
       "effect": {
-        "zh-TW": "如果在自己後攻的第一個回合，從自己的牌組展示1張有綻放效果的「宝鐘マリン」並加入手牌。將牌組重新洗牌。",
-        "ja": "自分が後攻の1ターン目に、自分のデッキからブルーム効果を持つ「宝鐘マリン」1枚を公開し、手札に加える。その後、デッキをシャッフルする。\n",
-        "en": "If it is your first turn going second, reveal 1 \"宝鐘マリン\" with a Bloom effect from your Deck and add it to your Hand. Shuffle your Deck.",
-        "fr": "Si c'est votre premier tour en étant le second joueur, montrez 1 \"宝鐘マリン\" avec un effet de Bloom de votre deck et ajoutez-la à votre main. Mélangez votre deck.",
-        "es": "Si es tu primer turno con el Segundo Jugador, muestra 1 \"宝鐘マリン\" con efecto Bloom de tu Mazo y añádela a tu Mano. Baraja tu Mazo.\n"
+        "zh-TW": "如果在自己後攻的第一個回合，從自己的牌組展示1張持有綻放效果的「宝鐘マリン」並加入手牌。將牌組重新洗牌。",
+        "ja": "自分の後攻１ターン目に、自分のデッキからブルーム効果を持つ「宝鐘マリン」を１枚見せ、手札に加える。デッキをシャッフルする。",
+        "en": "If it is your first turn going second, reveal 1 \"Houshou Marine\" with a Bloom effect from your Deck and add it to your Hand. Shuffle your Deck.",
+        "fr": "Si c'est votre premier tour en tant que joueur suivant, montrez 1 \"Houshou Marine\" possédant un effet Bloom de votre Deck et ajoutez-la à votre Main. Mélangez votre Deck.",
+        "es": "Si es tu primer turno y juegas en segundo lugar, muestra 1 \"宝鐘マリン\" con efecto Bloom de tu Mazo y añádelo a tu Mano. Baraja tu Mazo."
       }
     },
     "effectB": null,
@@ -74105,11 +74846,11 @@
     "effectC": {
       "name": "船長と海に行きたいって～？",
       "effect": {
-        "zh-TW": "如果在自己後攻的第一個回合，從自己的牌組展示1張有綻放效果的「宝鐘マリン」並加入手牌。將牌組重新洗牌。",
-        "ja": "自分が後攻の1ターン目に、自分のデッキからブルーム効果を持つ「宝鐘マリン」1枚を公開し、手札に加える。その後、デッキをシャッフルする。\n",
-        "en": "If it is your first turn going second, reveal 1 \"宝鐘マリン\" with a Bloom effect from your Deck and add it to your Hand. Shuffle your Deck.",
-        "fr": "Si c'est votre premier tour en étant le second joueur, montrez 1 \"宝鐘マリン\" avec un effet de Bloom de votre deck et ajoutez-la à votre main. Mélangez votre deck.",
-        "es": "Si es tu primer turno con el Segundo Jugador, muestra 1 \"宝鐘マリン\" con efecto Bloom de tu Mazo y añádela a tu Mano. Baraja tu Mazo.\n"
+        "zh-TW": "如果在自己後攻的第一個回合，從自己的牌組展示1張持有綻放效果的「宝鐘マリン」並加入手牌。將牌組重新洗牌。",
+        "ja": "自分の後攻１ターン目に、自分のデッキからブルーム効果を持つ「宝鐘マリン」を１枚見せ、手札に加える。デッキをシャッフルする。",
+        "en": "If it is your first turn going second, reveal 1 \"Houshou Marine\" with a Bloom effect from your Deck and add it to your Hand. Shuffle your Deck.",
+        "fr": "Si c'est votre premier tour en tant que joueur suivant, montrez 1 \"Houshou Marine\" possédant un effet Bloom de votre Deck et ajoutez-la à votre Main. Mélangez votre Deck.",
+        "es": "Si es tu primer turno y juegas en segundo lugar, muestra 1 \"宝鐘マリン\" con efecto Bloom de tu Mazo y añádelo a tu Mano. Baraja tu Mazo."
       }
     },
     "effectB": null,
@@ -82299,11 +83040,11 @@
     "effectC": {
       "name": "私の元においで～っ",
       "effect": {
-        "zh-TW": "可以將自己的1張手牌放到存檔區：從自己的牌組展示1張標示#FLOW GLOW且有聯動效果的成員並加入手牌。將牌組重新洗牌。",
-        "ja": "自分手札を1枚、アーカイブに置くことができる。自分のデッキから「#FLOW GLOW」の、コラボ効果を持つメンバーを1枚公開し、手札に加える。デッキをシャッフルする。\n",
-        "en": "Can send 1 card from your Hand to your Archive: Reveal 1 Member with the tag #FLOW GLOW and a Collab effect from your Deck and add it to your Hand. Shuffle your Deck.",
-        "fr": "Vous pouvez placer 1 carte de votre Main dans votre Archive : montrez 1 Membre marqué #FLOW GLOW avec un effet Collab de votre Deck et ajoutez-le à votre Main. Mélangez votre Deck.",
-        "es": "Puedes poner 1 carta de tu mano en tu Archivo. Muestra 1 Miembro con la etiqueta #FLOW GLOW y con efecto Collab de tu Mazo y añádelo a tu mano. Baraja tu Mazo."
+        "zh-TW": "可以將自己的1張手牌放到存檔區：從自己的牌組展示1張標示#FLOW GLOW且持有聯動效果的成員並加入手牌。將牌組重新洗牌。",
+        "ja": "自分の手札１枚をアーカイブに置くことができる：自分のデッキから#FLOW GLOWと表示され、コラボ効果を持つメンバーを１枚見せ、手札に加える。デッキをシャッフルする。",
+        "en": "You may place 1 card from your Hand into your Archive: Reveal 1 Member marked with #FLOW GLOW that has a Collab effect from your Deck and add it to your Hand. Shuffle your Deck.",
+        "fr": "Vous pouvez placer 1 carte de votre Main dans votre Archive : Montrez 1 Membre marqué #FLOW GLOW possédant un effet de Collab de votre Deck et ajoutez-le à votre Main. Mélangez votre Deck.",
+        "es": "Puedes poner 1 carta de tu Mano en tu Archivo: Muestra 1 Miembro marcado como #FLOW GLOW con efecto Collab de tu Mazo y añádelo a tu Mano. Baraja tu Mazo."
       }
     },
     "effectB": null,
@@ -82348,11 +83089,11 @@
     "effectC": {
       "name": "私の元においで～っ",
       "effect": {
-        "zh-TW": "可以將自己的1張手牌放到存檔區：從自己的牌組展示1張標示#FLOW GLOW且有聯動效果的成員並加入手牌。將牌組重新洗牌。",
-        "ja": "自分手札を1枚、アーカイブに置くことができる。自分のデッキから「#FLOW GLOW」の、コラボ効果を持つメンバーを1枚公開し、手札に加える。デッキをシャッフルする。\n",
-        "en": "Can send 1 card from your Hand to your Archive: Reveal 1 Member with the tag #FLOW GLOW and a Collab effect from your Deck and add it to your Hand. Shuffle your Deck.",
-        "fr": "Vous pouvez placer 1 carte de votre Main dans votre Archive : montrez 1 Membre marqué #FLOW GLOW avec un effet Collab de votre Deck et ajoutez-le à votre Main. Mélangez votre Deck.",
-        "es": "Puedes poner 1 carta de tu mano en tu Archivo. Muestra 1 Miembro con la etiqueta #FLOW GLOW y con efecto Collab de tu Mazo y añádelo a tu mano. Baraja tu Mazo."
+        "zh-TW": "可以將自己的1張手牌放到存檔區：從自己的牌組展示1張標示#FLOW GLOW且持有聯動效果的成員並加入手牌。將牌組重新洗牌。",
+        "ja": "自分の手札１枚をアーカイブに置くことができる：自分のデッキから#FLOW GLOWと表示され、コラボ効果を持つメンバーを１枚見せ、手札に加える。デッキをシャッフルする。",
+        "en": "You may place 1 card from your Hand into your Archive: Reveal 1 Member marked with #FLOW GLOW that has a Collab effect from your Deck and add it to your Hand. Shuffle your Deck.",
+        "fr": "Vous pouvez placer 1 carte de votre Main dans votre Archive : Montrez 1 Membre marqué #FLOW GLOW possédant un effet de Collab de votre Deck et ajoutez-le à votre Main. Mélangez votre Deck.",
+        "es": "Puedes poner 1 carta de tu Mano en tu Archivo: Muestra 1 Miembro marcado como #FLOW GLOW con efecto Collab de tu Mazo y añádelo a tu Mano. Baraja tu Mazo."
       }
     },
     "effectB": null,
@@ -83179,11 +83920,11 @@
       "damage": 30,
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "如果自己的存檔區有4張以上的支援卡，將自己吶喊牌組上方的1張牌發送給自己標示#Advent的成員。",
-        "ja": "自分のアーカイブにある「サポート」カードが4枚以上ある場合、自分のエールデッキの上からカードを1枚、自分の「#Advent」のメンバーに送る。",
-        "en": "If you have 4 or more Support cards in your Archive, send the top card of your Cheer Deck to a #Advent-marked Member of yours.",
-        "fr": "Si votre Archive contient 4 cartes Support ou plus, envoyez 1 carte du dessus de votre Deck d'encouragement à votre membre de #Advent.",
-        "es": "Si tienes 4 o más cartas de Soporte en tu Archivo, envía la carta superior de tu Mazo Cheer a tu Miembro marcado como #Advent."
+        "zh-TW": "如果自己存檔區的支援卡有4張以上，將自己吶喊牌組上方的1張牌發送給自己標示#Advent的成員。",
+        "ja": "自分のアーカイブのサポートカードが４枚以上ある場合、自分のエールデッキの上から１枚を自分の#Adventと表示されているメンバーに送る。",
+        "en": "If you have 4 or more Support cards in your Archive, send the top card of your Cheer Deck to your Member marked with #Advent.",
+        "fr": "Si vous avez 4 Supports ou plus dans votre Archive, envoyez 1 carte du dessus de votre Deck d'encouragement au Membre que vous avez marqué comme #Advent.",
+        "es": "Si hay 4 o más cartas de Soporte en tu Archivo, envía la carta superior de tu Mazo Cheer a tu Miembro marcado como #Advent."
       }
     },
     "extra": null,
@@ -83449,6 +84190,44 @@
     "extra": null,
     "id": "hSD12-009",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD12/hSD12-009_C.png"
+  },
+  {
+    "image": "cardListImages/hCO02/hSD12-009_SR.png",
+    "name": "古石ビジュー",
+    "type": "成員",
+    "tag": "#EN / #Advent / #ベイビー",
+    "product": "エクストリーマーカップ25-26 Final オフィシャルホロカコレクションA",
+    "color": "紫",
+    "hp": 130,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": {
+      "name": "賑やかな家族",
+      "effect": {
+        "zh-TW": "查看自己牌組上方的3張牌。展示1張標示#Advent的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。",
+        "ja": "自分のデッキの上から3枚のカードを見る。その中から#Advent のメンバーを1枚公開し、手札に加える。残りを好きな順番でデッキの下に戻す。",
+        "en": "Look at the top 3 cards of your Deck. Reveal 1 Member marked #Advent and add it to your Hand. Place the rest at the bottom of your Deck in any order.",
+        "fr": "Regardez les 3 cartes du dessus de votre Deck. Montrez 1 Membre #Advent et ajoutez-le à votre Main. Placez le reste en bas de votre Deck dans l'ordre de votre choix.",
+        "es": "Mira las 3 cartas superiores de tu mazo. Muestra 1 miembro con la etiqueta #Advent y añádelo a tu mano. Coloca el resto debajo de tu mazo en el orden que prefieras."
+      }
+    },
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_null.png"
+      ],
+      "name": "とっても感謝してるの",
+      "damage": 30,
+      "specialAttackImage": null,
+      "effect": null
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hSD12-009",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCO02/hSD12-009_SR.png"
   },
   {
     "image": "cardListImages/hSD12/hSD12-010_U.png",
@@ -85307,11 +86086,11 @@
     "tag": "#きのこ",
     "product": "起始牌組「ライブスタートデッキ 儒烏風亭らでん (hSD15)」",
     "supportEffect": {
-      "zh-TW": "選擇自己舞台上的1位「儒烏風亭らでん」。這個回合中，該成員的藝能傷害+10。如果該成員有3張以上的吶喊卡，則該成員的藝能傷害+20。",
-      "ja": "自分のステージの「儒烏風亭らでん」1人を選ぶ。このターン中、そのメンバーのアーツダメージ+10。そのメンバーにエールカードが3枚以上ある場合、そのメンバーのアーツダメージ+20。\n",
-      "en": "Choose 1 \"Uruu Futei Raden\" on your Stage. During this turn, this Member's Arts deals 10 additional damage. If that Member has 3 or more Cheer Cards, this Member's Arts deals 20 additional damage.",
-      "fr": "Choisissez 1 \"儒烏風亭らでん\" sur votre Scène. Ce tour-ci, les Arts de ce membre +10 dégâts. Si ce membre possède 3 cartes d'encouragement ou plus, alors les Arts de ce membre +20 dégâts.",
-      "es": "Selecciona 1 \"Uruu Futei Raden\" en tu Escenario. Durante este turno, el daño de Arts de ese Miembro +10. Si ese Miembro tiene 3 o más cartas de Cheer, el daño de Arts de ese Miembro +20."
+      "zh-TW": "選擇自己舞台上的1位「儒烏風亭らでん」。這個回合中，該成員的藝能傷害+10。如果該成員的吶喊卡有3張以上，則該成員的藝能傷害+20。",
+      "ja": "自分のステージにいる「儒烏風亭らでん」を１人選択する。このターン中、そのメンバーの芸能ダメージ＋１０。そのメンバーのエールカードが３枚以上ある場合、そのメンバーの芸能ダメージ＋２０。",
+      "en": "Choose 1 \"Urufuu Tei Raden\" on your Stage. That Member gains 10 Arts damage this turn. If that Member has 3 or more Cheer cards, that Member gains 20 Arts damage.",
+      "fr": "Choisissez 1 de vos \"Uruha Rushia\" sur votre Scène. Pendant ce tour, les dégâts d'Arts de ce Membre augmentent de 10. Si vous avez 3 cartes d'encouragement ou plus de ce Membre, les dégâts d'Arts de ce Membre augmentent de 20.",
+      "es": "Selecciona 1 de tus \"儒烏風亭らでん\" en tu Escenario. El daño de Arts de dicho Miembro aumenta en 10 durante este turno. Si hay 3 o más cartas Cheer de dicho Miembro, el daño de Arts de dicho Miembro aumenta en 20."
     },
     "id": "hSD15-010",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD15/hSD15-010_C.png"
@@ -86006,11 +86785,11 @@
       "holoPower": -2,
       "name": "世界を繋げるラップ",
       "effect": {
-        "zh-TW": "[每場比賽一次]如果自己的存檔區有6張以上的成員，這個回合中，自己舞台上所有的「森カリオペ」藝能傷害+30。",
-        "ja": "[1試合に1回]自分のアーカイブに6枚以上のメンバーがいた場合、このターン中、自分のステージ上の「森カリオペ」全てのアーツダメージ+30。",
-        "en": "[Once per game] If you have 6 or more Members in your Archive, during this turn, Arts damage dealt by all \"Mori Calliope\" on your Stage is increased by 30.\n",
-        "fr": "[Une fois par partie] S'il y a 6 membres ou plus dans votre zone d'archive, ce tour-ci, les Arts de tous les \"森カリオペ\" sur votre Scène +30 dégâts.",
-        "es": "[Una vez por partida] Si hay 6 o más miembros en tu Archivo, durante este turno, el daño de Arts de todos los \"森カリオペ\" en tu Escenario aumenta en 30."
+        "zh-TW": "[每場比賽一次]如果自己存檔區的成員有6張以上，這個回合中，自己舞台上所有的「森カリオペ」藝能傷害+30。",
+        "ja": "[１試合に１度]自分のアーカイブのメンバーが６枚以上ある場合、このターン中、自分のステージにいる全ての「森カリオペ」の芸能ダメージ＋３０。",
+        "en": "[Once per game] If you have 6 or more Members in your Archive, all \"Mori Calliope\" Arts damage dealt by you this turn is increased by 30.",
+        "fr": "[Une fois par partie] Si vous avez 6 Membres ou plus dans votre Archive, les dégâts d'Arts de tous vos \"Mori Calliope\" sur votre Scène augmentent de 30 pendant ce tour.",
+        "es": "[Una vez por partida] Si hay 6 o más Miembros en tu Archivo, el daño de Arts de todos los \"森カリオペ\" en tu Escenario aumenta en 30 durante este turno."
       }
     },
     "id": "hSD18-001",
@@ -86293,11 +87072,11 @@
     "effectC": {
       "name": "ペイルライダー",
       "effect": {
-        "zh-TW": "如果自己的存檔區有6張以上的成員，給予對手的中心成員20點特殊傷害。",
-        "ja": "自分のアーカイブにあるメンバーが6枚以上ある場合、相手のセンターメンバーに20点特殊ダメージを与える。",
-        "en": "If you have 6 or more Members in your Archive, deal 20 special damage to your opponent's Center Member.",
-        "fr": "S'il y a 6 membres ou plus dans votre zone d'archive, infligez 20 dégâts spéciaux au membre au Centre de votre adversaire.",
-        "es": "Si tienes 6 o más Miembros en tu Archivo, inflige 20 de daño especial al Miembro Centro de tu oponente."
+        "zh-TW": "如果自己存檔區的成員有6張以上，給予對手的中心成員20點特殊傷害。",
+        "ja": "自分のアーカイブのメンバーが６枚以上ある場合、相手のセンターメンバーに２０点の特殊ダメージを与える。",
+        "en": "If you have 6 or more Members in your Archive, deal 20 Special damage to the opponent's Center Member.",
+        "fr": "Si vous avez 6 Membres ou plus dans votre Archive, infligez 20 dégâts spéciaux au Membre Centre de votre adversaire.",
+        "es": "Si hay 6 o más Miembros en tu Archivo, inflige 20 de daño especial al Miembro Centro de tu oponente."
       }
     },
     "effectB": null,
@@ -86560,11 +87339,11 @@
       "damage": "30+",
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "如果這個成員有2張以上的吶喊卡，這個藝能傷害+20。",
-        "ja": "このメンバーにエールカードが２枚以上ある場合、このアーツダメージ＋２０。\n",
-        "en": "If this Member has 2 or more Cheer cards, this Arts' damage +20.",
-        "fr": "Si ce membre possède 2 cartes d'encouragement ou plus, les Arts +20 dégâts.",
-        "es": "Si este miembro tiene 2 o más cartas de Cheer, el daño de este Arts +20."
+        "zh-TW": "如果這個成員的吶喊卡有2張以上，這個藝能傷害+20。",
+        "ja": "このメンバーのエールカードが２枚以上ある場合、この芸能ダメージ＋２０。",
+        "en": "If you have 2 or more Cheer cards of this Member, this Arts damage is increased by 20.",
+        "fr": "Si vous avez 2 cartes d'encouragement ou plus de ce Membre, les dégâts d'Arts augmentent de 20.",
+        "es": "Si hay 2 o más cartas Cheer de este Miembro, el daño de este Arts aumenta en 20."
       }
     },
     "art2": null,
