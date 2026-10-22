@@ -39,7 +39,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: '24'
+          node-version: '26.12.1'
 
       # Push builds from committed data; scrape/dispatch runs rebuild from fresh
       # data after scraping (below), so they skip this and verify the rebuild.
