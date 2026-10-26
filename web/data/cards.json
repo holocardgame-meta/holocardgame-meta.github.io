@@ -11138,7 +11138,9 @@
       "起始牌組「FLOW GLOW 推し 輪堂千速 (hSD10)」",
       "起始牌組「FLOW GLOW 推し 虎金妃笑虎 (hSD11)」",
       "起始牌組「推し Advent (hSD12)」",
-      "起始牌組「推し Justice (hSD13)」"
+      "起始牌組「推し Justice (hSD13)」",
+      "起始牌組「アソビ★まわり隊！推し 百灯キョーコ (hSD20)」",
+      "起始牌組「アソビ★まわり隊！推し 熱千めら (hSD21)」"
     ],
     "supportEffect": {
       "zh-TW": "從自己的牌組展示1張Debut成員，放到舞台上。將牌組重新洗牌。",
@@ -44414,7 +44416,11 @@
     "name": "フレンドリーパソコン",
     "type": "支援・物品",
     "tag": null,
-    "product": "補充包「エンチャントレガリア (hBP05)」",
+    "product": [
+      "補充包「エンチャントレガリア (hBP05)」",
+      "起始牌組「アソビ★まわり隊！推し 百灯キョーコ (hSD20)」",
+      "起始牌組「アソビ★まわり隊！推し 熱千めら (hSD21)」"
+    ],
     "supportEffect": {
       "zh-TW": "從自己的牌組展示1~2張特殊規則為「這個成員沒有張數限制」的Debut成員，放到舞台上。將牌組重新洗牌。如果將2張Debut成員放到舞台上，再將自己的1張手牌放回牌組下方。",
       "ja": "自分のデッキから「このメンバーは枚数制限なし」という特殊ルールを持つDebutメンバーを1～2枚公開し、ステージに出す。その後、デッキをシャッフルする。Debutメンバーを2枚ステージに出した場合、自分の手札1枚をデッキの下に戻す。",
@@ -44475,22 +44481,6 @@
     },
     "id": "hBP05-074",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hEB01/hBP05-074_C_04.png"
-  },
-  {
-    "image": "cardListImages/hBP05/hBP05-074_P_02.png",
-    "name": "フレンドリーパソコン",
-    "type": "支援・物品",
-    "tag": null,
-    "product": "PR卡",
-    "supportEffect": {
-      "zh-TW": "從自己的牌組展示1~2張特殊規則為「這個成員沒有張數限制」的Debut成員，放到舞台上。將牌組重新洗牌。如果將2張Debut成員放到舞台上，再將自己的1張手牌放回牌組下方。",
-      "ja": "自分のデッキから「このメンバーは枚数制限なし」という特殊ルールを持つDebutメンバーを1～2枚公開し、ステージに出す。その後、デッキをシャッフルする。Debutメンバーを2枚ステージに出した場合、自分の手札1枚をデッキの下に戻す。",
-      "en": "Reveal 1 to 2 Debut Members from your Deck that have the special rule \"There is no limit to the number of this Member\" and put them onto the Stage. Shuffle your Deck. If you put 2 Debut Members onto the Stage, place 1 card from your Hand at the bottom of your Deck.",
-      "fr": "Montrez 1 à 2 membres Debut avec la règle spéciale \"Aucune limite de nombre pour ce membre\" de votre Deck et placez-les sur la Scène. Mélangez votre Deck. Si vous placez 2 membres Debut sur la Scène, renvoyez une carte de votre Main au bas de votre Deck.\n",
-      "es": "Muestra 1~2 miembros Debut con la regla especial \"No hay límite de cantidad para este miembro\" de tu Mazo y ponlos en el Escenario. Baraja tu Mazo. Si pones 2 miembros Debut en el Escenario, pon 1 carta de tu Mano debajo de tu Mazo."
-    },
-    "id": "hBP05-074",
-    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP05/hBP05-074_P_02.png"
   },
   {
     "image": "cardListImages/hBP05/hBP05-074_P_03.png",
@@ -69052,6 +69042,55 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP09/hBP09-031_UR.png"
   },
   {
+    "image": "cardListImages/hBP09/hBP09-031_P.png",
+    "name": "白銀ノエル",
+    "type": "成員",
+    "tag": "#JP / #3期生 / #お酒",
+    "product": "PR卡",
+    "color": "綠",
+    "hp": 220,
+    "bloom": "2nd",
+    "batonImage": [
+      "icons/arts_null.png",
+      "icons/arts_null.png",
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": null,
+    "effectG": {
+      "name": "究極の牛丼道",
+      "effect": {
+        "zh-TW": "[每個回合一次]這個成員因「牛丼」的效果回復的HP+100。",
+        "ja": "[各ターンに1回]このメンバーが「牛丼」の効果でHPを回復した時、+100。",
+        "en": "[Once per turn] HP recovered by this Member due to \"Gyudon\" is increased by 100.\n",
+        "fr": "[Chaque tour, une fois] Les HP récupérés par ce membre grâce à l'effet de \"Gyudon\" +100.",
+        "es": "[Cada turno una vez] El HP recuperado por el efecto de \"牛丼\" de este miembro +100."
+      }
+    },
+    "art1": {
+      "image": [
+        "icons/arts_green.png",
+        "icons/arts_green.png",
+        "icons/arts_green.png",
+        "icons/arts_null.png"
+      ],
+      "name": "牛丼は～飲み物！",
+      "damage": "10+",
+      "specialAttackImage": "icons/tokkou_50_blue.png",
+      "effect": {
+        "zh-TW": "如果自己的主推為「白銀ノエル」，且這個成員剩餘的HP在200以上，這個藝能傷害+200。",
+        "ja": "自分の推しホロメンが「白銀ノエル」で、このメンバーの残りHPが200以上の場合、この「アーツ」のダメージ+200。",
+        "en": "If your Oshi is \"白銀ノエル\" and this Member has 200 or more HP remaining, your Arts damage +200.",
+        "fr": "Si votre Oshi est \"Shirogane Noel\", et que les HP restants de ce membre sont supérieurs à 200, les dégâts d'arts +200.",
+        "es": "Si tu Oshi es \"白銀ノエル\" y el HP restante de este miembro es 200 o más, el daño de Arts +200.\n"
+      }
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP09-031",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP09/hBP09-031_P.png"
+  },
+  {
     "image": "cardListImages/hBP09/hBP09-032_C.png",
     "name": "大神ミオ",
     "type": "成員",
@@ -73103,6 +73142,44 @@
     "extra": null,
     "id": "hBP09-086",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP09/hBP09-086_SR.png"
+  },
+  {
+    "image": "cardListImages/hBP09/hBP09-086_P.png",
+    "name": "夏色まつり",
+    "type": "成員",
+    "tag": "#JP / #1期生 / #シューター",
+    "product": "PR卡",
+    "color": "黃",
+    "hp": 170,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": {
+      "name": "おまつり騒ぎ",
+      "effect": {
+        "zh-TW": "如果自己的主推為「夏色まつり」，查看自己牌組上方的5張牌。展示1張標示LIMITED的支援卡並加入手牌。其餘依照喜歡的順序放回牌組下方。",
+        "ja": "自分の推しホロメンが「夏色まつり」の場合、自分のデッキの上からカードを5枚確認する。その中からLIMITEDの「サポート」カードを1枚選び、手札に加える。残りのカードは好きな順番でデッキの一番下に戻す。",
+        "en": "If your Oshi is \"夏色まつり\", look at the top 5 cards of your Deck. Reveal 1 LIMITED Support card and add it to your Hand. Place the rest at the bottom of your Deck in any order.",
+        "fr": "Si votre Oshi est \"Natsuiro Matsuri\", regardez les 5 cartes du dessus de votre deck. Montrez 1 carte de support LIMITED et ajoutez-la à votre main. Remettez le reste dans le dessous de votre deck, dans l'ordre de votre choix.",
+        "es": "Si tu Oshi es \"夏色まつり\", mira las 5 cartas superiores de tu Mazo. Muestra 1 carta de Soporte LIMITED y añádela a tu Mano. Devuelve el resto al fondo de tu Mazo en el orden que prefieras.\n"
+      }
+    },
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_yellow.png"
+      ],
+      "name": "太鼓でわっしょーい！",
+      "damage": 40,
+      "specialAttackImage": null,
+      "effect": null
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP09-086",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP09/hBP09-086_P.png"
   },
   {
     "image": "cardListImages/hBP09/hBP09-087_RR.png",
@@ -77197,7 +77274,9 @@
       "起始牌組「ライブスタートデッキ さくらみこ (hSD16)」",
       "起始牌組「ライブスタートデッキ 星街すいせい (hSD17)」",
       "起始牌組「ライブスタートデッキ 森カリオペ (hSD18)」",
-      "起始牌組「ライブスタートデッキ 大空スバル (hSD19)」"
+      "起始牌組「ライブスタートデッキ 大空スバル (hSD19)」",
+      "起始牌組「アソビ★まわり隊！推し 百灯キョーコ (hSD20)」",
+      "起始牌組「アソビ★まわり隊！推し 熱千めら (hSD21)」"
     ],
     "supportEffect": {
       "zh-TW": "不包含這張牌，自己的手牌在1張以上才能使用。\n\n將自己所有手牌放回牌組重新洗牌。從自己的牌組抽5張牌。\n\nLIMITED：每個回合只能使用一張。",
@@ -85733,6 +85812,25 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD14/hSD14-010_P_03.png"
   },
   {
+    "image": "cardListImages/hSD20/hSD14-010_C_03.png",
+    "name": "holoAN",
+    "type": "支援・工作人員",
+    "tag": null,
+    "product": [
+      "起始牌組「アソビ★まわり隊！推し 百灯キョーコ (hSD20)」",
+      "起始牌組「アソビ★まわり隊！推し 熱千めら (hSD21)」"
+    ],
+    "supportEffect": {
+      "zh-TW": "從自己的牌組抽3張牌。\n\nLIMITED：每個回合只能使用一張。",
+      "ja": "自分のデッキから3枚引く。",
+      "en": "Draw 3 cards from your Deck.",
+      "fr": "Pioche 3 cartes de votre Deck.\n\nLIMITED : Vous ne pouvez utiliser qu'une seule carte par tour.",
+      "es": "LIMITED: Solo puede usarse una vez por turno.\nRoba 3 cartas de tu mazo."
+    },
+    "id": "hSD14-010",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD20/hSD14-010_C_03.png"
+  },
+  {
     "image": "cardListImages/hSD14/hSD14-011_C.png",
     "name": "ありよりのアリゲーター",
     "type": "支援・吉祥物",
@@ -87440,6 +87538,812 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD19/hSD19-010_C.png"
   },
   {
+    "image": "cardListImages/hSD20/hSD20-001_OSR.png",
+    "name": "百灯キョーコ",
+    "type": "主推",
+    "product": "起始牌組「アソビ★まわり隊！推し 百灯キョーコ (hSD20)」",
+    "color": "紅",
+    "life": 5,
+    "stageSkill": {
+      "name": "広がる情熱",
+      "effect": "自己的成員聯動時，如果自己的中心成員為「百灯キョーコ」，將自己吶喊牌組上方的1張牌發送給自己的聯動成員。"
+    },
+    "oshiSkill": {
+      "holoPower": -3,
+      "name": "ヒーローポリス疾走！",
+      "effect": {
+        "zh-TW": "[每個回合一次]自己的舞台上每有1張吶喊卡，給予對手Debut以外的中心成員與聯動成員10點特殊傷害。",
+        "ja": "[毎ターン１回]自分のステージにエールカードが１枚あるごとに、相手のDebut以外のセンターメンバーとコラボメンバーに１０点特殊ダメージを与える。",
+        "en": "[Once per turn] For each Cheer card on your Stage, deal 10 Special damage to an opponent's Center Member or Collab Member other than Debut.",
+        "fr": "[Chaque tour une fois] Pour chaque carte d'Encouragement sur votre Scène, infligez 10 dégâts spéciaux au Membre du Centre et au Membre Collab de l'adversaire, sauf ceux de Debut.",
+        "es": "[Cada turno una vez] Por cada carta de Cheer en tu Escenario, inflige 10 de daño especial a un Miembro Centro o Miembro Collab del oponente que no sea Debut."
+      }
+    },
+    "spSkill": null,
+    "id": "hSD20-001",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD20/hSD20-001_OSR.png"
+  },
+  {
+    "image": "cardListImages/hSD20/hSD20-002_C.png",
+    "name": "百灯キョーコ",
+    "type": "成員",
+    "tag": "#アソビ★まわり隊！",
+    "product": "起始牌組「アソビ★まわり隊！推し 百灯キョーコ (hSD20)」",
+    "color": "紅",
+    "hp": 130,
+    "bloom": "Debut",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": null,
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_red.png"
+      ],
+      "name": "笑顔にさせちゃっていいですか！？？",
+      "damage": "20+",
+      "specialAttackImage": null,
+      "effect": {
+        "zh-TW": "[限定中心位置]如果自己舞台上的吶喊卡有2張以上，這個藝能傷害+20。",
+        "ja": "[センター限定]自分のステージ上のエールカードが２枚以上ある場合、この Аーツダメージ＋２０。",
+        "en": "[Center Only] If you have 2 or more Cheer cards on your Stage, this Arts damage +20.",
+        "fr": "[Centre uniquement] Si vous avez 2 cartes d'Encouragement ou plus sur votre Scène, les dégâts de cet Art augmentent de 20.",
+        "es": "[Solo posición Centro] Si hay 2 o más cartas de Cheer en tu Escenario, el daño de Arts de esta carta aumenta en 20."
+      }
+    },
+    "art2": null,
+    "extra": {
+      "zh-TW": "這個成員沒有張數限制",
+      "ja": "このメンバーに枚数制限はない。\n",
+      "en": "There is no limit to the number of this Member.",
+      "fr": "Ce membre n'a pas de limite de nombre.",
+      "es": "Este Miembro no tiene límite de cantidad."
+    },
+    "id": "hSD20-002",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD20/hSD20-002_C.png"
+  },
+  {
+    "image": "cardListImages/hSD20/hSD20-003_U.png",
+    "name": "百灯キョーコ",
+    "type": "成員",
+    "tag": "#アソビ★まわり隊！",
+    "product": "起始牌組「アソビ★まわり隊！推し 百灯キョーコ (hSD20)」",
+    "color": "紅",
+    "hp": 130,
+    "bloom": "Debut",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": {
+      "name": "即集合！",
+      "effect": {
+        "zh-TW": "如果在自己後攻的第一個回合，從自己的牌組展示1張標示#アソビ★まわり隊！的Debut成員與1張1st「百灯キョーコ」並加入手牌。將牌組重新洗牌。",
+        "ja": "自分が後攻の最初のターンの場合、自分のデッキから#アソビ★まわり隊！のDebutメンバー１枚と１st「百灯キョーコ」１枚を公開し手札に加える。その後、デッキをシャッフルする。",
+        "en": "If it is your first turn going second, reveal 1 Debut Member marked with #アソビ★まわり隊！ and 1st \"百灯キョーコ\" from your Deck and add them to your Hand. Reshuffle your Deck.",
+        "fr": "Si c'est votre premier tour en tant que Second, montrez 1 Membre Debut marqué #アソビ★ま、「隊！」 et 1 \"百灯キョーコ\" 1st de votre Deck et ajoutez-les à votre Main. Mélangez votre Deck.\n",
+        "es": "Si es tu primer turno yendo segundo, muestra 1 Miembro Debut con la etiqueta #アソビ★まわり隊！ y 1 \"百灯キョーコ\" de 1st de tu Mazo y añádelos a tu Mano. Baraja tu Mazo."
+      }
+    },
+    "effectB": null,
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_null.png"
+      ],
+      "name": "ドンチャン大騒ぎの始まり",
+      "damage": 20,
+      "specialAttackImage": null,
+      "effect": null
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hSD20-003",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD20/hSD20-003_U.png"
+  },
+  {
+    "image": "cardListImages/hSD20/hSD20-004_C.png",
+    "name": "百灯キョーコ",
+    "type": "成員",
+    "tag": "#アソビ★まわり隊！",
+    "product": "起始牌組「アソビ★まわり隊！推し 百灯キョーコ (hSD20)」",
+    "color": "紅",
+    "hp": 180,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": null,
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_red.png",
+        "icons/arts_null.png"
+      ],
+      "name": "出勤準備完了！",
+      "damage": 60,
+      "specialAttackImage": null,
+      "effect": null
+    },
+    "art2": {
+      "image": [
+        "icons/arts_red.png",
+        "icons/arts_null.png",
+        "icons/arts_null.png",
+        "icons/arts_null.png"
+      ],
+      "name": "拡声器いらずのビッグボイス",
+      "damage": 140,
+      "specialAttackImage": null,
+      "effect": null
+    },
+    "extra": null,
+    "id": "hSD20-004",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD20/hSD20-004_C.png"
+  },
+  {
+    "image": "cardListImages/hSD20/hSD20-005_U.png",
+    "name": "百灯キョーコ",
+    "type": "成員",
+    "tag": "#アソビ★まわり隊！",
+    "product": "起始牌組「アソビ★まわり隊！推し 百灯キョーコ (hSD20)」",
+    "color": "紅",
+    "hp": 150,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": {
+      "name": "差し伸べる手",
+      "effect": {
+        "zh-TW": "選擇自己舞台上1位標示#アソビ★まわり隊！的成員。這個回合中，該成員的藝能傷害+20。",
+        "ja": "自分のステージ上の#アソビ★まわり隊！のメンバーを１人選択する。このターン中、そのメンバーの Аーツダメージ＋２０。",
+        "en": "Choose 1 Member on your Stage marked with #アソビ★まわり隊！. That Member's Arts damage +20 this turn.",
+        "fr": "Choisissez 1 Membre marqué #アソビ★ま、「隊！」 sur votre Scène. Les dégâts d'Arts de ce Membre augmentent de 20 ce tour.",
+        "es": "Elige 1 Miembro con la etiqueta #アソビ★まわり隊！ en tu Escenario. Durante este turno, el daño de Arts de ese Miembro aumenta en 20."
+      }
+    },
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_null.png"
+      ],
+      "name": "考えるより先に動く",
+      "damage": 30,
+      "specialAttackImage": null,
+      "effect": null
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hSD20-005",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD20/hSD20-005_U.png"
+  },
+  {
+    "image": "cardListImages/hSD20/hSD20-006_R.png",
+    "name": "百灯キョーコ",
+    "type": "成員",
+    "tag": "#アソビ★まわり隊！",
+    "product": "起始牌組「アソビ★まわり隊！推し 百灯キョーコ (hSD20)」",
+    "color": "紅",
+    "hp": 160,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": {
+      "name": "誰にだって手を伸ばす！",
+      "effect": {
+        "zh-TW": "可以將自己舞台上的1張吶喊卡放到存檔區：將自己存檔區1張標示#アソビ★まわり隊！的成員返回手牌。",
+        "ja": "自分のステージ上のカードを１枚まで自分のアーカイブに置く：自分のアーカイブの#アソビ★まわり隊！のメンバー１人を手札に戻す。",
+        "en": "You can send 1 Cheer card from your Stage to the Archive: Return 1 Member marked with #アソビ★まわり隊！ from your Archive to your Hand.",
+        "fr": "Vous pouvez placer 1 carte d'Encouragement de votre Scène dans votre Archive : Renvoyez 1 Membre marqué #アソビ★ま、「隊！」 de votre Archive dans votre Main.",
+        "es": "Puedes enviar 1 carta de Cheer de tu Escenario a tu Archivo: Devuelve 1 Miembro con la etiqueta #アソビ★まわり隊！ de tu Archivo a tu Mano."
+      }
+    },
+    "effectB": null,
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_red.png",
+        "icons/arts_null.png"
+      ],
+      "name": "渦巻くハイテンション",
+      "damage": "50+",
+      "specialAttackImage": null,
+      "effect": {
+        "zh-TW": "如果自己舞台上的吶喊卡有6張以上，這個藝能傷害+20。",
+        "ja": "自分のステージ上のエールカードが６枚以上ある場合、この Аーツダメージ＋２０。",
+        "en": "If you have 6 or more Cheer cards on your Stage, this Arts damage +20.",
+        "fr": "Si vous avez 6 cartes d'Encouragement ou plus sur votre Scène, les dégâts de cet Art augmentent de 20.",
+        "es": "Si hay 6 o más cartas de Cheer en tu Escenario, el daño de Arts de esta carta aumenta en 20."
+      }
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hSD20-006",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD20/hSD20-006_R.png"
+  },
+  {
+    "image": "cardListImages/hSD20/hSD20-007_RR.png",
+    "name": "百灯キョーコ",
+    "type": "成員",
+    "tag": "#アソビ★まわり隊！",
+    "product": "起始牌組「アソビ★まわり隊！推し 百灯キョーコ (hSD20)」",
+    "color": "紅",
+    "hp": 190,
+    "bloom": "2nd",
+    "batonImage": [
+      "icons/arts_null.png",
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": null,
+    "effectG": {
+      "name": "情熱系ヒーローポリス",
+      "effect": {
+        "zh-TW": "[限定中心位置]自己聯動成員的藝能傷害+20。",
+        "ja": "[センター限定]自分のコラボメンバーの Аーツダメージ＋２０。",
+        "en": "[Center Only] Your Collab Members' Arts damage +20.",
+        "fr": "[Centre uniquement] Les dégâts d'Arts de vos Membres Collab augmentent de 20.",
+        "es": "[Solo posición Centro] El daño de Arts de tus Miembros Collab aumenta en 20."
+      }
+    },
+    "art1": {
+      "image": [
+        "icons/arts_red.png",
+        "icons/arts_red.png",
+        "icons/arts_null.png"
+      ],
+      "name": "「最強」担当",
+      "damage": "150+",
+      "specialAttackImage": "icons/tokkou_50_green.png",
+      "effect": {
+        "zh-TW": "如果自己舞台上的吶喊卡有6張以上，這個藝能傷害+50。",
+        "ja": "自分のステージ上のエールカードが６枚以上ある場合、この Аーツダメージ＋５０。",
+        "en": "If you have 6 or more Cheer cards on your Stage, this Arts damage +50.",
+        "fr": "Si vous avez 6 cartes d'Encouragement ou plus sur votre Scène, les dégâts de cet Art augmentent de 50.",
+        "es": "Si hay 6 o más cartas de Cheer en tu Escenario, el daño de Arts de esta carta aumenta en 50."
+      }
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hSD20-007",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD20/hSD20-007_RR.png"
+  },
+  {
+    "image": "cardListImages/hSD20/hSD20-008_C.png",
+    "name": "宙科そぴあ",
+    "type": "成員",
+    "tag": "#アソビ★まわり隊！",
+    "product": [
+      "起始牌組「アソビ★まわり隊！推し 百灯キョーコ (hSD20)」",
+      "起始牌組「アソビ★まわり隊！推し 熱千めら (hSD21)」"
+    ],
+    "color": "藍",
+    "hp": 120,
+    "bloom": "Debut",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": null,
+    "effectG": {
+      "name": "夢は弾けるビッグバン！",
+      "effect": {
+        "zh-TW": "對手回合中，這個成員被擊倒時，從自己的牌組抽1張牌。",
+        "ja": "相手ターン中、このメンバーがダウンした時、自分のデッキからカードを１枚引く。",
+        "en": "During your opponent's turn, when this Member is Downed, draw 1 card from your Deck.\n",
+        "fr": "Durant le tour de l'adversaire, lorsqu'un membre est mis K.O., piochez 1 carte de votre Deck.",
+        "es": "Durante el turno del oponente, cuando este Miembro es K.O., roba 1 carta de tu Mazo."
+      }
+    },
+    "art1": {
+      "image": [
+        "icons/arts_null.png"
+      ],
+      "name": "全部この目で確かめにいくよ！",
+      "damage": 10,
+      "specialAttackImage": null,
+      "effect": null
+    },
+    "art2": null,
+    "extra": {
+      "zh-TW": "這個成員沒有張數限制",
+      "ja": "このメンバーに枚数制限はない。\n",
+      "en": "There is no limit to the number of this Member.",
+      "fr": "Ce membre n'a pas de limite de nombre.",
+      "es": "Este Miembro no tiene límite de cantidad."
+    },
+    "id": "hSD20-008",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD20/hSD20-008_C.png"
+  },
+  {
+    "image": "cardListImages/hSD20/hSD20-009_U.png",
+    "name": "宙科そぴあ",
+    "type": "成員",
+    "tag": "#アソビ★まわり隊！",
+    "product": [
+      "起始牌組「アソビ★まわり隊！推し 百灯キョーコ (hSD20)」",
+      "起始牌組「アソビ★まわり隊！推し 熱千めら (hSD21)」"
+    ],
+    "color": "藍",
+    "hp": 160,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": {
+      "name": "面白さの探求",
+      "effect": {
+        "zh-TW": "如果自己的舞台上有3位以上標示#アソビ★まわり隊！的成員，可以將這個成員的1張吶喊卡放到存檔區：從自己的牌組抽2張牌。",
+        "ja": "自分のステージに#アソビ★まわり隊！のメンバーが３人以上いる場合、このメンバーのエールカードを１枚まで自分のアーカイブに置く：自分のデッキから２枚ドローする。",
+        "en": "If you have 3 or more Members marked with #アソビ★まわり隊！ on your Stage, you can send 1 Cheer card of this Member to the Archive: Draw 2 cards from your Deck.",
+        "fr": "Si vous avez 3 Membres ou plus marqués #アソビ★ま、「隊！」 sur votre Scène, vous pouvez placer 1 carte d'Encouragement de ce Membre dans votre Archive : Piochez 2 cartes de votre Deck.",
+        "es": "Si tienes 3 o más Miembros con la etiqueta #アソビ★まわり隊！ en tu Escenario, puedes enviar 1 carta de Cheer de este Miembro a tu Archivo: Roba 2 cartas de tu Mazo."
+      }
+    },
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_null.png"
+      ],
+      "name": "抑えきれない知的好奇心",
+      "damage": 30,
+      "specialAttackImage": null,
+      "effect": null
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hSD20-009",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD20/hSD20-009_U.png"
+  },
+  {
+    "image": "cardListImages/hSD20/hSD20-010_R.png",
+    "name": "宙科そぴあ",
+    "type": "成員",
+    "tag": "#アソビ★まわり隊！",
+    "product": [
+      "起始牌組「アソビ★まわり隊！推し 百灯キョーコ (hSD20)」",
+      "起始牌組「アソビ★まわり隊！推し 熱千めら (hSD21)」"
+    ],
+    "color": "藍",
+    "hp": 130,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": {
+      "name": "仲間を探すぞ～！",
+      "effect": {
+        "zh-TW": "查看自己牌組上方的3張牌。展示1張標示#アソビ★まわり隊！的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。",
+        "ja": "自分のデッキの上から３枚を見て、#アソビ★まわり隊！のメンバーを１枚公開し手札に加える。残りは好きな順番でデッキの下に戻す。",
+        "en": "Look at the top 3 cards of your Deck. Reveal 1 Member marked with #アソビ★まわり隊！ and add it to your Hand. Place the rest on the bottom of your Deck in any order.",
+        "fr": "Regardez les 3 cartes du dessus de votre Deck. Montrez 1 Membre marqué #アソビ★ま、「隊！」 et ajoutez-le à votre Main. Placez le reste en bas de votre Deck dans l'ordre de votre choix.\n",
+        "es": "Mira las 3 cartas superiores de tu Mazo. Muestra 1 Miembro con la etiqueta #アソビ★まわり隊！ y añádelo a tu Mano. Coloca el resto en la parte inferior de tu Mazo en el orden que prefieras."
+      }
+    },
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_blue.png",
+        "icons/arts_null.png"
+      ],
+      "name": "面白いもの見つけたよ！",
+      "damage": 50,
+      "specialAttackImage": null,
+      "effect": {
+        "zh-TW": "可以將這個成員的1張吶喊卡轉移給自己其他標示#アソビ★まわり隊！的成員。",
+        "ja": "このメンバーのエールカードを１枚まで自分の他の#アソビ★まわり隊！のメンバーに移動できる。",
+        "en": "You can transfer 1 Cheer card of this Member to another of your Members marked with #アソビ★まわり隊！.",
+        "fr": "Vous pouvez transférer 1 carte d'Encouragement de ce Membre à un autre de vos Membres marqués #アソビ★ま、「隊！」.",
+        "es": "Puedes transferir 1 carta de Cheer de este Miembro a otro de tus Miembros con la etiqueta #アソビ★まわり隊！."
+      }
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hSD20-010",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD20/hSD20-010_R.png"
+  },
+  {
+    "image": "cardListImages/hSD20/hSD20-011_RR.png",
+    "name": "宙科そぴあ",
+    "type": "成員",
+    "tag": "#アソビ★まわり隊！",
+    "product": [
+      "起始牌組「アソビ★まわり隊！推し 百灯キョーコ (hSD20)」",
+      "起始牌組「アソビ★まわり隊！推し 熱千めら (hSD21)」"
+    ],
+    "color": "藍",
+    "hp": 200,
+    "bloom": "2nd",
+    "batonImage": [
+      "icons/arts_null.png",
+      "icons/arts_null.png"
+    ],
+    "effectC": {
+      "name": "（自称）天才宇宙飛行士",
+      "effect": {
+        "zh-TW": "可以將自己存檔區的2張吶喊卡發送給自己1位標示#アソビ★まわり隊！的成員。",
+        "ja": "自分のアーカイブのカードを２枚まで自分の#アソビ★まわり隊！のメンバー１人に送ることができる。",
+        "en": "You can send 2 Cheer cards from your Archive to 1 of your Members marked with #アソビ★まわり隊！.",
+        "fr": "Vous pouvez envoyer 2 cartes d'Encouragement de votre Archive à 1 de vos Membres marqués #アソビ★ま、「隊！」.",
+        "es": "Puedes enviar 2 cartas de Cheer de tu Archivo a 1 de tus Miembros con la etiqueta #アソビ★まわり隊！."
+      }
+    },
+    "effectB": null,
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_blue.png",
+        "icons/arts_null.png"
+      ],
+      "name": "「ひらめき」担当",
+      "damage": "80+",
+      "specialAttackImage": "icons/tokkou_50_white.png",
+      "effect": {
+        "zh-TW": "可以將這個成員的1~3張吶喊卡放到存檔區：每將1張吶喊卡放到存檔區，這個藝能傷害+20。",
+        "ja": "このメンバーのエールカードを１～３枚まで自分のアーカイブに置く：エールカードを１枚置くごとに、この Аーツダメージ＋２０。",
+        "en": "You can send 1 to 3 Cheer cards of this Member to the Archive: For each Cheer card sent to the Archive, this Arts damage +20.",
+        "fr": "Vous pouvez placer 1 à 3 cartes d'Encouragement de ce Membre dans votre Archive : Pour chaque carte d'Encouragement placée dans votre Archive, les dégâts de cet Art augmentent de 20.",
+        "es": "Puedes enviar 1~3 cartas de Cheer de este Miembro a tu Archivo: Por cada carta de Cheer enviada a tu Archivo, el daño de Arts de esta carta aumenta en 20."
+      }
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hSD20-011",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD20/hSD20-011_RR.png"
+  },
+  {
+    "image": "cardListImages/hSD20/hSD20-012_U.png",
+    "name": "アソビ★まわり隊！",
+    "type": "支援・活動",
+    "tag": null,
+    "product": [
+      "起始牌組「アソビ★まわり隊！推し 百灯キョーコ (hSD20)」",
+      "起始牌組「アソビ★まわり隊！推し 熱千めら (hSD21)」"
+    ],
+    "supportEffect": {
+      "zh-TW": "不包含這張牌，自己的手牌在6張以下才能使用。\n\n查看自己牌組上方的4張牌。展示任意標示#アソビ★まわり隊！的成員並加入手牌。其餘依照喜歡的順序放回牌組下方。\n\nLIMITED：每個回合只能使用一張。",
+      "ja": "このカードを含めない自分の手札が６枚以下の場合にしか使用できない。\n\n自分のデッキの上から４枚を見て、#アソビ★まわり隊！のメンバーを任意で１枚公開し手札に加える。残りは好きな順番でデッキの下に戻す。\n\nLIMITED：毎ターン１枚しか使用できない。",
+      "en": "You can only use this if you have 6 or fewer cards in Hand, excluding this card.\n\nLook at the top 4 cards of your Deck. Reveal any Member marked with #アソビ★まわり隊！ and add it to your Hand. Place the rest on the bottom of your Deck in any order.\n\nLIMITED: You can only use one per turn.\n",
+      "fr": "Utilisable si vous avez 6 cartes ou moins en Main, sans compter cette carte.\n\nRegardez les 4 cartes du dessus de votre Deck. Montrez n'importe quel Membre marqué #アソビ★まわり隊！ et ajoutez-le à votre Main. Placez le reste en bas de votre Deck dans l'ordre de votre choix.\n\nLIMITED : Une seule utilisation par tour.\n",
+      "es": "Solo se puede usar si tienes 6 o menos cartas en tu Mano, sin contar esta carta.\n\nMira las 4 cartas superiores de tu Mazo. Muestra cualquier Miembro con la etiqueta #アソビ★まわり隊！ y añádelo a tu Mano. Coloca el resto en la parte inferior de tu Mazo en el orden que prefieras.\n\nLIMITED: Solo se puede usar una por turno."
+    },
+    "id": "hSD20-012",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD20/hSD20-012_U.png"
+  },
+  {
+    "image": "cardListImages/hSD20/hSD20-013_U.png",
+    "name": "ぐるぐるTIME！",
+    "type": "支援・活動",
+    "tag": null,
+    "product": [
+      "起始牌組「アソビ★まわり隊！推し 百灯キョーコ (hSD20)」",
+      "起始牌組「アソビ★まわり隊！推し 熱千めら (hSD21)」"
+    ],
+    "supportEffect": {
+      "zh-TW": "自己舞台上的所有成員都標示#アソビ★まわり隊！才能使用。\n\n選擇對手的1位後台成員。將該成員與對手的中心成員進行替換。之後，和對手猜拳，直到分出勝負為止。如果自己獲勝，從自己的牌組抽3張牌。\n\nLIMITED：每個回合只能使用一張。",
+      "ja": "自分のステージ上のメンバーが全員#アソビ★まわり隊！の場合にしか使用できない。\n\n相手のバックメンバーを１人選択する。そのメンバーと相手のセンターメンバーを入れ替える。その後、相手とじゃんけんをし、勝負がつくまで繰り返す。自分が勝った場合、自分のデッキから３枚ドローする。\n\nLIMITED：毎ターン１枚しか使用できない。",
+      "en": "You can only use this if all Members on your Stage are marked with #アソビ★まわり隊！.\n\nChoose 1 opponent's Back row Member. Swap that Member with an opponent's Center Member. Then, play rock-paper-scissors with the opponent until a winner is decided. If you win, draw 3 cards from your Deck.\n\nLIMITED: You can only use one per turn.\n",
+      "fr": "Utilisable uniquement si tous les Membres sur votre Scène sont marqués #アソビ★ま、「隊！」.\n\nChoisissez 1 Membre Arrière de l'adversaire. Échangez ce Membre avec le Membre du Centre de l'adversaire. Ensuite, jouez à pierre-feuille-ciseaux avec l'adversaire jusqu'à ce qu'un gagnant soit déterminé. Si vous gagnez, piochez 3 cartes de votre Deck.\n\nLIMITED : Une seule utilisation par tour.\n",
+      "es": "Solo se puede usar si todos los Miembros en tu Escenario tienen la etiqueta #アソビ★まわり隊！.\n\nElige 1 Miembro en Retaguardia del oponente. Intercambia ese Miembro con un Miembro Centro del oponente. Luego, juega a piedra, papel o tijera con el oponente hasta que haya un ganador. Si ganas, roba 3 cartas de tu Mazo.\n\nLIMITED: Solo se puede usar una por turno."
+    },
+    "id": "hSD20-013",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD20/hSD20-013_U.png"
+  },
+  {
+    "image": "cardListImages/hSD20/hSD20-014_U.png",
+    "name": "百灯キョーコの拡声器",
+    "type": "支援・道具",
+    "tag": null,
+    "product": "起始牌組「アソビ★まわり隊！推し 百灯キョーコ (hSD20)」",
+    "supportEffect": {
+      "zh-TW": "帶有這個道具的「百灯キョーコ」藝能傷害+20。\n\n◆附加給1st以上的「百灯キョーコ」有追加效果\n這個成員擊倒對手的成員時，可以將自己存檔區的1張吶喊卡發送給自己標示#アソビ★まわり隊！的後台成員。\n\n每位成員只能帶有1張道具。",
+      "ja": "このアイテムを持つ「百灯キョーコ」の Аーツダメージ＋２０。\n\n◆１st以上の「百灯キョーコ」に付与された場合、追加効果あり\nこのメンバーが相手のメンバーを撃倒した時、自分のアーカイブのカードを１枚まで自分の#アソビ★まわり隊！のバックメンバーに送ることができる。\n\n１メンバーにつき１枚までしかアイテムを持てない。",
+      "en": "\"百灯キョーコ\" with this item attached has Arts damage +20.\n\n◆Additional effect for \"百灯キョーコ\" attached with 1st or higher\nWhen this Member K.O.s an opponent's Member, you can send 1 Cheer card from your Archive to a Back row Member of yours marked with #アソビ★まわり隊！.\n\nYou can only attach 1 item per Member.\n",
+      "fr": "Les dégâts d'Arts de \"百灯キョーコ\" avec cet accessoire augmentent de 20.\n\n◆Effet supplémentaire pour \"百灯キョーコ\" 1st ou supérieur attaché avec cet accessoire\nLorsque ce Membre met K.O. un Membre de l'adversaire, vous pouvez envoyer 1 carte d'Encouragement de votre Archive à 1 de vos Membres Arrière marqués #アソビ★ま、「隊！」.\n\nChaque Membre ne peut être équipé que d'un seul accessoire.\n",
+      "es": "El daño de Arts de \"百灯キョーコ\" con este objeto aumenta en 20.\n\n◆\"百灯キョーコ\" de 1st o superior con este objeto tiene un efecto adicional\nCuando este Miembro derrota a un Miembro del oponente, puedes enviar 1 carta de Cheer de tu Archivo a un Miembro en Retaguardia con la etiqueta #アソビ★まわり隊！.\n\nSolo se puede equipar 1 objeto por Miembro."
+    },
+    "id": "hSD20-014",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD20/hSD20-014_U.png"
+  },
+  {
+    "image": "cardListImages/hSD21/hSD21-001_OSR.png",
+    "name": "熱千めら",
+    "type": "主推",
+    "product": "起始牌組「アソビ★まわり隊！推し 熱千めら (hSD21)」",
+    "color": "紫",
+    "life": 5,
+    "stageSkill": {
+      "name": "サラマンダーの恩返し",
+      "effect": "自己的成員聯動時，如果自己的中心成員為「熱千めら」，從自己的牌組抽1張牌，將1張手牌放到存檔區。"
+    },
+    "oshiSkill": {
+      "holoPower": -2,
+      "name": "ご利益じゃ！",
+      "effect": {
+        "zh-TW": "[每個回合一次]選擇自己舞台上的1位成員。自己的存檔區每有1位持有天賦效果的成員，這個回合中，剛才選擇的成員藝能傷害+10。如果該成員為「熱千めら」，該成員藝能需要的無色吶喊卡數量-1。",
+        "ja": "[毎ターン１回]自分のステージ上のメンバーを１人選択する。自分のアーカイブにギフト効果を持つメンバーが１人いるごとに、このターン中、先ほど選択したメンバーの Аーツダメージ＋１０。そのメンバーが「熱千めら」の場合、そのメンバーの Аーツに必要な無色エールカードの枚数－１。",
+        "en": "[Once per turn] Choose 1 Member on your Stage. For each Member with a Gift effect in your Archive, the chosen Member's Arts damage +10 this turn. If that Member is \"熱千めら\", the colorless Cheer cards required for that Member's Arts -1.\n",
+        "fr": "[Chaque tour une fois] Choisissez 1 Membre sur votre Scène. Pour chaque Membre avec un effet Don dans votre Archive, les dégâts d'Arts du Membre choisi ce tour augmentent de 10. Si ce Membre est « 熱千めら », le nombre de cartes d'Encouragement incolores nécessaires pour ses Arts diminue de 1.",
+        "es": "[Cada turno una vez] Elige 1 Miembro en tu Escenario. Por cada Miembro en tu Archivo que tenga un efecto de Don, el daño de Arts de ese Miembro elegido aumenta en 10 durante este turno. Si dicho Miembro es \"熱千めら\", la cantidad de cartas de Cheer incoloras necesarias para sus Arts se reduce en 1."
+      }
+    },
+    "spSkill": null,
+    "id": "hSD21-001",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD21/hSD21-001_OSR.png"
+  },
+  {
+    "image": "cardListImages/hSD21/hSD21-002_C.png",
+    "name": "熱千めら",
+    "type": "成員",
+    "tag": "#アソビ★まわり隊！",
+    "product": "起始牌組「アソビ★まわり隊！推し 熱千めら (hSD21)」",
+    "color": "紫",
+    "hp": 120,
+    "bloom": "Debut",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": null,
+    "effectG": {
+      "name": "防火対策 基礎！",
+      "effect": {
+        "zh-TW": "這個成員受到的藝能傷害-10。",
+        "ja": "このメンバーが受ける Аーツダメージ－１０。",
+        "en": "Arts damage this Member takes -10.",
+        "fr": "Les dégâts d'Arts subis par ce Membre diminuent de 10.",
+        "es": "El daño de Arts recibido por este Miembro se reduce en 10."
+      }
+    },
+    "art1": {
+      "image": [
+        "icons/arts_null.png"
+      ],
+      "name": "火の用心じゃ～！",
+      "damage": 20,
+      "specialAttackImage": null,
+      "effect": null
+    },
+    "art2": null,
+    "extra": {
+      "zh-TW": "這個成員沒有張數限制",
+      "ja": "このメンバーに枚数制限はない。\n",
+      "en": "There is no limit to the number of this Member.",
+      "fr": "Ce membre n'a pas de limite de nombre.",
+      "es": "Este Miembro no tiene límite de cantidad."
+    },
+    "id": "hSD21-002",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD21/hSD21-002_C.png"
+  },
+  {
+    "image": "cardListImages/hSD21/hSD21-003_U.png",
+    "name": "熱千めら",
+    "type": "成員",
+    "tag": "#アソビ★まわり隊！",
+    "product": "起始牌組「アソビ★まわり隊！推し 熱千めら (hSD21)」",
+    "color": "紫",
+    "hp": 130,
+    "bloom": "Debut",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": {
+      "name": "炎を鎮める不思議な力",
+      "effect": {
+        "zh-TW": "如果在自己後攻的第一個回合，從自己的牌組展示2張持有天賦效果的「熱千めら」。將其中的1張加入手牌，其餘放到存檔區。將牌組重新洗牌。",
+        "ja": "自分が後攻の最初のターンの場合、自分のデッキからギフト効果を持つ「熱千めら」を２枚公開する。そのうち１枚を手札に加え、残りを自分のアーカイブに置く。その後、デッキをシャッフルする。",
+        "en": "If it is your first turn going second, reveal 2 \"熱千めら\" with Gift effects from your Deck. Add 1 of them to your Hand and place the other in the Archive. Reshuffle your Deck.",
+        "fr": "Si c'est votre premier tour en tant que Second, montrez 2 \"熱千めら\" avec un effet Don de votre Deck. Ajoutez 1 des deux à votre Main et placez l'autre dans votre Archive. Mélangez votre Deck.\n",
+        "es": "Si es tu primer turno yendo segundo, muestra 2 \"熱千めら\" con efectos de Don de tu Mazo. Añade 1 de ellos a tu Mano y coloca el resto en tu Archivo. Baraja tu Mazo."
+      }
+    },
+    "effectB": null,
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_null.png"
+      ],
+      "name": "響く拍子木",
+      "damage": 20,
+      "specialAttackImage": null,
+      "effect": null
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hSD21-003",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD21/hSD21-003_U.png"
+  },
+  {
+    "image": "cardListImages/hSD21/hSD21-004_C.png",
+    "name": "熱千めら",
+    "type": "成員",
+    "tag": "#アソビ★まわり隊！",
+    "product": "起始牌組「アソビ★まわり隊！推し 熱千めら (hSD21)」",
+    "color": "紫",
+    "hp": 160,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": null,
+    "effectG": {
+      "name": "防火対策 応用！",
+      "effect": {
+        "zh-TW": "這個成員受到的藝能傷害-20。",
+        "ja": "このメンバーが受ける Аーツダメージ－２０。",
+        "en": "Arts damage this Member takes -20.",
+        "fr": "Les dégâts d'Arts subis par ce Membre diminuent de 20.",
+        "es": "El daño de Arts recibido por este Miembro se reduce en 20."
+      }
+    },
+    "art1": {
+      "image": [
+        "icons/arts_purple.png"
+      ],
+      "name": "元気な頑張り屋",
+      "damage": 30,
+      "specialAttackImage": null,
+      "effect": {
+        "zh-TW": "從自己的牌組抽1張牌，將1張手牌放到存檔區。",
+        "ja": "自分のデッキから１枚ドローし、手札を１枚自分のアーカイブに置く。",
+        "en": "Draw 1 card from your Deck and send 1 card from your Hand to the Archive.",
+        "fr": "Piochez 1 carte de votre Deck et placez 1 carte de votre Main dans votre Archive.",
+        "es": "Roba 1 carta de tu Mazo y envía 1 carta de tu Mano a tu Archivo."
+      }
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hSD21-004",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD21/hSD21-004_C.png"
+  },
+  {
+    "image": "cardListImages/hSD21/hSD21-005_U.png",
+    "name": "熱千めら",
+    "type": "成員",
+    "tag": "#アソビ★まわり隊！",
+    "product": "起始牌組「アソビ★まわり隊！推し 熱千めら (hSD21)」",
+    "color": "紫",
+    "hp": 170,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": {
+      "name": "ハジけるアソビの渦",
+      "effect": {
+        "zh-TW": "如果自己的存檔區有3張以上持有天賦效果的成員，給予對手的中心成員或聯動成員20點特殊傷害。",
+        "ja": "自分のアーカイブにギフト効果を持つメンバーが３枚以上ある場合、相手のセンターメンバーかコラボメンバーに２０点特殊ダメージを与える。",
+        "en": "If you have 3 or more Members with Gift effects in your Archive, deal 20 Special damage to an opponent's Center Member or Collab Member.",
+        "fr": "Si vous avez 3 Membres ou plus avec un effet Don dans votre Archive, infligez 20 dégâts spéciaux au Membre du Centre ou au Membre Collab de l'adversaire.",
+        "es": "Si tienes 3 o más Miembros con efectos de Don en tu Archivo, inflige 20 de daño especial a un Miembro Centro o Miembro Collab del oponente."
+      }
+    },
+    "effectB": null,
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_purple.png"
+      ],
+      "name": "最高の非日常へ",
+      "damage": 40,
+      "specialAttackImage": null,
+      "effect": null
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hSD21-005",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD21/hSD21-005_U.png"
+  },
+  {
+    "image": "cardListImages/hSD21/hSD21-006_R.png",
+    "name": "熱千めら",
+    "type": "成員",
+    "tag": "#アソビ★まわり隊！",
+    "product": "起始牌組「アソビ★まわり隊！推し 熱千めら (hSD21)」",
+    "color": "紫",
+    "hp": 160,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": null,
+    "effectG": {
+      "name": "ご利益パワー",
+      "effect": {
+        "zh-TW": "這個成員被擊倒時，可以選擇這個成員的1~2張吶喊卡，分配給自己其他的成員。",
+        "ja": "このメンバーが撃倒された時、このメンバーのエールカードを１～２枚まで選択し、自分の他のメンバーに分配できる。",
+        "en": "When this Member is K.O.'d, you can choose 1 to 2 Cheer cards of this Member and distribute them to your other Members.",
+        "fr": "Lorsque ce Membre est mis K.O., vous pouvez choisir 1 à 2 cartes d'Encouragement de ce Membre et les distribuer à vos autres Membres.",
+        "es": "Cuando este Miembro es Derribado, puedes elegir 1~2 cartas de Cheer de este Miembro y distribuirlas entre tus otros Miembros."
+      }
+    },
+    "art1": {
+      "image": [
+        "icons/arts_purple.png",
+        "icons/arts_null.png"
+      ],
+      "name": "火消しの本領発揮じゃ！",
+      "damage": 60,
+      "specialAttackImage": null,
+      "effect": null
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hSD21-006",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD21/hSD21-006_R.png"
+  },
+  {
+    "image": "cardListImages/hSD21/hSD21-007_RR.png",
+    "name": "熱千めら",
+    "type": "成員",
+    "tag": "#アソビ★まわり隊！",
+    "product": "起始牌組「アソビ★まわり隊！推し 熱千めら (hSD21)」",
+    "color": "紫",
+    "hp": 210,
+    "bloom": "2nd",
+    "batonImage": [
+      "icons/arts_null.png",
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": null,
+    "effectG": {
+      "name": "火消しのサラマンダー",
+      "effect": {
+        "zh-TW": "這個成員被擊倒時，從自己的牌組抽2張牌。",
+        "ja": "このメンバーが撃倒された時、自分のデッキから２枚ドローする。",
+        "en": "When this Member is K.O.'d, draw 2 cards from your Deck.",
+        "fr": "Lorsque ce Membre est mis K.O., piochez 2 cartes de votre Deck.",
+        "es": "Cuando este Miembro es Derribado, roba 2 cartas de tu Mazo."
+      }
+    },
+    "art1": {
+      "image": [
+        "icons/arts_purple.png",
+        "icons/arts_null.png"
+      ],
+      "name": "「ご利益」担当",
+      "damage": "100+",
+      "specialAttackImage": "icons/tokkou_50_yellow.png",
+      "effect": {
+        "zh-TW": "如果自己的存檔區有3張以上持有天賦效果的成員，這個藝能傷害+50。",
+        "ja": "自分のアーカイブにギフト効果を持つメンバーが３枚以上ある場合、この Аーツダメージ＋５０。",
+        "en": "If you have 3 or more Members with Gift effects in your Archive, this Arts damage +50.",
+        "fr": "Si vous avez 3 Membres ou plus avec un effet Don dans votre Archive, les dégâts de cet Art augmentent de 50.",
+        "es": "Si tienes 3 o más Miembros con efectos de Don en tu Archivo, el daño de Arts de esta carta aumenta en 50."
+      }
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hSD21-007",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD21/hSD21-007_RR.png"
+  },
+  {
+    "image": "cardListImages/hSD21/hSD21-008_U.png",
+    "name": "熱千めらの拍子木",
+    "type": "支援・道具",
+    "tag": null,
+    "product": "起始牌組「アソビ★まわり隊！推し 熱千めら (hSD21)」",
+    "supportEffect": {
+      "zh-TW": "帶有這個道具的「熱千めら」藝能傷害+20。\n\n◆附加給1st以上的「熱千めら」有追加效果\n這個成員擊倒對手的成員時，從自己的牌組抽1張牌，將1張手牌放到存檔區。\n\n每位成員只能帶有1張道具。",
+      "ja": "このアイテムを持つ「熱千めら」の Аーツダメージ＋２０。\n\n◆１st以上の「熱千めら」に付与された場合、追加効果あり\nこのメンバーが相手のメンバーを撃倒した時、自分のデッキから１枚ドローし、手札を１枚自分のアーカイブに置く。\n\n１メンバーにつき１枚までしかアイテムを持てない。",
+      "en": "\"熱千めら\" with this item attached has Arts damage +20.\n\n◆Additional effect for \"熱千めら\" attached with 1st or higher\nWhen this Member K.O.s an opponent's Member, draw 1 card from your Deck and send 1 card from your Hand to the Archive.\n\nYou can only attach 1 item per Member.\n",
+      "fr": "Les dégâts d'Arts de \"熱千めら\" avec cet accessoire augmentent de 20.\n\n◆Effet supplémentaire pour \"熱千めら\" 1st ou supérieur attaché avec cet accessoire\nLorsque ce Membre met K.O. un Membre de l'adversaire, piochez 1 carte de votre Deck et placez 1 carte de votre Main dans votre Archive.\n\nChaque Membre ne peut être équipé que d'un seul accessoire.\n",
+      "es": "El daño de Arts de \"熱千めら\" con este objeto aumenta en 20.\n\n◆\"熱千めら\" de 1st o superior con este objeto tiene un efecto adicional\nCuando este Miembro derrota a un Miembro del oponente, roba 1 carta de tu Mazo y envía 1 carta de tu Mano a tu Archivo.\n\nSolo se puede equipar 1 objeto por Miembro."
+    },
+    "id": "hSD21-008",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hSD21/hSD21-008_U.png"
+  },
+  {
     "image": "cardListImages/hYS0/hYS01-001_OC.png",
     "name": "七詩ムメイ",
     "type": "主推",
@@ -87885,6 +88789,7 @@
       "起始牌組「赤 宝鐘マリン (hSD09)」",
       "起始牌組「推し Justice (hSD13)」",
       "起始牌組「ライブスタートデッキ さくらみこ (hSD16)」",
+      "起始牌組「アソビ★まわり隊！推し 百灯キョーコ (hSD20)」",
       "スタートエールセット"
     ],
     "color": "紅",
@@ -88080,6 +88985,8 @@
       "起始牌組「FLOW GLOW 推し 虎金妃笑虎 (hSD11)」",
       "起始牌組「推し Advent (hSD12)」",
       "起始牌組「ライブスタートデッキ 星街すいせい (hSD17)」",
+      "起始牌組「アソビ★まわり隊！推し 百灯キョーコ (hSD20)」",
+      "起始牌組「アソビ★まわり隊！推し 熱千めら (hSD21)」",
       "スタートエールセット"
     ],
     "color": "藍",
@@ -88249,7 +89156,8 @@
       "起始牌組「紫 癒月ちょこ (hSD04)」",
       "起始牌組「FLOW GLOW 推し 輪堂千速 (hSD10)」",
       "起始牌組「推し Advent (hSD12)」",
-      "起始牌組「ライブスタートデッキ 森カリオペ (hSD18)」"
+      "起始牌組「ライブスタートデッキ 森カリオペ (hSD18)」",
+      "起始牌組「アソビ★まわり隊！推し 熱千めら (hSD21)」"
     ],
     "color": "紫",
     "yellEffect": {
