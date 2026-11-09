@@ -60707,6 +60707,96 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP08/hBP08-017_SR.png"
   },
   {
+    "image": "cardListImages/hBP08/hBP08-017_P.png",
+    "name": "ときのそら",
+    "type": "成員",
+    "tag": "#JP / #0期生 / #歌",
+    "product": "PR卡",
+    "color": "白",
+    "hp": 170,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": {
+      "name": "「ヴァ！」",
+      "effect": {
+        "zh-TW": "從自己的牌組展示1張「あん肝」並加入手牌。將牌組重新洗牌。",
+        "ja": "自分のデッキから「あん肝」を公開し、手札に加える。その後、デッキをシャッフルする。",
+        "en": "Reveal \"Ankimo\" from your Deck and add it to your Hand. Shuffle your Deck.",
+        "fr": "Révélez 1 \"あん肝\" de votre Deck et ajoutez-le à votre Main. Mélangez votre Deck.",
+        "es": "Muestra 1 \"Ankimo\" de tu mazo y añádelo a tu mano. Baraja tu mazo.\n"
+      }
+    },
+    "effectB": null,
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_white.png",
+        "icons/arts_null.png"
+      ],
+      "name": "みんな、ぬんぬん進んでいこーう",
+      "damage": "40+",
+      "specialAttackImage": null,
+      "effect": {
+        "zh-TW": "如果標示#0期生的2nd成員在自己的舞台上，這個藝能傷害+20。",
+        "ja": "自分のステージ上に「#0期生」の2ndメンバーがいる場合、このアーツダメージ+20。\n",
+        "en": "If a 2nd Member with #0期生 is on your Stage, this Arts Damage +20.",
+        "fr": "Si un membre 2nd marqué #0期生 est sur votre scène, les dégâts de cet Arts sont augmentés de 20.",
+        "es": "Si un miembro 2nd con la etiqueta #0期生 está en tu Escenario, el daño de Arts +20.\n"
+      }
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP08-017",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP08/hBP08-017_P.png"
+  },
+  {
+    "image": "cardListImages/hBP08/hBP08-017_P_02.png",
+    "name": "ときのそら",
+    "type": "成員",
+    "tag": "#JP / #0期生 / #歌",
+    "product": "PR卡",
+    "color": "白",
+    "hp": 170,
+    "bloom": "1st",
+    "batonImage": [
+      "icons/arts_null.png"
+    ],
+    "effectC": {
+      "name": "「ヴァ！」",
+      "effect": {
+        "zh-TW": "從自己的牌組展示1張「あん肝」並加入手牌。將牌組重新洗牌。",
+        "ja": "自分のデッキから「あん肝」を公開し、手札に加える。その後、デッキをシャッフルする。",
+        "en": "Reveal \"Ankimo\" from your Deck and add it to your Hand. Shuffle your Deck.",
+        "fr": "Révélez 1 \"あん肝\" de votre Deck et ajoutez-le à votre Main. Mélangez votre Deck.",
+        "es": "Muestra 1 \"Ankimo\" de tu mazo y añádelo a tu mano. Baraja tu mazo.\n"
+      }
+    },
+    "effectB": null,
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_white.png",
+        "icons/arts_null.png"
+      ],
+      "name": "みんな、ぬんぬん進んでいこーう",
+      "damage": "40+",
+      "specialAttackImage": null,
+      "effect": {
+        "zh-TW": "如果標示#0期生的2nd成員在自己的舞台上，這個藝能傷害+20。",
+        "ja": "自分のステージ上に「#0期生」の2ndメンバーがいる場合、このアーツダメージ+20。\n",
+        "en": "If a 2nd Member with #0期生 is on your Stage, this Arts Damage +20.",
+        "fr": "Si un membre 2nd marqué #0期生 est sur votre scène, les dégâts de cet Arts sont augmentés de 20.",
+        "es": "Si un miembro 2nd con la etiqueta #0期生 está en tu Escenario, el daño de Arts +20.\n"
+      }
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP08-017",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP08/hBP08-017_P_02.png"
+  },
+  {
     "image": "cardListImages/hBP08/hBP08-018_RR.png",
     "name": "ときのそら",
     "type": "成員",
