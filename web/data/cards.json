@@ -9470,7 +9470,7 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP01/hBP01-081_UR.png"
   },
   {
-    "image": "cardListImages/hBP01/hBP01-081_02_SR.png",
+    "image": "cardListImages/hCS01/hBP01-081_02_SR.png",
     "name": "星街すいせい",
     "type": "成員",
     "tag": "#JP / #0期生 / #歌",
@@ -9515,7 +9515,7 @@
     "art2": null,
     "extra": null,
     "id": "hBP01-081",
-    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP01/hBP01-081_02_SR.png"
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCS01/hBP01-081_02_SR.png"
   },
   {
     "image": "cardListImages/hEB01/hBP01-081_RR_02.png",
@@ -12995,7 +12995,7 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP02/hBP02-013_UR.png"
   },
   {
-    "image": "cardListImages/hBP02/hBP02-013_02_SR.png",
+    "image": "cardListImages/hCS01/hBP02-013_02_SR.png",
     "name": "白上フブキ",
     "type": "成員",
     "tag": "#JP / #1期生 / #ゲーマーズ / #ケモミミ / #絵",
@@ -13039,7 +13039,7 @@
     "art2": null,
     "extra": null,
     "id": "hBP02-013",
-    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP02/hBP02-013_02_SR.png"
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCS01/hBP02-013_02_SR.png"
   },
   {
     "image": "cardListImages/hBP02/hBP02-014_C.png",
@@ -23137,7 +23137,7 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP03/hBP03-030_P.png"
   },
   {
-    "image": "cardListImages/hBP03/hBP03-030_02_SR.png",
+    "image": "cardListImages/hCS01/hBP03-030_02_SR.png",
     "name": "さくらみこ",
     "type": "成員",
     "tag": "#JP / #0期生 / #ベイビー",
@@ -23180,7 +23180,7 @@
     "art2": null,
     "extra": null,
     "id": "hBP03-030",
-    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP03/hBP03-030_02_SR.png"
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCS01/hBP03-030_02_SR.png"
   },
   {
     "image": "cardListImages/hBP03/hBP03-031_C.png",
@@ -30348,7 +30348,7 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP04/hBP04-013_UR.png"
   },
   {
-    "image": "cardListImages/hBP04/hBP04-013_02_SR.png",
+    "image": "cardListImages/hCS01/hBP04-013_02_SR.png",
     "name": "博衣こより",
     "type": "成員",
     "tag": "#JP / #秘密結社holoX / #ケモミミ",
@@ -30392,7 +30392,7 @@
     "art2": null,
     "extra": null,
     "id": "hBP04-013",
-    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP04/hBP04-013_02_SR.png"
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCS01/hBP04-013_02_SR.png"
   },
   {
     "image": "cardListImages/hBP04/hBP04-013_P.png",
@@ -34277,7 +34277,7 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP04/hBP04-059_UR.png"
   },
   {
-    "image": "cardListImages/hBP04/hBP04-059_02_SR.png",
+    "image": "cardListImages/hCS01/hBP04-059_02_SR.png",
     "name": "ラプラス・ダークネス",
     "type": "成員",
     "tag": "#JP / #秘密結社holoX / #シューター",
@@ -34321,7 +34321,7 @@
     "art2": null,
     "extra": null,
     "id": "hBP04-059",
-    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP04/hBP04-059_02_SR.png"
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCS01/hBP04-059_02_SR.png"
   },
   {
     "image": "cardListImages/hBP04/hBP04-060_R.png",
@@ -39233,6 +39233,54 @@
     "extra": null,
     "id": "hBP05-016",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hEB01/hBP05-016_UR_02.png"
+  },
+  {
+    "image": "cardListImages/hCS02/hBP05-016_SR.png",
+    "name": "兎田ぺこら",
+    "type": "成員",
+    "tag": "#JP / #3期生 / #ケモミミ",
+    "product": "hololive OFFICIAL CARD GAME 2nd Anniversary Celebration Set",
+    "color": "白",
+    "hp": 210,
+    "bloom": "2nd",
+    "batonImage": [
+      "icons/arts_null.png",
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": null,
+    "effectG": {
+      "name": "最強女神",
+      "effect": {
+        "zh-TW": "這個成員使用了藝能時，如果該藝能擲骰子的點數合計為奇數，從自己的牌組抽1張牌。如果為偶數，從自己的牌組抽2張牌。",
+        "ja": "このメンバーが芸能を使用した時、その芸能のダイス合計が奇数だった場合、自分のデッキから１枚ドローする。偶数だった場合、自分のデッキから２枚ドローする。",
+        "en": "When this Member uses an Arts, if the total dice roll for that Arts is odd, draw 1 card from your Deck. If it is even, draw 2 cards from your Deck.",
+        "fr": "Lorsque ce Membre utilise un Art, si la somme des points des dés lancés pour cet Art est impaire, piochez 1 carte de votre Deck. Si elle est paire, piochez 2 cartes de votre Deck.",
+        "es": "Cuando este Miembro usa un Arts, si la suma de los puntos de los dados de dicho Arts es impar, roba 1 carta de tu Mazo. Si es par, roba 2 cartas de tu Mazo."
+      }
+    },
+    "art1": {
+      "image": [
+        "icons/arts_null.png",
+        "icons/arts_null.png",
+        "icons/arts_null.png",
+        "icons/arts_null.png"
+      ],
+      "name": "ウーサペコラを崇めるぺこ",
+      "damage": "120+",
+      "specialAttackImage": "icons/tokkou_50_red.png",
+      "effect": {
+        "zh-TW": "每有1張與這個成員重疊的成員，可以擲1次骰子：擲出的點數總和每有1點，這個藝能傷害+10。",
+        "ja": "このメンバーに重なっているメンバーが1枚あるごとに、サイコロを1回振ることができる：振った出目の合計が1点あるごとに、このアーツダメージ＋10。",
+        "en": "For each Member overlapped with this Member, you may roll 1 die: For each point rolled, this Arts damage +10.",
+        "fr": "Pour chaque Membre empilé avec ce Membre, vous pouvez lancer 1 dé : Pour chaque point total obtenu, les dégâts de cet Arts +10.",
+        "es": "Por cada miembro superpuesto a este miembro, puedes lanzar 1 dado: Por cada punto en la suma de los dados lanzados, el daño de este Arts +10."
+      }
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP05-016",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCS02/hBP05-016_SR.png"
   },
   {
     "image": "cardListImages/hBP05/hBP05-017_R.png",
@@ -46963,6 +47011,53 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP06/hBP06-027_UR.png"
   },
   {
+    "image": "cardListImages/hCS02/hBP06-027_SR.png",
+    "name": "風真いろは",
+    "type": "成員",
+    "tag": "#JP / #秘密結社holoX",
+    "product": "hololive OFFICIAL CARD GAME 2nd Anniversary Celebration Set",
+    "color": "綠",
+    "hp": 210,
+    "bloom": "2nd",
+    "batonImage": [
+      "icons/arts_null.png",
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": null,
+    "effectG": {
+      "name": "伝えたい想い",
+      "effect": {
+        "zh-TW": "這個成員擊倒對手的中心成員時，可以使用自己手牌的成員將自己這個回合綻放過的1位「風真いろは」再次進行綻放。",
+        "ja": "このメンバーが相手のセンターメンバーをダウンさせた時、自分の手札のメンバーを使い、このターンにブルームした「風真いろは」をもう1度ブルームさせることができる。\n",
+        "en": "When this Member defeats an opponent's Center Member, you may use a Member from your Hand to make 1 \"Fuzuki 1st Generation\" that Bloomed this turn Bloom again.",
+        "fr": "Lorsque ce membre met K.O. le membre du Centre de l'adversaire, vous pouvez faire refleurir 1 \"風真いろは\" que vous avez fait fleurir ce tour-ci en utilisant un membre de votre Main.",
+        "es": "Cuando este miembro K.O. al miembro centro del oponente, puedes hacer que 1 \"風真いろは\" que haya hecho Bloom este turno en tu escenario haga Bloom de nuevo usando un miembro de tu Mano."
+      }
+    },
+    "art1": {
+      "image": [
+        "icons/arts_green.png",
+        "icons/arts_null.png",
+        "icons/arts_null.png"
+      ],
+      "name": "一緒にすてっぷ",
+      "damage": "160+",
+      "specialAttackImage": "icons/tokkou_50_white.png",
+      "effect": {
+        "zh-TW": "如果自己的主推為「風真いろは」，且自己有聯動成員，這個藝能傷害+40。如果這個成員是從Buzz成員綻放的，這個藝能的傷害不會被減少。",
+        "ja": "自分の推しホロメンが「風真いろは」で、自分がコラボメンバーを持っている場合、この「アーツ」のダメージ+40。このメンバーがBuzzメンバーからブルームした場合、この「アーツ」のダメージは減少されない。",
+        "en": "If your Oshi is \"風真いろは\" and you have a Collab Member, your Arts damage +40. If this Member Bloomed from a Buzz Member, the damage from this Arts will not be reduced.",
+        "fr": "Si votre Oshi est \"Kazama Iroha\", et que vous avez un membre Collab, les dégâts de cet Arts +40. Si ce membre a fait Bloom à partir d'un membre Buzz, les dégâts de cet Arts ne seront pas réduits.",
+        "es": "Si tu Oshi es \"Kazama Iroha\", y tienes Miembros Collab, el daño de este Arts +40. Si este Miembro hizo Bloom desde un Miembro Buzz, el daño de este Arts no se reducirá."
+      }
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP06-027",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCS02/hBP06-027_SR.png"
+  },
+  {
     "image": "cardListImages/hBP06/hBP06-028_C.png",
     "name": "姫森ルーナ",
     "type": "成員",
@@ -47926,6 +48021,49 @@
     "extra": null,
     "id": "hBP06-039",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP06/hBP06-039_P.png"
+  },
+  {
+    "image": "cardListImages/hCS02/hBP06-039_SR.png",
+    "name": "百鬼あやめ",
+    "type": "成員",
+    "tag": "#JP / #2期生 / #シューター",
+    "product": "hololive OFFICIAL CARD GAME 2nd Anniversary Celebration Set",
+    "color": "紅",
+    "hp": 160,
+    "bloom": "2nd",
+    "batonImage": [],
+    "effectC": null,
+    "effectB": null,
+    "effectG": {
+      "name": "余、なんも聞いとらんかった。",
+      "effect": {
+        "zh-TW": "[限定中心位置]如果自己有聯動成員且對手沒有聯動成員，自己所有的成員不會受到對手的藝能傷害。",
+        "ja": "[センター限定]自分のコラボメンバーがいて、相手のコラボメンバーがいない場合、自分のメンバー全員は相手のアーツダメージを受けない。",
+        "en": "[Center Only] If you have a Collab Member and your opponent does not, all your Members take no Arts damage from your opponent.\n",
+        "fr": "[Position Centre UNIQUEMENT] Si vous avez un membre Collab et que votre adversaire n'en a pas, tous vos membres ne subiront pas les dégâts d'Arts de votre adversaire.",
+        "es": "[Solo posición central] Si tienes Miembros Collab y el oponente no tiene Miembros Collab, todos tus Miembros no reciben daño de Arts del oponente."
+      }
+    },
+    "art1": {
+      "image": [
+        "icons/arts_red.png",
+        "icons/arts_red.png"
+      ],
+      "name": "百鬼乱舞 -朧月-",
+      "damage": "80+",
+      "specialAttackImage": "icons/tokkou_50_green.png",
+      "effect": {
+        "zh-TW": "如果自己的主推為「百鬼あやめ」，可以將自己吶喊牌組上方的1~3張牌放到存檔區：每將1張吶喊卡放到存檔區，這個藝能傷害+40。自己的生命值在2以下才能在聯動位置使用這個藝能。",
+        "ja": "自分の推しホロメンが「百鬼あやめ」の場合、自分のエールデッキの上からカードを1～3枚アーカイブに置く：カードを1枚アーカイブに置くごとに、この「アーツ」のダメージ+40。この「アーツ」は、自分のライフが2以下の場合にのみ、コラボ位置で使用できる。",
+        "en": "If your Oshi is \"百鬼あやめ\", you may place 1 to 3 cards from the top of your Cheer Deck into your Archive: Your Arts damage +40 for each Cheer card placed into your Archive. You can only use this Arts in the Collab position if your Life is 2 or less.",
+        "fr": "Si votre Oshi est \"Nakiri Ayame\", vous pouvez placer 1 à 3 cartes du dessus de votre Deck d'encouragement dans votre Archive : pour chaque carte d'Encouragement placée dans votre Archive, les dégâts de cet Arts +40. Vous ne pouvez utiliser cet Arts en position Collab que si vos Points de vie sont inférieurs ou égaux à 2.",
+        "es": "Si tu Oshi es \"Nakiri Ayame\", puedes poner 1 a 3 cartas de la parte superior de tu Mazo Cheer en el Archivo: Por cada carta Cheer que pongas en el Archivo, el daño de este Arts +40. Solo puedes usar este Arts en la posición Collab si tu Vida es 2 o menos."
+      }
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP06-039",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCS02/hBP06-039_SR.png"
   },
   {
     "image": "cardListImages/hBP06/hBP06-040_C.png",
@@ -52952,6 +53090,53 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP07/hBP07-014_UR.png"
   },
   {
+    "image": "cardListImages/hCS02/hBP07-014_SR.png",
+    "name": "角巻わため",
+    "type": "成員",
+    "tag": "#JP / #4期生 / #ケモミミ / #歌",
+    "product": "hololive OFFICIAL CARD GAME 2nd Anniversary Celebration Set",
+    "color": "白",
+    "hp": 200,
+    "bloom": "2nd",
+    "batonImage": [
+      "icons/arts_null.png",
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": null,
+    "effectG": {
+      "name": "キュートセクシー",
+      "effect": {
+        "zh-TW": "每有1張與這個成員重疊的成員，這個成員的HP+10。",
+        "ja": "このメンバーと重ねられているメンバーの枚数×１枚につき、このメンバーのHP＋１０。",
+        "en": "For each Member overlapped with this Member, this Member's HP +10.",
+        "fr": "Pour chaque Membre empilé avec ce Membre, les HP de ce Membre +10.",
+        "es": "Por cada miembro superpuesto a este miembro, el HP de este miembro +10."
+      }
+    },
+    "art1": {
+      "image": [
+        "icons/arts_white.png",
+        "icons/arts_white.png",
+        "icons/arts_null.png"
+      ],
+      "name": "脳天直撃わためハンマー！",
+      "damage": 160,
+      "specialAttackImage": "icons/tokkou_50_red.png",
+      "effect": {
+        "zh-TW": "[限定中心位置]使用這個藝能擊倒對手的成員時，如果傷害超過該成員剩餘的HP，給予對手的1位2nd成員與超出部分相同數值的特殊傷害。",
+        "ja": "[センター限定]このアーツで相手メンバーを撃破した場合、そのメンバーの残りHPを超えたダメージ分、相手の2ndメンバー1人に同じ値の特殊ダメージを与える。",
+        "en": "[Center Only] When you K.O. an opponent's Member with this Arts, if the damage exceeds that Member's remaining HP, deal Special Damage equal to the excess to 1 of your opponent's 2nd Members.\n",
+        "fr": "[Position Centre UNIQUEMENT] Lorsque vous utilisez cet Art pour mettre K.O. un membre adverse, si les dégâts dépassent les PV restants de ce membre, infligez des dégâts spéciaux à 1 membre 2nd de votre adversaire d'un montant égal à l'excédent.",
+        "es": "[Solo posición central] Cuando usas esta Art para derrotar a un Miembro del oponente, si el daño excede la Vida restante de ese Miembro, inflige daño especial a 1 Miembro 2nd del oponente igual a la cantidad excedente."
+      }
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP07-014",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCS02/hBP07-014_SR.png"
+  },
+  {
     "image": "cardListImages/hBP07/hBP07-015_C.png",
     "name": "ベスティア・ゼータ",
     "type": "成員",
@@ -57359,6 +57544,61 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP07/hBP07-069_UR.png"
   },
   {
+    "image": "cardListImages/hCS02/hBP07-069_SR.png",
+    "name": "AZKi",
+    "type": "成員",
+    "tag": "#JP / #0期生 / #歌",
+    "product": "hololive OFFICIAL CARD GAME 2nd Anniversary Celebration Set",
+    "color": "紫",
+    "hp": 220,
+    "bloom": "2nd",
+    "batonImage": [
+      "icons/arts_null.png",
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": null,
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_purple.png",
+        "icons/arts_null.png",
+        "icons/arts_null.png"
+      ],
+      "name": "君と新たな開拓の地へ",
+      "damage": 140,
+      "specialAttackImage": "icons/tokkou_50_green.png",
+      "effect": {
+        "zh-TW": "從自己的牌組抽2張牌。",
+        "ja": "自分のデッキから2枚引く。",
+        "en": "Draw 2 cards from your Deck.",
+        "fr": "Piochez 2 cartes de votre Deck.\n",
+        "es": "LIMITED: Solo puede usarse una vez por turno.\nRoba 2 cartas de tu mazo."
+      }
+    },
+    "art2": {
+      "image": [
+        "icons/arts_purple.png",
+        "icons/arts_purple.png",
+        "icons/arts_purple.png",
+        "icons/arts_null.png"
+      ],
+      "name": "紡いだ軌跡 すべてに捧ぐ歌",
+      "damage": 200,
+      "specialAttackImage": "icons/tokkou_50_green.png",
+      "effect": {
+        "zh-TW": "如果自己的主推為「AZKi」，可以將自己holo能量區上方的4張牌放到存檔區：如果自己的存檔區有4張「フロンティアスピリット」，對手的生命值-1。",
+        "ja": "自分の推しが「AZKi」の場合、自分のホロエネルギーエリアの上から4枚をアーカイブに置く。自分のアーカイブに「フロンティアスピリット」が4枚ある場合、相手のライフ-1。\n",
+        "en": "If your Oshi is \"AZKi\", you may place the top 4 cards of your Holo Energy into your Archive: If you have 4 \"フロンティアスピリット\" in your Archive, your opponent's Life -1.",
+        "fr": "Si votre Oshi est \"AZKi\", vous pouvez placer 4 cartes du dessus de votre zone Holo Power dans votre Archive : Si votre Archive contient 4 \"Frontier Spirit\", les Points de vie de l'adversaire -1.",
+        "es": "Si tu Oshi es \"AZKi\", puedes poner 4 cartas de la parte superior de tu Zona Holo Power en el Archivo: Si tienes 4 \"Frontier Spirit\" en tu Archivo, la Vida de tu oponente -1."
+      }
+    },
+    "extra": null,
+    "id": "hBP07-069",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCS02/hBP07-069_SR.png"
+  },
+  {
     "image": "cardListImages/hBP07/hBP07-070_R.png",
     "name": "癒月ちょこ",
     "type": "成員",
@@ -59219,6 +59459,22 @@
     },
     "id": "hBP07-094",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP07/hBP07-094_U.png"
+  },
+  {
+    "image": "cardListImages/hBP07/hBP07-094_P_02.png",
+    "name": "ギリわるロボ",
+    "type": "支援・活動",
+    "tag": null,
+    "product": "PR卡",
+    "supportEffect": {
+      "zh-TW": "將自己的所有手牌放回牌組重新洗牌。然後從自己的牌組抽4張牌。如果自己的生命值在3以下，則雙方將所有手牌放回牌組重新洗牌。然後從各自的牌組抽4張牌。\n\nLIMITED：每個回合只能使用一張。",
+      "ja": "自分の手札全てをデッキに戻してシャッフルする。その後、自分のデッキから4枚引く。自分のライフが3以下の場合、お互いの手札全てをデッキに戻してシャッフルする。その後、お互いのデッキから4枚引く。\n",
+      "en": "Return all cards in your Hand to your Deck and shuffle it. Then, draw 4 cards from your Deck. If your Life is 3 or less, both players return all cards in their Hand to their Deck and shuffle it. Then, draw 4 cards from their respective Decks. LIMITED: This can only be used once per turn.",
+      "fr": "Renvoyez toutes vos cartes en main dans le Deck et mélangez-les. Ensuite, piochez 4 cartes de votre Deck. Si vos Points de vie sont inférieurs ou égaux à 3, chaque joueur renvoie toutes ses cartes en main dans son Deck et les mélange. Ensuite, chaque joueur pioche 4 cartes de son Deck.\n\nLIMITED : Ne peut être utilisé qu'une fois par tour.",
+      "es": "Devuelve todas las cartas de tu Mano a tu Mazo y barájalo. Luego, roba 4 cartas de tu Mazo. Si tu Vida está en 3 o menos, ambos jugadores devuelven todas las cartas de su Mano a su Mazo y lo barajan. Luego, roban 4 cartas de sus Mazos.\n\nLIMITED: Solo puedes usar una por turno.\n"
+    },
+    "id": "hBP07-094",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP07/hBP07-094_P_02.png"
   },
   {
     "image": "cardListImages/hBP07/hBP07-095_C.png",
@@ -62368,6 +62624,53 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP08/hBP08-039_UR.png"
   },
   {
+    "image": "cardListImages/hCS02/hBP08-039_SR.png",
+    "name": "モココ・アビスガード",
+    "type": "成員",
+    "tag": "#EN / #Advent / #ケモミミ",
+    "product": "hololive OFFICIAL CARD GAME 2nd Anniversary Celebration Set",
+    "color": "紅",
+    "hp": 200,
+    "bloom": "2nd",
+    "batonImage": [
+      "icons/arts_null.png",
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": {
+      "name": "深淵からの信頼",
+      "effect": {
+        "zh-TW": "如果自己舞台上的藍色吶喊卡有6張以上，將自己1位休息狀態的「フワワ・アビスガード」改為活動狀態。",
+        "ja": "自分のステージの青のエールカードが６枚以上ある場合、自分の１人休息状態の「フワワ・アビスガード」を活動状態にする。",
+        "en": "If you have 6 or more blue Cheer cards on your Stage, change 1 \"FuwaWa Abyssgard\" in your Rest state to Active state.",
+        "fr": "Si vous avez 6 cartes d'encouragement bleues ou plus sur votre Scène, mettez 1 de vos \"Fuwawa Abyssgard\" au repos en état actif.",
+        "es": "Si hay 6 o más cartas Cheer azules en tu Escenario, cambia 1 \"フワワ・アビスガード\" en tu estado de descanso a estado activo."
+      }
+    },
+    "effectG": null,
+    "art1": {
+      "image": [
+        "icons/arts_red.png",
+        "icons/arts_red.png",
+        "icons/arts_red.png"
+      ],
+      "name": "もこもこバウンティハンター",
+      "damage": "90+",
+      "specialAttackImage": "icons/tokkou_50_purple.png",
+      "effect": {
+        "zh-TW": "這個成員每有1張藍色吶喊卡，這個藝能傷害+20。之後，選擇這個成員任意數量的藍色吶喊卡，轉移給自己的1位「フワワ・アビスガード」。",
+        "ja": "このメンバーに青のエールカードが1枚あるごとに、このアーツダメージ+20。その後、このメンバーの青のエールカードを任意の枚数選び、「フワワ・アビスガード」1人に移す。\n",
+        "en": "For each Blue Cheer Card this Member has, this Arts deals 20 additional damage. Then, transfer any number of Blue Cheer Cards this Member has to 1 \"FuwaFuwa Abyssgard\" you control.",
+        "fr": "Pour chaque carte d'Encouragement bleue que ce membre possède, les dégâts d'Arts de ce membre gagnent +20. Ensuite, transférez un nombre quelconque de cartes d'Encouragement bleues de ce membre à 1 \"フワワ・アビスガード\" de votre côté.",
+        "es": "Por cada carta Cheer azul que tenga este miembro, el daño de Arts de este miembro obtiene +20. Después, selecciona cualquier número de cartas Cheer azules de este miembro y transfiérelas a 1 \"フワワ・アビスガード\" tuyo."
+      }
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP08-039",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCS02/hBP08-039_SR.png"
+  },
+  {
     "image": "cardListImages/hBP08/hBP08-040_R.png",
     "name": "百鬼あやめ",
     "type": "成員",
@@ -64084,6 +64387,53 @@
     "extra": null,
     "id": "hBP08-059",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP08/hBP08-059_UR.png"
+  },
+  {
+    "image": "cardListImages/hCS02/hBP08-059_SR.png",
+    "name": "フワワ・アビスガード",
+    "type": "成員",
+    "tag": "#EN / #Advent / #ケモミミ",
+    "product": "hololive OFFICIAL CARD GAME 2nd Anniversary Celebration Set",
+    "color": "藍",
+    "hp": 210,
+    "bloom": "2nd",
+    "batonImage": [
+      "icons/arts_null.png",
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": null,
+    "effectG": {
+      "name": "深淵からの愛情",
+      "effect": {
+        "zh-TW": "如果自己舞台上的紅色吶喊卡有6張以上，這個成員的藝能可以選擇對手Debut以外的後台成員為對象。",
+        "ja": "自分のステージの赤のエールカードが６枚以上ある場合、このメンバーの芸能は相手のDebut以外のバックメンバーを対象に選ぶことができる。",
+        "en": "If you have 6 or more red Cheer cards on your Stage, this Member's Arts can target an opponent's Back Stage Member other than Debut.",
+        "fr": "Si vous avez 6 cartes d'encouragement rouges ou plus sur votre Scène, les Arts de ce Membre peuvent cibler les Membres en Arrière-plan de votre adversaire, à l'exception de ceux de Debut.",
+        "es": "Si hay 6 o más cartas Cheer rojas en tu Escenario, el Arts de este Miembro puede tener como objetivo a Miembros de Retaguardia del oponente que no sean Debut."
+      }
+    },
+    "art1": {
+      "image": [
+        "icons/arts_blue.png",
+        "icons/arts_blue.png",
+        "icons/arts_blue.png"
+      ],
+      "name": "ふわふわバウンダリースパナー",
+      "damage": "80+",
+      "specialAttackImage": "icons/tokkou_50_white.png",
+      "effect": {
+        "zh-TW": "如果自己的「モココ・アビスガード」在這個回合有使用過藝能，這個藝能傷害+50。之後，選擇這個成員任意數量的紅色吶喊卡，轉移給自己的1位「モココ・アビスガード」。",
+        "ja": "自分の「モココ・アビスガード」がこのターン中にアーツを使用した時、このアーツダメージ+50。その後、このメンバーの赤のエールカードを任意枚数選び、自分の「モココ・アビスガード」1人に移す。\n",
+        "en": "If your \"モココ・アビスガード\" has used an Arts this turn, this Arts Damage +50. Then, transfer any number of red Cheer cards from this Member to 1 of your \"モココ・アビスガード\".",
+        "fr": "Si votre \"モココ・アビスガード\" a utilisé un Arts pendant ce tour, les dégâts de cet Arts sont augmentés de 50. Ensuite, sélectionnez n'importe quel nombre de cartes d'encouragement rouges de ce membre et transférez-les à votre \"モココ・アビスガード\".",
+        "es": "Si tu \"モココ・アビスガード\" usó Arts durante este turno, el daño de Arts +50. Después, selecciona cualquier número de cartas de Cheer rojas de este miembro y transfiérelas a 1 de tus \"モココ・アビスガード\".\n"
+      }
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP08-059",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hCS02/hBP08-059_SR.png"
   },
   {
     "image": "cardListImages/hBP08/hBP08-060_R.png",
@@ -67204,6 +67554,32 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP09/hBP09-005_OUR.png"
   },
   {
+    "image": "cardListImages/hBP09/hBP09-005_P.png",
+    "name": "常闇トワ",
+    "type": "主推",
+    "product": "PR卡",
+    "color": "藍",
+    "life": 5,
+    "stageSkill": {
+      "name": "魔弾の射手",
+      "effect": "[每個回合一次]自己的中心成員「常闇トワ」使用了藝能後，可以再次使用該成員另一個不同名稱的藝能。"
+    },
+    "oshiSkill": {
+      "holoPower": -2,
+      "name": "とびっきりオーバーなショット",
+      "effect": {
+        "zh-TW": "[每個回合一次]自己的表演階段結束時可以使用：這個回合自己標示#歌的成員每使用一次藝能，從自己的牌組抽1張牌。",
+        "ja": "[各ターンに1回]自分のパフォーマンスフェイズ終了時に、使用できる：このターン、自分の「#歌」のメンバーがアーツを使用した回数分、自分のデッキからカードを1枚引く。",
+        "en": "[Once per turn] When your Performance Phase ends, you may activate this: For each time a Member with the #Song Trait you control used an Arts this turn, draw 1 card from your Deck.\n",
+        "fr": "[Chaque tour, une fois] À la fin de votre phase de performance : Pour chaque fois qu'un membre marqué #Chant a utilisé un art ce tour-ci, piochez 1 carte de votre deck.",
+        "es": "[Cada turno una vez] Puedes usar al final de tu Fase de Actuación: Por cada vez que un miembro con la etiqueta #歌 haya usado Arts este turno, roba 1 carta de tu Mazo."
+      }
+    },
+    "spSkill": null,
+    "id": "hBP09-005",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP09/hBP09-005_P.png"
+  },
+  {
     "image": "cardListImages/hBP09/hBP09-006_OSR.png",
     "name": "綺々羅々ヴィヴィ",
     "type": "主推",
@@ -67638,11 +68014,11 @@
       "damage": "80+",
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "如果自己的成員在之前對手回合中被擊倒，這個藝能傷害+50。",
-        "ja": "自分のメンバーが前の相手ターン中にダウンした場合、この「アーツ」のダメージ+50。",
-        "en": "If your Member was Downed during the opponent's last turn, your Arts damage +50.",
-        "fr": "Si un de vos membres a été mis K.O. pendant le tour précédent de l'adversaire, les dégâts d'arts +50.",
-        "es": "Si un miembro tuyo fue K.O. durante el turno anterior del oponente, el daño de Arts +50.\n"
+        "zh-TW": "如果自己的成員在上個對手回合中被擊倒，這個藝能傷害+50。",
+        "ja": "自分のメンバーが前プレイヤーのターンの間ダウンしていたなら、このアーツのダメージ＋50。\n",
+        "en": "If one of your Members was Downed during your opponent's last turn, this Arts deals +50 damage.",
+        "fr": "Si un de vos Membres a été K.O. durant le tour précédent de l'adversaire, les dégâts de cet Arts augmentent de 50.\n",
+        "es": "Si un Miembro tuyo fue K.O. durante el turno anterior del oponente, este Arts inflige +50 de daño.\n"
       }
     },
     "art2": null,
@@ -67684,11 +68060,11 @@
       "damage": "80+",
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "如果自己的成員在之前對手回合中被擊倒，這個藝能傷害+50。",
-        "ja": "自分のメンバーが前の相手ターン中にダウンした場合、この「アーツ」のダメージ+50。",
-        "en": "If your Member was Downed during the opponent's last turn, your Arts damage +50.",
-        "fr": "Si un de vos membres a été mis K.O. pendant le tour précédent de l'adversaire, les dégâts d'arts +50.",
-        "es": "Si un miembro tuyo fue K.O. durante el turno anterior del oponente, el daño de Arts +50.\n"
+        "zh-TW": "如果自己的成員在上個對手回合中被擊倒，這個藝能傷害+50。",
+        "ja": "自分のメンバーが前プレイヤーのターンの間ダウンしていたなら、このアーツのダメージ＋50。\n",
+        "en": "If one of your Members was Downed during your opponent's last turn, this Arts deals +50 damage.",
+        "fr": "Si un de vos Membres a été K.O. durant le tour précédent de l'adversaire, les dégâts de cet Arts augmentent de 50.\n",
+        "es": "Si un Miembro tuyo fue K.O. durante el turno anterior del oponente, este Arts inflige +50 de daño.\n"
       }
     },
     "art2": null,
@@ -67730,11 +68106,11 @@
       "damage": "80+",
       "specialAttackImage": null,
       "effect": {
-        "zh-TW": "如果自己的成員在之前對手回合中被擊倒，這個藝能傷害+50。",
-        "ja": "自分のメンバーが前の相手ターン中にダウンした場合、この「アーツ」のダメージ+50。",
-        "en": "If your Member was Downed during the opponent's last turn, your Arts damage +50.",
-        "fr": "Si un de vos membres a été mis K.O. pendant le tour précédent de l'adversaire, les dégâts d'arts +50.",
-        "es": "Si un miembro tuyo fue K.O. durante el turno anterior del oponente, el daño de Arts +50.\n"
+        "zh-TW": "如果自己的成員在上個對手回合中被擊倒，這個藝能傷害+50。",
+        "ja": "自分のメンバーが前プレイヤーのターンの間ダウンしていたなら、このアーツのダメージ＋50。\n",
+        "en": "If one of your Members was Downed during your opponent's last turn, this Arts deals +50 damage.",
+        "fr": "Si un de vos Membres a été K.O. durant le tour précédent de l'adversaire, les dégâts de cet Arts augmentent de 50.\n",
+        "es": "Si un Miembro tuyo fue K.O. durante el turno anterior del oponente, este Arts inflige +50 de daño.\n"
       }
     },
     "art2": null,
@@ -67817,11 +68193,11 @@
       "damage": "160+",
       "specialAttackImage": "icons/tokkou_50_purple.png",
       "effect": {
-        "zh-TW": "之前對手回合中，自己每有1位被擊倒的成員，這個藝能傷害+40。",
-        "ja": "相手のターン中に、自分のメンバーがダウンしていた枚数分、このアーツのダメージ＋40。\n",
-        "en": "For each of your Members that were Downed during the opponent's turn, this Arts deals +40 damage.",
-        "fr": "[Précédemment, pendant le tour de l'adversaire] Pour chaque membre que vous aviez mis K.O. précédemment, les dégâts d'arts +40.",
-        "es": "Por cada miembro tuyo que fue K.O. durante el turno anterior del oponente, el daño de Arts +40."
+        "zh-TW": "上個對手回合中，自己每有1位被擊倒的成員，這個藝能傷害+40。",
+        "ja": "前プレイヤーのターンの間、自分のメンバーがダウンしていたなら、このアーツのダメージ＋40。\n",
+        "en": "During your opponent's last turn, this Arts deals +40 damage for each of your Members that was Downed.",
+        "fr": "Durant le tour précédent de l'adversaire, si vous avez 1 Membre K.O., les dégâts de cet Arts augmentent de 40.\n",
+        "es": "Durante el turno anterior del oponente, este Arts inflige +40 de daño por cada Miembro tuyo que haya sido K.O.\n"
       }
     },
     "art2": null,
@@ -67864,11 +68240,11 @@
       "damage": "160+",
       "specialAttackImage": "icons/tokkou_50_purple.png",
       "effect": {
-        "zh-TW": "之前對手回合中，自己每有1位被擊倒的成員，這個藝能傷害+40。",
-        "ja": "相手のターン中に、自分のメンバーがダウンしていた枚数分、このアーツのダメージ＋40。\n",
-        "en": "For each of your Members that were Downed during the opponent's turn, this Arts deals +40 damage.",
-        "fr": "[Précédemment, pendant le tour de l'adversaire] Pour chaque membre que vous aviez mis K.O. précédemment, les dégâts d'arts +40.",
-        "es": "Por cada miembro tuyo que fue K.O. durante el turno anterior del oponente, el daño de Arts +40."
+        "zh-TW": "上個對手回合中，自己每有1位被擊倒的成員，這個藝能傷害+40。",
+        "ja": "前プレイヤーのターンの間、自分のメンバーがダウンしていたなら、このアーツのダメージ＋40。\n",
+        "en": "During your opponent's last turn, this Arts deals +40 damage for each of your Members that was Downed.",
+        "fr": "Durant le tour précédent de l'adversaire, si vous avez 1 Membre K.O., les dégâts de cet Arts augmentent de 40.\n",
+        "es": "Durante el turno anterior del oponente, este Arts inflige +40 de daño por cada Miembro tuyo que haya sido K.O.\n"
       }
     },
     "art2": null,
@@ -67911,11 +68287,11 @@
       "damage": "160+",
       "specialAttackImage": "icons/tokkou_50_purple.png",
       "effect": {
-        "zh-TW": "之前對手回合中，自己每有1位被擊倒的成員，這個藝能傷害+40。",
-        "ja": "相手のターン中に、自分のメンバーがダウンしていた枚数分、このアーツのダメージ＋40。\n",
-        "en": "For each of your Members that were Downed during the opponent's turn, this Arts deals +40 damage.",
-        "fr": "[Précédemment, pendant le tour de l'adversaire] Pour chaque membre que vous aviez mis K.O. précédemment, les dégâts d'arts +40.",
-        "es": "Por cada miembro tuyo que fue K.O. durante el turno anterior del oponente, el daño de Arts +40."
+        "zh-TW": "上個對手回合中，自己每有1位被擊倒的成員，這個藝能傷害+40。",
+        "ja": "前プレイヤーのターンの間、自分のメンバーがダウンしていたなら、このアーツのダメージ＋40。\n",
+        "en": "During your opponent's last turn, this Arts deals +40 damage for each of your Members that was Downed.",
+        "fr": "Durant le tour précédent de l'adversaire, si vous avez 1 Membre K.O., les dégâts de cet Arts augmentent de 40.\n",
+        "es": "Durante el turno anterior del oponente, este Arts inflige +40 de daño por cada Miembro tuyo que haya sido K.O.\n"
       }
     },
     "art2": null,
@@ -72002,6 +72378,53 @@
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP09/hBP09-070_UR.png"
   },
   {
+    "image": "cardListImages/hBP09/hBP09-070_P.png",
+    "name": "綺々羅々ヴィヴィ",
+    "type": "成員",
+    "tag": "#DEV_IS / #FLOW GLOW",
+    "product": "PR卡",
+    "color": "紫",
+    "hp": 200,
+    "bloom": "2nd",
+    "batonImage": [
+      "icons/arts_null.png",
+      "icons/arts_null.png"
+    ],
+    "effectC": null,
+    "effectB": null,
+    "effectG": {
+      "name": "ストロングコミュニケーター",
+      "effect": {
+        "zh-TW": "[限定中心位置]如果對手的手牌在7張以上，這個成員藝能需要的無色吶喊卡數量-2。",
+        "ja": "[センター限定]相手の手札が7枚以上の場合、このメンバーのアーツに必要な無色のチアーカードの枚数-2。",
+        "en": "[Center Only] If your opponent has 7 or more cards in Hand, the number of colorless Cheer cards required for this Member's Arts -2.\n",
+        "fr": "[Position centrale uniquement] Si la main de l'adversaire contient 7 cartes ou plus, le nombre de cartes d'encouragement incolores nécessaires pour les arts de ce membre -2.",
+        "es": "[Solo posición central] Si la Mano del oponente tiene 7 o más cartas, las cartas de Cheer incoloras necesarias para los Arts de este miembro -2."
+      }
+    },
+    "art1": {
+      "image": [
+        "icons/arts_purple.png",
+        "icons/arts_null.png",
+        "icons/arts_null.png"
+      ],
+      "name": "ヴィヴェイシャスヴィジョン",
+      "damage": "120+",
+      "specialAttackImage": "icons/tokkou_50_yellow.png",
+      "effect": {
+        "zh-TW": "如果對手的手牌在7張以上，這個藝能傷害+70。如果對手的手牌在10張以上，則這個藝能傷害+100。",
+        "ja": "相手の手札が7枚以上ある場合、このアーツダメージ+70。相手の手札が10枚以上ある場合、このアーツダメージ+100。\n",
+        "en": "If your opponent has 7 or more cards in Hand, this Arts Damage +70. If your opponent has 10 or more cards in Hand, this Arts Damage +100.",
+        "fr": "Si la main de l'adversaire contient 7 cartes ou plus, les dégâts d'arts +70. Si la main de l'adversaire contient 10 cartes ou plus, alors les dégâts d'arts +100.",
+        "es": "Si la Mano del oponente tiene 7 o más cartas, el daño de Arts +70. Si la Mano del oponente tiene 10 o más cartas, el daño de Arts +100.\n"
+      }
+    },
+    "art2": null,
+    "extra": null,
+    "id": "hBP09-070",
+    "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP09/hBP09-070_P.png"
+  },
+  {
     "image": "cardListImages/hBP09/hBP09-071_R.png",
     "name": "AZKi",
     "type": "成員",
@@ -73611,11 +74034,11 @@
     "tag": null,
     "product": "補充包「ボリュームヴォルテックス (hBP09)」",
     "supportEffect": {
-      "zh-TW": "自己的主推為「AZKi」或「風真いろは」，且自己的成員在之前對手回合中沒有被擊倒才能使用。\n\n從自己的牌組將1張1st「AZKi」與1張1st「風真いろは」放到舞台上。將牌組重新洗牌。\n\nLIMITED：每個回合只能使用一張。",
-      "ja": "自分の推しが「AZKi」か「風真いろは」で、かつ自分のホロメンが相手ターンの前にダウンしていなかった場合のみ使用できる。\n\n自分のデッキから1st「AZKi」と1st「風真いろは」を1枚ずつステージに置く。その後、デッキをシャッフルする。\n\nLIMITED：1ターンに1枚しか使用できない。",
-      "en": "Usable only if your Oshi is \"AZKi\" or \"Kazama Iroha\", and your Members were not Downed during your opponent's previous turn.\n\nPlace 1 \"AZKi 1st\" and 1 \"Kazama Iroha 1st\" from your Deck onto the Stage. Shuffle your Deck.\n\nLIMITED: Usable only once per turn.\n",
-      "fr": "LIMITED : Vous ne pouvez utiliser qu'une carte par tour.\nVous ne pouvez utiliser cette carte que si votre Oshi est \"AZKi\" ou \"Kazama Iroha\", et si aucun de vos membres n'a été mis K.O. lors du tour précédent de l'adversaire.\nPlacez 1 \"AZKi\" de 1ère Génération et 1 \"Kazama Iroha\" de 1ère Génération de votre Deck sur la Scène. Mélangez votre Deck.",
-      "es": "Solo puedes usar esto si tu Oshi es \"AZKi\" o \"風真いろは\", y si tus miembros no fueron Derribados en el turno anterior del oponente.\n\nColoca 1 \"AZKi\" 1st y 1 \"風真いろは\" 1st de tu mazo en el Escenario. Baraja tu mazo.\n\nLIMITED: Solo se puede usar una vez por turno.\n"
+      "zh-TW": "自己的主推為「AZKi」或「風真いろは」，且自己的成員在上個對手回合中沒有被擊倒才能使用。\n\n從自己的牌組將1張1st「AZKi」與1張1st「風真いろは」放到舞台上。將牌組重新洗牌。\n\nLIMITED：每個回合只能使用一張。",
+      "ja": "自分の推しが「AZKi」または「風真いろは」で、自分のメンバーが前プレイヤーのターンの間ダウンしていなかったなら使用できる。\n自分のデッキから1st「AZKi」と1st「風真いろは」を1枚ずつステージに出す。その後、デッキをシャッフルする。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。\n",
+      "en": "Can only be used if your Oshi is \"AZKi\" or \"Kazama Iroha\", and none of your Members were Downed during your opponent's last turn.\n\nPlace 1 \"AZKi\" 1st and 1 \"Kazama Iroha\" 1st from your Deck onto the Stage. Shuffle your Deck.\n\nLIMITED: You can only use one of these per turn.",
+      "fr": "Utilisable uniquement si votre Oshi est \"AZKi\" ou \"Amane Kanata\", et si aucun de vos Membres n'a été K.O. durant le tour précédent de l'adversaire.\n\nPlacez 1 \"AZKi\" 1st et 1 \"Amane Kanata\" 1st de votre Deck sur la Scène. Mélangez votre Deck.\n\nLIMITED : Vous ne pouvez utiliser qu'une seule carte par tour.\n",
+      "es": "Solo puedes usar esto si tu Oshi es \"AZKi\" o \"Hoshiguma Iroha\", y ningún Miembro tuyo fue K.O. durante el turno anterior del oponente.\n\nColoca 1 \"AZKi\" Debut y 1 \"Hoshiguma Iroha\" Debut de tu Mazo en el Escenario. Baraja tu Mazo.\n\nLIMITED: Solo puedes usar una por turno.\n"
     },
     "id": "hBP09-091",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP09/hBP09-091_U.png"
@@ -73659,11 +74082,11 @@
     "tag": null,
     "product": "補充包「ボリュームヴォルテックス (hBP09)」",
     "supportEffect": {
-      "zh-TW": "自己的主推為「大空スバル」，且自己的成員在之前對手回合中被擊倒才能使用。\n\n選擇對手的1位後台成員。將該成員改為休息狀態。下個對手的重置階段，該成員不能改為活動狀態。\n\nLIMITED：每個回合只能使用一張。",
-      "ja": "自分の推しが「大空スバル」で、かつ自分のホロメンが相手ターンの前にダウンしていた場合のみ使用できる。\n\n相手のバックメンバー1人を選択する。そのメンバーをレスト状態にする。次の相手のリセットフェイズ、そのメンバーはアクティブ状態にならない。\n\nLIMITED：1ターンに1枚しか使用できない。",
-      "en": "Usable only if your Oshi is \"Oozora Subaru\", and your Members were Downed during your opponent's previous turn.\n\nChoose 1 of your opponent's Back Members. Put that Member into a Rested state. That Member cannot be put into an Active state during your opponent's next Reset Phase.\n\nLIMITED: Usable only once per turn.\n",
-      "fr": "LIMITED : Vous ne pouvez utiliser qu'une carte par tour.\nVous ne pouvez utiliser cette carte que si votre Oshi est \"Oozora Subaru\", et si un de vos membres a été mis K.O. lors du tour précédent de l'adversaire.\nChoisissez 1 membre en arrière-plan de l'adversaire. Mettez ce membre en état de repos. Lors de la prochaine phase de réinitialisation de l'adversaire, ce membre ne pourra pas être mis en état actif.",
-      "es": "Solo puedes usar esto si tu Oshi es \"大空スバル\", y si tus miembros fueron Derribados en el turno anterior del oponente.\n\nSelecciona 1 miembro propio en Retaguardia. Pon ese miembro en estado de Descanso. En la siguiente Fase de Reseteo del oponente, ese miembro no puede pasar a estado Activo.\n\nLIMITED: Solo se puede usar una vez por turno.\n"
+      "zh-TW": "自己的主推為「大空スバル」，且自己的成員在上個對手回合中被擊倒才能使用。\n\n選擇對手的1位後台成員。將該成員改為休息狀態。下個對手的重置階段，該成員不能改為活動狀態。\n\nLIMITED：每個回合只能使用一張。",
+      "ja": "自分の推しが「大空スバル」で、自分のメンバーが前プレイヤーのターンの間ダウンしていたなら使用できる。\n\n相手の後衛メンバーを1人選び、そのメンバーをレスト状態にする。次の相手のターンのリフレッシュフェイズ、そのメンバーはアクティブ状態になれない。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。\n",
+      "en": "Can only be used if your Oshi is \"Oozora Subaru\" and one of your Members was Downed during your opponent's last turn.\n\nChoose 1 of your opponent's Back row Members. Put that Member into a Rest position. That Member cannot become Active during your opponent's next Reset Phase.\n\nLIMITED: You can only use one of these per turn.",
+      "fr": "Utilisable uniquement si votre Oshi est \"Oozora Subaru\" et si un de vos Membres a été K.O. durant le tour précédent de l'adversaire.\n\nChoisissez 1 Membre en Arrière de l'adversaire. Mettez ce Membre en état de repos. Durant la prochaine phase de réinitialisation de l'adversaire, ce Membre ne peut pas être mis en état d'activité.\n\nLIMITED : Vous ne pouvez utiliser qu'une seule carte par tour.\n",
+      "es": "Solo puedes usar esto si tu Oshi es \"Oozora Subaru\", y un Miembro tuyo fue K.O. durante el turno anterior del oponente.\n\nSelecciona 1 Miembro de la Retaguardia del oponente. Ese Miembro no puede entrar en estado activo durante la próxima fase de reposo del oponente.\n\nLIMITED: Solo puedes usar una por turno.\n"
     },
     "id": "hBP09-094",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP09/hBP09-094_U.png"
@@ -73675,11 +74098,11 @@
     "tag": null,
     "product": "PR卡",
     "supportEffect": {
-      "zh-TW": "自己的主推為「大空スバル」，且自己的成員在之前對手回合中被擊倒才能使用。\n\n選擇對手的1位後台成員。將該成員改為休息狀態。下個對手的重置階段，該成員不能改為活動狀態。\n\nLIMITED：每個回合只能使用一張。",
-      "ja": "自分の推しが「大空スバル」で、かつ自分のホロメンが相手ターンの前にダウンしていた場合のみ使用できる。\n\n相手のバックメンバー1人を選択する。そのメンバーをレスト状態にする。次の相手のリセットフェイズ、そのメンバーはアクティブ状態にならない。\n\nLIMITED：1ターンに1枚しか使用できない。",
-      "en": "Usable only if your Oshi is \"Oozora Subaru\", and your Members were Downed during your opponent's previous turn.\n\nChoose 1 of your opponent's Back Members. Put that Member into a Rested state. That Member cannot be put into an Active state during your opponent's next Reset Phase.\n\nLIMITED: Usable only once per turn.\n",
-      "fr": "LIMITED : Vous ne pouvez utiliser qu'une carte par tour.\nVous ne pouvez utiliser cette carte que si votre Oshi est \"Oozora Subaru\", et si un de vos membres a été mis K.O. lors du tour précédent de l'adversaire.\nChoisissez 1 membre en arrière-plan de l'adversaire. Mettez ce membre en état de repos. Lors de la prochaine phase de réinitialisation de l'adversaire, ce membre ne pourra pas être mis en état actif.",
-      "es": "Solo puedes usar esto si tu Oshi es \"大空スバル\", y si tus miembros fueron Derribados en el turno anterior del oponente.\n\nSelecciona 1 miembro propio en Retaguardia. Pon ese miembro en estado de Descanso. En la siguiente Fase de Reseteo del oponente, ese miembro no puede pasar a estado Activo.\n\nLIMITED: Solo se puede usar una vez por turno.\n"
+      "zh-TW": "自己的主推為「大空スバル」，且自己的成員在上個對手回合中被擊倒才能使用。\n\n選擇對手的1位後台成員。將該成員改為休息狀態。下個對手的重置階段，該成員不能改為活動狀態。\n\nLIMITED：每個回合只能使用一張。",
+      "ja": "自分の推しが「大空スバル」で、自分のメンバーが前プレイヤーのターンの間ダウンしていたなら使用できる。\n\n相手の後衛メンバーを1人選び、そのメンバーをレスト状態にする。次の相手のターンのリフレッシュフェイズ、そのメンバーはアクティブ状態になれない。\n\nLIMITED：このカードは各ターンに1枚しか使用できない。\n",
+      "en": "Can only be used if your Oshi is \"Oozora Subaru\" and one of your Members was Downed during your opponent's last turn.\n\nChoose 1 of your opponent's Back row Members. Put that Member into a Rest position. That Member cannot become Active during your opponent's next Reset Phase.\n\nLIMITED: You can only use one of these per turn.",
+      "fr": "Utilisable uniquement si votre Oshi est \"Oozora Subaru\" et si un de vos Membres a été K.O. durant le tour précédent de l'adversaire.\n\nChoisissez 1 Membre en Arrière de l'adversaire. Mettez ce Membre en état de repos. Durant la prochaine phase de réinitialisation de l'adversaire, ce Membre ne peut pas être mis en état d'activité.\n\nLIMITED : Vous ne pouvez utiliser qu'une seule carte par tour.\n",
+      "es": "Solo puedes usar esto si tu Oshi es \"Oozora Subaru\", y un Miembro tuyo fue K.O. durante el turno anterior del oponente.\n\nSelecciona 1 Miembro de la Retaguardia del oponente. Ese Miembro no puede entrar en estado activo durante la próxima fase de reposo del oponente.\n\nLIMITED: Solo puedes usar una por turno.\n"
     },
     "id": "hBP09-094",
     "imageUrl": "https://hololive-cardgame.github.io/cards/cardListImages/hBP09/hBP09-094_P_02.png"
